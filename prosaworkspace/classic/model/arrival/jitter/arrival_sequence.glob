@@ -1,0 +1,440 @@
+DIGEST 952c78dc274233993e13781bc3d575d2
+Fprosa.classic.model.arrival.jitter.arrival_sequence
+R15:36 prosa.classic.util.all <> <> lib
+R38:87 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R119:127 mathcomp.boot.ssreflect <> <> lib
+R129:135 mathcomp.boot.ssrbool <> <> lib
+R137:142 mathcomp.boot.ssrfun <> <> lib
+R144:149 mathcomp.boot.eqtype <> <> lib
+R151:156 mathcomp.boot.ssrnat <> <> lib
+R158:160 mathcomp.boot.seq <> <> lib
+R162:168 mathcomp.boot.fintype <> <> lib
+R170:174 mathcomp.boot.bigop <> <> lib
+mod 272:296 <> ArrivalSequenceWithJitter
+R309:323 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence <> mod
+sec 400:412 ArrivalSequenceWithJitter ActualArrival
+var  429:431 ArrivalSequenceWithJitter.ActualArrival Job
+R434:439 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 456:466 ArrivalSequenceWithJitter.ActualArrival job_arrival
+R472:475 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R469:471 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ActualArrival.Job var
+R476:479 prosa.classic.model.time Time time def
+var 495:504 ArrivalSequenceWithJitter.ActualArrival job_jitter
+R510:513 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R507:509 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ActualArrival.Job var
+R514:517 prosa.classic.model.time Time time def
+var 562:562 ArrivalSequenceWithJitter.ActualArrival j
+R565:567 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ActualArrival.Job var
+def 668:681 ArrivalSequenceWithJitter actual_arrival
+R699:701 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R686:696 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ActualArrival.job_arrival var
+R698:698 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ActualArrival.j var
+R702:711 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ActualArrival.job_jitter var
+R713:713 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ActualArrival.j var
+def 829:845 ArrivalSequenceWithJitter jitter_has_passed
+R851:854 prosa.classic.model.time Time time def
+binder 848:848 <> t:8
+R874:877 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R860:873 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrival def
+R878:878 prosa.classic.model.arrival.jitter.arrival_sequence <> t:8 var
+def 959:979 ArrivalSequenceWithJitter actual_arrival_before
+R985:988 prosa.classic.model.time Time time def
+binder 982:982 <> t:9
+R1008:1010 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R994:1007 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrival def
+R1011:1011 prosa.classic.model.arrival.jitter.arrival_sequence <> t:9 var
+def 1066:1087 ArrivalSequenceWithJitter actual_arrival_between
+R1097:1100 prosa.classic.model.time Time time def
+binder 1090:1091 <> t1:10
+binder 1093:1094 <> t2:11
+R1114:1117 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R1132:1134 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R1112:1113 prosa.classic.model.arrival.jitter.arrival_sequence <> t1:10 var
+R1118:1131 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrival def
+R1118:1131 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrival def
+R1135:1136 prosa.classic.model.arrival.jitter.arrival_sequence <> t2:11 var
+R1146:1158 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter.ActualArrival <> sec
+sec 1247:1258 ArrivalSequenceWithJitter ArrivingJobs
+var  1275:1277 ArrivalSequenceWithJitter.ArrivingJobs Job
+R1280:1285 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1302:1312 ArrivalSequenceWithJitter.ArrivingJobs job_arrival
+R1318:1321 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1315:1317 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.Job var
+R1322:1325 prosa.classic.model.time Time time def
+var 1341:1350 ArrivalSequenceWithJitter.ArrivingJobs job_jitter
+R1356:1359 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1353:1355 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.Job var
+R1360:1363 prosa.classic.model.time Time time def
+var 1379:1385 ArrivalSequenceWithJitter.ArrivingJobs arr_seq
+R1388:1403 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R1405:1407 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.Job var
+var 1476:1493 ArrivalSequenceWithJitter.ArrivingJobs actual_job_arrival
+R1498:1511 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrival def
+R1525:1534 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.job_jitter var
+R1513:1523 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.job_arrival var
+var 1545:1570 ArrivalSequenceWithJitter.ArrivingJobs actual_job_arrival_between
+R1575:1596 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrival_between def
+R1610:1619 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.job_jitter var
+R1598:1608 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.job_arrival var
+var 1630:1654 ArrivalSequenceWithJitter.ArrivingJobs actual_job_arrival_before
+R1659:1679 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrival_before def
+R1693:1702 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.job_jitter var
+R1681:1691 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.job_arrival var
+var 1713:1727 ArrivalSequenceWithJitter.ArrivingJobs arrivals_before
+R1732:1750 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_before def
+R1752:1758 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.arr_seq var
+def 1854:1876 ArrivalSequenceWithJitter actual_arrivals_between
+R1886:1889 prosa.classic.model.time Time time def
+binder 1879:1880 <> t1:19
+binder 1882:1883 <> t2:20
+R1901:1905 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R1907:1910 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R1929:1931 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R1963:1963 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+binder 1906:1906 <> j:21
+R1934:1937 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R1958:1960 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R1932:1933 prosa.classic.model.arrival.jitter.arrival_sequence <> t1:19 var
+R1938:1955 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.actual_job_arrival var
+R1957:1957 prosa.classic.model.arrival.jitter.arrival_sequence <> j:21 var
+R1938:1955 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.actual_job_arrival var
+R1957:1957 prosa.classic.model.arrival.jitter.arrival_sequence <> j:21 var
+R1961:1962 prosa.classic.model.arrival.jitter.arrival_sequence <> t2:20 var
+R1911:1925 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.arrivals_before var
+R1927:1928 prosa.classic.model.arrival.jitter.arrival_sequence <> t2:20 var
+def 2053:2073 ArrivalSequenceWithJitter actual_arrivals_up_to
+R2079:2082 prosa.classic.model.time Time time def
+binder 2076:2076 <> t:22
+R2088:2110 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_between def
+R2115:2117 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R2114:2114 prosa.classic.model.arrival.jitter.arrival_sequence <> t:22 var
+def 2201:2222 ArrivalSequenceWithJitter actual_arrivals_before
+R2228:2231 prosa.classic.model.time Time time def
+binder 2225:2225 <> t:23
+R2237:2259 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_between def
+R2263:2263 prosa.classic.model.arrival.jitter.arrival_sequence <> t:23 var
+sec 2364:2369 ArrivalSequenceWithJitter.ArrivingJobs Lemmas
+var 2448:2477 ArrivalSequenceWithJitter.ArrivingJobs.Lemmas H_arrival_times_are_consistent
+R2488:2515 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_times_are_consistent def
+R2529:2535 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.arr_seq var
+R2517:2527 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.job_arrival var
+sec 2624:2628 ArrivalSequenceWithJitter.ArrivingJobs.Lemmas Basic
+prf 2754:2784 ArrivalSequenceWithJitter actual_arrivals_between_mem_cat
+binder 2804:2804 <> j:26
+binder 2806:2807 <> t1:27
+binder 2809:2809 <> t:28
+binder 2811:2812 <> t2:29
+R2834:2849 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2829:2832 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R2827:2828 prosa.classic.model.arrival.jitter.arrival_sequence <> t1:27 var
+R2833:2833 prosa.classic.model.arrival.jitter.arrival_sequence <> t:28 var
+R2857:2872 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2851:2854 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R2850:2850 prosa.classic.model.arrival.jitter.arrival_sequence <> t:28 var
+R2855:2856 prosa.classic.model.arrival.jitter.arrival_sequence <> t2:29 var
+R2908:2923 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2990:2990 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2874:2878 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R2873:2873 prosa.classic.model.arrival.jitter.arrival_sequence <> j:26 var
+R2879:2901 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_between def
+R2903:2904 prosa.classic.model.arrival.jitter.arrival_sequence <> t1:27 var
+R2906:2907 prosa.classic.model.arrival.jitter.arrival_sequence <> t2:29 var
+R2925:2929 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R2924:2924 prosa.classic.model.arrival.jitter.arrival_sequence <> j:26 var
+R2958:2961 mathcomp.boot.seq <> ::seq_scope:x_'++'_x not
+R2930:2952 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_between def
+R2954:2955 prosa.classic.model.arrival.jitter.arrival_sequence <> t1:27 var
+R2957:2957 prosa.classic.model.arrival.jitter.arrival_sequence <> t:28 var
+R2962:2984 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_between def
+R2986:2986 prosa.classic.model.arrival.jitter.arrival_sequence <> t:28 var
+R2988:2989 prosa.classic.model.arrival.jitter.arrival_sequence <> t2:29 var
+R3025:3047 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_between def
+R3090:3092 Corelib.ssr.ssrbool <> idP thm
+R3094:3096 Corelib.ssr.ssrbool <> idP thm
+R3090:3092 Corelib.ssr.ssrbool <> idP thm
+R3094:3096 Corelib.ssr.ssrbool <> idP thm
+R3154:3163 mathcomp.boot.seq <> mem_filter thm
+R3154:3163 mathcomp.boot.seq <> mem_filter thm
+R3154:3163 mathcomp.boot.seq <> mem_filter thm
+R3185:3188 Corelib.ssr.ssrbool <> andP thm
+R3192:3195 Corelib.ssr.ssrbool <> andP thm
+R3232:3238 mathcomp.boot.seq <> mem_cat thm
+R3247:3249 Corelib.ssr.ssrbool <> orP thm
+R3232:3238 mathcomp.boot.seq <> mem_cat thm
+R3232:3238 mathcomp.boot.seq <> mem_cat thm
+R3247:3249 Corelib.ssr.ssrbool <> orP thm
+R3274:3283 mathcomp.boot.seq <> mem_filter thm
+R3274:3283 mathcomp.boot.seq <> mem_filter thm
+R3274:3283 mathcomp.boot.seq <> mem_filter thm
+R3274:3283 mathcomp.boot.seq <> mem_filter thm
+R3304:3307 mathcomp.boot.ssrnat <> ltnP thm
+R3310:3327 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.actual_job_arrival var
+R3304:3307 mathcomp.boot.ssrnat <> ltnP thm
+R3310:3327 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.actual_job_arrival var
+R3472:3498 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R3442:3451 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R3453:3459 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.arr_seq var
+R3472:3498 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R3582:3592 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.job_arrival var
+R3525:3559 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrived_between_implies_in_arrivals thm
+R3582:3592 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.job_arrival var
+R3525:3559 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrived_between_implies_in_arrivals thm
+R3648:3660 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R3679:3686 mathcomp.boot.ssrnat <> leq_addr thm
+R3648:3660 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R3679:3686 mathcomp.boot.ssrnat <> leq_addr thm
+R3733:3739 mathcomp.boot.seq <> mem_cat thm
+R3733:3739 mathcomp.boot.seq <> mem_cat thm
+R3733:3739 mathcomp.boot.seq <> mem_cat thm
+R3751:3753 Corelib.ssr.ssrbool <> orP thm
+R3807:3816 mathcomp.boot.seq <> mem_filter thm
+R3807:3816 mathcomp.boot.seq <> mem_filter thm
+R3807:3816 mathcomp.boot.seq <> mem_filter thm
+R3842:3845 Corelib.ssr.ssrbool <> andP thm
+R3850:3853 Corelib.ssr.ssrbool <> andP thm
+R3893:3902 mathcomp.boot.seq <> mem_filter thm
+R3893:3902 mathcomp.boot.seq <> mem_filter thm
+R3893:3902 mathcomp.boot.seq <> mem_filter thm
+R3932:3935 Corelib.ssr.ssrbool <> andP thm
+R3962:3970 mathcomp.boot.ssrnat <> leq_trans thm
+R3932:3935 Corelib.ssr.ssrbool <> andP thm
+R3962:3970 mathcomp.boot.ssrnat <> leq_trans thm
+R4035:4061 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R4005:4014 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R4016:4022 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.arr_seq var
+R4035:4061 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R4148:4158 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.job_arrival var
+R4091:4125 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrived_between_implies_in_arrivals thm
+R4148:4158 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.job_arrival var
+R4091:4125 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrived_between_implies_in_arrivals thm
+R4216:4230 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrived_between def
+R4216:4230 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrived_between def
+R4216:4230 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrived_between def
+R4261:4269 mathcomp.boot.ssrnat <> leq_trans thm
+R4286:4298 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R4314:4321 mathcomp.boot.ssrnat <> leq_addr thm
+R4261:4269 mathcomp.boot.ssrnat <> leq_trans thm
+R4286:4298 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R4314:4321 mathcomp.boot.ssrnat <> leq_addr thm
+R4374:4383 mathcomp.boot.seq <> mem_filter thm
+R4374:4383 mathcomp.boot.seq <> mem_filter thm
+R4374:4383 mathcomp.boot.seq <> mem_filter thm
+R4411:4414 Corelib.ssr.ssrbool <> andP thm
+R4418:4421 Corelib.ssr.ssrbool <> andP thm
+R4461:4470 mathcomp.boot.seq <> mem_filter thm
+R4479:4483 Corelib.ssr.ssrbool <> andbT thm
+R4461:4470 mathcomp.boot.seq <> mem_filter thm
+R4461:4470 mathcomp.boot.seq <> mem_filter thm
+R4479:4483 Corelib.ssr.ssrbool <> andbT thm
+R4479:4483 Corelib.ssr.ssrbool <> andbT thm
+R4506:4509 Corelib.ssr.ssrbool <> andP thm
+R4536:4544 mathcomp.boot.ssrnat <> leq_trans thm
+R4506:4509 Corelib.ssr.ssrbool <> andP thm
+R4536:4544 mathcomp.boot.ssrnat <> leq_trans thm
+R4607:4633 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R4577:4586 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R4588:4594 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.arr_seq var
+R4607:4633 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R4720:4730 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.job_arrival var
+R4663:4697 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrived_between_implies_in_arrivals thm
+R4720:4730 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.job_arrival var
+R4663:4697 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrived_between_implies_in_arrivals thm
+R4790:4802 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R4818:4825 mathcomp.boot.ssrnat <> leq_addr thm
+R4790:4802 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R4818:4825 mathcomp.boot.ssrnat <> leq_addr thm
+prf 4882:4908 ArrivalSequenceWithJitter actual_arrivals_between_sub
+binder 4928:4928 <> j:30
+binder 4930:4931 <> t1:31
+binder 4933:4935 <> t1':32
+binder 4937:4938 <> t2:33
+binder 4940:4942 <> t2':34
+R4966:4981 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4960:4963 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R4957:4959 prosa.classic.model.arrival.jitter.arrival_sequence <> t1':32 var
+R4964:4965 prosa.classic.model.arrival.jitter.arrival_sequence <> t1:31 var
+R4991:5006 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4984:4987 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R4982:4983 prosa.classic.model.arrival.jitter.arrival_sequence <> t2:33 var
+R4988:4990 prosa.classic.model.arrival.jitter.arrival_sequence <> t2':34 var
+R5042:5057 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5008:5012 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R5007:5007 prosa.classic.model.arrival.jitter.arrival_sequence <> j:30 var
+R5013:5035 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_between def
+R5037:5038 prosa.classic.model.arrival.jitter.arrival_sequence <> t1:31 var
+R5040:5041 prosa.classic.model.arrival.jitter.arrival_sequence <> t2:33 var
+R5059:5063 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R5058:5058 prosa.classic.model.arrival.jitter.arrival_sequence <> j:30 var
+R5064:5086 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_between def
+R5088:5090 prosa.classic.model.arrival.jitter.arrival_sequence <> t1':32 var
+R5092:5094 prosa.classic.model.arrival.jitter.arrival_sequence <> t2':34 var
+R5175:5184 mathcomp.boot.seq <> mem_filter thm
+R5175:5184 mathcomp.boot.seq <> mem_filter thm
+R5175:5184 mathcomp.boot.seq <> mem_filter thm
+R5206:5209 Corelib.ssr.ssrbool <> andP thm
+R5213:5216 Corelib.ssr.ssrbool <> andP thm
+R5248:5256 mathcomp.boot.ssrnat <> leq_total thm
+R5248:5256 mathcomp.boot.ssrnat <> leq_total thm
+R5248:5256 mathcomp.boot.ssrnat <> leq_total thm
+R5269:5271 Corelib.ssr.ssrbool <> orP thm
+R5356:5359 mathcomp.boot.ssrnat <> ltnn thm
+R5339:5341 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R5356:5359 mathcomp.boot.ssrnat <> ltnn thm
+R5356:5359 mathcomp.boot.ssrnat <> ltnn thm
+R5392:5404 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R5422:5434 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R5392:5404 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R5422:5434 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R5474:5504 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_between_mem_cat thm
+R5558:5566 mathcomp.boot.ssrnat <> leq_trans thm
+R5474:5504 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_between_mem_cat thm
+R5474:5504 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_between_mem_cat thm
+R5474:5504 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_between_mem_cat thm
+R5474:5504 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_between_mem_cat thm
+R5558:5566 mathcomp.boot.ssrnat <> leq_trans thm
+R5596:5602 mathcomp.boot.seq <> mem_cat thm
+R5611:5613 Corelib.ssr.ssrbool <> orP thm
+R5596:5602 mathcomp.boot.seq <> mem_cat thm
+R5596:5602 mathcomp.boot.seq <> mem_cat thm
+R5611:5613 Corelib.ssr.ssrbool <> orP thm
+R5644:5674 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_between_mem_cat thm
+R5644:5674 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_between_mem_cat thm
+R5644:5674 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_between_mem_cat thm
+R5644:5674 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_between_mem_cat thm
+R5644:5674 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_between_mem_cat thm
+R5745:5751 mathcomp.boot.seq <> mem_cat thm
+R5760:5762 Corelib.ssr.ssrbool <> orP thm
+R5745:5751 mathcomp.boot.seq <> mem_cat thm
+R5745:5751 mathcomp.boot.seq <> mem_cat thm
+R5760:5762 Corelib.ssr.ssrbool <> orP thm
+R5792:5801 mathcomp.boot.seq <> mem_filter thm
+R5818:5821 Corelib.ssr.ssrbool <> andP thm
+R5792:5801 mathcomp.boot.seq <> mem_filter thm
+R5792:5801 mathcomp.boot.seq <> mem_filter thm
+R5818:5821 Corelib.ssr.ssrbool <> andP thm
+R5818:5821 Corelib.ssr.ssrbool <> andP thm
+R5818:5821 Corelib.ssr.ssrbool <> andP thm
+R5818:5821 Corelib.ssr.ssrbool <> andP thm
+R5818:5821 Corelib.ssr.ssrbool <> andP thm
+R5856:5860 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter.ArrivingJobs.Lemmas.Basic <> sec
+sec 5951:5962 ArrivalSequenceWithJitter.ArrivingJobs.Lemmas ArrivalTimes
+prf 6132:6173 ArrivalSequenceWithJitter in_actual_arrivals_between_implies_arrived
+binder 6193:6193 <> j:35
+binder 6195:6196 <> t1:36
+binder 6198:6199 <> t2:37
+R6249:6264 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6215:6219 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R6214:6214 prosa.classic.model.arrival.jitter.arrival_sequence <> j:35 var
+R6220:6242 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_between def
+R6244:6245 prosa.classic.model.arrival.jitter.arrival_sequence <> t1:36 var
+R6247:6248 prosa.classic.model.arrival.jitter.arrival_sequence <> t2:37 var
+R6265:6274 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R6284:6284 prosa.classic.model.arrival.jitter.arrival_sequence <> j:35 var
+R6276:6282 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.arr_seq var
+R6408:6417 mathcomp.boot.seq <> mem_filter thm
+R6408:6417 mathcomp.boot.seq <> mem_filter thm
+R6408:6417 mathcomp.boot.seq <> mem_filter thm
+R6439:6442 Corelib.ssr.ssrbool <> andP thm
+R6468:6488 prosa.util.bigcat <> mem_bigcat_nat_exists thm
+R6468:6488 prosa.util.bigcat <> mem_bigcat_nat_exists thm
+prf 6577:6617 ArrivalSequenceWithJitter in_actual_arrivals_before_implies_arrived
+binder 6637:6637 <> j:38
+binder 6639:6639 <> t:39
+R6684:6699 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6655:6659 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R6654:6654 prosa.classic.model.arrival.jitter.arrival_sequence <> j:38 var
+R6660:6681 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_before def
+R6683:6683 prosa.classic.model.arrival.jitter.arrival_sequence <> t:39 var
+R6700:6709 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R6719:6719 prosa.classic.model.arrival.jitter.arrival_sequence <> j:38 var
+R6711:6717 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.arr_seq var
+R6839:6848 mathcomp.boot.seq <> mem_filter thm
+R6839:6848 mathcomp.boot.seq <> mem_filter thm
+R6839:6848 mathcomp.boot.seq <> mem_filter thm
+R6870:6873 Corelib.ssr.ssrbool <> andP thm
+R6899:6919 prosa.util.bigcat <> mem_bigcat_nat_exists thm
+R6899:6919 prosa.util.bigcat <> mem_bigcat_nat_exists thm
+prf 7164:7204 ArrivalSequenceWithJitter in_actual_arrivals_implies_arrived_before
+binder 7224:7224 <> j:40
+binder 7226:7226 <> t:41
+R7271:7286 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7242:7246 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R7241:7241 prosa.classic.model.arrival.jitter.arrival_sequence <> j:40 var
+R7247:7268 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_before def
+R7270:7270 prosa.classic.model.arrival.jitter.arrival_sequence <> t:41 var
+R7287:7311 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.actual_job_arrival_before var
+R7313:7313 prosa.classic.model.arrival.jitter.arrival_sequence <> j:40 var
+R7315:7315 prosa.classic.model.arrival.jitter.arrival_sequence <> t:41 var
+R7379:7388 mathcomp.boot.seq <> mem_filter thm
+R7379:7388 mathcomp.boot.seq <> mem_filter thm
+R7379:7388 mathcomp.boot.seq <> mem_filter thm
+R7413:7416 Corelib.ssr.ssrbool <> andP thm
+prf 7618:7659 ArrivalSequenceWithJitter in_actual_arrivals_implies_arrived_between
+binder 7679:7679 <> j:42
+binder 7681:7682 <> t1:43
+binder 7684:7685 <> t2:44
+R7735:7750 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7701:7705 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R7700:7700 prosa.classic.model.arrival.jitter.arrival_sequence <> j:42 var
+R7706:7728 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_between def
+R7730:7731 prosa.classic.model.arrival.jitter.arrival_sequence <> t1:43 var
+R7733:7734 prosa.classic.model.arrival.jitter.arrival_sequence <> t2:44 var
+R7751:7776 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.actual_job_arrival_between var
+R7778:7778 prosa.classic.model.arrival.jitter.arrival_sequence <> j:42 var
+R7780:7781 prosa.classic.model.arrival.jitter.arrival_sequence <> t1:43 var
+R7783:7784 prosa.classic.model.arrival.jitter.arrival_sequence <> t2:44 var
+R7852:7861 mathcomp.boot.seq <> mem_filter thm
+R7852:7861 mathcomp.boot.seq <> mem_filter thm
+R7852:7861 mathcomp.boot.seq <> mem_filter thm
+R7886:7889 Corelib.ssr.ssrbool <> andP thm
+prf 8113:8154 ArrivalSequenceWithJitter arrived_between_implies_in_actual_arrivals
+binder 8174:8174 <> j:45
+binder 8176:8177 <> t1:46
+binder 8179:8180 <> t2:47
+R8215:8230 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8195:8204 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R8214:8214 prosa.classic.model.arrival.jitter.arrival_sequence <> j:45 var
+R8206:8212 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.arr_seq var
+R8265:8280 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8231:8256 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.actual_job_arrival_between var
+R8258:8258 prosa.classic.model.arrival.jitter.arrival_sequence <> j:45 var
+R8260:8261 prosa.classic.model.arrival.jitter.arrival_sequence <> t1:46 var
+R8263:8264 prosa.classic.model.arrival.jitter.arrival_sequence <> t2:47 var
+R8282:8286 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R8281:8281 prosa.classic.model.arrival.jitter.arrival_sequence <> j:45 var
+R8287:8309 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_between def
+R8311:8312 prosa.classic.model.arrival.jitter.arrival_sequence <> t1:46 var
+R8314:8315 prosa.classic.model.arrival.jitter.arrival_sequence <> t2:47 var
+R8387:8396 mathcomp.boot.seq <> mem_filter thm
+R8405:8408 Corelib.ssr.ssrbool <> andP thm
+R8387:8396 mathcomp.boot.seq <> mem_filter thm
+R8387:8396 mathcomp.boot.seq <> mem_filter thm
+R8405:8408 Corelib.ssr.ssrbool <> andP thm
+R8450:8484 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrived_between_implies_in_arrivals thm
+R8450:8484 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrived_between_implies_in_arrivals thm
+R8530:8544 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrived_between def
+R8530:8544 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrived_between def
+R8530:8544 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrived_between def
+R8577:8580 Corelib.ssr.ssrbool <> andP thm
+R8611:8623 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R8638:8645 mathcomp.boot.ssrnat <> leq_addr thm
+R8611:8623 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R8638:8645 mathcomp.boot.ssrnat <> leq_addr thm
+prf 8817:8836 ArrivalSequenceWithJitter actual_arrivals_uniq
+R8883:8896 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8850:8874 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence_is_a_set def
+R8876:8882 prosa.classic.model.arrival.jitter.arrival_sequence <> ArrivalSequenceWithJitter.ArrivingJobs.arr_seq var
+binder 8904:8905 <> t1:48
+binder 8907:8908 <> t2:49
+R8911:8914 mathcomp.boot.seq <> uniq def
+R8917:8939 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_between def
+R8941:8942 prosa.classic.model.arrival.jitter.arrival_sequence <> t1:48 var
+R8944:8945 prosa.classic.model.arrival.jitter.arrival_sequence <> t2:49 var
+R9012:9022 mathcomp.boot.seq <> filter_uniq thm
+R9025:9037 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrivals_uniq thm
+R9012:9022 mathcomp.boot.seq <> filter_uniq thm
+R9025:9037 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrivals_uniq thm
+R9078:9089 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter.ArrivingJobs.Lemmas.ArrivalTimes <> sec
+R9101:9106 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter.ArrivingJobs.Lemmas <> sec
+R9120:9131 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter.ArrivingJobs <> sec
+R9139:9163 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter <> mod

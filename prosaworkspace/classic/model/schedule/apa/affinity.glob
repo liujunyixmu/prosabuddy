@@ -1,0 +1,148 @@
+DIGEST 0afd2eec74411a9207635825bec0a574
+Fprosa.classic.model.schedule.apa.affinity
+R15:36 prosa.classic.util.all <> <> lib
+R54:90 prosa.classic.model.arrival.basic.job <> <> lib
+R92:129 prosa.classic.model.arrival.basic.task <> <> lib
+R131:180 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R198:247 prosa.classic.model.schedule.global.basic.schedule <> <> lib
+R279:287 mathcomp.boot.ssreflect <> <> lib
+R289:295 mathcomp.boot.ssrbool <> <> lib
+R297:302 mathcomp.boot.eqtype <> <> lib
+R304:309 mathcomp.boot.ssrnat <> <> lib
+R311:313 mathcomp.boot.seq <> <> lib
+R315:321 mathcomp.boot.fintype <> <> lib
+R323:327 mathcomp.boot.bigop <> <> lib
+mod 398:405 <> Affinity
+R418:432 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence <> mod
+R434:455 prosa.classic.model.schedule.global.basic.schedule ScheduleOfSporadicTask <> mod
+sec 471:482 Affinity AffinityDefs
+var 499:511 Affinity.AffinityDefs sporadic_task
+R514:519 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 582:589 Affinity.AffinityDefs num_cpus
+R592:594 Corelib.Init.Datatypes <> nat ind
+def 766:773 Affinity affinity
+R778:783 prosa.util.seqset <> :::'{set'_x_'}' not
+R802:803 prosa.util.seqset <> :::'{set'_x_'}' not
+R784:792 prosa.classic.model.schedule.global.basic.schedule Schedule processor def
+R794:801 prosa.classic.model.schedule.apa.affinity <> Affinity.AffinityDefs.num_cpus var
+def 905:917 Affinity task_affinity
+R935:938 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R922:934 prosa.classic.model.schedule.apa.affinity <> Affinity.AffinityDefs.sporadic_task var
+R939:946 prosa.classic.model.schedule.apa.affinity Affinity affinity def
+R960:971 prosa.classic.model.schedule.apa.affinity Affinity.AffinityDefs <> sec
+sec 985:994 Affinity Properties
+var  1011:1023 Affinity.Properties sporadic_task
+R1026:1031 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  1052:1059 Affinity.Properties num_cpus
+R1062:1064 Corelib.Init.Datatypes <> nat ind
+sec 1081:1093 Affinity.Properties JobProperties
+var 1178:1182 Affinity.Properties.JobProperties alpha
+R1185:1197 prosa.classic.model.schedule.apa.affinity Affinity task_affinity def
+R1213:1220 prosa.classic.model.schedule.apa.affinity <> Affinity.Properties.num_cpus var
+R1199:1211 prosa.classic.model.schedule.apa.affinity <> Affinity.Properties.sporadic_task var
+var 1281:1283 Affinity.Properties.JobProperties tsk
+R1286:1298 prosa.classic.model.schedule.apa.affinity <> Affinity.Properties.sporadic_task var
+var 1365:1367 Affinity.Properties.JobProperties cpu
+R1370:1378 prosa.classic.model.schedule.global.basic.schedule Schedule processor def
+R1380:1387 prosa.classic.model.schedule.apa.affinity <> Affinity.Properties.num_cpus var
+def 1457:1470 Affinity can_execute_on
+R1478:1482 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R1475:1477 prosa.classic.model.schedule.apa.affinity <> Affinity.Properties.JobProperties.cpu var
+R1483:1487 prosa.classic.model.schedule.apa.affinity <> Affinity.Properties.JobProperties.alpha var
+R1489:1491 prosa.classic.model.schedule.apa.affinity <> Affinity.Properties.JobProperties.tsk var
+R1503:1515 prosa.classic.model.schedule.apa.affinity Affinity.Properties.JobProperties <> sec
+sec 1531:1548 Affinity.Properties ScheduleProperties
+var  1567:1569 Affinity.Properties.ScheduleProperties Job
+R1572:1577 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1596:1603 Affinity.Properties.ScheduleProperties job_task
+R1609:1612 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1606:1608 prosa.classic.model.schedule.apa.affinity <> Affinity.Properties.ScheduleProperties.Job var
+R1613:1625 prosa.classic.model.schedule.apa.affinity <> Affinity.Properties.sporadic_task var
+var 1689:1693 Affinity.Properties.ScheduleProperties sched
+R1696:1703 prosa.classic.model.schedule.global.basic.schedule Schedule schedule def
+R1709:1716 prosa.classic.model.schedule.apa.affinity <> Affinity.Properties.num_cpus var
+R1705:1707 prosa.classic.model.schedule.apa.affinity <> Affinity.Properties.ScheduleProperties.Job var
+var 1776:1780 Affinity.Properties.ScheduleProperties alpha
+R1783:1790 prosa.classic.model.schedule.apa.affinity Affinity affinity def
+R1792:1799 prosa.classic.model.schedule.apa.affinity <> Affinity.Properties.num_cpus var
+def 1954:1979 Affinity task_scheduled_on_affinity
+R1987:1999 prosa.classic.model.schedule.apa.affinity <> Affinity.Properties.sporadic_task var
+binder 1982:1984 <> tsk:20
+R2006:2009 prosa.classic.model.time Time time def
+binder 2003:2003 <> t:21
+R2023:2030 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R2097:2097 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+binder 2031:2033 <> cpu:22
+R2034:2035 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R2036:2036 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R2050:2054 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R2040:2044 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R2037:2039 prosa.classic.model.schedule.apa.affinity <> cpu:22 var
+R2045:2049 prosa.classic.model.schedule.apa.affinity <> Affinity.Properties.ScheduleProperties.alpha var
+R2055:2071 prosa.classic.model.schedule.global.basic.schedule ScheduleOfSporadicTask task_scheduled_on def
+R2092:2094 prosa.classic.model.schedule.apa.affinity <> cpu:22 var
+R2096:2096 prosa.classic.model.schedule.apa.affinity <> t:21 var
+R2088:2090 prosa.classic.model.schedule.apa.affinity <> tsk:20 var
+R2082:2086 prosa.classic.model.schedule.apa.affinity <> Affinity.Properties.ScheduleProperties.sched var
+R2073:2080 prosa.classic.model.schedule.apa.affinity <> Affinity.Properties.ScheduleProperties.job_task var
+binder 2031:2033 <> cpu:23
+binder 2031:2033 <> cpu:24
+R2109:2126 prosa.classic.model.schedule.apa.affinity Affinity.Properties.ScheduleProperties <> sec
+sec 2142:2147 Affinity.Properties Subset
+var 2220:2225 Affinity.Properties.Subset alpha'
+var 2227:2231 Affinity.Properties.Subset alpha
+R2234:2241 prosa.classic.model.schedule.apa.affinity Affinity affinity def
+R2243:2250 prosa.classic.model.schedule.apa.affinity <> Affinity.Properties.num_cpus var
+def 2373:2386 Affinity is_subaffinity
+R2391:2398 Corelib.ssr.ssrbool <> ::type_scope:'{'_'subset'_x_'<='_x_'}' not
+R2405:2408 Corelib.ssr.ssrbool <> ::type_scope:'{'_'subset'_x_'<='_x_'}' not
+R2414:2414 Corelib.ssr.ssrbool <> ::type_scope:'{'_'subset'_x_'<='_x_'}' not
+R2399:2404 prosa.classic.model.schedule.apa.affinity <> Affinity.Properties.Subset.alpha' var
+R2409:2413 prosa.classic.model.schedule.apa.affinity <> Affinity.Properties.Subset.alpha var
+sec 2432:2437 Affinity.Properties.Subset Lemmas
+var 2460:2472 Affinity.Properties.Subset.Lemmas H_subaffinity
+R2475:2488 prosa.classic.model.schedule.apa.affinity Affinity is_subaffinity def
+prf 2506:2520 Affinity leq_subaffinity
+R2533:2536 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R2524:2525 mathcomp.boot.fintype <> ::nat_scope:'#|'_x_'|' not
+R2532:2532 mathcomp.boot.fintype <> ::nat_scope:'#|'_x_'|' not
+R2526:2531 prosa.classic.model.schedule.apa.affinity <> Affinity.Properties.Subset.alpha' var
+R2537:2538 mathcomp.boot.fintype <> ::nat_scope:'#|'_x_'|' not
+R2544:2544 mathcomp.boot.fintype <> ::nat_scope:'#|'_x_'|' not
+R2539:2543 prosa.classic.model.schedule.apa.affinity <> Affinity.Properties.Subset.alpha var
+R2583:2586 mathcomp.boot.seq <> uniq def
+R2589:2593 prosa.classic.model.schedule.apa.affinity <> Affinity.Properties.Subset.alpha var
+R2609:2613 prosa.classic.model.schedule.apa.affinity <> Affinity.Properties.Subset.alpha var
+R2639:2642 mathcomp.boot.seq <> uniq def
+R2645:2650 prosa.classic.model.schedule.apa.affinity <> Affinity.Properties.Subset.alpha' var
+R2666:2671 prosa.classic.model.schedule.apa.affinity <> Affinity.Properties.Subset.alpha' var
+R2710:2719 mathcomp.boot.fintype <> card_uniqP thm
+R2725:2734 mathcomp.boot.fintype <> card_uniqP thm
+R2759:2771 mathcomp.boot.seq <> uniq_leq_size thm
+R2759:2771 mathcomp.boot.seq <> uniq_leq_size thm
+R2800:2805 prosa.classic.model.schedule.apa.affinity Affinity.Properties.Subset.Lemmas <> sec
+R2823:2828 prosa.classic.model.schedule.apa.affinity Affinity.Properties.Subset <> sec
+sec 2844:2865 Affinity.Properties IntersectingAffinities
+def 3008:3026 Affinity affinity_intersects
+R3043:3050 prosa.classic.model.schedule.apa.affinity Affinity affinity def
+R3052:3059 prosa.classic.model.schedule.apa.affinity <> Affinity.Properties.num_cpus var
+binder 3029:3033 <> alpha:31
+binder 3035:3040 <> alpha':32
+R3073:3080 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R3121:3121 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+binder 3081:3083 <> cpu:33
+R3084:3085 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R3086:3086 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R3100:3105 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R3120:3120 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R3090:3094 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R3087:3089 prosa.classic.model.schedule.apa.affinity <> cpu:33 var
+R3095:3099 prosa.classic.model.schedule.apa.affinity <> alpha:31 var
+R3109:3113 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R3106:3108 prosa.classic.model.schedule.apa.affinity <> cpu:33 var
+R3114:3119 prosa.classic.model.schedule.apa.affinity <> alpha':32 var
+binder 3081:3083 <> cpu:34
+binder 3081:3083 <> cpu:35
+R3133:3154 prosa.classic.model.schedule.apa.affinity Affinity.Properties.IntersectingAffinities <> sec
+R3166:3175 prosa.classic.model.schedule.apa.affinity Affinity.Properties <> sec
+R3185:3192 prosa.classic.model.schedule.apa.affinity Affinity <> mod

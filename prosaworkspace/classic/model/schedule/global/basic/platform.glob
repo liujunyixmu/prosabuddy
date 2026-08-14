@@ -1,0 +1,594 @@
+DIGEST 83efe9020bc8fdb9cd118eaa4477787c
+Fprosa.classic.model.schedule.global.basic.platform
+R15:36 prosa.classic.util.all <> <> lib
+R54:91 prosa.classic.model.arrival.basic.task <> <> lib
+R93:129 prosa.classic.model.arrival.basic.job <> <> lib
+R131:158 prosa.classic.model.priority <> <> lib
+R160:205 prosa.classic.model.arrival.basic.task_arrival <> <> lib
+R223:272 prosa.classic.model.schedule.global.basic.schedule <> <> lib
+R274:327 prosa.classic.model.schedule.global.basic.interference <> <> lib
+R359:367 mathcomp.boot.ssreflect <> <> lib
+R369:375 mathcomp.boot.ssrbool <> <> lib
+R377:382 mathcomp.boot.ssrfun <> <> lib
+R384:389 mathcomp.boot.eqtype <> <> lib
+R391:396 mathcomp.boot.ssrnat <> <> lib
+R398:400 mathcomp.boot.seq <> <> lib
+R402:408 mathcomp.boot.fintype <> <> lib
+R410:414 mathcomp.boot.bigop <> <> lib
+mod 425:432 <> Platform
+R445:447 prosa.classic.model.arrival.basic.job Job <> mod
+R449:463 prosa.classic.model.arrival.basic.task SporadicTaskset <> mod
+R465:472 prosa.classic.model.schedule.global.basic.schedule Schedule <> mod
+R474:495 prosa.classic.model.schedule.global.basic.schedule ScheduleOfSporadicTask <> mod
+R497:511 prosa.classic.model.arrival.basic.task SporadicTaskset <> mod
+R513:523 prosa.classic.model.arrival.basic.task_arrival TaskArrival <> mod
+R525:536 prosa.classic.model.schedule.global.basic.interference Interference <> mod
+R538:545 prosa.classic.model.priority Priority <> mod
+sec 559:568 Platform Properties
+var  589:601 Platform.Properties sporadic_task
+R604:609 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 626:634 Platform.Properties task_cost
+R650:653 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R637:649 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.sporadic_task var
+R654:657 prosa.classic.model.time Time time def
+var 673:683 Platform.Properties task_period
+R699:702 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R686:698 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.sporadic_task var
+R703:706 prosa.classic.model.time Time time def
+var 722:734 Platform.Properties task_deadline
+R750:753 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R737:749 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.sporadic_task var
+R754:757 prosa.classic.model.time Time time def
+var  778:780 Platform.Properties Job
+R783:788 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 805:815 Platform.Properties job_arrival
+R821:824 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R818:820 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.Job var
+R825:828 prosa.classic.model.time Time time def
+var 844:851 Platform.Properties job_cost
+R857:860 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R854:856 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.Job var
+R861:864 prosa.classic.model.time Time time def
+var 880:891 Platform.Properties job_deadline
+R897:900 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R894:896 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.Job var
+R901:904 prosa.classic.model.time Time time def
+var 920:927 Platform.Properties job_task
+R933:936 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R930:932 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.Job var
+R937:949 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.sporadic_task var
+var 1018:1024 Platform.Properties arr_seq
+R1027:1042 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R1044:1046 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.Job var
+var  1120:1127 Platform.Properties num_cpus
+R1130:1132 Corelib.Init.Datatypes <> nat ind
+var 1149:1153 Platform.Properties sched
+R1156:1163 prosa.classic.model.schedule.global.basic.schedule Schedule schedule def
+R1169:1176 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.num_cpus var
+R1165:1167 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.Job var
+sec 1192:1200 Platform.Properties Execution
+def 1346:1360 Platform work_conserving
+binder 1380:1380 <> j:22
+binder 1382:1382 <> t:23
+R1415:1428 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1395:1404 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R1414:1414 prosa.classic.model.schedule.global.basic.platform <> j:22 var
+R1406:1412 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.arr_seq var
+R1470:1483 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1429:1438 prosa.classic.model.schedule.global.basic.schedule Schedule backlogged def
+R1469:1469 prosa.classic.model.schedule.global.basic.platform <> t:23 var
+R1467:1467 prosa.classic.model.schedule.global.basic.platform <> j:22 var
+R1461:1465 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.sched var
+R1452:1459 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.job_cost var
+R1440:1450 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.job_arrival var
+binder 1491:1493 <> cpu:24
+R1496:1502 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1510:1523 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 1503:1509 <> j_other:25
+R1524:1535 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled_on def
+R1551:1553 prosa.classic.model.schedule.global.basic.platform <> cpu:24 var
+R1555:1555 prosa.classic.model.schedule.global.basic.platform <> t:23 var
+R1543:1549 prosa.classic.model.schedule.global.basic.platform <> j_other:25 var
+R1537:1541 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.sched var
+def 1718:1738 Platform work_conserving_count
+binder 1758:1758 <> j:26
+binder 1760:1760 <> t:27
+R1793:1806 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1773:1782 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R1792:1792 prosa.classic.model.schedule.global.basic.platform <> j:26 var
+R1784:1790 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.arr_seq var
+R1848:1861 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1807:1816 prosa.classic.model.schedule.global.basic.schedule Schedule backlogged def
+R1847:1847 prosa.classic.model.schedule.global.basic.platform <> t:27 var
+R1845:1845 prosa.classic.model.schedule.global.basic.platform <> j:26 var
+R1839:1843 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.sched var
+R1830:1837 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.job_cost var
+R1818:1828 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.job_arrival var
+R1894:1896 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1862:1865 mathcomp.boot.seq <> size def
+R1868:1884 prosa.classic.model.schedule.global.basic.schedule Schedule jobs_scheduled_at def
+R1892:1892 prosa.classic.model.schedule.global.basic.platform <> t:27 var
+R1886:1890 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.sched var
+R1897:1904 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.num_cpus var
+R1922:1930 prosa.classic.model.schedule.global.basic.platform Platform.Properties.Execution <> sec
+sec 1946:1947 Platform.Properties FP
+var 1994:2011 Platform.Properties.FP higher_eq_priority
+R2014:2022 prosa.classic.model.priority Priority FP_policy def
+R2024:2036 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.sporadic_task var
+def 2194:2211 Platform respects_FP_policy
+binder 2231:2231 <> j:30
+binder 2233:2236 <> j_hp:31
+binder 2238:2238 <> t:32
+R2271:2284 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2251:2260 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R2270:2270 prosa.classic.model.schedule.global.basic.platform <> j:30 var
+R2262:2268 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.arr_seq var
+R2326:2339 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2285:2294 prosa.classic.model.schedule.global.basic.schedule Schedule backlogged def
+R2325:2325 prosa.classic.model.schedule.global.basic.platform <> t:32 var
+R2323:2323 prosa.classic.model.schedule.global.basic.platform <> j:30 var
+R2317:2321 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.sched var
+R2308:2315 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.job_cost var
+R2296:2306 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.job_arrival var
+R2362:2375 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2340:2348 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled def
+R2361:2361 prosa.classic.model.schedule.global.basic.platform <> t:32 var
+R2356:2359 prosa.classic.model.schedule.global.basic.platform <> j_hp:31 var
+R2350:2354 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.sched var
+R2376:2393 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.FP.higher_eq_priority var
+R2396:2403 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.job_task var
+R2405:2408 prosa.classic.model.schedule.global.basic.platform <> j_hp:31 var
+R2412:2419 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.job_task var
+R2421:2421 prosa.classic.model.schedule.global.basic.platform <> j:30 var
+R2434:2435 prosa.classic.model.schedule.global.basic.platform Platform.Properties.FP <> sec
+sec 2455:2458 Platform.Properties JLFP
+var 2506:2523 Platform.Properties.JLFP higher_eq_priority
+R2526:2536 prosa.classic.model.priority Priority JLFP_policy def
+R2538:2540 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.Job var
+def 2718:2737 Platform respects_JLFP_policy
+binder 2757:2757 <> j:35
+binder 2759:2762 <> j_hp:36
+binder 2764:2764 <> t:37
+R2797:2810 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2777:2786 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R2796:2796 prosa.classic.model.schedule.global.basic.platform <> j:35 var
+R2788:2794 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.arr_seq var
+R2852:2865 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2811:2820 prosa.classic.model.schedule.global.basic.schedule Schedule backlogged def
+R2851:2851 prosa.classic.model.schedule.global.basic.platform <> t:37 var
+R2849:2849 prosa.classic.model.schedule.global.basic.platform <> j:35 var
+R2843:2847 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.sched var
+R2834:2841 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.job_cost var
+R2822:2832 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.job_arrival var
+R2888:2901 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2866:2874 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled def
+R2887:2887 prosa.classic.model.schedule.global.basic.platform <> t:37 var
+R2882:2885 prosa.classic.model.schedule.global.basic.platform <> j_hp:36 var
+R2876:2880 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.sched var
+R2902:2919 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.JLFP.higher_eq_priority var
+R2921:2924 prosa.classic.model.schedule.global.basic.platform <> j_hp:36 var
+R2926:2926 prosa.classic.model.schedule.global.basic.platform <> j:35 var
+R2944:2947 prosa.classic.model.schedule.global.basic.platform Platform.Properties.JLFP <> sec
+sec 2963:2966 Platform.Properties JLDP
+var 3014:3031 Platform.Properties.JLDP higher_eq_priority
+R3034:3044 prosa.classic.model.priority Priority JLDP_policy def
+R3046:3048 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.Job var
+def 3226:3245 Platform respects_JLDP_policy
+binder 3265:3265 <> j:40
+binder 3267:3270 <> j_hp:41
+binder 3272:3272 <> t:42
+R3305:3318 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3285:3294 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R3304:3304 prosa.classic.model.schedule.global.basic.platform <> j:40 var
+R3296:3302 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.arr_seq var
+R3360:3373 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3319:3328 prosa.classic.model.schedule.global.basic.schedule Schedule backlogged def
+R3359:3359 prosa.classic.model.schedule.global.basic.platform <> t:42 var
+R3357:3357 prosa.classic.model.schedule.global.basic.platform <> j:40 var
+R3351:3355 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.sched var
+R3342:3349 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.job_cost var
+R3330:3340 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.job_arrival var
+R3396:3409 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3374:3382 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled def
+R3395:3395 prosa.classic.model.schedule.global.basic.platform <> t:42 var
+R3390:3393 prosa.classic.model.schedule.global.basic.platform <> j_hp:41 var
+R3384:3388 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.sched var
+R3410:3427 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.JLDP.higher_eq_priority var
+R3429:3429 prosa.classic.model.schedule.global.basic.platform <> t:42 var
+R3431:3434 prosa.classic.model.schedule.global.basic.platform <> j_hp:41 var
+R3436:3436 prosa.classic.model.schedule.global.basic.platform <> j:40 var
+R3454:3457 prosa.classic.model.schedule.global.basic.platform Platform.Properties.JLDP <> sec
+sec 3477:3482 Platform.Properties Lemmas
+var 3557:3578 Platform.Properties.Lemmas H_valid_job_parameters
+binder 3596:3596 <> j:43
+R3629:3642 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3609:3618 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R3628:3628 prosa.classic.model.schedule.global.basic.platform <> j:43 var
+R3620:3626 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.arr_seq var
+R3643:3660 prosa.classic.model.arrival.basic.job Job valid_sporadic_job def
+R3717:3717 prosa.classic.model.schedule.global.basic.platform <> j:43 var
+R3708:3715 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.job_task var
+R3695:3706 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.job_deadline var
+R3686:3693 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.job_cost var
+R3672:3684 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.task_deadline var
+R3662:3670 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.task_cost var
+sec 3833:3853 Platform.Properties.Lemmas EquivalentDefinitions
+prf 3871:3910 Platform work_conserving_eq_work_conserving_count
+R3939:3943 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R3924:3938 prosa.classic.model.schedule.global.basic.platform Platform work_conserving def
+R3944:3964 prosa.classic.model.schedule.global.basic.platform Platform work_conserving_count def
+R3999:4013 prosa.classic.model.schedule.global.basic.platform Platform work_conserving def
+R4016:4036 prosa.classic.model.schedule.global.basic.platform Platform work_conserving_count def
+R4176:4179 mathcomp.boot.seq <> size def
+R4182:4185 mathcomp.boot.fintype <> enum abbrev
+R4188:4196 prosa.classic.model.schedule.global.basic.schedule Schedule processor def
+R4198:4205 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.num_cpus var
+R4156:4163 Corelib.Init.Logic <> eq_trans thm
+R4241:4253 mathcomp.boot.fintype <> size_enum_ord thm
+R4176:4179 mathcomp.boot.seq <> size def
+R4182:4185 mathcomp.boot.fintype <> enum abbrev
+R4188:4196 prosa.classic.model.schedule.global.basic.schedule Schedule processor def
+R4198:4205 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.num_cpus var
+R4156:4163 Corelib.Init.Logic <> eq_trans thm
+R4241:4253 mathcomp.boot.fintype <> size_enum_ord thm
+R4241:4253 mathcomp.boot.fintype <> size_enum_ord thm
+R4275:4291 prosa.classic.model.schedule.global.basic.schedule Schedule jobs_scheduled_at def
+R4332:4335 mathcomp.boot.seq <> size def
+R4339:4344 prosa.util.notation <> ::nat_scope:'\cat_'_'('_x_'<'_x_')'_x not
+R4348:4350 prosa.util.notation <> ::nat_scope:'\cat_'_'('_x_'<'_x_')'_x not
+R4359:4360 prosa.util.notation <> ::nat_scope:'\cat_'_'('_x_'<'_x_')'_x not
+R4351:4358 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.num_cpus var
+binder 4345:4347 <> cpu:46
+binder 4345:4347 <> cpu:47
+binder 4345:4347 <> cpu:48
+R4361:4363 mathcomp.boot.seq <> map def
+R4430:4442 prosa.classic.util.notation <> make_sequence def
+R4445:4449 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.sched var
+R4451:4453 prosa.classic.model.schedule.global.basic.platform <> cpu:46 var
+binder 4370:4370 <> x:49
+R4375:4378 Corelib.Init.Datatypes <> Some constr
+R4380:4380 prosa.classic.model.schedule.global.basic.platform <> x:49 var
+R4312:4319 Corelib.Init.Logic <> eq_trans thm
+R4495:4508 prosa.classic.util.bigcat <> map_bigcat_ord thm
+R4510:4517 mathcomp.boot.seq <> size_map thm
+R4332:4335 mathcomp.boot.seq <> size def
+R4339:4344 prosa.util.notation <> ::nat_scope:'\cat_'_'('_x_'<'_x_')'_x not
+R4348:4350 prosa.util.notation <> ::nat_scope:'\cat_'_'('_x_'<'_x_')'_x not
+R4359:4360 prosa.util.notation <> ::nat_scope:'\cat_'_'('_x_'<'_x_')'_x not
+R4351:4358 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.num_cpus var
+binder 4345:4347 <> cpu:50
+binder 4345:4347 <> cpu:51
+binder 4345:4347 <> cpu:52
+R4361:4363 mathcomp.boot.seq <> map def
+R4430:4442 prosa.classic.util.notation <> make_sequence def
+R4445:4449 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.sched var
+R4451:4453 prosa.classic.model.schedule.global.basic.platform <> cpu:50 var
+binder 4370:4370 <> x:53
+R4375:4378 Corelib.Init.Datatypes <> Some constr
+R4380:4380 prosa.classic.model.schedule.global.basic.platform <> x:53 var
+R4312:4319 Corelib.Init.Logic <> eq_trans thm
+R4495:4508 prosa.classic.util.bigcat <> map_bigcat_ord thm
+R4495:4508 prosa.classic.util.bigcat <> map_bigcat_ord thm
+R4510:4517 mathcomp.boot.seq <> size_map thm
+R4510:4517 mathcomp.boot.seq <> size_map thm
+R4558:4561 mathcomp.boot.seq <> size def
+R4564:4569 prosa.util.notation <> ::nat_scope:'\cat_'_'('_x_'<'_x_')'_x not
+R4573:4575 prosa.util.notation <> ::nat_scope:'\cat_'_'('_x_'<'_x_')'_x not
+R4584:4585 prosa.util.notation <> ::nat_scope:'\cat_'_'('_x_'<'_x_')'_x not
+R4576:4583 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.num_cpus var
+binder 4570:4572 <> cpu:54
+binder 4570:4572 <> cpu:55
+binder 4570:4572 <> cpu:56
+R4586:4589 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_']' not
+R4601:4601 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_']' not
+R4590:4594 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.sched var
+R4596:4598 prosa.classic.model.schedule.global.basic.platform <> cpu:54 var
+R4538:4545 Corelib.Init.Logic <> eq_trans thm
+R4558:4561 mathcomp.boot.seq <> size def
+R4564:4569 prosa.util.notation <> ::nat_scope:'\cat_'_'('_x_'<'_x_')'_x not
+R4573:4575 prosa.util.notation <> ::nat_scope:'\cat_'_'('_x_'<'_x_')'_x not
+R4584:4585 prosa.util.notation <> ::nat_scope:'\cat_'_'('_x_'<'_x_')'_x not
+R4576:4583 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.num_cpus var
+binder 4570:4572 <> cpu:57
+binder 4570:4572 <> cpu:58
+binder 4570:4572 <> cpu:59
+R4586:4589 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_']' not
+R4601:4601 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_']' not
+R4590:4594 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.sched var
+R4596:4598 prosa.classic.model.schedule.global.basic.platform <> cpu:57 var
+R4538:4545 Corelib.Init.Logic <> eq_trans thm
+R4649:4655 mathcomp.boot.bigop <> eq_bigr thm
+R4649:4655 mathcomp.boot.bigop <> eq_bigr thm
+R4696:4700 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.sched var
+R4696:4700 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.sched var
+R4791:4793 mathcomp.boot.eqtype <> eqP def
+R4854:4868 prosa.classic.util.bigcat <> size_bigcat_ord thm
+R4854:4868 prosa.classic.util.bigcat <> size_bigcat_ord thm
+R4854:4868 prosa.classic.util.bigcat <> size_bigcat_ord thm
+R4909:4914 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<'_x_')'_x not
+R4916:4918 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<'_x_')'_x not
+R4927:4928 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<'_x_')'_x not
+R4919:4926 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.num_cpus var
+binder 4915:4915 <> i:60
+binder 4915:4915 <> i:61
+binder 4915:4915 <> i:62
+R4889:4896 Corelib.Init.Logic <> eq_trans thm
+R4963:4975 mathcomp.boot.bigop <> big_const_ord thm
+R4977:4985 mathcomp.boot.ssrnat <> iter_addn thm
+R4987:4991 mathcomp.boot.ssrnat <> mul1n thm
+R4993:4997 mathcomp.boot.ssrnat <> addn0 thm
+R4999:5011 mathcomp.boot.fintype <> size_enum_ord thm
+R4909:4914 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<'_x_')'_x not
+R4916:4918 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<'_x_')'_x not
+R4927:4928 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<'_x_')'_x not
+R4919:4926 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.num_cpus var
+binder 4915:4915 <> i:63
+binder 4915:4915 <> i:64
+binder 4915:4915 <> i:65
+R4889:4896 Corelib.Init.Logic <> eq_trans thm
+R4963:4975 mathcomp.boot.bigop <> big_const_ord thm
+R4963:4975 mathcomp.boot.bigop <> big_const_ord thm
+R4977:4985 mathcomp.boot.ssrnat <> iter_addn thm
+R4977:4985 mathcomp.boot.ssrnat <> iter_addn thm
+R4987:4991 mathcomp.boot.ssrnat <> mul1n thm
+R4987:4991 mathcomp.boot.ssrnat <> mul1n thm
+R4993:4997 mathcomp.boot.ssrnat <> addn0 thm
+R4993:4997 mathcomp.boot.ssrnat <> addn0 thm
+R4999:5011 mathcomp.boot.fintype <> size_enum_ord thm
+R4999:5011 mathcomp.boot.fintype <> size_enum_ord thm
+R5035:5041 mathcomp.boot.bigop <> eq_bigr thm
+R5035:5041 mathcomp.boot.bigop <> eq_bigr thm
+R5178:5185 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R5210:5210 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+binder 5186:5188 <> cpu:66
+R5189:5190 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R5202:5205 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R5191:5195 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.sched var
+R5197:5199 prosa.classic.model.schedule.global.basic.platform <> cpu:66 var
+R5206:5209 Corelib.Init.Datatypes <> None constr
+binder 5186:5188 <> cpu:67
+binder 5186:5188 <> cpu:68
+R5178:5185 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R5210:5210 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+binder 5186:5188 <> cpu:69
+R5189:5190 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R5202:5205 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R5191:5195 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.sched var
+R5197:5199 prosa.classic.model.schedule.global.basic.platform <> cpu:69 var
+R5206:5209 Corelib.Init.Datatypes <> None constr
+binder 5186:5188 <> cpu:70
+binder 5186:5188 <> cpu:71
+R5267:5271 Corelib.ssr.ssrbool <> negbT thm
+R5288:5298 mathcomp.boot.fintype <> negb_exists thm
+R5267:5271 Corelib.ssr.ssrbool <> negbT thm
+R5288:5298 mathcomp.boot.fintype <> negb_exists thm
+R5288:5298 mathcomp.boot.fintype <> negb_exists thm
+R5334:5340 mathcomp.boot.fintype <> forallP thm
+R5393:5397 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.sched var
+R5393:5397 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.sched var
+R5463:5465 mathcomp.boot.eqtype <> eqP def
+R5463:5465 mathcomp.boot.eqtype <> eqP def
+R5523:5529 mathcomp.boot.fintype <> existsP thm
+R5538:5540 mathcomp.boot.eqtype <> eqP def
+R5568:5584 prosa.classic.model.schedule.global.basic.schedule Schedule jobs_scheduled_at def
+R5650:5653 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R5644:5647 mathcomp.boot.seq <> size def
+R5656:5660 Corelib.ssr.ssrbool <> negbK thm
+R5624:5626 mathcomp.boot.eqtype <> eqP def
+R5656:5660 Corelib.ssr.ssrbool <> negbK thm
+R5650:5653 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R5644:5647 mathcomp.boot.seq <> size def
+R5650:5653 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R5644:5647 mathcomp.boot.seq <> size def
+R5656:5660 Corelib.ssr.ssrbool <> negbK thm
+R5700:5703 Corelib.ssr.ssrbool <> negP thm
+R5766:5772 mathcomp.boot.ssrnat <> neq_ltn thm
+R5781:5783 Corelib.ssr.ssrbool <> orP thm
+R5766:5772 mathcomp.boot.ssrnat <> neq_ltn thm
+R5766:5772 mathcomp.boot.ssrnat <> neq_ltn thm
+R5781:5783 Corelib.ssr.ssrbool <> orP thm
+R5814:5828 prosa.classic.util.bigcat <> size_bigcat_ord thm
+R5814:5828 prosa.classic.util.bigcat <> size_bigcat_ord thm
+R5814:5828 prosa.classic.util.bigcat <> size_bigcat_ord thm
+R5856:5868 prosa.classic.util.bigord <> big_mkord_ord thm
+R5856:5868 prosa.classic.util.bigord <> big_mkord_ord thm
+R5856:5868 prosa.classic.util.bigord <> big_mkord_ord thm
+R5914:5922 mathcomp.boot.bigop <> big_mkord thm
+binder 5929:5929 <> x:72
+R5934:5937 Corelib.Init.Datatypes <> true constr
+R5980:5990 mathcomp.boot.bigop <> big_cat_nat thm
+R6034:6037 mathcomp.boot.ssrnat <> ltnW thm
+R6040:6046 mathcomp.boot.fintype <> ltn_ord thm
+R5980:5990 mathcomp.boot.bigop <> big_cat_nat thm
+R5980:5990 mathcomp.boot.bigop <> big_cat_nat thm
+R6034:6037 mathcomp.boot.ssrnat <> ltnW thm
+R6040:6046 mathcomp.boot.fintype <> ltn_ord thm
+R6081:6087 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R6089:6090 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 6088:6088 <> k:73
+R6099:6101 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6091:6098 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.num_cpus var
+R6102:6102 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R6111:6114 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R6107:6109 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6110:6110 prosa.classic.model.schedule.global.basic.platform <> k:73 var
+R6081:6087 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R6089:6090 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 6088:6088 <> k:74
+R6099:6101 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6091:6098 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.num_cpus var
+R6102:6102 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R6111:6114 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R6107:6109 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6110:6110 prosa.classic.model.schedule.global.basic.platform <> k:74 var
+R6157:6157 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R6173:6176 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R6166:6168 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R6158:6165 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.num_cpus var
+R6157:6157 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R6173:6176 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R6166:6168 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R6158:6165 prosa.classic.model.schedule.global.basic.platform <> Platform.Properties.num_cpus var
+R6204:6208 mathcomp.boot.ssrnat <> addnS thm
+R6210:6215 mathcomp.boot.ssrnat <> prednK thm
+R6234:6242 mathcomp.boot.ssrnat <> ltn_subRL thm
+R6244:6248 mathcomp.boot.ssrnat <> addn0 thm
+R6250:6256 mathcomp.boot.fintype <> ltn_ord thm
+R6204:6208 mathcomp.boot.ssrnat <> addnS thm
+R6204:6208 mathcomp.boot.ssrnat <> addnS thm
+R6210:6215 mathcomp.boot.ssrnat <> prednK thm
+R6210:6215 mathcomp.boot.ssrnat <> prednK thm
+R6234:6242 mathcomp.boot.ssrnat <> ltn_subRL thm
+R6234:6242 mathcomp.boot.ssrnat <> ltn_subRL thm
+R6244:6248 mathcomp.boot.ssrnat <> addn0 thm
+R6244:6248 mathcomp.boot.ssrnat <> addn0 thm
+R6250:6256 mathcomp.boot.fintype <> ltn_ord thm
+R6250:6256 mathcomp.boot.fintype <> ltn_ord thm
+R6283:6288 mathcomp.boot.ssrnat <> addnBA thm
+R6305:6308 mathcomp.boot.ssrnat <> ltnW thm
+R6311:6317 mathcomp.boot.fintype <> ltn_ord thm
+R6283:6288 mathcomp.boot.ssrnat <> addnBA thm
+R6283:6288 mathcomp.boot.ssrnat <> addnBA thm
+R6305:6308 mathcomp.boot.ssrnat <> ltnW thm
+R6311:6317 mathcomp.boot.fintype <> ltn_ord thm
+R6347:6351 mathcomp.boot.ssrnat <> addnC thm
+R6354:6359 mathcomp.boot.ssrnat <> addnBA thm
+R6364:6368 mathcomp.boot.ssrnat <> subnn thm
+R6370:6374 mathcomp.boot.ssrnat <> addn0 thm
+R6347:6351 mathcomp.boot.ssrnat <> addnC thm
+R6347:6351 mathcomp.boot.ssrnat <> addnC thm
+R6354:6359 mathcomp.boot.ssrnat <> addnBA thm
+R6354:6359 mathcomp.boot.ssrnat <> addnBA thm
+R6364:6368 mathcomp.boot.ssrnat <> subnn thm
+R6364:6368 mathcomp.boot.ssrnat <> subnn thm
+R6370:6374 mathcomp.boot.ssrnat <> addn0 thm
+R6370:6374 mathcomp.boot.ssrnat <> addn0 thm
+R6452:6463 mathcomp.boot.bigop <> big_nat_recl thm
+R6480:6487 mathcomp.boot.ssrnat <> leq_addr thm
+R6452:6463 mathcomp.boot.bigop <> big_nat_recl thm
+R6452:6463 mathcomp.boot.bigop <> big_nat_recl thm
+R6480:6487 mathcomp.boot.ssrnat <> leq_addr thm
+R6559:6562 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6592:6592 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6531:6531 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6554:6557 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6532:6537 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R6539:6542 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R6544:6546 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R6551:6552 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+binder 6543:6543 <> i:75
+binder 6543:6543 <> i:76
+binder 6543:6543 <> i:77
+R6563:6568 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R6573:6576 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R6578:6580 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R6589:6590 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R6585:6587 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+binder 6577:6577 <> i:78
+binder 6577:6577 <> i:79
+binder 6577:6577 <> i:80
+R6510:6518 mathcomp.boot.ssrnat <> leq_trans thm
+R6559:6562 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6592:6592 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6531:6531 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6554:6557 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6532:6537 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R6539:6542 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R6544:6546 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R6551:6552 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+binder 6543:6543 <> i:81
+binder 6543:6543 <> i:82
+binder 6543:6543 <> i:83
+R6563:6568 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R6573:6576 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R6578:6580 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R6589:6590 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R6585:6587 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+binder 6577:6577 <> i:84
+binder 6577:6577 <> i:85
+binder 6577:6577 <> i:86
+R6510:6518 mathcomp.boot.ssrnat <> leq_trans thm
+R6666:6678 mathcomp.boot.bigop <> big_const_nat thm
+R6682:6690 mathcomp.boot.ssrnat <> iter_addn thm
+R6694:6698 mathcomp.boot.ssrnat <> mul1n thm
+R6700:6704 mathcomp.boot.ssrnat <> addn0 thm
+R6706:6710 mathcomp.boot.ssrnat <> subn0 thm
+R6666:6678 mathcomp.boot.bigop <> big_const_nat thm
+R6666:6678 mathcomp.boot.bigop <> big_const_nat thm
+R6666:6678 mathcomp.boot.bigop <> big_const_nat thm
+R6682:6690 mathcomp.boot.ssrnat <> iter_addn thm
+R6682:6690 mathcomp.boot.ssrnat <> iter_addn thm
+R6682:6690 mathcomp.boot.ssrnat <> iter_addn thm
+R6694:6698 mathcomp.boot.ssrnat <> mul1n thm
+R6694:6698 mathcomp.boot.ssrnat <> mul1n thm
+R6694:6698 mathcomp.boot.ssrnat <> mul1n thm
+R6700:6704 mathcomp.boot.ssrnat <> addn0 thm
+R6700:6704 mathcomp.boot.ssrnat <> addn0 thm
+R6706:6710 mathcomp.boot.ssrnat <> subn0 thm
+R6706:6710 mathcomp.boot.ssrnat <> subn0 thm
+R6742:6744 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6747:6751 mathcomp.boot.ssrnat <> addnC thm
+R6754:6759 mathcomp.boot.ssrnat <> addnBA thm
+R6764:6768 mathcomp.boot.ssrnat <> subnn thm
+R6772:6776 mathcomp.boot.ssrnat <> addn0 thm
+R6747:6751 mathcomp.boot.ssrnat <> addnC thm
+R6742:6744 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6742:6744 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6747:6751 mathcomp.boot.ssrnat <> addnC thm
+R6754:6759 mathcomp.boot.ssrnat <> addnBA thm
+R6754:6759 mathcomp.boot.ssrnat <> addnBA thm
+R6764:6768 mathcomp.boot.ssrnat <> subnn thm
+R6764:6768 mathcomp.boot.ssrnat <> subnn thm
+R6772:6776 mathcomp.boot.ssrnat <> addn0 thm
+R6772:6776 mathcomp.boot.ssrnat <> addn0 thm
+R6772:6776 mathcomp.boot.ssrnat <> addn0 thm
+R6807:6811 mathcomp.boot.ssrnat <> addnA thm
+R6815:6817 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6820:6824 mathcomp.boot.ssrnat <> addnC thm
+R6826:6830 mathcomp.boot.ssrnat <> addnA thm
+R6832:6836 mathcomp.boot.ssrnat <> addn1 thm
+R6807:6811 mathcomp.boot.ssrnat <> addnA thm
+R6807:6811 mathcomp.boot.ssrnat <> addnA thm
+R6820:6824 mathcomp.boot.ssrnat <> addnC thm
+R6815:6817 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6815:6817 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6820:6824 mathcomp.boot.ssrnat <> addnC thm
+R6826:6830 mathcomp.boot.ssrnat <> addnA thm
+R6826:6830 mathcomp.boot.ssrnat <> addnA thm
+R6832:6836 mathcomp.boot.ssrnat <> addn1 thm
+R6832:6836 mathcomp.boot.ssrnat <> addn1 thm
+R6902:6906 mathcomp.boot.ssrnat <> addn1 thm
+R6908:6912 mathcomp.boot.ssrnat <> addnC thm
+R6916:6918 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6921:6925 mathcomp.boot.ssrnat <> addnC thm
+R6928:6932 mathcomp.boot.ssrnat <> addnA thm
+R6902:6906 mathcomp.boot.ssrnat <> addn1 thm
+R6902:6906 mathcomp.boot.ssrnat <> addn1 thm
+R6908:6912 mathcomp.boot.ssrnat <> addnC thm
+R6908:6912 mathcomp.boot.ssrnat <> addnC thm
+R6921:6925 mathcomp.boot.ssrnat <> addnC thm
+R6916:6918 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6916:6918 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6921:6925 mathcomp.boot.ssrnat <> addnC thm
+R6928:6932 mathcomp.boot.ssrnat <> addnA thm
+R6928:6932 mathcomp.boot.ssrnat <> addnA thm
+R6957:6963 mathcomp.boot.ssrnat <> leq_add thm
+R6957:6963 mathcomp.boot.ssrnat <> leq_add thm
+R7005:7021 prosa.classic.util.bigord <> eq_fun_ord_to_nat thm
+R7031:7043 prosa.classic.util.notation <> make_sequence def
+R7065:7069 mathcomp.boot.ssrnat <> add0n thm
+R7005:7021 prosa.classic.util.bigord <> eq_fun_ord_to_nat thm
+R7005:7021 prosa.classic.util.bigord <> eq_fun_ord_to_nat thm
+R7065:7069 mathcomp.boot.ssrnat <> add0n thm
+R7065:7069 mathcomp.boot.ssrnat <> add0n thm
+R7095:7101 mathcomp.boot.ssrnat <> leq_add thm
+R7110:7116 mathcomp.boot.bigop <> leq_sum thm
+R7131:7144 prosa.classic.util.bigord <> fun_ord_to_nat def
+R7195:7207 prosa.classic.util.notation <> make_sequence def
+R7095:7101 mathcomp.boot.ssrnat <> leq_add thm
+R7110:7116 mathcomp.boot.bigop <> leq_sum thm
+R7110:7116 mathcomp.boot.bigop <> leq_sum thm
+R7282:7302 prosa.classic.model.schedule.global.basic.platform Platform.Properties.Lemmas.EquivalentDefinitions <> sec
+R7320:7325 prosa.classic.model.schedule.global.basic.platform Platform.Properties.Lemmas <> sec
+R7335:7344 prosa.classic.model.schedule.global.basic.platform Platform.Properties <> sec
+R7354:7361 prosa.classic.model.schedule.global.basic.platform Platform <> mod

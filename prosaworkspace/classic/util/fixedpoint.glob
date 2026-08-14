@@ -1,0 +1,476 @@
+DIGEST 40bec59a431ce48f548cff7bf2adc0d2
+Fprosa.classic.util.fixedpoint
+R15:40 prosa.classic.util.tactics <> <> lib
+R42:69 prosa.classic.util.induction <> <> lib
+R101:109 mathcomp.boot.ssreflect <> <> lib
+R111:117 mathcomp.boot.ssrbool <> <> lib
+R119:124 mathcomp.boot.eqtype <> <> lib
+R126:131 mathcomp.boot.ssrnat <> <> lib
+R133:135 mathcomp.boot.seq <> <> lib
+R137:143 mathcomp.boot.fintype <> <> lib
+R145:149 mathcomp.boot.bigop <> <> lib
+sec 161:170 <> FixedPoint
+prf 184:191 <> iter_fix
+binder 193:193 <> T:1
+R201:204 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R200:200 prosa.classic.util.fixedpoint <> T:1 var
+R205:205 prosa.classic.util.fixedpoint <> T:1 var
+binder 196:196 <> F:2
+binder 208:208 <> x:3
+binder 210:210 <> k:4
+binder 212:212 <> n:5
+R246:253 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R230:232 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R220:223 mathcomp.boot.ssrnat <> iter def
+R229:229 prosa.classic.util.fixedpoint <> x:3 var
+R227:227 prosa.classic.util.fixedpoint <> F:2 var
+R225:225 prosa.classic.util.fixedpoint <> k:4 var
+R233:236 mathcomp.boot.ssrnat <> iter def
+R245:245 prosa.classic.util.fixedpoint <> x:3 var
+R243:243 prosa.classic.util.fixedpoint <> F:2 var
+R239:241 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R238:238 prosa.classic.util.fixedpoint <> k:4 var
+R260:267 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R255:258 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R254:254 prosa.classic.util.fixedpoint <> k:4 var
+R259:259 prosa.classic.util.fixedpoint <> n:5 var
+R278:280 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R268:271 mathcomp.boot.ssrnat <> iter def
+R277:277 prosa.classic.util.fixedpoint <> x:3 var
+R275:275 prosa.classic.util.fixedpoint <> F:2 var
+R273:273 prosa.classic.util.fixedpoint <> n:5 var
+R281:284 mathcomp.boot.ssrnat <> iter def
+R293:293 prosa.classic.util.fixedpoint <> x:3 var
+R291:291 prosa.classic.util.fixedpoint <> F:2 var
+R287:289 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R286:286 prosa.classic.util.fixedpoint <> n:5 var
+R343:347 mathcomp.boot.ssrnat <> leqn0 thm
+R343:347 mathcomp.boot.ssrnat <> leqn0 thm
+R343:347 mathcomp.boot.ssrnat <> leqn0 thm
+R358:360 mathcomp.boot.eqtype <> eqP def
+R393:401 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R393:401 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R393:401 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R409:411 Corelib.ssr.ssrbool <> orP thm
+R428:430 mathcomp.boot.eqtype <> eqP def
+prf 494:509 <> fun_mon_iter_mon
+R531:534 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R528:530 Corelib.Init.Datatypes <> nat ind
+R535:537 Corelib.Init.Datatypes <> nat ind
+binder 525:525 <> f:6
+binder 540:541 <> x0:7
+binder 543:544 <> x1:8
+binder 546:547 <> x2:9
+R564:573 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R558:561 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R556:557 prosa.classic.util.fixedpoint <> x1:8 var
+R562:563 prosa.classic.util.fixedpoint <> x2:9 var
+R584:593 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R578:581 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R582:583 prosa.classic.util.fixedpoint <> x0:7 var
+R574:574 prosa.classic.util.fixedpoint <> f:6 var
+R576:577 prosa.classic.util.fixedpoint <> x0:7 var
+R594:594 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R633:643 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+binder 602:603 <> x1:10
+binder 605:606 <> x2:11
+R617:620 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R611:614 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R609:610 prosa.classic.util.fixedpoint <> x1:10 var
+R615:616 prosa.classic.util.fixedpoint <> x2:11 var
+R625:628 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R621:621 prosa.classic.util.fixedpoint <> f:6 var
+R623:624 prosa.classic.util.fixedpoint <> x1:10 var
+R629:629 prosa.classic.util.fixedpoint <> f:6 var
+R631:632 prosa.classic.util.fixedpoint <> x2:11 var
+R656:659 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R644:647 mathcomp.boot.ssrnat <> iter def
+R654:655 prosa.classic.util.fixedpoint <> x0:7 var
+R652:652 prosa.classic.util.fixedpoint <> f:6 var
+R649:650 prosa.classic.util.fixedpoint <> x1:8 var
+R660:663 mathcomp.boot.ssrnat <> iter def
+R670:671 prosa.classic.util.fixedpoint <> x0:7 var
+R668:668 prosa.classic.util.fixedpoint <> f:6 var
+R665:666 prosa.classic.util.fixedpoint <> x2:9 var
+binder 736:737 <> x1:12
+binder 739:743 <> delta:13
+R758:761 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R746:749 mathcomp.boot.ssrnat <> iter def
+R751:752 prosa.classic.util.fixedpoint <> x1:12 var
+R762:765 mathcomp.boot.ssrnat <> iter def
+R770:772 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R768:769 prosa.classic.util.fixedpoint <> x1:12 var
+R773:777 prosa.classic.util.fixedpoint <> delta:13 var
+R805:809 mathcomp.boot.ssrnat <> subnK thm
+R815:819 mathcomp.boot.ssrnat <> addnC thm
+R805:809 mathcomp.boot.ssrnat <> subnK thm
+R805:809 mathcomp.boot.ssrnat <> subnK thm
+R815:819 mathcomp.boot.ssrnat <> addnC thm
+R815:819 mathcomp.boot.ssrnat <> addnC thm
+R886:890 mathcomp.boot.ssrnat <> add0n thm
+R886:890 mathcomp.boot.ssrnat <> add0n thm
+R886:890 mathcomp.boot.ssrnat <> add0n thm
+R886:890 mathcomp.boot.ssrnat <> add0n thm
+R886:890 mathcomp.boot.ssrnat <> add0n thm
+R931:935 mathcomp.boot.ssrnat <> leqnn thm
+R931:935 mathcomp.boot.ssrnat <> leqnn thm
+R971:974 mathcomp.boot.ssrnat <> iter def
+R950:958 mathcomp.boot.ssrnat <> leq_trans thm
+R971:974 mathcomp.boot.ssrnat <> iter def
+R950:958 mathcomp.boot.ssrnat <> leq_trans thm
+R1079:1083 mathcomp.boot.ssrnat <> iterS thm
+R1079:1083 mathcomp.boot.ssrnat <> iterS thm
+R1079:1083 mathcomp.boot.ssrnat <> iterS thm
+R1079:1083 mathcomp.boot.ssrnat <> iterS thm
+R1132:1136 mathcomp.boot.ssrnat <> iterS thm
+R1139:1143 mathcomp.boot.ssrnat <> addn1 thm
+R1146:1150 mathcomp.boot.ssrnat <> addnA thm
+R1154:1156 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R1163:1167 mathcomp.boot.ssrnat <> addnC thm
+R1169:1173 mathcomp.boot.ssrnat <> addnA thm
+R1175:1179 mathcomp.boot.ssrnat <> addn1 thm
+R1181:1185 mathcomp.boot.ssrnat <> iterS thm
+R1132:1136 mathcomp.boot.ssrnat <> iterS thm
+R1132:1136 mathcomp.boot.ssrnat <> iterS thm
+R1139:1143 mathcomp.boot.ssrnat <> addn1 thm
+R1139:1143 mathcomp.boot.ssrnat <> addn1 thm
+R1146:1150 mathcomp.boot.ssrnat <> addnA thm
+R1146:1150 mathcomp.boot.ssrnat <> addnA thm
+R1163:1167 mathcomp.boot.ssrnat <> addnC thm
+R1154:1156 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R1154:1156 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R1163:1167 mathcomp.boot.ssrnat <> addnC thm
+R1169:1173 mathcomp.boot.ssrnat <> addnA thm
+R1169:1173 mathcomp.boot.ssrnat <> addnA thm
+R1175:1179 mathcomp.boot.ssrnat <> addn1 thm
+R1175:1179 mathcomp.boot.ssrnat <> addn1 thm
+R1181:1185 mathcomp.boot.ssrnat <> iterS thm
+R1181:1185 mathcomp.boot.ssrnat <> iterS thm
+prf 1231:1253 <> fun_mon_iter_mon_helper
+binder 1268:1268 <> T:14
+R1275:1278 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1274:1274 prosa.classic.util.fixedpoint <> T:14 var
+R1279:1279 prosa.classic.util.fixedpoint <> T:14 var
+binder 1271:1271 <> f:15
+R1287:1289 Corelib.ssr.ssrbool <> rel def
+R1291:1291 prosa.classic.util.fixedpoint <> T:14 var
+binder 1283:1284 <> le:16
+binder 1294:1295 <> x0:17
+binder 1297:1298 <> x1:18
+R1319:1328 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1307:1315 Corelib.ssr.ssrbool <> reflexive def
+R1317:1318 prosa.classic.util.fixedpoint <> le:16 var
+R1342:1351 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1329:1338 Corelib.ssr.ssrbool <> transitive def
+R1340:1341 prosa.classic.util.fixedpoint <> le:16 var
+R1352:1352 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1384:1394 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+binder 1360:1361 <> x2:19
+R1364:1365 prosa.classic.util.fixedpoint <> le:16 var
+R1367:1368 prosa.classic.util.fixedpoint <> x0:17 var
+R1371:1374 mathcomp.boot.ssrnat <> iter def
+R1381:1382 prosa.classic.util.fixedpoint <> x0:17 var
+R1379:1379 prosa.classic.util.fixedpoint <> f:15 var
+R1376:1377 prosa.classic.util.fixedpoint <> x2:19 var
+R1395:1395 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1450:1460 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+binder 1403:1404 <> x1:20
+binder 1406:1407 <> x2:21
+R1418:1421 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1410:1411 prosa.classic.util.fixedpoint <> le:16 var
+R1413:1414 prosa.classic.util.fixedpoint <> x0:17 var
+R1416:1417 prosa.classic.util.fixedpoint <> x1:20 var
+R1430:1433 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1422:1423 prosa.classic.util.fixedpoint <> le:16 var
+R1425:1426 prosa.classic.util.fixedpoint <> x1:20 var
+R1428:1429 prosa.classic.util.fixedpoint <> x2:21 var
+R1434:1435 prosa.classic.util.fixedpoint <> le:16 var
+R1438:1438 prosa.classic.util.fixedpoint <> f:15 var
+R1440:1441 prosa.classic.util.fixedpoint <> x1:20 var
+R1445:1445 prosa.classic.util.fixedpoint <> f:15 var
+R1447:1448 prosa.classic.util.fixedpoint <> x2:21 var
+R1461:1462 prosa.classic.util.fixedpoint <> le:16 var
+R1465:1468 mathcomp.boot.ssrnat <> iter def
+R1475:1476 prosa.classic.util.fixedpoint <> x0:17 var
+R1473:1473 prosa.classic.util.fixedpoint <> f:15 var
+R1470:1471 prosa.classic.util.fixedpoint <> x1:18 var
+R1480:1483 mathcomp.boot.ssrnat <> iter def
+R1493:1494 prosa.classic.util.fixedpoint <> x0:17 var
+R1491:1491 prosa.classic.util.fixedpoint <> f:15 var
+R1487:1489 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R1485:1486 prosa.classic.util.fixedpoint <> x1:18 var
+prf 1698:1721 <> fun_mon_iter_mon_generic
+binder 1736:1736 <> T:22
+R1743:1746 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1742:1742 prosa.classic.util.fixedpoint <> T:22 var
+R1747:1747 prosa.classic.util.fixedpoint <> T:22 var
+binder 1739:1739 <> f:23
+R1755:1757 Corelib.ssr.ssrbool <> rel def
+R1759:1759 prosa.classic.util.fixedpoint <> T:22 var
+binder 1751:1752 <> le:24
+binder 1762:1763 <> x0:25
+binder 1765:1766 <> x1:26
+binder 1768:1769 <> x2:27
+R1790:1799 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1778:1786 Corelib.ssr.ssrbool <> reflexive def
+R1788:1789 prosa.classic.util.fixedpoint <> le:24 var
+R1813:1822 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1800:1809 Corelib.ssr.ssrbool <> transitive def
+R1811:1812 prosa.classic.util.fixedpoint <> le:24 var
+R1831:1840 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1825:1828 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R1823:1824 prosa.classic.util.fixedpoint <> x1:26 var
+R1829:1830 prosa.classic.util.fixedpoint <> x2:27 var
+R1841:1841 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1896:1906 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+binder 1849:1850 <> x1:28
+binder 1852:1853 <> x2:29
+R1864:1867 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1856:1857 prosa.classic.util.fixedpoint <> le:24 var
+R1859:1860 prosa.classic.util.fixedpoint <> x0:25 var
+R1862:1863 prosa.classic.util.fixedpoint <> x1:28 var
+R1876:1879 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1868:1869 prosa.classic.util.fixedpoint <> le:24 var
+R1871:1872 prosa.classic.util.fixedpoint <> x1:28 var
+R1874:1875 prosa.classic.util.fixedpoint <> x2:29 var
+R1880:1881 prosa.classic.util.fixedpoint <> le:24 var
+R1884:1884 prosa.classic.util.fixedpoint <> f:23 var
+R1886:1887 prosa.classic.util.fixedpoint <> x1:28 var
+R1891:1891 prosa.classic.util.fixedpoint <> f:23 var
+R1893:1894 prosa.classic.util.fixedpoint <> x2:29 var
+R1907:1907 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1945:1955 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1920:1922 Corelib.Init.Datatypes <> nat ind
+binder 1915:1916 <> x2:30
+R1925:1926 prosa.classic.util.fixedpoint <> le:24 var
+R1928:1929 prosa.classic.util.fixedpoint <> x0:25 var
+R1932:1935 mathcomp.boot.ssrnat <> iter def
+R1942:1943 prosa.classic.util.fixedpoint <> x0:25 var
+R1940:1940 prosa.classic.util.fixedpoint <> f:23 var
+R1937:1938 prosa.classic.util.fixedpoint <> x2:30 var
+R1956:1957 prosa.classic.util.fixedpoint <> le:24 var
+R1960:1963 mathcomp.boot.ssrnat <> iter def
+R1970:1971 prosa.classic.util.fixedpoint <> x0:25 var
+R1968:1968 prosa.classic.util.fixedpoint <> f:23 var
+R1965:1966 prosa.classic.util.fixedpoint <> x1:26 var
+R1975:1978 mathcomp.boot.ssrnat <> iter def
+R1985:1986 prosa.classic.util.fixedpoint <> x0:25 var
+R1983:1983 prosa.classic.util.fixedpoint <> f:23 var
+R1980:1981 prosa.classic.util.fixedpoint <> x2:27 var
+binder 2068:2069 <> x1:31
+binder 2071:2075 <> delta:32
+R2082:2085 mathcomp.boot.ssrnat <> iter def
+R2087:2088 prosa.classic.util.fixedpoint <> x1:31 var
+R2097:2100 mathcomp.boot.ssrnat <> iter def
+R2105:2107 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R2103:2104 prosa.classic.util.fixedpoint <> x1:31 var
+R2108:2112 prosa.classic.util.fixedpoint <> delta:32 var
+R2141:2145 mathcomp.boot.ssrnat <> subnK thm
+R2151:2155 mathcomp.boot.ssrnat <> addnC thm
+R2141:2145 mathcomp.boot.ssrnat <> subnK thm
+R2141:2145 mathcomp.boot.ssrnat <> subnK thm
+R2151:2155 mathcomp.boot.ssrnat <> addnC thm
+R2151:2155 mathcomp.boot.ssrnat <> addnC thm
+R2229:2233 mathcomp.boot.ssrnat <> addn0 thm
+R2229:2233 mathcomp.boot.ssrnat <> addn0 thm
+R2229:2233 mathcomp.boot.ssrnat <> addn0 thm
+R2277:2280 mathcomp.boot.ssrnat <> iter def
+R2286:2288 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R2277:2280 mathcomp.boot.ssrnat <> iter def
+R2286:2288 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R2348:2352 mathcomp.boot.ssrnat <> addnS thm
+R2361:2383 prosa.classic.util.fixedpoint <> fun_mon_iter_mon_helper thm
+R2348:2352 mathcomp.boot.ssrnat <> addnS thm
+R2348:2352 mathcomp.boot.ssrnat <> addnS thm
+R2361:2383 prosa.classic.util.fixedpoint <> fun_mon_iter_mon_helper thm
+R2398:2407 prosa.classic.util.fixedpoint FixedPoint <> sec
+sec 2531:2539 <> Relations
+var  2554:2554 Relations T
+var 2575:2575 Relations R
+R2578:2580 Corelib.ssr.ssrbool <> rel def
+R2582:2582 prosa.classic.util.fixedpoint <> Relations.T var
+var 2596:2596 Relations f
+R2600:2603 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2599:2599 prosa.classic.util.fixedpoint <> Relations.T var
+R2604:2604 prosa.classic.util.fixedpoint <> Relations.T var
+def 2623:2630 <> monotone
+R2636:2638 Corelib.ssr.ssrbool <> rel def
+R2640:2640 prosa.classic.util.fixedpoint <> Relations.T var
+binder 2633:2633 <> R:38
+binder 2657:2657 <> x:39
+binder 2659:2659 <> y:40
+R2667:2670 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2662:2662 prosa.classic.util.fixedpoint <> R:38 var
+R2664:2664 prosa.classic.util.fixedpoint <> x:39 var
+R2666:2666 prosa.classic.util.fixedpoint <> y:40 var
+R2671:2671 prosa.classic.util.fixedpoint <> R:38 var
+R2674:2674 prosa.classic.util.fixedpoint <> Relations.f var
+R2676:2676 prosa.classic.util.fixedpoint <> x:39 var
+R2680:2680 prosa.classic.util.fixedpoint <> Relations.f var
+R2682:2682 prosa.classic.util.fixedpoint <> y:40 var
+R2691:2699 prosa.classic.util.fixedpoint Relations <> sec
+sec 2879:2887 <> Iteration
+var  2902:2902 Iteration T
+R2906:2911 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 2926:2926 Iteration f
+R2930:2933 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2929:2929 prosa.classic.util.fixedpoint <> Iteration.T var
+R2934:2934 prosa.classic.util.fixedpoint <> Iteration.T var
+def 2949:2961 <> iter_fixpoint
+binder 2963:2971 <> max_steps:44
+R2977:2977 prosa.classic.util.fixedpoint <> Iteration.T var
+binder 2974:2974 <> x:45
+R2990:2998 prosa.classic.util.fixedpoint <> max_steps:44 var
+R3007:3009 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R3032:3032 prosa.classic.util.fixedpoint <> Iteration.f var
+R3034:3034 prosa.classic.util.fixedpoint <> x:45 var
+binder 3026:3027 <> x':48
+R3047:3049 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R3057:3072 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R3079:3092 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R3051:3054 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R3050:3050 prosa.classic.util.fixedpoint <> x:45 var
+R3055:3056 prosa.classic.util.fixedpoint <> x':48 var
+R3073:3076 Corelib.Init.Datatypes <> Some constr
+R3078:3078 prosa.classic.util.fixedpoint <> x:45 var
+R3093:3105 prosa.classic.util.fixedpoint <> iter_fixpoint:46 def
+R3112:3113 prosa.classic.util.fixedpoint <> x':48 var
+R3124:3127 Corelib.Init.Datatypes <> None constr
+sec 3141:3151 Iteration BasicLemmas
+prf 3274:3292 <> iter_fixpoint_cases
+binder 3309:3317 <> max_steps:49
+binder 3319:3320 <> x0:50
+R3364:3375 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R3357:3359 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3331:3343 prosa.classic.util.fixedpoint <> iter_fixpoint def
+R3345:3353 prosa.classic.util.fixedpoint <> max_steps:49 var
+R3355:3356 prosa.classic.util.fixedpoint <> x0:50 var
+R3360:3363 Corelib.Init.Datatypes <> None constr
+R3376:3382 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R3384:3395 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 3383:3383 <> y:51
+R3431:3444 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3422:3424 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3396:3408 prosa.classic.util.fixedpoint <> iter_fixpoint def
+R3410:3418 prosa.classic.util.fixedpoint <> max_steps:49 var
+R3420:3421 prosa.classic.util.fixedpoint <> x0:50 var
+R3425:3428 Corelib.Init.Datatypes <> Some constr
+R3430:3430 prosa.classic.util.fixedpoint <> y:51 var
+R3446:3448 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3445:3445 prosa.classic.util.fixedpoint <> y:51 var
+R3449:3449 prosa.classic.util.fixedpoint <> Iteration.f var
+R3451:3451 prosa.classic.util.fixedpoint <> y:51 var
+R3536:3539 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R3540:3540 prosa.classic.util.fixedpoint <> Iteration.f var
+R3536:3539 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R3540:3540 prosa.classic.util.fixedpoint <> Iteration.f var
+R3616:3619 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R3620:3620 prosa.classic.util.fixedpoint <> Iteration.f var
+R3693:3695 mathcomp.boot.eqtype <> eqP def
+R3616:3619 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R3620:3620 prosa.classic.util.fixedpoint <> Iteration.f var
+R3693:3695 mathcomp.boot.eqtype <> eqP def
+R3732:3732 prosa.classic.util.fixedpoint <> Iteration.f var
+R3732:3732 prosa.classic.util.fixedpoint <> Iteration.f var
+prf 3896:3912 <> iter_fixpoint_ind
+binder 3928:3936 <> max_steps:52
+binder 3938:3939 <> x0:53
+binder 3941:3941 <> x:54
+R3987:3998 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3978:3980 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3952:3964 prosa.classic.util.fixedpoint <> iter_fixpoint def
+R3966:3974 prosa.classic.util.fixedpoint <> max_steps:52 var
+R3976:3977 prosa.classic.util.fixedpoint <> x0:53 var
+R3981:3984 Corelib.Init.Datatypes <> Some constr
+R3986:3986 prosa.classic.util.fixedpoint <> x:54 var
+binder 4006:4006 <> P:55
+R4023:4036 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4019:4019 prosa.classic.util.fixedpoint <> P:55 var
+R4021:4022 prosa.classic.util.fixedpoint <> x0:53 var
+R4037:4037 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4062:4076 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+binder 4045:4045 <> x:56
+R4051:4054 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4048:4048 prosa.classic.util.fixedpoint <> P:55 var
+R4050:4050 prosa.classic.util.fixedpoint <> x:56 var
+R4055:4055 prosa.classic.util.fixedpoint <> P:55 var
+R4058:4058 prosa.classic.util.fixedpoint <> Iteration.f var
+R4060:4060 prosa.classic.util.fixedpoint <> x:56 var
+R4077:4077 prosa.classic.util.fixedpoint <> P:55 var
+R4079:4079 prosa.classic.util.fixedpoint <> x:54 var
+R4210:4213 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R4210:4213 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R4210:4213 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R4247:4249 mathcomp.boot.eqtype <> eqP def
+R4393:4393 prosa.classic.util.fixedpoint <> Iteration.f var
+R4393:4393 prosa.classic.util.fixedpoint <> Iteration.f var
+R4482:4492 prosa.classic.util.fixedpoint Iteration.BasicLemmas <> sec
+sec 4506:4519 Iteration RelationLemmas
+var 4536:4536 Iteration.RelationLemmas R
+R4539:4541 Corelib.ssr.ssrbool <> rel def
+R4543:4543 prosa.classic.util.fixedpoint <> Iteration.T var
+var 4561:4571 Iteration.RelationLemmas H_reflexive
+R4574:4582 Corelib.ssr.ssrbool <> reflexive def
+R4584:4584 prosa.classic.util.fixedpoint <> Iteration.RelationLemmas.R var
+var 4602:4613 Iteration.RelationLemmas H_transitive
+R4616:4625 Corelib.ssr.ssrbool <> transitive def
+R4627:4627 prosa.classic.util.fixedpoint <> Iteration.RelationLemmas.R var
+var 4645:4654 Iteration.RelationLemmas H_monotone
+R4657:4664 prosa.classic.util.fixedpoint <> monotone def
+R4668:4668 prosa.classic.util.fixedpoint <> Iteration.RelationLemmas.R var
+R4666:4666 prosa.classic.util.fixedpoint <> Iteration.f var
+prf 4682:4701 <> iter_fixpoint_ge_min
+binder 4717:4725 <> max_steps:65
+binder 4727:4728 <> x0:66
+binder 4730:4731 <> x1:67
+binder 4733:4733 <> x:68
+R4779:4790 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4770:4772 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4744:4756 prosa.classic.util.fixedpoint <> iter_fixpoint def
+R4758:4766 prosa.classic.util.fixedpoint <> max_steps:65 var
+R4768:4769 prosa.classic.util.fixedpoint <> x1:67 var
+R4773:4776 Corelib.Init.Datatypes <> Some constr
+R4778:4778 prosa.classic.util.fixedpoint <> x:68 var
+R4798:4809 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4791:4791 prosa.classic.util.fixedpoint <> Iteration.RelationLemmas.R var
+R4793:4794 prosa.classic.util.fixedpoint <> x0:66 var
+R4796:4797 prosa.classic.util.fixedpoint <> x1:67 var
+R4821:4832 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4810:4810 prosa.classic.util.fixedpoint <> Iteration.RelationLemmas.R var
+R4812:4813 prosa.classic.util.fixedpoint <> x1:67 var
+R4816:4816 prosa.classic.util.fixedpoint <> Iteration.f var
+R4818:4819 prosa.classic.util.fixedpoint <> x1:67 var
+R4833:4833 prosa.classic.util.fixedpoint <> Iteration.RelationLemmas.R var
+R4835:4836 prosa.classic.util.fixedpoint <> x0:66 var
+R4838:4838 prosa.classic.util.fixedpoint <> x:68 var
+R4974:4977 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R4978:4978 prosa.classic.util.fixedpoint <> Iteration.f var
+R4974:4977 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R4978:4978 prosa.classic.util.fixedpoint <> Iteration.f var
+R5122:5133 prosa.classic.util.fixedpoint <> Iteration.RelationLemmas.H_transitive var
+R5122:5133 prosa.classic.util.fixedpoint <> Iteration.RelationLemmas.H_transitive var
+R5159:5168 prosa.classic.util.fixedpoint <> Iteration.RelationLemmas.H_monotone var
+R5159:5168 prosa.classic.util.fixedpoint <> Iteration.RelationLemmas.H_monotone var
+prf 5199:5221 <> iter_fixpoint_ge_bottom
+binder 5237:5245 <> max_steps:69
+binder 5247:5248 <> x0:70
+binder 5250:5250 <> x:71
+R5296:5307 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5287:5289 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5261:5273 prosa.classic.util.fixedpoint <> iter_fixpoint def
+R5275:5283 prosa.classic.util.fixedpoint <> max_steps:69 var
+R5285:5286 prosa.classic.util.fixedpoint <> x0:70 var
+R5290:5293 Corelib.Init.Datatypes <> Some constr
+R5295:5295 prosa.classic.util.fixedpoint <> x:71 var
+R5319:5330 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5308:5308 prosa.classic.util.fixedpoint <> Iteration.RelationLemmas.R var
+R5310:5311 prosa.classic.util.fixedpoint <> x0:70 var
+R5314:5314 prosa.classic.util.fixedpoint <> Iteration.f var
+R5316:5317 prosa.classic.util.fixedpoint <> x0:70 var
+R5331:5331 prosa.classic.util.fixedpoint <> Iteration.RelationLemmas.R var
+R5333:5334 prosa.classic.util.fixedpoint <> x0:70 var
+R5336:5336 prosa.classic.util.fixedpoint <> x:71 var
+R5403:5422 prosa.classic.util.fixedpoint <> iter_fixpoint_ge_min thm
+R5403:5422 prosa.classic.util.fixedpoint <> iter_fixpoint_ge_min thm
+R5487:5500 prosa.classic.util.fixedpoint Iteration.RelationLemmas <> sec
+R5510:5518 prosa.classic.util.fixedpoint Iteration <> sec

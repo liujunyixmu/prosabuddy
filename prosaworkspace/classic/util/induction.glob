@@ -1,0 +1,73 @@
+DIGEST f16bc024794a1066204e784230692044
+Fprosa.classic.util.induction
+R15:40 prosa.classic.util.tactics <> <> lib
+R72:80 mathcomp.boot.ssreflect <> <> lib
+R82:88 mathcomp.boot.ssrbool <> <> lib
+R90:95 mathcomp.boot.eqtype <> <> lib
+R97:102 mathcomp.boot.ssrnat <> <> lib
+R104:106 mathcomp.boot.seq <> <> lib
+R108:114 mathcomp.boot.fintype <> <> lib
+R116:120 mathcomp.boot.bigop <> <> lib
+sec 176:187 <> NatInduction
+prf 201:210 <> strong_ind
+R232:235 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R229:231 Corelib.Init.Datatypes <> nat ind
+binder 226:226 <> P:1
+R249:249 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R291:301 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+binder 257:257 <> n:2
+R260:260 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R283:287 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+binder 268:268 <> k:3
+R276:279 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R272:274 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R271:271 prosa.classic.util.induction <> k:3 var
+R275:275 prosa.classic.util.induction <> n:2 var
+R280:280 prosa.classic.util.induction <> P:1 var
+R282:282 prosa.classic.util.induction <> k:3 var
+R288:288 prosa.classic.util.induction <> P:1 var
+R290:290 prosa.classic.util.induction <> n:2 var
+binder 309:309 <> n:4
+R312:312 prosa.classic.util.induction <> P:1 var
+R314:314 prosa.classic.util.induction <> n:4 var
+R465:473 mathcomp.boot.ssrnat <> leq_trans thm
+R465:473 mathcomp.boot.ssrnat <> leq_trans thm
+prf 506:517 <> leq_as_delta
+binder 532:533 <> x1:5
+R542:545 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R539:541 Corelib.Init.Datatypes <> nat ind
+binder 536:536 <> P:6
+R559:559 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R587:599 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R628:628 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+binder 567:568 <> x2:7
+R579:582 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R573:576 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R571:572 prosa.classic.util.induction <> x1:5 var
+R577:578 prosa.classic.util.induction <> x2:7 var
+R583:583 prosa.classic.util.induction <> P:6 var
+R585:586 prosa.classic.util.induction <> x2:7 var
+binder 607:611 <> delta:8
+R614:614 prosa.classic.util.induction <> P:6 var
+R619:621 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R617:618 prosa.classic.util.induction <> x1:5 var
+R622:626 prosa.classic.util.induction <> delta:8 var
+R692:696 mathcomp.boot.ssrnat <> subnK thm
+R702:706 mathcomp.boot.ssrnat <> addnC thm
+R692:696 mathcomp.boot.ssrnat <> subnK thm
+R692:696 mathcomp.boot.ssrnat <> subnK thm
+R702:706 mathcomp.boot.ssrnat <> addnC thm
+R702:706 mathcomp.boot.ssrnat <> addnC thm
+R780:784 mathcomp.boot.ssrnat <> addn0 thm
+R798:802 mathcomp.boot.ssrnat <> leqnn thm
+R780:784 mathcomp.boot.ssrnat <> addn0 thm
+R780:784 mathcomp.boot.ssrnat <> addn0 thm
+R798:802 mathcomp.boot.ssrnat <> leqnn thm
+R844:848 mathcomp.boot.ssrnat <> addn0 thm
+R857:863 mathcomp.boot.ssrnat <> leq_add thm
+R876:880 mathcomp.boot.ssrnat <> leqnn thm
+R844:848 mathcomp.boot.ssrnat <> addn0 thm
+R844:848 mathcomp.boot.ssrnat <> addn0 thm
+R857:863 mathcomp.boot.ssrnat <> leq_add thm
+R876:880 mathcomp.boot.ssrnat <> leqnn thm
+R914:925 prosa.classic.util.induction NatInduction <> sec

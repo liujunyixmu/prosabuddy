@@ -1,0 +1,155 @@
+DIGEST 1c62fe087088a2b55a9fade11bc86c19
+Fprosa.classic.model.schedule.uni.susp.platform
+R15:36 prosa.classic.util.all <> <> lib
+R54:103 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R105:134 prosa.classic.model.suspension <> <> lib
+R151:178 prosa.classic.model.priority <> <> lib
+R196:241 prosa.classic.model.schedule.uni.susp.schedule <> <> lib
+R273:281 mathcomp.boot.ssreflect <> <> lib
+R283:289 mathcomp.boot.ssrbool <> <> lib
+R291:296 mathcomp.boot.eqtype <> <> lib
+R298:303 mathcomp.boot.ssrnat <> <> lib
+R305:307 mathcomp.boot.seq <> <> lib
+R309:315 mathcomp.boot.fintype <> <> lib
+R317:321 mathcomp.boot.bigop <> <> lib
+mod 332:354 <> PlatformWithSuspensions
+R367:389 prosa.classic.model.schedule.uni.susp.schedule ScheduleWithSuspensions <> mod
+R391:398 prosa.classic.model.priority Priority <> mod
+sec 412:422 PlatformWithSuspensions Definitions
+var  443:446 PlatformWithSuspensions.Definitions Task
+R449:454 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  471:473 PlatformWithSuspensions.Definitions Job
+R476:481 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 498:508 PlatformWithSuspensions.Definitions job_arrival
+R514:517 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R511:513 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.Job var
+R518:521 prosa.classic.model.time Time time def
+var 537:544 PlatformWithSuspensions.Definitions job_cost
+R550:553 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R547:549 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.Job var
+R554:557 prosa.classic.model.time Time time def
+var 573:580 PlatformWithSuspensions.Definitions job_task
+R586:589 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R583:585 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.Job var
+R590:593 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.Task var
+var 664:678 PlatformWithSuspensions.Definitions next_suspension
+R681:694 prosa.classic.model.suspension Suspension job_suspension def
+R696:698 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.Job var
+var 762:768 PlatformWithSuspensions.Definitions arr_seq
+R771:786 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R788:790 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.Job var
+var 869:873 PlatformWithSuspensions.Definitions sched
+R876:883 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R885:887 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.Job var
+var 1085:1098 PlatformWithSuspensions.Definitions job_pending_at
+R1103:1109 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R1132:1136 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.sched var
+R1123:1130 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.job_cost var
+R1111:1121 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.job_arrival var
+var 1147:1162 PlatformWithSuspensions.Definitions job_scheduled_at
+R1167:1178 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R1180:1184 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.sched var
+var 1195:1211 PlatformWithSuspensions.Definitions job_backlogged_at
+R1216:1225 prosa.classic.model.schedule.uni.susp.schedule ScheduleWithSuspensions backlogged def
+R1264:1268 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.sched var
+R1248:1262 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.next_suspension var
+R1239:1246 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.job_cost var
+R1227:1237 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.job_arrival var
+sec 1378:1396 PlatformWithSuspensions.Definitions ScheduleConstraints
+sec 1479:1487 PlatformWithSuspensions.Definitions.ScheduleConstraints Execution
+def 1661:1675 PlatformWithSuspensions work_conserving
+binder 1697:1697 <> j:15
+binder 1699:1699 <> t:16
+R1734:1749 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1714:1723 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R1733:1733 prosa.classic.model.schedule.uni.susp.platform <> j:15 var
+R1725:1731 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.arr_seq var
+R1771:1786 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1750:1766 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.job_backlogged_at var
+R1768:1768 prosa.classic.model.schedule.uni.susp.platform <> j:15 var
+R1770:1770 prosa.classic.model.schedule.uni.susp.platform <> t:16 var
+R1787:1793 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1801:1802 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 1794:1800 <> j_other:17
+R1803:1818 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.job_scheduled_at var
+R1820:1826 prosa.classic.model.schedule.uni.susp.platform <> j_other:17 var
+R1828:1828 prosa.classic.model.schedule.uni.susp.platform <> t:16 var
+R1842:1850 prosa.classic.model.schedule.uni.susp.platform PlatformWithSuspensions.Definitions.ScheduleConstraints.Execution <> sec
+sec 1934:1935 PlatformWithSuspensions.Definitions.ScheduleConstraints FP
+var 1997:2014 PlatformWithSuspensions.Definitions.ScheduleConstraints.FP higher_eq_priority
+R2017:2025 prosa.classic.model.priority Priority FP_policy def
+R2027:2030 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.Task var
+def 2207:2224 PlatformWithSuspensions respects_FP_policy
+binder 2246:2246 <> j:20
+binder 2248:2251 <> j_hp:21
+binder 2253:2253 <> t:22
+R2288:2303 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2268:2277 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R2287:2287 prosa.classic.model.schedule.uni.susp.platform <> j:20 var
+R2279:2285 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.arr_seq var
+R2325:2340 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2304:2320 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.job_backlogged_at var
+R2322:2322 prosa.classic.model.schedule.uni.susp.platform <> j:20 var
+R2324:2324 prosa.classic.model.schedule.uni.susp.platform <> t:22 var
+R2364:2379 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2341:2356 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.job_scheduled_at var
+R2358:2361 prosa.classic.model.schedule.uni.susp.platform <> j_hp:21 var
+R2363:2363 prosa.classic.model.schedule.uni.susp.platform <> t:22 var
+R2380:2397 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.ScheduleConstraints.FP.higher_eq_priority var
+R2400:2407 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.job_task var
+R2409:2412 prosa.classic.model.schedule.uni.susp.platform <> j_hp:21 var
+R2416:2423 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.job_task var
+R2425:2425 prosa.classic.model.schedule.uni.susp.platform <> j:20 var
+R2446:2447 prosa.classic.model.schedule.uni.susp.platform PlatformWithSuspensions.Definitions.ScheduleConstraints.FP <> sec
+sec 2533:2536 PlatformWithSuspensions.Definitions.ScheduleConstraints JLFP
+var 2600:2617 PlatformWithSuspensions.Definitions.ScheduleConstraints.JLFP higher_eq_priority
+R2620:2630 prosa.classic.model.priority Priority JLFP_policy def
+R2632:2634 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.Job var
+def 2800:2819 PlatformWithSuspensions respects_JLFP_policy
+binder 2841:2841 <> j:25
+binder 2843:2846 <> j_hp:26
+binder 2848:2848 <> t:27
+R2883:2898 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2863:2872 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R2882:2882 prosa.classic.model.schedule.uni.susp.platform <> j:25 var
+R2874:2880 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.arr_seq var
+R2920:2935 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2899:2915 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.job_backlogged_at var
+R2917:2917 prosa.classic.model.schedule.uni.susp.platform <> j:25 var
+R2919:2919 prosa.classic.model.schedule.uni.susp.platform <> t:27 var
+R2959:2974 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2936:2951 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.job_scheduled_at var
+R2953:2956 prosa.classic.model.schedule.uni.susp.platform <> j_hp:26 var
+R2958:2958 prosa.classic.model.schedule.uni.susp.platform <> t:27 var
+R2975:2992 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.ScheduleConstraints.JLFP.higher_eq_priority var
+R2994:2997 prosa.classic.model.schedule.uni.susp.platform <> j_hp:26 var
+R2999:2999 prosa.classic.model.schedule.uni.susp.platform <> j:25 var
+R3019:3022 prosa.classic.model.schedule.uni.susp.platform PlatformWithSuspensions.Definitions.ScheduleConstraints.JLFP <> sec
+sec 3108:3111 PlatformWithSuspensions.Definitions.ScheduleConstraints JLDP
+var 3175:3192 PlatformWithSuspensions.Definitions.ScheduleConstraints.JLDP higher_eq_priority
+R3195:3205 prosa.classic.model.priority Priority JLDP_policy def
+R3207:3209 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.Job var
+def 3386:3405 PlatformWithSuspensions respects_JLDP_policy
+binder 3427:3427 <> j:30
+binder 3429:3432 <> j_hp:31
+binder 3434:3434 <> t:32
+R3469:3484 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3449:3458 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R3468:3468 prosa.classic.model.schedule.uni.susp.platform <> j:30 var
+R3460:3466 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.arr_seq var
+R3506:3521 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3485:3501 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.job_backlogged_at var
+R3503:3503 prosa.classic.model.schedule.uni.susp.platform <> j:30 var
+R3505:3505 prosa.classic.model.schedule.uni.susp.platform <> t:32 var
+R3545:3560 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3522:3537 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.job_scheduled_at var
+R3539:3542 prosa.classic.model.schedule.uni.susp.platform <> j_hp:31 var
+R3544:3544 prosa.classic.model.schedule.uni.susp.platform <> t:32 var
+R3561:3578 prosa.classic.model.schedule.uni.susp.platform <> PlatformWithSuspensions.Definitions.ScheduleConstraints.JLDP.higher_eq_priority var
+R3580:3580 prosa.classic.model.schedule.uni.susp.platform <> t:32 var
+R3582:3585 prosa.classic.model.schedule.uni.susp.platform <> j_hp:31 var
+R3587:3587 prosa.classic.model.schedule.uni.susp.platform <> j:30 var
+R3607:3610 prosa.classic.model.schedule.uni.susp.platform PlatformWithSuspensions.Definitions.ScheduleConstraints.JLDP <> sec
+R3622:3640 prosa.classic.model.schedule.uni.susp.platform PlatformWithSuspensions.Definitions.ScheduleConstraints <> sec
+R3650:3660 prosa.classic.model.schedule.uni.susp.platform PlatformWithSuspensions.Definitions <> sec
+R3670:3692 prosa.classic.model.schedule.uni.susp.platform PlatformWithSuspensions <> mod

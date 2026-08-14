@@ -1,0 +1,142 @@
+DIGEST da58ef99d40bc2d7c473f2d96d82e94a
+Fprosa.classic.model.arrival.curves.bounds
+R15:36 prosa.classic.util.all <> <> lib
+R54:103 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R124:169 prosa.classic.model.arrival.basic.task_arrival <> <> lib
+R201:209 mathcomp.boot.ssreflect <> <> lib
+R211:217 mathcomp.boot.ssrbool <> <> lib
+R219:224 mathcomp.boot.eqtype <> <> lib
+R226:231 mathcomp.boot.ssrnat <> <> lib
+R233:235 mathcomp.boot.seq <> <> lib
+R237:239 mathcomp.boot.div <> <> lib
+mod 381:393 <> ArrivalCurves
+R408:422 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence <> mod
+R424:434 prosa.classic.model.arrival.basic.task_arrival TaskArrival <> mod
+sec 448:468 ArrivalCurves DefiningArrivalCurves
+var  485:488 ArrivalCurves.DefiningArrivalCurves Task
+R491:496 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  513:515 ArrivalCurves.DefiningArrivalCurves Job
+R518:523 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 540:547 ArrivalCurves.DefiningArrivalCurves job_task
+R553:556 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R550:552 prosa.classic.model.arrival.curves.bounds <> ArrivalCurves.DefiningArrivalCurves.Job var
+R557:560 prosa.classic.model.arrival.curves.bounds <> ArrivalCurves.DefiningArrivalCurves.Task var
+var 626:632 ArrivalCurves.DefiningArrivalCurves arr_seq
+R635:650 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R652:654 prosa.classic.model.arrival.curves.bounds <> ArrivalCurves.DefiningArrivalCurves.Job var
+var 737:751 ArrivalCurves.DefiningArrivalCurves arrivals_of_tsk
+binder 753:755 <> tsk:7
+R760:783 prosa.classic.model.arrival.basic.task_arrival TaskArrival arrivals_of_task_between def
+R802:804 prosa.classic.model.arrival.curves.bounds <> tsk:7 var
+R794:800 prosa.classic.model.arrival.curves.bounds <> ArrivalCurves.DefiningArrivalCurves.arr_seq var
+R785:792 prosa.classic.model.arrival.curves.bounds <> ArrivalCurves.DefiningArrivalCurves.job_task var
+var 815:833 ArrivalCurves.DefiningArrivalCurves num_arrivals_of_tsk
+binder 835:837 <> tsk:8
+R842:861 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R880:882 prosa.classic.model.arrival.curves.bounds <> tsk:8 var
+R872:878 prosa.classic.model.arrival.curves.bounds <> ArrivalCurves.DefiningArrivalCurves.arr_seq var
+R863:870 prosa.classic.model.arrival.curves.bounds <> ArrivalCurves.DefiningArrivalCurves.job_task var
+sec 973:984 ArrivalCurves.DefiningArrivalCurves ArrivalBound
+var 1220:1231 ArrivalCurves.DefiningArrivalCurves.ArrivalBound max_arrivals
+R1238:1241 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1234:1237 prosa.classic.model.arrival.curves.bounds <> ArrivalCurves.DefiningArrivalCurves.Task var
+R1246:1249 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1242:1245 prosa.classic.model.time Time time def
+R1250:1252 Corelib.Init.Datatypes <> nat ind
+def 1466:1481 ArrivalCurves is_arrival_bound
+R1489:1492 prosa.classic.model.arrival.curves.bounds <> ArrivalCurves.DefiningArrivalCurves.Task var
+binder 1484:1486 <> tsk:11
+R1521:1524 prosa.classic.model.time Time time def
+binder 1514:1515 <> t1:12
+binder 1517:1518 <> t2:13
+R1546:1560 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1540:1543 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R1538:1539 prosa.classic.model.arrival.curves.bounds <> t1:12 var
+R1544:1545 prosa.classic.model.arrival.curves.bounds <> t2:13 var
+R1590:1593 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R1561:1579 prosa.classic.model.arrival.curves.bounds <> ArrivalCurves.DefiningArrivalCurves.num_arrivals_of_tsk var
+R1581:1583 prosa.classic.model.arrival.curves.bounds <> tsk:11 var
+R1585:1586 prosa.classic.model.arrival.curves.bounds <> t1:12 var
+R1588:1589 prosa.classic.model.arrival.curves.bounds <> t2:13 var
+R1594:1605 prosa.classic.model.arrival.curves.bounds <> ArrivalCurves.DefiningArrivalCurves.ArrivalBound.max_arrivals var
+R1607:1609 prosa.classic.model.arrival.curves.bounds <> tsk:11 var
+R1614:1616 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R1612:1613 prosa.classic.model.arrival.curves.bounds <> t2:13 var
+R1617:1618 prosa.classic.model.arrival.curves.bounds <> t1:12 var
+def 1781:1808 ArrivalCurves is_arrival_bound_for_taskset
+R1815:1817 mathcomp.boot.seq <> seq abbrev
+R1819:1822 prosa.classic.model.arrival.curves.bounds <> ArrivalCurves.DefiningArrivalCurves.Task var
+binder 1811:1812 <> ts:14
+R1849:1852 prosa.classic.model.arrival.curves.bounds <> ArrivalCurves.DefiningArrivalCurves.Task var
+binder 1844:1846 <> tsk:15
+R1866:1869 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1859:1863 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R1856:1858 prosa.classic.model.arrival.curves.bounds <> tsk:15 var
+R1864:1865 prosa.classic.model.arrival.curves.bounds <> ts:14 var
+R1870:1885 prosa.classic.model.arrival.curves.bounds ArrivalCurves is_arrival_bound def
+R1887:1889 prosa.classic.model.arrival.curves.bounds <> tsk:15 var
+def 2008:2025 ArrivalCurves zero_arrival_curve
+R2033:2036 prosa.classic.model.arrival.curves.bounds <> ArrivalCurves.DefiningArrivalCurves.Task var
+binder 2028:2030 <> tsk:16
+R2068:2070 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2050:2061 prosa.classic.model.arrival.curves.bounds <> ArrivalCurves.DefiningArrivalCurves.ArrivalBound.max_arrivals var
+R2063:2065 prosa.classic.model.arrival.curves.bounds <> tsk:16 var
+def 2168:2190 ArrivalCurves monotonic_arrival_curve
+R2198:2201 prosa.classic.model.arrival.curves.bounds <> ArrivalCurves.DefiningArrivalCurves.Task var
+binder 2193:2195 <> tsk:17
+R2215:2222 prosa.util.rel <> monotone def
+R2229:2240 prosa.classic.model.arrival.curves.bounds <> ArrivalCurves.DefiningArrivalCurves.ArrivalBound.max_arrivals var
+R2242:2244 prosa.classic.model.arrival.curves.bounds <> tsk:17 var
+R2224:2226 mathcomp.boot.ssrnat <> leq def
+def 2512:2531 ArrivalCurves proper_arrival_curve
+R2539:2542 prosa.classic.model.arrival.curves.bounds <> ArrivalCurves.DefiningArrivalCurves.Task var
+binder 2534:2536 <> tsk:18
+R2576:2587 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R2556:2571 prosa.classic.model.arrival.curves.bounds ArrivalCurves is_arrival_bound def
+R2573:2575 prosa.classic.model.arrival.curves.bounds <> tsk:18 var
+R2610:2621 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R2588:2605 prosa.classic.model.arrival.curves.bounds ArrivalCurves zero_arrival_curve def
+R2607:2609 prosa.classic.model.arrival.curves.bounds <> tsk:18 var
+R2622:2644 prosa.classic.model.arrival.curves.bounds ArrivalCurves monotonic_arrival_curve def
+R2646:2648 prosa.classic.model.arrival.curves.bounds <> tsk:18 var
+def 2829:2859 ArrivalCurves family_of_proper_arrival_curves
+R2866:2868 mathcomp.boot.seq <> seq abbrev
+R2870:2873 prosa.classic.model.arrival.curves.bounds <> ArrivalCurves.DefiningArrivalCurves.Task var
+binder 2862:2863 <> ts:19
+R2900:2903 prosa.classic.model.arrival.curves.bounds <> ArrivalCurves.DefiningArrivalCurves.Task var
+binder 2895:2897 <> tsk:20
+R2917:2920 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2910:2914 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R2907:2909 prosa.classic.model.arrival.curves.bounds <> tsk:20 var
+R2915:2916 prosa.classic.model.arrival.curves.bounds <> ts:19 var
+R2921:2940 prosa.classic.model.arrival.curves.bounds ArrivalCurves proper_arrival_curve def
+R2942:2944 prosa.classic.model.arrival.curves.bounds <> tsk:20 var
+R2956:2967 prosa.classic.model.arrival.curves.bounds ArrivalCurves.DefiningArrivalCurves.ArrivalBound <> sec
+sec 3156:3170 ArrivalCurves.DefiningArrivalCurves SeparationBound
+var 3394:3403 ArrivalCurves.DefiningArrivalCurves.SeparationBound min_length
+R3410:3413 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3406:3409 prosa.classic.model.arrival.curves.bounds <> ArrivalCurves.DefiningArrivalCurves.Task var
+R3417:3420 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3414:3416 Corelib.Init.Datatypes <> nat ind
+R3421:3424 prosa.classic.model.time Time time def
+def 3665:3683 ArrivalCurves is_separation_bound
+binder 3685:3687 <> tsk:23
+binder 3707:3708 <> t1:24
+binder 3710:3711 <> t2:25
+R3732:3745 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3726:3729 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R3724:3725 prosa.classic.model.arrival.curves.bounds <> t1:24 var
+R3730:3731 prosa.classic.model.arrival.curves.bounds <> t2:25 var
+R3792:3795 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R3746:3755 prosa.classic.model.arrival.curves.bounds <> ArrivalCurves.DefiningArrivalCurves.SeparationBound.min_length var
+R3757:3759 prosa.classic.model.arrival.curves.bounds <> tsk:23 var
+R3762:3780 prosa.classic.model.arrival.curves.bounds <> ArrivalCurves.DefiningArrivalCurves.num_arrivals_of_tsk var
+R3782:3784 prosa.classic.model.arrival.curves.bounds <> tsk:23 var
+R3786:3787 prosa.classic.model.arrival.curves.bounds <> t1:24 var
+R3789:3790 prosa.classic.model.arrival.curves.bounds <> t2:25 var
+R3798:3800 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R3796:3797 prosa.classic.model.arrival.curves.bounds <> t2:25 var
+R3801:3802 prosa.classic.model.arrival.curves.bounds <> t1:24 var
+R3814:3828 prosa.classic.model.arrival.curves.bounds ArrivalCurves.DefiningArrivalCurves.SeparationBound <> sec
+R3838:3858 prosa.classic.model.arrival.curves.bounds ArrivalCurves.DefiningArrivalCurves <> sec
+R3866:3878 prosa.classic.model.arrival.curves.bounds ArrivalCurves <> mod

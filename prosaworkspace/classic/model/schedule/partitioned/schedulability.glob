@@ -1,0 +1,232 @@
+DIGEST 244dd711f2cc87105b865bfcdb7c35f7
+Fprosa.classic.model.schedule.partitioned.schedulability
+R15:36 prosa.classic.util.all <> <> lib
+R54:103 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R105:142 prosa.classic.model.arrival.basic.task <> <> lib
+R144:180 prosa.classic.model.arrival.basic.job <> <> lib
+R198:247 prosa.classic.model.schedule.global.schedulability <> <> lib
+R265:314 prosa.classic.model.schedule.global.basic.schedule <> <> lib
+R332:380 prosa.classic.model.schedule.partitioned.schedule <> <> lib
+R412:420 mathcomp.boot.ssreflect <> <> lib
+R422:428 mathcomp.boot.ssrbool <> <> lib
+R430:435 mathcomp.boot.eqtype <> <> lib
+R437:442 mathcomp.boot.ssrnat <> <> lib
+R444:446 mathcomp.boot.seq <> <> lib
+R448:454 mathcomp.boot.fintype <> <> lib
+R456:460 mathcomp.boot.bigop <> <> lib
+R472:512 prosa.classic.model.schedule.uni.schedule <> <> lib
+mod 523:545 <> PartitionSchedulability
+R573:634 prosa.classic.model.schedule.uni.schedulability Schedulability <> mod
+mod 560:568 <> PartitionSchedulability.uni_sched
+R646:660 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence <> mod
+R662:672 prosa.classic.model.schedule.partitioned.schedule Partitioned <> mod
+R674:681 prosa.classic.model.schedule.global.basic.schedule Schedule <> mod
+R683:696 prosa.classic.model.schedule.global.schedulability Schedulability <> mod
+sec 710:734 PartitionSchedulability PartitionedAsUniprocessor
+var  751:754 PartitionSchedulability.PartitionedAsUniprocessor Task
+R757:762 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  779:781 PartitionSchedulability.PartitionedAsUniprocessor Job
+R784:789 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 806:816 PartitionSchedulability.PartitionedAsUniprocessor job_arrival
+R822:825 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R819:821 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.Job var
+R826:829 prosa.classic.model.time Time time def
+var 845:852 PartitionSchedulability.PartitionedAsUniprocessor job_cost
+R858:861 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R855:857 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.Job var
+R862:865 prosa.classic.model.time Time time def
+var 881:892 PartitionSchedulability.PartitionedAsUniprocessor job_deadline
+R898:901 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R895:897 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.Job var
+R902:905 prosa.classic.model.time Time time def
+var 921:928 PartitionSchedulability.PartitionedAsUniprocessor job_task
+R934:937 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R931:933 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.Job var
+R938:941 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.Task var
+var 1031:1037 PartitionSchedulability.PartitionedAsUniprocessor arr_seq
+R1040:1055 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R1057:1059 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.Job var
+var  1075:1082 PartitionSchedulability.PartitionedAsUniprocessor num_cpus
+R1085:1087 Corelib.Init.Datatypes <> nat ind
+var 1104:1108 PartitionSchedulability.PartitionedAsUniprocessor sched
+R1111:1118 prosa.classic.model.schedule.global.basic.schedule Schedule schedule def
+R1124:1131 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.num_cpus var
+R1120:1122 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.Job var
+var 1228:1229 PartitionSchedulability.PartitionedAsUniprocessor ts
+R1232:1235 Corelib.Init.Datatypes <> list ind
+R1237:1240 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.Task var
+var 1258:1275 PartitionSchedulability.PartitionedAsUniprocessor H_all_jobs_from_ts
+binder 1291:1291 <> j:18
+R1314:1317 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1294:1303 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R1313:1313 prosa.classic.model.schedule.partitioned.schedulability <> j:18 var
+R1305:1311 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.arr_seq var
+R1328:1332 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R1318:1325 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.job_task var
+R1327:1327 prosa.classic.model.schedule.partitioned.schedulability <> j:18 var
+R1333:1334 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.ts var
+var 1421:1432 PartitionSchedulability.PartitionedAsUniprocessor assigned_cpu
+R1439:1442 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1435:1438 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.Task var
+R1443:1451 prosa.classic.model.schedule.global.basic.schedule Schedule processor def
+R1453:1460 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.num_cpus var
+var 1524:1536 PartitionSchedulability.PartitionedAsUniprocessor H_partitioned
+R1539:1558 prosa.classic.model.schedule.partitioned.schedule Partitioned partitioned_schedule def
+R1578:1589 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.assigned_cpu var
+R1575:1576 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.ts var
+R1569:1573 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.sched var
+R1560:1567 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.job_task var
+sec 1695:1705 PartitionSchedulability.PartitionedAsUniprocessor SameService
+var 1785:1796 PartitionSchedulability.PartitionedAsUniprocessor.SameService partition_of
+binder 1798:1798 <> j:25
+R1803:1814 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.assigned_cpu var
+R1817:1824 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.job_task var
+R1826:1826 prosa.classic.model.schedule.partitioned.schedulability <> j:25 var
+var 1876:1876 PartitionSchedulability.PartitionedAsUniprocessor.SameService j
+R1879:1881 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.Job var
+var 1901:1911 PartitionSchedulability.PartitionedAsUniprocessor.SameService H_j_arrives
+R1914:1923 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R1933:1933 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.SameService.j var
+R1925:1931 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.arr_seq var
+prf 2107:2132 PartitionSchedulability same_per_processor_service
+binder 2151:2152 <> t1:30
+binder 2154:2155 <> t2:31
+R2196:2208 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2168:2181 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R2191:2192 prosa.classic.model.schedule.partitioned.schedulability <> t1:30 var
+R2194:2195 prosa.classic.model.schedule.partitioned.schedulability <> t2:31 var
+R2189:2189 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.SameService.j var
+R2183:2187 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.sched var
+R2209:2226 prosa.classic.model.schedule.partitioned.schedule Partitioned.uni service_during def
+R2255:2256 prosa.classic.model.schedule.partitioned.schedulability <> t1:30 var
+R2258:2259 prosa.classic.model.schedule.partitioned.schedulability <> t2:31 var
+R2253:2253 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.SameService.j var
+R2229:2233 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.sched var
+R2236:2247 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.SameService.partition_of var
+R2249:2249 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.SameService.j var
+R2312:2331 prosa.classic.model.schedule.partitioned.schedule Partitioned partitioned_schedule def
+R2334:2356 prosa.classic.model.schedule.partitioned.schedule Partitioned task_local_to_processor def
+R2374:2395 prosa.classic.model.schedule.partitioned.schedule Partitioned job_local_to_processor def
+R2398:2411 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R2414:2423 prosa.classic.model.schedule.global.basic.schedule Schedule service_at def
+R2441:2458 prosa.classic.model.schedule.partitioned.schedule Partitioned.uni service_during def
+R2461:2474 prosa.classic.model.schedule.partitioned.schedule Partitioned.uni service_at def
+R2492:2507 prosa.classic.model.schedule.partitioned.schedule Partitioned.uni scheduled_at def
+R2510:2521 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled_on def
+R2524:2535 prosa.classic.model.schedule.partitioned.schedulability <> partition_of vardef
+R2629:2635 mathcomp.boot.bigop <> eq_bigr thm
+R2629:2635 mathcomp.boot.bigop <> eq_bigr thm
+R2665:2678 prosa.classic.model.schedule.partitioned.schedule Partitioned.uni service_at def
+R2681:2696 prosa.classic.model.schedule.partitioned.schedule Partitioned.uni scheduled_at def
+R2719:2726 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.job_task var
+R2728:2728 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.SameService.j var
+R2719:2726 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.job_task var
+R2728:2728 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.SameService.j var
+R2775:2775 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.SameService.j var
+R2775:2775 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.SameService.j var
+R2841:2849 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled def
+R2857:2857 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.SameService.j var
+R2851:2855 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.sched var
+R2841:2849 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled def
+R2857:2857 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.SameService.j var
+R2851:2855 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.sched var
+R2911:2915 Corelib.ssr.ssrbool <> negbT thm
+R2935:2945 mathcomp.boot.fintype <> negb_exists thm
+R2911:2915 Corelib.ssr.ssrbool <> negbT thm
+R2935:2945 mathcomp.boot.fintype <> negb_exists thm
+R2935:2945 mathcomp.boot.fintype <> negb_exists thm
+R2983:2989 mathcomp.boot.fintype <> forallP thm
+R3066:3071 Corelib.ssr.ssrbool <> negbTE thm
+R3032:3043 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.assigned_cpu var
+R3046:3053 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.job_task var
+R3055:3055 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.SameService.j var
+R3066:3071 Corelib.ssr.ssrbool <> negbTE thm
+R3103:3114 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled_on def
+R3158:3161 mathcomp.boot.bigop <> big1 thm
+R3158:3161 mathcomp.boot.bigop <> big1 thm
+R3158:3161 mathcomp.boot.bigop <> big1 thm
+R3202:3204 mathcomp.boot.eqtype <> eqP def
+R3266:3272 mathcomp.boot.eqtype <> eq_refl thm
+R3266:3272 mathcomp.boot.eqtype <> eq_refl thm
+R3266:3272 mathcomp.boot.eqtype <> eq_refl thm
+R3330:3336 mathcomp.boot.fintype <> existsP thm
+R3370:3374 mathcomp.boot.bigop <> bigD1 thm
+R3370:3374 mathcomp.boot.bigop <> bigD1 thm
+R3370:3374 mathcomp.boot.bigop <> bigD1 thm
+R3470:3481 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled_on def
+R3522:3526 mathcomp.boot.ssrnat <> add1n thm
+R3535:3537 mathcomp.boot.eqtype <> eqP def
+R3548:3551 mathcomp.boot.ssrnat <> eqSS thm
+R3560:3562 mathcomp.boot.eqtype <> eqP def
+R3522:3526 mathcomp.boot.ssrnat <> add1n thm
+R3522:3526 mathcomp.boot.ssrnat <> add1n thm
+R3535:3537 mathcomp.boot.eqtype <> eqP def
+R3548:3551 mathcomp.boot.ssrnat <> eqSS thm
+R3548:3551 mathcomp.boot.ssrnat <> eqSS thm
+R3560:3562 mathcomp.boot.eqtype <> eqP def
+R3583:3586 mathcomp.boot.bigop <> big1 thm
+R3583:3586 mathcomp.boot.bigop <> big1 thm
+R3583:3586 mathcomp.boot.bigop <> big1 thm
+R3628:3631 Corelib.ssr.ssrbool <> andP thm
+R3728:3734 mathcomp.boot.eqtype <> eq_refl thm
+R3728:3734 mathcomp.boot.eqtype <> eq_refl thm
+R3728:3734 mathcomp.boot.eqtype <> eq_refl thm
+R3782:3792 prosa.classic.model.schedule.partitioned.schedulability PartitionSchedulability.PartitionedAsUniprocessor.SameService <> sec
+sec 3808:3821 PartitionSchedulability.PartitionedAsUniprocessor Schedulability
+var 3940:3953 PartitionSchedulability.PartitionedAsUniprocessor.Schedulability schedulable_on
+binder 3955:3957 <> tsk:32
+binder 3959:3961 <> cpu:33
+R3974:4006 prosa.classic.model.schedule.partitioned.schedule Partitioned.uni_sched task_misses_no_deadline def
+R4134:4136 prosa.classic.model.schedule.partitioned.schedulability <> tsk:32 var
+R4123:4127 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.sched var
+R4129:4131 prosa.classic.model.schedule.partitioned.schedulability <> cpu:33 var
+R4114:4120 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.arr_seq var
+R4042:4049 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.job_task var
+R4029:4040 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.job_deadline var
+R4020:4027 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.job_cost var
+R4008:4018 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.job_arrival var
+var 4149:4159 PartitionSchedulability.PartitionedAsUniprocessor.Schedulability schedulable
+R4172:4194 prosa.classic.model.schedule.global.schedulability Schedulability task_misses_no_deadline def
+R4247:4251 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.sched var
+R4239:4245 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.arr_seq var
+R4230:4237 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.job_task var
+R4217:4228 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.job_deadline var
+R4208:4215 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.job_cost var
+R4196:4206 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.job_arrival var
+var 4366:4386 PartitionSchedulability.PartitionedAsUniprocessor.Schedulability H_locally_schedulable
+binder 4404:4406 <> tsk:34
+R4429:4432 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4422:4426 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R4419:4421 prosa.classic.model.schedule.partitioned.schedulability <> tsk:34 var
+R4427:4428 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.ts var
+R4433:4446 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.Schedulability.schedulable_on var
+R4448:4450 prosa.classic.model.schedule.partitioned.schedulability <> tsk:34 var
+R4453:4464 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.assigned_cpu var
+R4466:4468 prosa.classic.model.schedule.partitioned.schedulability <> tsk:34 var
+prf 4574:4600 PartitionSchedulability schedulable_at_system_level
+binder 4618:4620 <> tsk:37
+R4643:4646 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4636:4640 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R4633:4635 prosa.classic.model.schedule.partitioned.schedulability <> tsk:37 var
+R4641:4642 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.ts var
+R4647:4657 prosa.classic.model.schedule.partitioned.schedulability <> PartitionSchedulability.PartitionedAsUniprocessor.Schedulability.schedulable var
+R4659:4661 prosa.classic.model.schedule.partitioned.schedulability <> tsk:37 var
+R4698:4723 prosa.classic.model.schedule.partitioned.schedulability PartitionSchedulability same_per_processor_service thm
+R4741:4760 prosa.classic.model.schedule.partitioned.schedule Partitioned partitioned_schedule def
+R4763:4785 prosa.classic.model.schedule.partitioned.schedule Partitioned task_local_to_processor def
+R4803:4824 prosa.classic.model.schedule.partitioned.schedule Partitioned job_local_to_processor def
+R4827:4837 prosa.classic.model.schedule.partitioned.schedulability <> schedulable vardef
+R4840:4853 prosa.classic.model.schedule.partitioned.schedulability <> schedulable_on vardef
+R4871:4893 prosa.classic.model.schedule.global.schedulability Schedulability task_misses_no_deadline def
+R4896:4917 prosa.classic.model.schedule.global.schedulability Schedulability job_misses_no_deadline def
+R4935:4943 prosa.classic.model.schedule.global.basic.schedule Schedule completed def
+R4946:4978 prosa.classic.model.schedule.partitioned.schedule Partitioned.uni_sched task_misses_no_deadline def
+R4996:5027 prosa.classic.model.schedule.partitioned.schedule Partitioned.uni_sched job_misses_no_deadline def
+R5030:5045 prosa.classic.model.schedule.partitioned.schedule Partitioned.uni completed_by def
+R5243:5249 prosa.classic.model.schedule.global.basic.schedule Schedule service def
+R5252:5262 prosa.classic.model.schedule.partitioned.schedule Partitioned.uni service def
+R5265:5278 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R5281:5298 prosa.classic.model.schedule.partitioned.schedule Partitioned.uni service_during def
+R5363:5376 prosa.classic.model.schedule.partitioned.schedulability PartitionSchedulability.PartitionedAsUniprocessor.Schedulability <> sec
+R5386:5410 prosa.classic.model.schedule.partitioned.schedulability PartitionSchedulability.PartitionedAsUniprocessor <> sec
+R5420:5442 prosa.classic.model.schedule.partitioned.schedulability PartitionSchedulability <> mod

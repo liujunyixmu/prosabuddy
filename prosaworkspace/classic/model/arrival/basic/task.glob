@@ -1,0 +1,134 @@
+DIGEST eeafeb8e1e534cbdcc60df6b56616bec
+Fprosa.classic.model.arrival.basic.task
+R15:38 prosa.classic.model.time <> <> lib
+R40:61 prosa.classic.util.all <> <> lib
+R93:98 mathcomp.boot.ssrnat <> <> lib
+R100:106 mathcomp.boot.ssrbool <> <> lib
+R108:113 mathcomp.boot.eqtype <> <> lib
+R115:121 mathcomp.boot.fintype <> <> lib
+R123:125 mathcomp.boot.seq <> <> lib
+mod 179:190 <> SporadicTask
+R203:206 prosa.classic.model.time Time <> mod
+sec 220:228 SporadicTask BasicTask
+var  244:247 SporadicTask.BasicTask Task
+R250:255 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 272:280 SporadicTask.BasicTask task_cost
+R287:290 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R283:286 prosa.classic.model.arrival.basic.task <> SporadicTask.BasicTask.Task var
+R291:294 prosa.classic.model.time Time time def
+var 310:320 SporadicTask.BasicTask task_period
+R327:330 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R323:326 prosa.classic.model.arrival.basic.task <> SporadicTask.BasicTask.Task var
+R331:334 prosa.classic.model.time Time time def
+var 350:362 SporadicTask.BasicTask task_deadline
+R369:372 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R365:368 prosa.classic.model.arrival.basic.task <> SporadicTask.BasicTask.Task var
+R373:376 prosa.classic.model.time Time time def
+sec 392:406 SporadicTask.BasicTask ValidParameters
+var 424:426 SporadicTask.BasicTask.ValidParameters tsk
+R429:432 prosa.classic.model.arrival.basic.task <> SporadicTask.BasicTask.Task var
+def 525:542 SporadicTask task_cost_positive
+R560:562 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R547:555 prosa.classic.model.arrival.basic.task <> SporadicTask.BasicTask.task_cost var
+R557:559 prosa.classic.model.arrival.basic.task <> SporadicTask.BasicTask.ValidParameters.tsk var
+def 583:602 SporadicTask task_period_positive
+R622:624 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R607:617 prosa.classic.model.arrival.basic.task <> SporadicTask.BasicTask.task_period var
+R619:621 prosa.classic.model.arrival.basic.task <> SporadicTask.BasicTask.ValidParameters.tsk var
+def 645:666 SporadicTask task_deadline_positive
+R688:690 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R671:683 prosa.classic.model.arrival.basic.task <> SporadicTask.BasicTask.task_deadline var
+R685:687 prosa.classic.model.arrival.basic.task <> SporadicTask.BasicTask.ValidParameters.tsk var
+def 788:808 SporadicTask task_cost_le_deadline
+R826:829 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R813:821 prosa.classic.model.arrival.basic.task <> SporadicTask.BasicTask.task_cost var
+R823:825 prosa.classic.model.arrival.basic.task <> SporadicTask.BasicTask.ValidParameters.tsk var
+R830:842 prosa.classic.model.arrival.basic.task <> SporadicTask.BasicTask.task_deadline var
+R844:846 prosa.classic.model.arrival.basic.task <> SporadicTask.BasicTask.ValidParameters.tsk var
+def 866:884 SporadicTask task_cost_le_period
+R902:905 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R889:897 prosa.classic.model.arrival.basic.task <> SporadicTask.BasicTask.task_cost var
+R899:901 prosa.classic.model.arrival.basic.task <> SporadicTask.BasicTask.ValidParameters.tsk var
+R906:916 prosa.classic.model.arrival.basic.task <> SporadicTask.BasicTask.task_period var
+R918:920 prosa.classic.model.arrival.basic.task <> SporadicTask.BasicTask.ValidParameters.tsk var
+def 941:962 SporadicTask is_valid_sporadic_task
+R993:996 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R975:992 prosa.classic.model.arrival.basic.task SporadicTask task_cost_positive def
+R1017:1020 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R997:1016 prosa.classic.model.arrival.basic.task SporadicTask task_period_positive def
+R1043:1054 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R1021:1042 prosa.classic.model.arrival.basic.task SporadicTask task_deadline_positive def
+R1076:1079 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R1055:1075 prosa.classic.model.arrival.basic.task SporadicTask task_cost_le_deadline def
+R1080:1098 prosa.classic.model.arrival.basic.task SporadicTask task_cost_le_period def
+R1110:1124 prosa.classic.model.arrival.basic.task SporadicTask.BasicTask.ValidParameters <> sec
+R1138:1146 prosa.classic.model.arrival.basic.task SporadicTask.BasicTask <> sec
+R1154:1165 prosa.classic.model.arrival.basic.task SporadicTask <> mod
+mod 1223:1237 <> SporadicTaskset
+R1249:1252 prosa.classic.model.time Time <> mod
+R1264:1275 prosa.classic.model.arrival.basic.task SporadicTask <> mod
+sec 1289:1299 SporadicTaskset TasksetDefs
+def 1427:1436 SporadicTaskset taskset_of
+R1445:1450 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+binder 1439:1442 <> Task:10
+R1456:1460 prosa.util.seqset <> :::'{set'_x_'}' not
+R1465:1465 prosa.util.seqset <> :::'{set'_x_'}' not
+R1461:1464 prosa.classic.model.arrival.basic.task <> Task:10 var
+sec 1550:1566 SporadicTaskset.TasksetDefs TasksetProperties
+var  1585:1588 SporadicTaskset.TasksetDefs.TasksetProperties Task
+R1591:1596 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1615:1623 SporadicTaskset.TasksetDefs.TasksetProperties task_cost
+R1630:1633 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1626:1629 prosa.classic.model.arrival.basic.task <> SporadicTaskset.TasksetDefs.TasksetProperties.Task var
+R1634:1637 prosa.classic.model.time Time time def
+var 1655:1665 SporadicTaskset.TasksetDefs.TasksetProperties task_period
+R1672:1675 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1668:1671 prosa.classic.model.arrival.basic.task <> SporadicTaskset.TasksetDefs.TasksetProperties.Task var
+R1676:1679 prosa.classic.model.time Time time def
+var 1697:1709 SporadicTaskset.TasksetDefs.TasksetProperties task_deadline
+R1716:1719 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1712:1715 prosa.classic.model.arrival.basic.task <> SporadicTaskset.TasksetDefs.TasksetProperties.Task var
+R1720:1723 prosa.classic.model.time Time time def
+var 1737:1749 SporadicTaskset.TasksetDefs.TasksetProperties is_valid_task
+R1762:1783 prosa.classic.model.arrival.basic.task SporadicTask is_valid_sporadic_task def
+R1807:1819 prosa.classic.model.arrival.basic.task <> SporadicTaskset.TasksetDefs.TasksetProperties.task_deadline var
+R1795:1805 prosa.classic.model.arrival.basic.task <> SporadicTaskset.TasksetDefs.TasksetProperties.task_period var
+R1785:1793 prosa.classic.model.arrival.basic.task <> SporadicTaskset.TasksetDefs.TasksetProperties.task_cost var
+var 1838:1839 SporadicTaskset.TasksetDefs.TasksetProperties ts
+R1842:1844 mathcomp.boot.seq <> seq abbrev
+R1846:1849 prosa.classic.model.arrival.basic.task <> SporadicTaskset.TasksetDefs.TasksetProperties.Task var
+def 1934:1955 SporadicTaskset valid_sporadic_taskset
+binder 1975:1977 <> tsk:20
+R2000:2003 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1993:1997 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R1990:1992 prosa.classic.model.arrival.basic.task <> tsk:20 var
+R1998:1999 prosa.classic.model.arrival.basic.task <> SporadicTaskset.TasksetDefs.TasksetProperties.ts var
+R2004:2016 prosa.classic.model.arrival.basic.task <> SporadicTaskset.TasksetDefs.TasksetProperties.is_valid_task var
+R2018:2020 prosa.classic.model.arrival.basic.task <> tsk:20 var
+def 2152:2174 SporadicTaskset implicit_deadline_model
+binder 2194:2196 <> tsk:21
+R2219:2222 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2212:2216 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R2209:2211 prosa.classic.model.arrival.basic.task <> tsk:21 var
+R2217:2218 prosa.classic.model.arrival.basic.task <> SporadicTaskset.TasksetDefs.TasksetProperties.ts var
+R2240:2242 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2223:2235 prosa.classic.model.arrival.basic.task <> SporadicTaskset.TasksetDefs.TasksetProperties.task_deadline var
+R2237:2239 prosa.classic.model.arrival.basic.task <> tsk:21 var
+R2243:2253 prosa.classic.model.arrival.basic.task <> SporadicTaskset.TasksetDefs.TasksetProperties.task_period var
+R2255:2257 prosa.classic.model.arrival.basic.task <> tsk:21 var
+def 2278:2303 SporadicTaskset constrained_deadline_model
+binder 2323:2325 <> tsk:22
+R2348:2351 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2341:2345 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R2338:2340 prosa.classic.model.arrival.basic.task <> tsk:22 var
+R2346:2347 prosa.classic.model.arrival.basic.task <> SporadicTaskset.TasksetDefs.TasksetProperties.ts var
+R2369:2372 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R2352:2364 prosa.classic.model.arrival.basic.task <> SporadicTaskset.TasksetDefs.TasksetProperties.task_deadline var
+R2366:2368 prosa.classic.model.arrival.basic.task <> tsk:22 var
+R2373:2383 prosa.classic.model.arrival.basic.task <> SporadicTaskset.TasksetDefs.TasksetProperties.task_period var
+R2385:2387 prosa.classic.model.arrival.basic.task <> tsk:22 var
+def 2408:2431 SporadicTaskset arbitrary_deadline_model
+R2436:2439 Corelib.Init.Logic <> True ind
+R2451:2467 prosa.classic.model.arrival.basic.task SporadicTaskset.TasksetDefs.TasksetProperties <> sec
+R2477:2487 prosa.classic.model.arrival.basic.task SporadicTaskset.TasksetDefs <> sec
+R2495:2509 prosa.classic.model.arrival.basic.task SporadicTaskset <> mod

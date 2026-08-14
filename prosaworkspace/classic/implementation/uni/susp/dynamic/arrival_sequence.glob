@@ -1,0 +1,193 @@
+DIGEST 9f1b4669a6a627e880e83c816cf9fdb9
+Fprosa.classic.implementation.uni.susp.dynamic.arrival_sequence
+R15:36 prosa.classic.util.all <> <> lib
+R54:103 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R105:142 prosa.classic.model.arrival.basic.task <> <> lib
+R144:189 prosa.classic.model.arrival.basic.task_arrival <> <> lib
+R191:227 prosa.classic.model.arrival.basic.job <> <> lib
+R245:294 prosa.classic.implementation.uni.susp.dynamic.task <> <> lib
+R311:359 prosa.classic.implementation.uni.susp.dynamic.job <> <> lib
+R391:399 mathcomp.boot.ssreflect <> <> lib
+R401:407 mathcomp.boot.ssrbool <> <> lib
+R409:414 mathcomp.boot.ssrfun <> <> lib
+R416:421 mathcomp.boot.ssrnat <> <> lib
+R423:428 mathcomp.boot.eqtype <> <> lib
+R430:432 mathcomp.boot.seq <> <> lib
+R434:436 mathcomp.boot.div <> <> lib
+mod 447:469 <> ConcreteArrivalSequence
+R482:484 prosa.classic.model.arrival.basic.job Job <> mod
+R486:500 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence <> mod
+R502:513 prosa.classic.implementation.uni.susp.dynamic.task ConcreteTask <> mod
+R515:525 prosa.classic.implementation.uni.susp.dynamic.job ConcreteJob <> mod
+R527:541 prosa.classic.model.arrival.basic.task SporadicTaskset <> mod
+R543:553 prosa.classic.model.arrival.basic.task_arrival TaskArrival <> mod
+sec 567:582 ConcreteArrivalSequence PeriodicArrivals
+var 599:600 ConcreteArrivalSequence.PeriodicArrivals ts
+R603:618 prosa.classic.implementation.uni.susp.dynamic.task ConcreteTask concrete_taskset def
+def 764:770 ConcreteArrivalSequence add_job
+R783:786 prosa.classic.model.time Time time def
+binder 773:780 <> arr_time:3
+R795:807 prosa.classic.implementation.uni.susp.dynamic.task ConcreteTask concrete_task rec
+binder 790:792 <> tsk:4
+R819:821 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R849:863 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R1001:1020 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R837:840 mathcomp.boot.div <> ::nat_scope:x_'%|'_x not
+R822:832 prosa.classic.implementation.uni.susp.dynamic.task ConcreteTask task_period proj
+R834:836 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence <> tsk:4 var
+R841:848 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence <> arr_time:3 var
+R864:867 Corelib.Init.Datatypes <> Some constr
+R870:887 prosa.classic.implementation.uni.susp.dynamic.job ConcreteJob Build_concrete_job constr
+R898:901 mathcomp.boot.div <> ::nat_scope:x_'%/'_x not
+R890:897 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence <> arr_time:3 var
+R902:912 prosa.classic.implementation.uni.susp.dynamic.task ConcreteTask task_period proj
+R914:916 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence <> tsk:4 var
+R919:926 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence <> arr_time:3 var
+R962:970 prosa.classic.implementation.uni.susp.dynamic.task ConcreteTask task_cost proj
+R972:974 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence <> tsk:4 var
+R978:990 prosa.classic.implementation.uni.susp.dynamic.task ConcreteTask task_deadline proj
+R992:994 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence <> tsk:4 var
+R997:999 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence <> tsk:4 var
+R1021:1024 Corelib.Init.Datatypes <> None constr
+def 1126:1150 ConcreteArrivalSequence periodic_arrival_sequence
+R1156:1159 prosa.classic.model.time Time time def
+binder 1153:1153 <> t:5
+R1165:1168 mathcomp.boot.seq <> pmap def
+R1182:1183 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence <> ConcreteArrivalSequence.PeriodicArrivals.ts var
+R1171:1177 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence ConcreteArrivalSequence add_job def
+R1179:1179 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence <> t:5 var
+R1193:1208 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence ConcreteArrivalSequence.PeriodicArrivals <> sec
+sec 1222:1227 ConcreteArrivalSequence Proofs
+var 1309:1310 ConcreteArrivalSequence.Proofs ts
+R1313:1328 prosa.classic.implementation.uni.susp.dynamic.task ConcreteTask concrete_taskset def
+var 1346:1368 ConcreteArrivalSequence.Proofs H_valid_task_parameters
+R1377:1398 prosa.classic.model.arrival.basic.task SporadicTaskset valid_sporadic_taskset def
+R1436:1437 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence <> ConcreteArrivalSequence.Proofs.ts var
+R1422:1434 prosa.classic.implementation.uni.susp.dynamic.task ConcreteTask task_deadline proj
+R1410:1420 prosa.classic.implementation.uni.susp.dynamic.task ConcreteTask task_period proj
+R1400:1408 prosa.classic.implementation.uni.susp.dynamic.task ConcreteTask task_cost proj
+var 1534:1540 ConcreteArrivalSequence.Proofs arr_seq
+R1545:1569 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence ConcreteArrivalSequence periodic_arrival_sequence def
+R1571:1572 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence <> ConcreteArrivalSequence.Proofs.ts var
+prf 1636:1667 ConcreteArrivalSequence periodic_arrivals_are_consistent
+R1676:1703 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_times_are_consistent def
+R1717:1723 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence <> ConcreteArrivalSequence.Proofs.arr_seq var
+R1705:1715 prosa.classic.implementation.uni.susp.dynamic.job ConcreteJob job_arrival proj
+R1776:1785 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_at def
+R1787:1794 mathcomp.boot.seq <> mem_pmap thm
+R1776:1785 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_at def
+R1776:1785 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_at def
+R1787:1794 mathcomp.boot.seq <> mem_pmap thm
+R1787:1794 mathcomp.boot.seq <> mem_pmap thm
+R1826:1829 mathcomp.boot.seq <> mapP thm
+R1885:1891 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence ConcreteArrivalSequence add_job def
+prf 1980:2018 ConcreteArrivalSequence periodic_arrivals_all_jobs_from_taskset
+binder 2034:2034 <> j:10
+R2065:2076 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2045:2054 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R2064:2064 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence <> j:10 var
+R2056:2062 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence <> ConcreteArrivalSequence.Proofs.arr_seq var
+R2087:2091 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R2077:2084 prosa.classic.implementation.uni.susp.dynamic.job ConcreteJob job_task proj
+R2086:2086 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence <> j:10 var
+R2092:2093 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence <> ConcreteArrivalSequence.Proofs.ts var
+R2147:2154 mathcomp.boot.seq <> mem_pmap thm
+R2147:2154 mathcomp.boot.seq <> mem_pmap thm
+R2147:2154 mathcomp.boot.seq <> mem_pmap thm
+R2186:2189 mathcomp.boot.seq <> mapP thm
+R2245:2251 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence ConcreteArrivalSequence add_job def
+prf 2334:2371 ConcreteArrivalSequence periodic_arrivals_valid_job_parameters
+binder 2387:2387 <> j:11
+R2418:2429 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2398:2407 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R2417:2417 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence <> j:11 var
+R2409:2415 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence <> ConcreteArrivalSequence.Proofs.arr_seq var
+R2430:2447 prosa.classic.model.arrival.basic.job Job valid_sporadic_job def
+R2504:2504 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence <> j:11 var
+R2495:2502 prosa.classic.implementation.uni.susp.dynamic.job ConcreteJob job_task proj
+R2482:2493 prosa.classic.implementation.uni.susp.dynamic.job ConcreteJob job_deadline proj
+R2473:2480 prosa.classic.implementation.uni.susp.dynamic.job ConcreteJob job_cost proj
+R2459:2471 prosa.classic.implementation.uni.susp.dynamic.task ConcreteTask task_deadline proj
+R2449:2457 prosa.classic.implementation.uni.susp.dynamic.task ConcreteTask task_cost proj
+R2581:2602 prosa.classic.model.arrival.basic.task SporadicTaskset valid_sporadic_taskset def
+R2605:2626 prosa.classic.model.arrival.basic.task SporadicTask is_valid_sporadic_task def
+R2674:2681 mathcomp.boot.seq <> mem_pmap thm
+R2674:2681 mathcomp.boot.seq <> mem_pmap thm
+R2674:2681 mathcomp.boot.seq <> mem_pmap thm
+R2707:2710 mathcomp.boot.seq <> mapP thm
+R2740:2746 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence ConcreteArrivalSequence add_job def
+R2815:2832 prosa.classic.model.arrival.basic.job Job valid_sporadic_job def
+R2835:2852 prosa.classic.model.arrival.basic.job Job valid_realtime_job def
+R2855:2871 prosa.classic.model.arrival.basic.job Job job_cost_positive def
+R2918:2922 mathcomp.boot.ssrnat <> leqnn thm
+R2918:2922 mathcomp.boot.ssrnat <> leqnn thm
+prf 3011:3040 ConcreteArrivalSequence periodic_arrivals_are_sporadic
+R3049:3067 prosa.classic.model.arrival.basic.task_arrival TaskArrival sporadic_task_model def
+R3102:3108 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence <> ConcreteArrivalSequence.Proofs.arr_seq var
+R3093:3100 prosa.classic.implementation.uni.susp.dynamic.job ConcreteJob job_task proj
+R3081:3091 prosa.classic.implementation.uni.susp.dynamic.job ConcreteJob job_arrival proj
+R3069:3079 prosa.classic.implementation.uni.susp.dynamic.task ConcreteTask task_period proj
+R3142:3144 mathcomp.boot.eqtype <> eqP def
+R3199:3201 mathcomp.boot.eqtype <> eqE thm
+R3207:3215 prosa.classic.implementation.uni.susp.dynamic.job ConcreteJob job_eqdef def
+R3217:3224 Corelib.ssr.ssrbool <> negb_and thm
+R3237:3243 mathcomp.boot.eqtype <> eq_refl thm
+R3245:3248 Corelib.ssr.ssrbool <> orbF thm
+R3199:3201 mathcomp.boot.eqtype <> eqE thm
+R3199:3201 mathcomp.boot.eqtype <> eqE thm
+R3207:3215 prosa.classic.implementation.uni.susp.dynamic.job ConcreteJob job_eqdef def
+R3207:3215 prosa.classic.implementation.uni.susp.dynamic.job ConcreteJob job_eqdef def
+R3217:3224 Corelib.ssr.ssrbool <> negb_and thm
+R3217:3224 Corelib.ssr.ssrbool <> negb_and thm
+R3237:3243 mathcomp.boot.eqtype <> eq_refl thm
+R3237:3243 mathcomp.boot.eqtype <> eq_refl thm
+R3245:3248 Corelib.ssr.ssrbool <> orbF thm
+R3245:3248 Corelib.ssr.ssrbool <> orbF thm
+R3275:3282 mathcomp.boot.seq <> mem_pmap thm
+R3275:3282 mathcomp.boot.seq <> mem_pmap thm
+R3275:3282 mathcomp.boot.seq <> mem_pmap thm
+R3275:3282 mathcomp.boot.seq <> mem_pmap thm
+R3322:3325 mathcomp.boot.seq <> mapP thm
+R3346:3349 mathcomp.boot.seq <> mapP thm
+R3386:3392 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence ConcreteArrivalSequence add_job def
+R3455:3459 mathcomp.boot.div <> dvdnP thm
+R3470:3474 mathcomp.boot.div <> dvdnP thm
+R3521:3526 mathcomp.boot.ssrnat <> mulSnr thm
+R3521:3526 mathcomp.boot.ssrnat <> mulSnr thm
+R3521:3526 mathcomp.boot.ssrnat <> mulSnr thm
+R3545:3553 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R3545:3553 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R3545:3553 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R3575:3577 Corelib.ssr.ssrbool <> orP thm
+R3581:3583 mathcomp.boot.eqtype <> eqP def
+R3642:3645 Corelib.ssr.ssrbool <> negP thm
+R3697:3703 mathcomp.boot.eqtype <> eq_refl thm
+R3697:3703 mathcomp.boot.eqtype <> eq_refl thm
+R3697:3703 mathcomp.boot.eqtype <> eq_refl thm
+R3697:3703 mathcomp.boot.eqtype <> eq_refl thm
+R3697:3703 mathcomp.boot.eqtype <> eq_refl thm
+R3697:3703 mathcomp.boot.eqtype <> eq_refl thm
+R3697:3703 mathcomp.boot.eqtype <> eq_refl thm
+R3739:3747 mathcomp.boot.ssrnat <> leq_mul2r thm
+R3756:3758 Corelib.ssr.ssrbool <> orP thm
+R3739:3747 mathcomp.boot.ssrnat <> leq_mul2r thm
+R3739:3747 mathcomp.boot.ssrnat <> leq_mul2r thm
+R3756:3758 Corelib.ssr.ssrbool <> orP thm
+R3787:3795 mathcomp.boot.ssrnat <> ltn_mul2r thm
+R3787:3795 mathcomp.boot.ssrnat <> ltn_mul2r thm
+R3787:3795 mathcomp.boot.ssrnat <> ltn_mul2r thm
+R3821:3824 Corelib.ssr.ssrbool <> andP thm
+prf 3926:3951 ConcreteArrivalSequence periodic_arrivals_is_a_set
+R3960:3984 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence_is_a_set def
+R3986:3992 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence <> ConcreteArrivalSequence.Proofs.arr_seq var
+R4035:4041 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence <> arr_seq vardef
+R4044:4068 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence ConcreteArrivalSequence periodic_arrival_sequence def
+R4106:4113 prosa.classic.implementation.uni.susp.dynamic.job ConcreteJob job_task proj
+R4084:4092 mathcomp.boot.seq <> pmap_uniq thm
+R4106:4113 prosa.classic.implementation.uni.susp.dynamic.job ConcreteJob job_task proj
+R4084:4092 mathcomp.boot.seq <> pmap_uniq thm
+R4134:4135 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence <> ConcreteArrivalSequence.Proofs.ts var
+R4154:4160 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence ConcreteArrivalSequence add_job def
+R4163:4169 Corelib.ssr.ssrfun <> ocancel def
+R4211:4216 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence ConcreteArrivalSequence.Proofs <> sec
+R4226:4248 prosa.classic.implementation.uni.susp.dynamic.arrival_sequence ConcreteArrivalSequence <> mod

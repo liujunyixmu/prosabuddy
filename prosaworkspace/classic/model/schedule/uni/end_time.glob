@@ -1,0 +1,675 @@
+DIGEST cc013753f5d153b9f3a8fdebb80437af
+Fprosa.classic.model.schedule.uni.end_time
+R15:19 Stdlib.Arith.Arith <> <> lib
+R21:23 Corelib.Init.Nat <> <> lib
+R42:63 prosa.classic.util.all <> <> lib
+R81:118 prosa.classic.model.arrival.basic.task <> <> lib
+R136:172 prosa.classic.model.arrival.basic.job <> <> lib
+R190:230 prosa.classic.model.schedule.uni.schedule <> <> lib
+R247:292 prosa.classic.model.schedule.uni.response_time <> <> lib
+R324:332 mathcomp.boot.ssreflect <> <> lib
+R334:340 mathcomp.boot.ssrbool <> <> lib
+R342:347 mathcomp.boot.eqtype <> <> lib
+R349:354 mathcomp.boot.ssrnat <> <> lib
+R356:358 mathcomp.boot.seq <> <> lib
+R360:366 mathcomp.boot.fintype <> <> lib
+R368:372 mathcomp.boot.bigop <> <> lib
+mod 424:431 <> end_time
+R443:462 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule <> mod
+R464:466 prosa.classic.model.arrival.basic.job Job <> mod
+R468:479 prosa.classic.model.schedule.uni.response_time ResponseTime <> mod
+sec 493:496 end_time Task
+var  512:515 end_time.Task task
+R518:523 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 540:548 end_time.Task task_cost
+R555:558 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R551:554 prosa.classic.model.schedule.uni.end_time <> end_time.Task.task var
+R559:562 prosa.classic.model.time Time time def
+var 578:588 end_time.Task task_period
+R595:598 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R591:594 prosa.classic.model.schedule.uni.end_time <> end_time.Task.task var
+R599:602 prosa.classic.model.time Time time def
+var 618:630 end_time.Task task_deadline
+R637:640 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R633:636 prosa.classic.model.schedule.uni.end_time <> end_time.Task.task var
+R641:644 prosa.classic.model.time Time time def
+var  661:663 end_time.Task Job
+R666:671 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 688:698 end_time.Task job_arrival
+R704:707 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R701:703 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Job var
+R708:711 prosa.classic.model.time Time time def
+var 727:734 end_time.Task job_cost
+R740:743 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R737:739 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Job var
+R744:747 prosa.classic.model.time Time time def
+var 763:774 end_time.Task job_deadline
+R780:783 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R777:779 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Job var
+R784:787 prosa.classic.model.time Time time def
+var 803:810 end_time.Task job_task
+R816:819 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R813:815 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Job var
+R820:823 prosa.classic.model.schedule.uni.end_time <> end_time.Task.task var
+ind 897:912 end_time diagnosis_option
+constr 931:932 end_time OK
+constr 977:983 end_time Failure
+R948:951 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R941:947 prosa.classic.model.time Time instant def
+R952:967 prosa.classic.model.schedule.uni.end_time <> diagnosis_option:17 ind
+R994:997 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R987:993 prosa.classic.model.time Time instant def
+R998:1013 prosa.classic.model.schedule.uni.end_time <> diagnosis_option:17 ind
+scheme 897:912 end_time diagnosis_option_rect
+scheme 897:912 end_time diagnosis_option_ind
+scheme 897:912 end_time diagnosis_option_rec
+scheme 897:912 end_time diagnosis_option_sind
+sec 1029:1044 end_time.Task Job_end_time_Def
+var 1117:1121 end_time.Task.Job_end_time_Def sched
+R1124:1131 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R1133:1135 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Job var
+var 1183:1185 end_time.Task.Job_end_time_Def job
+R1187:1189 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Job var
+var 1317:1332 end_time.Task.Job_end_time_Def job_scheduled_at
+binder 1334:1334 <> t:23
+R1362:1364 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1338:1349 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R1361:1361 prosa.classic.model.schedule.uni.end_time <> t:23 var
+R1357:1359 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Job_end_time_Def.job var
+R1351:1355 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Job_end_time_Def.sched var
+R1365:1368 Corelib.Init.Datatypes <> true constr
+def 1804:1818 end_time end_time_option
+R1823:1829 prosa.classic.model.time Time instant def
+binder 1821:1821 <> t:24
+R1835:1842 prosa.classic.model.time Time duration def
+binder 1833:1833 <> c:25
+R1849:1851 Corelib.Init.Datatypes <> nat ind
+binder 1846:1847 <> wf:26
+R1870:1870 prosa.classic.model.schedule.uni.end_time <> c:25 var
+R1895:1896 prosa.classic.model.schedule.uni.end_time end_time OK constr
+R1898:1898 prosa.classic.model.schedule.uni.end_time <> t:24 var
+R1910:1910 Corelib.Init.Datatypes <> S constr
+R1923:1924 prosa.classic.model.schedule.uni.end_time <> wf:26 var
+R1955:1961 prosa.classic.model.schedule.uni.end_time end_time Failure constr
+R1963:1963 prosa.classic.model.schedule.uni.end_time <> t:24 var
+R1981:1981 Corelib.Init.Datatypes <> S constr
+R1989:1991 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R2016:2021 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R2051:2084 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R1992:2003 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R2015:2015 prosa.classic.model.schedule.uni.end_time <> t:24 var
+R2011:2013 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Job_end_time_Def.job var
+R2005:2009 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Job_end_time_Def.sched var
+R2022:2036 prosa.classic.model.schedule.uni.end_time <> end_time_option:27 def
+R2040:2040 Corelib.Init.Datatypes <> S constr
+R2042:2042 prosa.classic.model.schedule.uni.end_time <> t:24 var
+R2085:2099 prosa.classic.model.schedule.uni.end_time <> end_time_option:27 def
+R2108:2108 prosa.classic.model.schedule.uni.end_time <> c:25 var
+R2103:2103 Corelib.Init.Datatypes <> S constr
+R2105:2105 prosa.classic.model.schedule.uni.end_time <> t:24 var
+ind 2551:2568 end_time end_time_predicate
+constr 2617:2619 end_time C0_
+constr 2667:2679 end_time S_C_not_sched
+constr 2827:2835 end_time S_C_sched
+R2579:2581 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2572:2578 prosa.classic.model.time Time instant def
+R2590:2591 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2582:2589 prosa.classic.model.time Time duration def
+R2599:2600 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2592:2598 prosa.classic.model.time Time instant def
+binder 2629:2629 <> t:32
+R2632:2649 prosa.classic.model.schedule.uni.end_time <> end_time_predicate:30 ind
+R2655:2655 prosa.classic.model.schedule.uni.end_time <> t:32 var
+R2651:2651 prosa.classic.model.schedule.uni.end_time <> t:32 var
+binder 2689:2689 <> t:33
+binder 2691:2691 <> c:34
+binder 2693:2693 <> e:35
+R2728:2740 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2708:2708 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R2709:2724 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Job_end_time_Def.job_scheduled_at var
+R2727:2727 prosa.classic.model.schedule.uni.end_time <> t:33 var
+R2774:2786 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2741:2758 prosa.classic.model.schedule.uni.end_time <> end_time_predicate:30 ind
+R2773:2773 prosa.classic.model.schedule.uni.end_time <> e:35 var
+R2768:2768 Corelib.Init.Datatypes <> S constr
+R2770:2770 prosa.classic.model.schedule.uni.end_time <> c:34 var
+R2762:2762 Corelib.Init.Datatypes <> S constr
+R2764:2764 prosa.classic.model.schedule.uni.end_time <> t:33 var
+R2787:2804 prosa.classic.model.schedule.uni.end_time <> end_time_predicate:30 ind
+R2815:2815 prosa.classic.model.schedule.uni.end_time <> e:35 var
+R2810:2810 Corelib.Init.Datatypes <> S constr
+R2812:2812 prosa.classic.model.schedule.uni.end_time <> c:34 var
+R2807:2807 prosa.classic.model.schedule.uni.end_time <> t:33 var
+binder 2845:2845 <> t:36
+binder 2847:2847 <> c:37
+binder 2849:2849 <> e:38
+R2880:2892 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2862:2877 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Job_end_time_Def.job_scheduled_at var
+R2879:2879 prosa.classic.model.schedule.uni.end_time <> t:36 var
+R2922:2935 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2893:2910 prosa.classic.model.schedule.uni.end_time <> end_time_predicate:30 ind
+R2921:2921 prosa.classic.model.schedule.uni.end_time <> e:38 var
+R2919:2919 prosa.classic.model.schedule.uni.end_time <> c:37 var
+R2913:2913 Corelib.Init.Datatypes <> S constr
+R2915:2915 prosa.classic.model.schedule.uni.end_time <> t:36 var
+R2936:2953 prosa.classic.model.schedule.uni.end_time <> end_time_predicate:30 ind
+R2964:2964 prosa.classic.model.schedule.uni.end_time <> e:38 var
+R2959:2959 Corelib.Init.Datatypes <> S constr
+R2961:2961 prosa.classic.model.schedule.uni.end_time <> c:37 var
+R2956:2956 prosa.classic.model.schedule.uni.end_time <> t:36 var
+scheme 2551:2568 end_time end_time_predicate_ind
+scheme 2551:2568 end_time end_time_predicate_sind
+def 3101:3112 end_time completes_at
+R3117:3123 prosa.classic.model.time Time instant def
+binder 3115:3115 <> t:39
+R3136:3153 prosa.classic.model.schedule.uni.end_time end_time end_time_predicate ind
+R3156:3166 prosa.classic.model.schedule.uni.end_time <> end_time.Task.job_arrival var
+R3168:3170 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Job_end_time_Def.job var
+R3174:3181 prosa.classic.model.schedule.uni.end_time <> end_time.Task.job_cost var
+R3183:3185 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Job_end_time_Def.job var
+R3188:3188 prosa.classic.model.schedule.uni.end_time <> t:39 var
+R3200:3215 prosa.classic.model.schedule.uni.end_time end_time.Task.Job_end_time_Def <> sec
+sec 3231:3236 end_time.Task Lemmas
+var 3284:3286 end_time.Task.Lemmas job
+R3288:3290 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Job var
+var 3363:3367 end_time.Task.Lemmas sched
+R3370:3377 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R3379:3381 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Job var
+var 3492:3520 end_time.Task.Lemmas H_jobs_must_arrive_to_execute
+R3531:3557 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule jobs_must_arrive_to_execute def
+R3571:3575 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.sched var
+R3559:3569 prosa.classic.model.schedule.uni.end_time <> end_time.Task.job_arrival var
+var 3595:3623 end_time.Task.Lemmas H_completed_jobs_dont_execute
+R3634:3660 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_jobs_dont_execute def
+R3671:3675 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.sched var
+R3662:3669 prosa.classic.model.schedule.uni.end_time <> end_time.Task.job_cost var
+var 3696:3706 end_time.Task.Lemmas H_valid_job
+R3715:3732 prosa.classic.model.arrival.basic.job Job valid_realtime_job def
+R3756:3758 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R3743:3754 prosa.classic.model.schedule.uni.end_time <> end_time.Task.job_deadline var
+R3734:3741 prosa.classic.model.schedule.uni.end_time <> end_time.Task.job_cost var
+var 3819:3839 end_time.Task.Lemmas job_end_time_function
+R3843:3857 prosa.classic.model.schedule.uni.end_time end_time end_time_option def
+R3865:3867 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R3859:3863 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.sched var
+var 3922:3935 end_time.Task.Lemmas job_end_time_p
+R3939:3956 prosa.classic.model.schedule.uni.end_time end_time end_time_predicate ind
+R3964:3966 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R3958:3962 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.sched var
+var 4029:4044 end_time.Task.Lemmas job_completes_at
+R4049:4060 prosa.classic.model.schedule.uni.end_time end_time completes_at def
+R4068:4070 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R4062:4066 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.sched var
+var 4198:4213 end_time.Task.Lemmas job_scheduled_at
+binder 4215:4215 <> t:50
+R4243:4245 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4219:4230 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R4242:4242 prosa.classic.model.schedule.uni.end_time <> t:50 var
+R4238:4240 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R4232:4236 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.sched var
+R4246:4249 Corelib.Init.Datatypes <> true constr
+prf 4443:4480 end_time end_time_function_predicat_equivalence
+binder 4498:4498 <> e:51
+binder 4500:4501 <> wf:52
+binder 4503:4503 <> t:53
+binder 4505:4505 <> c:54
+R4553:4566 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4546:4548 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4518:4538 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_end_time_function var
+R4540:4540 prosa.classic.model.schedule.uni.end_time <> t:53 var
+R4542:4542 prosa.classic.model.schedule.uni.end_time <> c:54 var
+R4544:4545 prosa.classic.model.schedule.uni.end_time <> wf:52 var
+R4549:4550 prosa.classic.model.schedule.uni.end_time end_time OK constr
+R4552:4552 prosa.classic.model.schedule.uni.end_time <> e:51 var
+R4567:4580 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_end_time_p var
+R4582:4582 prosa.classic.model.schedule.uni.end_time <> t:53 var
+R4584:4584 prosa.classic.model.schedule.uni.end_time <> c:54 var
+R4586:4586 prosa.classic.model.schedule.uni.end_time <> e:51 var
+R4713:4715 prosa.classic.model.schedule.uni.end_time end_time C0_ constr
+R4713:4715 prosa.classic.model.schedule.uni.end_time end_time C0_ constr
+R4756:4767 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R4775:4777 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R4769:4773 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.sched var
+R4756:4767 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R4775:4777 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R4769:4773 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.sched var
+R4756:4767 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R4775:4777 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R4769:4773 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.sched var
+R4833:4835 prosa.classic.model.schedule.uni.end_time end_time C0_ constr
+R4833:4835 prosa.classic.model.schedule.uni.end_time end_time C0_ constr
+R4915:4923 prosa.classic.model.schedule.uni.end_time end_time S_C_sched constr
+R4915:4923 prosa.classic.model.schedule.uni.end_time end_time S_C_sched constr
+R5012:5014 prosa.classic.model.schedule.uni.end_time end_time C0_ constr
+R5012:5014 prosa.classic.model.schedule.uni.end_time end_time C0_ constr
+R5082:5094 prosa.classic.model.schedule.uni.end_time end_time S_C_not_sched constr
+R5082:5094 prosa.classic.model.schedule.uni.end_time end_time S_C_not_sched constr
+prf 5390:5427 end_time end_time_predicat_function_equivalence
+binder 5445:5445 <> t:55
+binder 5447:5447 <> c:56
+binder 5449:5449 <> e:57
+R5483:5496 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5463:5476 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_end_time_p var
+R5478:5478 prosa.classic.model.schedule.uni.end_time <> t:55 var
+R5480:5480 prosa.classic.model.schedule.uni.end_time <> c:56 var
+R5482:5482 prosa.classic.model.schedule.uni.end_time <> e:57 var
+R5497:5503 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R5506:5507 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 5504:5505 <> wf:58
+R5536:5538 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5508:5528 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_end_time_function var
+R5530:5530 prosa.classic.model.schedule.uni.end_time <> t:55 var
+R5532:5532 prosa.classic.model.schedule.uni.end_time <> c:56 var
+R5534:5535 prosa.classic.model.schedule.uni.end_time <> wf:58 var
+R5539:5540 prosa.classic.model.schedule.uni.end_time end_time OK constr
+R5542:5542 prosa.classic.model.schedule.uni.end_time <> e:57 var
+R5702:5702 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R5702:5702 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R5728:5739 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R5747:5749 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R5741:5745 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.sched var
+R5728:5739 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R5747:5749 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R5741:5745 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.sched var
+R5728:5739 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R5747:5749 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R5741:5745 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.sched var
+R5835:5835 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R5835:5835 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+prf 6065:6092 end_time end_time_predicate_not_sched
+binder 6110:6110 <> t:59
+binder 6112:6112 <> c:60
+binder 6114:6114 <> e:61
+R6148:6161 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6127:6128 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R6147:6147 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R6129:6144 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_scheduled_at var
+R6146:6146 prosa.classic.model.schedule.uni.end_time <> t:59 var
+R6199:6212 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6162:6179 prosa.classic.model.schedule.uni.end_time end_time end_time_predicate ind
+R6191:6191 prosa.classic.model.schedule.uni.end_time <> t:59 var
+R6194:6196 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R6193:6193 prosa.classic.model.schedule.uni.end_time <> c:60 var
+R6198:6198 prosa.classic.model.schedule.uni.end_time <> e:61 var
+R6187:6189 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R6181:6185 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.sched var
+R6213:6230 prosa.classic.model.schedule.uni.end_time end_time end_time_predicate ind
+R6243:6245 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R6242:6242 prosa.classic.model.schedule.uni.end_time <> t:59 var
+R6248:6250 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R6247:6247 prosa.classic.model.schedule.uni.end_time <> c:60 var
+R6252:6252 prosa.classic.model.schedule.uni.end_time <> e:61 var
+R6238:6240 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R6232:6236 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.sched var
+prf 6590:6613 end_time end_time_predicate_sched
+binder 6631:6631 <> t:62
+binder 6633:6633 <> c:63
+binder 6635:6635 <> e:64
+R6666:6679 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6648:6663 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_scheduled_at var
+R6665:6665 prosa.classic.model.schedule.uni.end_time <> t:62 var
+R6717:6730 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6680:6697 prosa.classic.model.schedule.uni.end_time end_time end_time_predicate ind
+R6709:6709 prosa.classic.model.schedule.uni.end_time <> t:62 var
+R6712:6714 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R6711:6711 prosa.classic.model.schedule.uni.end_time <> c:63 var
+R6716:6716 prosa.classic.model.schedule.uni.end_time <> e:64 var
+R6705:6707 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R6699:6703 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.sched var
+R6731:6748 prosa.classic.model.schedule.uni.end_time end_time end_time_predicate ind
+R6761:6763 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R6760:6760 prosa.classic.model.schedule.uni.end_time <> t:62 var
+R6765:6765 prosa.classic.model.schedule.uni.end_time <> c:63 var
+R6767:6767 prosa.classic.model.schedule.uni.end_time <> e:64 var
+R6756:6758 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R6750:6754 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.sched var
+var 6973:6979 end_time.Task.Lemmas job_end
+R6982:6988 prosa.classic.model.time Time instant def
+var 7101:7116 end_time.Task.Lemmas job_completed_by
+R7128:7139 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R7150:7154 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.sched var
+R7141:7148 prosa.classic.model.schedule.uni.end_time <> end_time.Task.job_cost var
+var 7269:7286 end_time.Task.Lemmas job_service_during
+R7298:7311 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R7319:7321 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R7313:7317 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.sched var
+prf 7408:7421 end_time arrival_le_end
+binder 7440:7440 <> t:67
+binder 7442:7442 <> c:68
+binder 7444:7444 <> e:69
+R7467:7470 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7447:7460 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_end_time_p var
+R7462:7462 prosa.classic.model.schedule.uni.end_time <> t:67 var
+R7464:7464 prosa.classic.model.schedule.uni.end_time <> c:68 var
+R7466:7466 prosa.classic.model.schedule.uni.end_time <> e:69 var
+R7472:7475 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R7471:7471 prosa.classic.model.schedule.uni.end_time <> t:67 var
+R7476:7476 prosa.classic.model.schedule.uni.end_time <> e:69 var
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+prf 7704:7726 end_time arrival_add_cost_le_end
+binder 7744:7744 <> t:70
+binder 7746:7746 <> c:71
+binder 7748:7748 <> e:72
+R7781:7794 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7761:7774 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_end_time_p var
+R7776:7776 prosa.classic.model.schedule.uni.end_time <> t:70 var
+R7778:7778 prosa.classic.model.schedule.uni.end_time <> c:71 var
+R7780:7780 prosa.classic.model.schedule.uni.end_time <> e:72 var
+R7798:7799 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R7796:7796 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R7795:7795 prosa.classic.model.schedule.uni.end_time <> t:70 var
+R7797:7797 prosa.classic.model.schedule.uni.end_time <> c:71 var
+R7800:7800 prosa.classic.model.schedule.uni.end_time <> e:72 var
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+prf 8042:8068 end_time service_eq_cost_at_end_time
+R8103:8114 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8079:8094 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_completes_at var
+R8096:8102 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_end var
+R8159:8161 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8115:8132 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_service_during var
+R8135:8145 prosa.classic.model.schedule.uni.end_time <> end_time.Task.job_arrival var
+R8147:8149 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R8152:8158 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_end var
+R8162:8169 prosa.classic.model.schedule.uni.end_time <> end_time.Task.job_cost var
+R8171:8173 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R8307:8324 prosa.classic.model.schedule.uni.end_time <> job_service_during vardef
+R8327:8340 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R8369:8375 mathcomp.boot.bigop <> big_geq thm
+R8369:8375 mathcomp.boot.bigop <> big_geq thm
+R8369:8375 mathcomp.boot.bigop <> big_geq thm
+R8394:8407 prosa.classic.model.schedule.uni.end_time end_time arrival_le_end thm
+R8394:8407 prosa.classic.model.schedule.uni.end_time end_time arrival_le_end thm
+R8436:8442 mathcomp.boot.bigop <> big_ltn thm
+R8455:8464 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_at def
+R8436:8442 mathcomp.boot.bigop <> big_ltn thm
+R8436:8442 mathcomp.boot.bigop <> big_ltn thm
+R8455:8464 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_at def
+R8455:8464 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_at def
+R8489:8500 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R8508:8510 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R8502:8506 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.sched var
+R8489:8500 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R8508:8510 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R8502:8506 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.sched var
+R8489:8500 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R8508:8510 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R8502:8506 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.sched var
+R8548:8561 prosa.classic.model.schedule.uni.end_time end_time arrival_le_end thm
+R8548:8561 prosa.classic.model.schedule.uni.end_time end_time arrival_le_end thm
+R8591:8597 mathcomp.boot.bigop <> big_ltn thm
+R8610:8619 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_at def
+R8591:8597 mathcomp.boot.bigop <> big_ltn thm
+R8591:8597 mathcomp.boot.bigop <> big_ltn thm
+R8610:8619 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_at def
+R8610:8619 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_at def
+prf 8723:8743 end_time completed_by_end_time
+R8778:8789 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8754:8769 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_completes_at var
+R8771:8777 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_end var
+R8790:8805 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_completed_by var
+R8807:8809 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R8811:8817 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_end var
+R8875:8890 prosa.classic.model.schedule.uni.end_time <> job_completed_by vardef
+R8893:8904 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R8907:8913 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R8916:8929 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R8950:8978 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule ignore_service_before_arrival thm
+R8992:8996 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.sched var
+R8980:8990 prosa.classic.model.schedule.uni.end_time <> end_time.Task.job_arrival var
+R8950:8978 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule ignore_service_before_arrival thm
+R8992:8996 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.sched var
+R8980:8990 prosa.classic.model.schedule.uni.end_time <> end_time.Task.job_arrival var
+R8950:8978 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule ignore_service_before_arrival thm
+R8992:8996 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.sched var
+R8980:8990 prosa.classic.model.schedule.uni.end_time <> end_time.Task.job_arrival var
+R9021:9047 prosa.classic.model.schedule.uni.end_time end_time service_eq_cost_at_end_time thm
+R9021:9047 prosa.classic.model.schedule.uni.end_time end_time service_eq_cost_at_end_time thm
+R9122:9135 prosa.classic.model.schedule.uni.end_time end_time arrival_le_end thm
+R9122:9135 prosa.classic.model.schedule.uni.end_time end_time arrival_le_end thm
+prf 9222:9238 end_time end_time_positive
+R9273:9276 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9249:9264 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_completes_at var
+R9266:9272 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_end var
+R9284:9286 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R9277:9283 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_end var
+R9358:9360 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R9346:9353 prosa.classic.model.schedule.uni.end_time <> end_time.Task.job_cost var
+R9355:9357 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R9374:9384 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.H_valid_job var
+R9358:9360 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R9346:9353 prosa.classic.model.schedule.uni.end_time <> end_time.Task.job_cost var
+R9355:9357 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R9374:9384 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.H_valid_job var
+R9402:9422 prosa.classic.model.schedule.uni.end_time end_time completed_by_end_time thm
+R9402:9422 prosa.classic.model.schedule.uni.end_time end_time completed_by_end_time thm
+R9446:9461 prosa.classic.model.schedule.uni.end_time <> job_completed_by vardef
+R9464:9475 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R9478:9484 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R9487:9500 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R9526:9532 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_end var
+R9561:9567 mathcomp.boot.bigop <> big_geq thm
+R9561:9567 mathcomp.boot.bigop <> big_geq thm
+R9561:9567 mathcomp.boot.bigop <> big_geq thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+prf 9746:9778 end_time job_uncompletes_at_end_time_sub_1
+R9813:9824 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9789:9804 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_completes_at var
+R9806:9812 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_end var
+R9875:9877 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9825:9842 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_service_during var
+R9845:9855 prosa.classic.model.schedule.uni.end_time <> end_time.Task.job_arrival var
+R9857:9859 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R9870:9873 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R9863:9869 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_end var
+R9878:9878 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R9891:9895 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R9879:9886 prosa.classic.model.schedule.uni.end_time <> end_time.Task.job_cost var
+R9888:9890 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R10029:10046 prosa.classic.model.schedule.uni.end_time <> job_service_during vardef
+R10049:10062 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R10085:10091 mathcomp.boot.bigop <> big_geq thm
+R10094:10101 mathcomp.boot.ssrnat <> leq_pred thm
+R10085:10091 mathcomp.boot.bigop <> big_geq thm
+R10094:10101 mathcomp.boot.ssrnat <> leq_pred thm
+R10121:10143 prosa.classic.model.schedule.uni.end_time end_time arrival_add_cost_le_end thm
+R10146:10154 mathcomp.boot.ssrnat <> leq_sub2r thm
+R10121:10143 prosa.classic.model.schedule.uni.end_time end_time arrival_add_cost_le_end thm
+R10146:10154 mathcomp.boot.ssrnat <> leq_sub2r thm
+R10195:10199 mathcomp.boot.ssrnat <> subn1 thm
+R10201:10205 mathcomp.boot.ssrnat <> addnS thm
+R10211:10215 mathcomp.boot.ssrnat <> addSn thm
+R10217:10221 mathcomp.boot.ssrnat <> subn1 thm
+R10195:10199 mathcomp.boot.ssrnat <> subn1 thm
+R10195:10199 mathcomp.boot.ssrnat <> subn1 thm
+R10201:10205 mathcomp.boot.ssrnat <> addnS thm
+R10201:10205 mathcomp.boot.ssrnat <> addnS thm
+R10211:10215 mathcomp.boot.ssrnat <> addSn thm
+R10211:10215 mathcomp.boot.ssrnat <> addSn thm
+R10217:10221 mathcomp.boot.ssrnat <> subn1 thm
+R10217:10221 mathcomp.boot.ssrnat <> subn1 thm
+R10248:10260 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R10294:10301 mathcomp.boot.ssrnat <> leq_addr thm
+R10248:10260 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R10294:10301 mathcomp.boot.ssrnat <> leq_addr thm
+R10294:10301 mathcomp.boot.ssrnat <> leq_addr thm
+R10323:10329 mathcomp.boot.bigop <> big_ltn thm
+R10342:10351 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_at def
+R10354:10367 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R10323:10329 mathcomp.boot.bigop <> big_ltn thm
+R10323:10329 mathcomp.boot.bigop <> big_ltn thm
+R10342:10351 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_at def
+R10342:10351 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_at def
+R10354:10367 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R10354:10367 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R10388:10399 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R10407:10409 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R10401:10405 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.sched var
+R10388:10399 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R10407:10409 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R10401:10405 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.sched var
+R10388:10399 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R10407:10409 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R10401:10405 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.sched var
+R10479:10485 mathcomp.boot.bigop <> big_geq thm
+R10479:10485 mathcomp.boot.bigop <> big_geq thm
+R10516:10538 prosa.classic.model.schedule.uni.end_time end_time arrival_add_cost_le_end thm
+R10541:10549 mathcomp.boot.ssrnat <> leq_sub2r thm
+R10516:10538 prosa.classic.model.schedule.uni.end_time end_time arrival_add_cost_le_end thm
+R10541:10549 mathcomp.boot.ssrnat <> leq_sub2r thm
+R10592:10596 mathcomp.boot.ssrnat <> subn1 thm
+R10598:10602 mathcomp.boot.ssrnat <> addnS thm
+R10608:10612 mathcomp.boot.ssrnat <> addSn thm
+R10614:10618 mathcomp.boot.ssrnat <> subn1 thm
+R10592:10596 mathcomp.boot.ssrnat <> subn1 thm
+R10592:10596 mathcomp.boot.ssrnat <> subn1 thm
+R10598:10602 mathcomp.boot.ssrnat <> addnS thm
+R10598:10602 mathcomp.boot.ssrnat <> addnS thm
+R10608:10612 mathcomp.boot.ssrnat <> addSn thm
+R10608:10612 mathcomp.boot.ssrnat <> addSn thm
+R10614:10618 mathcomp.boot.ssrnat <> subn1 thm
+R10614:10618 mathcomp.boot.ssrnat <> subn1 thm
+R10647:10659 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R10693:10700 mathcomp.boot.ssrnat <> leq_addr thm
+R10647:10659 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R10693:10700 mathcomp.boot.ssrnat <> leq_addr thm
+R10693:10700 mathcomp.boot.ssrnat <> leq_addr thm
+R10724:10730 mathcomp.boot.bigop <> big_ltn thm
+R10736:10745 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_at def
+R10749:10762 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R10724:10730 mathcomp.boot.bigop <> big_ltn thm
+R10724:10730 mathcomp.boot.bigop <> big_ltn thm
+R10736:10745 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_at def
+R10736:10745 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_at def
+R10749:10762 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R10749:10762 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+prf 10965:10995 end_time job_uncompleted_before_end_time
+R11030:11041 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R11006:11021 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_completes_at var
+R11023:11029 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_end var
+binder 11049:11050 <> t':73
+R11093:11108 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R11074:11077 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R11068:11071 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R11053:11063 prosa.classic.model.schedule.uni.end_time <> end_time.Task.job_arrival var
+R11065:11067 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R11072:11073 prosa.classic.model.schedule.uni.end_time <> t':73 var
+R11080:11082 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R11078:11079 prosa.classic.model.schedule.uni.end_time <> t':73 var
+R11090:11092 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R11083:11089 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_end var
+R11148:11150 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R11109:11126 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_service_during var
+R11129:11139 prosa.classic.model.schedule.uni.end_time <> end_time.Task.job_arrival var
+R11141:11143 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R11146:11147 prosa.classic.model.schedule.uni.end_time <> t':73 var
+R11151:11158 prosa.classic.model.schedule.uni.end_time <> end_time.Task.job_cost var
+R11160:11162 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R11255:11257 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R11243:11250 prosa.classic.model.schedule.uni.end_time <> end_time.Task.job_cost var
+R11252:11254 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R11271:11281 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.H_valid_job var
+R11255:11257 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R11243:11250 prosa.classic.model.schedule.uni.end_time <> end_time.Task.job_cost var
+R11252:11254 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R11271:11281 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.H_valid_job var
+R11323:11323 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R11336:11339 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R11324:11331 prosa.classic.model.schedule.uni.end_time <> end_time.Task.job_cost var
+R11333:11335 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R11299:11311 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R11323:11323 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R11336:11339 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R11324:11331 prosa.classic.model.schedule.uni.end_time <> end_time.Task.job_cost var
+R11333:11335 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R11299:11311 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R11375:11407 prosa.classic.model.schedule.uni.end_time end_time job_uncompletes_at_end_time_sub_1 thm
+R11413:11430 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_service_during var
+R11433:11446 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R11375:11407 prosa.classic.model.schedule.uni.end_time end_time job_uncompletes_at_end_time_sub_1 thm
+R11375:11407 prosa.classic.model.schedule.uni.end_time end_time job_uncompletes_at_end_time_sub_1 thm
+R11413:11430 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_service_during var
+R11413:11430 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_service_during var
+R11433:11446 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R11433:11446 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R11471:11477 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R11483:11484 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 11478:11482 <> delta:74
+R11495:11497 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11487:11489 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R11490:11494 prosa.classic.model.schedule.uni.end_time <> delta:74 var
+R11505:11507 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R11498:11504 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_end var
+R11471:11477 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R11483:11484 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 11478:11482 <> delta:75
+R11495:11497 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11487:11489 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R11490:11494 prosa.classic.model.schedule.uni.end_time <> delta:75 var
+R11505:11507 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R11498:11504 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job_end var
+R11526:11528 mathcomp.boot.ssrnat <> leP thm
+R11558:11574 Stdlib.Arith.PeanoNat Nat le_exists_sub thm
+R11558:11574 Stdlib.Arith.PeanoNat Nat le_exists_sub thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R11963:11973 mathcomp.boot.bigop <> big_cat_nat thm
+R11786:11810 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11723:11728 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R11744:11747 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R11749:11751 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R11762:11763 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R11729:11739 prosa.classic.model.schedule.uni.end_time <> end_time.Task.job_arrival var
+R11741:11743 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R11754:11756 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+binder 11748:11748 <> i:76
+binder 11748:11748 <> i:77
+binder 11748:11748 <> i:78
+R11764:11773 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_at def
+R11785:11785 prosa.classic.model.schedule.uni.end_time <> i:76 var
+R11781:11783 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R11775:11779 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.sched var
+R11866:11890 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R11811:11816 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R11832:11835 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R11837:11839 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R11842:11843 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R11817:11827 prosa.classic.model.schedule.uni.end_time <> end_time.Task.job_arrival var
+R11829:11831 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+binder 11836:11836 <> i:79
+binder 11836:11836 <> i:80
+binder 11836:11836 <> i:81
+R11844:11853 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_at def
+R11865:11865 prosa.classic.model.schedule.uni.end_time <> i:79 var
+R11861:11863 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R11855:11859 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.sched var
+R11891:11896 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R11899:11902 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R11904:11906 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R11917:11918 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R11909:11911 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+binder 11903:11903 <> i:82
+binder 11903:11903 <> i:83
+binder 11903:11903 <> i:84
+R11919:11928 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_at def
+R11940:11940 prosa.classic.model.schedule.uni.end_time <> i:82 var
+R11936:11938 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.job var
+R11930:11934 prosa.classic.model.schedule.uni.end_time <> end_time.Task.Lemmas.sched var
+R11963:11973 mathcomp.boot.bigop <> big_cat_nat thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R12041:12046 prosa.classic.model.schedule.uni.end_time end_time.Task.Lemmas <> sec
+R12056:12059 prosa.classic.model.schedule.uni.end_time end_time.Task <> sec
+R12067:12074 prosa.classic.model.schedule.uni.end_time end_time <> mod

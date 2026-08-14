@@ -1,0 +1,350 @@
+DIGEST 4eee5a631c1e1ea6f723b7f241e1f44e
+Fprosa.classic.util.counting
+R15:40 prosa.classic.util.tactics <> <> lib
+R42:74 prosa.classic.util.ord_quantifier <> <> lib
+R106:114 mathcomp.boot.ssreflect <> <> lib
+R116:122 mathcomp.boot.ssrbool <> <> lib
+R124:129 mathcomp.boot.eqtype <> <> lib
+R131:136 mathcomp.boot.ssrnat <> <> lib
+R138:140 mathcomp.boot.seq <> <> lib
+R142:148 mathcomp.boot.fintype <> <> lib
+R150:154 mathcomp.boot.bigop <> <> lib
+sec 206:213 <> Counting
+prf 227:234 <> count_or
+R253:258 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+binder 250:250 <> T:1
+R265:267 mathcomp.boot.seq <> seq abbrev
+R269:269 prosa.classic.util.counting <> T:1 var
+binder 262:262 <> l:2
+binder 272:272 <> P:3
+binder 274:274 <> Q:4
+R312:315 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R283:287 mathcomp.boot.seq <> count def
+R311:311 prosa.classic.util.counting <> l:2 var
+binder 294:294 <> x:5
+R302:305 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R299:299 prosa.classic.util.counting <> P:3 var
+R301:301 prosa.classic.util.counting <> x:5 var
+R306:306 prosa.classic.util.counting <> Q:4 var
+R308:308 prosa.classic.util.counting <> x:5 var
+R325:327 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R316:320 mathcomp.boot.seq <> count def
+R324:324 prosa.classic.util.counting <> l:2 var
+R322:322 prosa.classic.util.counting <> P:3 var
+R328:332 mathcomp.boot.seq <> count def
+R336:336 prosa.classic.util.counting <> l:2 var
+R334:334 prosa.classic.util.counting <> Q:4 var
+R378:389 mathcomp.boot.seq <> count_predUI thm
+R378:389 mathcomp.boot.seq <> count_predUI thm
+R378:389 mathcomp.boot.seq <> count_predUI thm
+R423:427 mathcomp.boot.seq <> count def
+R430:434 Corelib.ssr.ssrbool <> predU def
+R402:410 mathcomp.boot.ssrnat <> leq_trans thm
+R465:472 mathcomp.boot.ssrnat <> leq_addr thm
+R423:427 mathcomp.boot.seq <> count def
+R430:434 Corelib.ssr.ssrbool <> predU def
+R402:410 mathcomp.boot.ssrnat <> leq_trans thm
+R465:472 mathcomp.boot.ssrnat <> leq_addr thm
+R488:496 mathcomp.boot.seq <> sub_count thm
+R511:515 Corelib.ssr.ssrbool <> predU def
+R488:496 mathcomp.boot.seq <> sub_count thm
+prf 541:552 <> sub_in_count
+R571:576 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+binder 568:568 <> T:6
+R583:585 mathcomp.boot.seq <> seq abbrev
+R587:587 prosa.classic.util.counting <> T:6 var
+binder 580:580 <> l:7
+R599:602 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R598:598 prosa.classic.util.counting <> T:6 var
+R603:606 Corelib.Init.Datatypes <> bool ind
+binder 591:592 <> P1:8
+binder 594:595 <> P2:9
+R616:616 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R650:660 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+binder 624:624 <> x:10
+R634:637 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R628:632 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R627:627 prosa.classic.util.counting <> x:10 var
+R633:633 prosa.classic.util.counting <> l:7 var
+R642:645 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R638:639 prosa.classic.util.counting <> P1:8 var
+R641:641 prosa.classic.util.counting <> x:10 var
+R646:647 prosa.classic.util.counting <> P2:9 var
+R649:649 prosa.classic.util.counting <> x:10 var
+R671:674 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R661:665 mathcomp.boot.seq <> count def
+R670:670 prosa.classic.util.counting <> l:7 var
+R667:668 prosa.classic.util.counting <> P1:8 var
+R675:679 mathcomp.boot.seq <> count def
+R684:684 prosa.classic.util.counting <> l:7 var
+R681:682 prosa.classic.util.counting <> P2:9 var
+R753:757 mathcomp.boot.seq <> count def
+binder 764:764 <> x:11
+R773:777 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R785:785 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R772:772 prosa.classic.util.counting <> x:11 var
+R779:783 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R778:778 prosa.classic.util.counting <> x:11 var
+R732:740 mathcomp.boot.ssrnat <> leq_trans thm
+R813:818 mathcomp.boot.ssrnat <> eq_leq thm
+R821:831 mathcomp.boot.seq <> eq_in_count thm
+R866:870 Corelib.ssr.ssrbool <> andbT thm
+R753:757 mathcomp.boot.seq <> count def
+binder 764:764 <> x:12
+R773:777 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R785:785 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R772:772 prosa.classic.util.counting <> x:12 var
+R779:783 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R778:778 prosa.classic.util.counting <> x:12 var
+R732:740 mathcomp.boot.ssrnat <> leq_trans thm
+R813:818 mathcomp.boot.ssrnat <> eq_leq thm
+R821:831 mathcomp.boot.seq <> eq_in_count thm
+R866:870 Corelib.ssr.ssrbool <> andbT thm
+R866:870 Corelib.ssr.ssrbool <> andbT thm
+R886:894 mathcomp.boot.seq <> sub_count thm
+R886:894 mathcomp.boot.seq <> sub_count thm
+R913:916 Corelib.ssr.ssrbool <> andP thm
+prf 955:969 <> count_sub_uniqr
+R988:993 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+binder 985:985 <> T:13
+R1004:1006 mathcomp.boot.seq <> seq abbrev
+R1008:1008 prosa.classic.util.counting <> T:13 var
+binder 997:998 <> l1:14
+binder 1000:1001 <> l2:15
+binder 1011:1011 <> P:16
+R1027:1036 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1020:1023 mathcomp.boot.seq <> uniq def
+R1025:1026 prosa.classic.util.counting <> l1:14 var
+R1054:1063 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1037:1044 Corelib.ssr.ssrbool <> ::type_scope:'{'_'subset'_x_'<='_x_'}' not
+R1047:1050 Corelib.ssr.ssrbool <> ::type_scope:'{'_'subset'_x_'<='_x_'}' not
+R1053:1053 Corelib.ssr.ssrbool <> ::type_scope:'{'_'subset'_x_'<='_x_'}' not
+R1045:1046 prosa.classic.util.counting <> l1:14 var
+R1051:1052 prosa.classic.util.counting <> l2:15 var
+R1074:1077 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R1064:1068 mathcomp.boot.seq <> count def
+R1072:1073 prosa.classic.util.counting <> l1:14 var
+R1070:1070 prosa.classic.util.counting <> P:16 var
+R1078:1082 mathcomp.boot.seq <> count def
+R1086:1087 prosa.classic.util.counting <> l2:15 var
+R1084:1084 prosa.classic.util.counting <> P:16 var
+R1144:1154 mathcomp.boot.seq <> size_filter thm
+R1156:1168 mathcomp.boot.seq <> uniq_leq_size thm
+R1171:1181 mathcomp.boot.seq <> filter_uniq thm
+R1144:1154 mathcomp.boot.seq <> size_filter thm
+R1144:1154 mathcomp.boot.seq <> size_filter thm
+R1144:1154 mathcomp.boot.seq <> size_filter thm
+R1144:1154 mathcomp.boot.seq <> size_filter thm
+R1156:1168 mathcomp.boot.seq <> uniq_leq_size thm
+R1156:1168 mathcomp.boot.seq <> uniq_leq_size thm
+R1171:1181 mathcomp.boot.seq <> filter_uniq thm
+R1171:1181 mathcomp.boot.seq <> filter_uniq thm
+R1171:1181 mathcomp.boot.seq <> filter_uniq thm
+R1171:1181 mathcomp.boot.seq <> filter_uniq thm
+R1171:1181 mathcomp.boot.seq <> filter_uniq thm
+R1171:1181 mathcomp.boot.seq <> filter_uniq thm
+R1171:1181 mathcomp.boot.seq <> filter_uniq thm
+R1171:1181 mathcomp.boot.seq <> filter_uniq thm
+R1208:1217 mathcomp.boot.seq <> mem_filter thm
+R1208:1217 mathcomp.boot.seq <> mem_filter thm
+R1208:1217 mathcomp.boot.seq <> mem_filter thm
+R1208:1217 mathcomp.boot.seq <> mem_filter thm
+R1208:1217 mathcomp.boot.seq <> mem_filter thm
+R1222:1225 Corelib.ssr.ssrbool <> andP thm
+prf 1254:1267 <> count_pred_inj
+R1286:1291 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+binder 1283:1283 <> T:17
+R1298:1300 mathcomp.boot.seq <> seq abbrev
+R1302:1302 prosa.classic.util.counting <> T:17 var
+binder 1295:1295 <> l:18
+R1310:1313 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1309:1309 prosa.classic.util.counting <> T:17 var
+R1314:1317 Corelib.Init.Datatypes <> bool ind
+binder 1306:1306 <> P:19
+R1333:1342 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1327:1330 mathcomp.boot.seq <> uniq def
+R1332:1332 prosa.classic.util.counting <> l:18 var
+R1343:1343 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1381:1391 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+binder 1351:1352 <> x1:20
+binder 1354:1355 <> x2:21
+R1362:1365 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1358:1358 prosa.classic.util.counting <> P:19 var
+R1360:1361 prosa.classic.util.counting <> x1:20 var
+R1370:1373 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1366:1366 prosa.classic.util.counting <> P:19 var
+R1368:1369 prosa.classic.util.counting <> x2:21 var
+R1376:1378 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1374:1375 prosa.classic.util.counting <> x1:20 var
+R1379:1380 prosa.classic.util.counting <> x2:21 var
+R1401:1404 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R1392:1396 mathcomp.boot.seq <> count def
+R1400:1400 prosa.classic.util.counting <> l:18 var
+R1398:1398 prosa.classic.util.counting <> P:19 var
+R1524:1527 Corelib.ssr.ssrbool <> andP thm
+R1587:1595 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R1587:1595 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R1587:1595 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R1627:1629 Corelib.ssr.ssrbool <> orP thm
+R1633:1635 mathcomp.boot.eqtype <> eqP def
+R1686:1689 mathcomp.boot.ssrnat <> ltnS thm
+R1691:1695 mathcomp.boot.ssrnat <> leqn0 thm
+R1686:1689 mathcomp.boot.ssrnat <> ltnS thm
+R1686:1689 mathcomp.boot.ssrnat <> ltnS thm
+R1691:1695 mathcomp.boot.ssrnat <> leqn0 thm
+R1691:1695 mathcomp.boot.ssrnat <> leqn0 thm
+R1748:1752 mathcomp.boot.ssrnat <> addn0 thm
+R1754:1759 mathcomp.boot.ssrnat <> leq_b1 thm
+R1732:1734 mathcomp.boot.eqtype <> eqP def
+R1748:1752 mathcomp.boot.ssrnat <> addn0 thm
+R1748:1752 mathcomp.boot.ssrnat <> addn0 thm
+R1754:1759 mathcomp.boot.ssrnat <> leq_b1 thm
+R1754:1759 mathcomp.boot.ssrnat <> leq_b1 thm
+R1815:1819 mathcomp.boot.ssrnat <> add0n thm
+R1815:1819 mathcomp.boot.ssrnat <> add0n thm
+R1815:1819 mathcomp.boot.ssrnat <> add0n thm
+R1856:1858 mathcomp.boot.eqtype <> eqP def
+R1881:1887 mathcomp.boot.ssrnat <> eqn_leq thm
+R1881:1887 mathcomp.boot.ssrnat <> eqn_leq thm
+R1881:1887 mathcomp.boot.ssrnat <> eqn_leq thm
+R1911:1914 Corelib.ssr.ssrbool <> andP thm
+R1942:1950 mathcomp.boot.seq <> has_count thm
+R1942:1950 mathcomp.boot.seq <> has_count thm
+R1942:1950 mathcomp.boot.seq <> has_count thm
+R1982:1985 mathcomp.boot.seq <> hasP thm
+prf 2124:2135 <> count_exists
+R2154:2159 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+binder 2151:2151 <> T:22
+R2166:2168 mathcomp.boot.seq <> seq abbrev
+R2170:2170 prosa.classic.util.counting <> T:22 var
+binder 2163:2163 <> l:23
+binder 2173:2173 <> n:24
+R2180:2183 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2179:2179 prosa.classic.util.counting <> T:22 var
+R2188:2191 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2184:2186 mathcomp.boot.fintype <> :::'''I_'_x not
+R2187:2187 prosa.classic.util.counting <> n:24 var
+R2192:2195 Corelib.Init.Datatypes <> bool ind
+binder 2176:2176 <> P:25
+R2211:2220 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2205:2208 mathcomp.boot.seq <> uniq def
+R2210:2210 prosa.classic.util.counting <> l:23 var
+R2221:2221 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2265:2275 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+binder 2229:2229 <> y:26
+binder 2231:2232 <> x1:27
+binder 2234:2235 <> x2:28
+R2244:2247 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2238:2238 prosa.classic.util.counting <> P:25 var
+R2243:2243 prosa.classic.util.counting <> y:26 var
+R2240:2241 prosa.classic.util.counting <> x1:27 var
+R2254:2257 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2248:2248 prosa.classic.util.counting <> P:25 var
+R2253:2253 prosa.classic.util.counting <> y:26 var
+R2250:2251 prosa.classic.util.counting <> x2:28 var
+R2260:2262 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2258:2259 prosa.classic.util.counting <> x1:27 var
+R2263:2264 prosa.classic.util.counting <> x2:28 var
+R2325:2328 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R2276:2280 mathcomp.boot.seq <> count def
+R2324:2324 prosa.classic.util.counting <> l:23 var
+R2291:2291 prosa.classic.util.counting <> T:22 var
+binder 2288:2288 <> y:29
+R2297:2304 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_'in'_x_x_']' not
+R2306:2309 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_'in'_x_x_']' not
+R2321:2321 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_'in'_x_x_']' not
+binder 2305:2305 <> x:30
+binder 2305:2305 <> x:31
+binder 2305:2305 <> x:32
+R2310:2312 mathcomp.boot.fintype <> :::'''I_'_x not
+R2313:2313 prosa.classic.util.counting <> n:24 var
+R2314:2315 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R2316:2316 prosa.classic.util.counting <> P:25 var
+R2320:2320 prosa.classic.util.counting <> x:30 var
+R2318:2318 prosa.classic.util.counting <> y:29 var
+binder 2305:2305 <> x:33
+binder 2305:2305 <> x:34
+R2329:2329 prosa.classic.util.counting <> n:24 var
+R2426:2430 mathcomp.boot.seq <> count def
+R2432:2436 Corelib.ssr.ssrbool <> pred0 def
+R2405:2413 mathcomp.boot.ssrnat <> leq_trans thm
+R2458:2468 mathcomp.boot.seq <> count_pred0 thm
+R2426:2430 mathcomp.boot.seq <> count def
+R2432:2436 Corelib.ssr.ssrbool <> pred0 def
+R2405:2413 mathcomp.boot.ssrnat <> leq_trans thm
+R2458:2468 mathcomp.boot.seq <> count_pred0 thm
+R2458:2468 mathcomp.boot.seq <> count_pred0 thm
+R2483:2491 mathcomp.boot.seq <> sub_count thm
+R2483:2491 mathcomp.boot.seq <> sub_count thm
+R2525:2535 prosa.classic.util.ord_quantifier <> exists_ord0 thm
+R2525:2535 prosa.classic.util.ord_quantifier <> exists_ord0 thm
+R2525:2535 prosa.classic.util.ord_quantifier <> exists_ord0 thm
+R2587:2589 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R2565:2573 mathcomp.boot.ssrnat <> leq_trans thm
+R2610:2614 mathcomp.boot.ssrnat <> addn1 thm
+R2587:2589 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R2565:2573 mathcomp.boot.ssrnat <> leq_trans thm
+R2610:2614 mathcomp.boot.ssrnat <> addn1 thm
+R2610:2614 mathcomp.boot.ssrnat <> addn1 thm
+R2650:2654 mathcomp.boot.seq <> count def
+binder 2661:2661 <> y:35
+R2714:2717 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R2666:2673 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_'in'_x_x_']' not
+R2675:2678 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_'in'_x_x_']' not
+R2713:2713 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_'in'_x_x_']' not
+binder 2674:2674 <> x:36
+binder 2674:2674 <> x:37
+binder 2674:2674 <> x:38
+R2679:2681 mathcomp.boot.fintype <> :::'''I_'_x not
+R2683:2684 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R2687:2687 prosa.classic.util.counting <> y:35 var
+R2690:2698 mathcomp.boot.fintype <> widen_ord def
+R2711:2711 prosa.classic.util.counting <> x:36 var
+R2701:2706 mathcomp.boot.ssrnat <> leqnSn thm
+binder 2674:2674 <> x:39
+binder 2674:2674 <> x:40
+R2720:2720 prosa.classic.util.counting <> y:35 var
+R2722:2728 mathcomp.boot.fintype <> ord_max def
+R2629:2637 mathcomp.boot.ssrnat <> leq_trans thm
+R2650:2654 mathcomp.boot.seq <> count def
+binder 2661:2661 <> y:41
+R2714:2717 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R2666:2673 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_'in'_x_x_']' not
+R2675:2678 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_'in'_x_x_']' not
+R2713:2713 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_'in'_x_x_']' not
+binder 2674:2674 <> x:42
+binder 2674:2674 <> x:43
+binder 2674:2674 <> x:44
+R2679:2681 mathcomp.boot.fintype <> :::'''I_'_x not
+R2683:2684 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R2687:2687 prosa.classic.util.counting <> y:41 var
+R2690:2698 mathcomp.boot.fintype <> widen_ord def
+R2711:2711 prosa.classic.util.counting <> x:42 var
+R2701:2706 mathcomp.boot.ssrnat <> leqnSn thm
+binder 2674:2674 <> x:45
+binder 2674:2674 <> x:46
+R2720:2720 prosa.classic.util.counting <> y:41 var
+R2722:2728 mathcomp.boot.fintype <> ord_max def
+R2629:2637 mathcomp.boot.ssrnat <> leq_trans thm
+R2757:2762 mathcomp.boot.ssrnat <> eq_leq thm
+R2765:2772 mathcomp.boot.seq <> eq_count thm
+R2757:2762 mathcomp.boot.ssrnat <> eq_leq thm
+R2765:2772 mathcomp.boot.seq <> eq_count thm
+R2808:2818 prosa.classic.util.ord_quantifier <> exists_recr thm
+R2808:2818 prosa.classic.util.ord_quantifier <> exists_recr thm
+R2808:2818 prosa.classic.util.ord_quantifier <> exists_recr thm
+R2846:2854 mathcomp.boot.ssrnat <> leq_trans thm
+R2857:2864 prosa.classic.util.counting <> count_or thm
+R2846:2854 mathcomp.boot.ssrnat <> leq_trans thm
+R2857:2864 prosa.classic.util.counting <> count_or thm
+R2889:2895 mathcomp.boot.ssrnat <> leq_add thm
+R2889:2895 mathcomp.boot.ssrnat <> leq_add thm
+R2997:3005 mathcomp.boot.fintype <> widen_ord def
+R3008:3013 mathcomp.boot.ssrnat <> leqnSn thm
+R2997:3005 mathcomp.boot.fintype <> widen_ord def
+R3008:3013 mathcomp.boot.ssrnat <> leqnSn thm
+R3075:3088 prosa.classic.util.counting <> count_pred_inj thm
+R3075:3088 prosa.classic.util.counting <> count_pred_inj thm
+R3158:3164 mathcomp.boot.fintype <> ord_max def
+R3158:3164 mathcomp.boot.fintype <> ord_max def
+R3195:3202 prosa.classic.util.counting Counting <> sec

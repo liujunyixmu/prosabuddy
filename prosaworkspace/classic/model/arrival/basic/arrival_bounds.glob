@@ -1,0 +1,442 @@
+DIGEST dbdb377dcbe4d4302cb3aa8d011c20d8
+Fprosa.classic.model.arrival.basic.arrival_bounds
+R15:36 prosa.classic.util.all <> <> lib
+R54:103 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R105:142 prosa.classic.model.arrival.basic.task <> <> lib
+R144:180 prosa.classic.model.arrival.basic.job <> <> lib
+R182:227 prosa.classic.model.arrival.basic.task_arrival <> <> lib
+R244:271 prosa.classic.model.priority <> <> lib
+R303:311 mathcomp.boot.ssreflect <> <> lib
+R313:319 mathcomp.boot.ssrbool <> <> lib
+R321:326 mathcomp.boot.eqtype <> <> lib
+R328:333 mathcomp.boot.ssrnat <> <> lib
+R335:337 mathcomp.boot.seq <> <> lib
+R339:342 mathcomp.boot.path <> <> lib
+R344:346 mathcomp.boot.div <> <> lib
+mod 390:402 <> ArrivalBounds
+R415:429 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence <> mod
+R431:445 prosa.classic.model.arrival.basic.task SporadicTaskset <> mod
+R447:457 prosa.classic.model.arrival.basic.task_arrival TaskArrival <> mod
+R459:466 prosa.classic.model.priority Priority <> mod
+sec 482:487 ArrivalBounds Lemmas
+var  504:507 ArrivalBounds.Lemmas Task
+R510:515 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 532:542 ArrivalBounds.Lemmas task_period
+R549:552 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R545:548 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.Task var
+R553:556 prosa.classic.model.time Time time def
+var  573:575 ArrivalBounds.Lemmas Job
+R578:583 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 600:610 ArrivalBounds.Lemmas job_arrival
+R616:619 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R613:615 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.Job var
+R620:623 prosa.classic.model.time Time time def
+var 639:646 ArrivalBounds.Lemmas job_cost
+R652:655 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R649:651 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.Job var
+R656:659 prosa.classic.model.time Time time def
+var 675:682 ArrivalBounds.Lemmas job_task
+R688:691 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R685:687 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.Job var
+R692:695 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.Task var
+var 798:804 ArrivalBounds.Lemmas arr_seq
+R807:822 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R824:826 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.Job var
+var 844:873 ArrivalBounds.Lemmas H_arrival_times_are_consistent
+R876:903 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_times_are_consistent def
+R917:923 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.arr_seq var
+R905:915 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.job_arrival var
+var 945:971 ArrivalBounds.Lemmas H_arrival_sequence_is_a_set
+R974:998 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence_is_a_set def
+R1000:1006 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.arr_seq var
+sec 1116:1138 ArrivalBounds.Lemmas BoundOnSporadicArrivals
+var 1202:1217 ArrivalBounds.Lemmas.BoundOnSporadicArrivals H_sporadic_tasks
+R1220:1238 prosa.classic.model.arrival.basic.task_arrival TaskArrival sporadic_task_model def
+R1273:1279 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.arr_seq var
+R1264:1271 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.job_task var
+R1252:1262 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.job_arrival var
+R1240:1250 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.task_period var
+var 1355:1356 ArrivalBounds.Lemmas.BoundOnSporadicArrivals t1
+var 1358:1359 ArrivalBounds.Lemmas.BoundOnSporadicArrivals t2
+R1362:1365 prosa.classic.model.time Time time def
+var 1440:1442 ArrivalBounds.Lemmas.BoundOnSporadicArrivals tsk
+R1445:1448 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.Task var
+var 1468:1483 ArrivalBounds.Lemmas.BoundOnSporadicArrivals H_period_gt_zero
+R1501:1503 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R1486:1496 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.task_period var
+R1498:1500 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.tsk var
+var 1605:1617 ArrivalBounds.Lemmas.BoundOnSporadicArrivals arriving_jobs
+R1622:1645 prosa.classic.model.arrival.basic.task_arrival TaskArrival arrivals_of_task_between def
+R1668:1669 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t1 var
+R1671:1672 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t2 var
+R1664:1666 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.tsk var
+R1656:1662 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.arr_seq var
+R1647:1654 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.job_task var
+var 1685:1696 ArrivalBounds.Lemmas.BoundOnSporadicArrivals num_arrivals
+R1701:1720 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R1743:1744 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t1 var
+R1746:1747 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t2 var
+R1739:1741 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.tsk var
+R1731:1737 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.arr_seq var
+R1722:1729 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.job_task var
+sec 1979:1984 ArrivalBounds.Lemmas.BoundOnSporadicArrivals NoJobs
+var 2067:2075 ArrivalBounds.Lemmas.BoundOnSporadicArrivals.NoJobs H_no_jobs
+R2090:2092 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2078:2089 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.num_arrivals var
+prf 2168:2197 ArrivalBounds sporadic_arrival_bound_no_jobs
+R2222:2225 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R2210:2221 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.num_arrivals var
+R2226:2233 prosa.classic.util.div_mod <> div_ceil def
+R2238:2240 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R2236:2237 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t2 var
+R2241:2242 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t1 var
+R2246:2256 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.task_period var
+R2258:2260 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.tsk var
+R2300:2308 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.NoJobs.H_no_jobs var
+R2300:2308 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.NoJobs.H_no_jobs var
+R2300:2308 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.NoJobs.H_no_jobs var
+R2343:2348 prosa.classic.model.arrival.basic.arrival_bounds ArrivalBounds.Lemmas.BoundOnSporadicArrivals.NoJobs <> sec
+sec 2443:2448 ArrivalBounds.Lemmas.BoundOnSporadicArrivals OneJob
+prf 2574:2615 ArrivalBounds sporadic_arrival_bound_more_than_one_point
+R2644:2657 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2640:2642 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R2628:2639 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.num_arrivals var
+R2660:2662 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R2658:2659 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t1 var
+R2663:2664 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t2 var
+R2699:2710 prosa.classic.model.arrival.basic.arrival_bounds <> num_arrivals vardef
+R2713:2732 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R2772:2784 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.arriving_jobs var
+R2772:2784 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.arriving_jobs var
+R2772:2784 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.arriving_jobs var
+R2815:2827 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.arriving_jobs var
+R2916:2922 mathcomp.boot.seq <> in_cons thm
+R2924:2930 mathcomp.boot.eqtype <> eq_refl thm
+R2932:2935 Corelib.ssr.ssrbool <> orTb thm
+R2883:2887 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R2888:2900 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.arriving_jobs var
+R2916:2922 mathcomp.boot.seq <> in_cons thm
+R2916:2922 mathcomp.boot.seq <> in_cons thm
+R2924:2930 mathcomp.boot.eqtype <> eq_refl thm
+R2924:2930 mathcomp.boot.eqtype <> eq_refl thm
+R2932:2935 Corelib.ssr.ssrbool <> orTb thm
+R2932:2935 Corelib.ssr.ssrbool <> orTb thm
+R2956:2965 mathcomp.boot.seq <> mem_filter thm
+R2956:2965 mathcomp.boot.seq <> mem_filter thm
+R2956:2965 mathcomp.boot.seq <> mem_filter thm
+R2987:2990 Corelib.ssr.ssrbool <> andP thm
+R3074:3084 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.job_arrival var
+R3017:3051 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived_between thm
+R3074:3084 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.job_arrival var
+R3017:3051 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived_between thm
+R3145:3148 Corelib.ssr.ssrbool <> andP thm
+R3180:3192 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R3180:3192 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+var 3322:3330 ArrivalBounds.Lemmas.BoundOnSporadicArrivals.OneJob H_no_jobs
+R3345:3347 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3333:3344 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.num_arrivals var
+prf 3436:3465 ArrivalBounds sporadic_arrival_bound_one_job
+R3490:3493 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R3478:3489 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.num_arrivals var
+R3494:3501 prosa.classic.util.div_mod <> div_ceil def
+R3506:3508 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R3504:3505 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t2 var
+R3509:3510 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t1 var
+R3514:3524 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.task_period var
+R3526:3528 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.tsk var
+R3565:3573 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.OneJob.H_no_jobs var
+R3565:3573 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.OneJob.H_no_jobs var
+R3565:3573 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.OneJob.H_no_jobs var
+R3594:3602 prosa.classic.util.div_mod <> ceil_neq0 thm
+R3607:3615 mathcomp.boot.ssrnat <> ltn_subRL thm
+R3617:3621 mathcomp.boot.ssrnat <> addn0 thm
+R3594:3602 prosa.classic.util.div_mod <> ceil_neq0 thm
+R3594:3602 prosa.classic.util.div_mod <> ceil_neq0 thm
+R3607:3615 mathcomp.boot.ssrnat <> ltn_subRL thm
+R3607:3615 mathcomp.boot.ssrnat <> ltn_subRL thm
+R3617:3621 mathcomp.boot.ssrnat <> addn0 thm
+R3617:3621 mathcomp.boot.ssrnat <> addn0 thm
+R3640:3681 prosa.classic.model.arrival.basic.arrival_bounds ArrivalBounds sporadic_arrival_bound_more_than_one_point thm
+R3640:3681 prosa.classic.model.arrival.basic.arrival_bounds ArrivalBounds sporadic_arrival_bound_more_than_one_point thm
+R3705:3713 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.OneJob.H_no_jobs var
+R3705:3713 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.OneJob.H_no_jobs var
+R3705:3713 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.OneJob.H_no_jobs var
+R3748:3753 prosa.classic.model.arrival.basic.arrival_bounds ArrivalBounds.Lemmas.BoundOnSporadicArrivals.OneJob <> sec
+sec 3829:3842 ArrivalBounds.Lemmas.BoundOnSporadicArrivals AtLeastTwoJobs
+var 3947:3965 ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs H_at_least_two_jobs
+R3980:3983 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R3968:3979 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.num_arrivals var
+sec 4063:4083 ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs DerivingContradiction
+var 4196:4210 ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs.DerivingContradiction H_many_arrivals
+R4249:4251 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R4213:4220 prosa.classic.util.div_mod <> div_ceil def
+R4225:4227 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R4223:4224 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t2 var
+R4228:4229 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t1 var
+R4233:4243 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.task_period var
+R4245:4247 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.tsk var
+R4252:4263 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.num_arrivals var
+var 4349:4363 ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs.DerivingContradiction by_arrival_time
+binder 4365:4365 <> j:35
+binder 4367:4368 <> j':36
+R4386:4389 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R4373:4383 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.job_arrival var
+R4385:4385 prosa.classic.model.arrival.basic.arrival_bounds <> j:35 var
+R4390:4400 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.job_arrival var
+R4402:4403 prosa.classic.model.arrival.basic.arrival_bounds <> j':36 var
+var 4421:4431 ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs.DerivingContradiction sorted_jobs
+R4436:4439 mathcomp.boot.path <> sort def
+R4457:4469 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.arriving_jobs var
+R4441:4455 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs.DerivingContradiction.by_arrival_time var
+var 4583:4586 ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs.DerivingContradiction elem
+R4589:4591 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.Job var
+var 4608:4614 ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs.DerivingContradiction nth_job
+R4619:4621 mathcomp.boot.seq <> nth def
+R4628:4638 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs.DerivingContradiction.sorted_jobs var
+R4623:4626 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs.DerivingContradiction.elem var
+var 4747:4753 ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs.DerivingContradiction j_first
+R4758:4764 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs.DerivingContradiction.nth_job var
+var 4783:4788 ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs.DerivingContradiction j_last
+R4793:4799 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs.DerivingContradiction.nth_job var
+R4814:4816 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R4802:4813 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.num_arrivals var
+var 4834:4840 ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs.DerivingContradiction a_first
+R4845:4855 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.job_arrival var
+R4857:4863 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs.DerivingContradiction.j_first var
+var 4880:4885 ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs.DerivingContradiction a_last
+R4890:4900 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.job_arrival var
+R4902:4907 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs.DerivingContradiction.j_last var
+prf 5008:5047 ArrivalBounds sporadic_arrival_bound_properties_of_nth
+binder 5069:5071 <> idx:39
+R5106:5123 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5091:5093 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R5088:5090 prosa.classic.model.arrival.basic.arrival_bounds <> idx:39 var
+R5094:5105 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.num_arrivals var
+R5160:5177 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R5126:5129 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R5155:5157 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R5124:5125 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t1 var
+R5130:5140 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.job_arrival var
+R5143:5149 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs.DerivingContradiction.nth_job var
+R5151:5153 prosa.classic.model.arrival.basic.arrival_bounds <> idx:39 var
+R5130:5140 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.job_arrival var
+R5143:5149 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs.DerivingContradiction.nth_job var
+R5151:5153 prosa.classic.model.arrival.basic.arrival_bounds <> idx:39 var
+R5158:5159 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t2 var
+R5206:5223 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R5200:5202 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5178:5185 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.job_task var
+R5188:5194 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs.DerivingContradiction.nth_job var
+R5196:5198 prosa.classic.model.arrival.basic.arrival_bounds <> idx:39 var
+R5203:5205 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.tsk var
+R5224:5233 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R5244:5250 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs.DerivingContradiction.nth_job var
+R5252:5254 prosa.classic.model.arrival.basic.arrival_bounds <> idx:39 var
+R5235:5241 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.arr_seq var
+R5326:5358 prosa.classic.model.arrival.basic.task_arrival TaskArrival sorted_arrivals_properties_of_nth thm
+R5326:5358 prosa.classic.model.arrival.basic.task_arrival TaskArrival sorted_arrivals_properties_of_nth thm
+prf 5466:5519 ArrivalBounds sporadic_arrival_bound_distance_between_first_and_last
+R5540:5543 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R5551:5553 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R5544:5550 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs.DerivingContradiction.a_first var
+R5554:5554 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R5569:5572 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R5567:5567 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R5555:5566 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.num_arrivals var
+R5573:5583 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.task_period var
+R5585:5587 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.tsk var
+R5534:5539 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs.DerivingContradiction.a_last var
+R5625:5671 prosa.classic.model.arrival.basic.task_arrival TaskArrival sorted_arrivals_distance_between_first_and_last thm
+R5625:5671 prosa.classic.model.arrival.basic.task_arrival TaskArrival sorted_arrivals_distance_between_first_and_last thm
+R5710:5722 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R5710:5722 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+prf 5975:6013 ArrivalBounds sporadic_arrival_bound_last_job_too_far
+R6045:6048 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R6040:6042 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R6035:6037 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6028:6034 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs.DerivingContradiction.a_first var
+R6038:6039 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t2 var
+R6043:6044 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t1 var
+R6049:6054 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs.DerivingContradiction.a_last var
+R6099:6152 prosa.classic.model.arrival.basic.arrival_bounds ArrivalBounds sporadic_arrival_bound_distance_between_first_and_last thm
+R6180:6221 prosa.classic.model.arrival.basic.arrival_bounds ArrivalBounds sporadic_arrival_bound_more_than_one_point thm
+R6352:6355 mathcomp.boot.ssrnat <> ltn0 thm
+R6321:6332 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.num_arrivals var
+R6352:6355 mathcomp.boot.ssrnat <> ltn0 thm
+R6352:6355 mathcomp.boot.ssrnat <> ltn0 thm
+R6406:6409 mathcomp.boot.ssrnat <> ltnn thm
+R6406:6409 mathcomp.boot.ssrnat <> ltnn thm
+R6406:6409 mathcomp.boot.ssrnat <> ltnn thm
+R6439:6443 mathcomp.boot.ssrnat <> subn1 thm
+R6439:6443 mathcomp.boot.ssrnat <> subn1 thm
+R6439:6443 mathcomp.boot.ssrnat <> subn1 thm
+R6503:6505 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6496:6502 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs.DerivingContradiction.a_first var
+R6510:6510 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R6507:6509 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R6511:6521 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.task_period var
+R6523:6525 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.tsk var
+R6475:6483 mathcomp.boot.ssrnat <> leq_trans thm
+R6503:6505 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6496:6502 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs.DerivingContradiction.a_first var
+R6510:6510 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R6507:6509 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R6511:6521 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.task_period var
+R6523:6525 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.tsk var
+R6475:6483 mathcomp.boot.ssrnat <> leq_trans thm
+R6564:6569 mathcomp.boot.ssrnat <> addnBA thm
+R6586:6589 mathcomp.boot.ssrnat <> ltnW thm
+R6564:6569 mathcomp.boot.ssrnat <> addnBA thm
+R6564:6569 mathcomp.boot.ssrnat <> addnBA thm
+R6586:6589 mathcomp.boot.ssrnat <> ltnW thm
+R6618:6626 mathcomp.boot.ssrnat <> leq_add2l thm
+R6618:6626 mathcomp.boot.ssrnat <> leq_add2l thm
+R6618:6626 mathcomp.boot.ssrnat <> leq_add2l thm
+R6664:6671 prosa.classic.util.div_mod <> div_ceil def
+R6723:6726 mathcomp.boot.div <> ::nat_scope:x_'%|'_x not
+R6708:6718 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.task_period var
+R6720:6722 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.tsk var
+R6729:6731 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R6727:6728 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t2 var
+R6732:6733 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t1 var
+R6780:6783 mathcomp.boot.ssrnat <> ltnS thm
+R6785:6793 mathcomp.boot.div <> leq_divLR thm
+R6723:6726 mathcomp.boot.div <> ::nat_scope:x_'%|'_x not
+R6708:6718 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.task_period var
+R6720:6722 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.tsk var
+R6729:6731 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R6727:6728 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t2 var
+R6732:6733 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t1 var
+R6780:6783 mathcomp.boot.ssrnat <> ltnS thm
+R6780:6783 mathcomp.boot.ssrnat <> ltnS thm
+R6785:6793 mathcomp.boot.div <> leq_divLR thm
+R6785:6793 mathcomp.boot.div <> leq_divLR thm
+R6831:6834 mathcomp.boot.ssrnat <> ltnS thm
+R6836:6844 mathcomp.boot.div <> ltn_divLR thm
+R6864:6867 mathcomp.boot.ssrnat <> ltnW thm
+R6831:6834 mathcomp.boot.ssrnat <> ltnS thm
+R6831:6834 mathcomp.boot.ssrnat <> ltnS thm
+R6836:6844 mathcomp.boot.div <> ltn_divLR thm
+R6836:6844 mathcomp.boot.div <> ltn_divLR thm
+R6864:6867 mathcomp.boot.ssrnat <> ltnW thm
+prf 7005:7048 ArrivalBounds sporadic_arrival_bound_last_arrives_too_late
+R7069:7072 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R7073:7074 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t2 var
+R7063:7068 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs.DerivingContradiction.a_last var
+R7118:7157 prosa.classic.model.arrival.basic.arrival_bounds ArrivalBounds sporadic_arrival_bound_properties_of_nth thm
+R7187:7225 prosa.classic.model.arrival.basic.arrival_bounds ArrivalBounds sporadic_arrival_bound_last_job_too_far thm
+R7291:7293 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R7286:7288 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R7279:7285 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs.DerivingContradiction.a_first var
+R7289:7290 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t2 var
+R7294:7295 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t1 var
+R7258:7266 mathcomp.boot.ssrnat <> leq_trans thm
+R7291:7293 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R7286:7288 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R7279:7285 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs.DerivingContradiction.a_first var
+R7289:7290 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t2 var
+R7294:7295 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t1 var
+R7258:7266 mathcomp.boot.ssrnat <> leq_trans thm
+R7359:7361 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R7354:7356 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R7352:7353 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t1 var
+R7357:7358 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t2 var
+R7362:7363 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t1 var
+R7331:7339 mathcomp.boot.ssrnat <> leq_trans thm
+R7384:7388 mathcomp.boot.ssrnat <> addKn thm
+R7359:7361 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R7354:7356 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R7352:7353 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t1 var
+R7357:7358 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t2 var
+R7362:7363 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t1 var
+R7331:7339 mathcomp.boot.ssrnat <> leq_trans thm
+R7384:7388 mathcomp.boot.ssrnat <> addKn thm
+R7384:7388 mathcomp.boot.ssrnat <> addKn thm
+R7411:7419 mathcomp.boot.ssrnat <> leq_sub2r thm
+R7424:7432 mathcomp.boot.ssrnat <> leq_add2r thm
+R7411:7419 mathcomp.boot.ssrnat <> leq_sub2r thm
+R7411:7419 mathcomp.boot.ssrnat <> leq_sub2r thm
+R7424:7432 mathcomp.boot.ssrnat <> leq_add2r thm
+R7424:7432 mathcomp.boot.ssrnat <> leq_add2r thm
+R7475:7487 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R7475:7487 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+prf 7622:7664 ArrivalBounds sporadic_arrival_bound_case_3_contradiction
+R7667:7671 Corelib.Init.Logic <> False ind
+R7716:7759 prosa.classic.model.arrival.basic.arrival_bounds ArrivalBounds sporadic_arrival_bound_last_arrives_too_late thm
+R7786:7825 prosa.classic.model.arrival.basic.arrival_bounds ArrivalBounds sporadic_arrival_bound_properties_of_nth thm
+R7911:7913 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R7899:7910 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.num_arrivals var
+R7966:7969 mathcomp.boot.ssrnat <> ltn0 thm
+R7911:7913 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R7899:7910 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.num_arrivals var
+R7935:7946 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.num_arrivals var
+R7966:7969 mathcomp.boot.ssrnat <> ltn0 thm
+R7966:7969 mathcomp.boot.ssrnat <> ltn0 thm
+R8006:8009 Corelib.ssr.ssrbool <> andP thm
+R8046:8051 mathcomp.boot.ssrnat <> ltnNge thm
+R8046:8051 mathcomp.boot.ssrnat <> ltnNge thm
+R8046:8051 mathcomp.boot.ssrnat <> ltnNge thm
+R8116:8136 prosa.classic.model.arrival.basic.arrival_bounds ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs.DerivingContradiction <> sec
+prf 8299:8343 ArrivalBounds sporadic_task_arrival_bound_at_least_two_jobs
+R8368:8371 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R8356:8367 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.num_arrivals var
+R8372:8379 prosa.classic.util.div_mod <> div_ceil def
+R8384:8386 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R8382:8383 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t2 var
+R8387:8388 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t1 var
+R8392:8402 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.task_period var
+R8404:8406 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.tsk var
+R8450:8492 prosa.classic.model.arrival.basic.arrival_bounds ArrivalBounds sporadic_arrival_bound_case_3_contradiction thm
+R8512:8523 prosa.classic.model.arrival.basic.arrival_bounds <> num_arrivals vardef
+R8526:8545 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R8619:8642 prosa.classic.model.arrival.basic.task_arrival TaskArrival arrivals_of_task_between def
+R8665:8666 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t1 var
+R8668:8669 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t2 var
+R8661:8663 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.tsk var
+R8653:8659 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.arr_seq var
+R8644:8651 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.job_task var
+R8619:8642 prosa.classic.model.arrival.basic.task_arrival TaskArrival arrivals_of_task_between def
+R8665:8666 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t1 var
+R8668:8669 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t2 var
+R8661:8663 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.tsk var
+R8653:8659 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.arr_seq var
+R8644:8651 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.job_task var
+R8619:8642 prosa.classic.model.arrival.basic.task_arrival TaskArrival arrivals_of_task_between def
+R8665:8666 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t1 var
+R8668:8669 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t2 var
+R8661:8663 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.tsk var
+R8653:8659 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.arr_seq var
+R8644:8651 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.job_task var
+R8703:8709 Corelib.ssr.ssrbool <> contraT thm
+R8721:8726 mathcomp.boot.ssrnat <> ltnNge thm
+R8703:8709 Corelib.ssr.ssrbool <> contraT thm
+R8721:8726 mathcomp.boot.ssrnat <> ltnNge thm
+R8721:8726 mathcomp.boot.ssrnat <> ltnNge thm
+R8772:8779 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R8786:8788 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R8783:8785 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.Job var
+binder 8780:8780 <> j:40
+R8789:8792 Corelib.Init.Logic <> True ind
+R8858:8861 mathcomp.boot.ssrnat <> ltn0 thm
+R8858:8861 mathcomp.boot.ssrnat <> ltn0 thm
+R8858:8861 mathcomp.boot.ssrnat <> ltn0 thm
+R9015:9028 prosa.classic.model.arrival.basic.arrival_bounds ArrivalBounds.Lemmas.BoundOnSporadicArrivals.AtLeastTwoJobs <> sec
+prf 9212:9238 ArrivalBounds sporadic_task_arrival_bound
+R9261:9264 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R9249:9260 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.num_arrivals var
+R9265:9272 prosa.classic.util.div_mod <> div_ceil def
+R9277:9279 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R9275:9276 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t2 var
+R9280:9281 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.t1 var
+R9285:9295 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.task_period var
+R9297:9299 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.tsk var
+R9404:9433 prosa.classic.model.arrival.basic.arrival_bounds ArrivalBounds sporadic_arrival_bound_no_jobs thm
+R9333:9344 prosa.classic.model.arrival.basic.arrival_bounds <> ArrivalBounds.Lemmas.BoundOnSporadicArrivals.num_arrivals var
+R9404:9433 prosa.classic.model.arrival.basic.arrival_bounds ArrivalBounds sporadic_arrival_bound_no_jobs thm
+R9500:9529 prosa.classic.model.arrival.basic.arrival_bounds ArrivalBounds sporadic_arrival_bound_one_job thm
+R9500:9529 prosa.classic.model.arrival.basic.arrival_bounds ArrivalBounds sporadic_arrival_bound_one_job thm
+R9549:9593 prosa.classic.model.arrival.basic.arrival_bounds ArrivalBounds sporadic_task_arrival_bound_at_least_two_jobs thm
+R9549:9593 prosa.classic.model.arrival.basic.arrival_bounds ArrivalBounds sporadic_task_arrival_bound_at_least_two_jobs thm
+R9630:9652 prosa.classic.model.arrival.basic.arrival_bounds ArrivalBounds.Lemmas.BoundOnSporadicArrivals <> sec
+R9666:9671 prosa.classic.model.arrival.basic.arrival_bounds ArrivalBounds.Lemmas <> sec
+R9681:9693 prosa.classic.model.arrival.basic.arrival_bounds ArrivalBounds <> mod

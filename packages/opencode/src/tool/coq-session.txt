@@ -1,0 +1,32 @@
+Session-based stateful Coq interaction layer for incremental tactic proving.
+
+All sessions operate within the current workspace. Do NOT reference or load files outside the workspace.
+
+Instead of running one-off coqtop commands, this tool maintains a persistent Coq session for a theorem, allowing incremental tactic stepping, goal querying, snapshots, and rollback. Project context (_CoqProject flags, file path, theorem) is resolved once at open and reused for all subsequent operations.
+
+Available operations:
+- "open": Open a new session for a file/theorem. In a lemma worker with an active assignment, it must open at that proof_region entry; theorem scope is rejected. Outside an assigned lemma worker, pass scope="theorem" to explicitly open at theorem start.
+- "step": Apply a single tactic in the current session. Returns normalized feedback and updates the session summary.
+- "goal": Query the current focused goal and hypotheses using the stored project binding.
+- "inspect": Read-only targeted context audit. Provide left_expression and right_expression, plus up to eight optional qualified symbols. It checks symbols and tests whether the two expressions are definitionally convertible in the current live proof context without changing tactic history.
+- "snapshot": Create a named snapshot of the current proof state (including summary) for later rollback.
+- "undo": Rollback to a previous snapshot by snapshot_id. Resets last-failure markers.
+- "close": Close the session.
+- "status": Show current session state (goal, hyps, tactic history, snapshots, summary).
+
+CRITICAL rules:
+- Before every step, the tool replays the certified prefix and successful tactic history and verifies the current goal fingerprint. It automatically retries synchronization once; after two mismatches it returns session_state_desync and does not submit the tactic.
+- A region-scoped session exposes exactly one focused entry goal. Do not manually replay the theorem prefix when an assigned proof_region is active.
+- step() accepts only a SINGLE tactic or a very short atomic tactic block.
+- step() rejects ssreflect repeat-rewrite syntax `rewrite !...` and `rewrite -!...`; use explicit rewrites or a named normalization bridge instead.
+- step() rejects the `intuition` tactic; use explicit tactics (`left`/`right`/`split`/`apply`/`exact`) instead.
+- Do NOT pass unrelated multi-step speculative bundles to step().
+- Prefer goal() over broad context re-probing.
+- Use inspect() when a proposed `needs_context_strengthening` escalation specifically depends on hidden Section, Module, implicit-argument, or alias instantiation. A `convertible` result favors continuing with a local bridge. A `not_convertible` result is evidence but not proof that theorem context must change. An `inconclusive` result permits one targeted retry or alternative local evidence and must not freeze the proof.
+- Create snapshots after meaningful progress (subgoal discharged, goal reduced).
+- Use undo() after repeated failures instead of replaying long scripts.
+
+Feedback classification:
+- proof_progress: tactic succeeded, goal changed or subgoal discharged
+- environment_problem: missing lemma, hypothesis, import, or definition
+- syntax_or_engine_problem: Coq syntax error, tactic not found, or engine issue

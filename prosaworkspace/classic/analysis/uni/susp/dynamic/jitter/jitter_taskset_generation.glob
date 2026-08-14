@@ -1,0 +1,82 @@
+DIGEST 714c1721a1fd15eab0af1d480dc1c587
+Fprosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation
+R15:36 prosa.classic.util.all <> <> lib
+R54:81 prosa.classic.model.priority <> <> lib
+R83:112 prosa.classic.model.suspension <> <> lib
+R130:179 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R197:244 prosa.classic.model.schedule.uni.jitter.schedule <> <> lib
+R262:323 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> <> lib
+R355:363 mathcomp.boot.ssreflect <> <> lib
+R365:371 mathcomp.boot.ssrbool <> <> lib
+R373:378 mathcomp.boot.eqtype <> <> lib
+R380:385 mathcomp.boot.ssrnat <> <> lib
+R387:389 mathcomp.boot.seq <> <> lib
+mod 527:549 <> JitterTaskSetGeneration
+R562:591 prosa.classic.model.schedule.uni.jitter.schedule UniprocessorScheduleWithJitter <> mod
+R593:602 prosa.classic.model.suspension Suspension <> mod
+R604:611 prosa.classic.model.priority Priority <> mod
+R622:647 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule JitterScheduleConstruction <> mod
+sec 661:677 JitterTaskSetGeneration GeneratingTaskset
+var  694:697 JitterTaskSetGeneration.GeneratingTaskset Task
+R700:705 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 815:816 JitterTaskSetGeneration.GeneratingTaskset ts
+R819:821 mathcomp.boot.seq <> seq abbrev
+R823:826 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation <> JitterTaskSetGeneration.GeneratingTaskset.Task var
+var 903:920 JitterTaskSetGeneration.GeneratingTaskset original_task_cost
+R927:930 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R923:926 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation <> JitterTaskSetGeneration.GeneratingTaskset.Task var
+R931:934 prosa.classic.model.time Time time def
+var 950:970 JitterTaskSetGeneration.GeneratingTaskset task_suspension_bound
+R977:980 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R973:976 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation <> JitterTaskSetGeneration.GeneratingTaskset.Task var
+R981:984 prosa.classic.model.time Time time def
+var 1131:1148 JitterTaskSetGeneration.GeneratingTaskset higher_eq_priority
+R1151:1159 prosa.classic.model.priority Priority FP_policy def
+R1161:1164 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation <> JitterTaskSetGeneration.GeneratingTaskset.Task var
+var 1231:1235 JitterTaskSetGeneration.GeneratingTaskset tsk_i
+R1238:1241 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation <> JitterTaskSetGeneration.GeneratingTaskset.Task var
+var 1346:1359 JitterTaskSetGeneration.GeneratingTaskset other_hep_task
+binder 1361:1369 <> tsk_other:12
+R1408:1412 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R1431:1431 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R1374:1391 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation <> JitterTaskSetGeneration.GeneratingTaskset.higher_eq_priority var
+R1393:1401 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation <> tsk_other:12 var
+R1403:1407 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation <> JitterTaskSetGeneration.GeneratingTaskset.tsk_i var
+R1422:1425 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R1413:1421 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation <> tsk_other:12 var
+R1426:1430 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation <> JitterTaskSetGeneration.GeneratingTaskset.tsk_i var
+def 1788:1805 JitterTaskSetGeneration inflated_task_cost
+R1813:1816 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation <> JitterTaskSetGeneration.GeneratingTaskset.Task var
+binder 1808:1810 <> tsk:13
+R1828:1830 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R1843:1856 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R1907:1918 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R1834:1837 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R1831:1833 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation <> tsk:13 var
+R1838:1842 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation <> JitterTaskSetGeneration.GeneratingTaskset.tsk_i var
+R1879:1881 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R1857:1874 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation <> JitterTaskSetGeneration.GeneratingTaskset.original_task_cost var
+R1876:1878 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation <> tsk:13 var
+R1882:1902 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation <> JitterTaskSetGeneration.GeneratingTaskset.task_suspension_bound var
+R1904:1906 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation <> tsk:13 var
+R1919:1936 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation <> JitterTaskSetGeneration.GeneratingTaskset.original_task_cost var
+R1938:1940 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation <> tsk:13 var
+var 2048:2048 JitterTaskSetGeneration.GeneratingTaskset R
+R2055:2058 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2051:2054 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation <> JitterTaskSetGeneration.GeneratingTaskset.Task var
+R2059:2062 prosa.classic.model.time Time time def
+def 2132:2142 JitterTaskSetGeneration task_jitter
+R2150:2153 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation <> JitterTaskSetGeneration.GeneratingTaskset.Task var
+binder 2145:2147 <> tsk:16
+R2165:2167 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R2186:2199 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R2230:2241 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R2168:2181 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation <> JitterTaskSetGeneration.GeneratingTaskset.other_hep_task var
+R2183:2185 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation <> tsk:16 var
+R2205:2207 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R2200:2200 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation <> JitterTaskSetGeneration.GeneratingTaskset.R var
+R2202:2204 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation <> tsk:16 var
+R2208:2225 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation <> JitterTaskSetGeneration.GeneratingTaskset.original_task_cost var
+R2227:2229 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation <> tsk:16 var
+R2252:2268 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation JitterTaskSetGeneration.GeneratingTaskset <> sec
+R2276:2298 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation JitterTaskSetGeneration <> mod

@@ -1,0 +1,303 @@
+DIGEST 6306d4619c6574c05c86b9e6802c58bc
+Fprosa.classic.model.schedule.global.transformation.construction
+R15:36 prosa.classic.util.all <> <> lib
+R54:103 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R121:170 prosa.classic.model.schedule.global.basic.schedule <> <> lib
+R202:210 mathcomp.boot.ssreflect <> <> lib
+R212:218 mathcomp.boot.ssrbool <> <> lib
+R220:225 mathcomp.boot.ssrfun <> <> lib
+R227:232 mathcomp.boot.eqtype <> <> lib
+R234:239 mathcomp.boot.ssrnat <> <> lib
+R241:247 mathcomp.boot.fintype <> <> lib
+R249:253 mathcomp.boot.bigop <> <> lib
+R255:257 mathcomp.boot.seq <> <> lib
+R259:262 mathcomp.boot.path <> <> lib
+R264:269 mathcomp.boot.finfun <> <> lib
+mod 280:299 <> ScheduleConstruction
+R312:326 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence <> mod
+R328:335 prosa.classic.model.schedule.global.basic.schedule Schedule <> mod
+sec 433:456 ScheduleConstruction ConstructionFromPrefixes
+var  477:479 ScheduleConstruction.ConstructionFromPrefixes Job
+R482:487 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 551:557 ScheduleConstruction.ConstructionFromPrefixes arr_seq
+R560:575 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R577:579 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.Job var
+var 652:659 ScheduleConstruction.ConstructionFromPrefixes num_cpus
+R662:664 Corelib.Init.Datatypes <> nat ind
+var 845:858 ScheduleConstruction.ConstructionFromPrefixes build_schedule
+R888:891 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R867:874 prosa.classic.model.schedule.global.basic.schedule Schedule schedule def
+R880:887 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.num_cpus var
+R876:878 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.Job var
+R892:899 prosa.classic.model.schedule.global.basic.schedule Schedule schedule def
+R905:912 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.num_cpus var
+R901:903 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.Job var
+var 980:989 ScheduleConstruction.ConstructionFromPrefixes base_sched
+R992:999 prosa.classic.model.schedule.global.basic.schedule Schedule schedule def
+R1005:1012 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.num_cpus var
+R1001:1003 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.Job var
+def 1114:1128 ScheduleConstruction update_schedule
+R1143:1150 prosa.classic.model.schedule.global.basic.schedule Schedule schedule def
+R1156:1163 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.num_cpus var
+R1152:1154 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.Job var
+binder 1131:1140 <> prev_sched:10
+R1206:1209 prosa.classic.model.time Time time def
+binder 1198:1203 <> t_next:11
+R1214:1221 prosa.classic.model.schedule.global.basic.schedule Schedule schedule def
+R1227:1234 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.num_cpus var
+R1223:1225 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.Job var
+R1255:1263 prosa.classic.model.schedule.global.basic.schedule Schedule processor def
+R1265:1272 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.num_cpus var
+binder 1250:1252 <> cpu:12
+binder 1275:1275 <> t:13
+R1288:1290 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R1302:1317 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R1349:1362 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R1292:1295 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R1291:1291 prosa.classic.model.schedule.global.transformation.construction <> t:13 var
+R1296:1301 prosa.classic.model.schedule.global.transformation.construction <> t_next:11 var
+R1318:1331 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.build_schedule var
+R1333:1342 prosa.classic.model.schedule.global.transformation.construction <> prev_sched:10 var
+R1344:1346 prosa.classic.model.schedule.global.transformation.construction <> cpu:12 var
+R1348:1348 prosa.classic.model.schedule.global.transformation.construction <> t:13 var
+R1363:1372 prosa.classic.model.schedule.global.transformation.construction <> prev_sched:10 var
+R1374:1376 prosa.classic.model.schedule.global.transformation.construction <> cpu:12 var
+R1378:1378 prosa.classic.model.schedule.global.transformation.construction <> t:13 var
+def 1472:1486 ScheduleConstruction schedule_prefix
+R1496:1499 prosa.classic.model.time Time time def
+binder 1489:1493 <> t_max:14
+R1504:1511 prosa.classic.model.schedule.global.basic.schedule Schedule schedule def
+R1517:1524 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.num_cpus var
+R1513:1515 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.Job var
+R1538:1542 prosa.classic.model.schedule.global.transformation.construction <> t_max:14 var
+R1553:1555 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R1570:1584 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction update_schedule def
+R1587:1601 prosa.classic.model.schedule.global.transformation.construction <> schedule_prefix:15 def
+R1617:1619 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R1640:1654 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction update_schedule def
+R1656:1665 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.base_sched var
+def 1762:1789 ScheduleConstruction build_schedule_from_prefixes
+binder 1798:1800 <> cpu:17
+binder 1802:1802 <> t:18
+R1807:1821 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction schedule_prefix def
+R1823:1823 prosa.classic.model.schedule.global.transformation.construction <> t:18 var
+R1825:1827 prosa.classic.model.schedule.global.transformation.construction <> cpu:17 var
+R1829:1829 prosa.classic.model.schedule.global.transformation.construction <> t:18 var
+sec 1917:1922 ScheduleConstruction.ConstructionFromPrefixes Lemmas
+var 1985:1989 ScheduleConstruction.ConstructionFromPrefixes.Lemmas sched
+R1994:2021 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction build_schedule_from_prefixes def
+prf 2107:2137 ScheduleConstruction prefix_construction_same_prefix
+binder 2155:2155 <> t:19
+binder 2157:2161 <> t_max:20
+binder 2163:2165 <> cpu:21
+R2188:2201 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2179:2182 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R2178:2178 prosa.classic.model.schedule.global.transformation.construction <> t:19 var
+R2183:2187 prosa.classic.model.schedule.global.transformation.construction <> t_max:20 var
+R2229:2231 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2202:2216 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction schedule_prefix def
+R2218:2222 prosa.classic.model.schedule.global.transformation.construction <> t_max:20 var
+R2224:2226 prosa.classic.model.schedule.global.transformation.construction <> cpu:21 var
+R2228:2228 prosa.classic.model.schedule.global.transformation.construction <> t:19 var
+R2232:2236 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.Lemmas.sched var
+R2238:2240 prosa.classic.model.schedule.global.transformation.construction <> cpu:21 var
+R2242:2242 prosa.classic.model.schedule.global.transformation.construction <> t:19 var
+R2342:2346 mathcomp.boot.ssrnat <> leqn0 thm
+R2342:2346 mathcomp.boot.ssrnat <> leqn0 thm
+R2342:2346 mathcomp.boot.ssrnat <> leqn0 thm
+R2370:2372 mathcomp.boot.eqtype <> eqP def
+R2401:2409 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R2401:2409 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R2401:2409 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R2441:2443 Corelib.ssr.ssrbool <> orP thm
+R2447:2449 mathcomp.boot.eqtype <> eqP def
+R2545:2559 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction schedule_prefix def
+R2562:2576 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction update_schedule def
+R2622:2624 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2610:2613 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R2619:2621 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R2625:2629 Corelib.Init.Datatypes <> false constr
+R2622:2624 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2610:2613 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R2619:2621 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R2625:2629 Corelib.Init.Datatypes <> false constr
+R2666:2671 Corelib.ssr.ssrbool <> negbTE thm
+R2682:2688 mathcomp.boot.ssrnat <> neq_ltn thm
+R2695:2698 Corelib.ssr.ssrbool <> orTb thm
+R2666:2671 Corelib.ssr.ssrbool <> negbTE thm
+R2682:2688 mathcomp.boot.ssrnat <> neq_ltn thm
+R2682:2688 mathcomp.boot.ssrnat <> neq_ltn thm
+R2695:2698 Corelib.ssr.ssrbool <> orTb thm
+R2695:2698 Corelib.ssr.ssrbool <> orTb thm
+sec 2795:2810 ScheduleConstruction.ConstructionFromPrefixes.Lemmas ServiceDependent
+var 2967:2991 ScheduleConstruction.ConstructionFromPrefixes.Lemmas.ServiceDependent H_depends_only_on_service
+binder 3011:3016 <> sched1:22
+binder 3018:3023 <> sched2:23
+binder 3025:3027 <> cpu:24
+binder 3029:3029 <> t:25
+R3044:3044 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3094:3120 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+binder 3052:3052 <> j:26
+R3073:3075 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3055:3061 prosa.classic.model.schedule.global.basic.schedule Schedule service def
+R3072:3072 prosa.classic.model.schedule.global.transformation.construction <> t:25 var
+R3070:3070 prosa.classic.model.schedule.global.transformation.construction <> j:26 var
+R3063:3068 prosa.classic.model.schedule.global.transformation.construction <> sched1:22 var
+R3076:3082 prosa.classic.model.schedule.global.basic.schedule Schedule service def
+R3093:3093 prosa.classic.model.schedule.global.transformation.construction <> t:25 var
+R3091:3091 prosa.classic.model.schedule.global.transformation.construction <> j:26 var
+R3084:3089 prosa.classic.model.schedule.global.transformation.construction <> sched2:23 var
+R3148:3150 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3121:3134 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.build_schedule var
+R3136:3141 prosa.classic.model.schedule.global.transformation.construction <> sched1:22 var
+R3143:3145 prosa.classic.model.schedule.global.transformation.construction <> cpu:24 var
+R3147:3147 prosa.classic.model.schedule.global.transformation.construction <> t:25 var
+R3151:3164 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.build_schedule var
+R3166:3171 prosa.classic.model.schedule.global.transformation.construction <> sched2:23 var
+R3173:3175 prosa.classic.model.schedule.global.transformation.construction <> cpu:24 var
+R3177:3177 prosa.classic.model.schedule.global.transformation.construction <> t:25 var
+prf 3331:3369 ScheduleConstruction service_dependent_schedule_construction
+binder 3389:3391 <> cpu:29
+binder 3393:3393 <> t:30
+R3419:3421 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3408:3412 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.Lemmas.sched var
+R3414:3416 prosa.classic.model.schedule.global.transformation.construction <> cpu:29 var
+R3418:3418 prosa.classic.model.schedule.global.transformation.construction <> t:30 var
+R3422:3435 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.build_schedule var
+R3437:3441 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.Lemmas.sched var
+R3443:3445 prosa.classic.model.schedule.global.transformation.construction <> cpu:29 var
+R3447:3447 prosa.classic.model.schedule.global.transformation.construction <> t:30 var
+R3505:3535 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction prefix_construction_same_prefix thm
+R3505:3535 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction prefix_construction_same_prefix thm
+R3633:3642 prosa.classic.util.induction <> strong_ind thm
+R3633:3642 prosa.classic.util.induction <> strong_ind thm
+R3703:3717 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction update_schedule def
+R3719:3725 mathcomp.boot.eqtype <> eq_refl thm
+R3703:3717 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction update_schedule def
+R3703:3717 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction update_schedule def
+R3719:3725 mathcomp.boot.eqtype <> eq_refl thm
+R3719:3725 mathcomp.boot.eqtype <> eq_refl thm
+R3746:3770 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.Lemmas.ServiceDependent.H_depends_only_on_service var
+R3746:3770 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.Lemmas.ServiceDependent.H_depends_only_on_service var
+R3807:3813 prosa.classic.model.schedule.global.basic.schedule Schedule service def
+R3816:3829 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R3831:3837 mathcomp.boot.bigop <> big_geq thm
+R3842:3848 mathcomp.boot.bigop <> big_geq thm
+R3807:3813 prosa.classic.model.schedule.global.basic.schedule Schedule service def
+R3807:3813 prosa.classic.model.schedule.global.basic.schedule Schedule service def
+R3816:3829 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R3816:3829 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R3831:3837 mathcomp.boot.bigop <> big_geq thm
+R3831:3837 mathcomp.boot.bigop <> big_geq thm
+R3842:3848 mathcomp.boot.bigop <> big_geq thm
+R3842:3848 mathcomp.boot.bigop <> big_geq thm
+R3902:3916 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction update_schedule def
+R3918:3924 mathcomp.boot.eqtype <> eq_refl thm
+R3902:3916 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction update_schedule def
+R3902:3916 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction update_schedule def
+R3918:3924 mathcomp.boot.eqtype <> eq_refl thm
+R3918:3924 mathcomp.boot.eqtype <> eq_refl thm
+R3945:3969 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.Lemmas.ServiceDependent.H_depends_only_on_service var
+R3945:3969 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.Lemmas.ServiceDependent.H_depends_only_on_service var
+R4003:4009 prosa.classic.model.schedule.global.basic.schedule Schedule service def
+R4012:4025 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R4003:4009 prosa.classic.model.schedule.global.basic.schedule Schedule service def
+R4003:4009 prosa.classic.model.schedule.global.basic.schedule Schedule service def
+R4012:4025 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R4012:4025 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R4048:4059 mathcomp.boot.bigop <> big_nat_recr thm
+R4065:4076 mathcomp.boot.bigop <> big_nat_recr thm
+R4048:4059 mathcomp.boot.bigop <> big_nat_recr thm
+R4048:4059 mathcomp.boot.bigop <> big_nat_recr thm
+R4065:4076 mathcomp.boot.bigop <> big_nat_recr thm
+R4065:4076 mathcomp.boot.bigop <> big_nat_recr thm
+R4110:4119 mathcomp.boot.bigop <> eq_big_nat thm
+R4110:4119 mathcomp.boot.bigop <> eq_big_nat thm
+R4160:4169 prosa.classic.model.schedule.global.basic.schedule Schedule service_at def
+R4160:4169 prosa.classic.model.schedule.global.basic.schedule Schedule service_at def
+R4160:4169 prosa.classic.model.schedule.global.basic.schedule Schedule service_at def
+R4190:4196 mathcomp.boot.bigop <> eq_bigl thm
+R4221:4232 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled_on def
+R4190:4196 mathcomp.boot.bigop <> eq_bigl thm
+R4221:4232 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled_on def
+R4221:4232 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled_on def
+R4258:4288 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction prefix_construction_same_prefix thm
+R4305:4308 mathcomp.boot.ssrnat <> ltnW thm
+R4258:4288 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction prefix_construction_same_prefix thm
+R4258:4288 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction prefix_construction_same_prefix thm
+R4305:4308 mathcomp.boot.ssrnat <> ltnW thm
+R4347:4362 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction.ConstructionFromPrefixes.Lemmas.ServiceDependent <> sec
+sec 4380:4394 ScheduleConstruction.ConstructionFromPrefixes.Lemmas PrefixDependent
+var 4499:4522 ScheduleConstruction.ConstructionFromPrefixes.Lemmas.PrefixDependent H_depends_only_on_prefix
+R4558:4565 prosa.classic.model.schedule.global.basic.schedule Schedule schedule def
+R4571:4578 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.num_cpus var
+R4567:4569 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.Job var
+binder 4543:4548 <> sched1:31
+binder 4550:4555 <> sched2:32
+binder 4581:4583 <> cpu:33
+binder 4585:4585 <> t:34
+R4600:4600 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4655:4681 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+binder 4608:4609 <> t0:35
+binder 4611:4613 <> cpu:36
+R4622:4625 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4618:4620 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R4616:4617 prosa.classic.model.schedule.global.transformation.construction <> t0:35 var
+R4621:4621 prosa.classic.model.schedule.global.transformation.construction <> t:34 var
+R4639:4641 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4626:4631 prosa.classic.model.schedule.global.transformation.construction <> sched1:31 var
+R4633:4635 prosa.classic.model.schedule.global.transformation.construction <> cpu:36 var
+R4637:4638 prosa.classic.model.schedule.global.transformation.construction <> t0:35 var
+R4642:4647 prosa.classic.model.schedule.global.transformation.construction <> sched2:32 var
+R4649:4651 prosa.classic.model.schedule.global.transformation.construction <> cpu:36 var
+R4653:4654 prosa.classic.model.schedule.global.transformation.construction <> t0:35 var
+R4709:4711 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4682:4695 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.build_schedule var
+R4697:4702 prosa.classic.model.schedule.global.transformation.construction <> sched1:31 var
+R4704:4706 prosa.classic.model.schedule.global.transformation.construction <> cpu:33 var
+R4708:4708 prosa.classic.model.schedule.global.transformation.construction <> t:34 var
+R4712:4725 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.build_schedule var
+R4727:4732 prosa.classic.model.schedule.global.transformation.construction <> sched2:32 var
+R4734:4736 prosa.classic.model.schedule.global.transformation.construction <> cpu:33 var
+R4738:4738 prosa.classic.model.schedule.global.transformation.construction <> t:34 var
+prf 4892:4929 ScheduleConstruction prefix_dependent_schedule_construction
+binder 4949:4951 <> cpu:39
+binder 4953:4953 <> t:40
+R4967:4969 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4956:4960 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.Lemmas.sched var
+R4962:4964 prosa.classic.model.schedule.global.transformation.construction <> cpu:39 var
+R4966:4966 prosa.classic.model.schedule.global.transformation.construction <> t:40 var
+R4970:4983 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.build_schedule var
+R4985:4989 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.Lemmas.sched var
+R4991:4993 prosa.classic.model.schedule.global.transformation.construction <> cpu:39 var
+R4995:4995 prosa.classic.model.schedule.global.transformation.construction <> t:40 var
+R5053:5083 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction prefix_construction_same_prefix thm
+R5053:5083 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction prefix_construction_same_prefix thm
+R5171:5180 prosa.classic.util.induction <> strong_ind thm
+R5171:5180 prosa.classic.util.induction <> strong_ind thm
+R5241:5255 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction update_schedule def
+R5257:5263 mathcomp.boot.eqtype <> eq_refl thm
+R5241:5255 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction update_schedule def
+R5241:5255 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction update_schedule def
+R5257:5263 mathcomp.boot.eqtype <> eq_refl thm
+R5257:5263 mathcomp.boot.eqtype <> eq_refl thm
+R5284:5307 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.Lemmas.PrefixDependent.H_depends_only_on_prefix var
+R5284:5307 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.Lemmas.PrefixDependent.H_depends_only_on_prefix var
+R5343:5346 mathcomp.boot.ssrnat <> ltn0 thm
+R5343:5346 mathcomp.boot.ssrnat <> ltn0 thm
+R5343:5346 mathcomp.boot.ssrnat <> ltn0 thm
+R5397:5411 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction update_schedule def
+R5413:5419 mathcomp.boot.eqtype <> eq_refl thm
+R5397:5411 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction update_schedule def
+R5397:5411 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction update_schedule def
+R5413:5419 mathcomp.boot.eqtype <> eq_refl thm
+R5413:5419 mathcomp.boot.eqtype <> eq_refl thm
+R5440:5463 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.Lemmas.PrefixDependent.H_depends_only_on_prefix var
+R5440:5463 prosa.classic.model.schedule.global.transformation.construction <> ScheduleConstruction.ConstructionFromPrefixes.Lemmas.PrefixDependent.H_depends_only_on_prefix var
+R5520:5550 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction prefix_construction_same_prefix thm
+R5520:5550 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction prefix_construction_same_prefix thm
+R5520:5550 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction prefix_construction_same_prefix thm
+R5589:5603 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction.ConstructionFromPrefixes.Lemmas.PrefixDependent <> sec
+R5615:5620 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction.ConstructionFromPrefixes.Lemmas <> sec
+R5636:5659 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction.ConstructionFromPrefixes <> sec
+R5667:5686 prosa.classic.model.schedule.global.transformation.construction ScheduleConstruction <> mod

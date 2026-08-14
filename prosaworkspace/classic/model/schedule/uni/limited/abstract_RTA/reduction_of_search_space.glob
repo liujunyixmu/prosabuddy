@@ -1,0 +1,297 @@
+DIGEST 2b6715ae5eb964dd24049a6c000e61f9
+Fprosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space
+R15:36 prosa.classic.util.all <> <> lib
+R54:90 prosa.classic.model.arrival.basic.job <> <> lib
+R108:148 prosa.classic.model.schedule.uni.schedule <> <> lib
+R181:189 mathcomp.boot.ssreflect <> <> lib
+R191:197 mathcomp.boot.ssrbool <> <> lib
+R199:204 mathcomp.boot.eqtype <> <> lib
+R206:211 mathcomp.boot.ssrnat <> <> lib
+R213:215 mathcomp.boot.seq <> <> lib
+R217:220 mathcomp.boot.path <> <> lib
+R222:228 mathcomp.boot.fintype <> <> lib
+R230:234 mathcomp.boot.bigop <> <> lib
+mod 490:509 <> AbstractRTAReduction
+R523:542 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule <> mod
+sec 983:993 AbstractRTAReduction SearchSpace
+var  1010:1013 AbstractRTAReduction.SearchSpace Task
+R1016:1021 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+sec 1117:1135 AbstractRTAReduction.SearchSpace EquivalentFunctions
+var  1198:1198 AbstractRTAReduction.SearchSpace.EquivalentFunctions T
+R1201:1206 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1275:1276 AbstractRTAReduction.SearchSpace.EquivalentFunctions f1
+var 1278:1279 AbstractRTAReduction.SearchSpace.EquivalentFunctions f2
+R1285:1288 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1282:1284 Corelib.Init.Datatypes <> nat ind
+R1289:1289 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.EquivalentFunctions.T var
+var 1353:1353 AbstractRTAReduction.SearchSpace.EquivalentFunctions B
+R1356:1358 Corelib.Init.Datatypes <> nat ind
+def 1539:1572 AbstractRTAReduction are_equivalent_at_values_less_than
+binder 1592:1592 <> x:9
+R1600:1603 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1596:1598 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R1595:1595 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> x:9 var
+R1599:1599 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.EquivalentFunctions.B var
+R1608:1610 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1604:1605 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.EquivalentFunctions.f1 var
+R1607:1607 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> x:9 var
+R1611:1612 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.EquivalentFunctions.f2 var
+R1614:1614 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> x:9 var
+def 1835:1872 AbstractRTAReduction are_not_equivalent_at_values_less_than
+R1885:1891 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1893:1894 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 1892:1892 <> x:10
+R1900:1903 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R1896:1898 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R1895:1895 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> x:10 var
+R1899:1899 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.EquivalentFunctions.B var
+R1908:1911 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R1904:1905 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.EquivalentFunctions.f1 var
+R1907:1907 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> x:10 var
+R1912:1913 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.EquivalentFunctions.f2 var
+R1915:1915 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> x:10 var
+R1927:1945 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space AbstractRTAReduction.SearchSpace.EquivalentFunctions <> sec
+var 2016:2018 AbstractRTAReduction.SearchSpace tsk
+R2021:2024 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.Task var
+var 2306:2306 AbstractRTAReduction.SearchSpace B
+R2309:2312 prosa.classic.model.time Time time def
+var 2606:2632 AbstractRTAReduction.SearchSpace interference_bound_function
+R2639:2642 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2635:2638 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.Task var
+R2647:2650 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2643:2646 prosa.classic.model.time Time time def
+R2655:2658 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2651:2654 prosa.classic.model.time Time time def
+R2659:2662 prosa.classic.model.time Time time def
+def 3126:3143 AbstractRTAReduction is_in_search_space
+binder 3145:3145 <> A:17
+R3161:3170 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R3157:3159 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3156:3156 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> A:17 var
+R3180:3183 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3172:3174 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x_'<'_x not
+R3176:3178 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x_'<'_x not
+R3175:3175 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> A:17 var
+R3175:3175 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> A:17 var
+R3179:3179 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.B var
+R3184:3221 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space AbstractRTAReduction are_not_equivalent_at_values_less_than def
+R3323:3323 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.B var
+R3288:3314 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.interference_bound_function var
+R3316:3318 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.tsk var
+R3320:3320 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> A:17 var
+R3245:3271 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.interference_bound_function var
+R3273:3275 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.tsk var
+R3279:3281 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R3278:3278 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> A:17 var
+R3282:3283 prosa.util.epsilon <> ε abbrev
+sec 3552:3576 AbstractRTAReduction.SearchSpace ExistenceOfRepresentative
+var 3643:3643 AbstractRTAReduction.SearchSpace.ExistenceOfRepresentative A
+R3646:3649 prosa.classic.model.time Time time def
+var 3669:3683 AbstractRTAReduction.SearchSpace.ExistenceOfRepresentative H_A_less_than_B
+R3687:3689 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R3686:3686 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.ExistenceOfRepresentative.A var
+R3690:3690 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.B var
+prf 4119:4139 AbstractRTAReduction representative_exists
+R4150:4156 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R4161:4173 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 4157:4160 <> A_sp:22
+R4183:4196 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4178:4181 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R4174:4177 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> A_sp:22 var
+R4182:4182 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.ExistenceOfRepresentative.A var
+R4353:4366 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4197:4230 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space AbstractRTAReduction are_equivalent_at_values_less_than def
+R4352:4352 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.B var
+R4314:4340 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.interference_bound_function var
+R4342:4344 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.tsk var
+R4346:4349 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> A_sp:22 var
+R4233:4259 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.interference_bound_function var
+R4261:4263 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.tsk var
+R4265:4265 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.ExistenceOfRepresentative.A var
+R4367:4384 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space AbstractRTAReduction is_in_search_space def
+R4386:4389 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> A_sp:22 var
+R4423:4423 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.ExistenceOfRepresentative.A var
+R4492:4509 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space AbstractRTAReduction is_in_search_space def
+R4492:4509 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space AbstractRTAReduction is_in_search_space def
+R4492:4509 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space AbstractRTAReduction is_in_search_space def
+R4653:4668 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R4550:4552 mathcomp.boot.seq <> all def
+R4644:4647 mathcomp.boot.seq <> iota def
+R4651:4651 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.B var
+binder 4559:4559 <> t:23
+R4599:4602 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R4564:4590 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.interference_bound_function var
+R4592:4594 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.tsk var
+R4598:4598 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> t:23 var
+R4603:4629 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.interference_bound_function var
+R4631:4633 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.tsk var
+R4636:4638 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R4640:4640 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> t:23 var
+R4669:4671 mathcomp.boot.seq <> has def
+R4763:4766 mathcomp.boot.seq <> iota def
+R4770:4770 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.B var
+binder 4678:4678 <> t:24
+R4718:4721 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R4683:4709 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.interference_bound_function var
+R4711:4713 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.tsk var
+R4717:4717 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> t:24 var
+R4722:4748 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.interference_bound_function var
+R4750:4752 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.tsk var
+R4755:4757 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R4759:4759 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> t:24 var
+R4792:4794 Corelib.ssr.ssrbool <> orP thm
+R4792:4794 Corelib.ssr.ssrbool <> orP thm
+R4820:4823 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R4826:4845 Stdlib.Bool.Bool <> negb_involutive thm
+R4847:4859 Stdlib.Bool.Bool <> negb_orb thm
+R4826:4845 Stdlib.Bool.Bool <> negb_involutive thm
+R4820:4823 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R4820:4823 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R4826:4845 Stdlib.Bool.Bool <> negb_involutive thm
+R4847:4859 Stdlib.Bool.Bool <> negb_orb thm
+R4847:4859 Stdlib.Bool.Bool <> negb_orb thm
+R4880:4883 Corelib.ssr.ssrbool <> negP thm
+R4880:4883 Corelib.ssr.ssrbool <> negP thm
+R4928:4931 Corelib.ssr.ssrbool <> andP thm
+R4940:4943 Corelib.ssr.ssrbool <> negP thm
+R4991:4999 mathcomp.boot.seq <> has_predC thm
+R5002:5006 Corelib.ssr.ssrbool <> predC def
+R4991:4999 mathcomp.boot.seq <> has_predC thm
+R4991:4999 mathcomp.boot.seq <> has_predC thm
+R5002:5006 Corelib.ssr.ssrbool <> predC def
+R5002:5006 Corelib.ssr.ssrbool <> predC def
+R5080:5082 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R5064:5072 mathcomp.boot.ssrnat <> ltn_trans thm
+R5080:5082 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R5064:5072 mathcomp.boot.ssrnat <> ltn_trans thm
+R5155:5158 mathcomp.boot.seq <> allP thm
+R5166:5169 mathcomp.boot.seq <> hasP thm
+R5248:5256 mathcomp.boot.ssrnat <> leq_trans thm
+R5248:5256 mathcomp.boot.ssrnat <> leq_trans thm
+R5354:5361 mathcomp.boot.seq <> mem_iota thm
+R5370:5373 Corelib.ssr.ssrbool <> andP thm
+R5354:5361 mathcomp.boot.seq <> mem_iota thm
+R5354:5361 mathcomp.boot.seq <> mem_iota thm
+R5370:5373 Corelib.ssr.ssrbool <> andP thm
+R5410:5412 mathcomp.boot.eqtype <> eqP def
+R5497:5499 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R5497:5499 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R5547:5564 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space AbstractRTAReduction is_in_search_space def
+R5547:5564 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space AbstractRTAReduction is_in_search_space def
+R5547:5564 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space AbstractRTAReduction is_in_search_space def
+R5609:5612 Corelib.ssr.ssrbool <> andP thm
+R5609:5612 Corelib.ssr.ssrbool <> andP thm
+R5709:5716 mathcomp.boot.seq <> mem_iota thm
+R5718:5722 mathcomp.boot.ssrnat <> add0n thm
+R5709:5716 mathcomp.boot.seq <> mem_iota thm
+R5709:5716 mathcomp.boot.seq <> mem_iota thm
+R5718:5722 mathcomp.boot.ssrnat <> add0n thm
+R5718:5722 mathcomp.boot.ssrnat <> add0n thm
+R5734:5737 Corelib.ssr.ssrbool <> andP thm
+R5802:5806 mathcomp.boot.ssrnat <> subn1 thm
+R5809:5815 Corelib.Init.Peano <> pred_Sn thm
+R5802:5806 mathcomp.boot.ssrnat <> subn1 thm
+R5802:5806 mathcomp.boot.ssrnat <> subn1 thm
+R5809:5815 Corelib.Init.Peano <> pred_Sn thm
+R5809:5815 Corelib.Init.Peano <> pred_Sn thm
+R5856:5859 Corelib.ssr.ssrbool <> negP thm
+R5938:5962 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space AbstractRTAReduction.SearchSpace.ExistenceOfRepresentative <> sec
+sec 6200:6226 AbstractRTAReduction.SearchSpace FixpointSolutionForAnotherA
+var 6352:6355 AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA A_sp
+var 6357:6360 AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA F_sp
+R6363:6366 prosa.classic.model.time Time time def
+var 6386:6396 AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA H_less_than
+R6410:6412 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R6403:6405 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6399:6402 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.A_sp var
+R6406:6409 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.F_sp var
+R6413:6413 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.B var
+var 6433:6442 AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA H_fixpoint
+R6456:6458 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6449:6451 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6445:6448 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.A_sp var
+R6452:6455 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.F_sp var
+R6459:6485 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.interference_bound_function var
+R6487:6489 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.tsk var
+R6491:6494 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.A_sp var
+R6501:6503 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6497:6500 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.A_sp var
+R6504:6507 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.F_sp var
+var 6738:6738 AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA A
+R6741:6744 prosa.classic.model.time Time time def
+var 6764:6777 AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA H_bounds_for_A
+R6784:6787 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<='_x not
+R6789:6792 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<='_x not
+R6780:6783 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.A_sp var
+R6788:6788 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.A var
+R6788:6788 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.A var
+R6797:6799 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6793:6796 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.A_sp var
+R6800:6803 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.F_sp var
+var 6823:6834 AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA H_equivalent
+R6845:6878 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space AbstractRTAReduction are_equivalent_at_values_less_than def
+R6975:6975 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.B var
+R6937:6963 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.interference_bound_function var
+R6965:6967 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.tsk var
+R6969:6972 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.A_sp var
+R6891:6917 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.interference_bound_function var
+R6919:6921 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.tsk var
+R6923:6923 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.A var
+prf 7161:7181 AbstractRTAReduction solution_for_A_exists
+R7192:7198 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R7200:7211 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 7199:7199 <> F:39
+R7231:7244 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R7223:7225 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7216:7218 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R7212:7215 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.A_sp var
+R7219:7222 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.F_sp var
+R7227:7229 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R7226:7226 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.A var
+R7230:7230 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> F:39 var
+R7254:7267 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R7246:7249 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R7245:7245 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> F:39 var
+R7250:7253 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.F_sp var
+R7273:7275 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7269:7271 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R7268:7268 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.A var
+R7272:7272 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> F:39 var
+R7276:7302 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.interference_bound_function var
+R7304:7306 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.tsk var
+R7308:7308 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.A var
+R7312:7314 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R7311:7311 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.A var
+R7315:7315 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> F:39 var
+R7348:7361 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.H_bounds_for_A var
+R7348:7361 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.H_bounds_for_A var
+R7348:7361 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.H_bounds_for_A var
+R7367:7370 Corelib.ssr.ssrbool <> andP thm
+R7407:7409 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R7403:7406 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.A_sp var
+R7410:7413 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.F_sp var
+R7407:7409 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R7403:7406 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.A_sp var
+R7410:7413 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.F_sp var
+R7439:7441 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R7442:7442 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.A var
+R7439:7441 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R7442:7442 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.A var
+R7486:7491 mathcomp.boot.ssrnat <> subnKC thm
+R7486:7491 mathcomp.boot.ssrnat <> subnKC thm
+R7486:7491 mathcomp.boot.ssrnat <> subnKC thm
+R7515:7523 mathcomp.boot.ssrnat <> leq_subLR thm
+R7528:7536 mathcomp.boot.ssrnat <> leq_add2r thm
+R7515:7523 mathcomp.boot.ssrnat <> leq_subLR thm
+R7515:7523 mathcomp.boot.ssrnat <> leq_subLR thm
+R7528:7536 mathcomp.boot.ssrnat <> leq_add2r thm
+R7528:7536 mathcomp.boot.ssrnat <> leq_add2r thm
+R7560:7565 mathcomp.boot.ssrnat <> subnKC thm
+R7570:7581 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.H_equivalent var
+R7560:7565 mathcomp.boot.ssrnat <> subnKC thm
+R7560:7565 mathcomp.boot.ssrnat <> subnKC thm
+R7570:7581 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.H_equivalent var
+R7570:7581 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA.H_equivalent var
+R7604:7630 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space AbstractRTAReduction.SearchSpace.FixpointSolutionForAnotherA <> sec
+R7644:7654 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space AbstractRTAReduction.SearchSpace <> sec
+R7668:7687 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space AbstractRTAReduction <> mod

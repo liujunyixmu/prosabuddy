@@ -1,0 +1,1542 @@
+DIGEST 7549ace27284d177a02c39a24fbbf2f5
+Fprosa.classic.model.schedule.uni.jitter.busy_interval
+R15:36 prosa.classic.util.all <> <> lib
+R54:91 prosa.classic.model.arrival.basic.task <> <> lib
+R93:129 prosa.classic.model.arrival.basic.job <> <> lib
+R146:195 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R212:239 prosa.classic.model.priority <> <> lib
+R241:286 prosa.classic.model.arrival.basic.task_arrival <> <> lib
+R304:343 prosa.classic.model.schedule.uni.service <> <> lib
+R345:385 prosa.classic.model.schedule.uni.workload <> <> lib
+R403:450 prosa.classic.model.schedule.uni.jitter.schedule <> <> lib
+R452:499 prosa.classic.model.schedule.uni.jitter.platform <> <> lib
+R531:539 mathcomp.boot.ssreflect <> <> lib
+R541:547 mathcomp.boot.ssrbool <> <> lib
+R549:554 mathcomp.boot.eqtype <> <> lib
+R556:561 mathcomp.boot.ssrnat <> <> lib
+R563:565 mathcomp.boot.seq <> <> lib
+R567:573 mathcomp.boot.fintype <> <> lib
+R575:579 mathcomp.boot.bigop <> <> lib
+mod 708:719 <> BusyInterval
+R732:734 prosa.classic.model.arrival.basic.job Job <> mod
+R736:765 prosa.classic.model.schedule.uni.jitter.schedule UniprocessorScheduleWithJitter <> mod
+R767:774 prosa.classic.model.priority Priority <> mod
+R776:783 prosa.classic.model.schedule.uni.jitter.platform Platform <> mod
+R794:800 prosa.classic.model.schedule.uni.service Service <> mod
+R802:809 prosa.classic.model.schedule.uni.workload Workload <> mod
+R811:821 prosa.classic.model.arrival.basic.task_arrival TaskArrival <> mod
+sec 901:904 BusyInterval Defs
+var  921:924 BusyInterval.Defs Task
+R927:932 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  952:954 BusyInterval.Defs Job
+R957:962 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 979:989 BusyInterval.Defs job_arrival
+R995:998 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R992:994 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Job var
+R999:1002 prosa.classic.model.time Time time def
+var 1018:1025 BusyInterval.Defs job_cost
+R1031:1034 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1028:1030 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Job var
+R1035:1038 prosa.classic.model.time Time time def
+var 1054:1063 BusyInterval.Defs job_jitter
+R1069:1072 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1066:1068 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Job var
+R1073:1076 prosa.classic.model.time Time time def
+var 1092:1099 BusyInterval.Defs job_task
+R1105:1108 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1102:1104 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Job var
+R1109:1112 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Task var
+var 1202:1208 BusyInterval.Defs arr_seq
+R1211:1226 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R1228:1230 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Job var
+var 1248:1277 BusyInterval.Defs H_arrival_times_are_consistent
+R1280:1307 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_times_are_consistent def
+R1321:1327 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.arr_seq var
+R1309:1319 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+var 1402:1406 BusyInterval.Defs sched
+R1409:1416 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R1418:1420 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Job var
+var 1438:1470 BusyInterval.Defs H_jobs_come_from_arrival_sequence
+R1479:1509 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule jobs_come_from_arrival_sequence def
+R1517:1523 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.arr_seq var
+R1511:1515 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+var 1576:1593 BusyInterval.Defs higher_eq_priority
+R1596:1606 prosa.classic.model.priority Priority JLFP_policy def
+R1608:1610 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Job var
+var 1674:1674 BusyInterval.Defs j
+R1677:1679 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Job var
+var 1697:1719 BusyInterval.Defs H_from_arrival_sequence
+R1722:1731 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R1741:1741 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R1733:1739 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.arr_seq var
+var 1810:1823 BusyInterval.Defs job_pending_at
+R1828:1834 prosa.classic.model.schedule.uni.jitter.schedule UniprocessorScheduleWithJitter pending def
+R1868:1872 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R1857:1866 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R1848:1855 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_cost var
+R1836:1846 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+var 1883:1898 BusyInterval.Defs job_scheduled_at
+R1903:1914 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R1916:1920 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+var 1931:1946 BusyInterval.Defs job_completed_by
+R1951:1962 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R1973:1977 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R1964:1971 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_cost var
+var 1988:2005 BusyInterval.Defs actual_job_arrival
+R2010:2023 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrival def
+R2037:2046 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R2025:2035 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+var 2057:2082 BusyInterval.Defs actual_job_arrival_between
+R2087:2108 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrival_between def
+R2122:2131 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R2110:2120 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+def 2320:2329 BusyInterval quiet_time
+R2335:2338 prosa.classic.model.time Time time def
+binder 2332:2332 <> t:25
+binder 2357:2360 <> j_hp:26
+R2394:2405 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2371:2380 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R2390:2393 prosa.classic.model.schedule.uni.jitter.busy_interval <> j_hp:26 var
+R2382:2388 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.arr_seq var
+R2431:2442 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2406:2423 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.higher_eq_priority var
+R2425:2428 prosa.classic.model.schedule.uni.jitter.busy_interval <> j_hp:26 var
+R2430:2430 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R2494:2505 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2443:2463 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrival_before def
+R2493:2493 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:25 var
+R2488:2491 prosa.classic.model.schedule.uni.jitter.busy_interval <> j_hp:26 var
+R2477:2486 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R2465:2475 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+R2506:2521 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_completed_by var
+R2523:2526 prosa.classic.model.schedule.uni.jitter.busy_interval <> j_hp:26 var
+R2528:2528 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:25 var
+def 2759:2778 BusyInterval busy_interval_prefix
+R2792:2795 prosa.classic.model.time Time time def
+binder 2781:2782 <> t1:27
+binder 2784:2789 <> t_busy:28
+R2818:2827 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R2809:2811 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R2807:2808 prosa.classic.model.schedule.uni.jitter.busy_interval <> t1:27 var
+R2812:2817 prosa.classic.model.schedule.uni.jitter.busy_interval <> t_busy:28 var
+R2841:2851 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R2895:2895 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R2828:2837 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval quiet_time def
+R2839:2840 prosa.classic.model.schedule.uni.jitter.busy_interval <> t1:27 var
+binder 2859:2859 <> t:29
+R2877:2880 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2864:2866 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x_'<'_x not
+R2868:2870 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x_'<'_x not
+R2862:2863 prosa.classic.model.schedule.uni.jitter.busy_interval <> t1:27 var
+R2867:2867 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:29 var
+R2867:2867 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:29 var
+R2871:2876 prosa.classic.model.schedule.uni.jitter.busy_interval <> t_busy:28 var
+R2881:2882 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R2883:2892 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval quiet_time def
+R2894:2894 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:29 var
+def 3052:3064 BusyInterval busy_interval
+R3074:3077 prosa.classic.model.time Time time def
+binder 3067:3068 <> t1:30
+binder 3070:3071 <> t2:31
+R3115:3124 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3089:3108 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval busy_interval_prefix def
+R3110:3111 prosa.classic.model.schedule.uni.jitter.busy_interval <> t1:30 var
+R3113:3114 prosa.classic.model.schedule.uni.jitter.busy_interval <> t2:31 var
+R3125:3134 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval quiet_time def
+R3136:3137 prosa.classic.model.schedule.uni.jitter.busy_interval <> t2:31 var
+sec 3210:3215 BusyInterval.Defs Lemmas
+var 3344:3358 BusyInterval.Defs.Lemmas actual_arrivals
+binder 3360:3361 <> t1:32
+binder 3363:3364 <> t2:33
+R3369:3391 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_between def
+R3424:3425 prosa.classic.model.schedule.uni.jitter.busy_interval <> t1:32 var
+R3427:3428 prosa.classic.model.schedule.uni.jitter.busy_interval <> t2:33 var
+R3416:3422 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.arr_seq var
+R3405:3414 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R3393:3403 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+sec 3582:3592 BusyInterval.Defs.Lemmas BasicLemmas
+var 3677:3699 BusyInterval.Defs.Lemmas.BasicLemmas H_priority_is_reflexive
+R3702:3718 prosa.classic.model.priority Priority JLFP_is_reflexive def
+R3720:3737 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.higher_eq_priority var
+var 3811:3812 BusyInterval.Defs.Lemmas.BasicLemmas t1
+var 3814:3815 BusyInterval.Defs.Lemmas.BasicLemmas t2
+R3818:3821 prosa.classic.model.time Time time def
+var 3843:3857 BusyInterval.Defs.Lemmas.BasicLemmas H_busy_interval
+R3860:3872 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval busy_interval def
+R3874:3875 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BasicLemmas.t1 var
+R3877:3878 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BasicLemmas.t2 var
+var 3976:3976 BusyInterval.Defs.Lemmas.BasicLemmas t
+R3979:3982 prosa.classic.model.time Time time def
+var 4004:4020 BusyInterval.Defs.Lemmas.BasicLemmas H_during_interval
+R4025:4028 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R4030:4032 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R4023:4024 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BasicLemmas.t1 var
+R4029:4029 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BasicLemmas.t var
+R4029:4029 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BasicLemmas.t var
+R4033:4034 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BasicLemmas.t2 var
+var 4056:4071 BusyInterval.Defs.Lemmas.BasicLemmas H_job_is_pending
+R4074:4087 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_pending_at var
+R4089:4089 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R4091:4091 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BasicLemmas.t var
+sec 4195:4221 BusyInterval.Defs.Lemmas.BasicLemmas CompletesDuringBusyInterval
+prf 4250:4283 BusyInterval job_completes_within_busy_interval
+R4298:4313 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_completed_by var
+R4315:4315 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R4317:4318 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BasicLemmas.t2 var
+R4557:4560 Corelib.ssr.ssrbool <> andP thm
+R4668:4668 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BasicLemmas.t var
+R4643:4655 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R4668:4668 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BasicLemmas.t var
+R4643:4655 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R4716:4719 Corelib.ssr.ssrbool <> andP thm
+R4758:4784 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval.Defs.Lemmas.BasicLemmas.CompletesDuringBusyInterval <> sec
+sec 4913:4937 BusyInterval.Defs.Lemmas.BasicLemmas ArrivesDuringBusyInterval
+var 5028:5056 BusyInterval.Defs.Lemmas.BasicLemmas.ArrivesDuringBusyInterval H_completed_jobs_dont_execute
+R5071:5097 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_jobs_dont_execute def
+R5108:5112 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R5099:5106 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_cost var
+prf 5232:5263 BusyInterval job_arrives_within_busy_interval
+R5280:5283 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R5278:5279 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BasicLemmas.t1 var
+R5284:5301 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.actual_job_arrival var
+R5303:5303 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R5498:5504 Corelib.ssr.ssrbool <> contraT thm
+R5516:5521 mathcomp.boot.ssrnat <> ltnNge thm
+R5498:5504 Corelib.ssr.ssrbool <> contraT thm
+R5516:5521 mathcomp.boot.ssrnat <> ltnNge thm
+R5516:5521 mathcomp.boot.ssrnat <> ltnNge thm
+R5607:5610 Corelib.ssr.ssrbool <> andP thm
+R5616:5619 Corelib.ssr.ssrbool <> negP thm
+R5657:5660 Corelib.ssr.ssrbool <> andP thm
+R5756:5757 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BasicLemmas.t1 var
+R5724:5743 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completion_monotonic thm
+R5756:5757 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BasicLemmas.t1 var
+R5724:5743 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completion_monotonic thm
+R5861:5885 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval.Defs.Lemmas.BasicLemmas.ArrivesDuringBusyInterval <> sec
+R5899:5909 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval.Defs.Lemmas.BasicLemmas <> sec
+sec 6043:6058 BusyInterval.Defs.Lemmas ExistsPendingJob
+var 6145:6173 BusyInterval.Defs.Lemmas.ExistsPendingJob H_completed_jobs_dont_execute
+R6186:6212 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_jobs_dont_execute def
+R6223:6227 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R6214:6221 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_cost var
+var 6351:6352 BusyInterval.Defs.Lemmas.ExistsPendingJob t1
+var 6354:6355 BusyInterval.Defs.Lemmas.ExistsPendingJob t2
+R6358:6361 prosa.classic.model.time Time time def
+var 6383:6392 BusyInterval.Defs.Lemmas.ExistsPendingJob H_interval
+R6397:6400 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R6395:6396 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ExistsPendingJob.t1 var
+R6401:6402 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ExistsPendingJob.t2 var
+var 6424:6430 BusyInterval.Defs.Lemmas.ExistsPendingJob H_quiet
+R6433:6442 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval quiet_time def
+R6444:6445 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ExistsPendingJob.t1 var
+var 6467:6477 BusyInterval.Defs.Lemmas.ExistsPendingJob H_not_quiet
+R6480:6481 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R6482:6491 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval quiet_time def
+R6493:6494 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ExistsPendingJob.t2 var
+prf 6656:6691 BusyInterval not_quiet_implies_exists_pending_job
+R6704:6710 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R6715:6728 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 6711:6714 <> j_hp:62
+R6752:6767 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R6729:6738 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R6748:6751 prosa.classic.model.schedule.uni.jitter.busy_interval <> j_hp:62 var
+R6740:6746 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.arr_seq var
+R6805:6820 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R6768:6793 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.actual_job_arrival_between var
+R6795:6798 prosa.classic.model.schedule.uni.jitter.busy_interval <> j_hp:62 var
+R6800:6801 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ExistsPendingJob.t1 var
+R6803:6804 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ExistsPendingJob.t2 var
+R6846:6861 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R6821:6838 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.higher_eq_priority var
+R6840:6843 prosa.classic.model.schedule.uni.jitter.busy_interval <> j_hp:62 var
+R6845:6845 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R6862:6863 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R6864:6879 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_completed_by var
+R6881:6884 prosa.classic.model.schedule.uni.jitter.busy_interval <> j_hp:62 var
+R6886:6887 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ExistsPendingJob.t2 var
+R6990:6992 mathcomp.boot.seq <> has def
+R7092:7106 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.actual_arrivals var
+R7108:7109 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ExistsPendingJob.t1 var
+R7111:7112 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ExistsPendingJob.t2 var
+binder 6999:7002 <> j_hp:63
+R7007:7007 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7035:7039 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7008:7010 Corelib.ssr.ssrbool <> ::bool_scope:'~~'_x not
+R7011:7026 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_completed_by var
+R7028:7031 prosa.classic.model.schedule.uni.jitter.busy_interval <> j_hp:63 var
+R7033:7034 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ExistsPendingJob.t2 var
+R7040:7057 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.higher_eq_priority var
+R7059:7062 prosa.classic.model.schedule.uni.jitter.busy_interval <> j_hp:63 var
+R7064:7064 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R6990:6992 mathcomp.boot.seq <> has def
+R7092:7106 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.actual_arrivals var
+R7108:7109 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ExistsPendingJob.t1 var
+R7111:7112 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ExistsPendingJob.t2 var
+binder 6999:7002 <> j_hp:64
+R7007:7007 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7035:7039 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7008:7010 Corelib.ssr.ssrbool <> ::bool_scope:'~~'_x not
+R7011:7026 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_completed_by var
+R7028:7031 prosa.classic.model.schedule.uni.jitter.busy_interval <> j_hp:64 var
+R7033:7034 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ExistsPendingJob.t2 var
+R7040:7057 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.higher_eq_priority var
+R7059:7062 prosa.classic.model.schedule.uni.jitter.busy_interval <> j_hp:64 var
+R7064:7064 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R7165:7168 mathcomp.boot.seq <> hasP thm
+R7181:7184 Corelib.ssr.ssrbool <> andP thm
+R7222:7236 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.actual_arrivals var
+R7222:7236 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.actual_arrivals var
+R7222:7236 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.actual_arrivals var
+R7283:7324 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter in_actual_arrivals_between_implies_arrived thm
+R7283:7324 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter in_actual_arrivals_between_implies_arrived thm
+R7354:7395 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter in_actual_arrivals_implies_arrived_between thm
+R7354:7395 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter in_actual_arrivals_implies_arrived_between thm
+R7461:7464 Corelib.ssr.ssrbool <> negP thm
+R7461:7464 Corelib.ssr.ssrbool <> negP thm
+R7509:7513 Corelib.ssr.ssrbool <> negbT thm
+R7533:7541 mathcomp.boot.seq <> all_predC thm
+R7509:7513 Corelib.ssr.ssrbool <> negbT thm
+R7533:7541 mathcomp.boot.seq <> all_predC thm
+R7533:7541 mathcomp.boot.seq <> all_predC thm
+R7579:7582 mathcomp.boot.seq <> allP thm
+R7672:7675 mathcomp.boot.ssrnat <> ltnP thm
+R7703:7704 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ExistsPendingJob.t1 var
+R7678:7695 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.actual_job_arrival var
+R7827:7828 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ExistsPendingJob.t1 var
+R7795:7814 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completion_monotonic thm
+R7672:7675 mathcomp.boot.ssrnat <> ltnP thm
+R7703:7704 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ExistsPendingJob.t1 var
+R7678:7695 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.actual_job_arrival var
+R7827:7828 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ExistsPendingJob.t1 var
+R7795:7814 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completion_monotonic thm
+R7885:7926 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter arrived_between_implies_in_actual_arrivals thm
+R7943:7946 Corelib.ssr.ssrbool <> andP thm
+R7885:7926 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter arrived_between_implies_in_actual_arrivals thm
+R7943:7946 Corelib.ssr.ssrbool <> andP thm
+R7987:7991 Corelib.ssr.ssrbool <> andbT thm
+R7993:7997 Corelib.ssr.ssrbool <> negbK thm
+R7987:7991 Corelib.ssr.ssrbool <> andbT thm
+R7987:7991 Corelib.ssr.ssrbool <> andbT thm
+R7993:7997 Corelib.ssr.ssrbool <> negbK thm
+R7993:7997 Corelib.ssr.ssrbool <> negbK thm
+R8044:8059 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval.Defs.Lemmas.ExistsPendingJob <> sec
+sec 8181:8199 BusyInterval.Defs.Lemmas ProcessorAlwaysBusy
+var 8371:8387 BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy H_work_conserving
+R8390:8404 prosa.classic.model.schedule.uni.jitter.platform Platform work_conserving def
+R8446:8450 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R8438:8444 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.arr_seq var
+R8427:8436 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R8418:8425 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_cost var
+R8406:8416 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+var 8472:8500 BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy H_completed_jobs_dont_execute
+R8503:8529 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_jobs_dont_execute def
+R8540:8544 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R8531:8538 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_cost var
+var 8566:8592 BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy H_jobs_execute_after_jitter
+R8605:8629 prosa.classic.model.schedule.uni.jitter.schedule UniprocessorScheduleWithJitter jobs_execute_after_jitter def
+R8654:8658 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R8643:8652 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R8631:8641 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+var 8781:8782 BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy t1
+var 8784:8785 BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy t2
+R8788:8791 prosa.classic.model.time Time time def
+var 8813:8829 BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy H_strictly_larger
+R8834:8836 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R8832:8833 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy.t1 var
+R8837:8838 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy.t2 var
+var 8860:8866 BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy H_quiet
+R8869:8878 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval quiet_time def
+R8880:8881 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy.t1 var
+var 8904:8914 BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy H_not_quiet
+binder 8924:8924 <> t:79
+R8939:8942 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8929:8931 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x_'<='_x not
+R8933:8936 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x_'<='_x not
+R8927:8928 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy.t1 var
+R8932:8932 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:79 var
+R8932:8932 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:79 var
+R8937:8938 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy.t2 var
+R8943:8944 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R8945:8954 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval quiet_time def
+R8956:8956 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:79 var
+prf 9058:9083 BusyInterval not_quiet_implies_not_idle
+binder 9103:9103 <> t:82
+R9131:9146 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9120:9123 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<='_x not
+R9125:9128 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<='_x not
+R9118:9119 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy.t1 var
+R9124:9124 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:82 var
+R9124:9124 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:82 var
+R9129:9130 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy.t2 var
+R9147:9148 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R9149:9155 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule is_idle def
+R9163:9163 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:82 var
+R9157:9161 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R9198:9217 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule total_service_during def
+R9220:9234 prosa.classic.model.schedule.uni.jitter.platform Platform work_conserving def
+R9336:9339 Corelib.ssr.ssrbool <> andP thm
+R9352:9354 mathcomp.boot.eqtype <> eqP def
+R9380:9388 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R9380:9388 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R9380:9388 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R9412:9414 Corelib.ssr.ssrbool <> orP thm
+R9418:9420 mathcomp.boot.eqtype <> eqP def
+R9501:9503 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R9499:9500 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy.t1 var
+R9522:9525 Corelib.ssr.ssrbool <> andP thm
+R9501:9503 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R9499:9500 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy.t1 var
+R9522:9525 Corelib.ssr.ssrbool <> andP thm
+R9648:9649 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy.t1 var
+R9616:9635 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completion_monotonic thm
+R9648:9649 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy.t1 var
+R9616:9635 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completion_monotonic thm
+R9684:9690 Corelib.ssr.ssrbool <> contraT thm
+R9684:9690 Corelib.ssr.ssrbool <> contraT thm
+R9730:9741 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R9754:9755 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy.t1 var
+R9743:9747 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R9730:9741 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R9754:9755 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy.t1 var
+R9743:9747 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R9812:9814 mathcomp.boot.eqtype <> eqP def
+R9868:9872 Corelib.ssr.ssrbool <> negbT thm
+R9868:9872 Corelib.ssr.ssrbool <> negbT thm
+R9914:9915 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy.t1 var
+R9945:9948 Corelib.ssr.ssrbool <> andP thm
+R9914:9915 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy.t1 var
+R9945:9948 Corelib.ssr.ssrbool <> andP thm
+R9945:9948 Corelib.ssr.ssrbool <> andP thm
+R9945:9948 Corelib.ssr.ssrbool <> andP thm
+R9945:9948 Corelib.ssr.ssrbool <> andP thm
+R9945:9948 Corelib.ssr.ssrbool <> andP thm
+R9995:9997 mathcomp.boot.eqtype <> eqP def
+R10125:10128 Corelib.ssr.ssrbool <> andP thm
+R10125:10128 Corelib.ssr.ssrbool <> andP thm
+R10235:10241 Corelib.ssr.ssrbool <> contraT thm
+R10235:10241 Corelib.ssr.ssrbool <> contraT thm
+R10282:10293 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R10295:10299 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R10282:10293 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R10295:10299 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R10363:10365 mathcomp.boot.eqtype <> eqP def
+R10419:10423 Corelib.ssr.ssrbool <> negbT thm
+R10419:10423 Corelib.ssr.ssrbool <> negbT thm
+R10509:10512 Corelib.ssr.ssrbool <> andP thm
+R10538:10541 mathcomp.boot.ssrnat <> ltnW thm
+R10509:10512 Corelib.ssr.ssrbool <> andP thm
+R10509:10512 Corelib.ssr.ssrbool <> andP thm
+R10509:10512 Corelib.ssr.ssrbool <> andP thm
+R10509:10512 Corelib.ssr.ssrbool <> andP thm
+R10509:10512 Corelib.ssr.ssrbool <> andP thm
+R10538:10541 mathcomp.boot.ssrnat <> ltnW thm
+R10580:10582 mathcomp.boot.eqtype <> eqP def
+sec 10739:10763 BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy OnlyHigherOrEqualPriority
+var 10874:10897 BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy.OnlyHigherOrEqualPriority H_priority_is_transitive
+R10900:10917 prosa.classic.model.priority Priority JLFP_is_transitive def
+R10919:10936 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.higher_eq_priority var
+var 10960:10976 BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy.OnlyHigherOrEqualPriority H_respects_policy
+R10991:11010 prosa.classic.model.schedule.uni.jitter.platform Platform respects_JLFP_policy def
+R11058:11075 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.higher_eq_priority var
+R11052:11056 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R11044:11050 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.arr_seq var
+R11033:11042 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R11024:11031 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_cost var
+R11012:11022 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+prf 11242:11282 BusyInterval not_quiet_implies_exists_scheduled_hp_job
+binder 11304:11304 <> t:87
+R11333:11350 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R11323:11326 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R11328:11330 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R11321:11322 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy.t1 var
+R11327:11327 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:87 var
+R11327:11327 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:87 var
+R11331:11332 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy.t2 var
+R11351:11357 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R11362:11379 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 11358:11361 <> j_hp:88
+R11417:11437 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R11380:11405 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.actual_job_arrival_between var
+R11407:11410 prosa.classic.model.schedule.uni.jitter.busy_interval <> j_hp:88 var
+R11412:11413 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy.t1 var
+R11415:11416 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy.t2 var
+R11463:11482 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R11438:11455 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.higher_eq_priority var
+R11457:11460 prosa.classic.model.schedule.uni.jitter.busy_interval <> j_hp:88 var
+R11462:11462 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R11483:11498 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_scheduled_at var
+R11500:11503 prosa.classic.model.schedule.uni.jitter.busy_interval <> j_hp:88 var
+R11505:11505 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:87 var
+R11553:11578 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval not_quiet_implies_not_idle thm
+R11600:11606 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule is_idle def
+R11609:11624 prosa.classic.model.priority Priority FP_is_transitive def
+R11627:11636 Corelib.ssr.ssrbool <> transitive def
+R11911:11914 Corelib.ssr.ssrbool <> andP thm
+R11972:11975 Corelib.ssr.ssrbool <> andP thm
+R11999:12002 mathcomp.boot.ssrnat <> ltnW thm
+R11972:11975 Corelib.ssr.ssrbool <> andP thm
+R11999:12002 mathcomp.boot.ssrnat <> ltnW thm
+R12027:12031 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R12027:12031 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R12131:12133 mathcomp.boot.eqtype <> eqP def
+R12188:12205 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.higher_eq_priority var
+R12212:12212 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R12249:12255 Corelib.ssr.ssrbool <> contraT thm
+R12249:12255 Corelib.ssr.ssrbool <> contraT thm
+R12267:12270 Corelib.ssr.ssrbool <> negP thm
+R12318:12320 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R12339:12342 Corelib.ssr.ssrbool <> andP thm
+R12318:12320 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R12339:12342 Corelib.ssr.ssrbool <> andP thm
+R12403:12412 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval quiet_time def
+R12464:12470 Corelib.ssr.ssrbool <> contraT thm
+R12464:12470 Corelib.ssr.ssrbool <> contraT thm
+R12482:12485 Corelib.ssr.ssrbool <> negP thm
+R12531:12540 prosa.classic.model.schedule.uni.jitter.schedule UniprocessorScheduleWithJitter backlogged def
+R12574:12578 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R12563:12572 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R12554:12561 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_cost var
+R12542:12552 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+R12627:12630 Corelib.ssr.ssrbool <> andP thm
+R12627:12630 Corelib.ssr.ssrbool <> andP thm
+R12694:12697 Corelib.ssr.ssrbool <> negP thm
+R12694:12697 Corelib.ssr.ssrbool <> negP thm
+R12738:12759 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule only_one_job_scheduled thm
+R12738:12759 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule only_one_job_scheduled thm
+R12893:12896 Corelib.ssr.ssrbool <> andP thm
+R12893:12896 Corelib.ssr.ssrbool <> andP thm
+R12943:12946 Corelib.ssr.ssrbool <> negP thm
+R12943:12946 Corelib.ssr.ssrbool <> negP thm
+R13002:13021 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completion_monotonic thm
+R13002:13021 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completion_monotonic thm
+R13357:13367 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+R13405:13412 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_cost var
+R13430:13439 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R13310:13334 prosa.classic.model.schedule.uni.jitter.schedule UniprocessorScheduleWithJitter scheduled_implies_pending thm
+R13357:13367 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+R13405:13412 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_cost var
+R13430:13439 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R13310:13334 prosa.classic.model.schedule.uni.jitter.schedule UniprocessorScheduleWithJitter scheduled_implies_pending thm
+R13489:13492 Corelib.ssr.ssrbool <> andP thm
+R13532:13544 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R13489:13492 Corelib.ssr.ssrbool <> andP thm
+R13532:13544 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R13588:13591 Corelib.ssr.ssrbool <> andP thm
+R13622:13628 Corelib.ssr.ssrbool <> contraT thm
+R13640:13645 mathcomp.boot.ssrnat <> ltnNge thm
+R13622:13628 Corelib.ssr.ssrbool <> contraT thm
+R13640:13645 mathcomp.boot.ssrnat <> ltnNge thm
+R13640:13645 mathcomp.boot.ssrnat <> ltnNge thm
+R13860:13861 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy.t1 var
+R13828:13847 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completion_monotonic thm
+R13795:13810 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_completed_by var
+R13860:13861 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy.t1 var
+R13828:13847 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completion_monotonic thm
+R13885:13915 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_implies_not_scheduled thm
+R13885:13915 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_implies_not_scheduled thm
+R13972:13975 Corelib.ssr.ssrbool <> negP thm
+R14037:14061 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy.OnlyHigherOrEqualPriority <> sec
+R14083:14101 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval.Defs.Lemmas.ProcessorAlwaysBusy <> sec
+sec 14324:14343 BusyInterval.Defs.Lemmas BoundingBusyInterval
+var 14431:14457 BusyInterval.Defs.Lemmas.BoundingBusyInterval H_arrival_sequence_is_a_set
+R14470:14494 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence_is_a_set def
+R14496:14502 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.arr_seq var
+var 14630:14656 BusyInterval.Defs.Lemmas.BoundingBusyInterval H_jobs_execute_after_jitter
+R14669:14693 prosa.classic.model.schedule.uni.jitter.schedule UniprocessorScheduleWithJitter jobs_execute_after_jitter def
+R14718:14722 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R14707:14716 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R14695:14705 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+var 14744:14772 BusyInterval.Defs.Lemmas.BoundingBusyInterval H_completed_jobs_dont_execute
+R14775:14801 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_jobs_dont_execute def
+R14812:14816 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R14803:14810 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_cost var
+var 14900:14916 BusyInterval.Defs.Lemmas.BoundingBusyInterval H_work_conserving
+R14919:14933 prosa.classic.model.schedule.uni.jitter.platform Platform work_conserving def
+R14975:14979 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R14967:14973 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.arr_seq var
+R14956:14965 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R14947:14954 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_cost var
+R14935:14945 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+var 15001:15017 BusyInterval.Defs.Lemmas.BoundingBusyInterval H_respects_policy
+R15030:15049 prosa.classic.model.schedule.uni.jitter.platform Platform respects_JLFP_policy def
+R15097:15114 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.higher_eq_priority var
+R15091:15095 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R15083:15089 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.arr_seq var
+R15072:15081 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R15063:15070 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_cost var
+R15051:15061 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+var 15214:15236 BusyInterval.Defs.Lemmas.BoundingBusyInterval H_priority_is_reflexive
+R15239:15255 prosa.classic.model.priority Priority JLFP_is_reflexive def
+R15257:15274 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.higher_eq_priority var
+var 15296:15319 BusyInterval.Defs.Lemmas.BoundingBusyInterval H_priority_is_transitive
+R15322:15339 prosa.classic.model.priority Priority JLFP_is_transitive def
+R15341:15358 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.higher_eq_priority var
+var 15589:15606 BusyInterval.Defs.Lemmas.BoundingBusyInterval actual_hp_workload
+binder 15608:15609 <> t1:103
+binder 15611:15612 <> t2:104
+R15627:15667 prosa.classic.model.schedule.uni.workload Workload workload_of_higher_or_equal_priority_jobs def
+R15773:15773 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R15754:15771 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.higher_eq_priority var
+R15679:15693 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.actual_arrivals var
+R15695:15696 prosa.classic.model.schedule.uni.jitter.busy_interval <> t1:103 var
+R15698:15699 prosa.classic.model.schedule.uni.jitter.busy_interval <> t2:104 var
+R15669:15676 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_cost var
+var 16028:16044 BusyInterval.Defs.Lemmas.BoundingBusyInterval actual_hp_service
+binder 16046:16047 <> t1:105
+binder 16049:16050 <> t2:106
+R16065:16104 prosa.classic.model.schedule.uni.service Service service_of_higher_or_equal_priority_jobs def
+R16208:16209 prosa.classic.model.schedule.uni.jitter.busy_interval <> t1:105 var
+R16211:16212 prosa.classic.model.schedule.uni.jitter.busy_interval <> t2:106 var
+R16206:16206 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R16187:16204 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.higher_eq_priority var
+R16113:16127 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.actual_arrivals var
+R16129:16130 prosa.classic.model.schedule.uni.jitter.busy_interval <> t1:105 var
+R16132:16133 prosa.classic.model.schedule.uni.jitter.busy_interval <> t2:106 var
+R16106:16110 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+sec 16320:16339 BusyInterval.Defs.Lemmas.BoundingBusyInterval BoundingBusyInterval
+var 16424:16429 BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval t_busy
+R16432:16435 prosa.classic.model.time Time time def
+var 16459:16472 BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval H_j_is_pending
+R16475:16488 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_pending_at var
+R16490:16490 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R16492:16497 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.t_busy var
+sec 16606:16615 BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval LowerBound
+prf 16810:16836 BusyInterval exists_busy_interval_prefix
+R16853:16859 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R16862:16879 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 16860:16861 <> t1:111
+R16913:16932 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R16880:16899 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval busy_interval_prefix def
+R16901:16902 prosa.classic.model.schedule.uni.jitter.busy_interval <> t1:111 var
+R16910:16912 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R16904:16909 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.t_busy var
+R16935:16938 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<='_x not
+R16959:16962 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<='_x not
+R16933:16934 prosa.classic.model.schedule.uni.jitter.busy_interval <> t1:111 var
+R16939:16956 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.actual_job_arrival var
+R16958:16958 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R16939:16956 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.actual_job_arrival var
+R16958:16958 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R16963:16968 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.t_busy var
+R17228:17247 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval busy_interval_prefix def
+binder 17301:17301 <> t:112
+R17306:17308 mathcomp.boot.seq <> all def
+R17449:17470 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_before def
+R17503:17503 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:112 var
+R17495:17501 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.arr_seq var
+R17484:17493 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R17472:17482 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+binder 17315:17318 <> j_hp:113
+R17378:17383 Corelib.ssr.ssrbool <> ::bool_scope:x_'==>'_x not
+R17418:17418 Corelib.ssr.ssrbool <> ::bool_scope:x_'==>'_x not
+R17353:17370 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.higher_eq_priority var
+R17372:17375 prosa.classic.model.schedule.uni.jitter.busy_interval <> j_hp:113 var
+R17377:17377 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R17384:17395 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R17417:17417 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:112 var
+R17412:17415 prosa.classic.model.schedule.uni.jitter.busy_interval <> j_hp:113 var
+R17406:17410 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R17397:17404 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_cost var
+binder 17301:17301 <> t:114
+R17306:17308 mathcomp.boot.seq <> all def
+R17449:17470 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_before def
+R17503:17503 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:114 var
+R17495:17501 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.arr_seq var
+R17484:17493 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R17472:17482 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+binder 17315:17318 <> j_hp:115
+R17378:17383 Corelib.ssr.ssrbool <> ::bool_scope:x_'==>'_x not
+R17418:17418 Corelib.ssr.ssrbool <> ::bool_scope:x_'==>'_x not
+R17353:17370 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.higher_eq_priority var
+R17372:17375 prosa.classic.model.schedule.uni.jitter.busy_interval <> j_hp:115 var
+R17377:17377 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R17384:17395 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R17417:17417 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:114 var
+R17412:17415 prosa.classic.model.schedule.uni.jitter.busy_interval <> j_hp:115 var
+R17406:17410 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R17397:17404 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_cost var
+binder 17301:17301 <> t:116
+R17306:17308 mathcomp.boot.seq <> all def
+R17449:17470 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_before def
+R17503:17503 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:116 var
+R17495:17501 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.arr_seq var
+R17484:17493 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R17472:17482 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+binder 17315:17318 <> j_hp:117
+R17378:17383 Corelib.ssr.ssrbool <> ::bool_scope:x_'==>'_x not
+R17418:17418 Corelib.ssr.ssrbool <> ::bool_scope:x_'==>'_x not
+R17353:17370 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.higher_eq_priority var
+R17372:17375 prosa.classic.model.schedule.uni.jitter.busy_interval <> j_hp:117 var
+R17377:17377 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R17384:17395 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R17417:17417 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:116 var
+R17412:17415 prosa.classic.model.schedule.uni.jitter.busy_interval <> j_hp:117 var
+R17406:17410 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R17397:17404 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_cost var
+R17531:17538 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R17540:17540 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R17566:17566 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R17541:17543 mathcomp.boot.fintype <> :::'''I_'_x not
+R17550:17552 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R17544:17549 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.t_busy var
+binder 17539:17539 <> t:118
+R17553:17554 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R17565:17565 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:118 var
+binder 17539:17539 <> t:119
+binder 17539:17539 <> t:120
+R17531:17538 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R17540:17540 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R17566:17566 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R17541:17543 mathcomp.boot.fintype <> :::'''I_'_x not
+R17550:17552 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R17544:17549 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.t_busy var
+binder 17539:17539 <> t:121
+R17553:17554 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R17565:17565 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:121 var
+binder 17539:17539 <> t:122
+binder 17539:17539 <> t:123
+R17621:17626 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R17628:17630 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R17640:17642 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R17654:17655 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R17637:17639 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R17631:17636 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.t_busy var
+binder 17627:17627 <> t:124
+binder 17627:17627 <> t:125
+binder 17627:17627 <> t:126
+R17653:17653 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:124 var
+R17656:17656 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:124 var
+R17621:17626 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R17628:17630 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R17640:17642 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R17654:17655 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R17637:17639 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R17631:17636 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.t_busy var
+binder 17627:17627 <> t:127
+binder 17627:17627 <> t:128
+binder 17627:17627 <> t:129
+R17653:17653 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:127 var
+R17656:17656 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:127 var
+R17621:17626 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R17628:17630 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R17640:17642 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R17654:17655 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R17637:17639 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R17631:17636 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.t_busy var
+binder 17627:17627 <> t:130
+binder 17627:17627 <> t:131
+binder 17627:17627 <> t:132
+R17653:17653 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:130 var
+R17656:17656 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:130 var
+R17688:17694 mathcomp.boot.fintype <> existsP thm
+R17756:17766 prosa.util.minmax <> bigmax_pred thm
+R17774:17776 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R17768:17773 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.t_busy var
+R17756:17766 prosa.util.minmax <> bigmax_pred thm
+R17774:17776 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R17768:17773 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.t_busy var
+R17820:17829 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval quiet_time def
+R17888:17891 mathcomp.boot.seq <> allP thm
+R18005:18046 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter arrived_between_implies_in_actual_arrivals thm
+R18060:18063 Corelib.ssr.ssrbool <> andP thm
+R18005:18046 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter arrived_between_implies_in_actual_arrivals thm
+R18060:18063 Corelib.ssr.ssrbool <> andP thm
+R18060:18063 Corelib.ssr.ssrbool <> andP thm
+R18060:18063 Corelib.ssr.ssrbool <> andP thm
+R18108:18114 Corelib.ssr.ssrbool <> implyTb thm
+R18108:18114 Corelib.ssr.ssrbool <> implyTb thm
+R18108:18114 Corelib.ssr.ssrbool <> implyTb thm
+R18249:18252 Corelib.ssr.ssrbool <> andP thm
+R18249:18252 Corelib.ssr.ssrbool <> andP thm
+R18285:18288 Corelib.ssr.ssrbool <> andP thm
+R18323:18329 Corelib.ssr.ssrbool <> contraT thm
+R18341:18346 mathcomp.boot.ssrnat <> ltnNge thm
+R18323:18329 Corelib.ssr.ssrbool <> contraT thm
+R18341:18346 mathcomp.boot.ssrnat <> ltnNge thm
+R18341:18346 mathcomp.boot.ssrnat <> ltnNge thm
+R18394:18394 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R18394:18394 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R18502:18505 Corelib.ssr.ssrbool <> andP thm
+R18577:18582 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.t_busy var
+R18544:18563 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completion_monotonic thm
+R18577:18582 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.t_busy var
+R18544:18563 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completion_monotonic thm
+R18677:18690 prosa.util.minmax <> bigmax_ltn_ord thm
+R18677:18690 prosa.util.minmax <> bigmax_ltn_ord thm
+R18764:18777 prosa.util.minmax <> bigmax_ltn_ord thm
+R18764:18777 prosa.util.minmax <> bigmax_ltn_ord thm
+R18881:18884 Corelib.ssr.ssrbool <> andP thm
+R19000:19003 mathcomp.boot.seq <> allP thm
+R19029:19034 Corelib.ssr.ssrbool <> implyP thm
+R19000:19003 mathcomp.boot.seq <> allP thm
+R19029:19034 Corelib.ssr.ssrbool <> implyP thm
+R19129:19169 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter in_actual_arrivals_before_implies_arrived thm
+R19129:19169 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter in_actual_arrivals_before_implies_arrived thm
+R19213:19253 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter in_actual_arrivals_implies_arrived_before thm
+R19213:19253 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter in_actual_arrivals_implies_arrived_before thm
+R19315:19318 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R19377:19391 mathcomp.boot.bigop <> leq_bigmax_cond thm
+R19404:19406 mathcomp.boot.fintype <> :::'''I_'_x not
+R19413:19415 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R19407:19412 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.t_busy var
+binder 19401:19401 <> x:133
+R19431:19431 prosa.classic.model.schedule.uni.jitter.busy_interval <> x:133 var
+binder 19487:19487 <> x:134
+R19492:19492 prosa.classic.model.schedule.uni.jitter.busy_interval <> x:134 var
+R19496:19502 mathcomp.boot.fintype <> Ordinal constr
+R19596:19604 mathcomp.boot.ssrnat <> leq_trans thm
+R19596:19604 mathcomp.boot.ssrnat <> leq_trans thm
+R19677:19680 mathcomp.boot.ssrnat <> ltnn thm
+R19677:19680 mathcomp.boot.ssrnat <> ltnn thm
+R19677:19680 mathcomp.boot.ssrnat <> ltnn thm
+R19765:19769 Corelib.ssr.ssrbool <> negbT thm
+R19786:19796 mathcomp.boot.fintype <> negb_exists thm
+R19765:19769 Corelib.ssr.ssrbool <> negbT thm
+R19786:19796 mathcomp.boot.fintype <> negb_exists thm
+R19786:19796 mathcomp.boot.fintype <> negb_exists thm
+R19818:19824 mathcomp.boot.fintype <> forallP thm
+R19896:19899 Corelib.ssr.ssrbool <> andP thm
+R19896:19899 Corelib.ssr.ssrbool <> andP thm
+R19932:19935 Corelib.ssr.ssrbool <> andP thm
+R20046:20066 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrival_before def
+R20068:20071 mathcomp.boot.ssrnat <> ltn0 thm
+R20046:20066 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrival_before def
+R20046:20066 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrival_before def
+R20068:20071 mathcomp.boot.ssrnat <> ltn0 thm
+R20068:20071 mathcomp.boot.ssrnat <> ltn0 thm
+R20108:20111 Corelib.ssr.ssrbool <> andP thm
+R20155:20161 mathcomp.boot.fintype <> Ordinal constr
+R20155:20161 mathcomp.boot.fintype <> Ordinal constr
+R20183:20186 Corelib.ssr.ssrbool <> negP thm
+R20263:20266 mathcomp.boot.seq <> allP thm
+R20292:20297 Corelib.ssr.ssrbool <> implyP thm
+R20263:20266 mathcomp.boot.seq <> allP thm
+R20292:20297 Corelib.ssr.ssrbool <> implyP thm
+R20383:20423 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter in_actual_arrivals_before_implies_arrived thm
+R20383:20423 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter in_actual_arrivals_before_implies_arrived thm
+R20463:20503 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter in_actual_arrivals_implies_arrived_before thm
+R20463:20503 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter in_actual_arrivals_implies_arrived_before thm
+R20563:20572 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.LowerBound <> sec
+sec 20768:20777 BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval UpperBound
+var 20895:20896 BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound t1
+R20899:20902 prosa.classic.model.time Time time def
+var 20928:20943 BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound H_is_busy_prefix
+R20946:20965 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval busy_interval_prefix def
+R20967:20968 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R20976:20978 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R20970:20975 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.t_busy var
+var 21004:21033 BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound H_busy_prefix_contains_arrival
+R21056:21059 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R21060:21061 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R21036:21053 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.actual_job_arrival var
+R21055:21055 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+var 21241:21245 BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound delta
+R21248:21251 prosa.classic.model.time Time time def
+var 21277:21292 BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound H_delta_positive
+R21300:21302 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R21295:21299 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.delta var
+var 21329:21349 BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound H_workload_is_bounded
+R21386:21389 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R21352:21369 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.actual_hp_workload var
+R21371:21372 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R21377:21379 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R21375:21376 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R21380:21384 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.delta var
+R21390:21394 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.delta var
+sec 21695:21715 BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound CannotBeBusyForSoLong
+var 21833:21847 BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.CannotBeBusyForSoLong H_no_quiet_time
+binder 21873:21873 <> t:147
+R21896:21899 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R21878:21880 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x_'<='_x not
+R21882:21885 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x_'<='_x not
+R21876:21877 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R21881:21881 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:147 var
+R21881:21881 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:147 var
+R21888:21890 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R21886:21887 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R21891:21895 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.delta var
+R21900:21901 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R21902:21911 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval quiet_time def
+R21913:21913 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:147 var
+prf 22190:22228 BusyInterval busy_interval_has_uninterrupted_service
+R22280:22282 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22247:22263 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.actual_hp_service var
+R22265:22266 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R22271:22273 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R22269:22270 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R22274:22278 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.delta var
+R22283:22287 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.delta var
+R22395:22435 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval not_quiet_implies_exists_scheduled_hp_job thm
+R22528:22533 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R22536:22539 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R22541:22543 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R22554:22555 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R22534:22535 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R22546:22548 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R22544:22545 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R22549:22553 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.delta var
+binder 22540:22540 <> t:150
+binder 22540:22540 <> t:151
+binder 22540:22540 <> t:152
+R22508:22515 Corelib.Init.Logic <> eq_trans thm
+R22611:22615 mathcomp.boot.ssrnat <> addKn thm
+R22528:22533 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R22536:22539 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R22541:22543 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R22554:22555 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R22534:22535 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R22546:22548 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R22544:22545 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R22549:22553 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.delta var
+binder 22540:22540 <> t:153
+binder 22540:22540 <> t:154
+binder 22540:22540 <> t:155
+R22508:22515 Corelib.Init.Logic <> eq_trans thm
+R22611:22615 mathcomp.boot.ssrnat <> addKn thm
+R22611:22615 mathcomp.boot.ssrnat <> addKn thm
+R22641:22657 prosa.classic.model.schedule.uni.jitter.busy_interval <> actual_hp_service vardef
+R22660:22699 prosa.classic.model.schedule.uni.service Service service_of_higher_or_equal_priority_jobs def
+R22702:22716 prosa.classic.model.schedule.uni.service Service service_of_jobs def
+R22743:22754 mathcomp.boot.bigop <> exchange_big thm
+R22743:22754 mathcomp.boot.bigop <> exchange_big thm
+R22743:22754 mathcomp.boot.bigop <> exchange_big thm
+R22782:22791 mathcomp.boot.bigop <> eq_big_nat thm
+R22782:22791 mathcomp.boot.bigop <> eq_big_nat thm
+R22805:22808 Corelib.ssr.ssrbool <> andP thm
+R22893:22899 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R22910:22938 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R22907:22909 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Job var
+binder 22900:22903 <> j_hp:156
+R22986:23016 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R22939:22964 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.actual_job_arrival_between var
+R22966:22969 prosa.classic.model.schedule.uni.jitter.busy_interval <> j_hp:156 var
+R22971:22972 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R22977:22979 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R22975:22976 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R22980:22984 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.delta var
+R23042:23072 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23017:23034 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.higher_eq_priority var
+R23036:23039 prosa.classic.model.schedule.uni.jitter.busy_interval <> j_hp:156 var
+R23041:23041 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R23073:23084 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R23092:23095 prosa.classic.model.schedule.uni.jitter.busy_interval <> j_hp:156 var
+R23086:23090 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R23161:23162 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R23174:23176 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R23172:23173 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R23177:23181 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.delta var
+R23234:23237 Corelib.ssr.ssrbool <> andP thm
+R23161:23162 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R23174:23176 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R23172:23173 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R23177:23181 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.delta var
+R23234:23237 Corelib.ssr.ssrbool <> andP thm
+R23277:23281 mathcomp.boot.ssrnat <> addn1 thm
+R23290:23296 mathcomp.boot.ssrnat <> leq_add thm
+R23277:23281 mathcomp.boot.ssrnat <> addn1 thm
+R23277:23281 mathcomp.boot.ssrnat <> addn1 thm
+R23290:23296 mathcomp.boot.ssrnat <> leq_add thm
+R23367:23370 Corelib.ssr.ssrbool <> andP thm
+R23418:23427 mathcomp.boot.bigop <> big_mkcond thm
+R23430:23438 mathcomp.boot.bigop <> bigD1_seq thm
+R23464:23483 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_uniq thm
+R23418:23427 mathcomp.boot.bigop <> big_mkcond thm
+R23418:23427 mathcomp.boot.bigop <> big_mkcond thm
+R23430:23438 mathcomp.boot.bigop <> bigD1_seq thm
+R23430:23438 mathcomp.boot.bigop <> bigD1_seq thm
+R23464:23483 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_uniq thm
+R23533:23536 mathcomp.boot.bigop <> big1 thm
+R23557:23566 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_at def
+R23574:23578 mathcomp.boot.ssrnat <> addn0 thm
+R23533:23536 mathcomp.boot.bigop <> big1 thm
+R23533:23536 mathcomp.boot.bigop <> big1 thm
+R23557:23566 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_at def
+R23557:23566 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_at def
+R23574:23578 mathcomp.boot.ssrnat <> addn0 thm
+R23574:23578 mathcomp.boot.ssrnat <> addn0 thm
+R23624:23641 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.higher_eq_priority var
+R23646:23646 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R23624:23641 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.higher_eq_priority var
+R23646:23646 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R23688:23690 mathcomp.boot.eqtype <> eqP def
+R23701:23704 mathcomp.boot.ssrnat <> eqb0 thm
+R23713:23716 Corelib.ssr.ssrbool <> negP thm
+R23688:23690 mathcomp.boot.eqtype <> eqP def
+R23701:23704 mathcomp.boot.ssrnat <> eqb0 thm
+R23701:23704 mathcomp.boot.ssrnat <> eqb0 thm
+R23713:23716 Corelib.ssr.ssrbool <> negP thm
+R23767:23769 mathcomp.boot.eqtype <> eqP def
+R23852:23856 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R23814:23835 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule only_one_job_scheduled thm
+R23852:23856 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R23814:23835 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule only_one_job_scheduled thm
+R23929:23961 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.H_jobs_come_from_arrival_sequence var
+R23929:23961 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.H_jobs_come_from_arrival_sequence var
+R23997:24038 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter arrived_between_implies_in_actual_arrivals thm
+R23997:24038 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter arrived_between_implies_in_actual_arrivals thm
+R24091:24094 Corelib.ssr.ssrbool <> andP thm
+R24091:24094 Corelib.ssr.ssrbool <> andP thm
+prf 24322:24352 BusyInterval busy_interval_too_much_workload
+R24405:24407 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R24408:24424 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.actual_hp_service var
+R24426:24427 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R24432:24434 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R24430:24431 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R24435:24439 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.delta var
+R24371:24388 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.actual_hp_workload var
+R24390:24391 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R24396:24398 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R24394:24395 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R24399:24403 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.delta var
+R24493:24528 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval not_quiet_implies_exists_pending_job thm
+R24722:24744 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_between def
+R24777:24778 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R24783:24785 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R24781:24782 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R24786:24790 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.delta var
+R24769:24775 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.arr_seq var
+R24758:24767 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R24746:24756 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+R24722:24744 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_between def
+R24777:24778 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R24783:24785 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R24781:24782 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R24786:24790 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.delta var
+R24769:24775 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.arr_seq var
+R24758:24767 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R24746:24756 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+R24722:24744 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_between def
+R24777:24778 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R24783:24785 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R24781:24782 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R24786:24790 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.delta var
+R24769:24775 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.arr_seq var
+R24758:24767 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R24746:24756 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+R24821:24838 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.higher_eq_priority var
+R24821:24838 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.higher_eq_priority var
+R24821:24838 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.higher_eq_priority var
+R24864:24880 prosa.classic.model.schedule.uni.jitter.busy_interval <> actual_hp_service vardef
+R24883:24922 prosa.classic.model.schedule.uni.service Service service_of_higher_or_equal_priority_jobs def
+R24925:24939 prosa.classic.model.schedule.uni.service Service service_of_jobs def
+R24965:24982 prosa.classic.model.schedule.uni.jitter.busy_interval <> actual_hp_workload vardef
+R24985:25025 prosa.classic.model.schedule.uni.workload Workload workload_of_higher_or_equal_priority_jobs def
+R25028:25043 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R25067:25081 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.actual_arrivals var
+R25067:25081 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.actual_arrivals var
+R25221:25223 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R25219:25220 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R25224:25228 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.delta var
+R25266:25269 Corelib.ssr.ssrbool <> andP thm
+R25317:25321 mathcomp.boot.ssrnat <> addn1 thm
+R25330:25336 mathcomp.boot.ssrnat <> leq_add thm
+R25221:25223 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R25219:25220 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R25224:25228 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.delta var
+R25266:25269 Corelib.ssr.ssrbool <> andP thm
+R25317:25321 mathcomp.boot.ssrnat <> addn1 thm
+R25317:25321 mathcomp.boot.ssrnat <> addn1 thm
+R25330:25336 mathcomp.boot.ssrnat <> leq_add thm
+R25366:25367 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R25372:25374 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R25370:25371 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R25375:25379 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.delta var
+R25399:25406 mathcomp.boot.ssrnat <> leq_addr thm
+R25366:25367 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R25372:25374 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R25370:25371 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R25375:25379 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.delta var
+R25399:25406 mathcomp.boot.ssrnat <> leq_addr thm
+R25502:25505 Corelib.ssr.ssrbool <> andP thm
+R25564:25568 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R25599:25640 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter arrived_between_implies_in_actual_arrivals thm
+R25657:25660 Corelib.ssr.ssrbool <> andP thm
+R25599:25640 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter arrived_between_implies_in_actual_arrivals thm
+R25657:25660 Corelib.ssr.ssrbool <> andP thm
+R25716:25735 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_uniq thm
+R25699:25702 mathcomp.boot.seq <> uniq def
+R25716:25735 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_uniq thm
+R25771:25780 mathcomp.boot.bigop <> big_mkcond thm
+R25783:25788 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R25790:25793 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R25795:25797 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R25805:25805 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+binder 25789:25789 <> pat:157
+R25808:25817 mathcomp.boot.bigop <> big_mkcond thm
+R25771:25780 mathcomp.boot.bigop <> big_mkcond thm
+R25771:25780 mathcomp.boot.bigop <> big_mkcond thm
+R25808:25817 mathcomp.boot.bigop <> big_mkcond thm
+R25783:25788 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R25790:25793 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R25795:25797 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R25805:25805 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+binder 25789:25789 <> pat:158
+R25783:25788 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R25790:25793 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R25795:25797 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R25805:25805 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+binder 25789:25789 <> pat:159
+R25808:25817 mathcomp.boot.bigop <> big_mkcond thm
+R25845:25853 mathcomp.boot.bigop <> bigD1_seq thm
+R25845:25853 mathcomp.boot.bigop <> bigD1_seq thm
+R25845:25853 mathcomp.boot.bigop <> bigD1_seq thm
+R25914:25922 mathcomp.boot.bigop <> bigD1_seq thm
+R25914:25922 mathcomp.boot.bigop <> bigD1_seq thm
+R25914:25922 mathcomp.boot.bigop <> bigD1_seq thm
+R26017:26021 mathcomp.boot.ssrnat <> add1n thm
+R26023:26027 mathcomp.boot.ssrnat <> addnA thm
+R26031:26033 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R26036:26040 mathcomp.boot.ssrnat <> addnC thm
+R26042:26046 mathcomp.boot.ssrnat <> addn1 thm
+R26017:26021 mathcomp.boot.ssrnat <> add1n thm
+R26017:26021 mathcomp.boot.ssrnat <> add1n thm
+R26023:26027 mathcomp.boot.ssrnat <> addnA thm
+R26023:26027 mathcomp.boot.ssrnat <> addnA thm
+R26036:26040 mathcomp.boot.ssrnat <> addnC thm
+R26031:26033 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R26031:26033 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R26036:26040 mathcomp.boot.ssrnat <> addnC thm
+R26042:26046 mathcomp.boot.ssrnat <> addn1 thm
+R26042:26046 mathcomp.boot.ssrnat <> addn1 thm
+R26071:26077 mathcomp.boot.ssrnat <> leq_add thm
+R26071:26077 mathcomp.boot.ssrnat <> leq_add thm
+R26134:26140 mathcomp.boot.bigop <> leq_sum thm
+R26134:26140 mathcomp.boot.bigop <> leq_sum thm
+R26186:26203 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.higher_eq_priority var
+R26208:26208 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R26186:26203 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.higher_eq_priority var
+R26208:26208 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R26253:26282 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule cumulative_service_le_job_cost thm
+R26253:26282 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule cumulative_service_le_job_cost thm
+R26344:26357 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R26385:26412 prosa.classic.model.schedule.uni.jitter.schedule UniprocessorScheduleWithJitter ignore_service_before_jitter thm
+R26426:26435 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R26414:26424 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+R26474:26477 Corelib.ssr.ssrbool <> andP thm
+R26501:26504 mathcomp.boot.ssrnat <> ltnW thm
+R26385:26412 prosa.classic.model.schedule.uni.jitter.schedule UniprocessorScheduleWithJitter ignore_service_before_jitter thm
+R26426:26435 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R26414:26424 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+R26385:26412 prosa.classic.model.schedule.uni.jitter.schedule UniprocessorScheduleWithJitter ignore_service_before_jitter thm
+R26426:26435 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R26414:26424 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+R26474:26477 Corelib.ssr.ssrbool <> andP thm
+R26501:26504 mathcomp.boot.ssrnat <> ltnW thm
+R26533:26560 prosa.classic.model.schedule.uni.jitter.schedule UniprocessorScheduleWithJitter ignore_service_before_jitter thm
+R26585:26589 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R26574:26583 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R26562:26572 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+R26617:26620 mathcomp.boot.ssrnat <> ltnW thm
+R26533:26560 prosa.classic.model.schedule.uni.jitter.schedule UniprocessorScheduleWithJitter ignore_service_before_jitter thm
+R26585:26589 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R26574:26583 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R26562:26572 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+R26533:26560 prosa.classic.model.schedule.uni.jitter.schedule UniprocessorScheduleWithJitter ignore_service_before_jitter thm
+R26585:26589 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R26574:26583 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R26562:26572 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+R26617:26620 mathcomp.boot.ssrnat <> ltnW thm
+R26652:26657 mathcomp.boot.ssrnat <> ltnNge thm
+R26666:26669 Corelib.ssr.ssrbool <> negP thm
+R26652:26657 mathcomp.boot.ssrnat <> ltnNge thm
+R26652:26657 mathcomp.boot.ssrnat <> ltnNge thm
+R26666:26669 Corelib.ssr.ssrbool <> negP thm
+prf 26908:26950 BusyInterval busy_interval_workload_larger_than_interval
+R27003:27005 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R27006:27010 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.delta var
+R26969:26986 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.actual_hp_workload var
+R26988:26989 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R26994:26996 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R26992:26993 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R26997:27001 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.delta var
+R27062:27100 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval busy_interval_has_uninterrupted_service thm
+R27062:27100 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval busy_interval_has_uninterrupted_service thm
+R27062:27100 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval busy_interval_has_uninterrupted_service thm
+R27128:27158 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval busy_interval_too_much_workload thm
+R27128:27158 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval busy_interval_too_much_workload thm
+R27197:27217 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.CannotBeBusyForSoLong <> sec
+prf 27396:27419 BusyInterval busy_interval_is_bounded
+R27436:27442 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R27445:27462 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 27443:27444 <> t2:160
+R27479:27498 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R27465:27468 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R27463:27464 prosa.classic.model.schedule.uni.jitter.busy_interval <> t2:160 var
+R27471:27473 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R27469:27470 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R27474:27478 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.delta var
+R27499:27511 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval busy_interval def
+R27513:27514 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R27516:27517 prosa.classic.model.schedule.uni.jitter.busy_interval <> t2:160 var
+R27569:27611 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval busy_interval_workload_larger_than_interval thm
+R27644:27664 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.H_workload_is_bounded var
+binder 27770:27770 <> t:161
+R27775:27777 mathcomp.boot.seq <> all def
+R27919:27940 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_before def
+R27973:27973 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:161 var
+R27965:27971 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.arr_seq var
+R27954:27963 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R27942:27952 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+binder 27785:27788 <> j_hp:162
+R27848:27853 Corelib.ssr.ssrbool <> ::bool_scope:x_'==>'_x not
+R27888:27888 Corelib.ssr.ssrbool <> ::bool_scope:x_'==>'_x not
+R27823:27840 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.higher_eq_priority var
+R27842:27845 prosa.classic.model.schedule.uni.jitter.busy_interval <> j_hp:162 var
+R27847:27847 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R27854:27865 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R27887:27887 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:161 var
+R27882:27885 prosa.classic.model.schedule.uni.jitter.busy_interval <> j_hp:162 var
+R27876:27880 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R27867:27874 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_cost var
+binder 27770:27770 <> t:163
+R27775:27777 mathcomp.boot.seq <> all def
+R27919:27940 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_before def
+R27973:27973 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:163 var
+R27965:27971 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.arr_seq var
+R27954:27963 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R27942:27952 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+binder 27785:27788 <> j_hp:164
+R27848:27853 Corelib.ssr.ssrbool <> ::bool_scope:x_'==>'_x not
+R27888:27888 Corelib.ssr.ssrbool <> ::bool_scope:x_'==>'_x not
+R27823:27840 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.higher_eq_priority var
+R27842:27845 prosa.classic.model.schedule.uni.jitter.busy_interval <> j_hp:164 var
+R27847:27847 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R27854:27865 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R27887:27887 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:163 var
+R27882:27885 prosa.classic.model.schedule.uni.jitter.busy_interval <> j_hp:164 var
+R27876:27880 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R27867:27874 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_cost var
+binder 27770:27770 <> t:165
+R27775:27777 mathcomp.boot.seq <> all def
+R27919:27940 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_before def
+R27973:27973 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:165 var
+R27965:27971 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.arr_seq var
+R27954:27963 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R27942:27952 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+binder 27785:27788 <> j_hp:166
+R27848:27853 Corelib.ssr.ssrbool <> ::bool_scope:x_'==>'_x not
+R27888:27888 Corelib.ssr.ssrbool <> ::bool_scope:x_'==>'_x not
+R27823:27840 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.higher_eq_priority var
+R27842:27845 prosa.classic.model.schedule.uni.jitter.busy_interval <> j_hp:166 var
+R27847:27847 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R27854:27865 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R27887:27887 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:165 var
+R27882:27885 prosa.classic.model.schedule.uni.jitter.busy_interval <> j_hp:166 var
+R27876:27880 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.sched var
+R27867:27874 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_cost var
+R28002:28009 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R28012:28012 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R28058:28058 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R28013:28015 mathcomp.boot.fintype <> :::'''I_'_x not
+R28016:28016 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R28027:28030 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R28019:28021 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R28017:28018 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R28022:28026 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.delta var
+binder 28010:28011 <> t2:167
+R28031:28032 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R28033:28033 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R28041:28045 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R28036:28038 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R28039:28040 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R28034:28035 prosa.classic.model.schedule.uni.jitter.busy_interval <> t2:167 var
+R28056:28057 prosa.classic.model.schedule.uni.jitter.busy_interval <> t2:167 var
+binder 28010:28011 <> t2:168
+binder 28010:28011 <> t2:169
+R28002:28009 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R28012:28012 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R28058:28058 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R28013:28015 mathcomp.boot.fintype <> :::'''I_'_x not
+R28016:28016 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R28027:28030 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R28019:28021 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R28017:28018 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R28022:28026 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.delta var
+binder 28010:28011 <> t2:170
+R28031:28032 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R28033:28033 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R28041:28045 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R28036:28038 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R28039:28040 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R28034:28035 prosa.classic.model.schedule.uni.jitter.busy_interval <> t2:170 var
+R28056:28057 prosa.classic.model.schedule.uni.jitter.busy_interval <> t2:170 var
+binder 28010:28011 <> t2:171
+binder 28010:28011 <> t2:172
+R28111:28118 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R28126:28129 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R28169:28169 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R28123:28125 Corelib.Init.Datatypes <> nat ind
+binder 28119:28120 <> t2:173
+R28130:28130 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R28152:28156 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R28133:28135 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x_'<='_x not
+R28138:28141 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x_'<='_x not
+R28131:28132 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R28136:28137 prosa.classic.model.schedule.uni.jitter.busy_interval <> t2:173 var
+R28136:28137 prosa.classic.model.schedule.uni.jitter.busy_interval <> t2:173 var
+R28144:28146 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R28142:28143 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R28147:28151 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.delta var
+R28167:28168 prosa.classic.model.schedule.uni.jitter.busy_interval <> t2:173 var
+R28221:28227 mathcomp.boot.fintype <> existsP thm
+R28234:28237 Corelib.ssr.ssrbool <> andP thm
+R28287:28290 Corelib.ssr.ssrbool <> andP thm
+R28287:28290 Corelib.ssr.ssrbool <> andP thm
+R28341:28344 Corelib.ssr.ssrbool <> andP thm
+R28371:28374 mathcomp.boot.ssrnat <> ltnS thm
+R28383:28389 mathcomp.boot.fintype <> ltn_ord thm
+R28341:28344 Corelib.ssr.ssrbool <> andP thm
+R28371:28374 mathcomp.boot.ssrnat <> ltnS thm
+R28371:28374 mathcomp.boot.ssrnat <> ltnS thm
+R28383:28389 mathcomp.boot.fintype <> ltn_ord thm
+R28438:28445 mathcomp.boot.ssrnat <> ex_minnP thm
+R28486:28489 Corelib.ssr.ssrbool <> andP thm
+R28493:28496 Corelib.ssr.ssrbool <> andP thm
+R28710:28713 mathcomp.boot.seq <> allP thm
+R28795:28836 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter arrived_between_implies_in_actual_arrivals thm
+R28795:28836 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter arrived_between_implies_in_actual_arrivals thm
+R28885:28890 Corelib.ssr.ssrbool <> implyP thm
+R29059:29062 Corelib.ssr.ssrbool <> andP thm
+R29151:29154 Corelib.ssr.ssrbool <> andP thm
+R29199:29202 Corelib.ssr.ssrbool <> andP thm
+R29248:29256 mathcomp.boot.ssrnat <> leq_trans thm
+R29284:29287 mathcomp.boot.ssrnat <> ltnW thm
+R29151:29154 Corelib.ssr.ssrbool <> andP thm
+R29199:29202 Corelib.ssr.ssrbool <> andP thm
+R29248:29256 mathcomp.boot.ssrnat <> leq_trans thm
+R29284:29287 mathcomp.boot.ssrnat <> ltnW thm
+R29317:29320 mathcomp.boot.seq <> allP thm
+R29346:29351 Corelib.ssr.ssrbool <> implyP thm
+R29317:29320 mathcomp.boot.seq <> allP thm
+R29346:29351 Corelib.ssr.ssrbool <> implyP thm
+R29438:29478 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter in_actual_arrivals_before_implies_arrived thm
+R29438:29478 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter in_actual_arrivals_before_implies_arrived thm
+R29516:29556 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter in_actual_arrivals_implies_arrived_before thm
+R29516:29556 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter in_actual_arrivals_implies_arrived_before thm
+R29607:29619 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R29661:29664 mathcomp.boot.ssrnat <> ltnn thm
+R29607:29619 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R29661:29664 mathcomp.boot.ssrnat <> ltnn thm
+R29661:29664 mathcomp.boot.ssrnat <> ltnn thm
+R29728:29732 Corelib.ssr.ssrbool <> negbT thm
+R29749:29759 mathcomp.boot.fintype <> negb_exists thm
+R29728:29732 Corelib.ssr.ssrbool <> negbT thm
+R29749:29759 mathcomp.boot.fintype <> negb_exists thm
+R29749:29759 mathcomp.boot.fintype <> negb_exists thm
+R29781:29787 mathcomp.boot.fintype <> forallP thm
+binder 29828:29828 <> t:174
+R29851:29854 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R29833:29835 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x_'<='_x not
+R29837:29840 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x_'<='_x not
+R29831:29832 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R29836:29836 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:174 var
+R29836:29836 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:174 var
+R29843:29845 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R29841:29842 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.t1 var
+R29846:29850 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound.delta var
+R29855:29856 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R29857:29866 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval quiet_time def
+R29868:29868 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:174 var
+R29918:29921 Corelib.ssr.ssrbool <> andP thm
+R29967:29970 mathcomp.boot.ssrnat <> ltnS thm
+R29967:29970 mathcomp.boot.ssrnat <> ltnS thm
+R29967:29970 mathcomp.boot.ssrnat <> ltnS thm
+R30016:30022 mathcomp.boot.fintype <> Ordinal constr
+R30039:30046 Corelib.ssr.ssrbool <> negb_and thm
+R30055:30058 Corelib.ssr.ssrbool <> orFb thm
+R30016:30022 mathcomp.boot.fintype <> Ordinal constr
+R30039:30046 Corelib.ssr.ssrbool <> negb_and thm
+R30039:30046 Corelib.ssr.ssrbool <> negb_and thm
+R30055:30058 Corelib.ssr.ssrbool <> orFb thm
+R30055:30058 Corelib.ssr.ssrbool <> orFb thm
+R30103:30106 Corelib.ssr.ssrbool <> negP thm
+R30162:30165 mathcomp.boot.seq <> allP thm
+R30191:30196 Corelib.ssr.ssrbool <> implyP thm
+R30162:30165 mathcomp.boot.seq <> allP thm
+R30191:30196 Corelib.ssr.ssrbool <> implyP thm
+R30285:30325 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter in_actual_arrivals_before_implies_arrived thm
+R30285:30325 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter in_actual_arrivals_before_implies_arrived thm
+R30364:30404 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter in_actual_arrivals_implies_arrived_before thm
+R30364:30404 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter in_actual_arrivals_implies_arrived_before thm
+R30559:30562 mathcomp.boot.ssrnat <> ltnn thm
+R30524:30532 mathcomp.boot.ssrnat <> leq_trans thm
+R30559:30562 mathcomp.boot.ssrnat <> ltnn thm
+R30559:30562 mathcomp.boot.ssrnat <> ltnn thm
+R30620:30629 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval.UpperBound <> sec
+R30645:30664 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval.Defs.Lemmas.BoundingBusyInterval.BoundingBusyInterval <> sec
+sec 30808:30836 BusyInterval.Defs.Lemmas.BoundingBusyInterval BusyIntervalFromWorkloadBound
+var 31004:31008 BusyInterval.Defs.Lemmas.BoundingBusyInterval.BusyIntervalFromWorkloadBound delta
+R31011:31014 prosa.classic.model.time Time time def
+var 31038:31053 BusyInterval.Defs.Lemmas.BoundingBusyInterval.BusyIntervalFromWorkloadBound H_delta_positive
+R31061:31063 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R31056:31060 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BusyIntervalFromWorkloadBound.delta var
+var 31088:31108 BusyInterval.Defs.Lemmas.BoundingBusyInterval.BusyIntervalFromWorkloadBound H_workload_is_bounded
+binder 31130:31130 <> t:179
+R31165:31168 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R31133:31150 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.actual_hp_workload var
+R31152:31152 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:179 var
+R31156:31158 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R31155:31155 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:179 var
+R31159:31163 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BusyIntervalFromWorkloadBound.delta var
+R31169:31173 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BusyIntervalFromWorkloadBound.delta var
+var 31348:31362 BusyInterval.Defs.Lemmas.BoundingBusyInterval.BusyIntervalFromWorkloadBound H_positive_cost
+R31375:31377 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R31365:31372 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_cost var
+R31374:31374 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+prf 31542:31561 BusyInterval exists_busy_interval
+R31576:31582 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R31588:31603 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 31583:31584 <> t1:184
+binder 31586:31587 <> t2:185
+R31635:31652 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31606:31609 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R31630:31632 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R31604:31605 prosa.classic.model.schedule.uni.jitter.busy_interval <> t1:184 var
+R31610:31627 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.actual_job_arrival var
+R31629:31629 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R31610:31627 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.actual_job_arrival var
+R31629:31629 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R31633:31634 prosa.classic.model.schedule.uni.jitter.busy_interval <> t2:185 var
+R31669:31686 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31655:31658 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R31653:31654 prosa.classic.model.schedule.uni.jitter.busy_interval <> t2:185 var
+R31661:31663 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R31659:31660 prosa.classic.model.schedule.uni.jitter.busy_interval <> t1:184 var
+R31664:31668 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BusyIntervalFromWorkloadBound.delta var
+R31687:31699 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval busy_interval def
+R31701:31702 prosa.classic.model.schedule.uni.jitter.busy_interval <> t1:184 var
+R31704:31705 prosa.classic.model.schedule.uni.jitter.busy_interval <> t2:185 var
+R31752:31778 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval exists_busy_interval_prefix thm
+R31859:31876 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.actual_job_arrival var
+R31878:31878 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R31859:31876 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.actual_job_arrival var
+R31878:31878 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R31917:31920 Corelib.ssr.ssrbool <> andP thm
+R31945:31949 mathcomp.boot.ssrnat <> leqnn thm
+R31917:31920 Corelib.ssr.ssrbool <> andP thm
+R31945:31949 mathcomp.boot.ssrnat <> leqnn thm
+R31975:31986 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R31989:31995 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R31998:32011 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R31975:31986 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R31975:31986 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R31989:31995 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R31989:31995 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R31998:32011 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R31998:32011 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R32037:32076 prosa.classic.model.schedule.uni.jitter.schedule UniprocessorScheduleWithJitter cumulative_service_before_jitter_is_zero thm
+R32090:32099 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R32078:32088 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+R32037:32076 prosa.classic.model.schedule.uni.jitter.schedule UniprocessorScheduleWithJitter cumulative_service_before_jitter_is_zero thm
+R32090:32099 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R32078:32088 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+R32037:32076 prosa.classic.model.schedule.uni.jitter.schedule UniprocessorScheduleWithJitter cumulative_service_before_jitter_is_zero thm
+R32090:32099 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R32078:32088 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+R32134:32139 mathcomp.boot.ssrnat <> ltnNge thm
+R32134:32139 mathcomp.boot.ssrnat <> ltnNge thm
+R32134:32139 mathcomp.boot.ssrnat <> ltnNge thm
+R32197:32200 Corelib.ssr.ssrbool <> andP thm
+R32245:32268 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval busy_interval_is_bounded thm
+R32303:32307 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.BusyIntervalFromWorkloadBound.delta var
+R32271:32288 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.actual_job_arrival var
+R32290:32290 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R32470:32473 Corelib.ssr.ssrbool <> andP thm
+R32470:32473 Corelib.ssr.ssrbool <> andP thm
+R32518:32524 Corelib.ssr.ssrbool <> contraT thm
+R32536:32541 mathcomp.boot.ssrnat <> leqNgt thm
+R32518:32524 Corelib.ssr.ssrbool <> contraT thm
+R32536:32541 mathcomp.boot.ssrnat <> leqNgt thm
+R32536:32541 mathcomp.boot.ssrnat <> leqNgt thm
+R32674:32677 Corelib.ssr.ssrbool <> andP thm
+R32674:32677 Corelib.ssr.ssrbool <> andP thm
+R32797:32825 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval.Defs.Lemmas.BoundingBusyInterval.BusyIntervalFromWorkloadBound <> sec
+sec 32977:33009 BusyInterval.Defs.Lemmas.BoundingBusyInterval ResponseTimeBoundFromBusyInterval
+var 33177:33181 BusyInterval.Defs.Lemmas.BoundingBusyInterval.ResponseTimeBoundFromBusyInterval delta
+R33184:33187 prosa.classic.model.time Time time def
+var 33211:33226 BusyInterval.Defs.Lemmas.BoundingBusyInterval.ResponseTimeBoundFromBusyInterval H_delta_positive
+R33234:33236 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R33229:33233 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.ResponseTimeBoundFromBusyInterval.delta var
+var 33261:33281 BusyInterval.Defs.Lemmas.BoundingBusyInterval.ResponseTimeBoundFromBusyInterval H_workload_is_bounded
+binder 33303:33303 <> t:190
+R33352:33355 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R33320:33337 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.actual_hp_workload var
+R33339:33339 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:190 var
+R33343:33345 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R33342:33342 prosa.classic.model.schedule.uni.jitter.busy_interval <> t:190 var
+R33346:33350 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.ResponseTimeBoundFromBusyInterval.delta var
+R33356:33360 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.ResponseTimeBoundFromBusyInterval.delta var
+prf 33457:33490 BusyInterval busy_interval_bounds_response_time
+R33505:33520 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_completed_by var
+R33522:33522 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R33545:33547 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R33525:33542 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.actual_job_arrival var
+R33544:33544 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R33548:33552 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.ResponseTimeBoundFromBusyInterval.delta var
+R33598:33617 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval exists_busy_interval thm
+R33619:33623 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.ResponseTimeBoundFromBusyInterval.delta var
+R33645:33649 mathcomp.boot.ssrnat <> posnP thm
+R33652:33659 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_cost var
+R33661:33661 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R33645:33649 mathcomp.boot.ssrnat <> posnP thm
+R33652:33659 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_cost var
+R33661:33661 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R33645:33649 mathcomp.boot.ssrnat <> posnP thm
+R33652:33659 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_cost var
+R33661:33661 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R33703:33718 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_completed_by var
+R33721:33732 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R33703:33718 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_completed_by var
+R33703:33718 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_completed_by var
+R33721:33732 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R33721:33732 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R33817:33820 Corelib.ssr.ssrbool <> andP thm
+R33865:33884 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completion_monotonic thm
+R33969:33971 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R33972:33976 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.ResponseTimeBoundFromBusyInterval.delta var
+R33946:33954 mathcomp.boot.ssrnat <> leq_trans thm
+R33994:34002 mathcomp.boot.ssrnat <> leq_add2r thm
+R33865:33884 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completion_monotonic thm
+R33969:33971 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R33972:33976 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.Lemmas.BoundingBusyInterval.ResponseTimeBoundFromBusyInterval.delta var
+R33946:33954 mathcomp.boot.ssrnat <> leq_trans thm
+R33994:34002 mathcomp.boot.ssrnat <> leq_add2r thm
+R33994:34002 mathcomp.boot.ssrnat <> leq_add2r thm
+R34081:34098 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.actual_job_arrival var
+R34100:34100 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R34024:34057 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval job_completes_within_busy_interval thm
+R34148:34151 Corelib.ssr.ssrbool <> andP thm
+R34081:34098 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.actual_job_arrival var
+R34100:34100 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.j var
+R34024:34057 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval job_completes_within_busy_interval thm
+R34148:34151 Corelib.ssr.ssrbool <> andP thm
+R34179:34182 Corelib.ssr.ssrbool <> andP thm
+R34207:34211 mathcomp.boot.ssrnat <> leqnn thm
+R34179:34182 Corelib.ssr.ssrbool <> andP thm
+R34207:34211 mathcomp.boot.ssrnat <> leqnn thm
+R34235:34246 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R34249:34255 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R34258:34271 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R34235:34246 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R34235:34246 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R34249:34255 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R34249:34255 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R34258:34271 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R34258:34271 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R34295:34334 prosa.classic.model.schedule.uni.jitter.schedule UniprocessorScheduleWithJitter cumulative_service_before_jitter_is_zero thm
+R34348:34357 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R34336:34346 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+R34295:34334 prosa.classic.model.schedule.uni.jitter.schedule UniprocessorScheduleWithJitter cumulative_service_before_jitter_is_zero thm
+R34348:34357 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R34336:34346 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+R34295:34334 prosa.classic.model.schedule.uni.jitter.schedule UniprocessorScheduleWithJitter cumulative_service_before_jitter_is_zero thm
+R34348:34357 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_jitter var
+R34336:34346 prosa.classic.model.schedule.uni.jitter.busy_interval <> BusyInterval.Defs.job_arrival var
+R34390:34395 mathcomp.boot.ssrnat <> ltnNge thm
+R34390:34395 mathcomp.boot.ssrnat <> ltnNge thm
+R34390:34395 mathcomp.boot.ssrnat <> ltnNge thm
+R34426:34458 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval.Defs.Lemmas.BoundingBusyInterval.ResponseTimeBoundFromBusyInterval <> sec
+R34479:34498 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval.Defs.Lemmas.BoundingBusyInterval <> sec
+R34515:34520 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval.Defs.Lemmas <> sec
+R34534:34537 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval.Defs <> sec
+R34545:34556 prosa.classic.model.schedule.uni.jitter.busy_interval BusyInterval <> mod

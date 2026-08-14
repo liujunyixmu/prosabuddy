@@ -1,0 +1,841 @@
+DIGEST f2444985270e95da1dc9e576faa7e5be
+Fprosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound
+R15:36 prosa.classic.util.all <> <> lib
+R54:90 prosa.classic.model.arrival.basic.job <> <> lib
+R107:152 prosa.classic.model.arrival.basic.task_arrival <> <> lib
+R169:196 prosa.classic.model.priority <> <> lib
+R214:253 prosa.classic.model.schedule.uni.service <> <> lib
+R270:310 prosa.classic.model.schedule.uni.workload <> <> lib
+R327:367 prosa.classic.model.schedule.uni.schedule <> <> lib
+R384:429 prosa.classic.model.schedule.uni.response_time <> <> lib
+R448:508 prosa.classic.model.schedule.uni.limited.platform.definitions <> <> lib
+R525:603 prosa.classic.model.schedule.uni.limited.platform.priority_inversion_is_bounded <> <> lib
+R620:668 prosa.classic.model.schedule.uni.limited.schedule <> <> lib
+R685:738 prosa.classic.model.schedule.uni.limited.busy_interval <> <> lib
+R755:818 prosa.classic.model.schedule.uni.limited.edf.response_time_bound <> <> lib
+R835:878 prosa.classic.model.schedule.uni.limited.rbf <> <> lib
+R896:936 prosa.classic.model.arrival.curves.bounds <> <> lib
+R954:1009 prosa.classic.analysis.uni.arrival_curves.workload_bound <> <> lib
+R1042:1050 mathcomp.boot.ssreflect <> <> lib
+R1052:1058 mathcomp.boot.ssrbool <> <> lib
+R1060:1065 mathcomp.boot.eqtype <> <> lib
+R1067:1072 mathcomp.boot.ssrnat <> <> lib
+R1074:1076 mathcomp.boot.seq <> <> lib
+R1078:1081 mathcomp.boot.path <> <> lib
+R1083:1089 mathcomp.boot.fintype <> <> lib
+R1091:1095 mathcomp.boot.bigop <> <> lib
+mod 1247:1304 <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves
+R1317:1319 prosa.classic.model.arrival.basic.job Job <> mod
+R1321:1333 prosa.classic.model.arrival.curves.bounds ArrivalCurves <> mod
+R1335:1345 prosa.classic.model.arrival.basic.task_arrival TaskArrival <> mod
+R1347:1354 prosa.classic.model.priority Priority <> mod
+R1357:1376 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule <> mod
+R1378:1385 prosa.classic.model.schedule.uni.workload Workload <> mod
+R1387:1393 prosa.classic.model.schedule.uni.service Service <> mod
+R1404:1415 prosa.classic.model.schedule.uni.response_time ResponseTime <> mod
+R1417:1440 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound <> mod
+R1442:1466 prosa.classic.model.schedule.uni.limited.platform.definitions LimitedPreemptionPlatform <> mod
+R1468:1470 prosa.classic.model.schedule.uni.limited.rbf RBF <> mod
+R1482:1515 prosa.classic.model.schedule.uni.limited.edf.response_time_bound AbstractRTAforEDFwithArrivalCurves <> mod
+R1517:1532 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP <> mod
+R1534:1559 prosa.classic.model.schedule.uni.limited.platform.priority_inversion_is_bounded PriorityInversionIsBounded <> mod
+sec 1574:1581 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves Analysis
+var  1598:1601 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis Task
+R1604:1609 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1626:1637 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis task_max_nps
+var 1639:1647 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis task_cost
+R1654:1657 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1650:1653 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.Task var
+R1658:1661 prosa.classic.model.time Time time def
+var 1677:1689 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis task_deadline
+R1696:1699 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1692:1695 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.Task var
+R1700:1703 prosa.classic.model.time Time time def
+var  1724:1726 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis Job
+R1729:1734 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1751:1761 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis job_arrival
+R1767:1770 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1764:1766 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.Job var
+R1771:1774 prosa.classic.model.time Time time def
+var 1790:1800 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis job_max_nps
+var 1802:1809 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis job_cost
+R1815:1818 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1812:1814 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.Job var
+R1819:1822 prosa.classic.model.time Time time def
+var 1838:1845 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis job_task
+R1851:1854 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1848:1850 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.Job var
+R1855:1858 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.Task var
+var 1948:1948 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis D
+binder 1950:1952 <> tsk:17
+R1957:1969 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.task_deadline var
+R1971:1973 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> tsk:17 var
+var 2078:2098 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis job_relative_deadline
+binder 2100:2100 <> j:18
+R2105:2105 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.D var
+R2108:2115 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_task var
+R2117:2117 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> j:18 var
+var 2218:2224 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis arr_seq
+R2227:2242 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R2244:2246 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.Job var
+var 2264:2293 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis H_arrival_times_are_consistent
+R2296:2323 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_times_are_consistent def
+R2337:2343 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.arr_seq var
+R2325:2335 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_arrival var
+var 2361:2378 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis H_arr_seq_is_a_set
+R2381:2405 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence_is_a_set def
+R2407:2413 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.arr_seq var
+var 2512:2516 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis sched
+R2519:2526 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R2528:2530 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.Job var
+var 2548:2580 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis H_jobs_come_from_arrival_sequence
+R2583:2613 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule jobs_come_from_arrival_sequence def
+R2621:2627 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.arr_seq var
+R2615:2619 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.sched var
+var 2729:2757 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis H_jobs_must_arrive_to_execute
+R2760:2786 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule jobs_must_arrive_to_execute def
+R2800:2804 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.sched var
+R2788:2798 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_arrival var
+var 2822:2850 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis H_completed_jobs_dont_execute
+R2853:2879 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_jobs_dont_execute def
+R2890:2894 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.sched var
+R2881:2888 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_cost var
+var 3031:3047 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis H_sequential_jobs
+R3050:3064 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule sequential_jobs def
+R3093:3100 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_task var
+R3087:3091 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.sched var
+R3078:3085 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_cost var
+R3066:3076 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_arrival var
+var 3198:3215 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis higher_eq_priority
+R3218:3228 prosa.classic.model.priority Priority JLFP_policy def
+R3230:3232 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.Job var
+R3237:3239 prosa.classic.model.priority Priority EDF def
+R3253:3273 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_relative_deadline var
+R3241:3251 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_arrival var
+var 3433:3448 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis can_be_preempted
+R3454:3457 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3451:3453 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.Job var
+R3462:3465 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3458:3461 prosa.classic.model.time Time time def
+R3466:3469 Corelib.Init.Datatypes <> bool ind
+var 3480:3494 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis preemption_time
+R3499:3513 prosa.classic.model.schedule.uni.limited.platform.definitions LimitedPreemptionPlatform preemption_time def
+R3521:3536 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.can_be_preempted var
+R3515:3519 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.sched var
+var 3554:3579 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis H_correct_preemption_model
+R3588:3611 prosa.classic.model.schedule.uni.limited.platform.definitions LimitedPreemptionPlatform correct_preemption_model def
+R3627:3642 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.can_be_preempted var
+R3621:3625 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.sched var
+R3613:3619 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.arr_seq var
+var 3660:3702 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis H_model_with_bounded_nonpreemptive_segments
+R3711:3751 prosa.classic.model.schedule.uni.limited.platform.definitions LimitedPreemptionPlatform model_with_bounded_nonpreemptive_segments def
+R3816:3827 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.task_max_nps var
+R3804:3814 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_max_nps var
+R3787:3802 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.can_be_preempted var
+R3779:3785 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.arr_seq var
+R3770:3777 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_task var
+R3761:3768 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_cost var
+var 3927:3943 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis H_work_conserving
+R3946:3960 prosa.classic.model.schedule.uni.limited.platform.definitions LimitedPreemptionPlatform work_conserving def
+R3974:3981 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_cost var
+R3983:3989 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.arr_seq var
+R3991:3995 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.sched var
+R3962:3972 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_arrival var
+var 4154:4170 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis H_respects_policy
+R4179:4218 prosa.classic.model.schedule.uni.limited.platform.definitions LimitedPreemptionPlatform respects_JLFP_policy_at_preemption_point def
+R4280:4297 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.higher_eq_priority var
+R4263:4278 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.can_be_preempted var
+R4257:4261 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.sched var
+R4249:4255 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.arr_seq var
+R4240:4247 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_cost var
+R4228:4238 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_arrival var
+var 4363:4364 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis ts
+R4367:4370 Corelib.Init.Datatypes <> list ind
+R4372:4375 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.Task var
+var 4455:4477 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis H_all_jobs_from_taskset
+binder 4493:4493 <> j:47
+R4516:4519 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4496:4505 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R4515:4515 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> j:47 var
+R4507:4513 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.arr_seq var
+R4530:4534 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R4520:4527 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_task var
+R4529:4529 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> j:47 var
+R4535:4536 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.ts var
+var 4627:4649 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis H_job_cost_le_task_cost
+R4658:4704 prosa.classic.model.arrival.basic.job Job cost_of_jobs_from_arrival_sequence_le_task_cost def
+R4742:4748 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.arr_seq var
+R4733:4740 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_task var
+R4724:4731 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_cost var
+R4714:4722 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.task_cost var
+var 4825:4827 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis tsk
+R4830:4833 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.Task var
+var 4851:4861 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis H_tsk_in_ts
+R4867:4871 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R4864:4866 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.tsk var
+R4872:4873 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.ts var
+var 5137:5148 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis max_arrivals
+R5155:5158 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5151:5154 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.Task var
+R5163:5166 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5159:5162 prosa.classic.model.time Time time def
+R5167:5169 Corelib.Init.Datatypes <> nat ind
+var 5187:5219 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis H_family_of_proper_arrival_curves
+R5228:5258 prosa.classic.model.arrival.curves.bounds ArrivalCurves family_of_proper_arrival_curves def
+R5290:5291 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.ts var
+R5277:5288 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.max_arrivals var
+R5269:5275 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.arr_seq var
+R5260:5267 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_task var
+var 5395:5413 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis job_lock_in_service
+R5419:5422 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5416:5418 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.Job var
+R5423:5426 prosa.classic.model.time Time time def
+var 5442:5461 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis task_lock_in_service
+R5468:5471 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5464:5467 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.Task var
+R5472:5475 prosa.classic.model.time Time time def
+var 5739:5766 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis H_proper_job_lock_in_service
+R5775:5800 prosa.classic.model.schedule.uni.limited.schedule <> proper_job_lock_in_service def
+R5825:5843 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_lock_in_service var
+R5819:5823 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.sched var
+R5811:5817 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.arr_seq var
+R5802:5809 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_cost var
+var 6036:6064 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis H_proper_task_lock_in_service
+R6073:6099 prosa.classic.model.schedule.uni.limited.schedule <> proper_task_lock_in_service def
+R6177:6179 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.tsk var
+R6156:6175 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.task_lock_in_service var
+R6136:6154 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_lock_in_service var
+R6128:6134 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.arr_seq var
+R6119:6126 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_task var
+R6109:6117 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.task_cost var
+var 6354:6356 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis rbf
+R6361:6387 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound task_request_bound_function def
+R6399:6410 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.max_arrivals var
+R6389:6397 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.task_cost var
+var 6535:6542 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis task_rbf
+R6547:6549 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.rbf var
+R6551:6553 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.tsk var
+var 6718:6726 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis total_rbf
+R6731:6758 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound total_request_bound_function def
+R6783:6784 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.ts var
+R6770:6781 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.max_arrivals var
+R6760:6768 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.task_cost var
+var 6939:6965 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis bound_on_total_hep_workload
+binder 6968:6968 <> A:68
+binder 6970:6971 <> Δ:69
+R6982:6987 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R6993:6996 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R6999:7001 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R7014:7022 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R6997:6998 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.ts var
+binder 6988:6992 <> tsk_o:70
+binder 6988:6992 <> tsk_o:71
+binder 6988:6992 <> tsk_o:72
+R7007:7010 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R7002:7006 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> tsk_o:70 var
+R7011:7013 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.tsk var
+R7023:7025 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.rbf var
+R7027:7031 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> tsk_o:70 var
+R7034:7037 mathcomp.boot.ssrnat <> minn def
+R7068:7069 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> Δ:69 var
+R7056:7058 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R7040:7040 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R7047:7050 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R7042:7044 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R7041:7041 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> A:68 var
+R7045:7046 prosa.util.epsilon <> ε abbrev
+R7051:7051 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.D var
+R7053:7055 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.tsk var
+R7059:7059 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.D var
+R7061:7065 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> tsk_o:70 var
+var 7135:7148 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis job_pending_at
+R7153:7159 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R7182:7186 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.sched var
+R7173:7180 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_cost var
+R7161:7171 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_arrival var
+var 7197:7212 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis job_scheduled_at
+R7217:7228 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R7230:7234 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.sched var
+var 7245:7260 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis job_completed_by
+R7265:7276 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R7287:7291 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.sched var
+R7278:7285 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_cost var
+var 7302:7318 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis job_backlogged_at
+R7323:7332 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule backlogged def
+R7355:7359 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.sched var
+R7346:7353 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_cost var
+R7334:7344 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_arrival var
+var 7370:7385 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis arrivals_between
+R7390:7409 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R7411:7417 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.arr_seq var
+var 7428:7446 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis task_rbf_changes_at
+binder 7448:7448 <> A:73
+R7453:7471 prosa.classic.model.schedule.uni.limited.edf.response_time_bound AbstractRTAforEDFwithArrivalCurves task_rbf_changes_at def
+R7500:7500 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> A:73 var
+R7496:7498 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.tsk var
+R7483:7494 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.max_arrivals var
+R7473:7481 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.task_cost var
+var 7511:7548 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis bound_on_total_hep_workload_changes_at
+R7559:7596 prosa.classic.model.schedule.uni.limited.edf.response_time_bound AbstractRTAforEDFwithArrivalCurves bound_on_total_hep_workload_changes_at def
+R7638:7640 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.tsk var
+R7625:7636 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.max_arrivals var
+R7622:7623 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.ts var
+R7608:7620 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.task_deadline var
+R7598:7606 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.task_cost var
+var 7651:7674 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis response_time_bounded_by
+R7685:7714 prosa.classic.model.schedule.uni.response_time ResponseTime is_response_time_bound_of_task def
+R7754:7758 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.sched var
+R7746:7752 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.arr_seq var
+R7737:7744 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_task var
+R7728:7735 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_cost var
+R7716:7726 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_arrival var
+var 7769:7800 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis max_length_of_priority_inversion
+R7811:7842 prosa.classic.model.schedule.uni.limited.platform.priority_inversion_is_bounded PriorityInversionIsBounded max_length_of_priority_inversion def
+R7864:7881 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.higher_eq_priority var
+R7856:7862 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.arr_seq var
+R7844:7854 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_max_nps var
+def 8000:8013 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves blocking_bound
+R8024:8029 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<-'_x_'|'_x_')'_x not
+R8039:8042 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<-'_x_'|'_x_')'_x not
+R8045:8047 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<-'_x_'|'_x_')'_x not
+R8091:8100 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<-'_x_'|'_x_')'_x not
+R8128:8128 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<-'_x_'|'_x_')'_x not
+R8043:8044 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.ts var
+binder 8030:8038 <> tsk_other:74
+binder 8030:8038 <> tsk_other:75
+binder 8030:8038 <> tsk_other:76
+R8048:8048 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8065:8070 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8090:8090 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8058:8061 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R8049:8057 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> tsk_other:74 var
+R8062:8064 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.tsk var
+R8076:8078 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R8071:8071 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.D var
+R8073:8075 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.tsk var
+R8079:8079 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.D var
+R8081:8089 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> tsk_other:74 var
+R8123:8125 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R8101:8112 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.task_max_nps var
+R8114:8122 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> tsk_other:74 var
+R8126:8127 prosa.util.epsilon <> ε abbrev
+sec 8372:8397 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis PriorityInversionIsBounded
+prf 8640:8680 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves priority_inversion_is_bounded_by_blocking
+binder 8698:8698 <> j:77
+binder 8700:8700 <> t:78
+R8733:8746 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8713:8722 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R8732:8732 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> j:77 var
+R8724:8730 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.arr_seq var
+R8763:8776 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8757:8759 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8747:8754 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_task var
+R8756:8756 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> j:77 var
+R8760:8762 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.tsk var
+R8795:8808 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8778:8781 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R8777:8777 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> t:78 var
+R8782:8792 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_arrival var
+R8794:8794 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> j:77 var
+R8845:8848 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R8809:8840 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.max_length_of_priority_inversion var
+R8842:8842 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> j:77 var
+R8844:8844 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> t:78 var
+R8849:8862 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves blocking_bound def
+R8926:8957 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> max_length_of_priority_inversion vardef
+R8960:8973 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves blocking_bound def
+R9019:9024 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<-'_x_'|'_x_')'_x not
+R9029:9032 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<-'_x_'|'_x_')'_x not
+R9065:9086 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<-'_x_'|'_x_')'_x not
+R9115:9131 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<-'_x_'|'_x_')'_x not
+R9165:9165 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<-'_x_'|'_x_')'_x not
+R9033:9052 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R9054:9060 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.arr_seq var
+binder 9025:9028 <> j_lp:79
+binder 9025:9028 <> j_lp:80
+binder 9025:9028 <> j_lp:81
+R9087:9089 Corelib.ssr.ssrbool <> ::bool_scope:'~~'_x not
+R9090:9107 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.higher_eq_priority var
+R9109:9112 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> j_lp:79 var
+R9160:9162 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R9132:9143 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.task_max_nps var
+R9146:9153 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_task var
+R9155:9158 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> j_lp:79 var
+R9163:9164 prosa.util.epsilon <> ε abbrev
+R8991:8999 mathcomp.boot.ssrnat <> leq_trans thm
+R9019:9024 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<-'_x_'|'_x_')'_x not
+R9029:9032 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<-'_x_'|'_x_')'_x not
+R9065:9086 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<-'_x_'|'_x_')'_x not
+R9115:9131 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<-'_x_'|'_x_')'_x not
+R9165:9165 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<-'_x_'|'_x_')'_x not
+R9033:9052 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R9054:9060 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.arr_seq var
+binder 9025:9028 <> j_lp:82
+binder 9025:9028 <> j_lp:83
+binder 9025:9028 <> j_lp:84
+R9087:9089 Corelib.ssr.ssrbool <> ::bool_scope:'~~'_x not
+R9090:9107 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.higher_eq_priority var
+R9109:9112 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> j_lp:82 var
+R9160:9162 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R9132:9143 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.task_max_nps var
+R9146:9153 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_task var
+R9155:9158 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> j_lp:82 var
+R9163:9164 prosa.util.epsilon <> ε abbrev
+R8991:8999 mathcomp.boot.ssrnat <> leq_trans thm
+R9198:9208 prosa.util.minmax <> leq_big_max thm
+R9198:9208 prosa.util.minmax <> leq_big_max thm
+R9267:9289 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.H_job_cost_le_task_cost var
+R9267:9289 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.H_job_cost_le_task_cost var
+R9311:9333 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.H_job_cost_le_task_cost var
+R9354:9374 prosa.util.bigcat <> mem_bigcat_nat_exists thm
+R9354:9374 prosa.util.bigcat <> mem_bigcat_nat_exists thm
+R9474:9482 mathcomp.boot.ssrnat <> leq_sub2r thm
+R9474:9482 mathcomp.boot.ssrnat <> leq_sub2r thm
+R9474:9482 mathcomp.boot.ssrnat <> leq_sub2r thm
+R9504:9530 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R9504:9530 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R9558:9600 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.H_model_with_bounded_nonpreemptive_segments var
+R9558:9600 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.H_model_with_bounded_nonpreemptive_segments var
+R9558:9600 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.H_model_with_bounded_nonpreemptive_segments var
+R9680:9694 prosa.util.minmax <> bigmax_leq_seqP thm
+R9680:9694 prosa.util.minmax <> bigmax_leq_seqP thm
+R9793:9800 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_task var
+binder 9817:9819 <> tsk:85
+R9840:9842 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R9824:9835 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.task_max_nps var
+R9837:9839 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> tsk:85 var
+R9747:9765 prosa.util.minmax <> leq_bigmax_cond_seq thm
+R9793:9800 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_task var
+binder 9817:9819 <> tsk:86
+R9840:9842 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R9824:9835 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.task_max_nps var
+R9837:9839 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> tsk:86 var
+R9747:9765 prosa.util.minmax <> leq_bigmax_cond_seq thm
+R9866:9888 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.H_all_jobs_from_taskset var
+R9866:9888 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.H_all_jobs_from_taskset var
+R9909:9929 prosa.util.bigcat <> mem_bigcat_nat_exists thm
+R9909:9929 prosa.util.bigcat <> mem_bigcat_nat_exists thm
+R10041:10044 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R10030:10037 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_task var
+R10045:10047 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.tsk var
+R10070:10072 mathcomp.boot.eqtype <> eqP def
+R10070:10072 mathcomp.boot.eqtype <> eqP def
+R10112:10129 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.higher_eq_priority var
+R10132:10134 prosa.classic.model.priority Priority EDF def
+R10137:10142 mathcomp.boot.ssrnat <> ltnNge thm
+R10112:10129 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.higher_eq_priority var
+R10112:10129 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.higher_eq_priority var
+R10132:10134 prosa.classic.model.priority Priority EDF def
+R10132:10134 prosa.classic.model.priority Priority EDF def
+R10137:10142 mathcomp.boot.ssrnat <> ltnNge thm
+R10137:10142 mathcomp.boot.ssrnat <> ltnNge thm
+R10178:10198 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_relative_deadline var
+R10210:10218 mathcomp.boot.ssrnat <> ltn_add2r thm
+R10178:10198 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_relative_deadline var
+R10178:10198 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_relative_deadline var
+R10210:10218 mathcomp.boot.ssrnat <> ltn_add2r thm
+R10210:10218 mathcomp.boot.ssrnat <> ltn_add2r thm
+R10267:10272 mathcomp.boot.ssrnat <> ltnNge thm
+R10267:10272 mathcomp.boot.ssrnat <> ltnNge thm
+R10267:10272 mathcomp.boot.ssrnat <> ltnNge thm
+R10284:10287 Corelib.ssr.ssrbool <> negP thm
+R10322:10330 mathcomp.boot.ssrnat <> leq_trans thm
+R10322:10330 mathcomp.boot.ssrnat <> leq_trans thm
+R10375:10409 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived_between thm
+R10375:10409 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived_between thm
+R10472:10475 Corelib.ssr.ssrbool <> andP thm
+R10509:10512 mathcomp.boot.ssrnat <> ltnW thm
+R10509:10512 mathcomp.boot.ssrnat <> ltnW thm
+R10547:10550 Corelib.ssr.ssrbool <> andP thm
+R10547:10550 Corelib.ssr.ssrbool <> andP thm
+R10596:10613 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.higher_eq_priority var
+R10616:10618 prosa.classic.model.priority Priority EDF def
+R10621:10641 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_relative_deadline var
+R10644:10649 mathcomp.boot.ssrnat <> ltnNge thm
+R10596:10613 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.higher_eq_priority var
+R10596:10613 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.higher_eq_priority var
+R10616:10618 prosa.classic.model.priority Priority EDF def
+R10616:10618 prosa.classic.model.priority Priority EDF def
+R10621:10641 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_relative_deadline var
+R10621:10641 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_relative_deadline var
+R10644:10649 mathcomp.boot.ssrnat <> ltnNge thm
+R10644:10649 mathcomp.boot.ssrnat <> ltnNge thm
+R10726:10728 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R10712:10722 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_arrival var
+R10729:10739 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_arrival var
+R10764:10772 mathcomp.boot.ssrnat <> leq_trans thm
+R10764:10772 mathcomp.boot.ssrnat <> leq_trans thm
+R10817:10851 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived_between thm
+R10817:10851 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived_between thm
+R10919:10922 Corelib.ssr.ssrbool <> andP thm
+binder 10972:10972 <> a:87
+binder 10974:10974 <> b:88
+binder 10976:10976 <> c:89
+binder 10978:10978 <> d:90
+R10994:10997 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R10986:10988 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R10982:10984 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R10981:10981 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> a:87 var
+R10985:10985 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> b:88 var
+R10990:10992 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R10989:10989 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> c:89 var
+R10993:10993 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> d:90 var
+R11003:11006 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R10999:11001 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R11002:11002 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> c:89 var
+R10998:10998 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> a:87 var
+R11008:11010 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R11007:11007 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> b:88 var
+R11011:11011 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> d:90 var
+R11080:11084 mathcomp.boot.ssrnat <> addn1 thm
+R11087:11091 mathcomp.boot.ssrnat <> addnA thm
+R11094:11102 mathcomp.boot.ssrnat <> leq_subLR thm
+R11105:11109 prosa.classic.util.nat <> subh1 thm
+R11131:11134 mathcomp.boot.ssrnat <> ltnW thm
+R11080:11084 mathcomp.boot.ssrnat <> addn1 thm
+R11080:11084 mathcomp.boot.ssrnat <> addn1 thm
+R11087:11091 mathcomp.boot.ssrnat <> addnA thm
+R11087:11091 mathcomp.boot.ssrnat <> addnA thm
+R11094:11102 mathcomp.boot.ssrnat <> leq_subLR thm
+R11094:11102 mathcomp.boot.ssrnat <> leq_subLR thm
+R11105:11109 prosa.classic.util.nat <> subh1 thm
+R11105:11109 prosa.classic.util.nat <> subh1 thm
+R11131:11134 mathcomp.boot.ssrnat <> ltnW thm
+R11159:11163 mathcomp.boot.ssrnat <> addn1 thm
+R11165:11169 mathcomp.boot.ssrnat <> addnS thm
+R11159:11163 mathcomp.boot.ssrnat <> addn1 thm
+R11159:11163 mathcomp.boot.ssrnat <> addn1 thm
+R11165:11169 mathcomp.boot.ssrnat <> addnS thm
+R11165:11169 mathcomp.boot.ssrnat <> addnS thm
+R11200:11207 mathcomp.boot.ssrnat <> subn_gt0 thm
+R11200:11207 mathcomp.boot.ssrnat <> subn_gt0 thm
+R11200:11207 mathcomp.boot.ssrnat <> subn_gt0 thm
+R11257:11259 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R11253:11255 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R11236:11244 mathcomp.boot.ssrnat <> ltn_trans thm
+R11257:11259 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R11253:11255 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R11236:11244 mathcomp.boot.ssrnat <> ltn_trans thm
+R11299:11303 mathcomp.boot.ssrnat <> addnC thm
+R11299:11303 mathcomp.boot.ssrnat <> addnC thm
+R11299:11303 mathcomp.boot.ssrnat <> addnC thm
+R11319:11323 mathcomp.boot.ssrnat <> addn0 thm
+R11319:11323 mathcomp.boot.ssrnat <> addn0 thm
+R11319:11323 mathcomp.boot.ssrnat <> addn0 thm
+R11337:11345 mathcomp.boot.ssrnat <> ltn_add2l thm
+R11337:11345 mathcomp.boot.ssrnat <> ltn_add2l thm
+R11337:11345 mathcomp.boot.ssrnat <> ltn_add2l thm
+prf 11650:11678 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves priority_inversion_is_bounded
+R11689:11720 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP priority_inversion_is_bounded_by def
+R11799:11812 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves blocking_bound def
+R11795:11797 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.tsk var
+R11776:11793 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.higher_eq_priority var
+R11770:11774 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.sched var
+R11762:11768 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.arr_seq var
+R11753:11760 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_task var
+R11744:11751 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_cost var
+R11732:11742 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_arrival var
+R11903:11906 Corelib.ssr.ssrbool <> andP thm
+R11944:11947 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R11939:11941 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R11948:11961 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves blocking_bound def
+R11944:11947 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R11939:11941 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R11948:11961 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves blocking_bound def
+R11944:11947 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R11939:11941 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R11948:11961 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves blocking_bound def
+R12000:12002 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R11982:11990 mathcomp.boot.ssrnat <> leq_trans thm
+R12000:12002 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R11982:11990 mathcomp.boot.ssrnat <> leq_trans thm
+R12041:12069 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP cumulative_priority_inversion def
+R12072:12092 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP is_priority_inversion def
+R12041:12069 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP cumulative_priority_inversion def
+R12041:12069 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP cumulative_priority_inversion def
+R12072:12092 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP is_priority_inversion def
+R12072:12092 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP is_priority_inversion def
+R12122:12125 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R12128:12132 mathcomp.boot.ssrnat <> addn0 thm
+R12138:12140 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R12144:12148 mathcomp.boot.ssrnat <> mul1n thm
+R12151:12159 mathcomp.boot.ssrnat <> iter_addn thm
+R12162:12174 mathcomp.boot.bigop <> big_const_nat thm
+R12128:12132 mathcomp.boot.ssrnat <> addn0 thm
+R12122:12125 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R12122:12125 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R12126:12126 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> X:91 var
+R12128:12132 mathcomp.boot.ssrnat <> addn0 thm
+R12144:12148 mathcomp.boot.ssrnat <> mul1n thm
+R12138:12140 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R12138:12140 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R12144:12148 mathcomp.boot.ssrnat <> mul1n thm
+R12151:12159 mathcomp.boot.ssrnat <> iter_addn thm
+R12151:12159 mathcomp.boot.ssrnat <> iter_addn thm
+R12162:12174 mathcomp.boot.bigop <> big_const_nat thm
+R12162:12174 mathcomp.boot.bigop <> big_const_nat thm
+R12196:12202 mathcomp.boot.bigop <> leq_sum thm
+R12196:12202 mathcomp.boot.bigop <> leq_sum thm
+R12196:12202 mathcomp.boot.bigop <> leq_sum thm
+R12237:12241 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.sched var
+R12237:12241 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.sched var
+R12237:12241 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.sched var
+R12293:12310 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.higher_eq_priority var
+R12293:12310 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.higher_eq_priority var
+R12293:12310 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.higher_eq_priority var
+R12367:12372 mathcomp.boot.ssrnat <> ltnNge thm
+R12346:12349 Corelib.ssr.ssrbool <> negP thm
+R12352:12355 Corelib.ssr.ssrbool <> negP thm
+R12367:12372 mathcomp.boot.ssrnat <> ltnNge thm
+R12367:12372 mathcomp.boot.ssrnat <> ltnNge thm
+R12409:12430 prosa.classic.model.schedule.uni.limited.platform.priority_inversion_is_bounded PriorityInversionIsBounded preemption_time_exists thm
+R12576:12591 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.can_be_preempted var
+R12553:12570 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.higher_eq_priority var
+R12541:12545 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.sched var
+R12509:12515 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.arr_seq var
+R12500:12507 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_task var
+R12491:12498 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_cost var
+R12479:12489 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_max_nps var
+R12467:12477 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_arrival var
+R12454:12465 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.task_max_nps var
+R12688:12703 prosa.classic.model.priority Priority EDF_is_reflexive thm
+R12688:12703 prosa.classic.model.priority Priority EDF_is_reflexive thm
+R12727:12743 prosa.classic.model.priority Priority EDF_is_transitive thm
+R12727:12743 prosa.classic.model.priority Priority EDF_is_transitive thm
+R12780:12783 Corelib.ssr.ssrbool <> andP thm
+R12826:12854 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP cumulative_priority_inversion def
+R12862:12879 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.higher_eq_priority var
+R12856:12860 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.sched var
+R12810:12818 mathcomp.boot.ssrnat <> leq_trans thm
+R12932:12934 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R12913:12921 mathcomp.boot.ssrnat <> leq_trans thm
+R12826:12854 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP cumulative_priority_inversion def
+R12862:12879 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.higher_eq_priority var
+R12856:12860 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.sched var
+R12810:12818 mathcomp.boot.ssrnat <> leq_trans thm
+R12932:12934 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R12913:12921 mathcomp.boot.ssrnat <> leq_trans thm
+R12959:12987 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP cumulative_priority_inversion def
+R12990:13010 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP is_priority_inversion def
+R12959:12987 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP cumulative_priority_inversion def
+R12959:12987 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP cumulative_priority_inversion def
+R12990:13010 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP is_priority_inversion def
+R12990:13010 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP is_priority_inversion def
+R13034:13044 mathcomp.boot.bigop <> big_cat_nat thm
+R13034:13044 mathcomp.boot.bigop <> big_cat_nat thm
+R13034:13044 mathcomp.boot.bigop <> big_cat_nat thm
+R13089:13092 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R13095:13099 mathcomp.boot.ssrnat <> addn0 thm
+R13101:13109 mathcomp.boot.ssrnat <> leq_add2l thm
+R13095:13099 mathcomp.boot.ssrnat <> addn0 thm
+R13089:13092 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R13089:13092 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R13093:13093 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> X:92 var
+R13095:13099 mathcomp.boot.ssrnat <> addn0 thm
+R13101:13109 mathcomp.boot.ssrnat <> leq_add2l thm
+R13101:13109 mathcomp.boot.ssrnat <> leq_add2l thm
+R13130:13134 mathcomp.boot.ssrnat <> leqn0 thm
+R13130:13134 mathcomp.boot.ssrnat <> leqn0 thm
+R13130:13134 mathcomp.boot.ssrnat <> leqn0 thm
+R13155:13166 mathcomp.boot.bigop <> big_nat_cond thm
+R13168:13171 mathcomp.boot.bigop <> big1 thm
+R13155:13166 mathcomp.boot.bigop <> big_nat_cond thm
+R13155:13166 mathcomp.boot.bigop <> big_nat_cond thm
+R13168:13171 mathcomp.boot.bigop <> big1 thm
+R13168:13171 mathcomp.boot.bigop <> big1 thm
+R13188:13191 Corelib.ssr.ssrbool <> andP thm
+R13195:13198 Corelib.ssr.ssrbool <> andP thm
+R13238:13242 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.sched var
+R13238:13242 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.sched var
+R13238:13242 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.sched var
+R13298:13338 prosa.classic.model.schedule.uni.limited.platform.priority_inversion_is_bounded PriorityInversionIsBounded not_quiet_implies_exists_scheduled_hp_job thm
+R13568:13570 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R13496:13511 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.can_be_preempted var
+R13473:13490 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.higher_eq_priority var
+R13461:13465 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.sched var
+R13423:13429 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.arr_seq var
+R13414:13421 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_task var
+R13405:13412 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_cost var
+R13393:13403 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_max_nps var
+R13381:13391 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.job_arrival var
+R13368:13379 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.task_max_nps var
+R13640:13655 prosa.classic.model.priority Priority EDF_is_reflexive thm
+R13640:13655 prosa.classic.model.priority Priority EDF_is_reflexive thm
+R13681:13697 prosa.classic.model.priority Priority EDF_is_transitive thm
+R13681:13697 prosa.classic.model.priority Priority EDF_is_transitive thm
+R13757:13762 mathcomp.boot.ssrnat <> subnKC thm
+R13774:13777 Corelib.ssr.ssrbool <> andP thm
+R13757:13762 mathcomp.boot.ssrnat <> subnKC thm
+R13757:13762 mathcomp.boot.ssrnat <> subnKC thm
+R13774:13777 Corelib.ssr.ssrbool <> andP thm
+R13813:13818 mathcomp.boot.ssrnat <> subnKC thm
+R13830:13833 Corelib.ssr.ssrbool <> andP thm
+R13813:13818 mathcomp.boot.ssrnat <> subnKC thm
+R13813:13818 mathcomp.boot.ssrnat <> subnKC thm
+R13830:13833 Corelib.ssr.ssrbool <> andP thm
+R13916:13918 mathcomp.boot.eqtype <> eqP def
+R13929:13932 mathcomp.boot.ssrnat <> eqb0 thm
+R13934:13953 Stdlib.Bool.Bool <> negb_involutive thm
+R13916:13918 mathcomp.boot.eqtype <> eqP def
+R13929:13932 mathcomp.boot.ssrnat <> eqb0 thm
+R13929:13932 mathcomp.boot.ssrnat <> eqb0 thm
+R13934:13953 Stdlib.Bool.Bool <> negb_involutive thm
+R13934:13953 Stdlib.Bool.Bool <> negb_involutive thm
+R13976:13978 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14044:14048 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.sched var
+R14006:14027 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule only_one_job_scheduled thm
+R14068:14070 mathcomp.boot.eqtype <> eqP def
+R14044:14048 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.sched var
+R14006:14027 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule only_one_job_scheduled thm
+R14068:14070 mathcomp.boot.eqtype <> eqP def
+R14125:14133 mathcomp.boot.ssrnat <> ltn_subRL thm
+R14125:14133 mathcomp.boot.ssrnat <> ltn_subRL thm
+R14125:14133 mathcomp.boot.ssrnat <> ltn_subRL thm
+R14177:14179 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R14180:14193 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves blocking_bound def
+R14159:14167 mathcomp.boot.ssrnat <> leq_trans thm
+R14211:14214 mathcomp.boot.ssrnat <> ltnW thm
+R14177:14179 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R14180:14193 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves blocking_bound def
+R14159:14167 mathcomp.boot.ssrnat <> leq_trans thm
+R14211:14214 mathcomp.boot.ssrnat <> ltnW thm
+R14252:14254 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R14255:14286 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.max_length_of_priority_inversion var
+R14234:14242 mathcomp.boot.ssrnat <> leq_trans thm
+R14252:14254 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R14255:14286 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.max_length_of_priority_inversion var
+R14234:14242 mathcomp.boot.ssrnat <> leq_trans thm
+R14333:14341 mathcomp.boot.ssrnat <> leq_add2l thm
+R14351:14391 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves priority_inversion_is_bounded_by_blocking thm
+R14333:14341 mathcomp.boot.ssrnat <> leq_add2l thm
+R14333:14341 mathcomp.boot.ssrnat <> leq_add2l thm
+R14351:14391 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves priority_inversion_is_bounded_by_blocking thm
+R14432:14460 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP cumulative_priority_inversion def
+R14463:14483 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP is_priority_inversion def
+R14432:14460 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP cumulative_priority_inversion def
+R14432:14460 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP cumulative_priority_inversion def
+R14463:14483 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP is_priority_inversion def
+R14463:14483 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP is_priority_inversion def
+R14513:14516 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R14519:14523 mathcomp.boot.ssrnat <> addn0 thm
+R14530:14532 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R14536:14540 mathcomp.boot.ssrnat <> mul1n thm
+R14543:14551 mathcomp.boot.ssrnat <> iter_addn thm
+R14554:14566 mathcomp.boot.bigop <> big_const_nat thm
+R14519:14523 mathcomp.boot.ssrnat <> addn0 thm
+R14513:14516 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R14513:14516 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R14517:14517 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> X:93 var
+R14519:14523 mathcomp.boot.ssrnat <> addn0 thm
+R14536:14540 mathcomp.boot.ssrnat <> mul1n thm
+R14530:14532 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R14530:14532 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R14536:14540 mathcomp.boot.ssrnat <> mul1n thm
+R14543:14551 mathcomp.boot.ssrnat <> iter_addn thm
+R14543:14551 mathcomp.boot.ssrnat <> iter_addn thm
+R14554:14566 mathcomp.boot.bigop <> big_const_nat thm
+R14554:14566 mathcomp.boot.bigop <> big_const_nat thm
+R14588:14594 mathcomp.boot.bigop <> leq_sum thm
+R14588:14594 mathcomp.boot.bigop <> leq_sum thm
+R14588:14594 mathcomp.boot.bigop <> leq_sum thm
+R14629:14633 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.sched var
+R14629:14633 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.sched var
+R14629:14633 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.sched var
+R14684:14701 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.higher_eq_priority var
+R14684:14701 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.higher_eq_priority var
+R14684:14701 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.higher_eq_priority var
+R14732:14740 mathcomp.boot.ssrnat <> leq_subLR thm
+R14732:14740 mathcomp.boot.ssrnat <> leq_subLR thm
+R14732:14740 mathcomp.boot.ssrnat <> leq_subLR thm
+R14777:14779 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R14780:14811 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.max_length_of_priority_inversion var
+R14759:14767 mathcomp.boot.ssrnat <> leq_trans thm
+R14777:14779 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R14780:14811 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.max_length_of_priority_inversion var
+R14759:14767 mathcomp.boot.ssrnat <> leq_trans thm
+R14853:14861 mathcomp.boot.ssrnat <> leq_add2l thm
+R14871:14911 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves priority_inversion_is_bounded_by_blocking thm
+R14853:14861 mathcomp.boot.ssrnat <> leq_add2l thm
+R14853:14861 mathcomp.boot.ssrnat <> leq_add2l thm
+R14871:14911 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves priority_inversion_is_bounded_by_blocking thm
+R14959:14984 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.PriorityInversionIsBounded <> sec
+sec 15191:15207 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis ResponseTimeBound
+var 15305:15305 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.ResponseTimeBound L
+R15308:15311 prosa.classic.model.time Time time def
+var 15331:15342 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.ResponseTimeBound H_L_positive
+R15346:15348 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R15345:15345 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.ResponseTimeBound.L var
+var 15369:15381 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.ResponseTimeBound H_fixed_point
+R15385:15387 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15384:15384 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.ResponseTimeBound.L var
+R15388:15396 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.total_rbf var
+R15398:15398 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.ResponseTimeBound.L var
+var 15506:15523 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.ResponseTimeBound is_in_search_space
+binder 15525:15525 <> A:100
+R15538:15538 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15544:15549 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15615:15615 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15540:15542 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R15539:15539 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> A:100 var
+R15543:15543 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.ResponseTimeBound.L var
+R15571:15574 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R15550:15568 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.task_rbf_changes_at var
+R15570:15570 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> A:100 var
+R15575:15612 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.bound_on_total_hep_workload_changes_at var
+R15614:15614 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> A:100 var
+var 15832:15832 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.ResponseTimeBound R
+R15835:15837 Corelib.Init.Datatypes <> nat ind
+var 15857:15870 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.ResponseTimeBound H_R_is_maximum
+binder 15888:15888 <> A:103
+R15921:15935 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R15901:15918 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.ResponseTimeBound.is_in_search_space var
+R15920:15920 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> A:103 var
+R15936:15943 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R15945:15958 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 15944:15944 <> F:104
+R16129:16144 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R15964:15966 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15960:15962 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R15959:15959 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> A:103 var
+R15963:15963 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> F:104 var
+R16068:16090 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R15981:16004 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R16067:16067 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R15967:15980 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves blocking_bound def
+R16022:16025 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R16066:16066 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R16005:16012 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.task_rbf var
+R16016:16018 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R16015:16015 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> A:103 var
+R16019:16020 prosa.util.epsilon <> ε abbrev
+R16039:16041 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R16026:16034 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.task_cost var
+R16036:16038 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.tsk var
+R16042:16061 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.task_lock_in_service var
+R16063:16065 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.tsk var
+R16091:16117 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.bound_on_total_hep_workload var
+R16120:16120 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> A:103 var
+R16124:16126 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R16123:16123 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> A:103 var
+R16127:16127 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> F:104 var
+R16191:16194 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R16146:16149 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R16190:16190 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R16145:16145 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> F:104 var
+R16163:16165 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R16150:16158 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.task_cost var
+R16160:16162 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.tsk var
+R16166:16185 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.task_lock_in_service var
+R16187:16189 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.tsk var
+R16195:16195 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.ResponseTimeBound.R var
+prf 16684:16755 RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves uniprocessor_response_time_bound_edf_with_bounded_nonpreemptive_segments
+R16766:16789 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.response_time_bounded_by var
+R16791:16793 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.tsk var
+R16795:16795 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound <> RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.ResponseTimeBound.R var
+R16826:16861 prosa.classic.model.schedule.uni.limited.edf.response_time_bound AbstractRTAforEDFwithArrivalCurves uniprocessor_response_time_bound_edf thm
+R16826:16861 prosa.classic.model.schedule.uni.limited.edf.response_time_bound AbstractRTAforEDFwithArrivalCurves uniprocessor_response_time_bound_edf thm
+R16892:16920 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves priority_inversion_is_bounded thm
+R16892:16920 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves priority_inversion_is_bounded thm
+R16950:16966 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis.ResponseTimeBound <> sec
+R16982:16989 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves.Analysis <> sec
+R17001:17058 prosa.classic.model.schedule.uni.limited.edf.nonpr_reg.response_time_bound RTAforEDFwithBoundedNonpreemptiveSegmentsWithArrivalCurves <> mod

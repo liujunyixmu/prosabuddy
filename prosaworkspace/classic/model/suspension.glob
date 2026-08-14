@@ -1,0 +1,83 @@
+DIGEST 468746470d70f835d4a7ee7315e588b4
+Fprosa.classic.model.suspension
+R15:36 prosa.classic.util.all <> <> lib
+R54:103 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R135:143 mathcomp.boot.ssreflect <> <> lib
+R145:151 mathcomp.boot.ssrbool <> <> lib
+R153:158 mathcomp.boot.eqtype <> <> lib
+R160:165 mathcomp.boot.ssrnat <> <> lib
+R167:169 mathcomp.boot.seq <> <> lib
+R171:175 mathcomp.boot.bigop <> <> lib
+mod 186:195 <> Suspension
+R208:222 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence <> mod
+sec 294:308 Suspension SuspensionTimes
+var 361:363 Suspension.SuspensionTimes Job
+R366:371 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+def 566:579 Suspension job_suspension
+R587:636 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R584:586 prosa.classic.model.suspension <> Suspension.SuspensionTimes.Job var
+R641:701 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R637:640 prosa.classic.model.time Time time def
+R702:709 prosa.classic.model.time Time duration def
+R753:767 prosa.classic.model.suspension Suspension.SuspensionTimes <> sec
+sec 850:868 Suspension TotalSuspensionTime
+var  885:887 Suspension.TotalSuspensionTime Job
+R890:895 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 912:919 Suspension.TotalSuspensionTime job_cost
+R925:928 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R922:924 prosa.classic.model.suspension <> Suspension.TotalSuspensionTime.Job var
+R929:932 prosa.classic.model.time Time time def
+var 1001:1015 Suspension.TotalSuspensionTime next_suspension
+R1018:1031 prosa.classic.model.suspension Suspension job_suspension def
+R1033:1035 prosa.classic.model.suspension <> Suspension.TotalSuspensionTime.Job var
+var 1086:1086 Suspension.TotalSuspensionTime j
+R1089:1091 prosa.classic.model.suspension <> Suspension.TotalSuspensionTime.Job var
+def 1268:1283 Suspension total_suspension
+R1294:1299 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R1301:1304 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R1306:1308 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R1319:1321 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R1341:1341 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R1309:1316 prosa.classic.model.suspension <> Suspension.TotalSuspensionTime.job_cost var
+R1318:1318 prosa.classic.model.suspension <> Suspension.TotalSuspensionTime.j var
+binder 1305:1305 <> t:10
+binder 1305:1305 <> t:11
+binder 1305:1305 <> t:12
+R1322:1336 prosa.classic.model.suspension <> Suspension.TotalSuspensionTime.next_suspension var
+R1338:1338 prosa.classic.model.suspension <> Suspension.TotalSuspensionTime.j var
+R1340:1340 prosa.classic.model.suspension <> t:10 var
+R1351:1369 prosa.classic.model.suspension Suspension.TotalSuspensionTime <> sec
+sec 1510:1527 Suspension DynamicSuspensions
+var  1544:1547 Suspension.DynamicSuspensions Task
+R1550:1555 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  1572:1574 Suspension.DynamicSuspensions Job
+R1577:1582 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1599:1606 Suspension.DynamicSuspensions job_cost
+R1612:1615 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1609:1611 prosa.classic.model.suspension <> Suspension.DynamicSuspensions.Job var
+R1616:1619 prosa.classic.model.time Time time def
+var 1635:1642 Suspension.DynamicSuspensions job_task
+R1648:1651 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1645:1647 prosa.classic.model.suspension <> Suspension.DynamicSuspensions.Job var
+R1652:1655 prosa.classic.model.suspension <> Suspension.DynamicSuspensions.Task var
+var 1744:1758 Suspension.DynamicSuspensions next_suspension
+R1761:1774 prosa.classic.model.suspension Suspension job_suspension def
+R1776:1778 prosa.classic.model.suspension <> Suspension.DynamicSuspensions.Job var
+var 1848:1867 Suspension.DynamicSuspensions total_job_suspension
+R1872:1887 prosa.classic.model.suspension Suspension total_suspension def
+R1898:1912 prosa.classic.model.suspension <> Suspension.DynamicSuspensions.next_suspension var
+R1889:1896 prosa.classic.model.suspension <> Suspension.DynamicSuspensions.job_cost var
+var 2004:2019 Suspension.DynamicSuspensions suspension_bound
+R2026:2029 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2022:2025 prosa.classic.model.suspension <> Suspension.DynamicSuspensions.Task var
+R2030:2037 prosa.classic.model.time Time duration def
+def 2252:2275 Suspension dynamic_suspension_model
+binder 2293:2293 <> j:23
+R2318:2321 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R2296:2315 prosa.classic.model.suspension <> Suspension.DynamicSuspensions.total_job_suspension var
+R2317:2317 prosa.classic.model.suspension <> j:23 var
+R2322:2337 prosa.classic.model.suspension <> Suspension.DynamicSuspensions.suspension_bound var
+R2340:2347 prosa.classic.model.suspension <> Suspension.DynamicSuspensions.job_task var
+R2349:2349 prosa.classic.model.suspension <> j:23 var
+R2360:2377 prosa.classic.model.suspension Suspension.DynamicSuspensions <> sec
+R2385:2394 prosa.classic.model.suspension Suspension <> mod

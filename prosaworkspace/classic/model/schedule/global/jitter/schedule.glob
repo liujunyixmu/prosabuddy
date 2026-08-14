@@ -1,0 +1,489 @@
+DIGEST 275c96f8558474a7986e3dc58946efea
+Fprosa.classic.model.schedule.global.jitter.schedule
+R15:36 prosa.classic.util.all <> <> lib
+R54:91 prosa.classic.model.arrival.basic.task <> <> lib
+R109:154 prosa.classic.model.schedule.global.jitter.job <> <> lib
+R156:205 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R237:245 mathcomp.boot.ssreflect <> <> lib
+R247:253 mathcomp.boot.ssrbool <> <> lib
+R255:260 mathcomp.boot.eqtype <> <> lib
+R262:267 mathcomp.boot.ssrnat <> <> lib
+R269:271 mathcomp.boot.seq <> <> lib
+R273:279 mathcomp.boot.fintype <> <> lib
+R281:285 mathcomp.boot.bigop <> <> lib
+R297:346 prosa.classic.model.schedule.global.basic.schedule <> <> lib
+mod 414:431 <> ScheduleWithJitter
+R526:575 prosa.classic.model.schedule.global.basic.schedule <> <> mod
+R587:601 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence <> mod
+R603:610 prosa.classic.model.schedule.global.basic.schedule Schedule <> mod
+sec 711:736 ScheduleWithJitter ArrivalDependentProperties
+var  753:755 ScheduleWithJitter.ArrivalDependentProperties Job
+R758:763 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 780:790 ScheduleWithJitter.ArrivalDependentProperties job_arrival
+R796:799 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R793:795 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.Job var
+R800:803 prosa.classic.model.time Time time def
+var 819:826 ScheduleWithJitter.ArrivalDependentProperties job_cost
+R832:835 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R829:831 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.Job var
+R836:839 prosa.classic.model.time Time time def
+var 855:864 ScheduleWithJitter.ArrivalDependentProperties job_jitter
+R870:873 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R867:869 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.Job var
+R874:877 prosa.classic.model.time Time time def
+var 941:947 ScheduleWithJitter.ArrivalDependentProperties arr_seq
+R950:965 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R967:969 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.Job var
+var  1031:1038 ScheduleWithJitter.ArrivalDependentProperties num_cpus
+R1041:1043 Corelib.Init.Datatypes <> nat ind
+var 1060:1064 ScheduleWithJitter.ArrivalDependentProperties sched
+R1067:1074 prosa.classic.model.schedule.global.basic.schedule Schedule schedule def
+R1080:1087 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.num_cpus var
+R1076:1078 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.Job var
+sec 1176:1188 ScheduleWithJitter.ArrivalDependentProperties JobProperties
+var 1237:1237 ScheduleWithJitter.ArrivalDependentProperties.JobProperties j
+R1240:1242 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.Job var
+def 1347:1360 ScheduleWithJitter actual_arrival
+R1378:1380 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R1365:1375 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.job_arrival var
+R1377:1377 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.JobProperties.j var
+R1381:1390 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.job_jitter var
+R1392:1392 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.JobProperties.j var
+def 1488:1504 ScheduleWithJitter jitter_has_passed
+R1510:1513 prosa.classic.model.time Time time def
+binder 1507:1507 <> t:15
+R1533:1536 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R1519:1532 prosa.classic.model.schedule.global.jitter.schedule ScheduleWithJitter actual_arrival def
+R1537:1537 prosa.classic.model.schedule.global.jitter.schedule <> t:15 var
+def 1623:1643 ScheduleWithJitter actual_arrival_before
+R1649:1652 prosa.classic.model.time Time time def
+binder 1646:1646 <> t:16
+R1672:1674 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R1658:1671 prosa.classic.model.schedule.global.jitter.schedule ScheduleWithJitter actual_arrival def
+R1675:1675 prosa.classic.model.schedule.global.jitter.schedule <> t:16 var
+def 1798:1804 ScheduleWithJitter pending
+R1810:1813 prosa.classic.model.time Time time def
+binder 1807:1807 <> t:17
+R1838:1841 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R1819:1835 prosa.classic.model.schedule.global.jitter.schedule ScheduleWithJitter jitter_has_passed def
+R1837:1837 prosa.classic.model.schedule.global.jitter.schedule <> t:17 var
+R1842:1844 Corelib.ssr.ssrbool <> ::bool_scope:'~~'_x not
+R1845:1853 prosa.classic.model.schedule.global.basic.schedule Schedule completed def
+R1872:1872 prosa.classic.model.schedule.global.jitter.schedule <> t:17 var
+R1870:1870 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.JobProperties.j var
+R1864:1868 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.sched var
+R1855:1862 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.job_cost var
+def 1984:1993 ScheduleWithJitter backlogged
+R1999:2002 prosa.classic.model.time Time time def
+binder 1996:1996 <> t:18
+R2017:2020 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R2008:2014 prosa.classic.model.schedule.global.jitter.schedule ScheduleWithJitter pending def
+R2016:2016 prosa.classic.model.schedule.global.jitter.schedule <> t:18 var
+R2021:2023 Corelib.ssr.ssrbool <> ::bool_scope:'~~'_x not
+R2024:2032 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled def
+R2042:2042 prosa.classic.model.schedule.global.jitter.schedule <> t:18 var
+R2040:2040 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.JobProperties.j var
+R2034:2038 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.sched var
+R2054:2066 prosa.classic.model.schedule.global.jitter.schedule ScheduleWithJitter.ArrivalDependentProperties.JobProperties <> sec
+sec 2082:2099 ScheduleWithJitter.ArrivalDependentProperties ScheduleProperties
+def 2210:2234 ScheduleWithJitter jobs_execute_after_jitter
+binder 2254:2254 <> j:19
+binder 2256:2256 <> t:20
+R2288:2291 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2269:2277 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled def
+R2287:2287 prosa.classic.model.schedule.global.jitter.schedule <> t:20 var
+R2285:2285 prosa.classic.model.schedule.global.jitter.schedule <> j:19 var
+R2279:2283 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.sched var
+R2292:2308 prosa.classic.model.schedule.global.jitter.schedule ScheduleWithJitter jitter_has_passed def
+R2312:2312 prosa.classic.model.schedule.global.jitter.schedule <> t:20 var
+R2310:2310 prosa.classic.model.schedule.global.jitter.schedule <> j:19 var
+R2324:2341 prosa.classic.model.schedule.global.jitter.schedule ScheduleWithJitter.ArrivalDependentProperties.ScheduleProperties <> sec
+sec 2361:2371 ScheduleWithJitter.ArrivalDependentProperties BasicLemmas
+var 2456:2482 ScheduleWithJitter.ArrivalDependentProperties.BasicLemmas H_jobs_execute_after_jitter
+R2493:2517 prosa.classic.model.schedule.global.jitter.schedule ScheduleWithJitter jobs_execute_after_jitter def
+sec 2535:2541 ScheduleWithJitter.ArrivalDependentProperties.BasicLemmas Pending
+var 2627:2642 ScheduleWithJitter.ArrivalDependentProperties.BasicLemmas.Pending H_completed_jobs
+R2655:2681 prosa.classic.model.schedule.global.basic.schedule Schedule completed_jobs_dont_execute def
+R2692:2696 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.sched var
+R2683:2690 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.job_cost var
+prf 2777:2801 ScheduleWithJitter scheduled_implies_pending
+binder 2821:2821 <> j:25
+binder 2823:2823 <> t:26
+R2857:2872 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2838:2846 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled def
+R2856:2856 prosa.classic.model.schedule.global.jitter.schedule <> t:26 var
+R2854:2854 prosa.classic.model.schedule.global.jitter.schedule <> j:25 var
+R2848:2852 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.sched var
+R2873:2879 prosa.classic.model.schedule.global.jitter.schedule ScheduleWithJitter pending def
+R2883:2883 prosa.classic.model.schedule.global.jitter.schedule <> t:26 var
+R2881:2881 prosa.classic.model.schedule.global.jitter.schedule <> j:25 var
+R3021:3045 prosa.classic.model.schedule.global.jitter.schedule ScheduleWithJitter jobs_execute_after_jitter def
+R3048:3074 prosa.classic.model.schedule.global.basic.schedule Schedule completed_jobs_dont_execute def
+R3127:3133 prosa.classic.model.schedule.global.jitter.schedule ScheduleWithJitter pending def
+R3142:3145 Corelib.ssr.ssrbool <> andP thm
+R3142:3145 Corelib.ssr.ssrbool <> andP thm
+R3194:3197 Corelib.ssr.ssrbool <> negP thm
+R3207:3209 Corelib.Init.Logic <> not def
+R3194:3197 Corelib.ssr.ssrbool <> negP thm
+R3259:3261 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R3282:3287 mathcomp.boot.ssrnat <> leqNgt thm
+R3282:3287 mathcomp.boot.ssrnat <> leqNgt thm
+R3282:3287 mathcomp.boot.ssrnat <> leqNgt thm
+R3311:3314 Corelib.ssr.ssrbool <> negP thm
+R3349:3355 prosa.classic.model.schedule.global.basic.schedule Schedule service def
+R3367:3371 mathcomp.boot.ssrnat <> addn1 thm
+R3373:3384 mathcomp.boot.bigop <> big_nat_recr thm
+R3367:3371 mathcomp.boot.ssrnat <> addn1 thm
+R3367:3371 mathcomp.boot.ssrnat <> addn1 thm
+R3373:3384 mathcomp.boot.bigop <> big_nat_recr thm
+R3373:3384 mathcomp.boot.bigop <> big_nat_recr thm
+R3409:3415 mathcomp.boot.ssrnat <> leq_add thm
+R3409:3415 mathcomp.boot.ssrnat <> leq_add thm
+R3451:3454 mathcomp.boot.ssrnat <> lt0n thm
+R3463:3465 mathcomp.boot.eqtype <> eqP def
+R3451:3454 mathcomp.boot.ssrnat <> lt0n thm
+R3451:3454 mathcomp.boot.ssrnat <> lt0n thm
+R3463:3465 mathcomp.boot.eqtype <> eqP def
+R3482:3484 mathcomp.boot.eqtype <> eqP def
+R3513:3536 prosa.classic.model.schedule.global.basic.schedule Schedule not_scheduled_no_service thm
+R3513:3536 prosa.classic.model.schedule.global.basic.schedule Schedule not_scheduled_no_service thm
+R3513:3536 prosa.classic.model.schedule.global.basic.schedule Schedule not_scheduled_no_service thm
+R3611:3617 prosa.classic.model.schedule.global.jitter.schedule ScheduleWithJitter.ArrivalDependentProperties.BasicLemmas.Pending <> sec
+sec 3635:3641 ScheduleWithJitter.ArrivalDependentProperties.BasicLemmas Service
+prf 3813:3833 ScheduleWithJitter arrival_before_jitter
+R3847:3873 prosa.classic.model.schedule.global.basic.schedule Schedule jobs_must_arrive_to_execute def
+R3887:3891 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.sched var
+R3875:3885 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.job_arrival var
+R3926:3950 prosa.classic.model.schedule.global.jitter.schedule ScheduleWithJitter jobs_execute_after_jitter def
+R3953:3979 prosa.classic.model.schedule.global.basic.schedule Schedule jobs_must_arrive_to_execute def
+R4017:4043 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence has_arrived def
+R4066:4074 mathcomp.boot.ssrnat <> leq_add2r thm
+R4077:4086 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.job_jitter var
+R4066:4074 mathcomp.boot.ssrnat <> leq_add2r thm
+R4077:4086 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.job_jitter var
+R4066:4074 mathcomp.boot.ssrnat <> leq_add2r thm
+R4077:4086 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.job_jitter var
+R4112:4120 mathcomp.boot.ssrnat <> leq_trans thm
+R4159:4185 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.BasicLemmas.H_jobs_execute_after_jitter var
+R4198:4205 mathcomp.boot.ssrnat <> leq_addr thm
+R4112:4120 mathcomp.boot.ssrnat <> leq_trans thm
+R4159:4185 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.BasicLemmas.H_jobs_execute_after_jitter var
+R4198:4205 mathcomp.boot.ssrnat <> leq_addr thm
+prf 4318:4343 ScheduleWithJitter service_before_jitter_zero
+binder 4364:4364 <> j:27
+binder 4366:4366 <> t:28
+R4413:4428 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4382:4384 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R4381:4381 prosa.classic.model.schedule.global.jitter.schedule <> t:28 var
+R4398:4400 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R4385:4395 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.job_arrival var
+R4397:4397 prosa.classic.model.schedule.global.jitter.schedule <> j:27 var
+R4401:4410 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.job_jitter var
+R4412:4412 prosa.classic.model.schedule.global.jitter.schedule <> j:27 var
+R4449:4451 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4429:4438 prosa.classic.model.schedule.global.basic.schedule Schedule service_at def
+R4448:4448 prosa.classic.model.schedule.global.jitter.schedule <> t:28 var
+R4446:4446 prosa.classic.model.schedule.global.jitter.schedule <> j:27 var
+R4440:4444 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.sched var
+R4558:4560 mathcomp.boot.eqtype <> eqP def
+R4572:4595 prosa.classic.model.schedule.global.basic.schedule Schedule not_scheduled_no_service thm
+R4604:4607 Corelib.ssr.ssrbool <> negP thm
+R4558:4560 mathcomp.boot.eqtype <> eqP def
+R4572:4595 prosa.classic.model.schedule.global.basic.schedule Schedule not_scheduled_no_service thm
+R4572:4595 prosa.classic.model.schedule.global.basic.schedule Schedule not_scheduled_no_service thm
+R4604:4607 Corelib.ssr.ssrbool <> negP thm
+R4655:4663 mathcomp.boot.ssrnat <> leq_trans thm
+R4687:4690 mathcomp.boot.ssrnat <> ltnn thm
+R4655:4663 mathcomp.boot.ssrnat <> leq_trans thm
+R4687:4690 mathcomp.boot.ssrnat <> ltnn thm
+R4687:4690 mathcomp.boot.ssrnat <> ltnn thm
+prf 4788:4824 ScheduleWithJitter cumulative_service_before_jitter_zero
+binder 4845:4845 <> j:29
+binder 4847:4848 <> t1:30
+binder 4850:4851 <> t2:31
+R4900:4915 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4868:4871 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R4866:4867 prosa.classic.model.schedule.global.jitter.schedule <> t2:31 var
+R4885:4887 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R4872:4882 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.job_arrival var
+R4884:4884 prosa.classic.model.schedule.global.jitter.schedule <> j:29 var
+R4888:4897 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.job_jitter var
+R4899:4899 prosa.classic.model.schedule.global.jitter.schedule <> j:29 var
+R4956:4958 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4916:4921 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R4924:4927 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R4929:4931 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R4934:4935 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R4922:4923 prosa.classic.model.schedule.global.jitter.schedule <> t1:30 var
+R4932:4933 prosa.classic.model.schedule.global.jitter.schedule <> t2:31 var
+binder 4928:4928 <> t:32
+binder 4928:4928 <> t:33
+binder 4928:4928 <> t:34
+R4936:4945 prosa.classic.model.schedule.global.basic.schedule Schedule service_at def
+R4955:4955 prosa.classic.model.schedule.global.jitter.schedule <> t:32 var
+R4953:4953 prosa.classic.model.schedule.global.jitter.schedule <> j:29 var
+R4947:4951 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleWithJitter.ArrivalDependentProperties.sched var
+R5022:5024 mathcomp.boot.eqtype <> eqP def
+R5036:5040 mathcomp.boot.ssrnat <> leqn0 thm
+R5022:5024 mathcomp.boot.eqtype <> eqP def
+R5036:5040 mathcomp.boot.ssrnat <> leqn0 thm
+R5036:5040 mathcomp.boot.ssrnat <> leqn0 thm
+R5080:5085 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5088:5091 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5093:5095 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5098:5099 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+binder 5092:5092 <> t:35
+binder 5092:5092 <> t:36
+binder 5092:5092 <> t:37
+R5059:5067 mathcomp.boot.ssrnat <> leq_trans thm
+R5132:5144 mathcomp.boot.bigop <> big_const_nat thm
+R5146:5154 mathcomp.boot.ssrnat <> iter_addn thm
+R5156:5160 mathcomp.boot.ssrnat <> mul0n thm
+R5162:5166 mathcomp.boot.ssrnat <> addn0 thm
+R5080:5085 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5088:5091 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5093:5095 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5098:5099 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+binder 5092:5092 <> t:38
+binder 5092:5092 <> t:39
+binder 5092:5092 <> t:40
+R5059:5067 mathcomp.boot.ssrnat <> leq_trans thm
+R5132:5144 mathcomp.boot.bigop <> big_const_nat thm
+R5132:5144 mathcomp.boot.bigop <> big_const_nat thm
+R5146:5154 mathcomp.boot.ssrnat <> iter_addn thm
+R5146:5154 mathcomp.boot.ssrnat <> iter_addn thm
+R5156:5160 mathcomp.boot.ssrnat <> mul0n thm
+R5156:5160 mathcomp.boot.ssrnat <> mul0n thm
+R5162:5166 mathcomp.boot.ssrnat <> addn0 thm
+R5162:5166 mathcomp.boot.ssrnat <> addn0 thm
+R5187:5198 mathcomp.boot.bigop <> big_nat_cond thm
+R5201:5206 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5208:5211 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5213:5215 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5217:5217 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+binder 5212:5212 <> pat:41
+R5220:5231 mathcomp.boot.bigop <> big_nat_cond thm
+R5187:5198 mathcomp.boot.bigop <> big_nat_cond thm
+R5187:5198 mathcomp.boot.bigop <> big_nat_cond thm
+R5220:5231 mathcomp.boot.bigop <> big_nat_cond thm
+R5201:5206 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5208:5211 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5213:5215 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5217:5217 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+binder 5212:5212 <> pat:42
+R5201:5206 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5208:5211 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5213:5215 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5217:5217 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+binder 5212:5212 <> pat:43
+R5220:5231 mathcomp.boot.bigop <> big_nat_cond thm
+R5250:5256 mathcomp.boot.bigop <> leq_sum thm
+R5250:5256 mathcomp.boot.bigop <> leq_sum thm
+R5270:5273 Corelib.ssr.ssrbool <> andP thm
+R5277:5280 Corelib.ssr.ssrbool <> andP thm
+R5311:5315 mathcomp.boot.ssrnat <> leqn0 thm
+R5324:5326 mathcomp.boot.eqtype <> eqP def
+R5335:5360 prosa.classic.model.schedule.global.jitter.schedule ScheduleWithJitter service_before_jitter_zero thm
+R5311:5315 mathcomp.boot.ssrnat <> leqn0 thm
+R5311:5315 mathcomp.boot.ssrnat <> leqn0 thm
+R5324:5326 mathcomp.boot.eqtype <> eqP def
+R5335:5360 prosa.classic.model.schedule.global.jitter.schedule ScheduleWithJitter service_before_jitter_zero thm
+R5383:5391 mathcomp.boot.ssrnat <> leq_trans thm
+R5383:5391 mathcomp.boot.ssrnat <> leq_trans thm
+R5422:5428 prosa.classic.model.schedule.global.jitter.schedule ScheduleWithJitter.ArrivalDependentProperties.BasicLemmas.Service <> sec
+R5446:5456 prosa.classic.model.schedule.global.jitter.schedule ScheduleWithJitter.ArrivalDependentProperties.BasicLemmas <> sec
+R5466:5491 prosa.classic.model.schedule.global.jitter.schedule ScheduleWithJitter.ArrivalDependentProperties <> sec
+R5499:5516 prosa.classic.model.schedule.global.jitter.schedule ScheduleWithJitter <> mod
+mod 5585:5616 <> ScheduleOfSporadicTaskWithJitter
+R5629:5640 prosa.classic.model.arrival.basic.task SporadicTask <> mod
+R5642:5644 prosa.classic.model.arrival.basic.job Job <> mod
+R5656:5673 prosa.classic.model.schedule.global.jitter.schedule ScheduleWithJitter <> mod
+sec 5687:5699 ScheduleOfSporadicTaskWithJitter ScheduledJobs
+var  5716:5728 ScheduleOfSporadicTaskWithJitter.ScheduledJobs sporadic_task
+R5731:5736 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  5753:5755 ScheduleOfSporadicTaskWithJitter.ScheduledJobs Job
+R5758:5763 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 5780:5787 ScheduleOfSporadicTaskWithJitter.ScheduledJobs job_task
+R5793:5796 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5790:5792 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.ScheduledJobs.Job var
+R5797:5809 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.ScheduledJobs.sporadic_task var
+var  5878:5885 ScheduleOfSporadicTaskWithJitter.ScheduledJobs num_cpus
+R5888:5890 Corelib.Init.Datatypes <> nat ind
+var 5907:5911 ScheduleOfSporadicTaskWithJitter.ScheduledJobs sched
+R5914:5921 prosa.classic.model.schedule.global.basic.schedule Schedule schedule def
+R5927:5934 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.ScheduledJobs.num_cpus var
+R5923:5925 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.ScheduledJobs.Job var
+var 5982:5984 ScheduleOfSporadicTaskWithJitter.ScheduledJobs tsk
+R5987:5999 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.ScheduledJobs.sporadic_task var
+def 6097:6113 ScheduleOfSporadicTaskWithJitter task_scheduled_on
+R6121:6129 prosa.classic.model.schedule.global.basic.schedule Schedule processor def
+R6131:6138 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.ScheduledJobs.num_cpus var
+binder 6116:6118 <> cpu:53
+R6145:6148 prosa.classic.model.time Time time def
+binder 6142:6142 <> t:54
+R6164:6168 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.ScheduledJobs.sched var
+R6170:6172 prosa.classic.model.schedule.global.jitter.schedule <> cpu:53 var
+R6174:6174 prosa.classic.model.schedule.global.jitter.schedule <> t:54 var
+R6180:6183 Corelib.Init.Datatypes <> Some constr
+R6211:6214 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R6201:6208 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.ScheduledJobs.job_task var
+R6215:6217 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.ScheduledJobs.tsk var
+R6231:6235 Corelib.Init.Datatypes <> false constr
+def 6330:6346 ScheduleOfSporadicTaskWithJitter task_is_scheduled
+R6352:6355 prosa.classic.model.time Time time def
+binder 6349:6349 <> t:55
+R6369:6376 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R6405:6405 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+binder 6377:6379 <> cpu:56
+R6380:6381 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R6382:6398 prosa.classic.model.schedule.global.jitter.schedule ScheduleOfSporadicTaskWithJitter task_scheduled_on def
+R6400:6402 prosa.classic.model.schedule.global.jitter.schedule <> cpu:56 var
+R6404:6404 prosa.classic.model.schedule.global.jitter.schedule <> t:55 var
+binder 6377:6379 <> cpu:57
+binder 6377:6379 <> cpu:58
+def 6497:6526 ScheduleOfSporadicTaskWithJitter jobs_of_task_scheduled_between
+R6536:6539 prosa.classic.model.time Time time def
+binder 6529:6530 <> t1:59
+binder 6532:6533 <> t2:60
+R6551:6556 mathcomp.boot.seq <> filter def
+R6601:6622 prosa.classic.model.schedule.global.basic.schedule Schedule jobs_scheduled_between def
+R6630:6631 prosa.classic.model.schedule.global.jitter.schedule <> t1:59 var
+R6633:6634 prosa.classic.model.schedule.global.jitter.schedule <> t2:60 var
+R6624:6628 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.ScheduledJobs.sched var
+binder 6563:6563 <> j:61
+R6578:6581 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R6568:6575 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.ScheduledJobs.job_task var
+R6577:6577 prosa.classic.model.schedule.global.jitter.schedule <> j:61 var
+R6582:6584 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.ScheduledJobs.tsk var
+R6649:6661 prosa.classic.model.schedule.global.jitter.schedule ScheduleOfSporadicTaskWithJitter.ScheduledJobs <> sec
+sec 6677:6694 ScheduleOfSporadicTaskWithJitter ScheduleProperties
+var  6711:6723 ScheduleOfSporadicTaskWithJitter.ScheduleProperties sporadic_task
+R6726:6731 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  6748:6750 ScheduleOfSporadicTaskWithJitter.ScheduleProperties Job
+R6753:6758 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 6779:6786 ScheduleOfSporadicTaskWithJitter.ScheduleProperties job_cost
+R6792:6795 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6789:6791 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.ScheduleProperties.Job var
+R6796:6799 prosa.classic.model.time Time time def
+var 6815:6824 ScheduleOfSporadicTaskWithJitter.ScheduleProperties job_jitter
+R6830:6833 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6827:6829 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.ScheduleProperties.Job var
+R6834:6837 prosa.classic.model.time Time time def
+var 6853:6860 ScheduleOfSporadicTaskWithJitter.ScheduleProperties job_task
+R6866:6869 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6863:6865 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.ScheduleProperties.Job var
+R6870:6882 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.ScheduleProperties.sporadic_task var
+var  6932:6939 ScheduleOfSporadicTaskWithJitter.ScheduleProperties num_cpus
+R6942:6944 Corelib.Init.Datatypes <> nat ind
+var 6961:6965 ScheduleOfSporadicTaskWithJitter.ScheduleProperties sched
+R6968:6975 prosa.classic.model.schedule.global.basic.schedule Schedule schedule def
+R6981:6988 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.ScheduleProperties.num_cpus var
+R6977:6979 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.ScheduleProperties.Job var
+def 7056:7097 ScheduleOfSporadicTaskWithJitter jobs_of_same_task_dont_execute_in_parallel
+binder 7115:7115 <> j:73
+binder 7117:7118 <> j':74
+binder 7120:7120 <> t:75
+R7155:7166 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7141:7143 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7131:7138 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.ScheduleProperties.job_task var
+R7140:7140 prosa.classic.model.schedule.global.jitter.schedule <> j:73 var
+R7144:7151 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.ScheduleProperties.job_task var
+R7153:7154 prosa.classic.model.schedule.global.jitter.schedule <> j':74 var
+R7186:7197 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7167:7175 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled def
+R7185:7185 prosa.classic.model.schedule.global.jitter.schedule <> t:75 var
+R7183:7183 prosa.classic.model.schedule.global.jitter.schedule <> j:73 var
+R7177:7181 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.ScheduleProperties.sched var
+R7218:7229 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7198:7206 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled def
+R7217:7217 prosa.classic.model.schedule.global.jitter.schedule <> t:75 var
+R7214:7215 prosa.classic.model.schedule.global.jitter.schedule <> j':74 var
+R7208:7212 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.ScheduleProperties.sched var
+R7231:7233 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7230:7230 prosa.classic.model.schedule.global.jitter.schedule <> j:73 var
+R7234:7235 prosa.classic.model.schedule.global.jitter.schedule <> j':74 var
+R7249:7266 prosa.classic.model.schedule.global.jitter.schedule ScheduleOfSporadicTaskWithJitter.ScheduleProperties <> sec
+sec 7280:7290 ScheduleOfSporadicTaskWithJitter BasicLemmas
+var  7357:7369 ScheduleOfSporadicTaskWithJitter.BasicLemmas sporadic_task
+R7372:7377 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 7394:7402 ScheduleOfSporadicTaskWithJitter.BasicLemmas task_cost
+R7418:7421 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7405:7417 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.sporadic_task var
+R7422:7425 prosa.classic.model.time Time time def
+var 7441:7453 ScheduleOfSporadicTaskWithJitter.BasicLemmas task_deadline
+R7469:7472 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7456:7468 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.sporadic_task var
+R7473:7476 prosa.classic.model.time Time time def
+var  7497:7499 ScheduleOfSporadicTaskWithJitter.BasicLemmas Job
+R7502:7507 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 7528:7535 ScheduleOfSporadicTaskWithJitter.BasicLemmas job_cost
+R7541:7544 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7538:7540 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.Job var
+R7545:7548 prosa.classic.model.time Time time def
+var 7564:7575 ScheduleOfSporadicTaskWithJitter.BasicLemmas job_deadline
+R7581:7584 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7578:7580 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.Job var
+R7585:7588 prosa.classic.model.time Time time def
+var 7604:7611 ScheduleOfSporadicTaskWithJitter.BasicLemmas job_task
+R7617:7620 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7614:7616 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.Job var
+R7621:7633 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.sporadic_task var
+var 7697:7703 ScheduleOfSporadicTaskWithJitter.BasicLemmas arr_seq
+R7706:7721 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R7723:7725 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.Job var
+var  7787:7794 ScheduleOfSporadicTaskWithJitter.BasicLemmas num_cpus
+R7797:7799 Corelib.Init.Datatypes <> nat ind
+var 7816:7820 ScheduleOfSporadicTaskWithJitter.BasicLemmas sched
+R7823:7830 prosa.classic.model.schedule.global.basic.schedule Schedule schedule def
+R7836:7843 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.num_cpus var
+R7832:7834 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.Job var
+var 7921:7954 ScheduleOfSporadicTaskWithJitter.BasicLemmas jobs_dont_execute_after_completion
+R7965:7991 prosa.classic.model.schedule.global.basic.schedule Schedule completed_jobs_dont_execute def
+R8002:8006 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.sched var
+R7993:8000 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.job_cost var
+var 8055:8057 ScheduleOfSporadicTaskWithJitter.BasicLemmas tsk
+R8060:8072 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.sporadic_task var
+var 8143:8143 ScheduleOfSporadicTaskWithJitter.BasicLemmas j
+R8146:8148 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.Job var
+var 8166:8176 ScheduleOfSporadicTaskWithJitter.BasicLemmas H_j_arrives
+R8179:8188 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R8198:8198 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.j var
+R8190:8196 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.arr_seq var
+var 8216:8228 ScheduleOfSporadicTaskWithJitter.BasicLemmas H_job_of_task
+R8241:8243 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8231:8238 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.job_task var
+R8240:8240 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.j var
+R8244:8246 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.tsk var
+var 8264:8272 ScheduleOfSporadicTaskWithJitter.BasicLemmas valid_job
+R8281:8298 prosa.classic.model.arrival.basic.job Job valid_sporadic_job def
+R8355:8355 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.j var
+R8346:8353 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.job_task var
+R8333:8344 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.job_deadline var
+R8324:8331 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.job_cost var
+R8310:8322 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.task_deadline var
+R8300:8308 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.task_cost var
+prf 8480:8510 ScheduleOfSporadicTaskWithJitter cumulative_service_le_task_cost
+binder 8529:8529 <> t:105
+binder 8531:8532 <> t':106
+R8572:8575 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R8545:8558 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R8568:8568 prosa.classic.model.schedule.global.jitter.schedule <> t:105 var
+R8570:8571 prosa.classic.model.schedule.global.jitter.schedule <> t':106 var
+R8566:8566 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.j var
+R8560:8564 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.sched var
+R8576:8584 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.task_cost var
+R8586:8588 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.tsk var
+R8644:8661 prosa.classic.model.arrival.basic.job Job valid_sporadic_job def
+R8712:8719 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.job_cost var
+R8721:8721 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.j var
+R8691:8699 mathcomp.boot.ssrnat <> leq_trans thm
+R8750:8762 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.H_job_of_task var
+R8712:8719 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.job_cost var
+R8721:8721 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.j var
+R8691:8699 mathcomp.boot.ssrnat <> leq_trans thm
+R8750:8762 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.H_job_of_task var
+R8750:8762 prosa.classic.model.schedule.global.jitter.schedule <> ScheduleOfSporadicTaskWithJitter.BasicLemmas.H_job_of_task var
+R8794:8823 prosa.classic.model.schedule.global.basic.schedule Schedule cumulative_service_le_job_cost thm
+R8794:8823 prosa.classic.model.schedule.global.basic.schedule Schedule cumulative_service_le_job_cost thm
+R8842:8852 prosa.classic.model.schedule.global.jitter.schedule ScheduleOfSporadicTaskWithJitter.BasicLemmas <> sec
+R8862:8893 prosa.classic.model.schedule.global.jitter.schedule ScheduleOfSporadicTaskWithJitter <> mod

@@ -1,0 +1,60 @@
+DIGEST 108a42b7460515b6f170fbe33975f02d
+Fprosa.classic.analysis.global.parallel.interference_bound
+R15:36 prosa.classic.util.all <> <> lib
+R54:103 prosa.classic.model.schedule.global.basic.schedule <> <> lib
+R121:173 prosa.classic.analysis.global.parallel.workload_bound <> <> lib
+R205:213 mathcomp.boot.ssreflect <> <> lib
+R215:221 mathcomp.boot.ssrbool <> <> lib
+R223:228 mathcomp.boot.eqtype <> <> lib
+R230:235 mathcomp.boot.ssrnat <> <> lib
+R237:239 mathcomp.boot.seq <> <> lib
+R241:247 mathcomp.boot.fintype <> <> lib
+R249:253 mathcomp.boot.bigop <> <> lib
+mod 264:287 <> InterferenceBoundGeneric
+sec 301:311 InterferenceBoundGeneric Definitions
+R326:333 prosa.classic.model.schedule.global.basic.schedule Schedule <> mod
+R335:347 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound <> mod
+var  368:380 InterferenceBoundGeneric.Definitions sporadic_task
+R383:388 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 405:413 InterferenceBoundGeneric.Definitions task_cost
+R429:432 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R416:428 prosa.classic.analysis.global.parallel.interference_bound <> InterferenceBoundGeneric.Definitions.sporadic_task var
+R433:436 prosa.classic.model.time Time time def
+var 452:462 InterferenceBoundGeneric.Definitions task_period
+R478:481 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R465:477 prosa.classic.analysis.global.parallel.interference_bound <> InterferenceBoundGeneric.Definitions.sporadic_task var
+R482:485 prosa.classic.model.time Time time def
+var 501:513 InterferenceBoundGeneric.Definitions task_deadline
+R529:532 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R516:528 prosa.classic.analysis.global.parallel.interference_bound <> InterferenceBoundGeneric.Definitions.sporadic_task var
+R533:536 prosa.classic.model.time Time time def
+var 603:605 InterferenceBoundGeneric.Definitions tsk
+R608:620 prosa.classic.analysis.global.parallel.interference_bound <> InterferenceBoundGeneric.Definitions.sporadic_task var
+var 632:654 InterferenceBoundGeneric.Definitions task_with_response_time
+R673:675 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R660:672 prosa.classic.analysis.global.parallel.interference_bound <> InterferenceBoundGeneric.Definitions.sporadic_task var
+R676:679 prosa.classic.model.time Time time def
+var 781:786 InterferenceBoundGeneric.Definitions R_prev
+R789:791 mathcomp.boot.seq <> seq abbrev
+R793:815 prosa.classic.analysis.global.parallel.interference_bound <> InterferenceBoundGeneric.Definitions.task_with_response_time var
+var 876:880 InterferenceBoundGeneric.Definitions delta
+R883:886 prosa.classic.model.time Time time def
+sec 902:908 InterferenceBoundGeneric.Definitions PerTask
+var 927:931 InterferenceBoundGeneric.Definitions.PerTask tsk_R
+R934:956 prosa.classic.analysis.global.parallel.interference_bound <> InterferenceBoundGeneric.Definitions.task_with_response_time var
+var 969:977 InterferenceBoundGeneric.Definitions.PerTask tsk_other
+R982:984 Corelib.Init.Datatypes <> fst def
+R986:990 prosa.classic.analysis.global.parallel.interference_bound <> InterferenceBoundGeneric.Definitions.PerTask.tsk_R var
+var 1003:1009 InterferenceBoundGeneric.Definitions.PerTask R_other
+R1014:1016 Corelib.Init.Datatypes <> snd def
+R1018:1022 prosa.classic.analysis.global.parallel.interference_bound <> InterferenceBoundGeneric.Definitions.PerTask.tsk_R var
+def 1170:1195 InterferenceBoundGeneric interference_bound_generic
+R1208:1208 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound W def
+R1250:1254 prosa.classic.analysis.global.parallel.interference_bound <> InterferenceBoundGeneric.Definitions.delta var
+R1242:1248 prosa.classic.analysis.global.parallel.interference_bound <> InterferenceBoundGeneric.Definitions.PerTask.R_other var
+R1232:1240 prosa.classic.analysis.global.parallel.interference_bound <> InterferenceBoundGeneric.Definitions.PerTask.tsk_other var
+R1220:1230 prosa.classic.analysis.global.parallel.interference_bound <> InterferenceBoundGeneric.Definitions.task_period var
+R1210:1218 prosa.classic.analysis.global.parallel.interference_bound <> InterferenceBoundGeneric.Definitions.task_cost var
+R1266:1272 prosa.classic.analysis.global.parallel.interference_bound InterferenceBoundGeneric.Definitions.PerTask <> sec
+R1282:1292 prosa.classic.analysis.global.parallel.interference_bound InterferenceBoundGeneric.Definitions <> sec
+R1300:1323 prosa.classic.analysis.global.parallel.interference_bound InterferenceBoundGeneric <> mod

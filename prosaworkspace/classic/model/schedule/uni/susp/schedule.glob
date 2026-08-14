@@ -1,0 +1,73 @@
+DIGEST 99ed9cf99e9dd6bde72726e39a042922
+Fprosa.classic.model.schedule.uni.susp.schedule
+R15:36 prosa.classic.util.all <> <> lib
+R54:103 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R105:134 prosa.classic.model.suspension <> <> lib
+R151:178 prosa.classic.model.priority <> <> lib
+R196:236 prosa.classic.model.schedule.uni.schedule <> <> lib
+R254:311 prosa.classic.model.schedule.uni.susp.suspension_intervals <> <> lib
+R343:351 mathcomp.boot.ssreflect <> <> lib
+R353:359 mathcomp.boot.ssrbool <> <> lib
+R361:366 mathcomp.boot.eqtype <> <> lib
+R368:373 mathcomp.boot.ssrnat <> <> lib
+R375:377 mathcomp.boot.seq <> <> lib
+R379:385 mathcomp.boot.fintype <> <> lib
+R387:391 mathcomp.boot.bigop <> <> lib
+mod 402:424 <> ScheduleWithSuspensions
+R437:456 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule <> mod
+R458:476 prosa.classic.model.schedule.uni.susp.suspension_intervals SuspensionIntervals <> mod
+sec 490:500 ScheduleWithSuspensions Definitions
+var  521:524 ScheduleWithSuspensions.Definitions Task
+R527:532 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  549:551 ScheduleWithSuspensions.Definitions Job
+R554:559 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 576:586 ScheduleWithSuspensions.Definitions job_arrival
+R592:595 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R589:591 prosa.classic.model.schedule.uni.susp.schedule <> ScheduleWithSuspensions.Definitions.Job var
+R596:599 prosa.classic.model.time Time time def
+var 615:622 ScheduleWithSuspensions.Definitions job_cost
+R628:631 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R625:627 prosa.classic.model.schedule.uni.susp.schedule <> ScheduleWithSuspensions.Definitions.Job var
+R632:635 prosa.classic.model.time Time time def
+var 706:720 ScheduleWithSuspensions.Definitions next_suspension
+R723:736 prosa.classic.model.suspension Suspension job_suspension def
+R738:740 prosa.classic.model.schedule.uni.susp.schedule <> ScheduleWithSuspensions.Definitions.Job var
+var 803:807 ScheduleWithSuspensions.Definitions sched
+R810:817 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R819:821 prosa.classic.model.schedule.uni.susp.schedule <> ScheduleWithSuspensions.Definitions.Job var
+var 926:939 ScheduleWithSuspensions.Definitions job_pending_at
+R944:950 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R973:977 prosa.classic.model.schedule.uni.susp.schedule <> ScheduleWithSuspensions.Definitions.sched var
+R964:971 prosa.classic.model.schedule.uni.susp.schedule <> ScheduleWithSuspensions.Definitions.job_cost var
+R952:962 prosa.classic.model.schedule.uni.susp.schedule <> ScheduleWithSuspensions.Definitions.job_arrival var
+var 988:1003 ScheduleWithSuspensions.Definitions job_scheduled_at
+R1008:1019 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R1021:1025 prosa.classic.model.schedule.uni.susp.schedule <> ScheduleWithSuspensions.Definitions.sched var
+var 1036:1051 ScheduleWithSuspensions.Definitions job_suspended_at
+R1056:1067 prosa.classic.model.schedule.uni.susp.suspension_intervals SuspensionIntervals suspended_at def
+R1106:1110 prosa.classic.model.schedule.uni.susp.schedule <> ScheduleWithSuspensions.Definitions.sched var
+R1090:1104 prosa.classic.model.schedule.uni.susp.schedule <> ScheduleWithSuspensions.Definitions.next_suspension var
+R1081:1088 prosa.classic.model.schedule.uni.susp.schedule <> ScheduleWithSuspensions.Definitions.job_cost var
+R1069:1079 prosa.classic.model.schedule.uni.susp.schedule <> ScheduleWithSuspensions.Definitions.job_arrival var
+sec 1212:1224 ScheduleWithSuspensions.Definitions BackloggedJob
+var 1275:1275 ScheduleWithSuspensions.Definitions.BackloggedJob j
+R1278:1280 prosa.classic.model.schedule.uni.susp.schedule <> ScheduleWithSuspensions.Definitions.Job var
+def 1404:1413 ScheduleWithSuspensions backlogged
+R1419:1422 prosa.classic.model.time Time time def
+binder 1416:1416 <> t:13
+R1489:1500 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R1454:1465 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R1436:1449 prosa.classic.model.schedule.uni.susp.schedule <> ScheduleWithSuspensions.Definitions.job_pending_at var
+R1451:1451 prosa.classic.model.schedule.uni.susp.schedule <> ScheduleWithSuspensions.Definitions.BackloggedJob.j var
+R1453:1453 prosa.classic.model.schedule.uni.susp.schedule <> t:13 var
+R1466:1468 Corelib.ssr.ssrbool <> ::bool_scope:'~~'_x not
+R1469:1484 prosa.classic.model.schedule.uni.susp.schedule <> ScheduleWithSuspensions.Definitions.job_scheduled_at var
+R1486:1486 prosa.classic.model.schedule.uni.susp.schedule <> ScheduleWithSuspensions.Definitions.BackloggedJob.j var
+R1488:1488 prosa.classic.model.schedule.uni.susp.schedule <> t:13 var
+R1501:1503 Corelib.ssr.ssrbool <> ::bool_scope:'~~'_x not
+R1504:1519 prosa.classic.model.schedule.uni.susp.schedule <> ScheduleWithSuspensions.Definitions.job_suspended_at var
+R1521:1521 prosa.classic.model.schedule.uni.susp.schedule <> ScheduleWithSuspensions.Definitions.BackloggedJob.j var
+R1523:1523 prosa.classic.model.schedule.uni.susp.schedule <> t:13 var
+R1535:1547 prosa.classic.model.schedule.uni.susp.schedule ScheduleWithSuspensions.Definitions.BackloggedJob <> sec
+R1557:1567 prosa.classic.model.schedule.uni.susp.schedule ScheduleWithSuspensions.Definitions <> sec
+R1577:1599 prosa.classic.model.schedule.uni.susp.schedule ScheduleWithSuspensions <> mod

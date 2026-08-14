@@ -1,0 +1,424 @@
+DIGEST 9cacd1c6e0257bc45c4c67a71ea486ca
+Fprosa.classic.util.tactics
+R15:32 prosa.util.tactics <> <> lib
+R688:696 mathcomp.boot.ssreflect <> <> lib
+R698:704 mathcomp.boot.ssrbool <> <> lib
+R706:711 mathcomp.boot.ssrnat <> <> lib
+R713:718 mathcomp.boot.eqtype <> <> lib
+R720:724 mathcomp.boot.bigop <> <> lib
+R1208:1216 Corelib.Init.Logic <> sym_equal abbrev
+R1543:1544 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R1543:1544 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R2059:2060 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R2059:2060 Corelib.Init.Logic <> ::type_scope:'~'_x not
+prf 2397:2414 <> vlib__internal_eqP
+R2432:2437 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+binder 2429:2429 <> T:1
+R2447:2447 prosa.classic.util.tactics <> T:1 var
+binder 2441:2441 <> x:2
+binder 2443:2443 <> y:3
+R2451:2457 Corelib.Init.Datatypes <> reflect ind
+R2469:2472 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R2468:2468 prosa.classic.util.tactics <> x:2 var
+R2473:2473 prosa.classic.util.tactics <> y:3 var
+R2461:2463 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2460:2460 prosa.classic.util.tactics <> x:2 var
+R2464:2464 prosa.classic.util.tactics <> y:3 var
+R2501:2503 mathcomp.boot.eqtype <> eqP def
+R2501:2503 mathcomp.boot.eqtype <> eqP def
+prf 2518:2525 <> beq_refl
+R2541:2546 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+binder 2537:2537 <> T:4
+R2554:2554 prosa.classic.util.tactics <> T:4 var
+binder 2550:2550 <> x:5
+R2559:2562 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R2558:2558 prosa.classic.util.tactics <> x:5 var
+R2563:2563 prosa.classic.util.tactics <> x:5 var
+R2589:2591 mathcomp.boot.eqtype <> eqP def
+R2589:2591 mathcomp.boot.eqtype <> eqP def
+prf 2606:2612 <> beq_sym
+R2628:2633 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+binder 2624:2624 <> T:6
+R2643:2643 prosa.classic.util.tactics <> T:6 var
+binder 2637:2637 <> x:7
+binder 2639:2639 <> y:8
+R2647:2647 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2654:2658 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2665:2665 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2649:2652 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R2648:2648 prosa.classic.util.tactics <> x:7 var
+R2653:2653 prosa.classic.util.tactics <> y:8 var
+R2660:2663 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R2659:2659 prosa.classic.util.tactics <> y:8 var
+R2664:2664 prosa.classic.util.tactics <> x:7 var
+R2693:2695 mathcomp.boot.eqtype <> eqP def
+R2693:2695 mathcomp.boot.eqtype <> eqP def
+R2693:2695 mathcomp.boot.eqtype <> eqP def
+R2693:2695 mathcomp.boot.eqtype <> eqP def
+R2759:2766 prosa.classic.util.tactics <> beq_refl thm
+abbrev 2794:2797 <> eqxx
+R2802:2809 prosa.classic.util.tactics <> beq_refl thm
+prf 3020:3037 <> vlib__negb_rewrite
+binder 3048:3048 <> b:9
+R3057:3060 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3051:3054 Corelib.Init.Datatypes <> negb def
+R3056:3056 prosa.classic.util.tactics <> b:9 var
+R3062:3064 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3061:3061 prosa.classic.util.tactics <> b:9 var
+R3065:3069 Corelib.Init.Datatypes <> false constr
+prf 3105:3120 <> vlib__andb_split
+binder 3131:3132 <> b1:10
+binder 3134:3135 <> b2:11
+R3146:3149 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3140:3143 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R3138:3139 prosa.classic.util.tactics <> b1:10 var
+R3144:3145 prosa.classic.util.tactics <> b2:11 var
+R3152:3155 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3150:3151 prosa.classic.util.tactics <> b1:10 var
+R3156:3157 prosa.classic.util.tactics <> b2:11 var
+prf 3196:3212 <> vlib__nandb_split
+binder 3223:3224 <> b1:12
+binder 3226:3227 <> b2:13
+R3246:3249 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3238:3240 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3232:3235 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R3230:3231 prosa.classic.util.tactics <> b1:12 var
+R3236:3237 prosa.classic.util.tactics <> b2:13 var
+R3241:3245 Corelib.Init.Datatypes <> false constr
+R3260:3263 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R3252:3254 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3250:3251 prosa.classic.util.tactics <> b1:12 var
+R3255:3259 Corelib.Init.Datatypes <> false constr
+R3266:3268 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3264:3265 prosa.classic.util.tactics <> b2:13 var
+R3269:3273 Corelib.Init.Datatypes <> false constr
+prf 3316:3330 <> vlib__orb_split
+binder 3341:3342 <> b1:14
+binder 3344:3345 <> b2:15
+R3356:3359 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3350:3353 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R3348:3349 prosa.classic.util.tactics <> b1:14 var
+R3354:3355 prosa.classic.util.tactics <> b2:15 var
+R3362:3365 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R3360:3361 prosa.classic.util.tactics <> b1:14 var
+R3366:3367 prosa.classic.util.tactics <> b2:15 var
+prf 3409:3424 <> vlib__norb_split
+binder 3435:3436 <> b1:16
+binder 3438:3439 <> b2:17
+R3458:3461 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3450:3452 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3444:3447 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R3442:3443 prosa.classic.util.tactics <> b1:16 var
+R3448:3449 prosa.classic.util.tactics <> b2:17 var
+R3453:3457 Corelib.Init.Datatypes <> false constr
+R3472:3475 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3464:3466 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3462:3463 prosa.classic.util.tactics <> b1:16 var
+R3467:3471 Corelib.Init.Datatypes <> false constr
+R3478:3480 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3476:3477 prosa.classic.util.tactics <> b2:17 var
+R3481:3485 Corelib.Init.Datatypes <> false constr
+prf 3527:3541 <> vlib__eqb_split
+R3560:3563 Corelib.Init.Datatypes <> bool ind
+binder 3552:3553 <> b1:18
+binder 3555:3556 <> b2:19
+R3566:3566 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3575:3579 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3569:3572 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3567:3568 prosa.classic.util.tactics <> b1:18 var
+R3573:3574 prosa.classic.util.tactics <> b2:19 var
+R3580:3580 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3589:3593 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3583:3586 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3581:3582 prosa.classic.util.tactics <> b2:19 var
+R3587:3588 prosa.classic.util.tactics <> b1:18 var
+R3596:3598 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3594:3595 prosa.classic.util.tactics <> b1:18 var
+R3599:3600 prosa.classic.util.tactics <> b2:19 var
+R3636:3642 Corelib.Init.Datatypes <> is_true def
+R3661:3666 Corelib.Init.Logic <> sym_eq abbrev
+R3661:3666 Corelib.Init.Logic <> sym_eq abbrev
+R3661:3666 Corelib.Init.Logic <> sym_eq abbrev
+R3661:3666 Corelib.Init.Logic <> sym_eq abbrev
+R3661:3666 Corelib.Init.Logic <> sym_eq abbrev
+prf 3681:3697 <> vlib__beq_rewrite
+R3713:3718 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+binder 3709:3709 <> T:20
+R3730:3730 prosa.classic.util.tactics <> T:20 var
+binder 3722:3723 <> x1:21
+binder 3725:3726 <> x2:22
+R3742:3745 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3736:3739 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R3734:3735 prosa.classic.util.tactics <> x1:21 var
+R3740:3741 prosa.classic.util.tactics <> x2:22 var
+R3748:3750 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3746:3747 prosa.classic.util.tactics <> x1:21 var
+R3751:3752 prosa.classic.util.tactics <> x2:22 var
+R3786:3788 mathcomp.boot.eqtype <> eqP def
+R3786:3788 mathcomp.boot.eqtype <> eqP def
+prf 3803:3817 <> vlib__leq_split
+binder 3828:3829 <> x1:23
+binder 3831:3832 <> x2:24
+binder 3834:3835 <> x3:25
+R3846:3849 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3840:3843 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R3838:3839 prosa.classic.util.tactics <> x1:23 var
+R3844:3845 prosa.classic.util.tactics <> x2:24 var
+R3858:3861 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3852:3855 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R3850:3851 prosa.classic.util.tactics <> x2:24 var
+R3856:3857 prosa.classic.util.tactics <> x3:25 var
+R3864:3867 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<='_x not
+R3870:3873 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<='_x not
+R3862:3863 prosa.classic.util.tactics <> x1:23 var
+R3868:3869 prosa.classic.util.tactics <> x2:24 var
+R3868:3869 prosa.classic.util.tactics <> x2:24 var
+R3874:3875 prosa.classic.util.tactics <> x3:25 var
+R3902:3905 Corelib.ssr.ssrbool <> andP thm
+R3902:3905 Corelib.ssr.ssrbool <> andP thm
+prf 3927:3942 <> vlib__ltn_split1
+binder 3953:3954 <> x1:26
+binder 3956:3957 <> x2:27
+binder 3959:3960 <> x3:28
+R3971:3974 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3965:3968 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R3963:3964 prosa.classic.util.tactics <> x1:26 var
+R3969:3970 prosa.classic.util.tactics <> x2:27 var
+R3982:3985 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3977:3979 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R3975:3976 prosa.classic.util.tactics <> x2:27 var
+R3980:3981 prosa.classic.util.tactics <> x3:28 var
+R3988:3991 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R3994:3996 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R3986:3987 prosa.classic.util.tactics <> x1:26 var
+R3992:3993 prosa.classic.util.tactics <> x2:27 var
+R3992:3993 prosa.classic.util.tactics <> x2:27 var
+R3997:3998 prosa.classic.util.tactics <> x3:28 var
+R4025:4028 Corelib.ssr.ssrbool <> andP thm
+R4025:4028 Corelib.ssr.ssrbool <> andP thm
+prf 4050:4065 <> vlib__ltn_split2
+binder 4076:4077 <> x1:29
+binder 4079:4080 <> x2:30
+binder 4082:4083 <> x3:31
+R4093:4096 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4088:4090 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R4086:4087 prosa.classic.util.tactics <> x1:29 var
+R4091:4092 prosa.classic.util.tactics <> x2:30 var
+R4105:4108 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4099:4102 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R4097:4098 prosa.classic.util.tactics <> x2:30 var
+R4103:4104 prosa.classic.util.tactics <> x3:31 var
+R4111:4113 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x_'<='_x not
+R4116:4119 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x_'<='_x not
+R4109:4110 prosa.classic.util.tactics <> x1:29 var
+R4114:4115 prosa.classic.util.tactics <> x2:30 var
+R4114:4115 prosa.classic.util.tactics <> x2:30 var
+R4120:4121 prosa.classic.util.tactics <> x3:31 var
+R4148:4151 Corelib.ssr.ssrbool <> andP thm
+R4148:4151 Corelib.ssr.ssrbool <> andP thm
+R4853:4859 Corelib.Init.Datatypes <> is_true def
+R4862:4865 Corelib.Init.Datatypes <> andb def
+R4853:4859 Corelib.Init.Datatypes <> is_true def
+R4862:4865 Corelib.Init.Datatypes <> andb def
+R4965:4971 Corelib.Init.Datatypes <> is_true def
+R4974:4977 Corelib.Init.Datatypes <> negb def
+R4965:4971 Corelib.Init.Datatypes <> is_true def
+R4974:4977 Corelib.Init.Datatypes <> negb def
+R5036:5042 Corelib.Init.Datatypes <> is_true def
+R5036:5042 Corelib.Init.Datatypes <> is_true def
+R5088:5090 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5091:5094 Corelib.Init.Datatypes <> true constr
+R5088:5090 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5091:5094 Corelib.Init.Datatypes <> true constr
+R5138:5140 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5141:5145 Corelib.Init.Datatypes <> false constr
+R5138:5140 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5141:5145 Corelib.Init.Datatypes <> false constr
+R5186:5192 Corelib.Init.Datatypes <> is_true def
+R5196:5199 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R5186:5192 Corelib.Init.Datatypes <> is_true def
+R5196:5199 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R5276:5290 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5276:5290 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5357:5369 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5357:5369 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5438:5448 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5438:5448 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5519:5527 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5519:5527 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5600:5606 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5600:5606 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5681:5685 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5681:5685 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5762:5764 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5762:5764 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5225:5241 prosa.classic.util.tactics <> vlib__beq_rewrite thm
+R5001:5018 prosa.classic.util.tactics <> vlib__negb_rewrite thm
+R4915:4930 prosa.classic.util.tactics <> vlib__andb_split thm
+R5969:5971 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5972:5975 Corelib.Init.Datatypes <> Some constr
+R5969:5971 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5972:5975 Corelib.Init.Datatypes <> Some constr
+R5986:5988 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5989:5992 Corelib.Init.Datatypes <> None constr
+R5986:5988 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5989:5992 Corelib.Init.Datatypes <> None constr
+R6047:6049 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6050:6053 Corelib.Init.Datatypes <> Some constr
+R6047:6049 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6050:6053 Corelib.Init.Datatypes <> Some constr
+R6064:6066 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6067:6070 Corelib.Init.Datatypes <> Some constr
+R6064:6066 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6067:6070 Corelib.Init.Datatypes <> Some constr
+R6944:6950 Corelib.Init.Datatypes <> is_true def
+R6954:6957 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R6944:6950 Corelib.Init.Datatypes <> is_true def
+R6954:6957 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R7030:7036 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R7038:7039 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 7037:7037 <> x:32
+R7030:7036 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R7038:7039 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 7037:7037 <> x:33
+R7111:7114 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R7111:7114 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R7214:7220 Corelib.Init.Datatypes <> is_true def
+R7224:7227 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7214:7220 Corelib.Init.Datatypes <> is_true def
+R7224:7227 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7329:7329 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7336:7339 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7331:7334 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R7340:7344 Corelib.Init.Datatypes <> false constr
+R7329:7329 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7336:7339 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7331:7334 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R7340:7344 Corelib.Init.Datatypes <> false constr
+R7445:7447 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7445:7447 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7391:7406 prosa.classic.util.tactics <> vlib__norb_split thm
+R7277:7292 prosa.classic.util.tactics <> vlib__andb_split thm
+R6981:6997 prosa.classic.util.tactics <> vlib__beq_rewrite thm
+R7523:7529 Corelib.Init.Datatypes <> is_true def
+R7533:7536 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R7523:7529 Corelib.Init.Datatypes <> is_true def
+R7533:7536 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R7609:7615 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R7617:7618 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 7616:7616 <> x:34
+R7609:7615 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R7617:7618 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 7616:7616 <> x:35
+R7688:7695 Corelib.Init.Logic <> ::type_scope:'exists2'_x_','_x_'&'_x not
+R7697:7698 Corelib.Init.Logic <> ::type_scope:'exists2'_x_','_x_'&'_x not
+R7701:7703 Corelib.Init.Logic <> ::type_scope:'exists2'_x_','_x_'&'_x not
+binder 7696:7696 <> x:36
+binder 7696:7696 <> x:37
+R7688:7695 Corelib.Init.Logic <> ::type_scope:'exists2'_x_','_x_'&'_x not
+R7697:7698 Corelib.Init.Logic <> ::type_scope:'exists2'_x_','_x_'&'_x not
+R7701:7703 Corelib.Init.Logic <> ::type_scope:'exists2'_x_','_x_'&'_x not
+binder 7696:7696 <> x:38
+binder 7696:7696 <> x:39
+R7779:7782 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R7779:7782 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R7882:7888 Corelib.Init.Datatypes <> is_true def
+R7892:7895 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7882:7888 Corelib.Init.Datatypes <> is_true def
+R7892:7895 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7995:7995 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8002:8005 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7997:8000 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R8006:8010 Corelib.Init.Datatypes <> false constr
+R7995:7995 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8002:8005 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7997:8000 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R8006:8010 Corelib.Init.Datatypes <> false constr
+R8109:8111 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8109:8111 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8143:8147 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R8143:8147 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R8249:8252 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R8249:8252 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R8346:8352 Corelib.Init.Datatypes <> is_true def
+R8356:8359 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R8346:8352 Corelib.Init.Datatypes <> is_true def
+R8356:8359 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R8424:8424 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8431:8434 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8426:8429 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8435:8439 Corelib.Init.Datatypes <> false constr
+R8424:8424 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8431:8434 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8426:8429 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8435:8439 Corelib.Init.Datatypes <> false constr
+R8455:8471 prosa.classic.util.tactics <> vlib__nandb_split thm
+R8377:8391 prosa.classic.util.tactics <> vlib__orb_split thm
+R8055:8070 prosa.classic.util.tactics <> vlib__norb_split thm
+R7943:7958 prosa.classic.util.tactics <> vlib__andb_split thm
+R7560:7576 prosa.classic.util.tactics <> vlib__beq_rewrite thm
+R8662:8663 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R8665:8671 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R8673:8674 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R8662:8663 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R8665:8671 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R8673:8674 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R8711:8714 Corelib.Init.Datatypes <> bool ind
+R8711:8714 Corelib.Init.Datatypes <> bool ind
+R8840:8846 Corelib.Init.Datatypes <> reflect ind
+R9193:9194 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R9196:9202 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R9204:9205 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R9193:9194 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R9196:9202 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R9204:9205 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R9242:9245 Corelib.Init.Datatypes <> bool ind
+R9242:9245 Corelib.Init.Datatypes <> bool ind
+R9371:9377 Corelib.Init.Datatypes <> reflect ind
+R10185:10186 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R10188:10194 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R10196:10197 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R10185:10186 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R10188:10194 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R10196:10197 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R10234:10237 Corelib.Init.Datatypes <> bool ind
+R10234:10237 Corelib.Init.Datatypes <> bool ind
+R10363:10369 Corelib.Init.Datatypes <> reflect ind
+R9719:9720 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R9722:9728 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R9730:9731 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R9719:9720 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R9722:9728 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R9730:9731 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R9768:9771 Corelib.Init.Datatypes <> bool ind
+R9768:9771 Corelib.Init.Datatypes <> bool ind
+R9897:9903 Corelib.Init.Datatypes <> reflect ind
+R10631:10634 Corelib.Init.Datatypes <> true constr
+R10643:10647 Corelib.Init.Datatypes <> false constr
+R10658:10670 Corelib.Init.Logic <> eq_refl constr
+R10631:10634 Corelib.Init.Datatypes <> true constr
+R10643:10647 Corelib.Init.Datatypes <> false constr
+R10658:10670 Corelib.Init.Logic <> eq_refl constr
+R10917:10920 Corelib.Init.Datatypes <> true constr
+R10929:10933 Corelib.Init.Datatypes <> false constr
+R10944:10956 Corelib.Init.Logic <> eq_refl constr
+R10917:10920 Corelib.Init.Datatypes <> true constr
+R10929:10933 Corelib.Init.Datatypes <> false constr
+R10944:10956 Corelib.Init.Logic <> eq_refl constr
+R11034:11046 Corelib.Init.Logic <> eq_refl constr
+R10767:10779 Corelib.Init.Logic <> eq_refl constr
+R12165:12167 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12734:12737 Corelib.Init.Logic <> True ind
+R12900:12903 Corelib.Init.Logic <> True ind
+R13379:13391 mathcomp.boot.bigop <> big_const_nat thm
+R13394:13406 mathcomp.boot.bigop <> big_const_ord thm
+R13409:13421 mathcomp.boot.bigop <> big_const_seq thm
+R13423:13431 mathcomp.boot.ssrnat <> iter_addn thm
+R13434:13438 mathcomp.boot.ssrnat <> muln1 thm
+R13441:13445 mathcomp.boot.ssrnat <> mul1n thm
+R13448:13452 mathcomp.boot.ssrnat <> mul0n thm
+R13465:13469 mathcomp.boot.ssrnat <> muln0 thm
+R13472:13476 mathcomp.boot.ssrnat <> addn0 thm
+R13479:13483 mathcomp.boot.ssrnat <> add0n thm
+R13765:13768 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13765:13768 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not

@@ -1,0 +1,492 @@
+DIGEST d04537e715506ae9c65ad95031418ff4
+Fprosa.classic.model.schedule.uni.basic.platform
+R15:36 prosa.classic.util.all <> <> lib
+R54:91 prosa.classic.model.arrival.basic.task <> <> lib
+R93:129 prosa.classic.model.arrival.basic.job <> <> lib
+R131:158 prosa.classic.model.priority <> <> lib
+R160:205 prosa.classic.model.arrival.basic.task_arrival <> <> lib
+R223:263 prosa.classic.model.schedule.uni.schedule <> <> lib
+R295:303 mathcomp.boot.ssreflect <> <> lib
+R305:311 mathcomp.boot.ssrbool <> <> lib
+R313:318 mathcomp.boot.ssrfun <> <> lib
+R320:325 mathcomp.boot.eqtype <> <> lib
+R327:332 mathcomp.boot.ssrnat <> <> lib
+R334:336 mathcomp.boot.seq <> <> lib
+R338:344 mathcomp.boot.fintype <> <> lib
+R346:350 mathcomp.boot.bigop <> <> lib
+mod 361:368 <> Platform
+R381:383 prosa.classic.model.arrival.basic.job Job <> mod
+R385:399 prosa.classic.model.arrival.basic.task SporadicTaskset <> mod
+R401:420 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule <> mod
+R422:429 prosa.classic.model.priority Priority <> mod
+sec 516:525 Platform Properties
+var  546:558 Platform.Properties sporadic_task
+R561:566 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 583:591 Platform.Properties task_cost
+R607:610 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R594:606 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.sporadic_task var
+R611:614 prosa.classic.model.time Time time def
+var 630:640 Platform.Properties task_period
+R656:659 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R643:655 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.sporadic_task var
+R660:663 prosa.classic.model.time Time time def
+var 679:691 Platform.Properties task_deadline
+R707:710 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R694:706 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.sporadic_task var
+R711:714 prosa.classic.model.time Time time def
+var  735:737 Platform.Properties Job
+R740:745 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 762:772 Platform.Properties job_arrival
+R778:781 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R775:777 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.Job var
+R782:785 prosa.classic.model.time Time time def
+var 801:808 Platform.Properties job_cost
+R814:817 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R811:813 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.Job var
+R818:821 prosa.classic.model.time Time time def
+var 837:848 Platform.Properties job_deadline
+R854:857 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R851:853 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.Job var
+R858:861 prosa.classic.model.time Time time def
+var 877:884 Platform.Properties job_task
+R890:893 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R887:889 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.Job var
+R894:906 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.sporadic_task var
+var 970:976 Platform.Properties arr_seq
+R979:994 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R996:998 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.Job var
+var 1077:1081 Platform.Properties sched
+R1084:1091 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R1093:1095 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.Job var
+sec 1171:1179 Platform.Properties Execution
+def 1347:1361 Platform work_conserving
+binder 1381:1381 <> j:21
+binder 1383:1383 <> t:22
+R1416:1429 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1396:1405 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R1415:1415 prosa.classic.model.schedule.uni.basic.platform <> j:21 var
+R1407:1413 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.arr_seq var
+R1471:1484 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1430:1439 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule backlogged def
+R1470:1470 prosa.classic.model.schedule.uni.basic.platform <> t:22 var
+R1468:1468 prosa.classic.model.schedule.uni.basic.platform <> j:21 var
+R1462:1466 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.sched var
+R1453:1460 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.job_cost var
+R1441:1451 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.job_arrival var
+R1485:1491 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1499:1500 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 1492:1498 <> j_other:23
+R1501:1512 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R1528:1528 prosa.classic.model.schedule.uni.basic.platform <> t:22 var
+R1520:1526 prosa.classic.model.schedule.uni.basic.platform <> j_other:23 var
+R1514:1518 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.sched var
+R1540:1548 prosa.classic.model.schedule.uni.basic.platform Platform.Properties.Execution <> sec
+sec 1627:1628 Platform.Properties FP
+var 1686:1703 Platform.Properties.FP higher_eq_priority
+R1706:1714 prosa.classic.model.priority Priority FP_policy def
+R1716:1728 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.sporadic_task var
+def 1884:1901 Platform respects_FP_policy
+binder 1921:1921 <> j:26
+binder 1923:1926 <> j_hp:27
+binder 1928:1928 <> t:28
+R1961:1974 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1941:1950 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R1960:1960 prosa.classic.model.schedule.uni.basic.platform <> j:26 var
+R1952:1958 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.arr_seq var
+R2016:2029 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1975:1984 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule backlogged def
+R2015:2015 prosa.classic.model.schedule.uni.basic.platform <> t:28 var
+R2013:2013 prosa.classic.model.schedule.uni.basic.platform <> j:26 var
+R2007:2011 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.sched var
+R1998:2005 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.job_cost var
+R1986:1996 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.job_arrival var
+R2055:2068 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2030:2041 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R2054:2054 prosa.classic.model.schedule.uni.basic.platform <> t:28 var
+R2049:2052 prosa.classic.model.schedule.uni.basic.platform <> j_hp:27 var
+R2043:2047 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.sched var
+R2069:2086 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.FP.higher_eq_priority var
+R2089:2096 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.job_task var
+R2098:2101 prosa.classic.model.schedule.uni.basic.platform <> j_hp:27 var
+R2105:2112 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.job_task var
+R2114:2114 prosa.classic.model.schedule.uni.basic.platform <> j:26 var
+R2127:2128 prosa.classic.model.schedule.uni.basic.platform Platform.Properties.FP <> sec
+sec 2211:2214 Platform.Properties JLFP
+var 2274:2291 Platform.Properties.JLFP higher_eq_priority
+R2294:2304 prosa.classic.model.priority Priority JLFP_policy def
+R2306:2308 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.Job var
+def 2464:2483 Platform respects_JLFP_policy
+binder 2503:2503 <> j:31
+binder 2505:2508 <> j_hp:32
+binder 2510:2510 <> t:33
+R2543:2556 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2523:2532 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R2542:2542 prosa.classic.model.schedule.uni.basic.platform <> j:31 var
+R2534:2540 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.arr_seq var
+R2598:2611 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2557:2566 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule backlogged def
+R2597:2597 prosa.classic.model.schedule.uni.basic.platform <> t:33 var
+R2595:2595 prosa.classic.model.schedule.uni.basic.platform <> j:31 var
+R2589:2593 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.sched var
+R2580:2587 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.job_cost var
+R2568:2578 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.job_arrival var
+R2637:2650 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2612:2623 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R2636:2636 prosa.classic.model.schedule.uni.basic.platform <> t:33 var
+R2631:2634 prosa.classic.model.schedule.uni.basic.platform <> j_hp:32 var
+R2625:2629 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.sched var
+R2651:2668 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.JLFP.higher_eq_priority var
+R2670:2673 prosa.classic.model.schedule.uni.basic.platform <> j_hp:32 var
+R2675:2675 prosa.classic.model.schedule.uni.basic.platform <> j:31 var
+R2693:2696 prosa.classic.model.schedule.uni.basic.platform Platform.Properties.JLFP <> sec
+sec 2775:2778 Platform.Properties JLDP
+var 2843:2860 Platform.Properties.JLDP higher_eq_priority
+R2863:2873 prosa.classic.model.priority Priority JLDP_policy def
+R2875:2877 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.Job var
+def 3048:3067 Platform respects_JLDP_policy
+binder 3087:3087 <> j:36
+binder 3089:3092 <> j_hp:37
+binder 3094:3094 <> t:38
+R3127:3140 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3107:3116 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R3126:3126 prosa.classic.model.schedule.uni.basic.platform <> j:36 var
+R3118:3124 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.arr_seq var
+R3182:3195 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3141:3150 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule backlogged def
+R3181:3181 prosa.classic.model.schedule.uni.basic.platform <> t:38 var
+R3179:3179 prosa.classic.model.schedule.uni.basic.platform <> j:36 var
+R3173:3177 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.sched var
+R3164:3171 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.job_cost var
+R3152:3162 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.job_arrival var
+R3221:3234 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3196:3207 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R3220:3220 prosa.classic.model.schedule.uni.basic.platform <> t:38 var
+R3215:3218 prosa.classic.model.schedule.uni.basic.platform <> j_hp:37 var
+R3209:3213 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.sched var
+R3235:3252 prosa.classic.model.schedule.uni.basic.platform <> Platform.Properties.JLDP.higher_eq_priority var
+R3254:3254 prosa.classic.model.schedule.uni.basic.platform <> t:38 var
+R3256:3259 prosa.classic.model.schedule.uni.basic.platform <> j_hp:37 var
+R3261:3261 prosa.classic.model.schedule.uni.basic.platform <> j:36 var
+R3279:3282 prosa.classic.model.schedule.uni.basic.platform Platform.Properties.JLDP <> sec
+R3292:3301 prosa.classic.model.schedule.uni.basic.platform Platform.Properties <> sec
+sec 3391:3396 Platform Lemmas
+var  3419:3431 Platform.Lemmas sporadic_task
+R3434:3439 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 3456:3464 Platform.Lemmas task_cost
+R3480:3483 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3467:3479 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.sporadic_task var
+R3484:3487 prosa.classic.model.time Time time def
+var 3503:3513 Platform.Lemmas task_period
+R3529:3532 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3516:3528 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.sporadic_task var
+R3533:3536 prosa.classic.model.time Time time def
+var 3552:3564 Platform.Lemmas task_deadline
+R3580:3583 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3567:3579 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.sporadic_task var
+R3584:3587 prosa.classic.model.time Time time def
+var  3608:3610 Platform.Lemmas Job
+R3613:3618 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 3635:3645 Platform.Lemmas job_arrival
+R3651:3654 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3648:3650 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.Job var
+R3655:3658 prosa.classic.model.time Time time def
+var 3674:3681 Platform.Lemmas job_cost
+R3687:3690 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3684:3686 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.Job var
+R3691:3694 prosa.classic.model.time Time time def
+var 3710:3721 Platform.Lemmas job_deadline
+R3727:3730 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3724:3726 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.Job var
+R3731:3734 prosa.classic.model.time Time time def
+var 3750:3757 Platform.Lemmas job_task
+R3763:3766 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3760:3762 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.Job var
+R3767:3779 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.sporadic_task var
+var 3847:3853 Platform.Lemmas arr_seq
+R3856:3871 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R3873:3875 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.Job var
+var 3954:3958 Platform.Lemmas sched
+R3961:3968 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R3970:3972 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.Job var
+var 4041:4057 Platform.Lemmas job_backlogged_at
+R4062:4071 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule backlogged def
+R4094:4098 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.sched var
+R4085:4092 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_cost var
+R4073:4083 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_arrival var
+var 4109:4122 Platform.Lemmas job_pending_at
+R4127:4133 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R4156:4160 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.sched var
+R4147:4154 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_cost var
+R4135:4145 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_arrival var
+var 4171:4186 Platform.Lemmas job_completed_by
+R4191:4202 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R4213:4217 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.sched var
+R4204:4211 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_cost var
+sec 4362:4379 Platform.Lemmas JobNeverBacklogged
+var 4511:4539 Platform.Lemmas.JobNeverBacklogged H_jobs_must_arrive_to_execute
+R4550:4576 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule jobs_must_arrive_to_execute def
+R4590:4594 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.sched var
+R4578:4588 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_arrival var
+var 4614:4642 Platform.Lemmas.JobNeverBacklogged H_completed_jobs_dont_execute
+R4653:4679 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_jobs_dont_execute def
+R4690:4694 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.sched var
+R4681:4688 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_cost var
+var 4778:4794 Platform.Lemmas.JobNeverBacklogged H_work_conserving
+R4797:4811 prosa.classic.model.schedule.uni.basic.platform Platform work_conserving def
+R4842:4846 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.sched var
+R4834:4840 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.arr_seq var
+R4825:4832 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_cost var
+R4813:4823 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_arrival var
+var 4903:4903 Platform.Lemmas.JobNeverBacklogged j
+R4906:4908 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.Job var
+var 4993:5015 Platform.Lemmas.JobNeverBacklogged H_j_is_never_backlogged
+binder 5033:5033 <> t:67
+R5093:5106 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5059:5062 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R5064:5066 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R5046:5056 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_arrival var
+R5058:5058 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+R5063:5063 prosa.classic.model.schedule.uni.basic.platform <> t:67 var
+R5063:5063 prosa.classic.model.schedule.uni.basic.platform <> t:67 var
+R5080:5082 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R5067:5077 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_arrival var
+R5079:5079 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+R5083:5090 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_cost var
+R5092:5092 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+R5107:5108 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R5109:5125 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_backlogged_at var
+R5127:5127 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+R5129:5129 prosa.classic.model.schedule.uni.basic.platform <> t:67 var
+prf 5225:5264 Platform job_never_backlogged_response_time_holds
+binder 5282:5282 <> R:70
+R5310:5323 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5296:5299 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R5300:5307 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_cost var
+R5309:5309 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+R5295:5295 prosa.classic.model.schedule.uni.basic.platform <> R:70 var
+R5324:5339 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_completed_by var
+R5341:5341 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+R5357:5359 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R5344:5354 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_arrival var
+R5356:5356 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+R5360:5360 prosa.classic.model.schedule.uni.basic.platform <> R:70 var
+R5514:5529 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_completed_by var
+R5532:5543 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R5546:5552 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R5555:5568 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R5514:5529 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_completed_by var
+R5514:5529 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_completed_by var
+R5532:5543 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R5532:5543 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R5546:5552 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R5546:5552 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R5555:5568 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R5555:5568 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R5588:5616 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule ignore_service_before_arrival thm
+R5618:5628 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_arrival var
+R5675:5682 mathcomp.boot.ssrnat <> leq_addr thm
+R5588:5616 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule ignore_service_before_arrival thm
+R5618:5628 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_arrival var
+R5588:5616 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule ignore_service_before_arrival thm
+R5618:5628 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_arrival var
+R5675:5682 mathcomp.boot.ssrnat <> leq_addr thm
+R5721:5726 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5740:5743 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5745:5747 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5774:5775 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5727:5737 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_arrival var
+R5739:5739 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+R5761:5763 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R5748:5758 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_arrival var
+R5760:5760 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+R5764:5771 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_cost var
+R5773:5773 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+binder 5744:5744 <> t:71
+binder 5744:5744 <> t:72
+binder 5744:5744 <> t:73
+R5700:5708 mathcomp.boot.ssrnat <> leq_trans thm
+R5824:5828 mathcomp.boot.ssrnat <> addKn thm
+R5830:5834 mathcomp.boot.ssrnat <> leqnn thm
+R5721:5726 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5740:5743 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5745:5747 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5774:5775 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5727:5737 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_arrival var
+R5739:5739 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+R5761:5763 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R5748:5758 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_arrival var
+R5760:5760 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+R5764:5771 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_cost var
+R5773:5773 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+binder 5744:5744 <> t:74
+binder 5744:5744 <> t:75
+binder 5744:5744 <> t:76
+R5700:5708 mathcomp.boot.ssrnat <> leq_trans thm
+R5824:5828 mathcomp.boot.ssrnat <> addKn thm
+R5824:5828 mathcomp.boot.ssrnat <> addKn thm
+R5830:5834 mathcomp.boot.ssrnat <> leqnn thm
+R5830:5834 mathcomp.boot.ssrnat <> leqnn thm
+R5872:5877 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5891:5894 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5896:5898 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5925:5964 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5878:5888 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_arrival var
+R5890:5890 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+R5912:5914 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R5899:5909 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_arrival var
+R5911:5911 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+R5915:5922 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_cost var
+R5924:5924 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+binder 5895:5895 <> t:77
+binder 5895:5895 <> t:78
+binder 5895:5895 <> t:79
+R5965:5974 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_at def
+R5984:5984 prosa.classic.model.schedule.uni.basic.platform <> t:77 var
+R5982:5982 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+R5976:5980 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.sched var
+R5851:5859 mathcomp.boot.ssrnat <> leq_trans thm
+R6012:6021 prosa.classic.util.sum <> extend_sum thm
+R6035:6043 mathcomp.boot.ssrnat <> leq_add2l thm
+R5872:5877 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5891:5894 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5896:5898 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5925:5964 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R5878:5888 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_arrival var
+R5890:5890 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+R5912:5914 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R5899:5909 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_arrival var
+R5911:5911 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+R5915:5922 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_cost var
+R5924:5924 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+binder 5895:5895 <> t:80
+binder 5895:5895 <> t:81
+binder 5895:5895 <> t:82
+R5965:5974 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_at def
+R5984:5984 prosa.classic.model.schedule.uni.basic.platform <> t:80 var
+R5982:5982 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+R5976:5980 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.sched var
+R5851:5859 mathcomp.boot.ssrnat <> leq_trans thm
+R6012:6021 prosa.classic.util.sum <> extend_sum thm
+R6035:6043 mathcomp.boot.ssrnat <> leq_add2l thm
+R6035:6043 mathcomp.boot.ssrnat <> leq_add2l thm
+R6060:6070 prosa.classic.util.sum <> leq_sum_nat thm
+R6060:6070 prosa.classic.util.sum <> leq_sum_nat thm
+R6084:6087 Corelib.ssr.ssrbool <> andP thm
+R6118:6121 mathcomp.boot.ssrnat <> lt0n thm
+R6123:6126 mathcomp.boot.ssrnat <> eqb0 thm
+R6135:6138 Corelib.ssr.ssrbool <> negP thm
+R6118:6121 mathcomp.boot.ssrnat <> lt0n thm
+R6118:6121 mathcomp.boot.ssrnat <> lt0n thm
+R6123:6126 mathcomp.boot.ssrnat <> eqb0 thm
+R6123:6126 mathcomp.boot.ssrnat <> eqb0 thm
+R6135:6138 Corelib.ssr.ssrbool <> negP thm
+R6224:6227 Corelib.ssr.ssrbool <> andP thm
+R6224:6227 Corelib.ssr.ssrbool <> andP thm
+R6305:6307 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6292:6302 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_arrival var
+R6304:6304 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+R6308:6315 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_cost var
+R6317:6317 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+R6271:6279 mathcomp.boot.ssrnat <> leq_trans thm
+R6355:6363 mathcomp.boot.ssrnat <> leq_add2l thm
+R6305:6307 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6292:6302 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_arrival var
+R6304:6304 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+R6308:6315 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_cost var
+R6317:6317 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+R6271:6279 mathcomp.boot.ssrnat <> leq_trans thm
+R6355:6363 mathcomp.boot.ssrnat <> leq_add2l thm
+R6355:6363 mathcomp.boot.ssrnat <> leq_add2l thm
+R6403:6406 Corelib.ssr.ssrbool <> andP thm
+R6403:6406 Corelib.ssr.ssrbool <> andP thm
+R6444:6447 Corelib.ssr.ssrbool <> andP thm
+R6444:6447 Corelib.ssr.ssrbool <> andP thm
+R6489:6494 mathcomp.boot.ssrnat <> ltnNge thm
+R6489:6494 mathcomp.boot.ssrnat <> ltnNge thm
+R6489:6494 mathcomp.boot.ssrnat <> ltnNge thm
+R6515:6521 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R6524:6537 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R6515:6521 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R6515:6521 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R6524:6537 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R6524:6537 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R6582:6592 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_arrival var
+R6594:6594 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+R6559:6569 mathcomp.boot.bigop <> big_cat_nat thm
+R6582:6592 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_arrival var
+R6594:6594 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+R6559:6569 mathcomp.boot.bigop <> big_cat_nat thm
+R6582:6592 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_arrival var
+R6594:6594 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+R6559:6569 mathcomp.boot.bigop <> big_cat_nat thm
+R6582:6592 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_arrival var
+R6594:6594 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+R6559:6569 mathcomp.boot.bigop <> big_cat_nat thm
+R6582:6592 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_arrival var
+R6594:6594 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+R6559:6569 mathcomp.boot.bigop <> big_cat_nat thm
+R6654:6695 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule cumulative_service_before_job_arrival_zero thm
+R6697:6707 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_arrival var
+R6730:6734 mathcomp.boot.ssrnat <> add0n thm
+R6757:6761 mathcomp.boot.ssrnat <> leqnn thm
+R6654:6695 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule cumulative_service_before_job_arrival_zero thm
+R6697:6707 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_arrival var
+R6654:6695 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule cumulative_service_before_job_arrival_zero thm
+R6697:6707 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_arrival var
+R6730:6734 mathcomp.boot.ssrnat <> add0n thm
+R6730:6734 mathcomp.boot.ssrnat <> add0n thm
+R6757:6761 mathcomp.boot.ssrnat <> leqnn thm
+R6804:6809 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R6823:6826 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R6828:6830 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R6832:6833 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R6810:6820 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_arrival var
+R6822:6822 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+binder 6827:6827 <> i:83
+binder 6827:6827 <> i:84
+binder 6827:6827 <> i:85
+R6779:6791 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R6863:6869 mathcomp.boot.bigop <> leq_sum thm
+R6883:6888 mathcomp.boot.ssrnat <> leq_b1 thm
+R6804:6809 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R6823:6826 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R6828:6830 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R6832:6833 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R6810:6820 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_arrival var
+R6822:6822 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+binder 6827:6827 <> i:86
+binder 6827:6827 <> i:87
+binder 6827:6827 <> i:88
+R6779:6791 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R6863:6869 mathcomp.boot.bigop <> leq_sum thm
+R6883:6888 mathcomp.boot.ssrnat <> leq_b1 thm
+R6926:6934 mathcomp.boot.ssrnat <> ltn_add2r thm
+R6926:6934 mathcomp.boot.ssrnat <> ltn_add2r thm
+R6926:6934 mathcomp.boot.ssrnat <> ltn_add2r thm
+R6968:6970 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6958:6965 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_cost var
+R6967:6967 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+R6973:6977 mathcomp.boot.ssrnat <> addn1 thm
+R6979:6982 mathcomp.boot.ssrnat <> ltnS thm
+R6973:6977 mathcomp.boot.ssrnat <> addn1 thm
+R6968:6970 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6958:6965 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_cost var
+R6967:6967 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+R6968:6970 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6958:6965 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.job_cost var
+R6967:6967 prosa.classic.model.schedule.uni.basic.platform <> Platform.Lemmas.JobNeverBacklogged.j var
+R6973:6977 mathcomp.boot.ssrnat <> addn1 thm
+R6979:6982 mathcomp.boot.ssrnat <> ltnS thm
+R6979:6982 mathcomp.boot.ssrnat <> ltnS thm
+R7004:7008 prosa.classic.util.nat <> subh1 thm
+R7013:7021 mathcomp.boot.ssrnat <> leq_subLR thm
+R7023:7027 mathcomp.boot.ssrnat <> addn1 thm
+R7004:7008 prosa.classic.util.nat <> subh1 thm
+R7004:7008 prosa.classic.util.nat <> subh1 thm
+R7013:7021 mathcomp.boot.ssrnat <> leq_subLR thm
+R7013:7021 mathcomp.boot.ssrnat <> leq_subLR thm
+R7023:7027 mathcomp.boot.ssrnat <> addn1 thm
+R7023:7027 mathcomp.boot.ssrnat <> addn1 thm
+R7051:7068 prosa.classic.model.schedule.uni.basic.platform Platform.Lemmas.JobNeverBacklogged <> sec
+R7078:7083 prosa.classic.model.schedule.uni.basic.platform Platform.Lemmas <> sec
+R7093:7100 prosa.classic.model.schedule.uni.basic.platform Platform <> mod

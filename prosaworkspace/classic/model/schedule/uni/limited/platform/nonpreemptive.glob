@@ -1,0 +1,321 @@
+DIGEST 2d2de71806fc969a8cf17f9d8eabb060
+Fprosa.classic.model.schedule.uni.limited.platform.nonpreemptive
+R15:36 prosa.classic.util.all <> <> lib
+R54:90 prosa.classic.model.arrival.basic.job <> <> lib
+R107:144 prosa.classic.model.arrival.basic.task <> <> lib
+R162:189 prosa.classic.model.priority <> <> lib
+R206:251 prosa.classic.model.arrival.basic.task_arrival <> <> lib
+R269:309 prosa.classic.model.schedule.uni.schedule <> <> lib
+R326:365 prosa.classic.model.schedule.uni.service <> <> lib
+R382:428 prosa.classic.model.schedule.uni.basic.platform <> <> lib
+R446:500 prosa.classic.model.schedule.uni.nonpreemptive.schedule <> <> lib
+R518:578 prosa.classic.model.schedule.uni.limited.platform.definitions <> <> lib
+R611:619 mathcomp.boot.ssreflect <> <> lib
+R621:627 mathcomp.boot.ssrbool <> <> lib
+R629:634 mathcomp.boot.ssrfun <> <> lib
+R636:641 mathcomp.boot.eqtype <> <> lib
+R643:648 mathcomp.boot.ssrnat <> <> lib
+R650:652 mathcomp.boot.seq <> <> lib
+R654:660 mathcomp.boot.fintype <> <> lib
+R662:666 mathcomp.boot.bigop <> <> lib
+mod 993:1018 <> FullyNonPreemptivePlatform
+R1031:1033 prosa.classic.model.arrival.basic.job Job <> mod
+R1035:1049 prosa.classic.model.arrival.basic.task SporadicTaskset <> mod
+R1051:1070 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule <> mod
+R1072:1079 prosa.classic.model.priority Priority <> mod
+R1090:1096 prosa.classic.model.schedule.uni.service Service <> mod
+R1098:1122 prosa.classic.model.schedule.uni.limited.platform.definitions LimitedPreemptionPlatform <> mod
+sec 1138:1160 FullyNonPreemptivePlatform FullyNonPreemptiveModel
+var  1181:1184 FullyNonPreemptivePlatform.FullyNonPreemptiveModel Task
+R1187:1192 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1209:1217 FullyNonPreemptivePlatform.FullyNonPreemptiveModel task_cost
+R1224:1227 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1220:1223 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.Task var
+R1228:1231 prosa.classic.model.time Time time def
+var  1252:1254 FullyNonPreemptivePlatform.FullyNonPreemptiveModel Job
+R1257:1262 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1279:1289 FullyNonPreemptivePlatform.FullyNonPreemptiveModel job_arrival
+R1295:1298 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1292:1294 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.Job var
+R1299:1302 prosa.classic.model.time Time time def
+var 1318:1325 FullyNonPreemptivePlatform.FullyNonPreemptiveModel job_cost
+R1331:1334 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1328:1330 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.Job var
+R1335:1338 prosa.classic.model.time Time time def
+var 1354:1361 FullyNonPreemptivePlatform.FullyNonPreemptiveModel job_task
+R1367:1370 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1364:1366 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.Job var
+R1371:1374 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.Task var
+var 1472:1478 FullyNonPreemptivePlatform.FullyNonPreemptiveModel arr_seq
+R1481:1496 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R1498:1500 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.Job var
+var 1518:1547 FullyNonPreemptivePlatform.FullyNonPreemptiveModel H_arrival_times_are_consistent
+R1550:1577 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_times_are_consistent def
+R1591:1597 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.arr_seq var
+R1579:1589 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.job_arrival var
+var 1615:1632 FullyNonPreemptivePlatform.FullyNonPreemptiveModel H_arr_seq_is_a_set
+R1635:1659 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence_is_a_set def
+R1661:1667 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.arr_seq var
+var 1780:1784 FullyNonPreemptivePlatform.FullyNonPreemptiveModel sched
+R1787:1794 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R1796:1798 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.Job var
+var 1816:1848 FullyNonPreemptivePlatform.FullyNonPreemptiveModel H_jobs_come_from_arrival_sequence
+R1851:1881 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule jobs_come_from_arrival_sequence def
+R1889:1895 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.arr_seq var
+R1883:1887 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.sched var
+var 1913:1933 FullyNonPreemptivePlatform.FullyNonPreemptiveModel H_nonpreemptive_sched
+R1942:1988 prosa.classic.model.schedule.uni.nonpreemptive.schedule NonpreemptiveSchedule is_nonpreemptive_schedule def
+R1999:2003 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.sched var
+R1990:1997 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.job_cost var
+var 2105:2133 FullyNonPreemptivePlatform.FullyNonPreemptiveModel H_jobs_must_arrive_to_execute
+R2136:2162 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule jobs_must_arrive_to_execute def
+R2176:2180 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.sched var
+R2164:2174 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.job_arrival var
+var 2198:2226 FullyNonPreemptivePlatform.FullyNonPreemptiveModel H_completed_jobs_dont_execute
+R2229:2255 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_jobs_dont_execute def
+R2266:2270 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.sched var
+R2257:2264 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.job_cost var
+var 2343:2353 FullyNonPreemptivePlatform.FullyNonPreemptiveModel job_pending
+R2358:2364 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R2387:2391 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.sched var
+R2378:2385 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.job_cost var
+R2366:2376 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.job_arrival var
+var 2402:2417 FullyNonPreemptivePlatform.FullyNonPreemptiveModel job_completed_by
+R2422:2433 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R2444:2448 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.sched var
+R2435:2442 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.job_cost var
+var 2459:2474 FullyNonPreemptivePlatform.FullyNonPreemptiveModel job_scheduled_at
+R2479:2490 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R2492:2496 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.sched var
+var 2583:2605 FullyNonPreemptivePlatform.FullyNonPreemptiveModel H_job_cost_le_task_cost
+R2614:2660 prosa.classic.model.arrival.basic.job Job cost_of_jobs_from_arrival_sequence_le_task_cost def
+R2698:2704 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.arr_seq var
+R2689:2696 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.job_task var
+R2680:2687 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.job_cost var
+R2670:2678 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.task_cost var
+def 2846:2891 FullyNonPreemptivePlatform can_be_preempted_for_fully_nonpreemptive_model
+R2897:2899 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.Job var
+binder 2894:2894 <> j:29
+R2910:2913 prosa.classic.model.time Time time def
+binder 2903:2907 <> progr:30
+R2925:2925 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R2936:2941 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R2961:2961 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R2931:2934 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R2926:2930 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> progr:30 var
+R2947:2950 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R2942:2946 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> progr:30 var
+R2951:2958 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.job_cost var
+R2960:2960 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> j:29 var
+var 3120:3130 FullyNonPreemptivePlatform.FullyNonPreemptiveModel job_max_nps
+R3136:3138 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.Job var
+binder 3133:3133 <> j:31
+R3144:3151 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.job_cost var
+R3153:3153 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> j:31 var
+var 3249:3260 FullyNonPreemptivePlatform.FullyNonPreemptiveModel task_max_nps
+R3268:3271 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.Task var
+binder 3263:3265 <> tsk:32
+R3277:3285 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.task_cost var
+R3287:3289 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> tsk:32 var
+prf 3396:3431 FullyNonPreemptivePlatform fully_nonpreemptive_model_is_correct
+R3440:3463 prosa.classic.model.schedule.uni.limited.platform.definitions LimitedPreemptionPlatform correct_preemption_model def
+R3479:3524 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive FullyNonPreemptivePlatform can_be_preempted_for_fully_nonpreemptive_model def
+R3473:3477 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.sched var
+R3465:3471 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.arr_seq var
+R3598:3643 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive FullyNonPreemptivePlatform can_be_preempted_for_fully_nonpreemptive_model def
+R3645:3657 Stdlib.Bool.Bool <> negb_orb thm
+R3660:3663 mathcomp.boot.ssrnat <> lt0n thm
+R3598:3643 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive FullyNonPreemptivePlatform can_be_preempted_for_fully_nonpreemptive_model def
+R3598:3643 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive FullyNonPreemptivePlatform can_be_preempted_for_fully_nonpreemptive_model def
+R3645:3657 Stdlib.Bool.Bool <> negb_orb thm
+R3645:3657 Stdlib.Bool.Bool <> negb_orb thm
+R3660:3663 mathcomp.boot.ssrnat <> lt0n thm
+R3660:3663 mathcomp.boot.ssrnat <> lt0n thm
+R3684:3687 Corelib.ssr.ssrbool <> andP thm
+R3718:3764 prosa.classic.model.schedule.uni.nonpreemptive.schedule NonpreemptiveSchedule is_nonpreemptive_schedule def
+R3788:3813 prosa.classic.model.schedule.uni.service Service incremental_service_during thm
+R3788:3813 prosa.classic.model.schedule.uni.service Service incremental_service_during thm
+R3788:3813 prosa.classic.model.schedule.uni.service Service incremental_service_during thm
+R3839:3842 Corelib.ssr.ssrbool <> andP thm
+R3881:3901 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.H_nonpreemptive_sched var
+R3881:3901 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.H_nonpreemptive_sched var
+R3931:3934 mathcomp.boot.ssrnat <> ltnW thm
+R3931:3934 mathcomp.boot.ssrnat <> ltnW thm
+R3980:3991 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R3994:3999 mathcomp.boot.ssrnat <> ltnNge thm
+R3980:3991 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R3980:3991 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R3994:3999 mathcomp.boot.ssrnat <> ltnNge thm
+R3994:3999 mathcomp.boot.ssrnat <> ltnNge thm
+R4034:4040 mathcomp.boot.ssrnat <> neq_ltn thm
+R4034:4040 mathcomp.boot.ssrnat <> neq_ltn thm
+R4034:4040 mathcomp.boot.ssrnat <> neq_ltn thm
+R4052:4054 Corelib.ssr.ssrbool <> orP thm
+R4114:4119 mathcomp.boot.ssrnat <> ltnNge thm
+R4114:4119 mathcomp.boot.ssrnat <> ltnNge thm
+R4114:4119 mathcomp.boot.ssrnat <> ltnNge thm
+R4131:4134 Corelib.ssr.ssrbool <> negP thm
+R4241:4286 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive FullyNonPreemptivePlatform can_be_preempted_for_fully_nonpreemptive_model def
+R4241:4286 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive FullyNonPreemptivePlatform can_be_preempted_for_fully_nonpreemptive_model def
+R4241:4286 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive FullyNonPreemptivePlatform can_be_preempted_for_fully_nonpreemptive_model def
+R4304:4306 Corelib.ssr.ssrbool <> orP thm
+R4304:4306 Corelib.ssr.ssrbool <> orP thm
+R4330:4333 Corelib.ssr.ssrbool <> negP thm
+R4330:4333 Corelib.ssr.ssrbool <> negP thm
+R4390:4393 mathcomp.boot.ssrnat <> lt0n thm
+R4375:4378 Corelib.ssr.ssrbool <> negP thm
+R4390:4393 mathcomp.boot.ssrnat <> lt0n thm
+R4390:4393 mathcomp.boot.ssrnat <> lt0n thm
+R4424:4449 prosa.classic.model.schedule.uni.service Service incremental_service_during thm
+R4424:4449 prosa.classic.model.schedule.uni.service Service incremental_service_during thm
+R4424:4449 prosa.classic.model.schedule.uni.service Service incremental_service_during thm
+R4475:4478 Corelib.ssr.ssrbool <> andP thm
+R4529:4532 Corelib.ssr.ssrbool <> negP thm
+R4571:4591 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.H_nonpreemptive_sched var
+R4571:4591 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.H_nonpreemptive_sched var
+R4624:4627 mathcomp.boot.ssrnat <> ltnS thm
+R4624:4627 mathcomp.boot.ssrnat <> ltnS thm
+R4624:4627 mathcomp.boot.ssrnat <> ltnS thm
+R4672:4683 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R4686:4691 mathcomp.boot.ssrnat <> ltnNge thm
+R4672:4683 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R4672:4683 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R4686:4691 mathcomp.boot.ssrnat <> ltnNge thm
+R4686:4691 mathcomp.boot.ssrnat <> ltnNge thm
+R4730:4736 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R4747:4749 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R4738:4742 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.sched var
+R4710:4722 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R4730:4736 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R4747:4749 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R4738:4742 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.sched var
+R4710:4722 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R4779:4785 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R4788:4801 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R4803:4814 mathcomp.boot.bigop <> big_nat_recr thm
+R4820:4827 mathcomp.boot.ssrnat <> leq_addr thm
+R4779:4785 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R4779:4785 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R4788:4801 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R4788:4801 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R4803:4814 mathcomp.boot.bigop <> big_nat_recr thm
+R4803:4814 mathcomp.boot.bigop <> big_nat_recr thm
+R4820:4827 mathcomp.boot.ssrnat <> leq_addr thm
+R4820:4827 mathcomp.boot.ssrnat <> leq_addr thm
+R4853:4857 mathcomp.boot.ssrnat <> addn1 thm
+R4853:4857 mathcomp.boot.ssrnat <> addn1 thm
+R4853:4857 mathcomp.boot.ssrnat <> addn1 thm
+R4894:4900 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R4911:4913 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+2' not
+R4902:4906 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.sched var
+R4878:4886 mathcomp.boot.ssrnat <> leq_trans thm
+R4894:4900 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R4911:4913 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+2' not
+R4902:4906 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.sched var
+R4878:4886 mathcomp.boot.ssrnat <> leq_trans thm
+R4938:4944 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R4947:4960 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R4986:4986 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5010:5013 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4987:4996 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_at def
+R5007:5009 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R4998:5002 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.sched var
+R5042:5044 mathcomp.boot.eqtype <> eqP def
+R5055:5058 mathcomp.boot.ssrnat <> eqb1 thm
+R5042:5044 mathcomp.boot.eqtype <> eqP def
+R5055:5058 mathcomp.boot.ssrnat <> eqb1 thm
+R5055:5058 mathcomp.boot.ssrnat <> eqb1 thm
+R5095:5106 mathcomp.boot.bigop <> big_nat_recr thm
+R5095:5106 mathcomp.boot.bigop <> big_nat_recr thm
+R5095:5106 mathcomp.boot.bigop <> big_nat_recr thm
+prf 5243:5311 FullyNonPreemptivePlatform fully_nonpreemptive_model_is_model_with_bounded_nonpreemptive_regions
+R5320:5360 prosa.classic.model.schedule.uni.limited.platform.definitions LimitedPreemptionPlatform model_with_bounded_nonpreemptive_segments def
+R5455:5466 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.task_max_nps var
+R5443:5453 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.job_max_nps var
+R5396:5441 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive FullyNonPreemptivePlatform can_be_preempted_for_fully_nonpreemptive_model def
+R5388:5394 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.arr_seq var
+R5379:5386 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.job_task var
+R5370:5377 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.job_cost var
+binder 5502:5502 <> n:33
+R5510:5513 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R5506:5508 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5505:5505 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> n:33 var
+R5515:5517 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R5514:5514 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> n:33 var
+R5655:5657 Corelib.ssr.ssrbool <> orP thm
+R5655:5657 Corelib.ssr.ssrbool <> orP thm
+R5706:5716 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.job_max_nps var
+R5719:5730 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.task_max_nps var
+R5706:5716 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.job_max_nps var
+R5706:5716 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.job_max_nps var
+R5719:5730 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.task_max_nps var
+R5719:5730 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.task_max_nps var
+R5878:5881 Corelib.ssr.ssrbool <> andP thm
+R5907:5914 mathcomp.boot.ssrnat <> leq_addr thm
+R5878:5881 Corelib.ssr.ssrbool <> andP thm
+R5907:5914 mathcomp.boot.ssrnat <> leq_addr thm
+R5907:5914 mathcomp.boot.ssrnat <> leq_addr thm
+R5942:5987 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive FullyNonPreemptivePlatform can_be_preempted_for_fully_nonpreemptive_model def
+R5942:5987 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive FullyNonPreemptivePlatform can_be_preempted_for_fully_nonpreemptive_model def
+R5942:5987 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive FullyNonPreemptivePlatform can_be_preempted_for_fully_nonpreemptive_model def
+R6013:6016 mathcomp.boot.ssrnat <> maxn def
+R6025:6032 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.job_cost var
+R6013:6016 mathcomp.boot.ssrnat <> maxn def
+R6025:6032 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.job_cost var
+R6060:6062 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R6063:6070 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.job_cost var
+R6096:6104 mathcomp.boot.ssrnat <> leq_trans thm
+R6096:6104 mathcomp.boot.ssrnat <> leq_trans thm
+R6136:6139 Corelib.ssr.ssrbool <> andP thm
+R6187:6190 Corelib.ssr.ssrbool <> andP thm
+R6217:6224 mathcomp.boot.ssrnat <> leq_maxl thm
+R6187:6190 Corelib.ssr.ssrbool <> andP thm
+R6217:6224 mathcomp.boot.ssrnat <> leq_maxl thm
+R6217:6224 mathcomp.boot.ssrnat <> leq_maxl thm
+R6249:6259 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.job_max_nps var
+R6261:6266 mathcomp.boot.ssrnat <> addnBA thm
+R6249:6259 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.job_max_nps var
+R6249:6259 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive <> FullyNonPreemptivePlatform.FullyNonPreemptiveModel.job_max_nps var
+R6261:6266 mathcomp.boot.ssrnat <> addnBA thm
+R6261:6266 mathcomp.boot.ssrnat <> addnBA thm
+R6303:6309 mathcomp.boot.ssrnat <> geq_max thm
+R6318:6321 Corelib.ssr.ssrbool <> andP thm
+R6303:6309 mathcomp.boot.ssrnat <> geq_max thm
+R6303:6309 mathcomp.boot.ssrnat <> geq_max thm
+R6318:6321 Corelib.ssr.ssrbool <> andP thm
+R6354:6359 mathcomp.boot.ssrnat <> addnBA thm
+R6354:6359 mathcomp.boot.ssrnat <> addnBA thm
+R6354:6359 mathcomp.boot.ssrnat <> addnBA thm
+R6408:6415 mathcomp.boot.ssrnat <> leq_addr thm
+R6408:6415 mathcomp.boot.ssrnat <> leq_addr thm
+R6408:6415 mathcomp.boot.ssrnat <> leq_addr thm
+R6443:6447 mathcomp.boot.ssrnat <> addnC thm
+R6450:6455 mathcomp.boot.ssrnat <> addnBA thm
+R6460:6467 mathcomp.boot.ssrnat <> leq_addr thm
+R6443:6447 mathcomp.boot.ssrnat <> addnC thm
+R6443:6447 mathcomp.boot.ssrnat <> addnC thm
+R6450:6455 mathcomp.boot.ssrnat <> addnBA thm
+R6450:6455 mathcomp.boot.ssrnat <> addnBA thm
+R6460:6467 mathcomp.boot.ssrnat <> leq_addr thm
+R6460:6467 mathcomp.boot.ssrnat <> leq_addr thm
+R6501:6546 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive FullyNonPreemptivePlatform can_be_preempted_for_fully_nonpreemptive_model def
+R6567:6569 Corelib.ssr.ssrbool <> orP thm
+R6567:6569 Corelib.ssr.ssrbool <> orP thm
+R6604:6607 Corelib.ssr.ssrbool <> andP thm
+R6637:6643 mathcomp.boot.ssrnat <> eqn_leq thm
+R6652:6655 Corelib.ssr.ssrbool <> andP thm
+R6637:6643 mathcomp.boot.ssrnat <> eqn_leq thm
+R6637:6643 mathcomp.boot.ssrnat <> eqn_leq thm
+R6652:6655 Corelib.ssr.ssrbool <> andP thm
+R6690:6696 mathcomp.boot.ssrnat <> geq_max thm
+R6705:6708 Corelib.ssr.ssrbool <> andP thm
+R6690:6696 mathcomp.boot.ssrnat <> geq_max thm
+R6690:6696 mathcomp.boot.ssrnat <> geq_max thm
+R6705:6708 Corelib.ssr.ssrbool <> andP thm
+R6743:6749 mathcomp.boot.ssrnat <> leq_max thm
+R6758:6760 Corelib.ssr.ssrbool <> orP thm
+R6743:6749 mathcomp.boot.ssrnat <> leq_max thm
+R6743:6749 mathcomp.boot.ssrnat <> leq_max thm
+R6758:6760 Corelib.ssr.ssrbool <> orP thm
+R6816:6838 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive FullyNonPreemptivePlatform.FullyNonPreemptiveModel <> sec
+R6846:6871 prosa.classic.model.schedule.uni.limited.platform.nonpreemptive FullyNonPreemptivePlatform <> mod

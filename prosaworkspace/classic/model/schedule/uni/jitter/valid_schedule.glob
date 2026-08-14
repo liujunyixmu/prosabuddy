@@ -1,0 +1,88 @@
+DIGEST 572ee64c5f13d9af4e95eaa516fbb7b7
+Fprosa.classic.model.schedule.uni.jitter.valid_schedule
+R15:36 prosa.classic.util.all <> <> lib
+R54:81 prosa.classic.model.priority <> <> lib
+R99:148 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R166:213 prosa.classic.model.schedule.uni.jitter.schedule <> <> lib
+R230:277 prosa.classic.model.schedule.uni.jitter.platform <> <> lib
+R310:318 mathcomp.boot.ssreflect <> <> lib
+R320:326 mathcomp.boot.ssrbool <> <> lib
+R328:333 mathcomp.boot.eqtype <> <> lib
+R335:340 mathcomp.boot.ssrnat <> <> lib
+R342:344 mathcomp.boot.seq <> <> lib
+R346:352 mathcomp.boot.fintype <> <> lib
+R354:358 mathcomp.boot.bigop <> <> lib
+mod 481:504 <> ValidJitterAwareSchedule
+R517:546 prosa.classic.model.schedule.uni.jitter.schedule UniprocessorScheduleWithJitter <> mod
+R548:555 prosa.classic.model.priority Priority <> mod
+R557:564 prosa.classic.model.schedule.uni.jitter.platform Platform <> mod
+sec 608:628 ValidJitterAwareSchedule DefiningValidSchedule
+var  645:648 ValidJitterAwareSchedule.DefiningValidSchedule Task
+R651:656 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  673:675 ValidJitterAwareSchedule.DefiningValidSchedule Job
+R678:683 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 700:710 ValidJitterAwareSchedule.DefiningValidSchedule job_arrival
+R716:719 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R713:715 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.Job var
+R720:723 prosa.classic.model.time Time time def
+var 739:746 ValidJitterAwareSchedule.DefiningValidSchedule job_task
+R752:755 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R749:751 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.Job var
+R756:759 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.Task var
+var 821:827 ValidJitterAwareSchedule.DefiningValidSchedule arr_seq
+R830:845 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R847:849 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.Job var
+var 911:928 ValidJitterAwareSchedule.DefiningValidSchedule higher_eq_priority
+R931:941 prosa.classic.model.priority Priority JLDP_policy def
+R943:945 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.Job var
+var 1076:1083 ValidJitterAwareSchedule.DefiningValidSchedule job_cost
+R1089:1092 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1086:1088 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.Job var
+R1093:1096 prosa.classic.model.time Time time def
+var 1112:1121 ValidJitterAwareSchedule.DefiningValidSchedule job_jitter
+R1127:1130 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1124:1126 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.Job var
+R1131:1134 prosa.classic.model.time Time time def
+var 1192:1196 ValidJitterAwareSchedule.DefiningValidSchedule sched
+R1199:1206 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R1208:1210 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.Job var
+var 1395:1428 ValidJitterAwareSchedule.DefiningValidSchedule H1_jobs_come_from_arrival_sequence
+R1433:1463 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule jobs_come_from_arrival_sequence def
+R1471:1477 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.arr_seq var
+R1465:1469 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.sched var
+var 1549:1576 ValidJitterAwareSchedule.DefiningValidSchedule H2_jobs_execute_after_jitter
+R1581:1605 prosa.classic.model.schedule.uni.jitter.schedule UniprocessorScheduleWithJitter jobs_execute_after_jitter def
+R1630:1634 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.sched var
+R1619:1628 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.job_jitter var
+R1607:1617 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.job_arrival var
+var 1708:1737 ValidJitterAwareSchedule.DefiningValidSchedule H3_completed_jobs_dont_execute
+R1742:1768 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_jobs_dont_execute def
+R1779:1783 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.sched var
+R1770:1777 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.job_cost var
+var 1841:1858 ValidJitterAwareSchedule.DefiningValidSchedule H4_work_conserving
+R1863:1877 prosa.classic.model.schedule.uni.jitter.platform Platform work_conserving def
+R1919:1923 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.sched var
+R1911:1917 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.arr_seq var
+R1900:1909 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.job_jitter var
+R1891:1898 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.job_cost var
+R1879:1889 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.job_arrival var
+var 1987:2006 ValidJitterAwareSchedule.DefiningValidSchedule H5_respects_priority
+R2017:2036 prosa.classic.model.schedule.uni.jitter.platform Platform respects_JLDP_policy def
+R2084:2101 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.higher_eq_priority var
+R2078:2082 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.sched var
+R2070:2076 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.arr_seq var
+R2059:2068 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.job_jitter var
+R2050:2057 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.job_cost var
+R2038:2048 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.job_arrival var
+def 2197:2223 ValidJitterAwareSchedule valid_jitter_aware_schedule
+R2268:2277 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R2234:2267 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.H1_jobs_come_from_arrival_sequence var
+R2306:2315 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R2278:2305 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.H2_jobs_execute_after_jitter var
+R2346:2355 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R2316:2345 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.H3_completed_jobs_dont_execute var
+R2374:2383 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R2356:2373 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.H4_work_conserving var
+R2384:2403 prosa.classic.model.schedule.uni.jitter.valid_schedule <> ValidJitterAwareSchedule.DefiningValidSchedule.H5_respects_priority var
+R2422:2442 prosa.classic.model.schedule.uni.jitter.valid_schedule ValidJitterAwareSchedule.DefiningValidSchedule <> sec
+R2452:2475 prosa.classic.model.schedule.uni.jitter.valid_schedule ValidJitterAwareSchedule <> mod

@@ -1,0 +1,1112 @@
+DIGEST cb67c809bf0f425c9c828d7f9c827f26
+Fprosa.classic.model.schedule.uni.susp.last_execution
+R15:36 prosa.classic.util.all <> <> lib
+R54:90 prosa.classic.model.arrival.basic.job <> <> lib
+R92:141 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R159:199 prosa.classic.model.schedule.uni.schedule <> <> lib
+R217:238 prosa.util.unit_growth <> <> lib
+R270:278 mathcomp.boot.ssreflect <> <> lib
+R280:286 mathcomp.boot.ssrbool <> <> lib
+R288:293 mathcomp.boot.eqtype <> <> lib
+R295:300 mathcomp.boot.ssrnat <> <> lib
+R302:304 mathcomp.boot.seq <> <> lib
+R306:312 mathcomp.boot.fintype <> <> lib
+R314:318 mathcomp.boot.bigop <> <> lib
+mod 532:544 <> LastExecution
+R557:559 prosa.classic.model.arrival.basic.job Job <> mod
+R561:580 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule <> mod
+sec 684:705 LastExecution TimeAfterLastExecution
+var  722:724 LastExecution.TimeAfterLastExecution Job
+R727:732 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 749:759 LastExecution.TimeAfterLastExecution job_arrival
+R765:768 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R762:764 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Job var
+R769:772 prosa.classic.model.time Time time def
+var 788:795 LastExecution.TimeAfterLastExecution job_cost
+R801:804 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R798:800 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Job var
+R805:808 prosa.classic.model.time Time time def
+var 871:875 LastExecution.TimeAfterLastExecution sched
+R878:885 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R887:889 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Job var
+var 958:973 LastExecution.TimeAfterLastExecution job_scheduled_at
+R978:989 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R991:995 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.sched var
+var 1006:1021 LastExecution.TimeAfterLastExecution job_completed_by
+R1026:1037 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R1048:1052 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.sched var
+R1039:1046 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_cost var
+sec 1068:1071 LastExecution.TimeAfterLastExecution Defs
+var 1150:1150 LastExecution.TimeAfterLastExecution.Defs j
+R1153:1155 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Job var
+var 1376:1376 LastExecution.TimeAfterLastExecution.Defs t
+R1379:1382 prosa.classic.model.time Time time def
+var 1494:1509 LastExecution.TimeAfterLastExecution.Defs scheduled_before
+R1522:1529 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R1532:1533 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R1561:1561 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R1534:1536 mathcomp.boot.fintype <> :::'''I_'_x not
+R1537:1537 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Defs.t var
+binder 1530:1531 <> t0:12
+R1538:1539 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R1540:1555 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_scheduled_at var
+R1557:1557 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Defs.j var
+R1559:1560 prosa.classic.model.schedule.uni.susp.last_execution <> t0:12 var
+binder 1530:1531 <> t0:13
+binder 1530:1531 <> t0:14
+var 1669:1687 LastExecution.TimeAfterLastExecution.Defs last_time_scheduled
+R1700:1705 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R1712:1714 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R1716:1718 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R1744:1745 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R1715:1715 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Defs.t var
+binder 1706:1711 <> t_last:15
+binder 1706:1711 <> t_last:16
+binder 1706:1711 <> t_last:17
+R1719:1734 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_scheduled_at var
+R1736:1736 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Defs.j var
+R1738:1743 prosa.classic.model.schedule.uni.susp.last_execution <> t_last:15 var
+R1746:1751 prosa.classic.model.schedule.uni.susp.last_execution <> t_last:15 var
+def 2033:2057 LastExecution time_after_last_execution
+R2070:2072 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R2089:2104 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R2128:2141 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R2073:2088 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Defs.scheduled_before var
+R2124:2126 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R2105:2123 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Defs.last_time_scheduled var
+R2142:2152 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_arrival var
+R2154:2154 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Defs.j var
+R2166:2169 prosa.classic.model.schedule.uni.susp.last_execution LastExecution.TimeAfterLastExecution.Defs <> sec
+sec 2258:2263 LastExecution.TimeAfterLastExecution Lemmas
+var 2349:2377 LastExecution.TimeAfterLastExecution.Lemmas H_jobs_must_arrive_to_execute
+R2388:2414 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule jobs_must_arrive_to_execute def
+R2428:2432 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.sched var
+R2416:2426 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_arrival var
+var 2489:2489 LastExecution.TimeAfterLastExecution.Lemmas j
+R2492:2494 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Job var
+sec 2646:2658 LastExecution.TimeAfterLastExecution.Lemmas JobHasArrived
+prf 2820:2847 LastExecution last_execution_after_arrival
+binder 2867:2867 <> t:22
+R2882:2892 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence has_arrived def
+R2909:2933 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R2937:2937 prosa.classic.model.schedule.uni.susp.last_execution <> t:22 var
+R2935:2935 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R2906:2906 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R2894:2904 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_arrival var
+R2973:2997 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R3000:3010 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence has_arrived def
+R3042:3049 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R3054:3054 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R3051:3052 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+binder 3050:3050 <> pat:23
+R3042:3049 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R3054:3054 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R3051:3052 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+binder 3050:3050 <> pat:24
+R3042:3049 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R3054:3054 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R3051:3052 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+binder 3050:3050 <> pat:25
+R3094:3100 mathcomp.boot.fintype <> existsP thm
+R3153:3155 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R3130:3138 mathcomp.boot.ssrnat <> leq_trans thm
+R3188:3196 mathcomp.boot.ssrnat <> leq_add2r thm
+R3205:3219 mathcomp.boot.bigop <> leq_bigmax_cond thm
+R3153:3155 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R3130:3138 mathcomp.boot.ssrnat <> leq_trans thm
+R3188:3196 mathcomp.boot.ssrnat <> leq_add2r thm
+R3188:3196 mathcomp.boot.ssrnat <> leq_add2r thm
+R3205:3219 mathcomp.boot.bigop <> leq_bigmax_cond thm
+R3238:3246 mathcomp.boot.ssrnat <> leq_trans thm
+R3280:3284 mathcomp.boot.ssrnat <> addn1 thm
+R3238:3246 mathcomp.boot.ssrnat <> leq_trans thm
+R3280:3284 mathcomp.boot.ssrnat <> addn1 thm
+R3280:3284 mathcomp.boot.ssrnat <> addn1 thm
+R3308:3336 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.H_jobs_must_arrive_to_execute var
+R3308:3336 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.H_jobs_must_arrive_to_execute var
+R3363:3375 prosa.classic.model.schedule.uni.susp.last_execution LastExecution.TimeAfterLastExecution.Lemmas.JobHasArrived <> sec
+sec 3458:3469 LastExecution.TimeAfterLastExecution.Lemmas Monotonicity
+var 3561:3562 LastExecution.TimeAfterLastExecution.Lemmas.Monotonicity t1
+R3565:3568 prosa.classic.model.time Time time def
+var 3590:3604 LastExecution.TimeAfterLastExecution.Lemmas.Monotonicity H_after_arrival
+R3607:3617 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence has_arrived def
+R3633:3634 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.Monotonicity.t1 var
+R3631:3631 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R3619:3629 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_arrival var
+prf 3753:3776 LastExecution last_execution_monotonic
+binder 3796:3797 <> t2:30
+R3820:3835 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3814:3817 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R3812:3813 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.Monotonicity.t1 var
+R3818:3819 prosa.classic.model.schedule.uni.susp.last_execution <> t2:30 var
+R3866:3869 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R3836:3860 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R3864:3865 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.Monotonicity.t1 var
+R3862:3862 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R3870:3894 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R3898:3899 prosa.classic.model.schedule.uni.susp.last_execution <> t2:30 var
+R3896:3896 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R4019:4043 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R4019:4043 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R4019:4043 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R4066:4073 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R4078:4078 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R4075:4076 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+binder 4074:4074 <> pat:31
+R4066:4073 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R4078:4078 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R4075:4076 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+binder 4074:4074 <> pat:32
+R4066:4073 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R4078:4078 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R4075:4076 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+binder 4074:4074 <> pat:33
+R4119:4125 mathcomp.boot.fintype <> existsP thm
+R4162:4169 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R4171:4171 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R4199:4199 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R4172:4174 mathcomp.boot.fintype <> :::'''I_'_x not
+binder 4170:4170 <> t:34
+R4177:4178 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R4179:4194 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_scheduled_at var
+R4196:4196 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R4198:4198 prosa.classic.model.schedule.uni.susp.last_execution <> t:34 var
+binder 4170:4170 <> t:35
+binder 4170:4170 <> t:36
+R4258:4266 mathcomp.boot.ssrnat <> leq_trans thm
+R4241:4243 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R4258:4266 mathcomp.boot.ssrnat <> leq_trans thm
+R4302:4308 mathcomp.boot.fintype <> existsP thm
+R4319:4325 mathcomp.boot.fintype <> Ordinal constr
+R4302:4308 mathcomp.boot.fintype <> existsP thm
+R4319:4325 mathcomp.boot.fintype <> Ordinal constr
+R4372:4376 mathcomp.boot.ssrnat <> addn1 thm
+R4372:4376 mathcomp.boot.ssrnat <> addn1 thm
+R4372:4376 mathcomp.boot.ssrnat <> addn1 thm
+R4372:4376 mathcomp.boot.ssrnat <> addn1 thm
+R4401:4406 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R4408:4410 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R4413:4415 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R4417:4417 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R4411:4412 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.Monotonicity.t1 var
+binder 4407:4407 <> pat:37
+R4401:4406 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R4408:4410 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R4413:4415 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R4417:4417 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R4411:4412 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.Monotonicity.t1 var
+binder 4407:4407 <> pat:38
+R4401:4406 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R4408:4410 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R4413:4415 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R4417:4417 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R4411:4412 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.Monotonicity.t1 var
+binder 4407:4407 <> pat:39
+R4446:4448 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R4489:4497 mathcomp.boot.ssrnat <> leq_trans thm
+R4489:4497 mathcomp.boot.ssrnat <> leq_trans thm
+R4533:4546 prosa.util.minmax <> bigmax_ltn_ord thm
+R4533:4546 prosa.util.minmax <> bigmax_ltn_ord thm
+R4622:4628 mathcomp.boot.fintype <> Ordinal constr
+R4597:4609 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R4622:4628 mathcomp.boot.fintype <> Ordinal constr
+R4597:4609 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R4675:4689 mathcomp.boot.bigop <> leq_bigmax_cond thm
+R4693:4703 prosa.util.minmax <> bigmax_pred thm
+R4675:4689 mathcomp.boot.bigop <> leq_bigmax_cond thm
+R4693:4703 prosa.util.minmax <> bigmax_pred thm
+R4760:4767 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R4772:4772 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R4769:4770 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+binder 4768:4768 <> pat:40
+R4760:4767 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R4772:4772 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R4769:4770 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+binder 4768:4768 <> pat:41
+R4760:4767 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R4772:4772 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R4769:4770 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+binder 4768:4768 <> pat:42
+R4815:4821 mathcomp.boot.fintype <> existsP thm
+R4858:4863 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R4865:4867 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R4870:4872 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R4874:4874 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+binder 4864:4864 <> pat:43
+R4858:4863 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R4865:4867 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R4870:4872 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R4874:4874 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+binder 4864:4864 <> pat:44
+R4858:4863 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R4865:4867 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R4870:4872 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R4874:4874 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+binder 4864:4864 <> pat:45
+R4898:4902 mathcomp.boot.ssrnat <> addn1 thm
+R4904:4907 mathcomp.boot.ssrnat <> ltnW thm
+R4912:4915 mathcomp.boot.ssrnat <> ltnS thm
+R4898:4902 mathcomp.boot.ssrnat <> addn1 thm
+R4898:4902 mathcomp.boot.ssrnat <> addn1 thm
+R4904:4907 mathcomp.boot.ssrnat <> ltnW thm
+R4904:4907 mathcomp.boot.ssrnat <> ltnW thm
+R4912:4915 mathcomp.boot.ssrnat <> ltnS thm
+R4912:4915 mathcomp.boot.ssrnat <> ltnS thm
+R4977:4987 prosa.util.minmax <> bigmax_pred thm
+R4943:4954 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R4962:4962 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R4956:4960 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.sched var
+R4977:4987 prosa.util.minmax <> bigmax_pred thm
+R5072:5083 prosa.classic.model.schedule.uni.susp.last_execution LastExecution.TimeAfterLastExecution.Lemmas.Monotonicity <> sec
+sec 5161:5171 LastExecution.TimeAfterLastExecution.Lemmas Idempotence
+prf 5281:5305 LastExecution last_execution_idempotent
+binder 5325:5325 <> t:46
+R5399:5413 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5340:5364 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R5369:5393 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R5397:5397 prosa.classic.model.schedule.uni.susp.last_execution <> t:46 var
+R5395:5395 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R5366:5366 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R5414:5438 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R5442:5442 prosa.classic.model.schedule.uni.susp.last_execution <> t:46 var
+R5440:5440 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R5561:5585 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R5561:5585 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R5561:5585 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R5607:5614 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R5618:5618 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R5616:5616 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+binder 5615:5615 <> pat:47
+R5607:5614 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R5618:5618 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R5616:5616 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+binder 5615:5615 <> pat:48
+R5607:5614 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R5618:5618 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R5616:5616 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+binder 5615:5615 <> pat:49
+R5658:5664 mathcomp.boot.fintype <> existsP thm
+R5699:5723 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R5699:5723 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R5699:5723 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R5748:5755 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R5761:5761 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+binder 5756:5757 <> t0:50
+R5758:5759 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+binder 5756:5757 <> t0:51
+binder 5756:5757 <> t0:52
+R5748:5755 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R5761:5761 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+binder 5756:5757 <> t0:53
+R5758:5759 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+binder 5756:5757 <> t0:54
+binder 5756:5757 <> t0:55
+R5748:5755 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R5761:5761 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+binder 5756:5757 <> t0:56
+R5758:5759 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+binder 5756:5757 <> t0:57
+binder 5756:5757 <> t0:58
+R5824:5830 mathcomp.boot.fintype <> existsP thm
+R5841:5845 mathcomp.boot.ssrnat <> addn1 thm
+R5824:5830 mathcomp.boot.fintype <> existsP thm
+R5841:5845 mathcomp.boot.ssrnat <> addn1 thm
+R5841:5845 mathcomp.boot.ssrnat <> addn1 thm
+R5870:5876 mathcomp.boot.fintype <> Ordinal constr
+R5879:5883 mathcomp.boot.ssrnat <> ltnSn thm
+R5870:5876 mathcomp.boot.fintype <> Ordinal constr
+R5879:5883 mathcomp.boot.ssrnat <> ltnSn thm
+R5915:5925 prosa.util.minmax <> bigmax_pred thm
+R5915:5925 prosa.util.minmax <> bigmax_pred thm
+R6012:6016 mathcomp.boot.ssrnat <> addn1 thm
+R6025:6027 mathcomp.boot.eqtype <> eqP def
+R6012:6016 mathcomp.boot.ssrnat <> addn1 thm
+R6012:6016 mathcomp.boot.ssrnat <> addn1 thm
+R6025:6027 mathcomp.boot.eqtype <> eqP def
+R6051:6056 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R6058:6060 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R6062:6064 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R6066:6066 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+binder 6057:6057 <> pat:59
+R6051:6056 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R6058:6060 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R6062:6064 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R6066:6066 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+binder 6057:6057 <> pat:60
+R6051:6056 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R6058:6060 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R6062:6064 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R6066:6066 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+binder 6057:6057 <> pat:61
+R6092:6094 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R6096:6098 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R6129:6135 mathcomp.boot.ssrnat <> eqn_leq thm
+R6144:6147 Corelib.ssr.ssrbool <> andP thm
+R6129:6135 mathcomp.boot.ssrnat <> eqn_leq thm
+R6129:6135 mathcomp.boot.ssrnat <> eqn_leq thm
+R6144:6147 Corelib.ssr.ssrbool <> andP thm
+R6194:6197 mathcomp.boot.ssrnat <> ltnS thm
+R6233:6239 mathcomp.boot.fintype <> Ordinal constr
+R6206:6219 prosa.util.minmax <> bigmax_ltn_ord thm
+R6194:6197 mathcomp.boot.ssrnat <> ltnS thm
+R6194:6197 mathcomp.boot.ssrnat <> ltnS thm
+R6233:6239 mathcomp.boot.fintype <> Ordinal constr
+R6206:6219 prosa.util.minmax <> bigmax_ltn_ord thm
+R6271:6281 prosa.util.minmax <> bigmax_pred thm
+R6271:6281 prosa.util.minmax <> bigmax_pred thm
+R6369:6375 mathcomp.boot.fintype <> Ordinal constr
+R6348:6356 mathcomp.boot.ssrnat <> leq_trans thm
+R6369:6375 mathcomp.boot.fintype <> Ordinal constr
+R6348:6356 mathcomp.boot.ssrnat <> leq_trans thm
+R6422:6436 mathcomp.boot.bigop <> leq_bigmax_cond thm
+R6439:6449 prosa.util.minmax <> bigmax_pred thm
+R6422:6436 mathcomp.boot.bigop <> leq_bigmax_cond thm
+R6439:6449 prosa.util.minmax <> bigmax_pred thm
+R6524:6528 Corelib.ssr.ssrbool <> negbT thm
+R6545:6555 mathcomp.boot.fintype <> negb_exists thm
+R6524:6528 Corelib.ssr.ssrbool <> negbT thm
+R6545:6555 mathcomp.boot.fintype <> negb_exists thm
+R6545:6555 mathcomp.boot.fintype <> negb_exists thm
+R6589:6595 mathcomp.boot.fintype <> forallP thm
+R6622:6646 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R6622:6646 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R6622:6646 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R6671:6678 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R6683:6683 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R6680:6681 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+binder 6679:6679 <> pat:62
+R6671:6678 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R6683:6683 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R6680:6681 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+binder 6679:6679 <> pat:63
+R6671:6678 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R6683:6683 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R6680:6681 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+binder 6679:6679 <> pat:64
+R6710:6712 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6713:6717 Corelib.Init.Datatypes <> false constr
+R6760:6765 Corelib.ssr.ssrbool <> negbTE thm
+R6776:6786 mathcomp.boot.fintype <> negb_exists thm
+R6795:6801 mathcomp.boot.fintype <> forallP thm
+R6760:6765 Corelib.ssr.ssrbool <> negbTE thm
+R6776:6786 mathcomp.boot.fintype <> negb_exists thm
+R6776:6786 mathcomp.boot.fintype <> negb_exists thm
+R6795:6801 mathcomp.boot.fintype <> forallP thm
+R6844:6847 Corelib.ssr.ssrbool <> negP thm
+R6844:6847 Corelib.ssr.ssrbool <> negP thm
+R6943:6953 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_arrival var
+R6955:6955 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R6918:6930 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R7001:7004 mathcomp.boot.ssrnat <> ltnn thm
+R6943:6953 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_arrival var
+R6955:6955 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R6918:6930 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R7001:7004 mathcomp.boot.ssrnat <> ltnn thm
+R7001:7004 mathcomp.boot.ssrnat <> ltnn thm
+R7052:7062 prosa.classic.model.schedule.uni.susp.last_execution LastExecution.TimeAfterLastExecution.Lemmas.Idempotence <> sec
+sec 7174:7190 LastExecution.TimeAfterLastExecution.Lemmas BoundedByIdentity
+var 7285:7285 LastExecution.TimeAfterLastExecution.Lemmas.BoundedByIdentity t
+R7288:7291 prosa.classic.model.time Time time def
+var 7313:7327 LastExecution.TimeAfterLastExecution.Lemmas.BoundedByIdentity H_after_arrival
+R7330:7340 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence has_arrived def
+R7356:7356 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.BoundedByIdentity.t var
+R7354:7354 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R7342:7352 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_arrival var
+prf 7504:7537 LastExecution last_execution_bounded_by_identity
+R7579:7582 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R7550:7574 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R7578:7578 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.BoundedByIdentity.t var
+R7576:7576 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R7583:7583 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.BoundedByIdentity.t var
+R7618:7642 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R7664:7671 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R7676:7676 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R7673:7674 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+binder 7672:7672 <> pat:69
+R7664:7671 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R7676:7676 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R7673:7674 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+binder 7672:7672 <> pat:70
+R7664:7671 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R7676:7676 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R7673:7674 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+binder 7672:7672 <> pat:71
+R7716:7722 mathcomp.boot.fintype <> existsP thm
+R7759:7763 mathcomp.boot.ssrnat <> addn1 thm
+R7772:7785 prosa.util.minmax <> bigmax_ltn_ord thm
+R7759:7763 mathcomp.boot.ssrnat <> addn1 thm
+R7759:7763 mathcomp.boot.ssrnat <> addn1 thm
+R7772:7785 prosa.util.minmax <> bigmax_ltn_ord thm
+R7828:7844 prosa.classic.model.schedule.uni.susp.last_execution LastExecution.TimeAfterLastExecution.Lemmas.BoundedByIdentity <> sec
+sec 8017:8033 LastExecution.TimeAfterLastExecution.Lemmas SameLastExecution
+var 8115:8115 LastExecution.TimeAfterLastExecution.Lemmas.SameLastExecution t
+var 8117:8118 LastExecution.TimeAfterLastExecution.Lemmas.SameLastExecution t'
+R8121:8124 prosa.classic.model.time Time time def
+var 8220:8233 LastExecution.TimeAfterLastExecution.Lemmas.SameLastExecution H_same_service
+R8253:8255 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8236:8242 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R8252:8252 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.SameLastExecution.t var
+R8250:8250 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R8244:8248 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.sched var
+R8256:8262 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R8272:8273 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.SameLastExecution.t' var
+R8270:8270 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R8264:8268 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.sched var
+prf 8421:8460 LastExecution same_service_implies_same_last_execution
+R8502:8504 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8473:8497 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R8501:8501 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.SameLastExecution.t var
+R8499:8499 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R8505:8529 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R8533:8534 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.SameLastExecution.t' var
+R8531:8531 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R8617:8663 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule same_service_implies_scheduled_at_earlier_times thm
+R8699:8700 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.SameLastExecution.t' var
+R8697:8697 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.SameLastExecution.t var
+R8695:8695 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R8689:8693 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.sched var
+R8727:8751 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R8727:8751 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R8727:8751 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R8787:8794 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R8799:8799 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R8796:8797 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+binder 8795:8795 <> pat:78
+R8787:8794 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R8799:8799 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R8796:8797 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+binder 8795:8795 <> pat:79
+R8787:8794 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R8799:8799 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R8796:8797 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+binder 8795:8795 <> pat:80
+R8843:8850 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R8852:8853 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R8880:8880 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R8854:8856 mathcomp.boot.fintype <> :::'''I_'_x not
+R8857:8857 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.SameLastExecution.t var
+binder 8851:8851 <> x:81
+R8858:8859 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R8860:8875 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_scheduled_at var
+R8877:8877 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R8879:8879 prosa.classic.model.schedule.uni.susp.last_execution <> x:81 var
+binder 8851:8851 <> x:82
+binder 8851:8851 <> x:83
+R8935:8935 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.SameLastExecution.t var
+R8937:8938 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.SameLastExecution.t' var
+R8937:8938 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.SameLastExecution.t' var
+R8937:8938 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.SameLastExecution.t' var
+R8935:8935 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.SameLastExecution.t var
+R8935:8935 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.SameLastExecution.t var
+R9001:9004 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R9061:9069 mathcomp.boot.ssrnat <> leq_total thm
+R9061:9069 mathcomp.boot.ssrnat <> leq_total thm
+R9061:9069 mathcomp.boot.ssrnat <> leq_total thm
+R9055:9057 Corelib.ssr.ssrbool <> orP thm
+R9144:9149 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R9151:9153 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R9156:9158 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R9179:9180 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+binder 9150:9150 <> t:84
+binder 9150:9150 <> t:85
+binder 9150:9150 <> t:86
+R9159:9174 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_scheduled_at var
+R9176:9176 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R9178:9178 prosa.classic.model.schedule.uni.susp.last_execution <> t:84 var
+R9181:9181 prosa.classic.model.schedule.uni.susp.last_execution <> t:84 var
+R9144:9149 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R9151:9153 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R9156:9158 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R9179:9180 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+binder 9150:9150 <> t:87
+binder 9150:9150 <> t:88
+binder 9150:9150 <> t:89
+R9159:9174 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_scheduled_at var
+R9176:9176 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R9178:9178 prosa.classic.model.schedule.uni.susp.last_execution <> t:87 var
+R9181:9181 prosa.classic.model.schedule.uni.susp.last_execution <> t:87 var
+R9144:9149 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R9151:9153 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R9156:9158 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R9179:9180 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+binder 9150:9150 <> t:90
+binder 9150:9150 <> t:91
+binder 9150:9150 <> t:92
+R9159:9174 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_scheduled_at var
+R9176:9176 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R9178:9178 prosa.classic.model.schedule.uni.susp.last_execution <> t:90 var
+R9181:9181 prosa.classic.model.schedule.uni.susp.last_execution <> t:90 var
+R9206:9211 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R9213:9215 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R9218:9220 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R9241:9242 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+binder 9212:9212 <> t:93
+binder 9212:9212 <> t:94
+binder 9212:9212 <> t:95
+R9221:9236 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_scheduled_at var
+R9238:9238 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R9240:9240 prosa.classic.model.schedule.uni.susp.last_execution <> t:93 var
+R9243:9243 prosa.classic.model.schedule.uni.susp.last_execution <> t:93 var
+R9206:9211 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R9213:9215 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R9218:9220 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R9241:9242 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+binder 9212:9212 <> t:96
+binder 9212:9212 <> t:97
+binder 9212:9212 <> t:98
+R9221:9236 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_scheduled_at var
+R9238:9238 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R9240:9240 prosa.classic.model.schedule.uni.susp.last_execution <> t:96 var
+R9243:9243 prosa.classic.model.schedule.uni.susp.last_execution <> t:96 var
+R9206:9211 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R9213:9215 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R9218:9220 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R9241:9242 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+binder 9212:9212 <> t:99
+binder 9212:9212 <> t:100
+binder 9212:9212 <> t:101
+R9221:9236 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_scheduled_at var
+R9238:9238 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R9240:9240 prosa.classic.model.schedule.uni.susp.last_execution <> t:99 var
+R9243:9243 prosa.classic.model.schedule.uni.susp.last_execution <> t:99 var
+R9272:9278 mathcomp.boot.fintype <> existsP thm
+R9295:9301 mathcomp.boot.fintype <> existsP thm
+R9336:9338 mathcomp.boot.eqtype <> eqP def
+R9349:9355 mathcomp.boot.ssrnat <> eqn_leq thm
+R9364:9367 Corelib.ssr.ssrbool <> andP thm
+R9336:9338 mathcomp.boot.eqtype <> eqP def
+R9349:9355 mathcomp.boot.ssrnat <> eqn_leq thm
+R9349:9355 mathcomp.boot.ssrnat <> eqn_leq thm
+R9364:9367 Corelib.ssr.ssrbool <> andP thm
+R9417:9434 mathcomp.boot.bigop <> big_ord_widen_cond thm
+binder 9521:9521 <> x:102
+R9526:9526 prosa.classic.model.schedule.uni.susp.last_execution <> x:102 var
+binder 9489:9489 <> x:103
+R9494:9509 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_scheduled_at var
+R9511:9511 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R9513:9513 prosa.classic.model.schedule.uni.susp.last_execution <> x:103 var
+R9616:9625 mathcomp.boot.bigop <> big_mkcond thm
+R9628:9633 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R9635:9637 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R9640:9642 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R9644:9645 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+binder 9634:9634 <> t:104
+binder 9634:9634 <> t:105
+binder 9634:9634 <> t:106
+R9648:9657 mathcomp.boot.bigop <> big_mkcond thm
+R9616:9625 mathcomp.boot.bigop <> big_mkcond thm
+R9616:9625 mathcomp.boot.bigop <> big_mkcond thm
+R9648:9657 mathcomp.boot.bigop <> big_mkcond thm
+R9628:9633 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R9635:9637 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R9640:9642 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R9644:9645 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+binder 9634:9634 <> t:107
+binder 9634:9634 <> t:108
+binder 9634:9634 <> t:109
+R9628:9633 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R9635:9637 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R9640:9642 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R9644:9645 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+binder 9634:9634 <> t:110
+binder 9634:9634 <> t:111
+binder 9634:9634 <> t:112
+R9648:9657 mathcomp.boot.bigop <> big_mkcond thm
+R9692:9702 prosa.util.minmax <> leq_big_max thm
+R9692:9702 prosa.util.minmax <> leq_big_max thm
+R9755:9758 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R9755:9758 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R9755:9758 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R9822:9825 Corelib.ssr.ssrbool <> andP thm
+R9905:9908 mathcomp.boot.ssrnat <> leqP thm
+R9905:9908 mathcomp.boot.ssrnat <> leqP thm
+R9973:9981 mathcomp.boot.ssrnat <> leq_trans thm
+R9973:9981 mathcomp.boot.ssrnat <> leq_trans thm
+R10040:10043 mathcomp.boot.ssrnat <> ltnW thm
+R10046:10059 prosa.util.minmax <> bigmax_ltn_ord thm
+R10040:10043 mathcomp.boot.ssrnat <> ltnW thm
+R10046:10059 prosa.util.minmax <> bigmax_ltn_ord thm
+R10119:10122 mathcomp.boot.ssrnat <> ltnP thm
+R10119:10122 mathcomp.boot.ssrnat <> ltnP thm
+R10208:10214 mathcomp.boot.fintype <> Ordinal constr
+R10187:10195 mathcomp.boot.ssrnat <> leq_trans thm
+R10208:10214 mathcomp.boot.fintype <> Ordinal constr
+R10187:10195 mathcomp.boot.ssrnat <> leq_trans thm
+R10265:10279 mathcomp.boot.bigop <> leq_bigmax_cond thm
+R10282:10292 prosa.util.minmax <> bigmax_pred thm
+R10265:10279 mathcomp.boot.bigop <> leq_bigmax_cond thm
+R10282:10292 prosa.util.minmax <> bigmax_pred thm
+R10370:10383 prosa.util.minmax <> bigmax_ltn_ord thm
+R10355:10357 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R10370:10383 prosa.util.minmax <> bigmax_ltn_ord thm
+R10462:10472 prosa.util.minmax <> bigmax_pred thm
+R10431:10446 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_scheduled_at var
+R10448:10448 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R10462:10472 prosa.util.minmax <> bigmax_pred thm
+R10530:10532 mathcomp.boot.eqtype <> eqP def
+R10565:10568 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R10571:10575 Corelib.ssr.ssrbool <> negbK thm
+R10571:10575 Corelib.ssr.ssrbool <> negbK thm
+R10565:10568 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R10565:10568 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R10571:10575 Corelib.ssr.ssrbool <> negbK thm
+R10615:10618 Corelib.ssr.ssrbool <> negP thm
+R10672:10678 mathcomp.boot.ssrnat <> neq_ltn thm
+R10687:10689 Corelib.ssr.ssrbool <> orP thm
+R10672:10678 mathcomp.boot.ssrnat <> neq_ltn thm
+R10672:10678 mathcomp.boot.ssrnat <> neq_ltn thm
+R10687:10689 Corelib.ssr.ssrbool <> orP thm
+R10721:10727 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R10730:10743 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R10721:10727 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R10721:10727 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R10730:10743 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R10730:10743 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R10771:10781 mathcomp.boot.bigop <> big_cat_nat thm
+R10853:10856 mathcomp.boot.ssrnat <> ltnW thm
+R10771:10781 mathcomp.boot.bigop <> big_cat_nat thm
+R10771:10781 mathcomp.boot.bigop <> big_cat_nat thm
+R10771:10781 mathcomp.boot.bigop <> big_cat_nat thm
+R10771:10781 mathcomp.boot.bigop <> big_cat_nat thm
+R10853:10856 mathcomp.boot.ssrnat <> ltnW thm
+R10883:10887 mathcomp.boot.ssrnat <> addn1 thm
+R10896:10902 mathcomp.boot.ssrnat <> leq_add thm
+R10920:10929 prosa.classic.util.sum <> extend_sum thm
+R10883:10887 mathcomp.boot.ssrnat <> addn1 thm
+R10883:10887 mathcomp.boot.ssrnat <> addn1 thm
+R10896:10902 mathcomp.boot.ssrnat <> leq_add thm
+R10920:10929 prosa.classic.util.sum <> extend_sum thm
+R10977:10980 mathcomp.boot.ssrnat <> ltn0 thm
+R10977:10980 mathcomp.boot.ssrnat <> ltn0 thm
+R10977:10980 mathcomp.boot.ssrnat <> ltn0 thm
+R11013:11024 mathcomp.boot.bigop <> big_nat_recl thm
+R11013:11024 mathcomp.boot.bigop <> big_nat_recl thm
+R11013:11024 mathcomp.boot.bigop <> big_nat_recl thm
+R11069:11078 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_at def
+R11082:11097 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_scheduled_at var
+R11069:11078 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_at def
+R11069:11078 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_at def
+R11082:11097 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_scheduled_at var
+R11082:11097 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_scheduled_at var
+R11146:11162 prosa.classic.model.schedule.uni.susp.last_execution LastExecution.TimeAfterLastExecution.Lemmas.SameLastExecution <> sec
+sec 11303:11313 LastExecution.TimeAfterLastExecution.Lemmas SameService
+prf 11514:11546 LastExecution same_service_since_last_execution
+binder 11566:11566 <> t:113
+R11628:11630 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11581:11587 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R11598:11622 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R11626:11626 prosa.classic.model.schedule.uni.susp.last_execution <> t:113 var
+R11624:11624 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R11595:11595 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R11589:11593 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.sched var
+R11631:11637 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R11647:11647 prosa.classic.model.schedule.uni.susp.last_execution <> t:113 var
+R11645:11645 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R11639:11643 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.sched var
+R11694:11718 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R11694:11718 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R11694:11718 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R11740:11747 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R11752:11752 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R11749:11750 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+binder 11748:11748 <> pat:114
+R11740:11747 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R11752:11752 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R11749:11750 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+binder 11748:11748 <> pat:115
+R11740:11747 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R11752:11752 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R11749:11750 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+binder 11748:11748 <> pat:116
+R11792:11798 mathcomp.boot.fintype <> existsP thm
+R11834:11839 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R11841:11843 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R11845:11847 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R11849:11850 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+binder 11840:11840 <> pat:117
+R11862:11866 mathcomp.boot.ssrnat <> addn1 thm
+R11834:11839 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R11841:11843 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R11845:11847 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R11849:11850 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+binder 11840:11840 <> pat:118
+R11834:11839 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R11841:11843 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R11845:11847 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+R11849:11850 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<'_x_'|'_x_')'_x not
+binder 11840:11840 <> pat:119
+R11862:11866 mathcomp.boot.ssrnat <> addn1 thm
+R11862:11866 mathcomp.boot.ssrnat <> addn1 thm
+R11908:11921 prosa.util.minmax <> bigmax_ltn_ord thm
+R11892:11894 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R11908:11921 prosa.util.minmax <> bigmax_ltn_ord thm
+R11952:11960 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R11952:11960 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R11952:11960 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R11996:11998 Corelib.ssr.ssrbool <> orP thm
+R12002:12004 mathcomp.boot.eqtype <> eqP def
+R12062:12068 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R12070:12083 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R12062:12068 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R12062:12068 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R12070:12083 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R12070:12083 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R12133:12135 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R12109:12119 mathcomp.boot.bigop <> big_cat_nat thm
+R12181:12184 mathcomp.boot.ssrnat <> ltnW thm
+R12133:12135 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R12109:12119 mathcomp.boot.bigop <> big_cat_nat thm
+R12133:12135 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R12109:12119 mathcomp.boot.bigop <> big_cat_nat thm
+R12133:12135 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R12109:12119 mathcomp.boot.bigop <> big_cat_nat thm
+R12133:12135 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R12109:12119 mathcomp.boot.bigop <> big_cat_nat thm
+R12181:12184 mathcomp.boot.ssrnat <> ltnW thm
+R12215:12217 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R12220:12231 mathcomp.boot.bigop <> big_nat_cond thm
+R12240:12242 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R12245:12248 mathcomp.boot.bigop <> big1 thm
+R12251:12255 mathcomp.boot.ssrnat <> addn0 thm
+R12220:12231 mathcomp.boot.bigop <> big_nat_cond thm
+R12215:12217 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R12215:12217 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R12218:12218 prosa.classic.model.schedule.uni.susp.last_execution <> X:120 var
+R12220:12231 mathcomp.boot.bigop <> big_nat_cond thm
+R12245:12248 mathcomp.boot.bigop <> big1 thm
+R12240:12242 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R12240:12242 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R12243:12243 prosa.classic.model.schedule.uni.susp.last_execution <> X:121 var
+R12245:12248 mathcomp.boot.bigop <> big1 thm
+R12251:12255 mathcomp.boot.ssrnat <> addn0 thm
+R12251:12255 mathcomp.boot.ssrnat <> addn0 thm
+R12251:12255 mathcomp.boot.ssrnat <> addn0 thm
+R12251:12255 mathcomp.boot.ssrnat <> addn0 thm
+R12251:12255 mathcomp.boot.ssrnat <> addn0 thm
+R12284:12287 Corelib.ssr.ssrbool <> andP thm
+R12291:12294 Corelib.ssr.ssrbool <> andP thm
+R12328:12330 mathcomp.boot.eqtype <> eqP def
+R12341:12344 mathcomp.boot.ssrnat <> eqb0 thm
+R12353:12356 Corelib.ssr.ssrbool <> negP thm
+R12328:12330 mathcomp.boot.eqtype <> eqP def
+R12341:12344 mathcomp.boot.ssrnat <> eqb0 thm
+R12341:12344 mathcomp.boot.ssrnat <> eqb0 thm
+R12353:12356 Corelib.ssr.ssrbool <> negP thm
+R12420:12434 mathcomp.boot.bigop <> leq_bigmax_cond thm
+R12392:12392 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R12404:12408 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R12393:12399 mathcomp.boot.fintype <> Ordinal constr
+R12420:12434 mathcomp.boot.bigop <> leq_bigmax_cond thm
+R12461:12473 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R12496:12499 mathcomp.boot.ssrnat <> ltnn thm
+R12461:12473 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R12496:12499 mathcomp.boot.ssrnat <> ltnn thm
+R12496:12499 mathcomp.boot.ssrnat <> ltnn thm
+R12551:12555 Corelib.ssr.ssrbool <> negbT thm
+R12572:12582 mathcomp.boot.fintype <> negb_exists thm
+R12551:12555 Corelib.ssr.ssrbool <> negbT thm
+R12572:12582 mathcomp.boot.fintype <> negb_exists thm
+R12572:12582 mathcomp.boot.fintype <> negb_exists thm
+R12616:12622 mathcomp.boot.fintype <> forallP thm
+R12650:12656 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R12659:12672 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R12650:12656 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R12650:12656 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R12659:12672 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R12659:12672 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R12696:12724 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule ignore_service_before_arrival thm
+R12726:12736 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_arrival var
+R12742:12748 mathcomp.boot.bigop <> big_geq thm
+R12696:12724 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule ignore_service_before_arrival thm
+R12726:12736 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_arrival var
+R12696:12724 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule ignore_service_before_arrival thm
+R12726:12736 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_arrival var
+R12742:12748 mathcomp.boot.bigop <> big_geq thm
+R12742:12748 mathcomp.boot.bigop <> big_geq thm
+R12774:12785 mathcomp.boot.bigop <> big_nat_cond thm
+R12787:12790 mathcomp.boot.bigop <> big1 thm
+R12774:12785 mathcomp.boot.bigop <> big_nat_cond thm
+R12774:12785 mathcomp.boot.bigop <> big_nat_cond thm
+R12787:12790 mathcomp.boot.bigop <> big1 thm
+R12787:12790 mathcomp.boot.bigop <> big1 thm
+R12807:12810 Corelib.ssr.ssrbool <> andP thm
+R12845:12847 mathcomp.boot.eqtype <> eqP def
+R12858:12861 mathcomp.boot.ssrnat <> eqb0 thm
+R12876:12882 mathcomp.boot.fintype <> Ordinal constr
+R12845:12847 mathcomp.boot.eqtype <> eqP def
+R12858:12861 mathcomp.boot.ssrnat <> eqb0 thm
+R12858:12861 mathcomp.boot.ssrnat <> eqb0 thm
+R12876:12882 mathcomp.boot.fintype <> Ordinal constr
+R12927:12937 prosa.classic.model.schedule.uni.susp.last_execution LastExecution.TimeAfterLastExecution.Lemmas.SameService <> sec
+sec 13112:13138 LastExecution.TimeAfterLastExecution.Lemmas ExistsIntermediateExecution
+var 13216:13216 LastExecution.TimeAfterLastExecution.Lemmas.ExistsIntermediateExecution t
+R13219:13222 prosa.classic.model.time Time time def
+var 13244:13260 LastExecution.TimeAfterLastExecution.Lemmas.ExistsIntermediateExecution H_j_has_completed
+R13263:13274 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R13293:13293 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.ExistsIntermediateExecution.t var
+R13291:13291 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R13285:13289 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.sched var
+R13276:13283 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_cost var
+var 13387:13387 LastExecution.TimeAfterLastExecution.Lemmas.ExistsIntermediateExecution s
+R13390:13393 prosa.classic.model.time Time time def
+var 13415:13430 LastExecution.TimeAfterLastExecution.Lemmas.ExistsIntermediateExecution H_less_than_cost
+R13434:13436 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R13433:13433 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.ExistsIntermediateExecution.s var
+R13437:13444 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_cost var
+R13446:13446 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+prf 13568:13609 LastExecution exists_last_execution_with_smaller_service
+R13622:13628 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R13631:13644 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 13629:13630 <> t0:130
+R13693:13695 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13645:13651 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R13662:13686 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R13690:13691 prosa.classic.model.schedule.uni.susp.last_execution <> t0:130 var
+R13688:13688 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R13659:13659 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R13653:13657 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.sched var
+R13696:13696 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.ExistsIntermediateExecution.s var
+R13737:13769 prosa.classic.model.schedule.uni.susp.last_execution LastExecution same_service_since_last_execution thm
+R13845:13861 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.ExistsIntermediateExecution.H_j_has_completed var
+R13845:13861 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.ExistsIntermediateExecution.H_j_has_completed var
+R13845:13861 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.ExistsIntermediateExecution.H_j_has_completed var
+R13908:13911 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R13895:13905 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_arrival var
+R13907:13907 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R13912:13912 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.ExistsIntermediateExecution.t var
+R13933:13968 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule cumulative_service_implies_scheduled thm
+R13980:13980 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.ExistsIntermediateExecution.t var
+R13976:13976 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R13970:13974 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.sched var
+R13933:13968 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule cumulative_service_implies_scheduled thm
+R13980:13980 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.ExistsIntermediateExecution.t var
+R13976:13976 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R13970:13974 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.sched var
+R14029:14029 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.ExistsIntermediateExecution.s var
+R14004:14016 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R14029:14029 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.ExistsIntermediateExecution.s var
+R14004:14016 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R14084:14091 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_cost var
+R14093:14093 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R14068:14076 mathcomp.boot.ssrnat <> leq_trans thm
+R14084:14091 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_cost var
+R14093:14093 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R14068:14076 mathcomp.boot.ssrnat <> leq_trans thm
+R14167:14175 mathcomp.boot.ssrnat <> leq_trans thm
+R14207:14210 mathcomp.boot.ssrnat <> ltnW thm
+R14167:14175 mathcomp.boot.ssrnat <> leq_trans thm
+R14207:14210 mathcomp.boot.ssrnat <> ltnW thm
+R14316:14319 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R14321:14323 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R14285:14291 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R14302:14312 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_arrival var
+R14314:14314 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R14299:14299 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R14293:14297 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.sched var
+R14320:14320 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.ExistsIntermediateExecution.s var
+R14320:14320 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.ExistsIntermediateExecution.s var
+R14324:14330 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R14340:14340 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.ExistsIntermediateExecution.t var
+R14338:14338 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R14332:14336 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.sched var
+R14361:14364 Corelib.ssr.ssrbool <> andP thm
+R14361:14364 Corelib.ssr.ssrbool <> andP thm
+R14397:14403 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R14406:14419 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R14397:14403 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R14397:14403 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R14406:14419 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R14406:14419 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R14450:14478 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule ignore_service_before_arrival thm
+R14480:14490 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_arrival var
+R14496:14502 mathcomp.boot.bigop <> big_geq thm
+R14450:14478 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule ignore_service_before_arrival thm
+R14480:14490 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_arrival var
+R14450:14478 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule ignore_service_before_arrival thm
+R14480:14490 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_arrival var
+R14496:14502 mathcomp.boot.bigop <> big_geq thm
+R14496:14502 mathcomp.boot.bigop <> big_geq thm
+R14550:14550 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.ExistsIntermediateExecution.s var
+R14525:14537 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R14550:14550 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.ExistsIntermediateExecution.s var
+R14525:14537 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R14610:14617 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_cost var
+R14619:14619 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R14594:14602 mathcomp.boot.ssrnat <> leq_trans thm
+R14610:14617 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_cost var
+R14619:14619 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R14594:14602 mathcomp.boot.ssrnat <> leq_trans thm
+R14656:14680 prosa.util.unit_growth <> exists_intermediate_point thm
+R14785:14785 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.ExistsIntermediateExecution.s var
+R14776:14776 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.ExistsIntermediateExecution.t var
+R14761:14771 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_arrival var
+R14773:14773 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R14701:14726 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_is_a_step_function thm
+R14734:14734 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R14728:14732 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.sched var
+R14683:14689 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R14697:14697 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R14691:14695 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.sched var
+R14906:14932 prosa.classic.model.schedule.uni.susp.last_execution LastExecution.TimeAfterLastExecution.Lemmas.ExistsIntermediateExecution <> sec
+sec 15077:15106 LastExecution.TimeAfterLastExecution.Lemmas LessServiceBeforeLastExecution
+var 15162:15162 LastExecution.TimeAfterLastExecution.Lemmas.LessServiceBeforeLastExecution t
+R15165:15168 prosa.classic.model.time Time time def
+var 15279:15280 LastExecution.TimeAfterLastExecution.Lemmas.LessServiceBeforeLastExecution t0
+R15283:15286 prosa.classic.model.time Time time def
+var 15308:15332 LastExecution.TimeAfterLastExecution.Lemmas.LessServiceBeforeLastExecution H_no_earlier_than_arrival
+R15335:15345 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence has_arrived def
+R15361:15362 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.LessServiceBeforeLastExecution.t0 var
+R15359:15359 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R15347:15357 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.job_arrival var
+var 15467:15489 LastExecution.TimeAfterLastExecution.Lemmas.LessServiceBeforeLastExecution H_before_last_execution
+R15494:15496 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R15492:15493 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.LessServiceBeforeLastExecution.t0 var
+R15497:15521 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R15525:15525 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.LessServiceBeforeLastExecution.t var
+R15523:15523 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+prf 15696:15734 LastExecution less_service_before_start_of_suspension
+R15765:15767 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R15747:15753 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R15763:15764 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.LessServiceBeforeLastExecution.t0 var
+R15761:15761 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R15755:15759 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.sched var
+R15768:15774 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R15784:15784 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.LessServiceBeforeLastExecution.t var
+R15782:15782 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R15776:15780 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.sched var
+R15908:15932 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R15908:15932 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R15908:15932 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R15960:15966 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R15968:15972 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.sched var
+R15960:15966 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R15968:15972 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.sched var
+R15960:15966 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R15968:15972 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.sched var
+R15994:16001 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R16004:16004 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R16034:16034 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R16005:16007 mathcomp.boot.fintype <> :::'''I_'_x not
+R16008:16008 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.LessServiceBeforeLastExecution.t var
+binder 16002:16003 <> t0:139
+R16009:16010 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R16011:16022 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R16032:16033 prosa.classic.model.schedule.uni.susp.last_execution <> t0:139 var
+R16030:16030 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R16024:16028 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.sched var
+binder 16002:16003 <> t0:140
+binder 16002:16003 <> t0:141
+R15994:16001 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R16004:16004 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R16034:16034 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R16005:16007 mathcomp.boot.fintype <> :::'''I_'_x not
+R16008:16008 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.LessServiceBeforeLastExecution.t var
+binder 16002:16003 <> t0:142
+R16009:16010 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R16011:16022 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R16032:16033 prosa.classic.model.schedule.uni.susp.last_execution <> t0:142 var
+R16030:16030 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R16024:16028 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.sched var
+binder 16002:16003 <> t0:143
+binder 16002:16003 <> t0:144
+R15994:16001 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R16004:16004 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R16034:16034 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R16005:16007 mathcomp.boot.fintype <> :::'''I_'_x not
+R16008:16008 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.LessServiceBeforeLastExecution.t var
+binder 16002:16003 <> t0:145
+R16009:16010 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R16011:16022 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R16032:16033 prosa.classic.model.schedule.uni.susp.last_execution <> t0:145 var
+R16030:16030 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R16024:16028 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.sched var
+binder 16002:16003 <> t0:146
+binder 16002:16003 <> t0:147
+R16087:16111 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R16087:16111 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R16087:16111 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R16162:16163 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.LessServiceBeforeLastExecution.t0 var
+R16141:16149 mathcomp.boot.ssrnat <> leq_trans thm
+R16162:16163 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.LessServiceBeforeLastExecution.t0 var
+R16141:16149 mathcomp.boot.ssrnat <> leq_trans thm
+R16210:16213 mathcomp.boot.ssrnat <> ltnn thm
+R16210:16213 mathcomp.boot.ssrnat <> ltnn thm
+R16210:16213 mathcomp.boot.ssrnat <> ltnn thm
+R16271:16295 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R16271:16295 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R16271:16295 prosa.classic.model.schedule.uni.susp.last_execution LastExecution time_after_last_execution def
+R16335:16337 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R16339:16341 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R16335:16337 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R16339:16341 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R16338:16338 prosa.classic.model.schedule.uni.susp.last_execution <> X:148 var
+R16397:16397 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R16370:16382 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R16438:16442 mathcomp.boot.ssrnat <> addn1 thm
+R16444:16447 mathcomp.boot.ssrnat <> ltnS thm
+R16462:16471 prosa.classic.util.sum <> extend_sum thm
+R16397:16397 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R16370:16382 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R16438:16442 mathcomp.boot.ssrnat <> addn1 thm
+R16438:16442 mathcomp.boot.ssrnat <> addn1 thm
+R16444:16447 mathcomp.boot.ssrnat <> ltnS thm
+R16444:16447 mathcomp.boot.ssrnat <> ltnS thm
+R16462:16471 prosa.classic.util.sum <> extend_sum thm
+R16499:16505 mathcomp.boot.fintype <> existsP thm
+R16557:16570 prosa.util.minmax <> bigmax_ltn_ord thm
+R16543:16545 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R16546:16546 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.LessServiceBeforeLastExecution.t var
+R16557:16570 prosa.util.minmax <> bigmax_ltn_ord thm
+R16613:16619 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R16622:16635 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R16613:16619 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R16613:16619 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R16622:16635 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R16622:16635 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R16684:16684 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.LessServiceBeforeLastExecution.t var
+R16661:16671 mathcomp.boot.bigop <> big_cat_nat thm
+R16725:16728 mathcomp.boot.ssrnat <> ltnW thm
+R16684:16684 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.LessServiceBeforeLastExecution.t var
+R16661:16671 mathcomp.boot.bigop <> big_cat_nat thm
+R16684:16684 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.LessServiceBeforeLastExecution.t var
+R16661:16671 mathcomp.boot.bigop <> big_cat_nat thm
+R16684:16684 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.LessServiceBeforeLastExecution.t var
+R16661:16671 mathcomp.boot.bigop <> big_cat_nat thm
+R16684:16684 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.LessServiceBeforeLastExecution.t var
+R16661:16671 mathcomp.boot.bigop <> big_cat_nat thm
+R16725:16728 mathcomp.boot.ssrnat <> ltnW thm
+R16753:16757 mathcomp.boot.ssrnat <> addn1 thm
+R16759:16767 mathcomp.boot.ssrnat <> leq_add2l thm
+R16753:16757 mathcomp.boot.ssrnat <> addn1 thm
+R16753:16757 mathcomp.boot.ssrnat <> addn1 thm
+R16759:16767 mathcomp.boot.ssrnat <> leq_add2l thm
+R16759:16767 mathcomp.boot.ssrnat <> leq_add2l thm
+R16779:16779 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.LessServiceBeforeLastExecution.t var
+R16817:16828 mathcomp.boot.bigop <> big_nat_recl thm
+R16817:16828 mathcomp.boot.bigop <> big_nat_recl thm
+R16817:16828 mathcomp.boot.bigop <> big_nat_recl thm
+R16873:16884 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R16892:16892 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R16886:16890 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.sched var
+R16852:16860 mathcomp.boot.ssrnat <> leq_trans thm
+R16912:16919 mathcomp.boot.ssrnat <> leq_addr thm
+R16873:16884 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R16892:16892 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.Lemmas.j var
+R16886:16890 prosa.classic.model.schedule.uni.susp.last_execution <> LastExecution.TimeAfterLastExecution.sched var
+R16852:16860 mathcomp.boot.ssrnat <> leq_trans thm
+R16912:16919 mathcomp.boot.ssrnat <> leq_addr thm
+R16942:16945 mathcomp.boot.ssrnat <> lt0n thm
+R16947:16950 mathcomp.boot.ssrnat <> eqb0 thm
+R16952:16956 Corelib.ssr.ssrbool <> negbK thm
+R16942:16945 mathcomp.boot.ssrnat <> lt0n thm
+R16942:16945 mathcomp.boot.ssrnat <> lt0n thm
+R16947:16950 mathcomp.boot.ssrnat <> eqb0 thm
+R16947:16950 mathcomp.boot.ssrnat <> eqb0 thm
+R16952:16956 Corelib.ssr.ssrbool <> negbK thm
+R16952:16956 Corelib.ssr.ssrbool <> negbK thm
+R16980:16990 prosa.util.minmax <> bigmax_pred thm
+R16980:16990 prosa.util.minmax <> bigmax_pred thm
+R17045:17074 prosa.classic.model.schedule.uni.susp.last_execution LastExecution.TimeAfterLastExecution.Lemmas.LessServiceBeforeLastExecution <> sec
+R17092:17097 prosa.classic.model.schedule.uni.susp.last_execution LastExecution.TimeAfterLastExecution.Lemmas <> sec
+R17113:17134 prosa.classic.model.schedule.uni.susp.last_execution LastExecution.TimeAfterLastExecution <> sec
+R17142:17154 prosa.classic.model.schedule.uni.susp.last_execution LastExecution <> mod

@@ -1,0 +1,83 @@
+{
+	"name": "coq-prosa",
+	"version": "1.0",
+	"description": "A Foundation for Formally Proven Schedulability Analysis",
+	"license": "BSD",
+	"esy": {
+		"buildsInSource": true,
+		"buildEnv": {
+			"COQBIN": "#{@opam/coq.bin}/",
+			"COQLIB": "#{@opam/coq.lib}/coq/",
+			"COQPATH": "#{@opam/coq.lib}/coq/user-contrib:#{coq-mathcomp.install}/user-contrib",
+			"DESTDIR": "#{self.install}"
+		},
+		"build": [
+			["./create_makefile.sh"],
+			["make", "-j"]
+		],
+		"install": "make install"
+	},
+	"scripts": {
+		"clean": "make clean",
+		"doc": "make html -j"
+	},
+	"dependencies": {
+		"@opam/coq": ">=8.16 <8.18",
+		"@opam/ocamlfind": "1.8.1",
+		"coq-mathcomp": ">=1.16 <1.17",
+		"coq-mathcomp-zify": "*"
+	},
+	"devDependencies": {},
+	"resolutions": {
+		"coq-mathcomp": {
+			"source": "github:math-comp/math-comp#d09daeec7572ff9cb488e021245f7f5cd4680410",
+			"override": {
+				"dependencies": {
+					"@opam/coq": "*"
+				},
+				"buildsInSource": true,
+				"buildEnv": {
+					"HOME": "#{self.target_dir}",
+					"COQBIN": "#{@opam/coq.bin}/",
+					"COQLIB": "#{@opam/coq.lib}/coq/",
+					"COQPATH": "#{@opam/coq.lib}/coq/user-contrib:#{self.target_dir}",
+					"COQMAKEFILEOPTIONS": "DESTDIR = '#{self.install}' COQMF_WINDRIVE = '#{@opam/coq.lib}/coq'"
+				},
+				"build": [
+					[ "make", "-C", "mathcomp/ssreflect", "-j" ],
+					[ "make", "-C", "mathcomp/fingroup", "-j" ],
+					[ "make", "-C", "mathcomp/algebra", "-j" ]
+				],
+				"install": [
+					[ "make", "-C", "mathcomp/ssreflect", "install" ],
+					[ "make", "-C", "mathcomp/fingroup", "install" ],
+					[ "make", "-C", "mathcomp/algebra", "install" ]
+				]
+			}
+		},
+		"coq-mathcomp-zify": {
+			"source": "github:math-comp/mczify#63a5a1557758fec39782eaacca80befd17ac0ed2",
+			"override": {
+				"dependencies": {
+					"@opam/coq": ">=8.16",
+					"coq-mathcomp": "*"
+				},
+				"buildsInSource": true,
+				"buildEnv": {
+					"HOME": "#{self.target_dir}",
+					"COQBIN": "#{@opam/coq.bin}/",
+					"COQLIB": "#{@opam/coq.lib}/coq/",
+					"COQPATH": "#{@opam/coq.lib}/coq/user-contrib:#{coq-mathcomp.install}/user-contrib",
+					"COQMAKEFILEOPTIONS": "DESTDIR = '#{self.install}' COQMF_WINDRIVE = '#{@opam/coq.lib}/coq'"
+				},
+				"build": [
+					[ "make", "-j" ]
+				],
+				"install": [
+					[ "make", "install" ]
+				]
+			}
+		}
+	}
+}
+

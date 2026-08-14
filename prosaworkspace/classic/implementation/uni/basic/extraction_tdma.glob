@@ -1,0 +1,184 @@
+DIGEST d1344ad5a7c6b32cb2ce3f111145ef38
+Fprosa.classic.implementation.uni.basic.extraction_tdma
+R75:125 prosa.classic.analysis.uni.basic.tdma_wcrt_analysis <> <> lib
+R157:165 mathcomp.boot.ssreflect <> <> lib
+R167:173 mathcomp.boot.ssrbool <> <> lib
+R175:180 mathcomp.boot.ssrnat <> <> lib
+R182:187 mathcomp.boot.eqtype <> <> lib
+R189:191 mathcomp.boot.seq <> <> lib
+R193:197 mathcomp.boot.bigop <> <> lib
+R199:201 mathcomp.boot.div <> <> lib
+ind 242:247 <> Task_T
+constr 259:268 <> build_task
+R274:275 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R271:273 Corelib.Init.Datatypes <> nat ind
+R279:280 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R276:278 Corelib.Init.Datatypes <> nat ind
+R284:285 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R281:283 Corelib.Init.Datatypes <> nat ind
+R289:307 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R286:288 Corelib.Init.Datatypes <> nat ind
+R308:313 prosa.classic.implementation.uni.basic.extraction_tdma <> Task_T:1 ind
+def 328:335 <> get_slot
+R341:346 prosa.classic.implementation.uni.basic.extraction_tdma <> Task_T coind
+binder 337:339 <> tsk:3
+R360:362 prosa.classic.implementation.uni.basic.extraction_tdma <> tsk:3 var
+R373:382 prosa.classic.implementation.uni.basic.extraction_tdma <> build_task constr
+def 416:423 <> get_cost
+R430:435 prosa.classic.implementation.uni.basic.extraction_tdma <> Task_T coind
+binder 426:428 <> tsk:5
+R447:449 prosa.classic.implementation.uni.basic.extraction_tdma <> tsk:5 var
+R460:469 prosa.classic.implementation.uni.basic.extraction_tdma <> build_task constr
+def 502:506 <> get_D
+R513:518 prosa.classic.implementation.uni.basic.extraction_tdma <> Task_T coind
+binder 509:511 <> tsk:7
+R530:532 prosa.classic.implementation.uni.basic.extraction_tdma <> tsk:7 var
+R543:552 prosa.classic.implementation.uni.basic.extraction_tdma <> build_task constr
+def 585:589 <> get_P
+R596:601 prosa.classic.implementation.uni.basic.extraction_tdma <> Task_T coind
+binder 592:594 <> tsk:9
+R614:616 prosa.classic.implementation.uni.basic.extraction_tdma <> tsk:9 var
+R627:636 prosa.classic.implementation.uni.basic.extraction_tdma <> build_task constr
+def 668:674 <> task_eq
+R684:689 prosa.classic.implementation.uni.basic.extraction_tdma <> Task_T coind
+binder 677:678 <> t1:11
+binder 680:681 <> t2:12
+R797:806 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R827:827 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R766:775 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R796:796 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R701:701 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R728:738 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R765:765 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R713:716 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R702:709 prosa.classic.implementation.uni.basic.extraction_tdma <> get_slot def
+R711:712 prosa.classic.implementation.uni.basic.extraction_tdma <> t1:11 var
+R717:724 prosa.classic.implementation.uni.basic.extraction_tdma <> get_slot def
+R726:727 prosa.classic.implementation.uni.basic.extraction_tdma <> t2:12 var
+R750:753 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R739:746 prosa.classic.implementation.uni.basic.extraction_tdma <> get_cost def
+R748:749 prosa.classic.implementation.uni.basic.extraction_tdma <> t1:11 var
+R754:761 prosa.classic.implementation.uni.basic.extraction_tdma <> get_cost def
+R763:764 prosa.classic.implementation.uni.basic.extraction_tdma <> t2:12 var
+R784:787 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R776:780 prosa.classic.implementation.uni.basic.extraction_tdma <> get_D def
+R782:783 prosa.classic.implementation.uni.basic.extraction_tdma <> t1:11 var
+R788:792 prosa.classic.implementation.uni.basic.extraction_tdma <> get_D def
+R794:795 prosa.classic.implementation.uni.basic.extraction_tdma <> t2:12 var
+R815:818 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R807:811 prosa.classic.implementation.uni.basic.extraction_tdma <> get_P def
+R813:814 prosa.classic.implementation.uni.basic.extraction_tdma <> t1:11 var
+R819:823 prosa.classic.implementation.uni.basic.extraction_tdma <> get_P def
+R825:826 prosa.classic.implementation.uni.basic.extraction_tdma <> t2:12 var
+def 841:842 <> In
+R847:852 prosa.classic.implementation.uni.basic.extraction_tdma <> Task_T coind
+binder 845:845 <> a:13
+R858:861 Corelib.Init.Datatypes <> list ind
+R863:868 prosa.classic.implementation.uni.basic.extraction_tdma <> Task_T coind
+binder 856:856 <> l:14
+R891:891 prosa.classic.implementation.uni.basic.extraction_tdma <> l:14 var
+R906:908 Corelib.Init.Datatypes <> nil constr
+R913:917 Corelib.Init.Logic <> False ind
+R928:931 mathcomp.boot.seq <> ::seq_scope:x_'::'_x not
+R941:944 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R939:939 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R938:938 prosa.classic.implementation.uni.basic.extraction_tdma <> a:13 var
+R945:946 prosa.classic.implementation.uni.basic.extraction_tdma <> In:15 def
+R948:948 prosa.classic.implementation.uni.basic.extraction_tdma <> a:13 var
+def 973:987 <> schedulable_tsk
+binder 989:989 <> T:17
+binder 991:993 <> tsk:18
+R1014:1041 prosa.classic.analysis.uni.basic.tdma_wcrt_analysis WCRT_OneJobTDMA WCRT_formula def
+R1043:1043 prosa.classic.implementation.uni.basic.extraction_tdma <> T:17 var
+R1046:1053 prosa.classic.implementation.uni.basic.extraction_tdma <> get_slot def
+R1055:1057 prosa.classic.implementation.uni.basic.extraction_tdma <> tsk:18 var
+R1061:1068 prosa.classic.implementation.uni.basic.extraction_tdma <> get_cost def
+R1070:1072 prosa.classic.implementation.uni.basic.extraction_tdma <> tsk:18 var
+binder 1005:1009 <> bound:19
+R1080:1082 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R1126:1131 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R1136:1141 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R1083:1083 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R1102:1106 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R1125:1125 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R1089:1092 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R1084:1088 prosa.classic.implementation.uni.basic.extraction_tdma <> bound:19 var
+R1093:1097 prosa.classic.implementation.uni.basic.extraction_tdma <> get_D def
+R1099:1101 prosa.classic.implementation.uni.basic.extraction_tdma <> tsk:18 var
+R1112:1115 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R1107:1111 prosa.classic.implementation.uni.basic.extraction_tdma <> bound:19 var
+R1116:1120 prosa.classic.implementation.uni.basic.extraction_tdma <> get_P def
+R1122:1124 prosa.classic.implementation.uni.basic.extraction_tdma <> tsk:18 var
+R1132:1135 Corelib.Init.Datatypes <> true constr
+R1142:1146 Corelib.Init.Datatypes <> false constr
+def 1160:1178 <> schedulability_test
+binder 1180:1180 <> T:20
+R1186:1189 Corelib.Init.Datatypes <> list ind
+R1191:1196 prosa.classic.implementation.uni.basic.extraction_tdma <> Task_T coind
+binder 1183:1183 <> l:21
+R1207:1207 prosa.classic.implementation.uni.basic.extraction_tdma <> l:21 var
+R1215:1217 Corelib.Init.Datatypes <> nil constr
+R1222:1225 Corelib.Init.Datatypes <> true constr
+R1229:1230 mathcomp.boot.seq <> ::seq_scope:x_'::'_x not
+R1235:1235 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R1255:1260 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R1284:1284 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R1236:1250 prosa.classic.implementation.uni.basic.extraction_tdma <> schedulable_tsk def
+R1252:1252 prosa.classic.implementation.uni.basic.extraction_tdma <> T:20 var
+R1261:1279 prosa.classic.implementation.uni.basic.extraction_tdma <> schedulability_test:22 def
+R1281:1281 prosa.classic.implementation.uni.basic.extraction_tdma <> T:20 var
+prf 1300:1324 <> schedulability_test_valid
+binder 1326:1326 <> T:24
+binder 1328:1329 <> TL:25
+R1356:1365 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R1411:1411 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R1332:1350 prosa.classic.implementation.uni.basic.extraction_tdma <> schedulability_test def
+R1354:1355 prosa.classic.implementation.uni.basic.extraction_tdma <> TL:25 var
+R1352:1352 prosa.classic.implementation.uni.basic.extraction_tdma <> T:24 var
+binder 1373:1375 <> tsk:26
+R1387:1389 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1378:1379 prosa.classic.implementation.uni.basic.extraction_tdma <> In def
+R1385:1386 prosa.classic.implementation.uni.basic.extraction_tdma <> TL:25 var
+R1381:1383 prosa.classic.implementation.uni.basic.extraction_tdma <> tsk:26 var
+R1390:1404 prosa.classic.implementation.uni.basic.extraction_tdma <> schedulable_tsk def
+R1408:1410 prosa.classic.implementation.uni.basic.extraction_tdma <> tsk:26 var
+R1406:1406 prosa.classic.implementation.uni.basic.extraction_tdma <> T:24 var
+R1532:1535 Corelib.ssr.ssrbool <> andP thm
+R1532:1535 Corelib.ssr.ssrbool <> andP thm
+R1631:1634 Corelib.ssr.ssrbool <> andP thm
+R1631:1634 Corelib.ssr.ssrbool <> andP thm
+def 1746:1750 <> cycle
+binder 1752:1752 <> l:27
+R1757:1761 mathcomp.boot.seq <> foldr def
+R1771:1773 mathcomp.boot.seq <> map def
+R1784:1784 prosa.classic.implementation.uni.basic.extraction_tdma <> l:27 var
+R1775:1782 prosa.classic.implementation.uni.basic.extraction_tdma <> get_slot def
+R1763:1766 Corelib.Init.Peano <> plus abbrev
+def 1801:1819 <> schedulability_tdma
+R1825:1828 Corelib.Init.Datatypes <> list ind
+R1830:1835 prosa.classic.implementation.uni.basic.extraction_tdma <> Task_T coind
+binder 1822:1822 <> l:28
+R1840:1858 prosa.classic.implementation.uni.basic.extraction_tdma <> schedulability_test def
+R1870:1870 prosa.classic.implementation.uni.basic.extraction_tdma <> l:28 var
+R1861:1865 prosa.classic.implementation.uni.basic.extraction_tdma <> cycle def
+R1867:1867 prosa.classic.implementation.uni.basic.extraction_tdma <> l:28 var
+prf 1882:1906 <> schedulability_tdma_valid
+binder 1908:1916 <> task_list:29
+R1951:1960 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R2029:2029 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R1922:1940 prosa.classic.implementation.uni.basic.extraction_tdma <> schedulability_tdma def
+R1942:1950 prosa.classic.implementation.uni.basic.extraction_tdma <> task_list:29 var
+binder 1968:1970 <> tsk:30
+R1989:1991 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1973:1974 prosa.classic.implementation.uni.basic.extraction_tdma <> In def
+R1980:1988 prosa.classic.implementation.uni.basic.extraction_tdma <> task_list:29 var
+R1976:1978 prosa.classic.implementation.uni.basic.extraction_tdma <> tsk:30 var
+R1992:2006 prosa.classic.implementation.uni.basic.extraction_tdma <> schedulable_tsk def
+R2026:2028 prosa.classic.implementation.uni.basic.extraction_tdma <> tsk:30 var
+R2009:2013 prosa.classic.implementation.uni.basic.extraction_tdma <> cycle def
+R2015:2023 prosa.classic.implementation.uni.basic.extraction_tdma <> task_list:29 var
+R2049:2067 prosa.classic.implementation.uni.basic.extraction_tdma <> schedulability_tdma def
+R2049:2067 prosa.classic.implementation.uni.basic.extraction_tdma <> schedulability_tdma def
+R2049:2067 prosa.classic.implementation.uni.basic.extraction_tdma <> schedulability_tdma def
+R2076:2100 prosa.classic.implementation.uni.basic.extraction_tdma <> schedulability_test_valid thm
+R2076:2100 prosa.classic.implementation.uni.basic.extraction_tdma <> schedulability_test_valid thm

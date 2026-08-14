@@ -1,0 +1,19 @@
+Interact with Coq interactively via coqtop/SerAPI to query proof state.
+
+All operations are restricted to the current workspace. Do NOT reference or load files outside the workspace.
+
+Available commands:
+- "check <term>": Check the type of a term
+- "search <pattern>": Search for lemmas matching a pattern
+- "print <name>": Print the definition or type of a named entity
+- "state": Get the current proof state (goals, hypotheses, context)
+- "eval <coq_code>": Evaluate a Coq command and return the result
+
+Usage:
+- Use this tool to inspect proof state, look up lemma types, and explore the Coq environment.
+- `state` and `eval` reject ssreflect repeat-rewrite syntax `rewrite !...` and `rewrite -!...`; use explicit rewrites or a named normalization bridge instead.
+- `state` and `eval` reject the `intuition` tactic; use explicit tactics (`left`/`right`/`split`/`apply`/`exact`) instead.
+- The workspace parameter constrains which files/libraries are loaded.
+- Results are returned in a simplified format: goals, hypotheses, and any error messages.
+- Use "check" to verify types before using them in proofs.
+- Use "search" to discover available lemmas in loaded libraries.

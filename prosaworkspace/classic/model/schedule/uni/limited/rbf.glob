@@ -1,0 +1,258 @@
+DIGEST 9d442d22e076d3b9862eb4c9db8d4fa3
+Fprosa.classic.model.schedule.uni.limited.rbf
+R15:36 prosa.classic.util.all <> <> lib
+R54:77 prosa.classic.model.time <> <> lib
+R79:115 prosa.classic.model.arrival.basic.job <> <> lib
+R132:177 prosa.classic.model.arrival.basic.task_arrival <> <> lib
+R194:221 prosa.classic.model.priority <> <> lib
+R238:287 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R305:345 prosa.classic.model.schedule.uni.schedule <> <> lib
+R363:403 prosa.classic.model.arrival.curves.bounds <> <> lib
+R421:476 prosa.classic.analysis.uni.arrival_curves.workload_bound <> <> lib
+R508:516 mathcomp.boot.ssreflect <> <> lib
+R518:524 mathcomp.boot.ssrbool <> <> lib
+R526:531 mathcomp.boot.eqtype <> <> lib
+R533:538 mathcomp.boot.ssrnat <> <> lib
+R540:542 mathcomp.boot.seq <> <> lib
+R544:547 mathcomp.boot.path <> <> lib
+R549:555 mathcomp.boot.fintype <> <> lib
+R557:561 mathcomp.boot.bigop <> <> lib
+mod 572:574 <> RBF
+R588:590 prosa.classic.model.arrival.basic.job Job <> mod
+R592:595 prosa.classic.model.time Time <> mod
+R597:611 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence <> mod
+R613:625 prosa.classic.model.arrival.curves.bounds ArrivalCurves <> mod
+R627:637 prosa.classic.model.arrival.basic.task_arrival TaskArrival <> mod
+R639:646 prosa.classic.model.priority Priority <> mod
+R648:671 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound <> mod
+sec 769:781 RBF RBFProperties
+var  802:805 RBF.RBFProperties Task
+R808:813 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 830:838 RBF.RBFProperties task_cost
+R845:848 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R841:844 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.Task var
+R849:852 prosa.classic.model.time Time time def
+var  873:875 RBF.RBFProperties Job
+R878:883 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 900:910 RBF.RBFProperties job_arrival
+R916:919 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R913:915 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.Job var
+R920:923 prosa.classic.model.time Time time def
+var 939:946 RBF.RBFProperties job_task
+R952:955 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R949:951 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.Job var
+R956:959 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.Task var
+var 1017:1023 RBF.RBFProperties arr_seq
+R1026:1041 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R1043:1045 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.Job var
+var 1063:1092 RBF.RBFProperties H_arrival_times_are_consistent
+R1101:1128 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_times_are_consistent def
+R1142:1148 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.arr_seq var
+R1130:1140 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.job_arrival var
+var 1323:1340 RBF.RBFProperties higher_eq_priority
+R1343:1351 prosa.classic.model.priority Priority FP_policy def
+R1353:1356 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.Task var
+var 1374:1396 RBF.RBFProperties H_priority_is_reflexive
+R1399:1413 prosa.classic.model.priority Priority FP_is_reflexive def
+R1415:1432 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.higher_eq_priority var
+var 1450:1473 RBF.RBFProperties H_priority_is_transitive
+R1476:1491 prosa.classic.model.priority Priority FP_is_transitive def
+R1493:1510 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.higher_eq_priority var
+var 1558:1560 RBF.RBFProperties tsk
+R1563:1566 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.Task var
+var 1806:1817 RBF.RBFProperties max_arrivals
+R1824:1827 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1820:1823 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.Task var
+R1832:1835 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1828:1831 prosa.classic.model.time Time time def
+R1836:1838 Corelib.Init.Datatypes <> nat ind
+var 1856:1877 RBF.RBFProperties H_proper_arrival_curve
+R1886:1905 prosa.classic.model.arrival.curves.bounds ArrivalCurves proper_arrival_curve def
+R1937:1939 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.tsk var
+R1924:1935 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.max_arrivals var
+R1916:1922 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.arr_seq var
+R1907:1914 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.job_task var
+var 2004:2011 RBF.RBFProperties task_rbf
+R2016:2042 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound task_request_bound_function def
+R2067:2069 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.tsk var
+R2054:2065 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.max_arrivals var
+R2044:2052 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.task_cost var
+prf 2135:2149 RBF task_rbf_0_zero
+R2168:2170 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2158:2165 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.task_rbf var
+R2200:2207 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.task_rbf var
+R2210:2236 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound task_request_bound_function def
+R2200:2207 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.task_rbf var
+R2200:2207 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.task_rbf var
+R2210:2236 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound task_request_bound_function def
+R2210:2236 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound task_request_bound_function def
+R2251:2253 mathcomp.boot.eqtype <> eqP def
+R2264:2271 mathcomp.boot.ssrnat <> muln_eq0 thm
+R2280:2282 Corelib.ssr.ssrbool <> orP thm
+R2298:2300 mathcomp.boot.eqtype <> eqP def
+R2251:2253 mathcomp.boot.eqtype <> eqP def
+R2264:2271 mathcomp.boot.ssrnat <> muln_eq0 thm
+R2264:2271 mathcomp.boot.ssrnat <> muln_eq0 thm
+R2280:2282 Corelib.ssr.ssrbool <> orP thm
+R2298:2300 mathcomp.boot.eqtype <> eqP def
+R2320:2341 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.H_proper_arrival_curve var
+R2320:2341 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.H_proper_arrival_curve var
+R2320:2341 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.H_proper_arrival_curve var
+prf 2437:2453 RBF task_rbf_monotone
+R2462:2469 prosa.util.rel <> monotone def
+R2475:2482 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.task_rbf var
+R2471:2473 mathcomp.boot.ssrnat <> leq def
+R2511:2518 prosa.util.rel <> monotone def
+R2511:2518 prosa.util.rel <> monotone def
+R2511:2518 prosa.util.rel <> monotone def
+R2544:2551 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.task_rbf var
+R2554:2580 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound task_request_bound_function def
+R2582:2590 mathcomp.boot.ssrnat <> leq_mul2l thm
+R2544:2551 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.task_rbf var
+R2544:2551 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.task_rbf var
+R2554:2580 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound task_request_bound_function def
+R2554:2580 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound task_request_bound_function def
+R2582:2590 mathcomp.boot.ssrnat <> leq_mul2l thm
+R2582:2590 mathcomp.boot.ssrnat <> leq_mul2l thm
+R2605:2607 Corelib.ssr.ssrbool <> orP thm
+R2605:2607 Corelib.ssr.ssrbool <> orP thm
+R2634:2655 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.H_proper_arrival_curve var
+R2634:2655 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.H_proper_arrival_curve var
+R2634:2655 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.H_proper_arrival_curve var
+var 2746:2746 RBF.RBFProperties j
+R2749:2751 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.Job var
+var 2769:2779 RBF.RBFProperties H_j_arrives
+R2782:2791 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R2801:2801 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.j var
+R2793:2799 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.arr_seq var
+var 2819:2830 RBF.RBFProperties H_job_of_tsk
+R2843:2845 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2833:2840 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.job_task var
+R2842:2842 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.j var
+R2846:2848 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.tsk var
+prf 2946:2968 RBF task_rbf_1_ge_task_cost
+R2987:2990 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R2991:2999 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.task_cost var
+R3001:3003 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.tsk var
+R2977:2984 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.task_rbf var
+binder 3040:3040 <> n:31
+R3048:3051 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R3044:3046 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3043:3043 prosa.classic.model.schedule.uni.limited.rbf <> n:31 var
+R3053:3055 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R3052:3052 prosa.classic.model.schedule.uni.limited.rbf <> n:31 var
+R3140:3148 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.task_cost var
+R3150:3152 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.tsk var
+R3140:3148 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.task_cost var
+R3150:3152 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.tsk var
+R3219:3224 mathcomp.boot.ssrnat <> leqNgt thm
+R3233:3236 Corelib.ssr.ssrbool <> negP thm
+R3219:3224 mathcomp.boot.ssrnat <> leqNgt thm
+R3219:3224 mathcomp.boot.ssrnat <> leqNgt thm
+R3233:3236 Corelib.ssr.ssrbool <> negP thm
+R3265:3286 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.H_proper_arrival_curve var
+R3265:3286 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.H_proper_arrival_curve var
+R3265:3286 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.H_proper_arrival_curve var
+R3325:3335 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.job_arrival var
+R3337:3337 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.j var
+R3354:3356 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R3341:3351 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.job_arrival var
+R3353:3353 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.j var
+R3325:3335 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.job_arrival var
+R3337:3337 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.j var
+R3354:3356 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R3341:3351 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.job_arrival var
+R3353:3353 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.j var
+R3396:3403 mathcomp.boot.ssrnat <> leq_addr thm
+R3396:3403 mathcomp.boot.ssrnat <> leq_addr thm
+R3396:3403 mathcomp.boot.ssrnat <> leq_addr thm
+R3420:3424 mathcomp.boot.ssrnat <> addKn thm
+R3420:3424 mathcomp.boot.ssrnat <> addKn thm
+R3420:3424 mathcomp.boot.ssrnat <> addKn thm
+R3463:3470 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.task_rbf var
+R3473:3499 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound task_request_bound_function def
+R3463:3470 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.task_rbf var
+R3463:3470 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.task_rbf var
+R3473:3499 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound task_request_bound_function def
+R3473:3499 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound task_request_bound_function def
+R3549:3557 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.task_cost var
+R3559:3561 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.tsk var
+R3563:3567 mathcomp.boot.ssrnat <> muln1 thm
+R3569:3577 mathcomp.boot.ssrnat <> ltn_mul2l thm
+R3563:3567 mathcomp.boot.ssrnat <> muln1 thm
+R3549:3557 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.task_cost var
+R3559:3561 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.tsk var
+R3549:3557 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.task_cost var
+R3559:3561 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.tsk var
+R3563:3567 mathcomp.boot.ssrnat <> muln1 thm
+R3569:3577 mathcomp.boot.ssrnat <> ltn_mul2l thm
+R3569:3577 mathcomp.boot.ssrnat <> ltn_mul2l thm
+R3589:3592 Corelib.ssr.ssrbool <> andP thm
+R3633:3637 mathcomp.boot.ssrnat <> addn1 thm
+R3646:3650 mathcomp.boot.ssrnat <> add0n thm
+R3652:3660 mathcomp.boot.ssrnat <> leq_add2r thm
+R3662:3666 mathcomp.boot.ssrnat <> leqn0 thm
+R3633:3637 mathcomp.boot.ssrnat <> addn1 thm
+R3633:3637 mathcomp.boot.ssrnat <> addn1 thm
+R3646:3650 mathcomp.boot.ssrnat <> add0n thm
+R3646:3650 mathcomp.boot.ssrnat <> add0n thm
+R3652:3660 mathcomp.boot.ssrnat <> leq_add2r thm
+R3652:3660 mathcomp.boot.ssrnat <> leq_add2r thm
+R3662:3666 mathcomp.boot.ssrnat <> leqn0 thm
+R3662:3666 mathcomp.boot.ssrnat <> leqn0 thm
+R3678:3680 mathcomp.boot.eqtype <> eqP def
+R3721:3725 mathcomp.boot.ssrnat <> leqn0 thm
+R3727:3733 mathcomp.boot.ssrnat <> eqn0Ngt thm
+R3721:3725 mathcomp.boot.ssrnat <> leqn0 thm
+R3721:3725 mathcomp.boot.ssrnat <> leqn0 thm
+R3727:3733 mathcomp.boot.ssrnat <> eqn0Ngt thm
+R3727:3733 mathcomp.boot.ssrnat <> eqn0Ngt thm
+R3745:3748 Corelib.ssr.ssrbool <> negP thm
+R3778:3797 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R3800:3808 mathcomp.boot.seq <> has_predT thm
+R3778:3797 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R3778:3797 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R3800:3808 mathcomp.boot.seq <> has_predT thm
+R3800:3808 mathcomp.boot.seq <> has_predT thm
+R3827:3850 prosa.classic.model.arrival.basic.task_arrival TaskArrival arrivals_of_task_between def
+R3853:3866 prosa.classic.model.arrival.basic.task_arrival TaskArrival is_job_of_task def
+R3827:3850 prosa.classic.model.arrival.basic.task_arrival TaskArrival arrivals_of_task_between def
+R3827:3850 prosa.classic.model.arrival.basic.task_arrival TaskArrival arrivals_of_task_between def
+R3853:3866 prosa.classic.model.arrival.basic.task_arrival TaskArrival is_job_of_task def
+R3853:3866 prosa.classic.model.arrival.basic.task_arrival TaskArrival is_job_of_task def
+R3881:3884 mathcomp.boot.seq <> hasP thm
+R3894:3894 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.j var
+R3881:3884 mathcomp.boot.seq <> hasP thm
+R3894:3894 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.j var
+R3926:3945 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R3947:3951 mathcomp.boot.ssrnat <> addn1 thm
+R3953:3964 mathcomp.boot.bigop <> big_nat_recl thm
+R3926:3945 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R3926:3945 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R3947:3951 mathcomp.boot.ssrnat <> addn1 thm
+R3947:3951 mathcomp.boot.ssrnat <> addn1 thm
+R3953:3964 mathcomp.boot.bigop <> big_nat_recl thm
+R3953:3964 mathcomp.boot.bigop <> big_nat_recl thm
+R3996:4002 mathcomp.boot.bigop <> big_geq thm
+R4005:4009 mathcomp.boot.seq <> cats0 thm
+R3996:4002 mathcomp.boot.bigop <> big_geq thm
+R3996:4002 mathcomp.boot.bigop <> big_geq thm
+R4005:4009 mathcomp.boot.seq <> cats0 thm
+R4005:4009 mathcomp.boot.seq <> cats0 thm
+R4005:4009 mathcomp.boot.seq <> cats0 thm
+R4005:4009 mathcomp.boot.seq <> cats0 thm
+R4005:4009 mathcomp.boot.seq <> cats0 thm
+R4040:4049 mathcomp.boot.seq <> mem_filter thm
+R4040:4049 mathcomp.boot.seq <> mem_filter thm
+R4040:4049 mathcomp.boot.seq <> mem_filter thm
+R4064:4067 Corelib.ssr.ssrbool <> andP thm
+R4064:4067 Corelib.ssr.ssrbool <> andP thm
+R4094:4096 mathcomp.boot.eqtype <> eqP def
+R4094:4096 mathcomp.boot.eqtype <> eqP def
+R4113:4123 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.H_j_arrives var
+R4113:4123 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.H_j_arrives var
+R4113:4123 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.H_j_arrives var
+R4180:4209 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.H_arrival_times_are_consistent var
+R4180:4209 prosa.classic.model.schedule.uni.limited.rbf <> RBF.RBFProperties.H_arrival_times_are_consistent var
+R4267:4279 prosa.classic.model.schedule.uni.limited.rbf RBF.RBFProperties <> sec
+R4287:4289 prosa.classic.model.schedule.uni.limited.rbf RBF <> mod

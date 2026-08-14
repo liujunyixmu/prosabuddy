@@ -1,0 +1,177 @@
+DIGEST 682d074076c654b2da9ef93b28b2e160
+Fprosa.classic.util.bigord
+R15:40 prosa.classic.util.tactics <> <> lib
+R72:80 mathcomp.boot.ssreflect <> <> lib
+R82:88 mathcomp.boot.ssrbool <> <> lib
+R90:95 mathcomp.boot.eqtype <> <> lib
+R97:102 mathcomp.boot.ssrnat <> <> lib
+R104:106 mathcomp.boot.seq <> <> lib
+R108:114 mathcomp.boot.fintype <> <> lib
+R116:120 mathcomp.boot.bigop <> <> lib
+sec 253:264 <> BigOrdFunOrd
+def 281:294 <> fun_ord_to_nat
+binder 297:297 <> n:1
+binder 301:301 <> T:2
+R309:309 prosa.classic.util.bigord <> T:2 var
+binder 305:306 <> x0:3
+R320:323 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R316:318 mathcomp.boot.fintype <> :::'''I_'_x not
+R319:319 prosa.classic.util.bigord <> n:1 var
+R324:324 prosa.classic.util.bigord <> T:2 var
+binder 313:313 <> f:4
+R332:335 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R329:331 Corelib.Init.Datatypes <> nat ind
+R336:336 prosa.classic.util.bigord <> T:2 var
+R452:454 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R486:492 mathcomp.boot.fintype <> Ordinal constr
+R452:454 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R486:492 mathcomp.boot.fintype <> Ordinal constr
+prf 535:551 <> eq_fun_ord_to_nat
+binder 566:566 <> n:5
+binder 569:569 <> T:6
+binder 578:579 <> x0:7
+R589:592 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R585:587 mathcomp.boot.fintype <> :::'''I_'_x not
+R588:588 prosa.classic.util.bigord <> n:5 var
+R593:593 prosa.classic.util.bigord <> T:6 var
+binder 582:582 <> f:8
+R600:602 mathcomp.boot.fintype <> :::'''I_'_x not
+R603:603 prosa.classic.util.bigord <> n:5 var
+binder 597:597 <> x:9
+R636:638 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R614:627 prosa.classic.util.bigord <> fun_ord_to_nat def
+R632:632 prosa.classic.util.bigord <> f:8 var
+R629:630 prosa.classic.util.bigord <> x0:7 var
+R635:635 prosa.classic.util.bigord <> x:9 var
+R639:639 prosa.classic.util.bigord <> f:8 var
+R641:641 prosa.classic.util.bigord <> x:9 var
+R669:682 prosa.classic.util.bigord <> fun_ord_to_nat def
+R721:727 mathcomp.boot.fintype <> ord_inj thm
+R721:727 mathcomp.boot.fintype <> ord_inj thm
+prf 789:799 <> eq_bigr_ord
+binder 801:801 <> T:10
+binder 803:803 <> n:11
+binder 805:806 <> op:12
+binder 808:810 <> idx:13
+binder 812:812 <> r:14
+R819:822 Corelib.ssr.ssrbool <> pred def
+R824:826 mathcomp.boot.fintype <> :::'''I_'_x not
+R827:827 prosa.classic.util.bigord <> n:11 var
+binder 815:815 <> P:15
+R858:861 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R855:857 Corelib.Init.Datatypes <> nat ind
+R862:862 prosa.classic.util.bigord <> T:10 var
+binder 851:852 <> F1:16
+R874:877 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R870:872 mathcomp.boot.fintype <> :::'''I_'_x not
+R873:873 prosa.classic.util.bigord <> n:11 var
+R878:878 prosa.classic.util.bigord <> T:10 var
+binder 866:867 <> F2:17
+R887:887 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R916:924 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+binder 895:895 <> i:18
+R901:904 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R898:898 prosa.classic.util.bigord <> P:15 var
+R900:900 prosa.classic.util.bigord <> i:18 var
+R909:911 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R905:906 prosa.classic.util.bigord <> F1:16 var
+R908:908 prosa.classic.util.bigord <> i:18 var
+R912:913 prosa.classic.util.bigord <> F2:17 var
+R915:915 prosa.classic.util.bigord <> i:18 var
+R957:959 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R925:929 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<-'_x_'|'_x_')'_x not
+R932:932 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<-'_x_'|'_x_')'_x not
+R936:938 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<-'_x_'|'_x_')'_x not
+R940:943 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<-'_x_'|'_x_')'_x not
+R945:947 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<-'_x_'|'_x_')'_x not
+R951:952 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<-'_x_'|'_x_')'_x not
+R933:935 prosa.classic.util.bigord <> idx:13 var
+R944:944 prosa.classic.util.bigord <> r:14 var
+binder 939:939 <> i:19
+binder 939:939 <> i:20
+binder 939:939 <> i:21
+R930:931 prosa.classic.util.bigord <> op:12 var
+R948:948 prosa.classic.util.bigord <> P:15 var
+R950:950 prosa.classic.util.bigord <> i:19 var
+R953:954 prosa.classic.util.bigord <> F1:16 var
+R956:956 prosa.classic.util.bigord <> i:19 var
+R960:964 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<-'_x_'|'_x_')'_x not
+R967:967 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<-'_x_'|'_x_')'_x not
+R971:973 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<-'_x_'|'_x_')'_x not
+R975:978 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<-'_x_'|'_x_')'_x not
+R980:982 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<-'_x_'|'_x_')'_x not
+R986:987 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<-'_x_'|'_x_')'_x not
+R968:970 prosa.classic.util.bigord <> idx:13 var
+R979:979 prosa.classic.util.bigord <> r:14 var
+binder 974:974 <> i:22
+binder 974:974 <> i:23
+binder 974:974 <> i:24
+R965:966 prosa.classic.util.bigord <> op:12 var
+R983:983 prosa.classic.util.bigord <> P:15 var
+R985:985 prosa.classic.util.bigord <> i:22 var
+R988:989 prosa.classic.util.bigord <> F2:17 var
+R991:991 prosa.classic.util.bigord <> i:22 var
+R1044:1050 mathcomp.boot.bigop <> big_nil thm
+R1044:1050 mathcomp.boot.bigop <> big_nil thm
+R1044:1050 mathcomp.boot.bigop <> big_nil thm
+R1044:1050 mathcomp.boot.bigop <> big_nil thm
+R1067:1074 mathcomp.boot.bigop <> big_cons thm
+R1067:1074 mathcomp.boot.bigop <> big_cons thm
+R1067:1074 mathcomp.boot.bigop <> big_cons thm
+R1067:1074 mathcomp.boot.bigop <> big_cons thm
+prf 1159:1171 <> big_mkord_ord
+binder 1174:1174 <> T:25
+binder 1178:1178 <> n:26
+binder 1182:1183 <> op:27
+binder 1187:1189 <> idx:28
+binder 1192:1193 <> x0:29
+R1200:1203 Corelib.ssr.ssrbool <> pred def
+R1205:1207 mathcomp.boot.fintype <> :::'''I_'_x not
+R1208:1208 prosa.classic.util.bigord <> n:26 var
+binder 1196:1196 <> P:30
+R1219:1222 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1215:1217 mathcomp.boot.fintype <> :::'''I_'_x not
+R1218:1218 prosa.classic.util.bigord <> n:26 var
+R1223:1223 prosa.classic.util.bigord <> T:25 var
+binder 1212:1212 <> F:31
+R1262:1270 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1232:1236 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<'_x_'|'_x_')'_x not
+R1239:1239 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<'_x_'|'_x_')'_x not
+R1243:1245 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<'_x_'|'_x_')'_x not
+R1247:1249 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<'_x_'|'_x_')'_x not
+R1251:1253 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<'_x_'|'_x_')'_x not
+R1257:1258 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<'_x_'|'_x_')'_x not
+R1240:1242 prosa.classic.util.bigord <> idx:28 var
+R1250:1250 prosa.classic.util.bigord <> n:26 var
+binder 1246:1246 <> i:32
+binder 1246:1246 <> i:33
+binder 1246:1246 <> i:34
+R1237:1238 prosa.classic.util.bigord <> op:27 var
+R1254:1254 prosa.classic.util.bigord <> P:30 var
+R1256:1256 prosa.classic.util.bigord <> i:32 var
+R1259:1259 prosa.classic.util.bigord <> F:31 var
+R1261:1261 prosa.classic.util.bigord <> i:32 var
+R1271:1275 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<'_x_'|'_x_')'_x not
+R1278:1278 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<'_x_'|'_x_')'_x not
+R1282:1284 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<'_x_'|'_x_')'_x not
+R1286:1288 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<'_x_'|'_x_')'_x not
+R1290:1292 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<'_x_'|'_x_')'_x not
+R1296:1297 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<'_x_'|'_x_')'_x not
+R1279:1281 prosa.classic.util.bigord <> idx:28 var
+R1289:1289 prosa.classic.util.bigord <> n:26 var
+binder 1285:1285 <> i:35
+binder 1285:1285 <> i:36
+binder 1285:1285 <> i:37
+R1276:1277 prosa.classic.util.bigord <> op:27 var
+R1293:1293 prosa.classic.util.bigord <> P:30 var
+R1295:1295 prosa.classic.util.bigord <> i:35 var
+R1299:1312 prosa.classic.util.bigord <> fun_ord_to_nat def
+R1317:1317 prosa.classic.util.bigord <> F:31 var
+R1314:1315 prosa.classic.util.bigord <> x0:29 var
+R1320:1320 prosa.classic.util.bigord <> i:35 var
+R1347:1357 prosa.classic.util.bigord <> eq_bigr_ord thm
+R1375:1388 prosa.classic.util.bigord <> fun_ord_to_nat def
+R1441:1457 prosa.classic.util.bigord <> eq_fun_ord_to_nat thm
+R1441:1457 prosa.classic.util.bigord <> eq_fun_ord_to_nat thm
+R1441:1457 prosa.classic.util.bigord <> eq_fun_ord_to_nat thm
+R1473:1484 prosa.classic.util.bigord BigOrdFunOrd <> sec

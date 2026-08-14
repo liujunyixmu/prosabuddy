@@ -1,0 +1,60 @@
+DIGEST fc4ae93e9d2bff9dadb36dc8822b5792
+Fprosa.classic.util.powerset
+R15:40 prosa.classic.util.tactics <> <> lib
+R72:80 mathcomp.boot.ssreflect <> <> lib
+R82:88 mathcomp.boot.ssrbool <> <> lib
+R90:95 mathcomp.boot.eqtype <> <> lib
+R97:102 mathcomp.boot.ssrnat <> <> lib
+R104:106 mathcomp.boot.seq <> <> lib
+R108:114 mathcomp.boot.fintype <> <> lib
+R116:120 mathcomp.boot.bigop <> <> lib
+R122:126 mathcomp.boot.tuple <> <> lib
+sec 138:145 <> PowerSet
+def 252:259 <> powerset
+R265:270 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+binder 262:262 <> T:1
+R277:279 mathcomp.boot.seq <> seq abbrev
+R281:281 prosa.classic.util.powerset <> T:1 var
+binder 274:274 <> l:2
+R286:288 mathcomp.boot.seq <> seq abbrev
+R291:293 mathcomp.boot.seq <> seq abbrev
+R295:295 prosa.classic.util.powerset <> T:1 var
+R316:316 mathcomp.boot.tuple <> ::type_scope:x_'.-tuple' not
+R323:335 mathcomp.boot.tuple <> ::type_scope:x_'.-tuple' not
+R317:320 mathcomp.boot.seq <> size def
+R322:322 prosa.classic.util.powerset <> l:2 var
+R332:335 Corelib.Init.Datatypes <> bool ind
+binder 309:310 <> mT:3
+R348:350 mathcomp.boot.seq <> map def
+R380:383 mathcomp.boot.fintype <> enum abbrev
+R385:387 Corelib.ssr.ssrbool <> ::type_scope:'{'_':'_x_'}' not
+R390:390 Corelib.ssr.ssrbool <> ::type_scope:'{'_':'_x_'}' not
+R388:389 prosa.classic.util.powerset <> mT:3 var
+R361:362 prosa.classic.util.powerset <> mT:3 var
+binder 357:357 <> m:4
+R368:371 mathcomp.boot.seq <> mask def
+R375:375 prosa.classic.util.powerset <> l:2 var
+R373:373 prosa.classic.util.powerset <> m:4 var
+prf 404:415 <> mem_powerset
+R421:426 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+binder 418:418 <> T:5
+R433:435 mathcomp.boot.seq <> seq abbrev
+R437:437 prosa.classic.util.powerset <> T:5 var
+binder 430:430 <> x:6
+binder 440:440 <> y:7
+R466:469 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R449:454 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R465:465 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R448:448 prosa.classic.util.powerset <> y:7 var
+R455:462 prosa.classic.util.powerset <> powerset def
+R464:464 prosa.classic.util.powerset <> x:6 var
+R470:477 Corelib.ssr.ssrbool <> ::type_scope:'{'_'subset'_x_'<='_x_'}' not
+R479:482 Corelib.ssr.ssrbool <> ::type_scope:'{'_'subset'_x_'<='_x_'}' not
+R484:484 Corelib.ssr.ssrbool <> ::type_scope:'{'_'subset'_x_'<='_x_'}' not
+R478:478 prosa.classic.util.powerset <> y:7 var
+R483:483 prosa.classic.util.powerset <> x:6 var
+R547:554 prosa.classic.util.powerset <> powerset def
+R582:585 mathcomp.boot.seq <> mapP thm
+R643:650 mathcomp.boot.seq <> mem_mask thm
+R643:650 mathcomp.boot.seq <> mem_mask thm
+R682:689 prosa.classic.util.powerset PowerSet <> sec

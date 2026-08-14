@@ -1,0 +1,78 @@
+DIGEST 7fa0e785f4de1c971dc71ee60a212bea
+Fprosa.classic.analysis.global.jitter.interference_bound_fp
+R15:36 prosa.classic.util.all <> <> lib
+R54:81 prosa.classic.model.priority <> <> lib
+R99:142 prosa.classic.model.schedule.global.workload <> <> lib
+R160:210 prosa.classic.model.schedule.global.jitter.schedule <> <> lib
+R212:266 prosa.classic.model.schedule.global.jitter.interference <> <> lib
+R284:334 prosa.classic.analysis.global.jitter.workload_bound <> <> lib
+R336:390 prosa.classic.analysis.global.jitter.interference_bound <> <> lib
+R422:430 mathcomp.boot.ssreflect <> <> lib
+R432:438 mathcomp.boot.ssrbool <> <> lib
+R440:445 mathcomp.boot.eqtype <> <> lib
+R447:452 mathcomp.boot.ssrnat <> <> lib
+R454:456 mathcomp.boot.seq <> <> lib
+R458:464 mathcomp.boot.fintype <> <> lib
+R466:470 mathcomp.boot.bigop <> <> lib
+mod 481:499 <> InterferenceBoundFP
+R512:529 prosa.classic.model.schedule.global.jitter.schedule ScheduleWithJitter <> mod
+R531:549 prosa.classic.analysis.global.jitter.workload_bound WorkloadBoundJitter <> mod
+R551:558 prosa.classic.model.priority Priority <> mod
+R560:571 prosa.classic.model.schedule.global.jitter.interference Interference <> mod
+R583:605 prosa.classic.analysis.global.jitter.interference_bound InterferenceBoundJitter <> mod
+sec 621:631 InterferenceBoundFP Definitions
+var  652:664 InterferenceBoundFP.Definitions sporadic_task
+R667:672 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 689:697 InterferenceBoundFP.Definitions task_cost
+R713:716 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R700:712 prosa.classic.analysis.global.jitter.interference_bound_fp <> InterferenceBoundFP.Definitions.sporadic_task var
+R717:720 prosa.classic.model.time Time time def
+var 736:746 InterferenceBoundFP.Definitions task_period
+R762:765 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R749:761 prosa.classic.analysis.global.jitter.interference_bound_fp <> InterferenceBoundFP.Definitions.sporadic_task var
+R766:769 prosa.classic.model.time Time time def
+var 785:797 InterferenceBoundFP.Definitions task_deadline
+R813:816 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R800:812 prosa.classic.analysis.global.jitter.interference_bound_fp <> InterferenceBoundFP.Definitions.sporadic_task var
+R817:820 prosa.classic.model.time Time time def
+var 836:846 InterferenceBoundFP.Definitions task_jitter
+R862:865 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R849:861 prosa.classic.analysis.global.jitter.interference_bound_fp <> InterferenceBoundFP.Definitions.sporadic_task var
+R866:869 prosa.classic.model.time Time time def
+var 936:938 InterferenceBoundFP.Definitions tsk
+R941:953 prosa.classic.analysis.global.jitter.interference_bound_fp <> InterferenceBoundFP.Definitions.sporadic_task var
+var 965:987 InterferenceBoundFP.Definitions task_with_response_time
+R1006:1008 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R993:1005 prosa.classic.analysis.global.jitter.interference_bound_fp <> InterferenceBoundFP.Definitions.sporadic_task var
+R1009:1012 prosa.classic.model.time Time time def
+var 1114:1119 InterferenceBoundFP.Definitions R_prev
+R1122:1124 mathcomp.boot.seq <> seq abbrev
+R1126:1148 prosa.classic.analysis.global.jitter.interference_bound_fp <> InterferenceBoundFP.Definitions.task_with_response_time var
+var 1209:1213 InterferenceBoundFP.Definitions delta
+R1216:1219 prosa.classic.model.time Time time def
+var 1273:1290 InterferenceBoundFP.Definitions higher_eq_priority
+R1293:1301 prosa.classic.model.priority Priority FP_policy def
+R1303:1315 prosa.classic.analysis.global.jitter.interference_bound_fp <> InterferenceBoundFP.Definitions.sporadic_task var
+var 1368:1391 InterferenceBoundFP.Definitions total_interference_bound
+R1396:1421 prosa.classic.analysis.global.jitter.interference_bound InterferenceBoundJitter interference_bound_generic def
+R1461:1465 prosa.classic.analysis.global.jitter.interference_bound_fp <> InterferenceBoundFP.Definitions.delta var
+R1457:1459 prosa.classic.analysis.global.jitter.interference_bound_fp <> InterferenceBoundFP.Definitions.tsk var
+R1445:1455 prosa.classic.analysis.global.jitter.interference_bound_fp <> InterferenceBoundFP.Definitions.task_jitter var
+R1433:1443 prosa.classic.analysis.global.jitter.interference_bound_fp <> InterferenceBoundFP.Definitions.task_period var
+R1423:1431 prosa.classic.analysis.global.jitter.interference_bound_fp <> InterferenceBoundFP.Definitions.task_cost var
+def 1600:1626 InterferenceBoundFP total_interference_bound_fp
+R1637:1643 prosa.classic.util.notation <> ::nat_scope:'\sum_'_'('_'('_x_','_x_')'_'<-'_x_')'_x not
+R1653:1654 prosa.classic.util.notation <> ::nat_scope:'\sum_'_'('_'('_x_','_x_')'_'<-'_x_')'_x not
+R1662:1666 prosa.classic.util.notation <> ::nat_scope:'\sum_'_'('_'('_x_','_x_')'_'<-'_x_')'_x not
+R1673:1683 prosa.classic.util.notation <> ::nat_scope:'\sum_'_'('_'('_x_','_x_')'_'<-'_x_')'_x not
+R1667:1672 prosa.classic.analysis.global.jitter.interference_bound_fp <> InterferenceBoundFP.Definitions.R_prev var
+binder 1644:1652 <> tsk_other:18
+binder 1655:1661 <> R_other:19
+R1684:1707 prosa.classic.analysis.global.jitter.interference_bound_fp <> InterferenceBoundFP.Definitions.total_interference_bound var
+R1709:1709 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1719:1720 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1728:1728 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1710:1718 prosa.classic.analysis.global.jitter.interference_bound_fp <> tsk_other:18 var
+R1721:1727 prosa.classic.analysis.global.jitter.interference_bound_fp <> R_other:19 var
+R1744:1754 prosa.classic.analysis.global.jitter.interference_bound_fp InterferenceBoundFP.Definitions <> sec
+R1762:1780 prosa.classic.analysis.global.jitter.interference_bound_fp InterferenceBoundFP <> mod

@@ -1,0 +1,173 @@
+DIGEST c6758dcc1f1bd91a3863fbf54658bc87
+Fprosa.classic.model.schedule.uni.schedulability
+R15:36 prosa.classic.util.all <> <> lib
+R54:91 prosa.classic.model.arrival.basic.task <> <> lib
+R93:129 prosa.classic.model.arrival.basic.job <> <> lib
+R131:180 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R197:237 prosa.classic.model.schedule.uni.schedule <> <> lib
+R239:284 prosa.classic.model.schedule.uni.response_time <> <> lib
+R316:324 mathcomp.boot.ssreflect <> <> lib
+R326:332 mathcomp.boot.ssrbool <> <> lib
+R334:339 mathcomp.boot.eqtype <> <> lib
+R341:346 mathcomp.boot.ssrnat <> <> lib
+R348:350 mathcomp.boot.seq <> <> lib
+R352:358 mathcomp.boot.fintype <> <> lib
+R360:364 mathcomp.boot.bigop <> <> lib
+mod 375:388 <> Schedulability
+R401:403 prosa.classic.model.arrival.basic.job Job <> mod
+R405:419 prosa.classic.model.arrival.basic.task SporadicTaskset <> mod
+R421:435 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence <> mod
+R437:456 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule <> mod
+R458:469 prosa.classic.model.schedule.uni.response_time ResponseTime <> mod
+sec 547:560 Schedulability DeadlineMisses
+var  577:579 Schedulability.DeadlineMisses Job
+R582:587 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 604:614 Schedulability.DeadlineMisses job_arrival
+R620:623 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R617:619 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Job var
+R624:627 prosa.classic.model.time Time time def
+var 643:650 Schedulability.DeadlineMisses job_cost
+R656:659 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R653:655 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Job var
+R660:663 prosa.classic.model.time Time time def
+var 679:690 Schedulability.DeadlineMisses job_deadline
+R696:699 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R693:695 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Job var
+R700:703 prosa.classic.model.time Time time def
+var  724:727 Schedulability.DeadlineMisses Task
+R730:735 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 752:759 Schedulability.DeadlineMisses job_task
+R765:768 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R762:764 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Job var
+R769:772 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Task var
+var 836:842 Schedulability.DeadlineMisses arr_seq
+R845:860 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R862:864 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Job var
+var 939:943 Schedulability.DeadlineMisses sched
+R946:953 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R955:957 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Job var
+var 1026:1041 Schedulability.DeadlineMisses job_completed_by
+R1046:1057 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R1068:1072 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.sched var
+R1059:1066 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.job_cost var
+var 1083:1106 Schedulability.DeadlineMisses response_time_bounded_by
+R1117:1146 prosa.classic.model.schedule.uni.response_time ResponseTime is_response_time_bound_of_task def
+R1186:1190 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.sched var
+R1178:1184 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.arr_seq var
+R1169:1176 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.job_task var
+R1160:1167 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.job_cost var
+R1148:1158 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.job_arrival var
+sec 1206:1216 Schedulability.DeadlineMisses Definitions
+sec 1312:1319 Schedulability.DeadlineMisses.Definitions JobLevel
+var 1379:1379 Schedulability.DeadlineMisses.Definitions.JobLevel j
+R1382:1384 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Job var
+def 1484:1505 Schedulability job_misses_no_deadline
+R1520:1535 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.job_completed_by var
+R1537:1537 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Definitions.JobLevel.j var
+R1553:1555 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R1540:1550 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.job_arrival var
+R1552:1552 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Definitions.JobLevel.j var
+R1556:1567 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.job_deadline var
+R1569:1569 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Definitions.JobLevel.j var
+R1594:1601 prosa.classic.model.schedule.uni.schedulability Schedulability.DeadlineMisses.Definitions.JobLevel <> sec
+sec 1687:1695 Schedulability.DeadlineMisses.Definitions TaskLevel
+var 1756:1758 Schedulability.DeadlineMisses.Definitions.TaskLevel tsk
+R1761:1764 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Task var
+def 1879:1901 Schedulability task_misses_no_deadline
+binder 1923:1923 <> j:19
+R1958:1973 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1938:1947 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R1957:1957 prosa.classic.model.schedule.uni.schedulability <> j:19 var
+R1949:1955 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.arr_seq var
+R1990:2005 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1984:1986 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1974:1981 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.job_task var
+R1983:1983 prosa.classic.model.schedule.uni.schedulability <> j:19 var
+R1987:1989 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Definitions.TaskLevel.tsk var
+R2006:2027 prosa.classic.model.schedule.uni.schedulability Schedulability job_misses_no_deadline def
+R2029:2029 prosa.classic.model.schedule.uni.schedulability <> j:19 var
+R2051:2059 prosa.classic.model.schedule.uni.schedulability Schedulability.DeadlineMisses.Definitions.TaskLevel <> sec
+sec 2149:2160 Schedulability.DeadlineMisses.Definitions TaskSetLevel
+var 2224:2225 Schedulability.DeadlineMisses.Definitions.TaskSetLevel ts
+R2228:2230 mathcomp.boot.seq <> seq abbrev
+R2232:2235 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Task var
+def 2341:2366 Schedulability taskset_misses_no_deadline
+binder 2388:2390 <> tsk:22
+R2415:2430 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2408:2412 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R2405:2407 prosa.classic.model.schedule.uni.schedulability <> tsk:22 var
+R2413:2414 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Definitions.TaskSetLevel.ts var
+R2431:2453 prosa.classic.model.schedule.uni.schedulability Schedulability task_misses_no_deadline def
+R2455:2457 prosa.classic.model.schedule.uni.schedulability <> tsk:22 var
+R2479:2490 prosa.classic.model.schedule.uni.schedulability Schedulability.DeadlineMisses.Definitions.TaskSetLevel <> sec
+R2508:2518 prosa.classic.model.schedule.uni.schedulability Schedulability.DeadlineMisses.Definitions <> sec
+sec 2609:2614 Schedulability.DeadlineMisses Lemmas
+var 2633:2641 Schedulability.DeadlineMisses.Lemmas task_cost
+R2648:2651 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2644:2647 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Task var
+R2652:2655 prosa.classic.model.time Time time def
+var 2673:2685 Schedulability.DeadlineMisses.Lemmas task_deadline
+R2692:2695 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2688:2691 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Task var
+R2696:2699 prosa.classic.model.time Time time def
+sec 2801:2821 Schedulability.DeadlineMisses.Lemmas ResponseTimeIsBounded
+var 2953:2983 Schedulability.DeadlineMisses.Lemmas.ResponseTimeIsBounded H_job_deadline_eq_task_deadline
+binder 3003:3003 <> j:27
+R3038:3053 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3018:3027 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R3037:3037 prosa.classic.model.schedule.uni.schedulability <> j:27 var
+R3029:3035 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.arr_seq var
+R3054:3082 prosa.classic.model.arrival.basic.job Job job_deadline_eq_task_deadline def
+R3120:3120 prosa.classic.model.schedule.uni.schedulability <> j:27 var
+R3111:3118 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.job_task var
+R3098:3109 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.job_deadline var
+R3084:3096 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Lemmas.task_deadline var
+var 3219:3247 Schedulability.DeadlineMisses.Lemmas.ResponseTimeIsBounded H_completed_jobs_dont_execute
+R3250:3276 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_jobs_dont_execute def
+R3287:3291 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.sched var
+R3278:3285 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.job_cost var
+var 3346:3348 Schedulability.DeadlineMisses.Lemmas.ResponseTimeIsBounded tsk
+R3351:3354 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Task var
+var 3463:3463 Schedulability.DeadlineMisses.Lemmas.ResponseTimeIsBounded R
+R3466:3469 prosa.classic.model.time Time time def
+var 3491:3505 Schedulability.DeadlineMisses.Lemmas.ResponseTimeIsBounded H_R_le_deadline
+R3509:3512 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R3508:3508 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Lemmas.ResponseTimeIsBounded.R var
+R3513:3525 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Lemmas.task_deadline var
+R3527:3529 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Lemmas.ResponseTimeIsBounded.tsk var
+var 3551:3573 Schedulability.DeadlineMisses.Lemmas.ResponseTimeIsBounded H_response_time_bounded
+R3576:3599 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.response_time_bounded_by var
+R3601:3603 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Lemmas.ResponseTimeIsBounded.tsk var
+R3605:3605 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Lemmas.ResponseTimeIsBounded.R var
+prf 3669:3698 Schedulability task_completes_before_deadline
+R3711:3733 prosa.classic.model.schedule.uni.schedulability Schedulability task_misses_no_deadline def
+R3735:3737 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Lemmas.ResponseTimeIsBounded.tsk var
+R3772:3789 prosa.classic.model.arrival.basic.job Job valid_sporadic_job def
+R3792:3809 prosa.classic.model.arrival.basic.job Job valid_realtime_job def
+R3910:3912 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R3897:3907 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.job_arrival var
+R3913:3913 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Lemmas.ResponseTimeIsBounded.R var
+R3865:3884 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completion_monotonic thm
+R3943:3965 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Lemmas.ResponseTimeIsBounded.H_response_time_bounded var
+R3910:3912 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R3897:3907 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.job_arrival var
+R3913:3913 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Lemmas.ResponseTimeIsBounded.R var
+R3865:3884 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completion_monotonic thm
+R3943:3965 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Lemmas.ResponseTimeIsBounded.H_response_time_bounded var
+R3986:3994 mathcomp.boot.ssrnat <> leq_add2l thm
+R3986:3994 mathcomp.boot.ssrnat <> leq_add2l thm
+R3986:3994 mathcomp.boot.ssrnat <> leq_add2l thm
+R4015:4023 mathcomp.boot.ssrnat <> leq_trans thm
+R4025:4039 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Lemmas.ResponseTimeIsBounded.H_R_le_deadline var
+R4015:4023 mathcomp.boot.ssrnat <> leq_trans thm
+R4025:4039 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Lemmas.ResponseTimeIsBounded.H_R_le_deadline var
+R4066:4096 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Lemmas.ResponseTimeIsBounded.H_job_deadline_eq_task_deadline var
+R4109:4113 mathcomp.boot.ssrnat <> leqnn thm
+R4066:4096 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Lemmas.ResponseTimeIsBounded.H_job_deadline_eq_task_deadline var
+R4066:4096 prosa.classic.model.schedule.uni.schedulability <> Schedulability.DeadlineMisses.Lemmas.ResponseTimeIsBounded.H_job_deadline_eq_task_deadline var
+R4109:4113 mathcomp.boot.ssrnat <> leqnn thm
+R4109:4113 mathcomp.boot.ssrnat <> leqnn thm
+R4138:4158 prosa.classic.model.schedule.uni.schedulability Schedulability.DeadlineMisses.Lemmas.ResponseTimeIsBounded <> sec
+R4175:4180 prosa.classic.model.schedule.uni.schedulability Schedulability.DeadlineMisses.Lemmas <> sec
+R4190:4203 prosa.classic.model.schedule.uni.schedulability Schedulability.DeadlineMisses <> sec
+R4213:4226 prosa.classic.model.schedule.uni.schedulability Schedulability <> mod

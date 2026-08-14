@@ -1,0 +1,1445 @@
+DIGEST 24978ea659085659e28e486b2e02dcfd
+Fprosa.classic.model.schedule.global.basic.schedule
+R15:36 prosa.classic.util.all <> <> lib
+R53:89 prosa.classic.model.arrival.basic.job <> <> lib
+R91:128 prosa.classic.model.arrival.basic.task <> <> lib
+R130:179 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R211:219 mathcomp.boot.ssreflect <> <> lib
+R221:227 mathcomp.boot.ssrbool <> <> lib
+R229:234 mathcomp.boot.eqtype <> <> lib
+R236:241 mathcomp.boot.ssrnat <> <> lib
+R243:245 mathcomp.boot.seq <> <> lib
+R247:253 mathcomp.boot.fintype <> <> lib
+R255:259 mathcomp.boot.bigop <> <> lib
+mod 327:334 <> Schedule
+R347:361 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence <> mod
+def 453:461 Schedule processor
+R474:476 Corelib.Init.Datatypes <> nat ind
+binder 464:471 <> num_cpus:1
+R482:484 mathcomp.boot.fintype <> :::'''I_'_x not
+R485:492 prosa.classic.model.schedule.global.basic.schedule <> num_cpus:1 var
+sec 508:518 Schedule ScheduleDef
+var 571:573 Schedule.ScheduleDef Job
+R576:581 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 642:649 Schedule.ScheduleDef num_cpus
+R652:654 Corelib.Init.Datatypes <> nat ind
+def 815:822 Schedule schedule
+R851:854 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R833:841 prosa.classic.model.schedule.global.basic.schedule Schedule processor def
+R843:850 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduleDef.num_cpus var
+R859:862 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R855:858 prosa.classic.model.time Time time def
+R863:868 Corelib.Init.Datatypes <> option ind
+R870:872 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduleDef.Job var
+R882:892 prosa.classic.model.schedule.global.basic.schedule Schedule.ScheduleDef <> sec
+sec 964:976 Schedule ScheduledJobs
+var  993:995 Schedule.ScheduledJobs Job
+R998:1003 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1020:1030 Schedule.ScheduledJobs job_arrival
+R1036:1039 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1033:1035 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobs.Job var
+R1040:1043 prosa.classic.model.time Time time def
+var  1101:1107 Schedule.ScheduledJobs arr_seq
+R1110:1125 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R1127:1129 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobs.Job var
+var 1151:1158 Schedule.ScheduledJobs job_cost
+R1164:1167 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1161:1163 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobs.Job var
+R1168:1171 prosa.classic.model.time Time time def
+var  1270:1277 Schedule.ScheduledJobs num_cpus
+R1280:1282 Corelib.Init.Datatypes <> nat ind
+var 1378:1382 Schedule.ScheduledJobs sched
+R1385:1392 prosa.classic.model.schedule.global.basic.schedule Schedule schedule def
+R1398:1405 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobs.num_cpus var
+R1394:1396 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobs.Job var
+var 1421:1421 Schedule.ScheduledJobs j
+R1424:1426 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobs.Job var
+def 1530:1541 Schedule scheduled_on
+R1549:1557 prosa.classic.model.schedule.global.basic.schedule Schedule processor def
+R1559:1566 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobs.num_cpus var
+binder 1544:1546 <> cpu:17
+R1573:1576 prosa.classic.model.time Time time def
+binder 1570:1570 <> t:18
+R1599:1602 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R1588:1592 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobs.sched var
+R1594:1596 prosa.classic.model.schedule.global.basic.schedule <> cpu:17 var
+R1598:1598 prosa.classic.model.schedule.global.basic.schedule <> t:18 var
+R1603:1606 Corelib.Init.Datatypes <> Some constr
+R1608:1608 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobs.j var
+def 1714:1722 Schedule scheduled
+R1728:1731 prosa.classic.model.time Time time def
+binder 1725:1725 <> t:19
+R1743:1750 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R1774:1774 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+binder 1751:1753 <> cpu:20
+R1754:1755 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R1756:1767 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled_on def
+R1769:1771 prosa.classic.model.schedule.global.basic.schedule <> cpu:20 var
+R1773:1773 prosa.classic.model.schedule.global.basic.schedule <> t:19 var
+binder 1751:1753 <> cpu:21
+binder 1751:1753 <> cpu:22
+def 1869:1875 Schedule is_idle
+R1883:1891 prosa.classic.model.schedule.global.basic.schedule Schedule processor def
+R1893:1900 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobs.num_cpus var
+binder 1878:1880 <> cpu:23
+R1907:1910 prosa.classic.model.time Time time def
+binder 1904:1904 <> t:24
+R1933:1935 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1922:1926 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobs.sched var
+R1928:1930 prosa.classic.model.schedule.global.basic.schedule <> cpu:23 var
+R1932:1932 prosa.classic.model.schedule.global.basic.schedule <> t:24 var
+R1936:1939 Corelib.Init.Datatypes <> None constr
+def 2138:2147 Schedule service_at
+R2153:2156 prosa.classic.model.time Time time def
+binder 2150:2150 <> t:25
+R2168:2173 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<'_x_'|'_x_')'_x not
+R2177:2179 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<'_x_'|'_x_')'_x not
+R2188:2190 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<'_x_'|'_x_')'_x not
+R2209:2210 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<'_x_'|'_x_')'_x not
+R2180:2187 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobs.num_cpus var
+binder 2174:2176 <> cpu:26
+binder 2174:2176 <> cpu:27
+binder 2174:2176 <> cpu:28
+R2191:2202 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled_on def
+R2204:2206 prosa.classic.model.schedule.global.basic.schedule <> cpu:26 var
+R2208:2208 prosa.classic.model.schedule.global.basic.schedule <> t:25 var
+def 2297:2303 Schedule service
+R2310:2313 prosa.classic.model.time Time time def
+binder 2306:2307 <> t':29
+R2319:2324 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R2326:2329 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R2331:2333 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R2336:2337 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R2334:2335 prosa.classic.model.schedule.global.basic.schedule <> t':29 var
+binder 2330:2330 <> t:30
+binder 2330:2330 <> t:31
+binder 2330:2330 <> t:32
+R2338:2347 prosa.classic.model.schedule.global.basic.schedule Schedule service_at def
+R2349:2349 prosa.classic.model.schedule.global.basic.schedule <> t:30 var
+def 2436:2449 Schedule service_during
+R2459:2462 prosa.classic.model.time Time time def
+binder 2452:2453 <> t1:33
+binder 2455:2456 <> t2:34
+R2468:2473 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R2476:2479 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R2481:2483 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R2486:2487 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R2474:2475 prosa.classic.model.schedule.global.basic.schedule <> t1:33 var
+R2484:2485 prosa.classic.model.schedule.global.basic.schedule <> t2:34 var
+binder 2480:2480 <> t:35
+binder 2480:2480 <> t:36
+binder 2480:2480 <> t:37
+R2488:2497 prosa.classic.model.schedule.global.basic.schedule Schedule service_at def
+R2499:2499 prosa.classic.model.schedule.global.basic.schedule <> t:35 var
+def 2593:2601 Schedule completed
+R2607:2610 prosa.classic.model.time Time time def
+binder 2604:2604 <> t:38
+R2625:2628 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R2629:2636 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobs.job_cost var
+R2638:2638 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobs.j var
+R2616:2622 prosa.classic.model.schedule.global.basic.schedule Schedule service def
+R2624:2624 prosa.classic.model.schedule.global.basic.schedule <> t:38 var
+def 2736:2742 Schedule pending
+R2748:2751 prosa.classic.model.time Time time def
+binder 2745:2745 <> t:39
+R2784:2787 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R2757:2767 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence has_arrived def
+R2783:2783 prosa.classic.model.schedule.global.basic.schedule <> t:39 var
+R2781:2781 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobs.j var
+R2769:2779 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobs.job_arrival var
+R2788:2789 Corelib.ssr.ssrbool <> ::bool_scope:'~~'_x not
+R2790:2798 prosa.classic.model.schedule.global.basic.schedule Schedule completed def
+R2800:2800 prosa.classic.model.schedule.global.basic.schedule <> t:39 var
+def 2896:2905 Schedule backlogged
+R2911:2914 prosa.classic.model.time Time time def
+binder 2908:2908 <> t:40
+R2929:2932 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R2920:2926 prosa.classic.model.schedule.global.basic.schedule Schedule pending def
+R2928:2928 prosa.classic.model.schedule.global.basic.schedule <> t:40 var
+R2933:2934 Corelib.ssr.ssrbool <> ::bool_scope:'~~'_x not
+R2935:2943 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled def
+R2945:2945 prosa.classic.model.schedule.global.basic.schedule <> t:40 var
+def 3076:3085 Schedule carried_in
+R3092:3095 prosa.classic.model.time Time time def
+binder 3088:3089 <> t1:41
+R3132:3135 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R3101:3114 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrived_before def
+R3130:3131 prosa.classic.model.schedule.global.basic.schedule <> t1:41 var
+R3128:3128 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobs.j var
+R3116:3126 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobs.job_arrival var
+R3136:3138 Corelib.ssr.ssrbool <> ::bool_scope:'~~'_x not
+R3139:3147 prosa.classic.model.schedule.global.basic.schedule Schedule completed def
+R3149:3150 prosa.classic.model.schedule.global.basic.schedule <> t1:41 var
+def 3281:3291 Schedule carried_out
+R3301:3304 prosa.classic.model.time Time time def
+binder 3294:3295 <> t1:42
+binder 3297:3298 <> t2:43
+R3341:3344 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R3310:3323 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrived_before def
+R3339:3340 prosa.classic.model.schedule.global.basic.schedule <> t2:43 var
+R3337:3337 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobs.j var
+R3325:3335 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobs.job_arrival var
+R3345:3347 Corelib.ssr.ssrbool <> ::bool_scope:'~~'_x not
+R3348:3356 prosa.classic.model.schedule.global.basic.schedule Schedule completed def
+R3358:3359 prosa.classic.model.schedule.global.basic.schedule <> t2:43 var
+def 3494:3510 Schedule jobs_scheduled_at
+R3516:3519 prosa.classic.model.time Time time def
+binder 3513:3513 <> t:44
+R3531:3536 prosa.util.notation <> ::nat_scope:'\cat_'_'('_x_'<'_x_')'_x not
+R3540:3542 prosa.util.notation <> ::nat_scope:'\cat_'_'('_x_'<'_x_')'_x not
+R3551:3552 prosa.util.notation <> ::nat_scope:'\cat_'_'('_x_'<'_x_')'_x not
+R3543:3550 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobs.num_cpus var
+binder 3537:3539 <> cpu:45
+binder 3537:3539 <> cpu:46
+binder 3537:3539 <> cpu:47
+R3553:3565 prosa.classic.util.notation <> make_sequence def
+R3568:3572 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobs.sched var
+R3574:3576 prosa.classic.model.schedule.global.basic.schedule <> cpu:45 var
+R3578:3578 prosa.classic.model.schedule.global.basic.schedule <> t:44 var
+def 3749:3770 Schedule jobs_scheduled_between
+R3780:3783 prosa.classic.model.time Time time def
+binder 3773:3774 <> t1:48
+binder 3776:3777 <> t2:49
+R3795:3799 mathcomp.boot.seq <> undup def
+R3802:3807 prosa.util.notation <> ::nat_scope:'\cat_'_'('_x_'<='_x_'<'_x_')'_x not
+R3810:3813 prosa.util.notation <> ::nat_scope:'\cat_'_'('_x_'<='_x_'<'_x_')'_x not
+R3815:3817 prosa.util.notation <> ::nat_scope:'\cat_'_'('_x_'<='_x_'<'_x_')'_x not
+R3820:3821 prosa.util.notation <> ::nat_scope:'\cat_'_'('_x_'<='_x_'<'_x_')'_x not
+R3808:3809 prosa.classic.model.schedule.global.basic.schedule <> t1:48 var
+R3818:3819 prosa.classic.model.schedule.global.basic.schedule <> t2:49 var
+binder 3814:3814 <> t:50
+binder 3814:3814 <> t:51
+binder 3814:3814 <> t:52
+R3822:3838 prosa.classic.model.schedule.global.basic.schedule Schedule jobs_scheduled_at def
+R3840:3840 prosa.classic.model.schedule.global.basic.schedule <> t:50 var
+R3851:3863 prosa.classic.model.schedule.global.basic.schedule Schedule.ScheduledJobs <> sec
+sec 3943:3956 Schedule ValidSchedules
+var  3973:3975 Schedule.ValidSchedules Job
+R3978:3983 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 4000:4010 Schedule.ValidSchedules job_arrival
+R4016:4019 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4013:4015 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ValidSchedules.Job var
+R4020:4023 prosa.classic.model.time Time time def
+var 4039:4046 Schedule.ValidSchedules job_cost
+R4052:4055 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4049:4051 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ValidSchedules.Job var
+R4056:4059 prosa.classic.model.time Time time def
+var  4124:4131 Schedule.ValidSchedules num_cpus
+R4134:4136 Corelib.Init.Datatypes <> nat ind
+var 4153:4157 Schedule.ValidSchedules sched
+R4160:4167 prosa.classic.model.schedule.global.basic.schedule Schedule schedule def
+R4173:4180 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ValidSchedules.num_cpus var
+R4169:4171 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ValidSchedules.Job var
+def 4257:4271 Schedule sequential_jobs
+binder 4289:4289 <> j:61
+binder 4291:4291 <> t:62
+binder 4293:4296 <> cpu1:63
+binder 4298:4301 <> cpu2:64
+R4333:4336 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4324:4326 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4312:4316 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ValidSchedules.sched var
+R4318:4321 prosa.classic.model.schedule.global.basic.schedule <> cpu1:63 var
+R4323:4323 prosa.classic.model.schedule.global.basic.schedule <> t:62 var
+R4327:4330 Corelib.Init.Datatypes <> Some constr
+R4332:4332 prosa.classic.model.schedule.global.basic.schedule <> j:61 var
+R4358:4361 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4349:4351 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4337:4341 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ValidSchedules.sched var
+R4343:4346 prosa.classic.model.schedule.global.basic.schedule <> cpu2:64 var
+R4348:4348 prosa.classic.model.schedule.global.basic.schedule <> t:62 var
+R4352:4355 Corelib.Init.Datatypes <> Some constr
+R4357:4357 prosa.classic.model.schedule.global.basic.schedule <> j:61 var
+R4366:4368 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4362:4365 prosa.classic.model.schedule.global.basic.schedule <> cpu1:63 var
+R4369:4372 prosa.classic.model.schedule.global.basic.schedule <> cpu2:64 var
+def 4464:4490 Schedule jobs_must_arrive_to_execute
+binder 4508:4508 <> j:65
+binder 4510:4510 <> t:66
+R4540:4551 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4521:4529 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled def
+R4539:4539 prosa.classic.model.schedule.global.basic.schedule <> t:66 var
+R4537:4537 prosa.classic.model.schedule.global.basic.schedule <> j:65 var
+R4531:4535 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ValidSchedules.sched var
+R4552:4562 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence has_arrived def
+R4578:4578 prosa.classic.model.schedule.global.basic.schedule <> t:66 var
+R4576:4576 prosa.classic.model.schedule.global.basic.schedule <> j:65 var
+R4564:4574 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ValidSchedules.job_arrival var
+def 4662:4688 Schedule completed_jobs_dont_execute
+binder 4706:4706 <> j:67
+binder 4708:4708 <> t:68
+R4728:4731 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R4711:4717 prosa.classic.model.schedule.global.basic.schedule Schedule service def
+R4727:4727 prosa.classic.model.schedule.global.basic.schedule <> t:68 var
+R4725:4725 prosa.classic.model.schedule.global.basic.schedule <> j:67 var
+R4719:4723 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ValidSchedules.sched var
+R4732:4739 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ValidSchedules.job_cost var
+R4741:4741 prosa.classic.model.schedule.global.basic.schedule <> j:67 var
+def 4831:4861 Schedule jobs_come_from_arrival_sequence
+R4873:4888 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R4890:4892 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ValidSchedules.Job var
+binder 4864:4870 <> arr_seq:69
+binder 4911:4911 <> j:70
+binder 4913:4913 <> t:71
+R4935:4938 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4916:4924 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled def
+R4934:4934 prosa.classic.model.schedule.global.basic.schedule <> t:71 var
+R4932:4932 prosa.classic.model.schedule.global.basic.schedule <> j:70 var
+R4926:4930 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ValidSchedules.sched var
+R4939:4948 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R4958:4958 prosa.classic.model.schedule.global.basic.schedule <> j:70 var
+R4950:4956 prosa.classic.model.schedule.global.basic.schedule <> arr_seq:69 var
+R4972:4985 prosa.classic.model.schedule.global.basic.schedule Schedule.ValidSchedules <> sec
+sec 5064:5072 Schedule JobLemmas
+var  5089:5091 Schedule.JobLemmas Job
+R5094:5099 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 5116:5126 Schedule.JobLemmas job_arrival
+R5132:5135 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5129:5131 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.Job var
+R5136:5139 prosa.classic.model.time Time time def
+var 5155:5162 Schedule.JobLemmas job_cost
+R5168:5171 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5165:5167 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.Job var
+R5172:5175 prosa.classic.model.time Time time def
+var  5240:5247 Schedule.JobLemmas num_cpus
+R5250:5252 Corelib.Init.Datatypes <> nat ind
+var 5269:5273 Schedule.JobLemmas sched
+R5276:5283 prosa.classic.model.schedule.global.basic.schedule Schedule schedule def
+R5289:5296 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.num_cpus var
+R5285:5287 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.Job var
+var 5389:5389 Schedule.JobLemmas j
+R5392:5394 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.Job var
+sec 5410:5414 Schedule.JobLemmas Basic
+prf 5508:5531 Schedule not_scheduled_no_service
+binder 5550:5550 <> t:82
+R5585:5588 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5614:5614 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5563:5565 Corelib.ssr.ssrbool <> ::bool_scope:'~~'_x not
+R5566:5574 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled def
+R5584:5584 prosa.classic.model.schedule.global.basic.schedule <> t:82 var
+R5582:5582 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R5576:5580 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R5609:5612 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R5589:5598 prosa.classic.model.schedule.global.basic.schedule Schedule service_at def
+R5608:5608 prosa.classic.model.schedule.global.basic.schedule <> t:82 var
+R5606:5606 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R5600:5604 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R5645:5653 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled def
+R5656:5665 prosa.classic.model.schedule.global.basic.schedule Schedule service_at def
+R5668:5679 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled_on def
+R5698:5700 Corelib.ssr.ssrbool <> idP thm
+R5702:5704 Corelib.ssr.ssrbool <> idP thm
+R5698:5700 Corelib.ssr.ssrbool <> idP thm
+R5702:5704 Corelib.ssr.ssrbool <> idP thm
+R5762:5772 mathcomp.boot.fintype <> negb_exists thm
+R5762:5772 mathcomp.boot.fintype <> negb_exists thm
+R5762:5772 mathcomp.boot.fintype <> negb_exists thm
+R5816:5822 mathcomp.boot.fintype <> forallP thm
+R5852:5863 mathcomp.boot.bigop <> big_seq_cond thm
+R5852:5863 mathcomp.boot.bigop <> big_seq_cond thm
+R5852:5863 mathcomp.boot.bigop <> big_seq_cond thm
+binder 5911:5911 <> i:83
+R5887:5893 mathcomp.boot.bigop <> eq_bigr thm
+R5949:5961 mathcomp.boot.bigop <> big_const_seq thm
+R5963:5971 mathcomp.boot.ssrnat <> iter_addn thm
+R5973:5977 mathcomp.boot.ssrnat <> mul0n thm
+R5979:5983 mathcomp.boot.ssrnat <> addn0 thm
+binder 5911:5911 <> i:84
+R5887:5893 mathcomp.boot.bigop <> eq_bigr thm
+binder 5911:5911 <> i:85
+R5887:5893 mathcomp.boot.bigop <> eq_bigr thm
+binder 5911:5911 <> i:86
+R5887:5893 mathcomp.boot.bigop <> eq_bigr thm
+R5949:5961 mathcomp.boot.bigop <> big_const_seq thm
+R5949:5961 mathcomp.boot.bigop <> big_const_seq thm
+R5963:5971 mathcomp.boot.ssrnat <> iter_addn thm
+R5963:5971 mathcomp.boot.ssrnat <> iter_addn thm
+R5973:5977 mathcomp.boot.ssrnat <> mul0n thm
+R5973:5977 mathcomp.boot.ssrnat <> mul0n thm
+R5979:5983 mathcomp.boot.ssrnat <> addn0 thm
+R5979:5983 mathcomp.boot.ssrnat <> addn0 thm
+R6009:6012 Corelib.ssr.ssrbool <> andP thm
+R6018:6020 mathcomp.boot.eqtype <> eqP def
+R6084:6090 mathcomp.boot.eqtype <> eq_refl thm
+R6084:6090 mathcomp.boot.eqtype <> eq_refl thm
+R6084:6090 mathcomp.boot.eqtype <> eq_refl thm
+R6158:6172 prosa.util.sum <> sum_nat_eq0_nat thm
+R6158:6172 prosa.util.sum <> sum_nat_eq0_nat thm
+R6158:6172 prosa.util.sum <> sum_nat_eq0_nat thm
+R6212:6215 mathcomp.boot.seq <> allP thm
+R6240:6250 mathcomp.boot.fintype <> negb_exists thm
+R6259:6265 mathcomp.boot.fintype <> forallP thm
+R6240:6250 mathcomp.boot.fintype <> negb_exists thm
+R6240:6250 mathcomp.boot.fintype <> negb_exists thm
+R6259:6265 mathcomp.boot.fintype <> forallP thm
+R6296:6299 Corelib.ssr.ssrbool <> negP thm
+R6296:6299 Corelib.ssr.ssrbool <> negP thm
+R6336:6340 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R6341:6345 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R6347:6350 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R6363:6365 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R6385:6385 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+binder 6346:6346 <> x:87
+R6375:6378 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R6366:6370 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R6372:6372 prosa.classic.model.schedule.global.basic.schedule <> x:87 var
+R6379:6382 Corelib.Init.Datatypes <> Some constr
+R6384:6384 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R6351:6360 mathcomp.boot.bigop <> index_enum def
+R6411:6420 mathcomp.boot.seq <> mem_filter thm
+R6431:6444 mathcomp.boot.bigop <> mem_index_enum thm
+R6411:6420 mathcomp.boot.seq <> mem_filter thm
+R6411:6420 mathcomp.boot.seq <> mem_filter thm
+R6431:6444 mathcomp.boot.bigop <> mem_index_enum thm
+R6431:6444 mathcomp.boot.bigop <> mem_index_enum thm
+prf 6672:6705 Schedule cumulative_service_implies_service
+binder 6724:6725 <> t1:88
+binder 6727:6728 <> t2:89
+R6774:6787 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6769:6772 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R6741:6754 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R6764:6765 prosa.classic.model.schedule.global.basic.schedule <> t1:88 var
+R6767:6768 prosa.classic.model.schedule.global.basic.schedule <> t2:89 var
+R6762:6762 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R6756:6760 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R6788:6794 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R6796:6809 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 6795:6795 <> t:90
+R6822:6838 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R6812:6815 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R6817:6819 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R6810:6811 prosa.classic.model.schedule.global.basic.schedule <> t1:88 var
+R6816:6816 prosa.classic.model.schedule.global.basic.schedule <> t:90 var
+R6816:6816 prosa.classic.model.schedule.global.basic.schedule <> t:90 var
+R6820:6821 prosa.classic.model.schedule.global.basic.schedule <> t2:89 var
+R6859:6862 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R6839:6848 prosa.classic.model.schedule.global.basic.schedule Schedule service_at def
+R6858:6858 prosa.classic.model.schedule.global.basic.schedule <> t:90 var
+R6856:6856 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R6850:6854 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R6927:6934 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R6936:6937 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R6985:6985 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R6938:6940 mathcomp.boot.fintype <> :::'''I_'_x not
+binder 6935:6935 <> t:91
+R6943:6944 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R6945:6945 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6953:6958 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6984:6984 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6947:6950 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R6946:6946 prosa.classic.model.schedule.global.basic.schedule <> t:91 var
+R6979:6982 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R6959:6968 prosa.classic.model.schedule.global.basic.schedule Schedule service_at def
+R6978:6978 prosa.classic.model.schedule.global.basic.schedule <> t:91 var
+R6976:6976 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R6970:6974 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+binder 6935:6935 <> t:92
+binder 6935:6935 <> t:93
+R6927:6934 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R6936:6937 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R6985:6985 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R6938:6940 mathcomp.boot.fintype <> :::'''I_'_x not
+binder 6935:6935 <> t:94
+R6943:6944 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R6945:6945 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6953:6958 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6984:6984 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6947:6950 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R6946:6946 prosa.classic.model.schedule.global.basic.schedule <> t:94 var
+R6979:6982 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R6959:6968 prosa.classic.model.schedule.global.basic.schedule Schedule service_at def
+R6978:6978 prosa.classic.model.schedule.global.basic.schedule <> t:94 var
+R6976:6976 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R6970:6974 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+binder 6935:6935 <> t:95
+binder 6935:6935 <> t:96
+R7029:7035 mathcomp.boot.fintype <> existsP thm
+R7077:7080 Corelib.ssr.ssrbool <> andP thm
+R7153:7156 Corelib.ssr.ssrbool <> andP thm
+R7183:7189 mathcomp.boot.fintype <> ltn_ord thm
+R7153:7156 Corelib.ssr.ssrbool <> andP thm
+R7183:7189 mathcomp.boot.fintype <> ltn_ord thm
+R7229:7233 Corelib.ssr.ssrbool <> negbT thm
+R7250:7260 mathcomp.boot.fintype <> negb_exists thm
+R7229:7233 Corelib.ssr.ssrbool <> negbT thm
+R7250:7260 mathcomp.boot.fintype <> negb_exists thm
+R7250:7260 mathcomp.boot.fintype <> negb_exists thm
+R7282:7288 mathcomp.boot.fintype <> forallP thm
+R7311:7324 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R7346:7357 mathcomp.boot.bigop <> big_nat_cond thm
+R7346:7357 mathcomp.boot.bigop <> big_nat_cond thm
+R7346:7357 mathcomp.boot.bigop <> big_nat_cond thm
+R7390:7396 mathcomp.boot.bigop <> eq_bigr thm
+binder 7403:7403 <> x:97
+R7454:7465 mathcomp.boot.bigop <> big_nat_cond thm
+R7467:7479 mathcomp.boot.bigop <> big_const_nat thm
+R7481:7489 mathcomp.boot.ssrnat <> iter_addn thm
+R7491:7495 mathcomp.boot.ssrnat <> mul0n thm
+R7497:7501 mathcomp.boot.ssrnat <> addn0 thm
+R7390:7396 mathcomp.boot.bigop <> eq_bigr thm
+binder 7403:7403 <> x:98
+R7390:7396 mathcomp.boot.bigop <> eq_bigr thm
+binder 7403:7403 <> x:99
+R7454:7465 mathcomp.boot.bigop <> big_nat_cond thm
+R7454:7465 mathcomp.boot.bigop <> big_nat_cond thm
+R7467:7479 mathcomp.boot.bigop <> big_const_nat thm
+R7467:7479 mathcomp.boot.bigop <> big_const_nat thm
+R7481:7489 mathcomp.boot.ssrnat <> iter_addn thm
+R7481:7489 mathcomp.boot.ssrnat <> iter_addn thm
+R7491:7495 mathcomp.boot.ssrnat <> mul0n thm
+R7491:7495 mathcomp.boot.ssrnat <> mul0n thm
+R7497:7501 mathcomp.boot.ssrnat <> addn0 thm
+R7497:7501 mathcomp.boot.ssrnat <> addn0 thm
+R7543:7547 Corelib.ssr.ssrbool <> andbT thm
+R7543:7547 Corelib.ssr.ssrbool <> andbT thm
+R7543:7547 Corelib.ssr.ssrbool <> andbT thm
+R7559:7562 Corelib.ssr.ssrbool <> andP thm
+R7599:7605 mathcomp.boot.fintype <> Ordinal constr
+R7599:7605 mathcomp.boot.fintype <> Ordinal constr
+R7650:7654 Corelib.ssr.ssrbool <> andTb thm
+R7656:7660 Corelib.ssr.ssrbool <> negbK thm
+R7675:7677 mathcomp.boot.eqtype <> eqP def
+R7650:7654 Corelib.ssr.ssrbool <> andTb thm
+R7650:7654 Corelib.ssr.ssrbool <> andTb thm
+R7656:7660 Corelib.ssr.ssrbool <> negbK thm
+R7656:7660 Corelib.ssr.ssrbool <> negbK thm
+R7675:7677 mathcomp.boot.eqtype <> eqP def
+prf 7746:7779 Schedule service_implies_cumulative_service
+binder 7797:7797 <> t:100
+binder 7799:7800 <> t1:101
+binder 7802:7803 <> t2:102
+R7828:7841 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7818:7821 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R7823:7825 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R7816:7817 prosa.classic.model.schedule.global.basic.schedule <> t1:101 var
+R7822:7822 prosa.classic.model.schedule.global.basic.schedule <> t:100 var
+R7822:7822 prosa.classic.model.schedule.global.basic.schedule <> t:100 var
+R7826:7827 prosa.classic.model.schedule.global.basic.schedule <> t2:102 var
+R7867:7880 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7862:7865 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R7842:7851 prosa.classic.model.schedule.global.basic.schedule Schedule service_at def
+R7861:7861 prosa.classic.model.schedule.global.basic.schedule <> t:100 var
+R7859:7859 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R7853:7857 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R7909:7912 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R7881:7894 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R7904:7905 prosa.classic.model.schedule.global.basic.schedule <> t1:101 var
+R7907:7908 prosa.classic.model.schedule.global.basic.schedule <> t2:102 var
+R7902:7902 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R7896:7900 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R7979:7992 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R8012:8020 mathcomp.boot.bigop <> bigD1_seq thm
+R8053:8066 mathcomp.boot.bigop <> mem_index_iota thm
+R8079:8087 mathcomp.boot.seq <> iota_uniq thm
+R8012:8020 mathcomp.boot.bigop <> bigD1_seq thm
+R8012:8020 mathcomp.boot.bigop <> bigD1_seq thm
+R8053:8066 mathcomp.boot.bigop <> mem_index_iota thm
+R8053:8066 mathcomp.boot.bigop <> mem_index_iota thm
+R8079:8087 mathcomp.boot.seq <> iota_uniq thm
+R8108:8111 mathcomp.boot.ssrnat <> lt0n thm
+R8114:8118 mathcomp.boot.ssrnat <> addn1 thm
+R8120:8124 mathcomp.boot.ssrnat <> addnC thm
+R8108:8111 mathcomp.boot.ssrnat <> lt0n thm
+R8108:8111 mathcomp.boot.ssrnat <> lt0n thm
+R8114:8118 mathcomp.boot.ssrnat <> addn1 thm
+R8114:8118 mathcomp.boot.ssrnat <> addn1 thm
+R8120:8124 mathcomp.boot.ssrnat <> addnC thm
+R8120:8124 mathcomp.boot.ssrnat <> addnC thm
+R8144:8150 mathcomp.boot.ssrnat <> leq_add thm
+R8170:8173 mathcomp.boot.ssrnat <> lt0n thm
+R8144:8150 mathcomp.boot.ssrnat <> leq_add thm
+R8170:8173 mathcomp.boot.ssrnat <> lt0n thm
+R8170:8173 mathcomp.boot.ssrnat <> lt0n thm
+R8203:8207 prosa.classic.model.schedule.global.basic.schedule Schedule.JobLemmas.Basic <> sec
+sec 8227:8240 Schedule.JobLemmas SequentialJobs
+var 8305:8321 Schedule.JobLemmas.SequentialJobs H_sequential_jobs
+R8324:8338 prosa.classic.model.schedule.global.basic.schedule Schedule sequential_jobs def
+R8340:8344 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+prf 8439:8457 Schedule service_at_most_one
+binder 8476:8476 <> t:105
+R8499:8502 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R8479:8488 prosa.classic.model.schedule.global.basic.schedule Schedule service_at def
+R8498:8498 prosa.classic.model.schedule.global.basic.schedule <> t:105 var
+R8496:8496 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R8490:8494 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R8534:8543 prosa.classic.model.schedule.global.basic.schedule Schedule service_at def
+R8546:8560 prosa.classic.model.schedule.global.basic.schedule Schedule sequential_jobs def
+R8591:8599 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled def
+R8607:8607 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R8601:8605 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R8630:8638 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled def
+R8591:8599 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled def
+R8607:8607 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R8601:8605 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R8686:8692 mathcomp.boot.fintype <> existsP thm
+R8731:8740 mathcomp.boot.bigop <> big_filter thm
+R8743:8751 mathcomp.boot.bigop <> bigD1_seq thm
+R8793:8820 mathcomp.boot.bigop <> deprecated_filter_index_enum thm
+R8822:8830 mathcomp.boot.fintype <> enum_uniq thm
+R8864:8873 mathcomp.boot.seq <> mem_filter thm
+R8882:8885 Corelib.ssr.ssrbool <> andP thm
+R8731:8740 mathcomp.boot.bigop <> big_filter thm
+R8731:8740 mathcomp.boot.bigop <> big_filter thm
+R8743:8751 mathcomp.boot.bigop <> bigD1_seq thm
+R8743:8751 mathcomp.boot.bigop <> bigD1_seq thm
+R8793:8820 mathcomp.boot.bigop <> deprecated_filter_index_enum thm
+R8793:8820 mathcomp.boot.bigop <> deprecated_filter_index_enum thm
+R8822:8830 mathcomp.boot.fintype <> enum_uniq thm
+R8822:8830 mathcomp.boot.fintype <> enum_uniq thm
+R8864:8873 mathcomp.boot.seq <> mem_filter thm
+R8864:8873 mathcomp.boot.seq <> mem_filter thm
+R8882:8885 Corelib.ssr.ssrbool <> andP thm
+R8914:8923 mathcomp.boot.bigop <> big_filter thm
+R8926:8937 mathcomp.boot.seq <> filter_predI thm
+R8939:8948 mathcomp.boot.bigop <> big_filter thm
+R8914:8923 mathcomp.boot.bigop <> big_filter thm
+R8914:8923 mathcomp.boot.bigop <> big_filter thm
+R8926:8937 mathcomp.boot.seq <> filter_predI thm
+R8926:8937 mathcomp.boot.seq <> filter_predI thm
+R8939:8948 mathcomp.boot.bigop <> big_filter thm
+R8939:8948 mathcomp.boot.bigop <> big_filter thm
+binder 8996:8998 <> cpu:106
+R8972:8978 mathcomp.boot.bigop <> eq_bigr thm
+R9039:9051 mathcomp.boot.bigop <> big_const_seq thm
+R9053:9061 mathcomp.boot.ssrnat <> iter_addn thm
+R9063:9067 mathcomp.boot.ssrnat <> mul0n thm
+R9071:9075 mathcomp.boot.ssrnat <> addn0 thm
+binder 8996:8998 <> cpu:107
+R8972:8978 mathcomp.boot.bigop <> eq_bigr thm
+binder 8996:8998 <> cpu:108
+R8972:8978 mathcomp.boot.bigop <> eq_bigr thm
+binder 8996:8998 <> cpu:109
+R8972:8978 mathcomp.boot.bigop <> eq_bigr thm
+R9039:9051 mathcomp.boot.bigop <> big_const_seq thm
+R9039:9051 mathcomp.boot.bigop <> big_const_seq thm
+R9053:9061 mathcomp.boot.ssrnat <> iter_addn thm
+R9053:9061 mathcomp.boot.ssrnat <> iter_addn thm
+R9063:9067 mathcomp.boot.ssrnat <> mul0n thm
+R9063:9067 mathcomp.boot.ssrnat <> mul0n thm
+R9071:9075 mathcomp.boot.ssrnat <> addn0 thm
+R9071:9075 mathcomp.boot.ssrnat <> addn0 thm
+R9071:9075 mathcomp.boot.ssrnat <> addn0 thm
+R9109:9112 Corelib.ssr.ssrbool <> andP thm
+R9116:9118 mathcomp.boot.eqtype <> eqP def
+R9125:9127 mathcomp.boot.eqtype <> eqP def
+R9216:9216 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R9187:9203 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.SequentialJobs.H_sequential_jobs var
+R9243:9245 mathcomp.boot.eqtype <> eqP def
+R9216:9216 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R9187:9203 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.SequentialJobs.H_sequential_jobs var
+R9243:9245 mathcomp.boot.eqtype <> eqP def
+R9284:9288 Corelib.ssr.ssrbool <> negbT thm
+R9308:9318 mathcomp.boot.fintype <> negb_exists thm
+R9284:9288 Corelib.ssr.ssrbool <> negbT thm
+R9308:9318 mathcomp.boot.fintype <> negb_exists thm
+R9308:9318 mathcomp.boot.fintype <> negb_exists thm
+R9356:9362 mathcomp.boot.fintype <> forallP thm
+R9389:9397 mathcomp.boot.bigop <> big_pred0 thm
+R9416:9421 Corelib.ssr.ssrbool <> negbTE thm
+R9389:9397 mathcomp.boot.bigop <> big_pred0 thm
+R9389:9397 mathcomp.boot.bigop <> big_pred0 thm
+R9416:9421 Corelib.ssr.ssrbool <> negbTE thm
+prf 9582:9608 Schedule cumulative_service_le_delta
+binder 9627:9627 <> t:110
+binder 9629:9633 <> delta:111
+R9672:9675 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R9636:9649 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R9659:9659 prosa.classic.model.schedule.global.basic.schedule <> t:110 var
+R9663:9665 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R9662:9662 prosa.classic.model.schedule.global.basic.schedule <> t:110 var
+R9666:9670 prosa.classic.model.schedule.global.basic.schedule <> delta:111 var
+R9657:9657 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R9651:9655 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R9676:9680 prosa.classic.model.schedule.global.basic.schedule <> delta:111 var
+R9711:9720 prosa.classic.model.schedule.global.basic.schedule Schedule service_at def
+R9723:9737 prosa.classic.model.schedule.global.basic.schedule Schedule sequential_jobs def
+R9839:9852 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R9863:9867 mathcomp.boot.ssrnat <> addn0 thm
+R9863:9867 mathcomp.boot.ssrnat <> addn0 thm
+R9863:9867 mathcomp.boot.ssrnat <> addn0 thm
+R9891:9897 mathcomp.boot.bigop <> big_geq thm
+R9891:9897 mathcomp.boot.bigop <> big_geq thm
+R9891:9897 mathcomp.boot.bigop <> big_geq thm
+R9937:9950 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R9981:9985 mathcomp.boot.ssrnat <> addn1 thm
+R9987:9991 mathcomp.boot.ssrnat <> addnA thm
+R9993:9997 mathcomp.boot.ssrnat <> addn1 thm
+R9999:10010 mathcomp.boot.bigop <> big_nat_recr thm
+R10027:10034 mathcomp.boot.ssrnat <> leq_addr thm
+R9981:9985 mathcomp.boot.ssrnat <> addn1 thm
+R9981:9985 mathcomp.boot.ssrnat <> addn1 thm
+R9987:9991 mathcomp.boot.ssrnat <> addnA thm
+R9987:9991 mathcomp.boot.ssrnat <> addnA thm
+R9993:9997 mathcomp.boot.ssrnat <> addn1 thm
+R9993:9997 mathcomp.boot.ssrnat <> addn1 thm
+R9999:10010 mathcomp.boot.bigop <> big_nat_recr thm
+R9999:10010 mathcomp.boot.bigop <> big_nat_recr thm
+R10027:10034 mathcomp.boot.ssrnat <> leq_addr thm
+R10053:10059 mathcomp.boot.ssrnat <> leq_add thm
+R10053:10059 mathcomp.boot.ssrnat <> leq_add thm
+R10105:10123 prosa.classic.model.schedule.global.basic.schedule Schedule service_at_most_one thm
+R10105:10123 prosa.classic.model.schedule.global.basic.schedule Schedule service_at_most_one thm
+R10164:10177 prosa.classic.model.schedule.global.basic.schedule Schedule.JobLemmas.SequentialJobs <> sec
+sec 10201:10210 Schedule.JobLemmas Completion
+var 10286:10301 Schedule.JobLemmas.Completion H_completed_jobs
+R10312:10338 prosa.classic.model.schedule.global.basic.schedule Schedule completed_jobs_dont_execute def
+R10349:10353 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R10340:10347 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.job_cost var
+prf 10446:10465 Schedule completion_monotonic
+binder 10484:10484 <> t:114
+binder 10486:10487 <> t':115
+R10507:10520 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R10501:10504 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R10500:10500 prosa.classic.model.schedule.global.basic.schedule <> t:114 var
+R10505:10506 prosa.classic.model.schedule.global.basic.schedule <> t':115 var
+R10549:10562 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R10521:10529 prosa.classic.model.schedule.global.basic.schedule Schedule completed def
+R10548:10548 prosa.classic.model.schedule.global.basic.schedule <> t:114 var
+R10546:10546 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R10540:10544 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R10531:10538 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.job_cost var
+R10563:10571 prosa.classic.model.schedule.global.basic.schedule Schedule completed def
+R10590:10591 prosa.classic.model.schedule.global.basic.schedule <> t':115 var
+R10588:10588 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R10582:10586 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R10573:10580 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.job_cost var
+R10622:10630 prosa.classic.model.schedule.global.basic.schedule Schedule completed def
+R10686:10692 prosa.classic.model.schedule.global.basic.schedule Schedule service def
+R10700:10700 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R10694:10698 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R10670:10678 mathcomp.boot.ssrnat <> leq_trans thm
+R10686:10692 prosa.classic.model.schedule.global.basic.schedule Schedule service def
+R10700:10700 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R10694:10698 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R10670:10678 mathcomp.boot.ssrnat <> leq_trans thm
+R10743:10749 prosa.classic.model.schedule.global.basic.schedule Schedule service def
+R10752:10765 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R10777:10780 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R10785:10795 mathcomp.boot.bigop <> big_cat_nat thm
+R10810:10817 mathcomp.boot.ssrnat <> leq_addr thm
+R10743:10749 prosa.classic.model.schedule.global.basic.schedule Schedule service def
+R10743:10749 prosa.classic.model.schedule.global.basic.schedule Schedule service def
+R10752:10765 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R10752:10765 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R10785:10795 mathcomp.boot.bigop <> big_cat_nat thm
+R10777:10780 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R10781:10781 prosa.classic.model.schedule.global.basic.schedule <> X:116 var
+R10785:10795 mathcomp.boot.bigop <> big_cat_nat thm
+R10810:10817 mathcomp.boot.ssrnat <> leq_addr thm
+R10810:10817 mathcomp.boot.ssrnat <> leq_addr thm
+prf 10893:10923 Schedule completed_implies_not_scheduled
+binder 10942:10942 <> t:117
+R10983:10996 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R10955:10963 prosa.classic.model.schedule.global.basic.schedule Schedule completed def
+R10982:10982 prosa.classic.model.schedule.global.basic.schedule <> t:117 var
+R10980:10980 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R10974:10978 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R10965:10972 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.job_cost var
+R10997:10999 Corelib.ssr.ssrbool <> ::bool_scope:'~~'_x not
+R11000:11008 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled def
+R11018:11018 prosa.classic.model.schedule.global.basic.schedule <> t:117 var
+R11016:11016 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R11010:11014 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R11092:11118 prosa.classic.model.schedule.global.basic.schedule Schedule completed_jobs_dont_execute def
+R11168:11171 Corelib.ssr.ssrbool <> negP thm
+R11168:11171 Corelib.ssr.ssrbool <> negP thm
+R11217:11217 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R11220:11222 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R11241:11246 mathcomp.boot.ssrnat <> leqNgt thm
+R11241:11246 mathcomp.boot.ssrnat <> leqNgt thm
+R11241:11246 mathcomp.boot.ssrnat <> leqNgt thm
+R11270:11273 Corelib.ssr.ssrbool <> negP thm
+R11307:11313 prosa.classic.model.schedule.global.basic.schedule Schedule service def
+R11316:11329 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R11340:11351 mathcomp.boot.bigop <> big_nat_recr thm
+R11360:11364 mathcomp.boot.ssrnat <> addn1 thm
+R11340:11351 mathcomp.boot.bigop <> big_nat_recr thm
+R11340:11351 mathcomp.boot.bigop <> big_nat_recr thm
+R11360:11364 mathcomp.boot.ssrnat <> addn1 thm
+R11360:11364 mathcomp.boot.ssrnat <> addn1 thm
+R11381:11387 mathcomp.boot.ssrnat <> leq_add thm
+R11381:11387 mathcomp.boot.ssrnat <> leq_add thm
+R11427:11430 mathcomp.boot.ssrnat <> lt0n thm
+R11433:11456 prosa.classic.model.schedule.global.basic.schedule Schedule not_scheduled_no_service thm
+R11458:11462 Corelib.ssr.ssrbool <> negbK thm
+R11427:11430 mathcomp.boot.ssrnat <> lt0n thm
+R11427:11430 mathcomp.boot.ssrnat <> lt0n thm
+R11433:11456 prosa.classic.model.schedule.global.basic.schedule Schedule not_scheduled_no_service thm
+R11433:11456 prosa.classic.model.schedule.global.basic.schedule Schedule not_scheduled_no_service thm
+R11458:11462 Corelib.ssr.ssrbool <> negbK thm
+R11458:11462 Corelib.ssr.ssrbool <> negbK thm
+prf 11583:11612 Schedule cumulative_service_le_job_cost
+binder 11631:11631 <> t:118
+binder 11633:11634 <> t':119
+R11674:11677 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R11647:11660 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R11670:11670 prosa.classic.model.schedule.global.basic.schedule <> t:118 var
+R11672:11673 prosa.classic.model.schedule.global.basic.schedule <> t':119 var
+R11668:11668 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R11662:11666 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R11678:11685 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.job_cost var
+R11687:11687 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R11718:11731 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R11806:11808 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R11806:11808 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R11842:11848 mathcomp.boot.bigop <> big_geq thm
+R11854:11857 mathcomp.boot.ssrnat <> ltnS thm
+R11866:11874 mathcomp.boot.ssrnat <> ltn_trans thm
+R11842:11848 mathcomp.boot.bigop <> big_geq thm
+R11842:11848 mathcomp.boot.bigop <> big_geq thm
+R11854:11857 mathcomp.boot.ssrnat <> ltnS thm
+R11854:11857 mathcomp.boot.ssrnat <> ltnS thm
+R11866:11874 mathcomp.boot.ssrnat <> ltn_trans thm
+R11947:11952 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R11954:11957 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R11960:11962 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R11965:11966 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+binder 11958:11959 <> t0:120
+binder 11958:11959 <> t0:121
+binder 11958:11959 <> t0:122
+R11967:11976 prosa.classic.model.schedule.global.basic.schedule Schedule service_at def
+R11986:11987 prosa.classic.model.schedule.global.basic.schedule <> t0:120 var
+R11984:11984 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R11978:11982 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R11912:11920 mathcomp.boot.ssrnat <> leq_trans thm
+R11947:11952 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R11954:11957 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R11960:11962 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R11965:11966 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+binder 11958:11959 <> t0:123
+binder 11958:11959 <> t0:124
+binder 11958:11959 <> t0:125
+R11967:11976 prosa.classic.model.schedule.global.basic.schedule Schedule service_at def
+R11986:11987 prosa.classic.model.schedule.global.basic.schedule <> t0:123 var
+R11984:11984 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R11978:11982 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R11912:11920 mathcomp.boot.ssrnat <> leq_trans thm
+R12043:12053 mathcomp.boot.bigop <> big_cat_nat thm
+R12101:12108 mathcomp.boot.ssrnat <> leq_addl thm
+R12132:12137 mathcomp.boot.ssrnat <> leqNgt thm
+R12139:12143 Corelib.ssr.ssrbool <> negbT thm
+R12043:12053 mathcomp.boot.bigop <> big_cat_nat thm
+R12043:12053 mathcomp.boot.bigop <> big_cat_nat thm
+R12043:12053 mathcomp.boot.bigop <> big_cat_nat thm
+R12043:12053 mathcomp.boot.bigop <> big_cat_nat thm
+R12101:12108 mathcomp.boot.ssrnat <> leq_addl thm
+R12132:12137 mathcomp.boot.ssrnat <> leqNgt thm
+R12132:12137 mathcomp.boot.ssrnat <> leqNgt thm
+R12139:12143 Corelib.ssr.ssrbool <> negbT thm
+R12139:12143 Corelib.ssr.ssrbool <> negbT thm
+R12176:12185 prosa.classic.model.schedule.global.basic.schedule Schedule.JobLemmas.Completion <> sec
+sec 12201:12207 Schedule.JobLemmas Arrival
+var 12281:12298 Schedule.JobLemmas.Arrival H_jobs_must_arrive
+R12309:12335 prosa.classic.model.schedule.global.basic.schedule Schedule jobs_must_arrive_to_execute def
+R12349:12353 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R12337:12347 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.job_arrival var
+prf 12454:12484 Schedule service_before_job_arrival_zero
+binder 12503:12503 <> t:128
+R12533:12546 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R12517:12519 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R12516:12516 prosa.classic.model.schedule.global.basic.schedule <> t:128 var
+R12520:12530 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.job_arrival var
+R12532:12532 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R12567:12569 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12547:12556 prosa.classic.model.schedule.global.basic.schedule Schedule service_at def
+R12566:12566 prosa.classic.model.schedule.global.basic.schedule <> t:128 var
+R12564:12564 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R12558:12562 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R12679:12679 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R12679:12679 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R12717:12725 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled def
+R12733:12733 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R12727:12731 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R12772:12782 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence has_arrived def
+R12796:12796 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R12784:12794 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.job_arrival var
+R12699:12704 Corelib.ssr.ssrbool <> contra thm
+R12836:12841 mathcomp.boot.ssrnat <> ltnNge thm
+R12717:12725 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled def
+R12733:12733 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R12727:12731 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R12772:12782 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence has_arrived def
+R12796:12796 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R12784:12794 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.job_arrival var
+R12699:12704 Corelib.ssr.ssrbool <> contra thm
+R12836:12841 mathcomp.boot.ssrnat <> ltnNge thm
+R12836:12841 mathcomp.boot.ssrnat <> ltnNge thm
+R12858:12860 mathcomp.boot.eqtype <> eqP def
+R12872:12876 mathcomp.boot.ssrnat <> leqn0 thm
+R12886:12895 prosa.classic.model.schedule.global.basic.schedule Schedule service_at def
+R12858:12860 mathcomp.boot.eqtype <> eqP def
+R12872:12876 mathcomp.boot.ssrnat <> leqn0 thm
+R12872:12876 mathcomp.boot.ssrnat <> leqn0 thm
+R12914:12922 mathcomp.boot.bigop <> big_pred0 thm
+R12914:12922 mathcomp.boot.bigop <> big_pred0 thm
+R12914:12922 mathcomp.boot.bigop <> big_pred0 thm
+R12959:12964 Corelib.ssr.ssrbool <> negbTE thm
+R12959:12964 Corelib.ssr.ssrbool <> negbTE thm
+R12997:13007 mathcomp.boot.fintype <> negb_exists thm
+R12997:13007 mathcomp.boot.fintype <> negb_exists thm
+R12997:13007 mathcomp.boot.fintype <> negb_exists thm
+R13019:13025 mathcomp.boot.fintype <> forallP thm
+prf 13142:13183 Schedule cumulative_service_before_job_arrival_zero
+binder 13202:13203 <> t1:129
+binder 13205:13206 <> t2:130
+R13238:13251 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R13221:13224 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R13219:13220 prosa.classic.model.schedule.global.basic.schedule <> t2:130 var
+R13225:13235 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.job_arrival var
+R13237:13237 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R13292:13294 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13252:13257 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R13260:13263 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R13265:13267 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R13270:13271 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R13258:13259 prosa.classic.model.schedule.global.basic.schedule <> t1:129 var
+R13268:13269 prosa.classic.model.schedule.global.basic.schedule <> t2:130 var
+binder 13264:13264 <> i:131
+binder 13264:13264 <> i:132
+binder 13264:13264 <> i:133
+R13272:13281 prosa.classic.model.schedule.global.basic.schedule Schedule service_at def
+R13291:13291 prosa.classic.model.schedule.global.basic.schedule <> i:131 var
+R13289:13289 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R13283:13287 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R13342:13344 mathcomp.boot.eqtype <> eqP def
+R13356:13360 mathcomp.boot.ssrnat <> leqn0 thm
+R13342:13344 mathcomp.boot.eqtype <> eqP def
+R13356:13360 mathcomp.boot.ssrnat <> leqn0 thm
+R13356:13360 mathcomp.boot.ssrnat <> leqn0 thm
+R13398:13403 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R13406:13409 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R13411:13413 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R13416:13417 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+binder 13410:13410 <> i:134
+binder 13410:13410 <> i:135
+binder 13410:13410 <> i:136
+R13377:13385 mathcomp.boot.ssrnat <> leq_trans thm
+R13448:13460 mathcomp.boot.bigop <> big_const_nat thm
+R13462:13470 mathcomp.boot.ssrnat <> iter_addn thm
+R13472:13476 mathcomp.boot.ssrnat <> mul0n thm
+R13478:13482 mathcomp.boot.ssrnat <> addn0 thm
+R13398:13403 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R13406:13409 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R13411:13413 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R13416:13417 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+binder 13410:13410 <> i:137
+binder 13410:13410 <> i:138
+binder 13410:13410 <> i:139
+R13377:13385 mathcomp.boot.ssrnat <> leq_trans thm
+R13448:13460 mathcomp.boot.bigop <> big_const_nat thm
+R13448:13460 mathcomp.boot.bigop <> big_const_nat thm
+R13462:13470 mathcomp.boot.ssrnat <> iter_addn thm
+R13462:13470 mathcomp.boot.ssrnat <> iter_addn thm
+R13472:13476 mathcomp.boot.ssrnat <> mul0n thm
+R13472:13476 mathcomp.boot.ssrnat <> mul0n thm
+R13478:13482 mathcomp.boot.ssrnat <> addn0 thm
+R13478:13482 mathcomp.boot.ssrnat <> addn0 thm
+R13501:13512 mathcomp.boot.bigop <> big_nat_cond thm
+R13515:13520 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R13522:13525 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R13527:13529 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R13531:13532 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+binder 13526:13526 <> pat:140
+R13535:13546 mathcomp.boot.bigop <> big_nat_cond thm
+R13501:13512 mathcomp.boot.bigop <> big_nat_cond thm
+R13501:13512 mathcomp.boot.bigop <> big_nat_cond thm
+R13535:13546 mathcomp.boot.bigop <> big_nat_cond thm
+R13515:13520 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R13522:13525 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R13527:13529 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R13531:13532 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+binder 13526:13526 <> pat:141
+R13515:13520 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R13522:13525 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R13527:13529 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R13531:13532 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+binder 13526:13526 <> pat:142
+R13535:13546 mathcomp.boot.bigop <> big_nat_cond thm
+R13563:13569 mathcomp.boot.bigop <> leq_sum thm
+R13589:13593 Corelib.ssr.ssrbool <> andbT thm
+R13563:13569 mathcomp.boot.bigop <> leq_sum thm
+R13589:13593 Corelib.ssr.ssrbool <> andbT thm
+R13589:13593 Corelib.ssr.ssrbool <> andbT thm
+R13605:13608 Corelib.ssr.ssrbool <> andP thm
+R13636:13666 prosa.classic.model.schedule.global.basic.schedule Schedule service_before_job_arrival_zero thm
+R13636:13666 prosa.classic.model.schedule.global.basic.schedule Schedule service_before_job_arrival_zero thm
+R13636:13666 prosa.classic.model.schedule.global.basic.schedule Schedule service_before_job_arrival_zero thm
+R13700:13708 mathcomp.boot.ssrnat <> leq_trans thm
+R13700:13708 mathcomp.boot.ssrnat <> leq_trans thm
+prf 13844:13883 Schedule service_before_arrival_eq_service_during
+binder 13902:13903 <> t0:143
+binder 13905:13905 <> t:144
+R13937:13950 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R13920:13923 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R13918:13919 prosa.classic.model.schedule.global.basic.schedule <> t0:143 var
+R13924:13934 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.job_arrival var
+R13936:13936 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R14006:14018 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13951:13956 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R13959:13962 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R13964:13966 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R13984:13985 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R13957:13958 prosa.classic.model.schedule.global.basic.schedule <> t0:143 var
+R13980:13982 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R13967:13977 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.job_arrival var
+R13979:13979 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R13983:13983 prosa.classic.model.schedule.global.basic.schedule <> t:144 var
+binder 13963:13963 <> t:145
+binder 13963:13963 <> t:146
+binder 13963:13963 <> t:147
+R13986:13995 prosa.classic.model.schedule.global.basic.schedule Schedule service_at def
+R14005:14005 prosa.classic.model.schedule.global.basic.schedule <> t:145 var
+R14003:14003 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R13997:14001 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R14019:14024 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R14038:14041 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R14043:14045 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R14063:14064 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R14025:14035 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.job_arrival var
+R14037:14037 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R14059:14061 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R14046:14056 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.job_arrival var
+R14058:14058 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R14062:14062 prosa.classic.model.schedule.global.basic.schedule <> t:144 var
+binder 14042:14042 <> t:148
+binder 14042:14042 <> t:149
+binder 14042:14042 <> t:150
+R14065:14074 prosa.classic.model.schedule.global.basic.schedule Schedule service_at def
+R14084:14084 prosa.classic.model.schedule.global.basic.schedule <> t:148 var
+R14082:14082 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R14076:14080 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R14158:14168 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.job_arrival var
+R14170:14170 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R14135:14145 mathcomp.boot.bigop <> big_cat_nat thm
+R14205:14212 mathcomp.boot.ssrnat <> leq_addr thm
+R14158:14168 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.job_arrival var
+R14170:14170 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R14135:14145 mathcomp.boot.bigop <> big_cat_nat thm
+R14158:14168 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.job_arrival var
+R14170:14170 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R14135:14145 mathcomp.boot.bigop <> big_cat_nat thm
+R14158:14168 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.job_arrival var
+R14170:14170 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R14135:14145 mathcomp.boot.bigop <> big_cat_nat thm
+R14158:14168 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.job_arrival var
+R14170:14170 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R14135:14145 mathcomp.boot.bigop <> big_cat_nat thm
+R14205:14212 mathcomp.boot.ssrnat <> leq_addr thm
+R14238:14279 prosa.classic.model.schedule.global.basic.schedule Schedule cumulative_service_before_job_arrival_zero thm
+R14291:14295 mathcomp.boot.ssrnat <> add0n thm
+R14305:14309 mathcomp.boot.ssrnat <> leqnn thm
+R14238:14279 prosa.classic.model.schedule.global.basic.schedule Schedule cumulative_service_before_job_arrival_zero thm
+R14238:14279 prosa.classic.model.schedule.global.basic.schedule Schedule cumulative_service_before_job_arrival_zero thm
+R14291:14295 mathcomp.boot.ssrnat <> add0n thm
+R14291:14295 mathcomp.boot.ssrnat <> add0n thm
+R14305:14309 mathcomp.boot.ssrnat <> leqnn thm
+R14339:14345 prosa.classic.model.schedule.global.basic.schedule Schedule.JobLemmas.Arrival <> sec
+sec 14361:14367 Schedule.JobLemmas Pending
+var 14441:14458 Schedule.JobLemmas.Pending H_jobs_must_arrive
+R14469:14495 prosa.classic.model.schedule.global.basic.schedule Schedule jobs_must_arrive_to_execute def
+R14509:14513 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R14497:14507 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.job_arrival var
+var 14594:14609 Schedule.JobLemmas.Pending H_completed_jobs
+R14620:14646 prosa.classic.model.schedule.global.basic.schedule Schedule completed_jobs_dont_execute def
+R14657:14661 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R14648:14655 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.job_cost var
+prf 14738:14762 Schedule scheduled_implies_pending
+binder 14780:14780 <> t:155
+R14812:14825 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R14793:14801 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled def
+R14811:14811 prosa.classic.model.schedule.global.basic.schedule <> t:155 var
+R14809:14809 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R14803:14807 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R14826:14832 prosa.classic.model.schedule.global.basic.schedule Schedule pending def
+R14863:14863 prosa.classic.model.schedule.global.basic.schedule <> t:155 var
+R14861:14861 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R14855:14859 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.sched var
+R14846:14853 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.job_cost var
+R14834:14844 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.job_arrival var
+R14984:15010 prosa.classic.model.schedule.global.basic.schedule Schedule jobs_must_arrive_to_execute def
+R15013:15039 prosa.classic.model.schedule.global.basic.schedule Schedule completed_jobs_dont_execute def
+R15086:15092 prosa.classic.model.schedule.global.basic.schedule Schedule pending def
+R15101:15104 Corelib.ssr.ssrbool <> andP thm
+R15101:15104 Corelib.ssr.ssrbool <> andP thm
+R15151:15154 Corelib.ssr.ssrbool <> negP thm
+R15164:15166 Corelib.Init.Logic <> not def
+R15151:15154 Corelib.ssr.ssrbool <> negP thm
+R15211:15211 prosa.classic.model.schedule.global.basic.schedule <> Schedule.JobLemmas.j var
+R15214:15216 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R15235:15240 mathcomp.boot.ssrnat <> leqNgt thm
+R15235:15240 mathcomp.boot.ssrnat <> leqNgt thm
+R15235:15240 mathcomp.boot.ssrnat <> leqNgt thm
+R15264:15267 Corelib.ssr.ssrbool <> negP thm
+R15300:15306 prosa.classic.model.schedule.global.basic.schedule Schedule service def
+R15318:15322 mathcomp.boot.ssrnat <> addn1 thm
+R15324:15335 mathcomp.boot.bigop <> big_nat_recr thm
+R15318:15322 mathcomp.boot.ssrnat <> addn1 thm
+R15318:15322 mathcomp.boot.ssrnat <> addn1 thm
+R15324:15335 mathcomp.boot.bigop <> big_nat_recr thm
+R15324:15335 mathcomp.boot.bigop <> big_nat_recr thm
+R15358:15364 mathcomp.boot.ssrnat <> leq_add thm
+R15358:15364 mathcomp.boot.ssrnat <> leq_add thm
+R15398:15401 mathcomp.boot.ssrnat <> lt0n thm
+R15410:15412 mathcomp.boot.eqtype <> eqP def
+R15398:15401 mathcomp.boot.ssrnat <> lt0n thm
+R15398:15401 mathcomp.boot.ssrnat <> lt0n thm
+R15410:15412 mathcomp.boot.eqtype <> eqP def
+R15429:15431 mathcomp.boot.eqtype <> eqP def
+R15458:15481 prosa.classic.model.schedule.global.basic.schedule Schedule not_scheduled_no_service thm
+R15458:15481 prosa.classic.model.schedule.global.basic.schedule Schedule not_scheduled_no_service thm
+R15458:15481 prosa.classic.model.schedule.global.basic.schedule Schedule not_scheduled_no_service thm
+R15550:15556 prosa.classic.model.schedule.global.basic.schedule Schedule.JobLemmas.Pending <> sec
+R15570:15578 prosa.classic.model.schedule.global.basic.schedule Schedule.JobLemmas <> sec
+sec 15687:15705 Schedule ScheduledJobsLemmas
+var  15722:15724 Schedule.ScheduledJobsLemmas Job
+R15727:15732 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  15798:15805 Schedule.ScheduledJobsLemmas num_cpus
+R15808:15810 Corelib.Init.Datatypes <> nat ind
+var 15827:15831 Schedule.ScheduledJobsLemmas sched
+R15834:15841 prosa.classic.model.schedule.global.basic.schedule Schedule schedule def
+R15847:15854 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobsLemmas.num_cpus var
+R15843:15845 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobsLemmas.Job var
+sec 15870:15879 Schedule.ScheduledJobsLemmas Membership
+prf 15971:16001 Schedule mem_scheduled_jobs_eq_scheduled
+binder 16020:16020 <> j:160
+binder 16022:16022 <> t:161
+R16066:16068 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16036:16040 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R16035:16035 prosa.classic.model.schedule.global.basic.schedule <> j:160 var
+R16041:16057 prosa.classic.model.schedule.global.basic.schedule Schedule jobs_scheduled_at def
+R16065:16065 prosa.classic.model.schedule.global.basic.schedule <> t:161 var
+R16059:16063 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobsLemmas.sched var
+R16069:16077 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled def
+R16087:16087 prosa.classic.model.schedule.global.basic.schedule <> t:161 var
+R16085:16085 prosa.classic.model.schedule.global.basic.schedule <> j:160 var
+R16079:16083 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobsLemmas.sched var
+R16118:16134 prosa.classic.model.schedule.global.basic.schedule Schedule jobs_scheduled_at def
+R16137:16145 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled def
+R16148:16159 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled_on def
+R16188:16190 Corelib.ssr.ssrbool <> idP thm
+R16192:16194 Corelib.ssr.ssrbool <> idP thm
+R16188:16190 Corelib.ssr.ssrbool <> idP thm
+R16192:16194 Corelib.ssr.ssrbool <> idP thm
+R16244:16264 prosa.classic.util.bigcat <> mem_bigcat_ord_exists thm
+R16244:16264 prosa.classic.util.bigcat <> mem_bigcat_ord_exists thm
+R16294:16300 mathcomp.boot.fintype <> existsP thm
+R16294:16300 mathcomp.boot.fintype <> existsP thm
+R16333:16337 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobsLemmas.sched var
+R16333:16337 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobsLemmas.sched var
+R16380:16387 mathcomp.boot.seq <> mem_seq1 thm
+R16380:16387 mathcomp.boot.seq <> mem_seq1 thm
+R16380:16387 mathcomp.boot.seq <> mem_seq1 thm
+R16409:16411 mathcomp.boot.eqtype <> eqP def
+R16463:16469 mathcomp.boot.fintype <> existsP thm
+R16517:16530 prosa.classic.util.bigcat <> mem_bigcat_ord thm
+R16562:16568 mathcomp.boot.fintype <> ltn_ord thm
+R16517:16530 prosa.classic.util.bigcat <> mem_bigcat_ord thm
+R16562:16568 mathcomp.boot.fintype <> ltn_ord thm
+R16628:16635 mathcomp.boot.seq <> mem_seq1 thm
+R16637:16643 mathcomp.boot.eqtype <> eq_refl thm
+R16600:16602 mathcomp.boot.eqtype <> eqP def
+R16628:16635 mathcomp.boot.seq <> mem_seq1 thm
+R16628:16635 mathcomp.boot.seq <> mem_seq1 thm
+R16637:16643 mathcomp.boot.eqtype <> eq_refl thm
+R16637:16643 mathcomp.boot.eqtype <> eq_refl thm
+R16676:16685 prosa.classic.model.schedule.global.basic.schedule Schedule.ScheduledJobsLemmas.Membership <> sec
+sec 16705:16714 Schedule.ScheduledJobsLemmas Uniqueness
+var 16781:16797 Schedule.ScheduledJobsLemmas.Uniqueness H_sequential_jobs
+R16801:16815 prosa.classic.model.schedule.global.basic.schedule Schedule sequential_jobs def
+R16817:16821 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobsLemmas.sched var
+prf 16915:16933 Schedule scheduled_jobs_uniq
+binder 16952:16952 <> t:164
+R16965:16968 mathcomp.boot.seq <> uniq def
+R16971:16987 prosa.classic.model.schedule.global.basic.schedule Schedule jobs_scheduled_at def
+R16995:16995 prosa.classic.model.schedule.global.basic.schedule <> t:164 var
+R16989:16993 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobsLemmas.sched var
+R17087:17101 prosa.classic.model.schedule.global.basic.schedule Schedule sequential_jobs def
+R17160:17176 prosa.classic.model.schedule.global.basic.schedule Schedule jobs_scheduled_at def
+R17224:17231 mathcomp.boot.bigop <> big_ord0 thm
+R17197:17204 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobsLemmas.num_cpus var
+R17224:17231 mathcomp.boot.bigop <> big_ord0 thm
+R17224:17231 mathcomp.boot.bigop <> big_ord0 thm
+R17263:17274 mathcomp.boot.bigop <> big_ord_recr thm
+R17276:17283 mathcomp.boot.seq <> cat_uniq thm
+R17292:17295 Corelib.ssr.ssrbool <> andP thm
+R17263:17274 mathcomp.boot.bigop <> big_ord_recr thm
+R17263:17274 mathcomp.boot.bigop <> big_ord_recr thm
+R17276:17283 mathcomp.boot.seq <> cat_uniq thm
+R17276:17283 mathcomp.boot.seq <> cat_uniq thm
+R17292:17295 Corelib.ssr.ssrbool <> andP thm
+R17335:17349 prosa.classic.util.bigcat <> bigcat_ord_uniq thm
+R17391:17403 prosa.classic.util.notation <> make_sequence def
+R17335:17349 prosa.classic.util.bigcat <> bigcat_ord_uniq thm
+R17455:17467 prosa.classic.util.notation <> make_sequence def
+R17544:17551 mathcomp.boot.seq <> mem_seq1 thm
+R17569:17576 mathcomp.boot.seq <> mem_seq1 thm
+R17544:17551 mathcomp.boot.seq <> mem_seq1 thm
+R17544:17551 mathcomp.boot.seq <> mem_seq1 thm
+R17569:17576 mathcomp.boot.seq <> mem_seq1 thm
+R17569:17576 mathcomp.boot.seq <> mem_seq1 thm
+R17616:17618 mathcomp.boot.eqtype <> eqP def
+R17625:17627 mathcomp.boot.eqtype <> eqP def
+R17686:17694 mathcomp.boot.fintype <> widen_ord def
+R17697:17702 mathcomp.boot.ssrnat <> leqnSn thm
+R17739:17747 mathcomp.boot.fintype <> widen_ord def
+R17750:17755 mathcomp.boot.ssrnat <> leqnSn thm
+R17686:17694 mathcomp.boot.fintype <> widen_ord def
+R17697:17702 mathcomp.boot.ssrnat <> leqnSn thm
+R17739:17747 mathcomp.boot.fintype <> widen_ord def
+R17750:17755 mathcomp.boot.ssrnat <> leqnSn thm
+R17821:17827 mathcomp.boot.fintype <> ord_inj thm
+R17821:17827 mathcomp.boot.fintype <> ord_inj thm
+R17858:17861 Corelib.ssr.ssrbool <> andP thm
+R17886:17898 prosa.classic.util.notation <> make_sequence def
+R17911:17915 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobsLemmas.sched var
+R17917:17923 mathcomp.boot.fintype <> ord_max def
+R17858:17861 Corelib.ssr.ssrbool <> andP thm
+R17911:17915 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobsLemmas.sched var
+R17917:17923 mathcomp.boot.fintype <> ord_max def
+R17960:17968 mathcomp.boot.seq <> all_predC thm
+R17977:17980 mathcomp.boot.seq <> allP thm
+R17990:17994 Corelib.ssr.ssrbool <> predC def
+R17960:17968 mathcomp.boot.seq <> all_predC thm
+R17960:17968 mathcomp.boot.seq <> all_predC thm
+R17977:17980 mathcomp.boot.seq <> allP thm
+R18049:18061 prosa.classic.util.notation <> make_sequence def
+R18093:18097 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobsLemmas.sched var
+R18099:18105 mathcomp.boot.fintype <> ord_max def
+R18151:18156 mathcomp.boot.seq <> in_nil thm
+R18093:18097 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobsLemmas.sched var
+R18099:18105 mathcomp.boot.fintype <> ord_max def
+R18151:18156 mathcomp.boot.seq <> in_nil thm
+R18151:18156 mathcomp.boot.seq <> in_nil thm
+R18184:18187 Corelib.ssr.ssrbool <> negP thm
+R18197:18199 Corelib.Init.Logic <> not def
+R18184:18187 Corelib.ssr.ssrbool <> negP thm
+R18236:18256 prosa.classic.util.bigcat <> mem_bigcat_ord_exists thm
+R18328:18340 prosa.classic.util.notation <> make_sequence def
+R18412:18419 mathcomp.boot.seq <> mem_seq1 thm
+R18437:18444 mathcomp.boot.seq <> mem_seq1 thm
+R18412:18419 mathcomp.boot.seq <> mem_seq1 thm
+R18412:18419 mathcomp.boot.seq <> mem_seq1 thm
+R18437:18444 mathcomp.boot.seq <> mem_seq1 thm
+R18437:18444 mathcomp.boot.seq <> mem_seq1 thm
+R18484:18486 mathcomp.boot.eqtype <> eqP def
+R18493:18495 mathcomp.boot.eqtype <> eqP def
+R18553:18559 mathcomp.boot.fintype <> ord_max def
+R18562:18570 mathcomp.boot.fintype <> widen_ord def
+R18573:18578 mathcomp.boot.ssrnat <> leqnSn thm
+R18553:18559 mathcomp.boot.fintype <> ord_max def
+R18562:18570 mathcomp.boot.fintype <> widen_ord def
+R18573:18578 mathcomp.boot.ssrnat <> leqnSn thm
+R18732:18735 mathcomp.boot.ssrnat <> ltnn thm
+R18732:18735 mathcomp.boot.ssrnat <> ltnn thm
+R18732:18735 mathcomp.boot.ssrnat <> ltnn thm
+R18786:18795 prosa.classic.model.schedule.global.basic.schedule Schedule.ScheduledJobsLemmas.Uniqueness <> sec
+sec 18811:18822 Schedule.ScheduledJobsLemmas NumberOfJobs
+prf 18917:18946 Schedule num_scheduled_jobs_le_num_cpus
+binder 18965:18965 <> t:165
+R19010:19013 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R18978:18981 mathcomp.boot.seq <> size def
+R18984:19000 prosa.classic.model.schedule.global.basic.schedule Schedule jobs_scheduled_at def
+R19008:19008 prosa.classic.model.schedule.global.basic.schedule <> t:165 var
+R19002:19006 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobsLemmas.sched var
+R19014:19021 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobsLemmas.num_cpus var
+R19070:19086 prosa.classic.model.schedule.global.basic.schedule Schedule jobs_scheduled_at def
+R19133:19140 mathcomp.boot.bigop <> big_ord0 thm
+R19106:19113 prosa.classic.model.schedule.global.basic.schedule <> Schedule.ScheduledJobsLemmas.num_cpus var
+R19133:19140 mathcomp.boot.bigop <> big_ord0 thm
+R19133:19140 mathcomp.boot.bigop <> big_ord0 thm
+R19174:19174 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R19176:19178 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R19157:19165 mathcomp.boot.ssrnat <> leq_trans thm
+R19198:19202 mathcomp.boot.ssrnat <> mul1n thm
+R19174:19174 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R19176:19178 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R19157:19165 mathcomp.boot.ssrnat <> leq_trans thm
+R19198:19202 mathcomp.boot.ssrnat <> mul1n thm
+R19198:19202 mathcomp.boot.ssrnat <> mul1n thm
+R19219:19237 prosa.classic.util.bigcat <> size_bigcat_ord_max thm
+R19219:19237 prosa.classic.util.bigcat <> size_bigcat_ord_max thm
+R19263:19275 prosa.classic.util.notation <> make_sequence def
+R19304:19315 prosa.classic.model.schedule.global.basic.schedule Schedule.ScheduledJobsLemmas.NumberOfJobs <> sec
+R19329:19347 prosa.classic.model.schedule.global.basic.schedule Schedule.ScheduledJobsLemmas <> sec
+R19355:19362 prosa.classic.model.schedule.global.basic.schedule Schedule <> mod
+mod 19431:19452 <> ScheduleOfSporadicTask
+R19465:19476 prosa.classic.model.arrival.basic.task SporadicTask <> mod
+R19478:19480 prosa.classic.model.arrival.basic.job Job <> mod
+R19492:19499 prosa.classic.model.schedule.global.basic.schedule Schedule <> mod
+sec 19513:19525 ScheduleOfSporadicTask ScheduledJobs
+var  19542:19554 ScheduleOfSporadicTask.ScheduledJobs sporadic_task
+R19557:19562 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  19579:19581 ScheduleOfSporadicTask.ScheduledJobs Job
+R19584:19589 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 19606:19613 ScheduleOfSporadicTask.ScheduledJobs job_task
+R19619:19622 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R19616:19618 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.ScheduledJobs.Job var
+R19623:19635 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.ScheduledJobs.sporadic_task var
+var  19704:19711 ScheduleOfSporadicTask.ScheduledJobs num_cpus
+R19714:19716 Corelib.Init.Datatypes <> nat ind
+var 19733:19737 ScheduleOfSporadicTask.ScheduledJobs sched
+R19740:19747 prosa.classic.model.schedule.global.basic.schedule Schedule schedule def
+R19753:19760 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.ScheduledJobs.num_cpus var
+R19749:19751 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.ScheduledJobs.Job var
+var 19808:19810 ScheduleOfSporadicTask.ScheduledJobs tsk
+R19813:19825 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.ScheduledJobs.sporadic_task var
+def 19926:19942 ScheduleOfSporadicTask task_scheduled_on
+R19950:19958 prosa.classic.model.schedule.global.basic.schedule Schedule processor def
+R19960:19967 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.ScheduledJobs.num_cpus var
+binder 19945:19947 <> cpu:175
+R19974:19977 prosa.classic.model.time Time time def
+binder 19971:19971 <> t:176
+R19993:19997 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.ScheduledJobs.sched var
+R19999:20001 prosa.classic.model.schedule.global.basic.schedule <> cpu:175 var
+R20003:20003 prosa.classic.model.schedule.global.basic.schedule <> t:176 var
+R20009:20012 Corelib.Init.Datatypes <> Some constr
+R20040:20043 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R20030:20037 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.ScheduledJobs.job_task var
+R20044:20046 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.ScheduledJobs.tsk var
+R20060:20064 Corelib.Init.Datatypes <> false constr
+def 20159:20175 ScheduleOfSporadicTask task_is_scheduled
+R20181:20184 prosa.classic.model.time Time time def
+binder 20178:20178 <> t:177
+R20198:20205 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+R20234:20234 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_x_']' not
+binder 20206:20208 <> cpu:178
+R20209:20210 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R20211:20227 prosa.classic.model.schedule.global.basic.schedule ScheduleOfSporadicTask task_scheduled_on def
+R20229:20231 prosa.classic.model.schedule.global.basic.schedule <> cpu:178 var
+R20233:20233 prosa.classic.model.schedule.global.basic.schedule <> t:177 var
+binder 20206:20208 <> cpu:179
+binder 20206:20208 <> cpu:180
+def 20326:20355 ScheduleOfSporadicTask jobs_of_task_scheduled_between
+R20365:20368 prosa.classic.model.time Time time def
+binder 20358:20359 <> t1:181
+binder 20361:20362 <> t2:182
+R20380:20385 mathcomp.boot.seq <> filter def
+R20430:20451 prosa.classic.model.schedule.global.basic.schedule Schedule jobs_scheduled_between def
+R20459:20460 prosa.classic.model.schedule.global.basic.schedule <> t1:181 var
+R20462:20463 prosa.classic.model.schedule.global.basic.schedule <> t2:182 var
+R20453:20457 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.ScheduledJobs.sched var
+binder 20392:20392 <> j:183
+R20407:20410 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R20397:20404 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.ScheduledJobs.job_task var
+R20406:20406 prosa.classic.model.schedule.global.basic.schedule <> j:183 var
+R20411:20413 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.ScheduledJobs.tsk var
+R20478:20490 prosa.classic.model.schedule.global.basic.schedule ScheduleOfSporadicTask.ScheduledJobs <> sec
+sec 20506:20523 ScheduleOfSporadicTask ScheduleProperties
+var  20540:20552 ScheduleOfSporadicTask.ScheduleProperties sporadic_task
+R20555:20560 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  20577:20579 ScheduleOfSporadicTask.ScheduleProperties Job
+R20582:20587 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 20608:20615 ScheduleOfSporadicTask.ScheduleProperties job_cost
+R20621:20624 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R20618:20620 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.ScheduleProperties.Job var
+R20625:20628 prosa.classic.model.time Time time def
+var 20644:20651 ScheduleOfSporadicTask.ScheduleProperties job_task
+R20657:20660 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R20654:20656 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.ScheduleProperties.Job var
+R20661:20673 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.ScheduleProperties.sporadic_task var
+var  20738:20745 ScheduleOfSporadicTask.ScheduleProperties num_cpus
+R20748:20750 Corelib.Init.Datatypes <> nat ind
+var 20767:20771 ScheduleOfSporadicTask.ScheduleProperties sched
+R20774:20781 prosa.classic.model.schedule.global.basic.schedule Schedule schedule def
+R20787:20794 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.ScheduleProperties.num_cpus var
+R20783:20785 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.ScheduleProperties.Job var
+def 20862:20903 ScheduleOfSporadicTask jobs_of_same_task_dont_execute_in_parallel
+binder 20921:20921 <> j:193
+binder 20923:20924 <> j':194
+binder 20926:20926 <> t:195
+R20961:20972 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R20947:20949 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20937:20944 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.ScheduleProperties.job_task var
+R20946:20946 prosa.classic.model.schedule.global.basic.schedule <> j:193 var
+R20950:20957 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.ScheduleProperties.job_task var
+R20959:20960 prosa.classic.model.schedule.global.basic.schedule <> j':194 var
+R20992:21003 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R20973:20981 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled def
+R20991:20991 prosa.classic.model.schedule.global.basic.schedule <> t:195 var
+R20989:20989 prosa.classic.model.schedule.global.basic.schedule <> j:193 var
+R20983:20987 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.ScheduleProperties.sched var
+R21024:21035 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R21004:21012 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled def
+R21023:21023 prosa.classic.model.schedule.global.basic.schedule <> t:195 var
+R21020:21021 prosa.classic.model.schedule.global.basic.schedule <> j':194 var
+R21014:21018 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.ScheduleProperties.sched var
+R21037:21039 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21036:21036 prosa.classic.model.schedule.global.basic.schedule <> j:193 var
+R21040:21041 prosa.classic.model.schedule.global.basic.schedule <> j':194 var
+R21055:21072 prosa.classic.model.schedule.global.basic.schedule ScheduleOfSporadicTask.ScheduleProperties <> sec
+sec 21086:21096 ScheduleOfSporadicTask BasicLemmas
+var  21113:21125 ScheduleOfSporadicTask.BasicLemmas sporadic_task
+R21128:21133 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 21150:21158 ScheduleOfSporadicTask.BasicLemmas task_cost
+R21174:21177 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R21161:21173 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.sporadic_task var
+R21178:21181 prosa.classic.model.time Time time def
+var 21197:21209 ScheduleOfSporadicTask.BasicLemmas task_deadline
+R21225:21228 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R21212:21224 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.sporadic_task var
+R21229:21232 prosa.classic.model.time Time time def
+var  21253:21255 ScheduleOfSporadicTask.BasicLemmas Job
+R21258:21263 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 21284:21291 ScheduleOfSporadicTask.BasicLemmas job_cost
+R21297:21300 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R21294:21296 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.Job var
+R21301:21304 prosa.classic.model.time Time time def
+var 21320:21331 ScheduleOfSporadicTask.BasicLemmas job_deadline
+R21337:21340 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R21334:21336 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.Job var
+R21341:21344 prosa.classic.model.time Time time def
+var 21360:21367 ScheduleOfSporadicTask.BasicLemmas job_task
+R21373:21376 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R21370:21372 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.Job var
+R21377:21389 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.sporadic_task var
+var  21465:21472 ScheduleOfSporadicTask.BasicLemmas num_cpus
+R21475:21477 Corelib.Init.Datatypes <> nat ind
+var 21494:21498 ScheduleOfSporadicTask.BasicLemmas sched
+R21501:21508 prosa.classic.model.schedule.global.basic.schedule Schedule schedule def
+R21514:21521 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.num_cpus var
+R21510:21512 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.Job var
+var 21600:21633 ScheduleOfSporadicTask.BasicLemmas jobs_dont_execute_after_completion
+R21644:21670 prosa.classic.model.schedule.global.basic.schedule Schedule completed_jobs_dont_execute def
+R21681:21685 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.sched var
+R21672:21679 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.job_cost var
+var 21733:21735 ScheduleOfSporadicTask.BasicLemmas tsk
+R21738:21750 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.sporadic_task var
+var 21815:21815 ScheduleOfSporadicTask.BasicLemmas j
+R21818:21820 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.Job var
+var 21838:21850 ScheduleOfSporadicTask.BasicLemmas H_job_of_task
+R21863:21865 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21853:21860 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.job_task var
+R21862:21862 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.j var
+R21866:21868 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.tsk var
+var 21886:21894 ScheduleOfSporadicTask.BasicLemmas valid_job
+R21903:21920 prosa.classic.model.arrival.basic.job Job valid_sporadic_job def
+R21977:21977 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.j var
+R21968:21975 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.job_task var
+R21955:21966 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.job_deadline var
+R21946:21953 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.job_cost var
+R21932:21944 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.task_deadline var
+R21922:21930 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.task_cost var
+prf 22064:22094 ScheduleOfSporadicTask cumulative_service_le_task_cost
+binder 22113:22113 <> t:221
+binder 22115:22116 <> t':222
+R22156:22159 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R22129:22142 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R22152:22152 prosa.classic.model.schedule.global.basic.schedule <> t:221 var
+R22154:22155 prosa.classic.model.schedule.global.basic.schedule <> t':222 var
+R22150:22150 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.j var
+R22144:22148 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.sched var
+R22160:22168 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.task_cost var
+R22170:22172 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.tsk var
+R22228:22245 prosa.classic.model.arrival.basic.job Job valid_sporadic_job def
+R22296:22303 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.job_cost var
+R22305:22305 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.j var
+R22275:22283 mathcomp.boot.ssrnat <> leq_trans thm
+R22334:22346 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.H_job_of_task var
+R22296:22303 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.job_cost var
+R22305:22305 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.j var
+R22275:22283 mathcomp.boot.ssrnat <> leq_trans thm
+R22334:22346 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.H_job_of_task var
+R22334:22346 prosa.classic.model.schedule.global.basic.schedule <> ScheduleOfSporadicTask.BasicLemmas.H_job_of_task var
+R22378:22407 prosa.classic.model.schedule.global.basic.schedule Schedule cumulative_service_le_job_cost thm
+R22378:22407 prosa.classic.model.schedule.global.basic.schedule Schedule cumulative_service_le_job_cost thm
+R22426:22436 prosa.classic.model.schedule.global.basic.schedule ScheduleOfSporadicTask.BasicLemmas <> sec
+R22446:22467 prosa.classic.model.schedule.global.basic.schedule ScheduleOfSporadicTask <> mod

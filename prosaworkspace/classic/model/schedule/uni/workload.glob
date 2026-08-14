@@ -1,0 +1,201 @@
+DIGEST 3fb4c7053e717b2c2330cc01e20d86a4
+Fprosa.classic.model.schedule.uni.workload
+R15:36 prosa.classic.util.all <> <> lib
+R54:77 prosa.classic.model.time <> <> lib
+R79:116 prosa.classic.model.arrival.basic.task <> <> lib
+R118:154 prosa.classic.model.arrival.basic.job <> <> lib
+R156:205 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R222:249 prosa.classic.model.priority <> <> lib
+R281:289 mathcomp.boot.ssreflect <> <> lib
+R291:297 mathcomp.boot.ssrbool <> <> lib
+R299:304 mathcomp.boot.eqtype <> <> lib
+R306:311 mathcomp.boot.ssrnat <> <> lib
+R313:315 mathcomp.boot.seq <> <> lib
+R317:323 mathcomp.boot.fintype <> <> lib
+R325:329 mathcomp.boot.bigop <> <> lib
+mod 340:347 <> Workload
+R360:363 prosa.classic.model.time Time <> mod
+R365:379 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence <> mod
+R381:388 prosa.classic.model.priority Priority <> mod
+sec 480:491 Workload WorkloadDefs
+var  508:511 Workload.WorkloadDefs Task
+R514:519 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  536:538 Workload.WorkloadDefs Job
+R541:546 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 563:573 Workload.WorkloadDefs job_arrival
+R579:582 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R576:578 prosa.classic.model.schedule.uni.workload <> Workload.WorkloadDefs.Job var
+R583:586 prosa.classic.model.time Time time def
+var 602:609 Workload.WorkloadDefs job_cost
+R615:618 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R612:614 prosa.classic.model.schedule.uni.workload <> Workload.WorkloadDefs.Job var
+R619:622 prosa.classic.model.time Time time def
+var 638:645 Workload.WorkloadDefs job_task
+R651:654 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R648:650 prosa.classic.model.schedule.uni.workload <> Workload.WorkloadDefs.Job var
+R655:658 prosa.classic.model.schedule.uni.workload <> Workload.WorkloadDefs.Task var
+var 728:734 Workload.WorkloadDefs arr_seq
+R737:752 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R754:756 prosa.classic.model.schedule.uni.workload <> Workload.WorkloadDefs.Job var
+var 816:819 Workload.WorkloadDefs jobs
+R822:824 mathcomp.boot.seq <> seq abbrev
+R826:828 prosa.classic.model.schedule.uni.workload <> Workload.WorkloadDefs.Job var
+sec 910:923 Workload.WorkloadDefs WorkloadOfJobs
+var 989:989 Workload.WorkloadDefs.WorkloadOfJobs P
+R995:998 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R992:994 prosa.classic.model.schedule.uni.workload <> Workload.WorkloadDefs.Job var
+R999:1002 Corelib.Init.Datatypes <> bool ind
+def 1110:1125 Workload workload_of_jobs
+R1130:1135 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R1137:1140 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R1145:1147 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R1151:1152 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R1141:1144 prosa.classic.model.schedule.uni.workload <> Workload.WorkloadDefs.jobs var
+binder 1136:1136 <> j:15
+binder 1136:1136 <> j:16
+binder 1136:1136 <> j:17
+R1148:1148 prosa.classic.model.schedule.uni.workload <> Workload.WorkloadDefs.WorkloadOfJobs.P var
+R1150:1150 prosa.classic.model.schedule.uni.workload <> j:15 var
+R1153:1160 prosa.classic.model.schedule.uni.workload <> Workload.WorkloadDefs.job_cost var
+R1162:1162 prosa.classic.model.schedule.uni.workload <> j:15 var
+R1174:1187 prosa.classic.model.schedule.uni.workload Workload.WorkloadDefs.WorkloadOfJobs <> sec
+sec 1307:1321 Workload.WorkloadDefs PerTaskPriority
+var 1444:1461 Workload.WorkloadDefs.PerTaskPriority higher_eq_priority
+R1464:1472 prosa.classic.model.priority Priority FP_policy def
+R1474:1477 prosa.classic.model.schedule.uni.workload <> Workload.WorkloadDefs.Task var
+var 1544:1546 Workload.WorkloadDefs.PerTaskPriority tsk
+R1549:1552 prosa.classic.model.schedule.uni.workload <> Workload.WorkloadDefs.Task var
+var 1634:1660 Workload.WorkloadDefs.PerTaskPriority of_higher_or_equal_priority
+binder 1662:1662 <> j:22
+R1675:1692 prosa.classic.model.schedule.uni.workload <> Workload.WorkloadDefs.PerTaskPriority.higher_eq_priority var
+R1695:1702 prosa.classic.model.schedule.uni.workload <> Workload.WorkloadDefs.job_task var
+R1704:1704 prosa.classic.model.schedule.uni.workload <> j:22 var
+R1707:1709 prosa.classic.model.schedule.uni.workload <> Workload.WorkloadDefs.PerTaskPriority.tsk var
+def 1847:1888 Workload workload_of_higher_or_equal_priority_tasks
+R1901:1916 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R1918:1944 prosa.classic.model.schedule.uni.workload <> Workload.WorkloadDefs.PerTaskPriority.of_higher_or_equal_priority var
+R1956:1970 prosa.classic.model.schedule.uni.workload Workload.WorkloadDefs.PerTaskPriority <> sec
+sec 2091:2104 Workload.WorkloadDefs PerJobPriority
+var 2228:2245 Workload.WorkloadDefs.PerJobPriority higher_eq_priority
+R2248:2258 prosa.classic.model.priority Priority JLFP_policy def
+R2260:2262 prosa.classic.model.schedule.uni.workload <> Workload.WorkloadDefs.Job var
+var 2326:2326 Workload.WorkloadDefs.PerJobPriority j
+R2329:2331 prosa.classic.model.schedule.uni.workload <> Workload.WorkloadDefs.Job var
+var 2413:2439 Workload.WorkloadDefs.PerJobPriority of_higher_or_equal_priority
+binder 2441:2444 <> j_hp:27
+R2449:2466 prosa.classic.model.schedule.uni.workload <> Workload.WorkloadDefs.PerJobPriority.higher_eq_priority var
+R2468:2471 prosa.classic.model.schedule.uni.workload <> j_hp:27 var
+R2473:2473 prosa.classic.model.schedule.uni.workload <> Workload.WorkloadDefs.PerJobPriority.j var
+def 2628:2668 Workload workload_of_higher_or_equal_priority_jobs
+R2681:2696 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R2698:2724 prosa.classic.model.schedule.uni.workload <> Workload.WorkloadDefs.PerJobPriority.of_higher_or_equal_priority var
+R2736:2749 prosa.classic.model.schedule.uni.workload Workload.WorkloadDefs.PerJobPriority <> sec
+R2763:2774 prosa.classic.model.schedule.uni.workload Workload.WorkloadDefs <> sec
+sec 2837:2848 Workload TaskWorkload
+var  2865:2868 Workload.TaskWorkload Task
+R2871:2876 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  2893:2895 Workload.TaskWorkload Job
+R2898:2903 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 2920:2930 Workload.TaskWorkload job_arrival
+R2936:2939 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2933:2935 prosa.classic.model.schedule.uni.workload <> Workload.TaskWorkload.Job var
+R2940:2943 prosa.classic.model.time Time time def
+var 2959:2966 Workload.TaskWorkload job_cost
+R2972:2975 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2969:2971 prosa.classic.model.schedule.uni.workload <> Workload.TaskWorkload.Job var
+R2976:2979 prosa.classic.model.time Time time def
+var 2995:3002 Workload.TaskWorkload job_task
+R3008:3011 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3005:3007 prosa.classic.model.schedule.uni.workload <> Workload.TaskWorkload.Job var
+R3012:3015 prosa.classic.model.schedule.uni.workload <> Workload.TaskWorkload.Task var
+var 3081:3087 Workload.TaskWorkload arr_seq
+R3090:3105 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R3107:3109 prosa.classic.model.schedule.uni.workload <> Workload.TaskWorkload.Job var
+var 3176:3178 Workload.TaskWorkload tsk
+R3181:3184 prosa.classic.model.schedule.uni.workload <> Workload.TaskWorkload.Task var
+var 3250:3260 Workload.TaskWorkload of_task_tsk
+binder 3262:3262 <> j:40
+R3277:3280 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R3267:3274 prosa.classic.model.schedule.uni.workload <> Workload.TaskWorkload.job_task var
+R3276:3276 prosa.classic.model.schedule.uni.workload <> j:40 var
+R3281:3283 prosa.classic.model.schedule.uni.workload <> Workload.TaskWorkload.tsk var
+def 3381:3393 Workload task_workload
+binder 3395:3398 <> jobs:41
+R3403:3418 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R3434:3444 prosa.classic.model.schedule.uni.workload <> Workload.TaskWorkload.of_task_tsk var
+R3429:3432 prosa.classic.model.schedule.uni.workload <> jobs:41 var
+R3420:3427 prosa.classic.model.schedule.uni.workload <> Workload.TaskWorkload.job_cost var
+def 3547:3567 Workload task_workload_between
+R3577:3580 prosa.classic.model.time Time time def
+binder 3570:3571 <> t1:42
+binder 3573:3574 <> t2:43
+R3592:3604 prosa.classic.model.schedule.uni.workload Workload task_workload def
+R3607:3626 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R3636:3637 prosa.classic.model.schedule.uni.workload <> t1:42 var
+R3639:3640 prosa.classic.model.schedule.uni.workload <> t2:43 var
+R3628:3634 prosa.classic.model.schedule.uni.workload <> Workload.TaskWorkload.arr_seq var
+R3655:3666 prosa.classic.model.schedule.uni.workload Workload.TaskWorkload <> sec
+sec 3755:3765 Workload BasicLemmas
+var  3785:3787 Workload.BasicLemmas Job
+R3790:3795 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 3812:3822 Workload.BasicLemmas job_arrival
+R3828:3831 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3825:3827 prosa.classic.model.schedule.uni.workload <> Workload.BasicLemmas.Job var
+R3832:3835 prosa.classic.model.time Time time def
+var 3851:3858 Workload.BasicLemmas job_cost
+R3864:3867 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3861:3863 prosa.classic.model.schedule.uni.workload <> Workload.BasicLemmas.Job var
+R3868:3871 prosa.classic.model.time Time time def
+var 3939:3945 Workload.BasicLemmas arr_seq
+R3948:3963 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R3965:3967 prosa.classic.model.schedule.uni.workload <> Workload.BasicLemmas.Job var
+var 4040:4055 Workload.BasicLemmas arrivals_between
+R4060:4079 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R4081:4087 prosa.classic.model.schedule.uni.workload <> Workload.BasicLemmas.arr_seq var
+prf 4171:4190 Workload workload_of_jobs_cat
+binder 4206:4206 <> t:51
+binder 4208:4209 <> t1:52
+binder 4211:4212 <> t2:53
+binder 4214:4214 <> P:54
+R4238:4249 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4227:4230 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<='_x not
+R4232:4235 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<='_x not
+R4225:4226 prosa.classic.model.schedule.uni.workload <> t1:52 var
+R4231:4231 prosa.classic.model.schedule.uni.workload <> t:51 var
+R4231:4231 prosa.classic.model.schedule.uni.workload <> t:51 var
+R4236:4237 prosa.classic.model.schedule.uni.workload <> t2:53 var
+R4302:4312 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4250:4265 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R4301:4301 prosa.classic.model.schedule.uni.workload <> P:54 var
+R4277:4292 prosa.classic.model.schedule.uni.workload <> Workload.BasicLemmas.arrivals_between var
+R4294:4295 prosa.classic.model.schedule.uni.workload <> t1:52 var
+R4297:4298 prosa.classic.model.schedule.uni.workload <> t2:53 var
+R4267:4274 prosa.classic.model.schedule.uni.workload <> Workload.BasicLemmas.job_cost var
+R4364:4374 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R4313:4328 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R4363:4363 prosa.classic.model.schedule.uni.workload <> P:54 var
+R4340:4355 prosa.classic.model.schedule.uni.workload <> Workload.BasicLemmas.arrivals_between var
+R4357:4358 prosa.classic.model.schedule.uni.workload <> t1:52 var
+R4360:4360 prosa.classic.model.schedule.uni.workload <> t:51 var
+R4330:4337 prosa.classic.model.schedule.uni.workload <> Workload.BasicLemmas.job_cost var
+R4375:4390 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R4425:4425 prosa.classic.model.schedule.uni.workload <> P:54 var
+R4402:4417 prosa.classic.model.schedule.uni.workload <> Workload.BasicLemmas.arrivals_between var
+R4419:4419 prosa.classic.model.schedule.uni.workload <> t:51 var
+R4421:4422 prosa.classic.model.schedule.uni.workload <> t2:53 var
+R4392:4399 prosa.classic.model.schedule.uni.workload <> Workload.BasicLemmas.job_cost var
+R4464:4467 Corelib.ssr.ssrbool <> andP thm
+R4493:4508 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R4511:4526 prosa.classic.model.schedule.uni.workload <> Workload.BasicLemmas.arrivals_between var
+R4493:4508 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R4493:4508 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R4511:4526 prosa.classic.model.schedule.uni.workload <> Workload.BasicLemmas.arrivals_between var
+R4511:4526 prosa.classic.model.schedule.uni.workload <> Workload.BasicLemmas.arrivals_between var
+R4549:4571 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence job_arrived_between_cat thm
+R4583:4589 mathcomp.boot.bigop <> big_cat thm
+R4549:4571 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence job_arrived_between_cat thm
+R4549:4571 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence job_arrived_between_cat thm
+R4583:4589 mathcomp.boot.bigop <> big_cat thm
+R4583:4589 mathcomp.boot.bigop <> big_cat thm
+R4608:4618 prosa.classic.model.schedule.uni.workload Workload.BasicLemmas <> sec
+R4630:4637 prosa.classic.model.schedule.uni.workload Workload <> mod

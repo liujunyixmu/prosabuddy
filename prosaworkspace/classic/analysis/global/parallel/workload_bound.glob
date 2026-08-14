@@ -1,0 +1,1498 @@
+DIGEST 90181acf8e113b07c52cd18e5c87c6d1
+Fprosa.classic.analysis.global.parallel.workload_bound
+R15:36 prosa.classic.util.all <> <> lib
+R54:91 prosa.classic.model.arrival.basic.task <> <> lib
+R93:129 prosa.classic.model.arrival.basic.job <> <> lib
+R131:176 prosa.classic.model.arrival.basic.task_arrival <> <> lib
+R194:242 prosa.classic.model.schedule.global.response_time <> <> lib
+R244:287 prosa.classic.model.schedule.global.workload <> <> lib
+R304:353 prosa.classic.model.schedule.global.schedulability <> <> lib
+R371:420 prosa.classic.model.schedule.global.basic.schedule <> <> lib
+R452:460 mathcomp.boot.ssreflect <> <> lib
+R462:468 mathcomp.boot.ssrbool <> <> lib
+R470:475 mathcomp.boot.eqtype <> <> lib
+R477:482 mathcomp.boot.ssrnat <> <> lib
+R484:486 mathcomp.boot.seq <> <> lib
+R488:490 mathcomp.boot.div <> <> lib
+R492:498 mathcomp.boot.fintype <> <> lib
+R500:504 mathcomp.boot.bigop <> <> lib
+R506:509 mathcomp.boot.path <> <> lib
+mod 520:532 <> WorkloadBound
+R547:549 prosa.classic.model.arrival.basic.job Job <> mod
+R551:565 prosa.classic.model.arrival.basic.task SporadicTaskset <> mod
+R567:574 prosa.classic.model.schedule.global.basic.schedule Schedule <> mod
+R576:597 prosa.classic.model.schedule.global.basic.schedule ScheduleOfSporadicTask <> mod
+R599:609 prosa.classic.model.arrival.basic.task_arrival TaskArrival <> mod
+R611:622 prosa.classic.model.schedule.global.response_time ResponseTime <> mod
+R624:637 prosa.classic.model.schedule.global.schedulability Schedulability <> mod
+R639:646 prosa.classic.model.schedule.global.workload Workload <> mod
+sec 660:675 WorkloadBound WorkloadBoundDef
+var  692:704 WorkloadBound.WorkloadBoundDef sporadic_task
+R707:712 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 729:737 WorkloadBound.WorkloadBoundDef task_cost
+R753:756 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R740:752 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.WorkloadBoundDef.sporadic_task var
+R757:760 prosa.classic.model.time Time time def
+var 776:786 WorkloadBound.WorkloadBoundDef task_period
+R802:805 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R789:801 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.WorkloadBoundDef.sporadic_task var
+R806:809 prosa.classic.model.time Time time def
+var 830:832 WorkloadBound.WorkloadBoundDef tsk
+R835:847 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.WorkloadBoundDef.sporadic_task var
+var 863:867 WorkloadBound.WorkloadBoundDef R_tsk
+R870:873 prosa.classic.model.time Time time def
+var 934:938 WorkloadBound.WorkloadBoundDef delta
+R941:944 prosa.classic.model.time Time time def
+def 1063:1070 WorkloadBound max_jobs
+R1081:1088 prosa.classic.util.div_mod <> div_ceil def
+R1096:1098 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R1091:1095 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.WorkloadBoundDef.delta var
+R1099:1103 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.WorkloadBoundDef.R_tsk var
+R1107:1117 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.WorkloadBoundDef.task_period var
+R1119:1121 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.WorkloadBoundDef.tsk var
+def 1195:1195 WorkloadBound W
+R1208:1210 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R1200:1207 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound max_jobs def
+R1211:1219 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.WorkloadBoundDef.task_cost var
+R1221:1223 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.WorkloadBoundDef.tsk var
+R1233:1248 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound.WorkloadBoundDef <> sec
+sec 1264:1274 WorkloadBound BasicLemmas
+var  1291:1303 WorkloadBound.BasicLemmas sporadic_task
+R1306:1311 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1328:1336 WorkloadBound.BasicLemmas task_cost
+R1352:1355 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1339:1351 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.BasicLemmas.sporadic_task var
+R1356:1359 prosa.classic.model.time Time time def
+var 1375:1385 WorkloadBound.BasicLemmas task_period
+R1401:1404 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1388:1400 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.BasicLemmas.sporadic_task var
+R1405:1408 prosa.classic.model.time Time time def
+var 1457:1459 WorkloadBound.BasicLemmas tsk
+R1462:1474 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.BasicLemmas.sporadic_task var
+var 1523:1539 WorkloadBound.BasicLemmas H_period_positive
+R1557:1559 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R1542:1552 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.BasicLemmas.task_period var
+R1554:1556 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.BasicLemmas.tsk var
+var 1677:1678 WorkloadBound.BasicLemmas R1
+var 1680:1681 WorkloadBound.BasicLemmas R2
+R1684:1687 prosa.classic.model.time Time time def
+var 1705:1719 WorkloadBound.BasicLemmas H_R_lower_bound
+R1724:1727 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R1728:1736 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.BasicLemmas.task_cost var
+R1738:1740 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.BasicLemmas.tsk var
+R1722:1723 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.BasicLemmas.R1 var
+var 1758:1767 WorkloadBound.BasicLemmas H_R1_le_R2
+R1772:1775 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R1770:1771 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.BasicLemmas.R1 var
+R1776:1777 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.BasicLemmas.R2 var
+var 1795:1808 WorkloadBound.BasicLemmas workload_bound
+R1813:1813 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound W def
+R1837:1839 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.BasicLemmas.tsk var
+R1825:1835 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.BasicLemmas.task_period var
+R1815:1823 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.BasicLemmas.task_cost var
+prf 1913:1923 WorkloadBound W_monotonic
+binder 1940:1941 <> t1:29
+binder 1943:1944 <> t2:30
+R1963:1974 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1957:1960 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R1955:1956 prosa.classic.analysis.global.parallel.workload_bound <> t1:29 var
+R1961:1962 prosa.classic.analysis.global.parallel.workload_bound <> t2:30 var
+R1995:1998 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R1975:1988 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.BasicLemmas.workload_bound var
+R1990:1991 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.BasicLemmas.R1 var
+R1993:1994 prosa.classic.analysis.global.parallel.workload_bound <> t1:29 var
+R1999:2012 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.BasicLemmas.workload_bound var
+R2014:2015 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.BasicLemmas.R2 var
+R2017:2018 prosa.classic.analysis.global.parallel.workload_bound <> t2:30 var
+R2069:2082 prosa.classic.analysis.global.parallel.workload_bound <> workload_bound vardef
+R2085:2085 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound W def
+R2088:2095 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound max_jobs def
+R2112:2120 mathcomp.boot.ssrnat <> leq_mul2r thm
+R2129:2131 Corelib.ssr.ssrbool <> orP thm
+R2112:2120 mathcomp.boot.ssrnat <> leq_mul2r thm
+R2112:2120 mathcomp.boot.ssrnat <> leq_mul2r thm
+R2129:2131 Corelib.ssr.ssrbool <> orP thm
+R2156:2168 prosa.classic.util.div_mod <> leq_divceil2r thm
+R2185:2191 mathcomp.boot.ssrnat <> leq_add thm
+R2156:2168 prosa.classic.util.div_mod <> leq_divceil2r thm
+R2185:2191 mathcomp.boot.ssrnat <> leq_add thm
+R2210:2220 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound.BasicLemmas <> sec
+sec 2235:2252 WorkloadBound ProofWorkloadBound
+var  2270:2282 WorkloadBound.ProofWorkloadBound sporadic_task
+R2285:2290 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 2307:2315 WorkloadBound.ProofWorkloadBound task_cost
+R2331:2334 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2318:2330 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.sporadic_task var
+R2335:2338 prosa.classic.model.time Time time def
+var 2354:2364 WorkloadBound.ProofWorkloadBound task_period
+R2380:2383 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2367:2379 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.sporadic_task var
+R2384:2387 prosa.classic.model.time Time time def
+var 2403:2415 WorkloadBound.ProofWorkloadBound task_deadline
+R2431:2434 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2418:2430 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.sporadic_task var
+R2435:2438 prosa.classic.model.time Time time def
+var  2459:2461 WorkloadBound.ProofWorkloadBound Job
+R2464:2469 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 2486:2496 WorkloadBound.ProofWorkloadBound job_arrival
+R2502:2505 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2499:2501 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.Job var
+R2506:2509 prosa.classic.model.time Time time def
+var 2525:2532 WorkloadBound.ProofWorkloadBound job_cost
+R2538:2541 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2535:2537 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.Job var
+R2542:2545 prosa.classic.model.time Time time def
+var 2561:2568 WorkloadBound.ProofWorkloadBound job_task
+R2574:2577 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2571:2573 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.Job var
+R2578:2590 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.sporadic_task var
+var 2606:2617 WorkloadBound.ProofWorkloadBound job_deadline
+R2623:2626 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2620:2622 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.Job var
+R2627:2630 prosa.classic.model.time Time time def
+var 2647:2653 WorkloadBound.ProofWorkloadBound arr_seq
+R2656:2671 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R2673:2675 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.Job var
+var 2747:2774 WorkloadBound.ProofWorkloadBound H_jobs_have_valid_parameters
+binder 2791:2791 <> j:49
+R2822:2833 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2802:2811 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R2821:2821 prosa.classic.analysis.global.parallel.workload_bound <> j:49 var
+R2813:2819 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.arr_seq var
+R2834:2851 prosa.classic.model.arrival.basic.job Job valid_sporadic_job def
+R2908:2908 prosa.classic.analysis.global.parallel.workload_bound <> j:49 var
+R2899:2906 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_task var
+R2886:2897 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_deadline var
+R2877:2884 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_cost var
+R2863:2875 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_deadline var
+R2853:2861 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_cost var
+var  2962:2969 WorkloadBound.ProofWorkloadBound num_cpus
+R2972:2974 Corelib.Init.Datatypes <> nat ind
+var 2991:2995 WorkloadBound.ProofWorkloadBound sched
+R2998:3005 prosa.classic.model.schedule.global.basic.schedule Schedule schedule def
+R3011:3018 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.num_cpus var
+R3007:3009 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.Job var
+var 3036:3068 WorkloadBound.ProofWorkloadBound H_jobs_come_from_arrival_sequence
+R3077:3107 prosa.classic.model.schedule.global.basic.schedule Schedule jobs_come_from_arrival_sequence def
+R3115:3121 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.arr_seq var
+R3109:3113 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.sched var
+var 3289:3317 WorkloadBound.ProofWorkloadBound H_jobs_must_arrive_to_execute
+R3326:3352 prosa.classic.model.schedule.global.basic.schedule Schedule jobs_must_arrive_to_execute def
+R3366:3370 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.sched var
+R3354:3364 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_arrival var
+var 3542:3570 WorkloadBound.ProofWorkloadBound H_completed_jobs_dont_execute
+R3579:3605 prosa.classic.model.schedule.global.basic.schedule Schedule completed_jobs_dont_execute def
+R3616:3620 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.sched var
+R3607:3614 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_cost var
+var 3821:3836 WorkloadBound.ProofWorkloadBound H_sporadic_tasks
+R3845:3863 prosa.classic.model.arrival.basic.task_arrival TaskArrival sporadic_task_model def
+R3898:3904 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.arr_seq var
+R3889:3896 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_task var
+R3877:3887 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_arrival var
+R3865:3875 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_period var
+var 3998:4017 WorkloadBound.ProofWorkloadBound job_has_completed_by
+R4022:4030 prosa.classic.model.schedule.global.basic.schedule Schedule completed def
+R4041:4045 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.sched var
+R4032:4039 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_cost var
+var 4057:4067 WorkloadBound.ProofWorkloadBound workload_of
+R4075:4087 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.sporadic_task var
+binder 4070:4072 <> tsk:63
+R4098:4101 prosa.classic.model.time Time time def
+binder 4091:4092 <> t1:64
+binder 4094:4095 <> t2:65
+R4113:4120 prosa.classic.model.schedule.global.workload Workload workload def
+R4141:4142 prosa.classic.analysis.global.parallel.workload_bound <> t1:64 var
+R4144:4145 prosa.classic.analysis.global.parallel.workload_bound <> t2:65 var
+R4137:4139 prosa.classic.analysis.global.parallel.workload_bound <> tsk:63 var
+R4131:4135 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.sched var
+R4122:4129 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_task var
+var 4235:4237 WorkloadBound.ProofWorkloadBound tsk
+R4240:4252 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.sporadic_task var
+var 4704:4726 WorkloadBound.ProofWorkloadBound H_valid_task_parameters
+R4735:4756 prosa.classic.model.arrival.basic.task SporadicTask is_valid_sporadic_task def
+R4794:4796 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R4780:4792 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_deadline var
+R4768:4778 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_period var
+R4758:4766 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_cost var
+var 4862:4863 WorkloadBound.ProofWorkloadBound t1
+var 4865:4869 WorkloadBound.ProofWorkloadBound delta
+R4872:4875 prosa.classic.model.time Time time def
+var 5027:5031 WorkloadBound.ProofWorkloadBound R_tsk
+R5034:5037 prosa.classic.model.time Time time def
+var 5056:5076 WorkloadBound.ProofWorkloadBound H_response_time_bound
+binder 5097:5097 <> j:76
+R5128:5139 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5108:5117 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R5127:5127 prosa.classic.analysis.global.parallel.workload_bound <> j:76 var
+R5119:5125 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.arr_seq var
+R5156:5167 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5150:5152 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5140:5147 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_task var
+R5149:5149 prosa.classic.analysis.global.parallel.workload_bound <> j:76 var
+R5153:5155 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R5202:5213 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5189:5191 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R5181:5183 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R5168:5178 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_arrival var
+R5180:5180 prosa.classic.analysis.global.parallel.workload_bound <> j:76 var
+R5184:5188 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.R_tsk var
+R5194:5196 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R5192:5193 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.t1 var
+R5197:5201 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.delta var
+R5214:5233 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_has_completed_by var
+R5235:5235 prosa.classic.analysis.global.parallel.workload_bound <> j:76 var
+R5251:5253 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R5238:5248 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_arrival var
+R5250:5250 prosa.classic.analysis.global.parallel.workload_bound <> j:76 var
+R5254:5258 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.R_tsk var
+sec 5279:5287 WorkloadBound.ProofWorkloadBound MainProof
+var 5471:5472 WorkloadBound.ProofWorkloadBound.MainProof t2
+R5479:5481 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R5477:5478 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.t1 var
+R5482:5486 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.delta var
+var 5499:5501 WorkloadBound.ProofWorkloadBound.MainProof n_k
+R5506:5513 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound max_jobs def
+R5537:5541 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.delta var
+R5531:5535 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.R_tsk var
+R5527:5529 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R5515:5525 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_period var
+var 5554:5567 WorkloadBound.ProofWorkloadBound.MainProof workload_bound
+R5572:5572 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound W def
+R5606:5610 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.delta var
+R5600:5604 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.R_tsk var
+R5596:5598 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R5584:5594 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_period var
+R5574:5582 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_cost var
+var 5767:5780 WorkloadBound.ProofWorkloadBound.MainProof scheduled_jobs
+R5793:5822 prosa.classic.model.schedule.global.basic.schedule ScheduleOfSporadicTask jobs_of_task_scheduled_between def
+R5843:5844 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.t1 var
+R5846:5847 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.t2 var
+R5839:5841 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R5833:5837 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.sched var
+R5824:5831 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_task var
+var 5946:5960 WorkloadBound.ProofWorkloadBound.MainProof earlier_arrival
+binder 5969:5969 <> x:79
+binder 5971:5971 <> y:80
+R5989:5992 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R5976:5986 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_arrival var
+R5988:5988 prosa.classic.analysis.global.parallel.workload_bound <> x:79 var
+R5993:6003 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_arrival var
+R6005:6005 prosa.classic.analysis.global.parallel.workload_bound <> y:80 var
+var 6018:6028 WorkloadBound.ProofWorkloadBound.MainProof sorted_jobs
+R6034:6037 mathcomp.boot.path <> sort def
+R6055:6068 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.scheduled_jobs var
+R6039:6053 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.earlier_arrival var
+sec 6186:6204 WorkloadBound.ProofWorkloadBound.MainProof SimplifyJobSequence
+prf 6367:6412 WorkloadBound workload_bound_simpl_by_sorting_scheduled_jobs
+R6467:6480 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6426:6441 prosa.classic.model.schedule.global.workload Workload workload_joblist def
+R6462:6463 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.t1 var
+R6465:6466 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.t2 var
+R6458:6460 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R6452:6456 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.sched var
+R6443:6450 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_task var
+R6481:6486 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R6488:6491 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R6503:6504 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R6492:6502 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+binder 6487:6487 <> i:81
+binder 6487:6487 <> i:82
+binder 6487:6487 <> i:83
+R6505:6518 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R6528:6529 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.t1 var
+R6531:6532 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.t2 var
+R6526:6526 prosa.classic.analysis.global.parallel.workload_bound <> i:81 var
+R6520:6524 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.sched var
+R6567:6582 prosa.classic.model.schedule.global.workload Workload workload_joblist def
+R6590:6603 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.scheduled_jobs var
+R6590:6603 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.scheduled_jobs var
+R6625:6632 mathcomp.boot.bigop <> perm_big thm
+R6634:6644 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R6625:6632 mathcomp.boot.bigop <> perm_big thm
+R6634:6644 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R6625:6632 mathcomp.boot.bigop <> perm_big thm
+R6634:6644 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R6677:6685 mathcomp.boot.path <> perm_sort thm
+R6687:6701 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.earlier_arrival var
+R6677:6685 mathcomp.boot.path <> perm_sort thm
+R6687:6701 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.earlier_arrival var
+R6677:6685 mathcomp.boot.path <> perm_sort thm
+R6687:6701 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.earlier_arrival var
+prf 6806:6840 WorkloadBound workload_bound_job_in_same_sequence
+binder 6861:6861 <> j:84
+R6876:6876 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6897:6901 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6919:6919 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6878:6882 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R6877:6877 prosa.classic.analysis.global.parallel.workload_bound <> j:84 var
+R6883:6896 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.scheduled_jobs var
+R6903:6907 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R6902:6902 prosa.classic.analysis.global.parallel.workload_bound <> j:84 var
+R6908:6918 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R6956:6963 mathcomp.boot.seq <> perm_mem thm
+R6976:6984 mathcomp.boot.path <> perm_sort thm
+R6986:7000 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.earlier_arrival var
+R6956:6963 mathcomp.boot.seq <> perm_mem thm
+R6976:6984 mathcomp.boot.path <> perm_sort thm
+R6986:7000 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.earlier_arrival var
+R6976:6984 mathcomp.boot.path <> perm_sort thm
+R6986:7000 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.earlier_arrival var
+prf 7138:7169 WorkloadBound workload_bound_all_jobs_from_tsk
+binder 7190:7192 <> j_i:85
+R7226:7241 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7210:7214 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R7207:7209 prosa.classic.analysis.global.parallel.workload_bound <> j_i:85 var
+R7215:7225 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R7264:7279 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R7242:7251 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R7261:7263 prosa.classic.analysis.global.parallel.workload_bound <> j_i:85 var
+R7253:7259 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.arr_seq var
+R7298:7313 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R7292:7294 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7280:7287 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_task var
+R7289:7291 prosa.classic.analysis.global.parallel.workload_bound <> j_i:85 var
+R7295:7297 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R7349:7364 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R7344:7347 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R7314:7327 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R7339:7340 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.t1 var
+R7342:7343 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.t2 var
+R7335:7337 prosa.classic.analysis.global.parallel.workload_bound <> j_i:85 var
+R7329:7333 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.sched var
+R7368:7372 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R7365:7367 prosa.classic.analysis.global.parallel.workload_bound <> j_i:85 var
+R7373:7394 prosa.classic.model.schedule.global.basic.schedule Schedule jobs_scheduled_between def
+R7402:7403 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.t1 var
+R7405:7406 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.t2 var
+R7396:7400 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.sched var
+R7534:7568 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_job_in_same_sequence thm
+R7570:7579 mathcomp.boot.seq <> mem_filter thm
+R7534:7568 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_job_in_same_sequence thm
+R7534:7568 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_job_in_same_sequence thm
+R7570:7579 mathcomp.boot.seq <> mem_filter thm
+R7570:7579 mathcomp.boot.seq <> mem_filter thm
+R7611:7632 prosa.classic.model.schedule.global.basic.schedule Schedule jobs_scheduled_between def
+R7648:7656 mathcomp.boot.seq <> mem_undup thm
+R7648:7656 mathcomp.boot.seq <> mem_undup thm
+R7648:7656 mathcomp.boot.seq <> mem_undup thm
+R7683:7703 prosa.util.bigcat <> mem_bigcat_nat_exists thm
+R7683:7703 prosa.util.bigcat <> mem_bigcat_nat_exists thm
+R7737:7767 prosa.classic.model.schedule.global.basic.schedule Schedule mem_scheduled_jobs_eq_scheduled thm
+R7737:7767 prosa.classic.model.schedule.global.basic.schedule Schedule mem_scheduled_jobs_eq_scheduled thm
+R7737:7767 prosa.classic.model.schedule.global.basic.schedule Schedule mem_scheduled_jobs_eq_scheduled thm
+R7880:7913 prosa.classic.model.schedule.global.basic.schedule Schedule service_implies_cumulative_service thm
+R7959:7962 Corelib.ssr.ssrbool <> andP thm
+R7880:7913 prosa.classic.model.schedule.global.basic.schedule Schedule service_implies_cumulative_service thm
+R7959:7962 Corelib.ssr.ssrbool <> andP thm
+R7996:8019 prosa.classic.model.schedule.global.basic.schedule Schedule not_scheduled_no_service thm
+R8021:8025 Corelib.ssr.ssrbool <> negbK thm
+R7996:8019 prosa.classic.model.schedule.global.basic.schedule Schedule not_scheduled_no_service thm
+R7996:8019 prosa.classic.model.schedule.global.basic.schedule Schedule not_scheduled_no_service thm
+R8021:8025 Corelib.ssr.ssrbool <> negbK thm
+R8021:8025 Corelib.ssr.ssrbool <> negbK thm
+R8072:8080 mathcomp.boot.seq <> mem_undup thm
+R8072:8080 mathcomp.boot.seq <> mem_undup thm
+R8072:8080 mathcomp.boot.seq <> mem_undup thm
+R8101:8114 prosa.util.bigcat <> mem_bigcat_nat thm
+R8101:8114 prosa.util.bigcat <> mem_bigcat_nat thm
+R8169:8199 prosa.classic.model.schedule.global.basic.schedule Schedule mem_scheduled_jobs_eq_scheduled thm
+R8169:8199 prosa.classic.model.schedule.global.basic.schedule Schedule mem_scheduled_jobs_eq_scheduled thm
+R8169:8199 prosa.classic.model.schedule.global.basic.schedule Schedule mem_scheduled_jobs_eq_scheduled thm
+prf 8312:8349 WorkloadBound workload_bound_jobs_ordered_by_arrival
+binder 8370:8370 <> i:86
+binder 8372:8375 <> elem:87
+R8415:8430 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8391:8393 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R8390:8390 prosa.classic.analysis.global.parallel.workload_bound <> i:86 var
+R8394:8394 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R8411:8414 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R8395:8398 mathcomp.boot.seq <> size def
+R8400:8410 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R8431:8445 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.earlier_arrival var
+R8448:8450 mathcomp.boot.seq <> nth def
+R8469:8469 prosa.classic.analysis.global.parallel.workload_bound <> i:86 var
+R8457:8467 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R8452:8455 prosa.classic.analysis.global.parallel.workload_bound <> elem:87 var
+R8473:8475 mathcomp.boot.seq <> nth def
+R8495:8497 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R8494:8494 prosa.classic.analysis.global.parallel.workload_bound <> i:86 var
+R8482:8492 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R8477:8480 prosa.classic.analysis.global.parallel.workload_bound <> elem:87 var
+R8568:8573 mathcomp.boot.path <> sorted def
+R8591:8601 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R8575:8589 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.earlier_arrival var
+R8568:8573 mathcomp.boot.path <> sorted def
+R8591:8601 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R8575:8589 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.earlier_arrival var
+R8627:8637 mathcomp.boot.path <> sort_sorted thm
+R8647:8651 Corelib.ssr.ssrbool <> total def
+R8654:8668 prosa.classic.analysis.global.parallel.workload_bound <> earlier_arrival vardef
+R8682:8690 mathcomp.boot.ssrnat <> leq_total thm
+R8627:8637 mathcomp.boot.path <> sort_sorted thm
+R8682:8690 mathcomp.boot.ssrnat <> leq_total thm
+R8753:8756 mathcomp.boot.ssrnat <> ltn0 thm
+R8775:8779 mathcomp.boot.path <> pathP thm
+R8716:8726 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R8753:8756 mathcomp.boot.ssrnat <> ltn0 thm
+R8753:8756 mathcomp.boot.ssrnat <> ltn0 thm
+R8775:8779 mathcomp.boot.path <> pathP thm
+R8807:8825 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound.ProofWorkloadBound.MainProof.SimplifyJobSequence <> sec
+sec 8964:8982 WorkloadBound.ProofWorkloadBound.MainProof WorkloadNotManyJobs
+prf 9000:9040 WorkloadBound workload_bound_holds_for_at_most_n_k_jobs
+R9077:9090 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9070:9073 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R9054:9057 mathcomp.boot.seq <> size def
+R9059:9069 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R9074:9076 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.n_k var
+R9143:9158 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R9091:9096 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R9098:9101 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R9113:9114 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R9102:9112 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+binder 9097:9097 <> i:88
+binder 9097:9097 <> i:89
+binder 9097:9097 <> i:90
+R9115:9128 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R9138:9139 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.t1 var
+R9141:9142 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.t2 var
+R9136:9136 prosa.classic.analysis.global.parallel.workload_bound <> i:88 var
+R9130:9134 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.sched var
+R9159:9172 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.workload_bound var
+R9207:9220 prosa.classic.analysis.global.parallel.workload_bound <> workload_bound vardef
+R9223:9223 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound W def
+R9276:9281 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R9283:9286 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R9298:9299 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R9287:9297 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+binder 9282:9282 <> x:91
+binder 9282:9282 <> x:92
+binder 9282:9282 <> x:93
+R9300:9308 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_cost var
+R9310:9312 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R9255:9263 mathcomp.boot.ssrnat <> leq_trans thm
+R9344:9356 mathcomp.boot.bigop <> big_const_seq thm
+R9358:9366 mathcomp.boot.ssrnat <> iter_addn thm
+R9368:9372 mathcomp.boot.ssrnat <> addn0 thm
+R9374:9378 mathcomp.boot.ssrnat <> mulnC thm
+R9380:9388 mathcomp.boot.ssrnat <> leq_mul2r thm
+R9397:9399 Corelib.ssr.ssrbool <> orP thm
+R9276:9281 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R9283:9286 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R9298:9299 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R9287:9297 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+binder 9282:9282 <> x:94
+binder 9282:9282 <> x:95
+binder 9282:9282 <> x:96
+R9300:9308 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_cost var
+R9310:9312 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R9255:9263 mathcomp.boot.ssrnat <> leq_trans thm
+R9344:9356 mathcomp.boot.bigop <> big_const_seq thm
+R9344:9356 mathcomp.boot.bigop <> big_const_seq thm
+R9358:9366 mathcomp.boot.ssrnat <> iter_addn thm
+R9358:9366 mathcomp.boot.ssrnat <> iter_addn thm
+R9368:9372 mathcomp.boot.ssrnat <> addn0 thm
+R9368:9372 mathcomp.boot.ssrnat <> addn0 thm
+R9374:9378 mathcomp.boot.ssrnat <> mulnC thm
+R9374:9378 mathcomp.boot.ssrnat <> mulnC thm
+R9380:9388 mathcomp.boot.ssrnat <> leq_mul2r thm
+R9380:9388 mathcomp.boot.ssrnat <> leq_mul2r thm
+R9397:9399 Corelib.ssr.ssrbool <> orP thm
+R9428:9433 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R9435:9438 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R9440:9441 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+binder 9434:9434 <> pat:97
+R9442:9455 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R9465:9476 mathcomp.boot.bigop <> big_seq_cond thm
+R9465:9476 mathcomp.boot.bigop <> big_seq_cond thm
+R9428:9433 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R9435:9438 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R9440:9441 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+binder 9434:9434 <> pat:98
+R9442:9455 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R9428:9433 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R9435:9438 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R9440:9441 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+binder 9434:9434 <> pat:99
+R9442:9455 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R9465:9476 mathcomp.boot.bigop <> big_seq_cond thm
+R9498:9503 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R9505:9508 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R9510:9511 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+binder 9504:9504 <> pat:100
+R9512:9520 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_cost var
+R9524:9535 mathcomp.boot.bigop <> big_seq_cond thm
+R9524:9535 mathcomp.boot.bigop <> big_seq_cond thm
+R9498:9503 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R9505:9508 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R9510:9511 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+binder 9504:9504 <> pat:101
+R9512:9520 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_cost var
+R9498:9503 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R9505:9508 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R9510:9511 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+binder 9504:9504 <> pat:102
+R9512:9520 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_cost var
+R9524:9535 mathcomp.boot.bigop <> big_seq_cond thm
+R9554:9560 mathcomp.boot.bigop <> leq_sum thm
+R9554:9560 mathcomp.boot.bigop <> leq_sum thm
+R9580:9583 Corelib.ssr.ssrbool <> andP thm
+R9613:9644 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_all_jobs_from_tsk thm
+R9613:9644 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_all_jobs_from_tsk thm
+R9677:9707 prosa.classic.model.schedule.global.basic.schedule ScheduleOfSporadicTask cumulative_service_le_task_cost thm
+R9732:9760 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.H_completed_jobs_dont_execute var
+R9677:9707 prosa.classic.model.schedule.global.basic.schedule ScheduleOfSporadicTask cumulative_service_le_task_cost thm
+R9732:9760 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.H_completed_jobs_dont_execute var
+R9801:9828 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.H_jobs_have_valid_parameters var
+R9801:9828 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.H_jobs_have_valid_parameters var
+R9855:9873 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound.ProofWorkloadBound.MainProof.WorkloadNotManyJobs <> sec
+sec 10030:10046 WorkloadBound.ProofWorkloadBound.MainProof WorkloadSingleJob
+var 10140:10157 WorkloadBound.ProofWorkloadBound.MainProof.WorkloadSingleJob H_at_least_one_job
+R10176:10178 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R10160:10163 mathcomp.boot.seq <> size def
+R10165:10175 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+var 10200:10203 WorkloadBound.ProofWorkloadBound.MainProof.WorkloadSingleJob elem
+R10206:10208 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.Job var
+var 10223:10227 WorkloadBound.ProofWorkloadBound.MainProof.WorkloadSingleJob j_fst
+R10232:10234 mathcomp.boot.seq <> nth def
+R10241:10251 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R10236:10239 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadSingleJob.elem var
+prf 10334:10367 WorkloadBound workload_bound_j_fst_is_job_of_tsk
+R10405:10418 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R10381:10390 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R10400:10404 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadSingleJob.j_fst var
+R10392:10398 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.arr_seq var
+R10439:10452 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R10433:10435 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10419:10426 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_task var
+R10428:10432 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadSingleJob.j_fst var
+R10436:10438 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R10490:10503 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R10485:10488 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R10453:10466 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R10480:10481 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.t1 var
+R10483:10484 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.t2 var
+R10474:10478 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadSingleJob.j_fst var
+R10468:10472 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.sched var
+R10509:10513 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R10504:10508 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadSingleJob.j_fst var
+R10514:10535 prosa.classic.model.schedule.global.basic.schedule Schedule jobs_scheduled_between def
+R10543:10544 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.t1 var
+R10546:10547 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.t2 var
+R10537:10541 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.sched var
+R10584:10615 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_all_jobs_from_tsk thm
+R10618:10624 mathcomp.boot.seq <> mem_nth thm
+R10584:10615 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_all_jobs_from_tsk thm
+R10618:10624 mathcomp.boot.seq <> mem_nth thm
+prf 10714:10750 WorkloadBound workload_bound_holds_for_a_single_job
+R10833:10846 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R10764:10769 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R10771:10774 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R10776:10778 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R10780:10781 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+binder 10775:10775 <> i:107
+binder 10775:10775 <> i:108
+binder 10775:10775 <> i:109
+R10782:10795 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R10828:10829 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.t1 var
+R10831:10832 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.t2 var
+R10804:10806 mathcomp.boot.seq <> nth def
+R10825:10825 prosa.classic.analysis.global.parallel.workload_bound <> i:107 var
+R10813:10823 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R10808:10811 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadSingleJob.elem var
+R10797:10801 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.sched var
+R10847:10860 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.workload_bound var
+R10949:10970 prosa.classic.model.arrival.basic.task SporadicTask is_valid_sporadic_task def
+R10995:11008 prosa.classic.analysis.global.parallel.workload_bound <> workload_bound vardef
+R11011:11011 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound W def
+R11019:11021 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.n_k var
+R11019:11021 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.n_k var
+R11048:11081 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_j_fst_is_job_of_tsk thm
+R11107:11118 mathcomp.boot.bigop <> big_nat_recr thm
+R11123:11129 mathcomp.boot.bigop <> big_geq thm
+R11135:11137 mathcomp.boot.seq <> nth def
+R11139:11142 Corelib.ssr.ssreflect <> lock thm
+R11148:11151 Corelib.ssr.ssreflect <> lock thm
+R11153:11157 mathcomp.boot.ssrnat <> add0n thm
+R11107:11118 mathcomp.boot.bigop <> big_nat_recr thm
+R11107:11118 mathcomp.boot.bigop <> big_nat_recr thm
+R11123:11129 mathcomp.boot.bigop <> big_geq thm
+R11123:11129 mathcomp.boot.bigop <> big_geq thm
+R11139:11142 Corelib.ssr.ssreflect <> lock thm
+R11135:11137 mathcomp.boot.seq <> nth def
+R11135:11137 mathcomp.boot.seq <> nth def
+R11139:11142 Corelib.ssr.ssreflect <> lock thm
+R11148:11151 Corelib.ssr.ssreflect <> lock thm
+R11148:11151 Corelib.ssr.ssreflect <> lock thm
+R11153:11157 mathcomp.boot.ssrnat <> add0n thm
+R11153:11157 mathcomp.boot.ssrnat <> add0n thm
+R11197:11205 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_cost var
+R11207:11209 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R11176:11184 mathcomp.boot.ssrnat <> leq_trans thm
+R11197:11205 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_cost var
+R11207:11209 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R11176:11184 mathcomp.boot.ssrnat <> leq_trans thm
+R11244:11274 prosa.classic.model.schedule.global.basic.schedule ScheduleOfSporadicTask cumulative_service_le_task_cost thm
+R11244:11274 prosa.classic.model.schedule.global.basic.schedule ScheduleOfSporadicTask cumulative_service_le_task_cost thm
+R11332:11359 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.H_jobs_have_valid_parameters var
+R11332:11359 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.H_jobs_have_valid_parameters var
+R11398:11406 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_cost var
+R11408:11410 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R11412:11416 mathcomp.boot.ssrnat <> mul1n thm
+R11418:11426 mathcomp.boot.ssrnat <> leq_mul2r thm
+R11435:11437 Corelib.ssr.ssrbool <> orP thm
+R11412:11416 mathcomp.boot.ssrnat <> mul1n thm
+R11398:11406 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_cost var
+R11408:11410 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R11398:11406 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_cost var
+R11408:11410 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R11412:11416 mathcomp.boot.ssrnat <> mul1n thm
+R11418:11426 mathcomp.boot.ssrnat <> leq_mul2r thm
+R11418:11426 mathcomp.boot.ssrnat <> leq_mul2r thm
+R11435:11437 Corelib.ssr.ssrbool <> orP thm
+R11463:11471 prosa.classic.util.div_mod <> ceil_neq0 thm
+R11463:11471 prosa.classic.util.div_mod <> ceil_neq0 thm
+R11548:11552 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.delta var
+R11527:11535 mathcomp.boot.ssrnat <> leq_trans thm
+R11570:11577 mathcomp.boot.ssrnat <> leq_addr thm
+R11548:11552 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.delta var
+R11527:11535 mathcomp.boot.ssrnat <> leq_trans thm
+R11570:11577 mathcomp.boot.ssrnat <> leq_addr thm
+R11600:11603 mathcomp.boot.ssrnat <> lt0n thm
+R11612:11614 mathcomp.boot.eqtype <> eqP def
+R11600:11603 mathcomp.boot.ssrnat <> lt0n thm
+R11600:11603 mathcomp.boot.ssrnat <> lt0n thm
+R11612:11614 mathcomp.boot.eqtype <> eqP def
+R11657:11659 mathcomp.boot.eqtype <> eqP def
+R11696:11697 prosa.classic.analysis.global.parallel.workload_bound <> t2 vardef
+R11712:11716 mathcomp.boot.ssrnat <> addn0 thm
+R11712:11716 mathcomp.boot.ssrnat <> addn0 thm
+R11712:11716 mathcomp.boot.ssrnat <> addn0 thm
+R11741:11754 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R11765:11771 mathcomp.boot.bigop <> big_geq thm
+R11765:11771 mathcomp.boot.bigop <> big_geq thm
+R11765:11771 mathcomp.boot.bigop <> big_geq thm
+R11818:11834 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound.ProofWorkloadBound.MainProof.WorkloadSingleJob <> sec
+sec 11982:12002 WorkloadBound.ProofWorkloadBound.MainProof WorkloadTwoOrMoreJobs
+var 12066:12077 WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs num_mid_jobs
+R12080:12082 Corelib.Init.Datatypes <> nat ind
+var 12104:12122 WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs H_at_least_two_jobs
+R12142:12144 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12126:12129 mathcomp.boot.seq <> size def
+R12131:12141 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R12157:12159 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+2' not
+R12145:12156 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.num_mid_jobs var
+var 12188:12191 WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs elem
+R12194:12196 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.Job var
+var 12211:12215 WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs j_fst
+R12220:12222 mathcomp.boot.seq <> nth def
+R12229:12239 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R12224:12227 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.elem var
+var 12256:12260 WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs j_lst
+R12265:12267 mathcomp.boot.seq <> nth def
+R12298:12300 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R12286:12297 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.num_mid_jobs var
+R12274:12284 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R12269:12272 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.elem var
+prf 12380:12413 WorkloadBound workload_bound_j_lst_is_job_of_tsk
+R12451:12464 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R12427:12436 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R12446:12450 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.j_lst var
+R12438:12444 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.arr_seq var
+R12485:12498 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R12479:12481 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12465:12472 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_task var
+R12474:12478 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.j_lst var
+R12482:12484 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R12536:12549 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R12531:12534 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R12499:12512 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R12526:12527 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.t1 var
+R12529:12530 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.t2 var
+R12520:12524 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.j_lst var
+R12514:12518 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.sched var
+R12555:12559 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R12550:12554 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.j_lst var
+R12560:12581 prosa.classic.model.schedule.global.basic.schedule Schedule jobs_scheduled_between def
+R12589:12590 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.t1 var
+R12592:12593 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.t2 var
+R12583:12587 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.sched var
+R12627:12658 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_all_jobs_from_tsk thm
+R12661:12667 mathcomp.boot.seq <> mem_nth thm
+R12627:12658 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_all_jobs_from_tsk thm
+R12661:12667 mathcomp.boot.seq <> mem_nth thm
+R12691:12709 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.H_at_least_two_jobs var
+R12691:12709 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.H_at_least_two_jobs var
+R12691:12709 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.H_at_least_two_jobs var
+prf 12820:12876 WorkloadBound workload_bound_response_time_of_first_job_inside_interval
+R12892:12895 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R12890:12891 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.t1 var
+R12913:12915 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R12896:12906 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_arrival var
+R12908:12912 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.j_fst var
+R12916:12920 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.R_tsk var
+R12956:12961 mathcomp.boot.ssrnat <> leqNgt thm
+R12971:12974 Corelib.ssr.ssrbool <> negP thm
+R12984:12986 Corelib.Init.Logic <> not def
+R12956:12961 mathcomp.boot.ssrnat <> leqNgt thm
+R12956:12961 mathcomp.boot.ssrnat <> leqNgt thm
+R12971:12974 Corelib.ssr.ssrbool <> negP thm
+R13019:13050 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_all_jobs_from_tsk thm
+R13083:13089 mathcomp.boot.seq <> mem_nth thm
+R13083:13089 mathcomp.boot.seq <> mem_nth thm
+R13132:13140 mathcomp.boot.ssrnat <> ltn_trans thm
+R13179:13197 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.H_at_least_two_jobs var
+R13132:13140 mathcomp.boot.ssrnat <> ltn_trans thm
+R13179:13197 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.H_at_least_two_jobs var
+R13179:13197 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.H_at_least_two_jobs var
+R13241:13244 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.elem var
+R13241:13244 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.elem var
+R13274:13276 mathcomp.boot.eqtype <> eqP def
+R13408:13412 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.R_tsk var
+R13338:13373 prosa.classic.model.schedule.global.response_time ResponseTime cumulative_service_after_job_rt_zero thm
+R13387:13394 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_cost var
+R13375:13385 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_arrival var
+R13457:13460 mathcomp.boot.ssrnat <> ltnW thm
+R13408:13412 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.R_tsk var
+R13338:13373 prosa.classic.model.schedule.global.response_time ResponseTime cumulative_service_after_job_rt_zero thm
+R13387:13394 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_cost var
+R13375:13385 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_arrival var
+R13457:13460 mathcomp.boot.ssrnat <> ltnW thm
+R13479:13499 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.H_response_time_bound var
+R13479:13499 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.H_response_time_bound var
+R13557:13558 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.t1 var
+R13536:13544 mathcomp.boot.ssrnat <> leq_trans thm
+R13576:13583 mathcomp.boot.ssrnat <> leq_addr thm
+R13557:13558 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.t1 var
+R13536:13544 mathcomp.boot.ssrnat <> leq_trans thm
+R13576:13583 mathcomp.boot.ssrnat <> leq_addr thm
+prf 13692:13745 WorkloadBound workload_bound_last_job_arrives_before_end_of_interval
+R13776:13778 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R13759:13769 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_arrival var
+R13771:13775 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.j_lst var
+R13779:13780 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.t2 var
+R13816:13821 mathcomp.boot.ssrnat <> leqNgt thm
+R13830:13833 Corelib.ssr.ssrbool <> negP thm
+R13843:13845 Corelib.Init.Logic <> not def
+R13816:13821 mathcomp.boot.ssrnat <> leqNgt thm
+R13816:13821 mathcomp.boot.ssrnat <> leqNgt thm
+R13830:13833 Corelib.ssr.ssrbool <> negP thm
+R13877:13908 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_all_jobs_from_tsk thm
+R13941:13947 mathcomp.boot.seq <> mem_nth thm
+R13980:13982 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R13968:13979 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.num_mid_jobs var
+R13941:13947 mathcomp.boot.seq <> mem_nth thm
+R13980:13982 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R13968:13979 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.num_mid_jobs var
+R14011:14019 mathcomp.boot.ssrnat <> ltn_add2r thm
+R14024:14028 mathcomp.boot.ssrnat <> addn1 thm
+R14030:14048 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.H_at_least_two_jobs var
+R14050:14054 mathcomp.boot.ssrnat <> addn1 thm
+R14011:14019 mathcomp.boot.ssrnat <> ltn_add2r thm
+R14011:14019 mathcomp.boot.ssrnat <> ltn_add2r thm
+R14024:14028 mathcomp.boot.ssrnat <> addn1 thm
+R14024:14028 mathcomp.boot.ssrnat <> addn1 thm
+R14030:14048 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.H_at_least_two_jobs var
+R14030:14048 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.H_at_least_two_jobs var
+R14050:14054 mathcomp.boot.ssrnat <> addn1 thm
+R14050:14054 mathcomp.boot.ssrnat <> addn1 thm
+R14099:14102 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.elem var
+R14099:14102 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.elem var
+R14132:14134 mathcomp.boot.eqtype <> eqP def
+R14171:14184 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R14222:14263 prosa.classic.model.schedule.global.basic.schedule Schedule cumulative_service_before_job_arrival_zero thm
+R14222:14263 prosa.classic.model.schedule.global.basic.schedule Schedule cumulative_service_before_job_arrival_zero thm
+prf 14355:14391 WorkloadBound workload_bound_service_of_middle_jobs
+R14500:14515 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R14405:14410 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R14412:14415 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R14417:14419 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R14432:14445 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R14420:14431 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.num_mid_jobs var
+binder 14416:14416 <> i:116
+binder 14416:14416 <> i:117
+binder 14416:14416 <> i:118
+R14446:14459 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R14495:14496 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.t1 var
+R14498:14499 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.t2 var
+R14468:14470 mathcomp.boot.seq <> nth def
+R14490:14492 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R14489:14489 prosa.classic.analysis.global.parallel.workload_bound <> i:116 var
+R14477:14487 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R14472:14475 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.elem var
+R14461:14465 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.sched var
+R14528:14530 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R14516:14527 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.num_mid_jobs var
+R14531:14539 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_cost var
+R14541:14543 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R14610:14612 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R14598:14609 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.num_mid_jobs var
+R14613:14621 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_cost var
+R14623:14625 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R14577:14585 mathcomp.boot.ssrnat <> leq_trans thm
+R14657:14665 mathcomp.boot.ssrnat <> leq_mul2l thm
+R14674:14676 Corelib.ssr.ssrbool <> orP thm
+R14610:14612 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R14598:14609 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.num_mid_jobs var
+R14613:14621 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_cost var
+R14623:14625 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R14577:14585 mathcomp.boot.ssrnat <> leq_trans thm
+R14657:14665 mathcomp.boot.ssrnat <> leq_mul2l thm
+R14657:14665 mathcomp.boot.ssrnat <> leq_mul2l thm
+R14674:14676 Corelib.ssr.ssrbool <> orP thm
+R14724:14729 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R14731:14734 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R14736:14738 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R14751:14752 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R14739:14750 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.num_mid_jobs var
+binder 14735:14735 <> i:119
+binder 14735:14735 <> i:120
+binder 14735:14735 <> i:121
+R14753:14761 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_cost var
+R14763:14765 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R14703:14711 mathcomp.boot.ssrnat <> leq_trans thm
+R14797:14809 mathcomp.boot.bigop <> big_const_nat thm
+R14811:14819 mathcomp.boot.ssrnat <> iter_addn thm
+R14821:14825 mathcomp.boot.ssrnat <> addn0 thm
+R14827:14831 mathcomp.boot.ssrnat <> mulnC thm
+R14833:14837 mathcomp.boot.ssrnat <> subn0 thm
+R14724:14729 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R14731:14734 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R14736:14738 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R14751:14752 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R14739:14750 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.num_mid_jobs var
+binder 14735:14735 <> i:122
+binder 14735:14735 <> i:123
+binder 14735:14735 <> i:124
+R14753:14761 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_cost var
+R14763:14765 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R14703:14711 mathcomp.boot.ssrnat <> leq_trans thm
+R14797:14809 mathcomp.boot.bigop <> big_const_nat thm
+R14797:14809 mathcomp.boot.bigop <> big_const_nat thm
+R14811:14819 mathcomp.boot.ssrnat <> iter_addn thm
+R14811:14819 mathcomp.boot.ssrnat <> iter_addn thm
+R14821:14825 mathcomp.boot.ssrnat <> addn0 thm
+R14821:14825 mathcomp.boot.ssrnat <> addn0 thm
+R14827:14831 mathcomp.boot.ssrnat <> mulnC thm
+R14827:14831 mathcomp.boot.ssrnat <> mulnC thm
+R14833:14837 mathcomp.boot.ssrnat <> subn0 thm
+R14833:14837 mathcomp.boot.ssrnat <> subn0 thm
+R14858:14869 mathcomp.boot.bigop <> big_nat_cond thm
+R14872:14877 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R14879:14882 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R14884:14886 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R14899:14900 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R14887:14898 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.num_mid_jobs var
+binder 14883:14883 <> i:125
+binder 14883:14883 <> i:126
+binder 14883:14883 <> i:127
+R14901:14909 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_cost var
+R14913:14924 mathcomp.boot.bigop <> big_nat_cond thm
+R14858:14869 mathcomp.boot.bigop <> big_nat_cond thm
+R14858:14869 mathcomp.boot.bigop <> big_nat_cond thm
+R14913:14924 mathcomp.boot.bigop <> big_nat_cond thm
+R14872:14877 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R14879:14882 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R14884:14886 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R14899:14900 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R14887:14898 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.num_mid_jobs var
+binder 14883:14883 <> i:128
+binder 14883:14883 <> i:129
+binder 14883:14883 <> i:130
+R14901:14909 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_cost var
+R14872:14877 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R14879:14882 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R14884:14886 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R14899:14900 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R14887:14898 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.num_mid_jobs var
+binder 14883:14883 <> i:131
+binder 14883:14883 <> i:132
+binder 14883:14883 <> i:133
+R14901:14909 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_cost var
+R14913:14924 mathcomp.boot.bigop <> big_nat_cond thm
+R14943:14949 mathcomp.boot.bigop <> leq_sum thm
+R14970:14974 Corelib.ssr.ssrbool <> andbT thm
+R14943:14949 mathcomp.boot.bigop <> leq_sum thm
+R14970:14974 Corelib.ssr.ssrbool <> andbT thm
+R14970:14974 Corelib.ssr.ssrbool <> andbT thm
+R14986:14989 Corelib.ssr.ssrbool <> andP thm
+R15018:15049 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_all_jobs_from_tsk thm
+R15094:15096 mathcomp.boot.seq <> nth def
+R15116:15118 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R15103:15113 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R15098:15101 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.elem var
+R15094:15096 mathcomp.boot.seq <> nth def
+R15116:15118 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R15103:15113 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R15098:15101 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.elem var
+R15140:15146 mathcomp.boot.seq <> mem_nth thm
+R15157:15175 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.H_at_least_two_jobs var
+R15140:15146 mathcomp.boot.seq <> mem_nth thm
+R15157:15175 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.H_at_least_two_jobs var
+R15157:15175 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.H_at_least_two_jobs var
+R15201:15204 mathcomp.boot.ssrnat <> ltnS thm
+R15234:15245 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.num_mid_jobs var
+R15213:15221 mathcomp.boot.ssrnat <> leq_trans thm
+R15201:15204 mathcomp.boot.ssrnat <> ltnS thm
+R15201:15204 mathcomp.boot.ssrnat <> ltnS thm
+R15234:15245 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.num_mid_jobs var
+R15213:15221 mathcomp.boot.ssrnat <> leq_trans thm
+R15311:15341 prosa.classic.model.schedule.global.basic.schedule ScheduleOfSporadicTask cumulative_service_le_task_cost thm
+R15311:15341 prosa.classic.model.schedule.global.basic.schedule ScheduleOfSporadicTask cumulative_service_le_task_cost thm
+R15372:15399 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.H_jobs_have_valid_parameters var
+R15372:15399 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.H_jobs_have_valid_parameters var
+prf 15532:15569 WorkloadBound workload_bound_many_periods_in_between
+R15620:15623 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R15639:15642 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R15658:15658 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R15636:15638 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R15624:15635 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.num_mid_jobs var
+R15643:15653 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_period var
+R15655:15657 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R15600:15602 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R15583:15593 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_arrival var
+R15595:15599 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.j_lst var
+R15603:15613 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_arrival var
+R15615:15619 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.j_fst var
+R15715:15715 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15712:15714 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R15700:15711 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.num_mid_jobs var
+R15716:15716 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R15733:15736 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R15717:15720 mathcomp.boot.seq <> size def
+R15722:15732 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R15715:15715 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15712:15714 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R15700:15711 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.num_mid_jobs var
+R15716:15716 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R15733:15736 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R15717:15720 mathcomp.boot.seq <> size def
+R15722:15732 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R15764:15782 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.H_at_least_two_jobs var
+R15764:15782 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.H_at_least_two_jobs var
+R15764:15782 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.H_at_least_two_jobs var
+R15803:15807 prosa.classic.analysis.global.parallel.workload_bound <> j_fst vardef
+R15810:15814 prosa.classic.analysis.global.parallel.workload_bound <> j_lst vardef
+R15830:15844 prosa.classic.util.sum <> telescoping_sum thm
+R15878:15915 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_jobs_ordered_by_arrival thm
+R15830:15844 prosa.classic.util.sum <> telescoping_sum thm
+R15830:15844 prosa.classic.util.sum <> telescoping_sum thm
+R15878:15915 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_jobs_ordered_by_arrival thm
+R15939:15941 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R15944:15946 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R15948:15952 mathcomp.boot.ssrnat <> addn0 thm
+R15954:15958 mathcomp.boot.ssrnat <> mulnC thm
+R15961:15969 mathcomp.boot.ssrnat <> iter_addn thm
+R15977:15979 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R15981:15985 mathcomp.boot.ssrnat <> subn0 thm
+R15988:16000 mathcomp.boot.bigop <> big_const_nat thm
+R15948:15952 mathcomp.boot.ssrnat <> addn0 thm
+R15939:15941 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R15944:15946 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R15939:15941 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R15944:15946 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R15948:15952 mathcomp.boot.ssrnat <> addn0 thm
+R15954:15958 mathcomp.boot.ssrnat <> mulnC thm
+R15954:15958 mathcomp.boot.ssrnat <> mulnC thm
+R15961:15969 mathcomp.boot.ssrnat <> iter_addn thm
+R15961:15969 mathcomp.boot.ssrnat <> iter_addn thm
+R15981:15985 mathcomp.boot.ssrnat <> subn0 thm
+R15977:15979 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R15977:15979 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R15981:15985 mathcomp.boot.ssrnat <> subn0 thm
+R15988:16000 mathcomp.boot.bigop <> big_const_nat thm
+R15988:16000 mathcomp.boot.bigop <> big_const_nat thm
+R16022:16033 mathcomp.boot.bigop <> big_nat_cond thm
+R16036:16041 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R16043:16046 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R16048:16050 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R16052:16053 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R16057:16057 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+binder 16047:16047 <> i:134
+binder 16047:16047 <> i:135
+binder 16047:16047 <> i:136
+R16055:16055 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R16059:16070 mathcomp.boot.bigop <> big_nat_cond thm
+R16022:16033 mathcomp.boot.bigop <> big_nat_cond thm
+R16022:16033 mathcomp.boot.bigop <> big_nat_cond thm
+R16059:16070 mathcomp.boot.bigop <> big_nat_cond thm
+R16036:16041 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R16043:16046 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R16048:16050 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R16052:16053 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R16057:16057 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+binder 16047:16047 <> i:137
+binder 16047:16047 <> i:138
+binder 16047:16047 <> i:139
+R16055:16055 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R16036:16041 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R16043:16046 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R16048:16050 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R16052:16053 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R16057:16057 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+binder 16047:16047 <> i:140
+binder 16047:16047 <> i:141
+binder 16047:16047 <> i:142
+R16055:16055 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R16059:16070 mathcomp.boot.bigop <> big_nat_cond thm
+R16089:16095 mathcomp.boot.bigop <> leq_sum thm
+R16116:16120 Corelib.ssr.ssrbool <> andbT thm
+R16089:16095 mathcomp.boot.bigop <> leq_sum thm
+R16116:16120 Corelib.ssr.ssrbool <> andbT thm
+R16116:16120 Corelib.ssr.ssrbool <> andbT thm
+R16132:16135 Corelib.ssr.ssrbool <> andP thm
+R16228:16230 mathcomp.boot.seq <> nth def
+R16237:16247 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R16232:16235 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.elem var
+R16228:16230 mathcomp.boot.seq <> nth def
+R16237:16247 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R16232:16235 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.elem var
+R16228:16230 mathcomp.boot.seq <> nth def
+R16237:16247 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R16232:16235 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.elem var
+R16274:16276 mathcomp.boot.seq <> nth def
+R16296:16298 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R16283:16293 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R16278:16281 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.elem var
+R16274:16276 mathcomp.boot.seq <> nth def
+R16296:16298 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R16283:16293 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R16278:16281 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.elem var
+R16274:16276 mathcomp.boot.seq <> nth def
+R16296:16298 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R16283:16293 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R16278:16281 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.elem var
+R16398:16401 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R16383:16393 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_arrival var
+R16402:16412 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_arrival var
+R16398:16401 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R16383:16393 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_arrival var
+R16402:16412 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_arrival var
+R16461:16498 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_jobs_ordered_by_arrival thm
+R16461:16498 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_jobs_ordered_by_arrival thm
+R16532:16563 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_all_jobs_from_tsk thm
+R16532:16563 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_all_jobs_from_tsk thm
+R16593:16599 mathcomp.boot.seq <> mem_nth thm
+R16603:16611 mathcomp.boot.ssrnat <> ltn_trans thm
+R16593:16599 mathcomp.boot.seq <> mem_nth thm
+R16603:16611 mathcomp.boot.ssrnat <> ltn_trans thm
+R16628:16638 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R16705:16736 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_all_jobs_from_tsk thm
+R16705:16736 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_all_jobs_from_tsk thm
+R16768:16774 mathcomp.boot.seq <> mem_nth thm
+R16768:16774 mathcomp.boot.seq <> mem_nth thm
+R16786:16796 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R17254:17257 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R17225:17227 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R17210:17220 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_arrival var
+R17228:17238 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_period var
+R17241:17248 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_task var
+R17258:17268 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_arrival var
+R17254:17257 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R17225:17227 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R17210:17220 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_arrival var
+R17228:17238 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_period var
+R17241:17248 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_task var
+R17258:17268 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_arrival var
+R17307:17322 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.H_sporadic_tasks var
+R17307:17322 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.H_sporadic_tasks var
+R17371:17373 Corelib.Init.Logic <> not def
+R17399:17401 mathcomp.boot.eqtype <> eqP def
+R17428:17435 mathcomp.boot.seq <> nth_uniq thm
+R17428:17435 mathcomp.boot.seq <> nth_uniq thm
+R17428:17435 mathcomp.boot.seq <> nth_uniq thm
+R17466:17468 mathcomp.boot.eqtype <> eqP def
+R17530:17530 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R17547:17550 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R17531:17534 mathcomp.boot.seq <> size def
+R17536:17546 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R17509:17517 mathcomp.boot.ssrnat <> ltn_trans thm
+R17530:17530 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R17547:17550 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R17531:17534 mathcomp.boot.seq <> size def
+R17536:17546 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R17509:17517 mathcomp.boot.ssrnat <> ltn_trans thm
+R17563:17573 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R17563:17573 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R17608:17618 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R17652:17660 mathcomp.boot.path <> sort_uniq thm
+R17664:17677 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.scheduled_jobs var
+R17679:17689 mathcomp.boot.seq <> filter_uniq thm
+R17694:17703 mathcomp.boot.seq <> undup_uniq thm
+R17652:17660 mathcomp.boot.path <> sort_uniq thm
+R17652:17660 mathcomp.boot.path <> sort_uniq thm
+R17664:17677 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.scheduled_jobs var
+R17664:17677 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.scheduled_jobs var
+R17679:17689 mathcomp.boot.seq <> filter_uniq thm
+R17679:17689 mathcomp.boot.seq <> filter_uniq thm
+R17694:17703 mathcomp.boot.seq <> undup_uniq thm
+R17694:17703 mathcomp.boot.seq <> undup_uniq thm
+R17776:17789 prosa.util.nat <> leq_subRL_impl thm
+R17776:17789 prosa.util.nat <> leq_subRL_impl thm
+R17776:17789 prosa.util.nat <> leq_subRL_impl thm
+prf 17901:17934 WorkloadBound workload_bound_n_k_covers_all_jobs
+R17951:17954 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R17967:17969 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+2' not
+R17955:17966 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.num_mid_jobs var
+R17948:17950 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.n_k var
+R18058:18079 prosa.classic.model.arrival.basic.task SporadicTask is_valid_sporadic_task def
+R18110:18115 mathcomp.boot.ssrnat <> leqNgt thm
+R18124:18127 Corelib.ssr.ssrbool <> negP thm
+R18137:18139 Corelib.Init.Logic <> not def
+R18110:18115 mathcomp.boot.ssrnat <> leqNgt thm
+R18110:18115 mathcomp.boot.ssrnat <> leqNgt thm
+R18124:18127 Corelib.ssr.ssrbool <> negP thm
+R18218:18221 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R18227:18229 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R18222:18226 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.delta var
+R18230:18234 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.R_tsk var
+R18198:18200 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R18181:18191 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_arrival var
+R18193:18197 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.j_lst var
+R18201:18211 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_arrival var
+R18213:18217 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.j_fst var
+R18218:18221 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R18227:18229 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R18222:18226 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.delta var
+R18230:18234 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.R_tsk var
+R18198:18200 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R18181:18191 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_arrival var
+R18193:18197 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.j_lst var
+R18201:18211 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_arrival var
+R18213:18217 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.j_fst var
+R18304:18306 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R18301:18303 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R18289:18300 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.num_mid_jobs var
+R18307:18317 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_period var
+R18319:18321 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R18268:18276 mathcomp.boot.ssrnat <> leq_trans thm
+R18353:18390 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_many_periods_in_between thm
+R18304:18306 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R18301:18303 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R18289:18300 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.num_mid_jobs var
+R18307:18317 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_period var
+R18319:18321 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R18268:18276 mathcomp.boot.ssrnat <> leq_trans thm
+R18353:18390 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_many_periods_in_between thm
+R18435:18437 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R18432:18434 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.n_k var
+R18438:18448 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_period var
+R18450:18452 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R18411:18419 mathcomp.boot.ssrnat <> leq_trans thm
+R18486:18494 mathcomp.boot.ssrnat <> leq_mul2r thm
+R18503:18505 Corelib.ssr.ssrbool <> orP thm
+R18435:18437 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R18432:18434 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.n_k var
+R18438:18448 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_period var
+R18450:18452 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R18411:18419 mathcomp.boot.ssrnat <> leq_trans thm
+R18486:18494 mathcomp.boot.ssrnat <> leq_mul2r thm
+R18486:18494 mathcomp.boot.ssrnat <> leq_mul2r thm
+R18503:18505 Corelib.ssr.ssrbool <> orP thm
+R18534:18536 prosa.classic.analysis.global.parallel.workload_bound <> n_k vardef
+R18539:18546 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound max_jobs def
+R18549:18556 prosa.classic.util.div_mod <> div_ceil def
+R18596:18599 mathcomp.boot.div <> ::nat_scope:x_'%|'_x not
+R18581:18591 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_period var
+R18593:18595 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R18605:18607 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R18600:18604 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.delta var
+R18608:18612 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.R_tsk var
+R18596:18599 mathcomp.boot.div <> ::nat_scope:x_'%|'_x not
+R18581:18591 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_period var
+R18593:18595 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R18605:18607 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R18600:18604 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.delta var
+R18608:18612 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.R_tsk var
+R18660:18666 mathcomp.boot.div <> dvdn_eq thm
+R18660:18666 mathcomp.boot.div <> dvdn_eq thm
+R18660:18666 mathcomp.boot.div <> dvdn_eq thm
+R18690:18692 mathcomp.boot.eqtype <> eqP def
+R18764:18767 mathcomp.boot.ssrnat <> ltnW thm
+R18770:18777 mathcomp.boot.div <> ltn_ceil thm
+R18764:18767 mathcomp.boot.ssrnat <> ltnW thm
+R18770:18777 mathcomp.boot.div <> ltn_ceil thm
+R18843:18853 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_arrival var
+R18855:18859 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.j_fst var
+R18822:18830 mathcomp.boot.ssrnat <> leq_add2r thm
+R18843:18853 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_arrival var
+R18855:18859 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.j_fst var
+R18822:18830 mathcomp.boot.ssrnat <> leq_add2r thm
+R18843:18853 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_arrival var
+R18855:18859 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.j_fst var
+R18822:18830 mathcomp.boot.ssrnat <> leq_add2r thm
+R18892:18896 mathcomp.boot.ssrnat <> addnC thm
+R18898:18902 prosa.classic.util.nat <> subh1 thm
+R18892:18896 mathcomp.boot.ssrnat <> addnC thm
+R18892:18896 mathcomp.boot.ssrnat <> addnC thm
+R18898:18902 prosa.classic.util.nat <> subh1 thm
+R18898:18902 prosa.classic.util.nat <> subh1 thm
+R18959:18963 prosa.classic.analysis.global.parallel.workload_bound <> j_fst vardef
+R18966:18970 prosa.classic.analysis.global.parallel.workload_bound <> j_lst vardef
+R18984:18986 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R18988:18992 mathcomp.boot.ssrnat <> add0n thm
+R18988:18992 mathcomp.boot.ssrnat <> add0n thm
+R18984:18986 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R18984:18986 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R18988:18992 mathcomp.boot.ssrnat <> add0n thm
+R19013:19024 prosa.classic.util.sorting <> prev_le_next thm
+R19043:19061 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.H_at_least_two_jobs var
+R19063:19067 mathcomp.boot.ssrnat <> add0n thm
+R19069:19073 mathcomp.boot.ssrnat <> leqnn thm
+R19013:19024 prosa.classic.util.sorting <> prev_le_next thm
+R19043:19061 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.H_at_least_two_jobs var
+R19043:19061 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.H_at_least_two_jobs var
+R19063:19067 mathcomp.boot.ssrnat <> add0n thm
+R19063:19067 mathcomp.boot.ssrnat <> add0n thm
+R19069:19073 mathcomp.boot.ssrnat <> leqnn thm
+R19069:19073 mathcomp.boot.ssrnat <> leqnn thm
+R19102:19139 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_jobs_ordered_by_arrival thm
+R19102:19139 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_jobs_ordered_by_arrival thm
+R19195:19197 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R19191:19193 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R19174:19184 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_arrival var
+R19186:19190 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.j_lst var
+R19200:19205 mathcomp.boot.ssrnat <> subnBA thm
+R19210:19214 mathcomp.boot.ssrnat <> subnn thm
+R19216:19220 mathcomp.boot.ssrnat <> subn0 thm
+R19200:19205 mathcomp.boot.ssrnat <> subnBA thm
+R19195:19197 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R19191:19193 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R19174:19184 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_arrival var
+R19186:19190 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.j_lst var
+R19195:19197 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R19191:19193 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R19174:19184 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.job_arrival var
+R19186:19190 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.j_lst var
+R19200:19205 mathcomp.boot.ssrnat <> subnBA thm
+R19210:19214 mathcomp.boot.ssrnat <> subnn thm
+R19210:19214 mathcomp.boot.ssrnat <> subnn thm
+R19216:19220 mathcomp.boot.ssrnat <> subn0 thm
+R19216:19220 mathcomp.boot.ssrnat <> subn0 thm
+R19258:19260 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R19253:19257 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.delta var
+R19263:19267 mathcomp.boot.ssrnat <> addnC thm
+R19269:19273 mathcomp.boot.ssrnat <> addnA thm
+R19263:19267 mathcomp.boot.ssrnat <> addnC thm
+R19258:19260 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R19253:19257 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.delta var
+R19258:19260 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R19253:19257 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.delta var
+R19263:19267 mathcomp.boot.ssrnat <> addnC thm
+R19269:19273 mathcomp.boot.ssrnat <> addnA thm
+R19269:19273 mathcomp.boot.ssrnat <> addnA thm
+R19326:19328 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R19324:19325 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.t1 var
+R19329:19333 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.delta var
+R19303:19311 mathcomp.boot.ssrnat <> leq_trans thm
+R19326:19328 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R19324:19325 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.t1 var
+R19329:19333 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.delta var
+R19303:19311 mathcomp.boot.ssrnat <> leq_trans thm
+R19392:19400 mathcomp.boot.ssrnat <> leq_add2r thm
+R19392:19400 mathcomp.boot.ssrnat <> leq_add2r thm
+R19392:19400 mathcomp.boot.ssrnat <> leq_add2r thm
+R19424:19480 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_response_time_of_first_job_inside_interval thm
+R19424:19480 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_response_time_of_first_job_inside_interval thm
+R19517:19570 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_last_job_arrives_before_end_of_interval thm
+R19617:19618 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.t2 var
+R19592:19604 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R19646:19649 mathcomp.boot.ssrnat <> ltnn thm
+R19617:19618 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.t2 var
+R19592:19604 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R19646:19649 mathcomp.boot.ssrnat <> ltnn thm
+R19646:19649 mathcomp.boot.ssrnat <> ltnn thm
+prf 19744:19763 WorkloadBound workload_bound_holds
+R19875:19888 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R19779:19784 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R19786:19789 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R19791:19793 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R19809:19823 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R19806:19808 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+2' not
+R19794:19805 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.num_mid_jobs var
+binder 19790:19790 <> i:143
+binder 19790:19790 <> i:144
+binder 19790:19790 <> i:145
+R19824:19837 prosa.classic.model.schedule.global.basic.schedule Schedule service_during def
+R19870:19871 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.t1 var
+R19873:19874 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.t2 var
+R19846:19848 mathcomp.boot.seq <> nth def
+R19867:19867 prosa.classic.analysis.global.parallel.workload_bound <> i:143 var
+R19855:19865 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R19850:19853 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.elem var
+R19839:19843 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.sched var
+R19889:19902 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.workload_bound var
+R19937:19950 prosa.classic.analysis.global.parallel.workload_bound <> workload_bound vardef
+R19953:19953 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound W def
+R19961:19963 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.n_k var
+R19961:19963 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.n_k var
+R19988:20021 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_n_k_covers_all_jobs thm
+R20076:20078 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R20073:20075 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+2' not
+R20061:20072 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.num_mid_jobs var
+R20079:20087 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_cost var
+R20089:20091 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R20040:20048 mathcomp.boot.ssrnat <> leq_trans thm
+R20123:20131 mathcomp.boot.ssrnat <> leq_mul2r thm
+R20140:20142 Corelib.ssr.ssrbool <> orP thm
+R20076:20078 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R20073:20075 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+2' not
+R20061:20072 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.num_mid_jobs var
+R20079:20087 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_cost var
+R20089:20091 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R20040:20048 mathcomp.boot.ssrnat <> leq_trans thm
+R20123:20131 mathcomp.boot.ssrnat <> leq_mul2r thm
+R20123:20131 mathcomp.boot.ssrnat <> leq_mul2r thm
+R20140:20142 Corelib.ssr.ssrbool <> orP thm
+R20189:20194 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R20196:20199 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R20201:20203 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R20219:20220 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R20216:20218 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+2' not
+R20204:20215 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.num_mid_jobs var
+binder 20200:20200 <> i:146
+binder 20200:20200 <> i:147
+binder 20200:20200 <> i:148
+R20221:20229 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_cost var
+R20231:20233 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R20168:20176 mathcomp.boot.ssrnat <> leq_trans thm
+R20265:20277 mathcomp.boot.bigop <> big_const_nat thm
+R20279:20287 mathcomp.boot.ssrnat <> iter_addn thm
+R20289:20293 mathcomp.boot.ssrnat <> addn0 thm
+R20295:20299 mathcomp.boot.ssrnat <> subn0 thm
+R20301:20305 mathcomp.boot.ssrnat <> mulnC thm
+R20189:20194 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R20196:20199 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R20201:20203 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R20219:20220 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R20216:20218 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+2' not
+R20204:20215 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.num_mid_jobs var
+binder 20200:20200 <> i:149
+binder 20200:20200 <> i:150
+binder 20200:20200 <> i:151
+R20221:20229 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.task_cost var
+R20231:20233 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R20168:20176 mathcomp.boot.ssrnat <> leq_trans thm
+R20265:20277 mathcomp.boot.bigop <> big_const_nat thm
+R20265:20277 mathcomp.boot.bigop <> big_const_nat thm
+R20279:20287 mathcomp.boot.ssrnat <> iter_addn thm
+R20279:20287 mathcomp.boot.ssrnat <> iter_addn thm
+R20289:20293 mathcomp.boot.ssrnat <> addn0 thm
+R20289:20293 mathcomp.boot.ssrnat <> addn0 thm
+R20295:20299 mathcomp.boot.ssrnat <> subn0 thm
+R20295:20299 mathcomp.boot.ssrnat <> subn0 thm
+R20301:20305 mathcomp.boot.ssrnat <> mulnC thm
+R20301:20305 mathcomp.boot.ssrnat <> mulnC thm
+R20326:20337 mathcomp.boot.bigop <> big_nat_cond thm
+R20340:20345 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R20347:20350 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R20352:20354 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R20356:20358 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R20363:20363 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+binder 20351:20351 <> pat:152
+R20359:20362 Corelib.Init.Datatypes <> true constr
+R20366:20377 mathcomp.boot.bigop <> big_nat_cond thm
+R20326:20337 mathcomp.boot.bigop <> big_nat_cond thm
+R20326:20337 mathcomp.boot.bigop <> big_nat_cond thm
+R20366:20377 mathcomp.boot.bigop <> big_nat_cond thm
+R20340:20345 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R20347:20350 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R20352:20354 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R20356:20358 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R20363:20363 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+binder 20351:20351 <> pat:153
+R20359:20362 Corelib.Init.Datatypes <> true constr
+R20340:20345 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R20347:20350 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R20352:20354 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R20356:20358 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R20363:20363 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+binder 20351:20351 <> pat:154
+R20359:20362 Corelib.Init.Datatypes <> true constr
+R20366:20377 mathcomp.boot.bigop <> big_nat_cond thm
+R20396:20402 mathcomp.boot.bigop <> leq_sum thm
+R20396:20402 mathcomp.boot.bigop <> leq_sum thm
+R20423:20426 Corelib.ssr.ssrbool <> andP thm
+R20430:20433 Corelib.ssr.ssrbool <> andP thm
+R20465:20496 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_all_jobs_from_tsk thm
+R20541:20543 mathcomp.boot.seq <> nth def
+R20550:20560 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R20545:20548 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.elem var
+R20541:20543 mathcomp.boot.seq <> nth def
+R20550:20560 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R20545:20548 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.elem var
+R20587:20593 mathcomp.boot.seq <> mem_nth thm
+R20604:20622 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.H_at_least_two_jobs var
+R20587:20593 mathcomp.boot.seq <> mem_nth thm
+R20604:20622 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.H_at_least_two_jobs var
+R20604:20622 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs.H_at_least_two_jobs var
+R20687:20717 prosa.classic.model.schedule.global.basic.schedule ScheduleOfSporadicTask cumulative_service_le_task_cost thm
+R20687:20717 prosa.classic.model.schedule.global.basic.schedule ScheduleOfSporadicTask cumulative_service_le_task_cost thm
+R20748:20775 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.H_jobs_have_valid_parameters var
+R20748:20775 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.H_jobs_have_valid_parameters var
+R20802:20822 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound.ProofWorkloadBound.MainProof.WorkloadTwoOrMoreJobs <> sec
+prf 20928:20948 WorkloadBound workload_bounded_by_W
+R20991:20994 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R20960:20970 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.workload_of var
+R20972:20974 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.tsk var
+R20976:20977 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.t1 var
+R20982:20984 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R20980:20981 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.t1 var
+R20985:20989 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.delta var
+R20995:21008 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.workload_bound var
+R21039:21049 prosa.classic.analysis.global.parallel.workload_bound <> workload_of vardef
+R21052:21065 prosa.classic.analysis.global.parallel.workload_bound <> workload_bound vardef
+R21068:21068 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound W def
+R21099:21101 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.n_k var
+R21099:21101 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.n_k var
+R21189:21216 prosa.classic.model.schedule.global.workload Workload workload_eq_workload_joblist thm
+R21189:21216 prosa.classic.model.schedule.global.workload Workload workload_eq_workload_joblist thm
+R21189:21216 prosa.classic.model.schedule.global.workload Workload workload_eq_workload_joblist thm
+R21293:21338 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_simpl_by_sorting_scheduled_jobs thm
+R21293:21338 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_simpl_by_sorting_scheduled_jobs thm
+R21293:21338 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_simpl_by_sorting_scheduled_jobs thm
+R21503:21506 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R21487:21490 mathcomp.boot.seq <> size def
+R21492:21502 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R21507:21509 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.n_k var
+R21546:21586 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_holds_for_at_most_n_k_jobs thm
+R21503:21506 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R21487:21490 mathcomp.boot.seq <> size def
+R21492:21502 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R21507:21509 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.n_k var
+R21546:21586 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_holds_for_at_most_n_k_jobs thm
+R21603:21607 Corelib.ssr.ssrbool <> negbT thm
+R21626:21631 mathcomp.boot.ssrnat <> ltnNge thm
+R21603:21607 Corelib.ssr.ssrbool <> negbT thm
+R21626:21631 mathcomp.boot.ssrnat <> ltnNge thm
+R21626:21631 mathcomp.boot.ssrnat <> ltnNge thm
+R21727:21733 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R21743:21744 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R21740:21742 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.Job var
+binder 21734:21737 <> elem:155
+R21745:21748 Corelib.Init.Logic <> True ind
+R21727:21733 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R21743:21744 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R21740:21742 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.Job var
+binder 21734:21737 <> elem:156
+R21745:21748 Corelib.Init.Logic <> True ind
+R21798:21801 mathcomp.boot.ssrnat <> ltn0 thm
+R21772:21782 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R21798:21801 mathcomp.boot.ssrnat <> ltn0 thm
+R21798:21801 mathcomp.boot.ssrnat <> ltn0 thm
+R21952:21958 mathcomp.boot.bigop <> big_nth thm
+R21952:21958 mathcomp.boot.bigop <> big_nth thm
+R21952:21958 mathcomp.boot.bigop <> big_nth thm
+R22063:22066 mathcomp.boot.seq <> size def
+R22068:22078 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R22127:22133 mathcomp.boot.bigop <> big_geq thm
+R22063:22066 mathcomp.boot.seq <> size def
+R22068:22078 prosa.classic.analysis.global.parallel.workload_bound <> WorkloadBound.ProofWorkloadBound.MainProof.sorted_jobs var
+R22127:22133 mathcomp.boot.bigop <> big_geq thm
+R22127:22133 mathcomp.boot.bigop <> big_geq thm
+R22276:22312 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_holds_for_a_single_job thm
+R22276:22312 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_holds_for_a_single_job thm
+R22437:22456 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_holds thm
+R22437:22456 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bound_holds thm
+R22479:22487 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound.ProofWorkloadBound.MainProof <> sec
+R22501:22518 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound.ProofWorkloadBound <> sec
+R22526:22538 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound <> mod

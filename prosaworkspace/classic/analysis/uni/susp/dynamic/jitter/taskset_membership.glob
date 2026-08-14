@@ -1,0 +1,670 @@
+DIGEST 5b739407b3dab604c7112336916160ed
+Fprosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership
+R15:36 prosa.classic.util.all <> <> lib
+R54:81 prosa.classic.model.priority <> <> lib
+R83:112 prosa.classic.model.suspension <> <> lib
+R130:167 prosa.classic.model.arrival.basic.task <> <> lib
+R169:205 prosa.classic.model.arrival.basic.job <> <> lib
+R222:271 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R289:326 prosa.classic.model.arrival.jitter.job <> <> lib
+R344:389 prosa.classic.model.schedule.uni.response_time <> <> lib
+R407:452 prosa.classic.model.schedule.uni.susp.schedule <> <> lib
+R469:514 prosa.classic.model.schedule.uni.susp.platform <> <> lib
+R531:582 prosa.classic.model.schedule.uni.susp.valid_schedule <> <> lib
+R600:661 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> <> lib
+R678:749 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation <> <> lib
+R767:833 prosa.classic.analysis.uni.susp.sustainability.singlecost.reduction <> <> lib
+R850:927 prosa.classic.analysis.uni.susp.sustainability.singlecost.reduction_properties <> <> lib
+R959:967 mathcomp.boot.ssreflect <> <> lib
+R969:975 mathcomp.boot.ssrbool <> <> lib
+R977:982 mathcomp.boot.eqtype <> <> lib
+R984:989 mathcomp.boot.ssrnat <> <> lib
+R991:993 mathcomp.boot.seq <> <> lib
+R995:1001 mathcomp.boot.fintype <> <> lib
+R1003:1007 mathcomp.boot.bigop <> <> lib
+mod 1176:1192 <> TaskSetMembership
+R1205:1219 prosa.classic.model.arrival.basic.task SporadicTaskset <> mod
+R1221:1230 prosa.classic.model.suspension Suspension <> mod
+R1232:1239 prosa.classic.model.priority Priority <> mod
+R1241:1268 prosa.classic.model.schedule.uni.susp.valid_schedule ValidSuspensionAwareSchedule <> mod
+R1279:1301 prosa.classic.model.schedule.uni.susp.schedule ScheduleWithSuspensions <> mod
+R1303:1314 prosa.classic.model.schedule.uni.response_time ResponseTime <> mod
+R1316:1338 prosa.classic.model.schedule.uni.susp.platform PlatformWithSuspensions <> mod
+R1364:1389 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule JitterScheduleConstruction <> mod
+mod 1351:1359 <> TaskSetMembership.reduction
+R1411:1433 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation JitterTaskSetGeneration <> mod
+mod 1401:1406 <> TaskSetMembership.ts_gen
+R1453:1476 prosa.classic.analysis.uni.susp.sustainability.singlecost.reduction SustainabilitySingleCost <> mod
+mod 1445:1448 <> TaskSetMembership.sust
+R1501:1534 prosa.classic.analysis.uni.susp.sustainability.singlecost.reduction_properties SustainabilitySingleCostProperties <> mod
+mod 1488:1496 <> TaskSetMembership.sust_prop
+R1561:1588 prosa.classic.model.schedule.uni.susp.valid_schedule ValidSuspensionAwareSchedule <> mod
+mod 1546:1556 <> TaskSetMembership.valid_sched
+R1612:1614 prosa.classic.model.arrival.basic.job Job <> mod
+mod 1600:1607 <> TaskSetMembership.job_susp
+R1640:1652 prosa.classic.model.arrival.jitter.job JobWithJitter <> mod
+mod 1626:1635 <> TaskSetMembership.job_jitter
+sec 1668:1684 TaskSetMembership ProvingMembership
+var  1701:1704 TaskSetMembership.ProvingMembership Task
+R1707:1712 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1729:1739 TaskSetMembership.ProvingMembership task_period
+R1746:1749 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1742:1745 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.Task var
+R1750:1753 prosa.classic.model.time Time time def
+var 1769:1781 TaskSetMembership.ProvingMembership task_deadline
+R1788:1791 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1784:1787 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.Task var
+R1792:1795 prosa.classic.model.time Time time def
+var  1811:1813 TaskSetMembership.ProvingMembership Job
+R1816:1821 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1838:1848 TaskSetMembership.ProvingMembership job_arrival
+R1854:1857 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1851:1853 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.Job var
+R1858:1861 prosa.classic.model.time Time time def
+var 1877:1888 TaskSetMembership.ProvingMembership job_deadline
+R1894:1897 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1891:1893 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.Job var
+R1898:1901 prosa.classic.model.time Time time def
+var 1917:1924 TaskSetMembership.ProvingMembership job_task
+R1930:1933 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1927:1929 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.Job var
+R1934:1937 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.Task var
+var 2042:2043 TaskSetMembership.ProvingMembership ts
+R2046:2048 mathcomp.boot.seq <> seq abbrev
+R2050:2053 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.Task var
+var 2158:2164 TaskSetMembership.ProvingMembership arr_seq
+R2167:2182 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R2184:2186 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.Job var
+var 2204:2233 TaskSetMembership.ProvingMembership H_arrival_times_are_consistent
+R2242:2269 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_times_are_consistent def
+R2283:2289 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.arr_seq var
+R2271:2281 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_arrival var
+var 2307:2333 TaskSetMembership.ProvingMembership H_arrival_sequence_is_a_set
+R2336:2360 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence_is_a_set def
+R2362:2368 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.arr_seq var
+var 2435:2458 TaskSetMembership.ProvingMembership H_jobs_come_from_taskset
+binder 2474:2474 <> j:21
+R2497:2500 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2477:2486 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R2496:2496 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> j:21 var
+R2488:2494 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.arr_seq var
+R2511:2515 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R2501:2508 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+R2510:2510 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> j:21 var
+R2516:2517 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.ts var
+var 2586:2593 TaskSetMembership.ProvingMembership job_cost
+R2599:2602 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2596:2598 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.Job var
+R2603:2606 prosa.classic.model.time Time time def
+var 2622:2630 TaskSetMembership.ProvingMembership task_cost
+R2637:2640 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2633:2636 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.Task var
+R2641:2644 prosa.classic.model.time Time time def
+var 2732:2754 TaskSetMembership.ProvingMembership job_suspension_duration
+R2757:2770 prosa.classic.model.suspension Suspension job_suspension def
+R2772:2774 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.Job var
+var 2790:2810 TaskSetMembership.ProvingMembership task_suspension_bound
+R2817:2820 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2813:2816 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.Task var
+R2821:2824 prosa.classic.model.time Time time def
+var 2915:2932 TaskSetMembership.ProvingMembership higher_eq_priority
+R2935:2943 prosa.classic.model.priority Priority FP_policy def
+R2945:2948 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.Task var
+var 2966:2988 TaskSetMembership.ProvingMembership H_priority_is_reflexive
+R2991:3005 prosa.classic.model.priority Priority FP_is_reflexive def
+R3007:3024 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.higher_eq_priority var
+var 3042:3065 TaskSetMembership.ProvingMembership H_priority_is_transitive
+R3068:3083 prosa.classic.model.priority Priority FP_is_transitive def
+R3085:3102 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.higher_eq_priority var
+var 3120:3138 TaskSetMembership.ProvingMembership H_priority_is_total
+R3141:3165 prosa.classic.model.priority Priority FP_is_total_over_task_set def
+R3186:3187 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.ts var
+R3167:3184 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.higher_eq_priority var
+var 3198:3219 TaskSetMembership.ProvingMembership job_higher_eq_priority
+R3224:3233 prosa.classic.model.priority Priority FP_to_JLDP def
+R3244:3261 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.higher_eq_priority var
+R3235:3242 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+var 3343:3376 TaskSetMembership.ProvingMembership is_valid_suspension_aware_schedule
+R3387:3417 prosa.classic.model.schedule.uni.susp.valid_schedule ValidSuspensionAwareSchedule valid_suspension_aware_schedule def
+R3500:3522 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_suspension_duration var
+R3439:3460 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_higher_eq_priority var
+R3431:3437 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.arr_seq var
+R3419:3429 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_arrival var
+var 3716:3725 TaskSetMembership.ProvingMembership sched_susp
+R3728:3735 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R3737:3739 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.Job var
+var 3757:3772 TaskSetMembership.ProvingMembership H_valid_schedule
+R3781:3811 prosa.classic.model.schedule.uni.susp.valid_schedule ValidSuspensionAwareSchedule valid_suspension_aware_schedule def
+R3927:3936 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.sched_susp var
+R3918:3925 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_cost var
+R3894:3916 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_suspension_duration var
+R3833:3854 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_higher_eq_priority var
+R3825:3831 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.arr_seq var
+R3813:3823 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_arrival var
+var 4023:4065 TaskSetMembership.ProvingMembership task_response_time_in_sched_susp_bounded_by
+R4076:4105 prosa.classic.model.schedule.uni.response_time ResponseTime is_response_time_bound_of_task def
+R4145:4154 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.sched_susp var
+R4137:4143 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.arr_seq var
+R4128:4135 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+R4119:4126 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_cost var
+R4107:4117 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_arrival var
+var 4165:4206 TaskSetMembership.ProvingMembership job_response_time_in_sched_susp_bounded_by
+R4217:4245 prosa.classic.model.schedule.uni.response_time ResponseTime is_response_time_bound_of_job def
+R4268:4277 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.sched_susp var
+R4259:4266 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_cost var
+R4247:4257 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_arrival var
+var 4375:4379 TaskSetMembership.ProvingMembership tsk_i
+R4382:4385 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.Task var
+var 4403:4413 TaskSetMembership.ProvingMembership H_tsk_in_ts
+R4421:4425 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R4416:4420 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.tsk_i var
+R4426:4427 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.ts var
+var 4492:4492 TaskSetMembership.ProvingMembership j
+R4495:4497 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.Job var
+var 4515:4525 TaskSetMembership.ProvingMembership H_j_arrives
+R4528:4537 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R4547:4547 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.j var
+R4539:4545 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.arr_seq var
+var 4565:4578 TaskSetMembership.ProvingMembership H_job_of_tsk_i
+R4591:4593 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4581:4588 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+R4590:4590 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.j var
+R4594:4598 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.tsk_i var
+var 4709:4740 TaskSetMembership.ProvingMembership is_task_response_time_bound_with
+binder 4742:4749 <> job_cost:54
+binder 4751:4755 <> sched:55
+R4766:4795 prosa.classic.model.schedule.uni.response_time ResponseTime is_response_time_bound_of_task def
+R4835:4839 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> sched:55 var
+R4827:4833 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.arr_seq var
+R4818:4825 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+R4809:4816 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> job_cost:54 var
+R4797:4807 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_arrival var
+var 4941:4954 TaskSetMembership.ProvingMembership other_hep_task
+binder 4956:4964 <> tsk_other:56
+R5003:5007 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R5026:5026 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R4969:4986 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.higher_eq_priority var
+R4988:4996 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> tsk_other:56 var
+R4998:5002 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.tsk_i var
+R5017:5020 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R5008:5016 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> tsk_other:56 var
+R5021:5025 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.tsk_i var
+var 5238:5238 TaskSetMembership.ProvingMembership R
+R5245:5248 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5241:5244 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.Task var
+R5249:5252 prosa.classic.model.time Time time def
+var 5273:5328 TaskSetMembership.ProvingMembership H_valid_response_time_bound_of_hp_tasks_in_all_schedules
+binder 5344:5351 <> job_cost:59
+binder 5353:5357 <> sched:60
+R5417:5428 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5368:5401 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.is_valid_suspension_aware_schedule var
+R5403:5410 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> job_cost:59 var
+R5412:5416 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> sched:60 var
+binder 5436:5441 <> tsk_hp:61
+R5467:5480 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5460:5464 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R5454:5459 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> tsk_hp:61 var
+R5465:5466 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.ts var
+R5502:5515 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5481:5494 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.other_hep_task var
+R5496:5501 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> tsk_hp:61 var
+R5516:5547 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.is_task_response_time_bound_with var
+R5549:5556 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> job_cost:59 var
+R5558:5562 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> sched:60 var
+R5564:5569 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> tsk_hp:61 var
+R5572:5572 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.R var
+R5574:5579 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> tsk_hp:61 var
+def 5771:5790 TaskSetMembership actual_response_time
+R5799:5801 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.Job var
+binder 5793:5796 <> j_hp:64
+R5806:5809 prosa.classic.model.time Time time def
+R5820:5829 prosa.classic.util.pick <> ::form_scope:'['_'pick-min'_x_'<='_x_'|'_x_']' not
+R5831:5834 prosa.classic.util.pick <> ::form_scope:'['_'pick-min'_x_'<='_x_'|'_x_']' not
+R5852:5861 prosa.classic.util.pick <> ::form_scope:'['_'pick-min'_x_'<='_x_'|'_x_']' not
+R5911:5911 prosa.classic.util.pick <> ::form_scope:'['_'pick-min'_x_'<='_x_'|'_x_']' not
+R5835:5835 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.R var
+R5838:5845 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+R5847:5850 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> j_hp:64 var
+binder 5830:5830 <> r:65
+R5862:5903 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_response_time_in_sched_susp_bounded_by var
+R5905:5908 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> j_hp:64 var
+R5910:5910 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> r:65 var
+prf 5974:6002 TaskSetMembership actual_response_time_is_valid
+binder 6018:6021 <> j_hp:66
+R6055:6066 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6032:6041 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R6051:6054 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> j_hp:66 var
+R6043:6049 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.arr_seq var
+R6097:6108 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6067:6080 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.other_hep_task var
+R6083:6090 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+R6092:6095 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> j_hp:66 var
+R6109:6150 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_response_time_in_sched_susp_bounded_by var
+R6152:6155 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> j_hp:66 var
+R6158:6177 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership actual_response_time def
+R6179:6182 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> j_hp:66 var
+R6372:6391 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership actual_response_time def
+R6372:6391 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership actual_response_time def
+R6372:6391 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership actual_response_time def
+R6406:6419 prosa.classic.util.pick <> pick_min_holds thm
+R6406:6419 prosa.classic.util.pick <> pick_min_holds thm
+R6450:6450 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.R var
+R6453:6460 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+R6450:6450 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.R var
+R6453:6460 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+prf 6599:6629 TaskSetMembership actual_response_time_is_minimum
+binder 6645:6648 <> j_hp:67
+binder 6650:6653 <> r_hp:68
+R6687:6698 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6664:6673 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R6683:6686 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> j_hp:67 var
+R6675:6681 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.arr_seq var
+R6729:6740 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6699:6712 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.other_hep_task var
+R6715:6722 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+R6724:6727 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> j_hp:67 var
+R6793:6804 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6741:6782 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_response_time_in_sched_susp_bounded_by var
+R6784:6787 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> j_hp:67 var
+R6789:6792 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> r_hp:68 var
+R6830:6833 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R6805:6824 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership actual_response_time def
+R6826:6829 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> j_hp:67 var
+R6834:6837 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> r_hp:68 var
+R7033:7036 mathcomp.boot.ssrnat <> leqP thm
+R7044:7044 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.R var
+R7047:7054 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+R7033:7036 mathcomp.boot.ssrnat <> leqP thm
+R7044:7044 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.R var
+R7047:7054 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+R7103:7122 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership actual_response_time def
+R7103:7122 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership actual_response_time def
+R7103:7122 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership actual_response_time def
+R7139:7152 prosa.classic.util.pick <> pick_min_holds thm
+R7205:7208 mathcomp.boot.ssrnat <> ltnS thm
+R7230:7236 mathcomp.boot.fintype <> Ordinal constr
+R7139:7152 prosa.classic.util.pick <> pick_min_holds thm
+R7205:7208 mathcomp.boot.ssrnat <> ltnS thm
+R7205:7208 mathcomp.boot.ssrnat <> ltnS thm
+R7230:7236 mathcomp.boot.fintype <> Ordinal constr
+R7260:7260 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.R var
+R7263:7270 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+R7260:7260 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.R var
+R7263:7270 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+R7415:7415 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.R var
+R7418:7425 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+R7393:7401 mathcomp.boot.ssrnat <> leq_trans thm
+R7450:7453 mathcomp.boot.ssrnat <> ltnW thm
+R7415:7415 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.R var
+R7418:7425 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+R7393:7401 mathcomp.boot.ssrnat <> leq_trans thm
+R7450:7453 mathcomp.boot.ssrnat <> ltnW thm
+R7474:7477 mathcomp.boot.ssrnat <> ltnS thm
+R7480:7499 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership actual_response_time def
+R7474:7477 mathcomp.boot.ssrnat <> ltnS thm
+R7474:7477 mathcomp.boot.ssrnat <> ltnS thm
+R7480:7499 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership actual_response_time def
+R7480:7499 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership actual_response_time def
+R7516:7527 prosa.classic.util.pick <> pick_min_ltn thm
+R7516:7527 prosa.classic.util.pick <> pick_min_ltn thm
+R7546:7546 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.R var
+R7549:7556 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+R7546:7546 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.R var
+R7549:7556 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+var 7870:7886 TaskSetMembership.ProvingMembership inflated_job_cost
+R7891:7917 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership inflated_job_cost def
+R7952:7952 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.j var
+R7928:7950 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_suspension_duration var
+R7919:7926 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_cost var
+var 7964:7973 TaskSetMembership.ProvingMembership job_jitter
+R7978:7997 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership job_jitter def
+R8093:8112 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership actual_response_time def
+R8048:8048 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.j var
+R8039:8046 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_cost var
+R8020:8037 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.higher_eq_priority var
+R8011:8018 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+R7999:8009 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_arrival var
+var 8204:8221 TaskSetMembership.ProvingMembership inflated_task_cost
+R8226:8250 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership inflated_task_cost def
+R8284:8288 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.tsk_i var
+R8262:8282 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.task_suspension_bound var
+R8252:8260 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.task_cost var
+var 8299:8309 TaskSetMembership.ProvingMembership task_jitter
+R8314:8331 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership task_jitter def
+R8368:8368 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.R var
+R8362:8366 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.tsk_i var
+R8343:8360 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.higher_eq_priority var
+R8333:8341 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.task_cost var
+var 8672:8687 TaskSetMembership.ProvingMembership H_positive_costs
+binder 8703:8703 <> j:69
+R8726:8729 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8706:8715 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R8725:8725 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> j:69 var
+R8717:8723 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.arr_seq var
+R8740:8742 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R8730:8737 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_cost var
+R8739:8739 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> j:69 var
+var 8814:8836 TaskSetMembership.ProvingMembership H_job_cost_le_task_cost
+binder 8852:8852 <> j:72
+R8883:8894 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8863:8872 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R8882:8882 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> j:72 var
+R8874:8880 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.arr_seq var
+R8905:8908 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R8895:8902 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_cost var
+R8904:8904 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> j:72 var
+R8909:8917 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.task_cost var
+R8920:8927 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+R8929:8929 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> j:72 var
+var 9040:9060 TaskSetMembership.ProvingMembership H_dynamic_suspensions
+R9069:9092 prosa.classic.model.suspension Suspension dynamic_suspension_model def
+R9136:9156 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.task_suspension_bound var
+R9112:9134 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_suspension_duration var
+R9103:9110 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+R9094:9101 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_cost var
+sec 9251:9265 TaskSetMembership.ProvingMembership JobCostPositive
+prf 9281:9320 TaskSetMembership ts_membership_inflated_job_cost_positive
+binder 9338:9338 <> j:77
+R9361:9364 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9341:9350 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R9360:9360 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> j:77 var
+R9352:9358 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.arr_seq var
+R9384:9386 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R9365:9381 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.inflated_job_cost var
+R9383:9383 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> j:77 var
+R9462:9469 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_cost var
+R9441:9449 mathcomp.boot.ssrnat <> leq_trans thm
+R9491:9506 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.H_positive_costs var
+R9462:9469 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_cost var
+R9441:9449 mathcomp.boot.ssrnat <> leq_trans thm
+R9491:9506 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.H_positive_costs var
+R9526:9542 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.inflated_job_cost var
+R9545:9571 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership inflated_job_cost def
+R9526:9542 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.inflated_job_cost var
+R9526:9542 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.inflated_job_cost var
+R9545:9571 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership inflated_job_cost def
+R9545:9571 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership inflated_job_cost def
+R9591:9593 Corelib.ssr.ssrbool <> ifP thm
+R9616:9623 mathcomp.boot.ssrnat <> leq_addr thm
+R9591:9593 Corelib.ssr.ssrbool <> ifP thm
+R9591:9593 Corelib.ssr.ssrbool <> ifP thm
+R9616:9623 mathcomp.boot.ssrnat <> leq_addr thm
+R9652:9666 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership.ProvingMembership.JobCostPositive <> sec
+sec 9739:9762 TaskSetMembership.ProvingMembership JobCostBoundedByTaskCost
+prf 9778:9830 TaskSetMembership ts_membership_inflated_job_cost_le_inflated_task_cost
+binder 9848:9848 <> j:78
+R9881:9894 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9861:9870 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R9880:9880 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> j:78 var
+R9872:9878 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.arr_seq var
+R9914:9917 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R9895:9911 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.inflated_job_cost var
+R9913:9913 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> j:78 var
+R9918:9935 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.inflated_task_cost var
+R9938:9945 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+R9947:9947 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> j:78 var
+R10005:10021 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.inflated_job_cost var
+R10024:10041 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.inflated_task_cost var
+R10044:10070 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership inflated_job_cost def
+R10089:10113 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership inflated_task_cost def
+R10005:10021 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.inflated_job_cost var
+R10005:10021 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.inflated_job_cost var
+R10024:10041 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.inflated_task_cost var
+R10024:10041 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.inflated_task_cost var
+R10044:10070 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership inflated_job_cost def
+R10044:10070 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership inflated_job_cost def
+R10089:10113 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership inflated_task_cost def
+R10089:10113 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership inflated_task_cost def
+R10130:10132 Corelib.ssr.ssrbool <> ifP thm
+R10130:10132 Corelib.ssr.ssrbool <> ifP thm
+R10130:10132 Corelib.ssr.ssrbool <> ifP thm
+R10139:10141 mathcomp.boot.eqtype <> eqP def
+R10191:10197 mathcomp.boot.eqtype <> eq_refl thm
+R10206:10212 mathcomp.boot.ssrnat <> leq_add thm
+R10229:10249 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.H_dynamic_suspensions var
+R10191:10197 mathcomp.boot.eqtype <> eq_refl thm
+R10191:10197 mathcomp.boot.eqtype <> eq_refl thm
+R10206:10212 mathcomp.boot.ssrnat <> leq_add thm
+R10229:10249 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.H_dynamic_suspensions var
+R10271:10293 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.H_job_cost_le_task_cost var
+R10271:10293 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.H_job_cost_le_task_cost var
+R10320:10322 Corelib.ssr.ssrbool <> ifP thm
+R10362:10384 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.H_job_cost_le_task_cost var
+R10320:10322 Corelib.ssr.ssrbool <> ifP thm
+R10320:10322 Corelib.ssr.ssrbool <> ifP thm
+R10362:10384 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.H_job_cost_le_task_cost var
+R10422:10430 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.task_cost var
+R10433:10440 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+R10401:10409 mathcomp.boot.ssrnat <> leq_trans thm
+R10462:10469 mathcomp.boot.ssrnat <> leq_addr thm
+R10422:10430 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.task_cost var
+R10433:10440 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+R10401:10409 mathcomp.boot.ssrnat <> leq_trans thm
+R10462:10469 mathcomp.boot.ssrnat <> leq_addr thm
+R10489:10511 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.H_job_cost_le_task_cost var
+R10489:10511 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.H_job_cost_le_task_cost var
+R10534:10557 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership.ProvingMembership.JobCostBoundedByTaskCost <> sec
+sec 10793:10820 TaskSetMembership.ProvingMembership JobJitterBoundedByTaskJitter
+var 10899:10903 TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter any_j
+R10906:10908 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.Job var
+var 10928:10942 TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter H_any_j_arrives
+R10945:10954 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R10964:10968 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.any_j var
+R10956:10962 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.arr_seq var
+sec 11113:11138 TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter JitterOfHigherPriorityJobs
+var 11261:11277 TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.JitterOfHigherPriorityJobs H_higher_priority
+R11280:11297 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.higher_eq_priority var
+R11300:11307 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+R11309:11313 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.any_j var
+R11316:11320 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.tsk_i var
+var 11342:11357 TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.JitterOfHigherPriorityJobs H_different_task
+R11374:11377 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R11360:11367 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+R11369:11373 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.any_j var
+R11378:11382 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.tsk_i var
+var 11869:11884 TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.JitterOfHigherPriorityJobs higher_cost_wcet
+binder 11886:11887 <> j':87
+R11902:11904 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R11916:11921 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R11948:11953 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R11907:11910 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R11905:11906 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> j':87 var
+R11911:11915 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.any_j var
+R11922:11930 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.task_cost var
+R11933:11940 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+R11942:11946 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.any_j var
+R11954:11961 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_cost var
+R11963:11964 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> j':87 var
+var 12235:12255 TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.JitterOfHigherPriorityJobs sched_susp_highercost
+R12270:12295 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership sched_susp_highercost def
+R12412:12427 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.JitterOfHigherPriorityJobs.higher_cost_wcet var
+R12388:12410 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_suspension_duration var
+R12377:12386 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.sched_susp var
+R12317:12338 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_higher_eq_priority var
+R12309:12315 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.arr_seq var
+R12297:12307 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_arrival var
+var 12540:12593 TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.JitterOfHigherPriorityJobs task_response_time_in_sched_susp_highercost_bounded_by
+R12608:12637 prosa.classic.model.schedule.uni.response_time ResponseTime is_response_time_bound_of_task def
+R12726:12746 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.JitterOfHigherPriorityJobs.sched_susp_highercost var
+R12677:12683 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.arr_seq var
+R12668:12675 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+R12651:12666 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.JitterOfHigherPriorityJobs.higher_cost_wcet var
+R12639:12649 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_arrival var
+prf 12934:12977 TaskSetMembership response_time_bound_in_sched_susp_highercost
+binder 12997:13002 <> tsk_hp:88
+R13030:13045 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R13023:13027 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R13017:13022 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> tsk_hp:88 var
+R13028:13029 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.ts var
+R13067:13082 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R13046:13059 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.other_hep_task var
+R13061:13066 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> tsk_hp:88 var
+R13083:13136 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.JitterOfHigherPriorityJobs.task_response_time_in_sched_susp_highercost_bounded_by var
+R13138:13143 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> tsk_hp:88 var
+R13146:13146 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.R var
+R13148:13153 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> tsk_hp:88 var
+R13392:13407 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.JitterOfHigherPriorityJobs.higher_cost_wcet var
+R13409:13429 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.JitterOfHigherPriorityJobs.sched_susp_highercost var
+R13392:13407 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.JitterOfHigherPriorityJobs.higher_cost_wcet var
+R13409:13429 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.JitterOfHigherPriorityJobs.sched_susp_highercost var
+R13494:13556 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership sched_susp_highercost_jobs_come_from_arrival_sequence thm
+R13494:13556 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership sched_susp_highercost_jobs_come_from_arrival_sequence thm
+R13582:13640 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership sched_susp_highercost_jobs_must_arrive_to_execute thm
+R13582:13640 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership sched_susp_highercost_jobs_must_arrive_to_execute thm
+R13666:13724 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership sched_susp_highercost_completed_jobs_dont_execute thm
+R13666:13724 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership sched_susp_highercost_completed_jobs_dont_execute thm
+R13750:13796 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership sched_susp_highercost_work_conserving thm
+R13750:13796 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership sched_susp_highercost_work_conserving thm
+R13819:13865 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership sched_susp_highercost_respects_policy thm
+R13819:13865 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership sched_susp_highercost_respects_policy thm
+R13928:13951 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.H_priority_is_transitive var
+R13928:13951 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.H_priority_is_transitive var
+R14007:14009 Corelib.ssr.ssrbool <> orP thm
+R14018:14036 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.H_priority_is_total var
+R14007:14009 Corelib.ssr.ssrbool <> orP thm
+R14018:14036 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.H_priority_is_total var
+R14074:14130 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership sched_susp_highercost_respects_self_suspensions thm
+R14074:14130 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership sched_susp_highercost_respects_self_suspensions thm
+prf 14465:14506 TaskSetMembership ts_membership_difference_in_response_times
+R14562:14577 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R14545:14547 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R14519:14538 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership actual_response_time def
+R14540:14544 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.any_j var
+R14548:14555 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_cost var
+R14557:14561 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.any_j var
+R14596:14598 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R14578:14578 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.R var
+R14581:14588 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+R14590:14594 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.any_j var
+R14599:14607 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.task_cost var
+R14610:14617 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+R14619:14623 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.any_j var
+R14667:14695 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership actual_response_time_is_valid thm
+R14721:14751 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership actual_response_time_is_minimum thm
+R14779:14822 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership response_time_bound_in_sched_susp_highercost thm
+R15000:15002 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R14982:14982 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.R var
+R14985:14992 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+R14994:14998 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.any_j var
+R15003:15018 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.JitterOfHigherPriorityJobs.higher_cost_wcet var
+R15020:15024 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.any_j var
+R14961:14969 mathcomp.boot.ssrnat <> leq_trans thm
+R15054:15062 mathcomp.boot.ssrnat <> leq_sub2l thm
+R15074:15089 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.JitterOfHigherPriorityJobs.higher_cost_wcet var
+R15091:15097 mathcomp.boot.eqtype <> eq_refl thm
+R15000:15002 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R14982:14982 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.R var
+R14985:14992 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+R14994:14998 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.any_j var
+R15003:15018 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.JitterOfHigherPriorityJobs.higher_cost_wcet var
+R15020:15024 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.any_j var
+R14961:14969 mathcomp.boot.ssrnat <> leq_trans thm
+R15054:15062 mathcomp.boot.ssrnat <> leq_sub2l thm
+R15074:15089 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.JitterOfHigherPriorityJobs.higher_cost_wcet var
+R15074:15089 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.JitterOfHigherPriorityJobs.higher_cost_wcet var
+R15091:15097 mathcomp.boot.eqtype <> eq_refl thm
+R15091:15097 mathcomp.boot.eqtype <> eq_refl thm
+R15206:15216 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_arrival var
+R15231:15237 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.arr_seq var
+R15255:15264 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.sched_susp var
+R15300:15321 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_higher_eq_priority var
+R15364:15386 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_suspension_duration var
+R15116:15171 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership sched_susp_highercost_incurs_more_interference thm
+R15206:15216 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_arrival var
+R15231:15237 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.arr_seq var
+R15255:15264 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.sched_susp var
+R15300:15321 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_higher_eq_priority var
+R15364:15386 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_suspension_duration var
+R15116:15171 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership sched_susp_highercost_incurs_more_interference thm
+R15439:15461 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.H_priority_is_reflexive var
+R15439:15461 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.H_priority_is_reflexive var
+R15488:15503 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.JitterOfHigherPriorityJobs.higher_cost_wcet var
+R15505:15511 mathcomp.boot.eqtype <> eq_refl thm
+R15520:15542 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.H_job_cost_le_task_cost var
+R15488:15503 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.JitterOfHigherPriorityJobs.higher_cost_wcet var
+R15488:15503 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.JitterOfHigherPriorityJobs.higher_cost_wcet var
+R15505:15511 mathcomp.boot.eqtype <> eq_refl thm
+R15505:15511 mathcomp.boot.eqtype <> eq_refl thm
+R15520:15542 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.H_job_cost_le_task_cost var
+R15582:15587 Corelib.ssr.ssrbool <> negbTE thm
+R15606:15621 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.JitterOfHigherPriorityJobs.higher_cost_wcet var
+R15582:15587 Corelib.ssr.ssrbool <> negbTE thm
+R15606:15621 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.JitterOfHigherPriorityJobs.higher_cost_wcet var
+R15606:15621 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.JitterOfHigherPriorityJobs.higher_cost_wcet var
+R15649:15664 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.H_positive_costs var
+R15649:15664 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.H_positive_costs var
+R15717:15720 Corelib.ssr.ssrbool <> andP thm
+R15717:15720 Corelib.ssr.ssrbool <> andP thm
+R15803:15806 Corelib.ssr.ssrbool <> andP thm
+R15803:15806 Corelib.ssr.ssrbool <> andP thm
+R15880:15883 Corelib.ssr.ssrbool <> andP thm
+R15880:15883 Corelib.ssr.ssrbool <> andP thm
+R15926:15951 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.JitterOfHigherPriorityJobs <> sec
+prf 16127:16165 TaskSetMembership ts_membership_job_jitter_le_task_jitter
+R16192:16195 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R16176:16185 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_jitter var
+R16187:16191 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.any_j var
+R16196:16206 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.task_jitter var
+R16209:16216 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_task var
+R16218:16222 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.any_j var
+R16260:16301 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership ts_membership_difference_in_response_times thm
+R16321:16330 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_jitter var
+R16333:16343 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.task_jitter var
+R16346:16365 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership job_jitter def
+R16368:16385 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership task_jitter def
+R16387:16400 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.H_job_of_tsk_i var
+R16321:16330 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_jitter var
+R16321:16330 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_jitter var
+R16333:16343 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.task_jitter var
+R16333:16343 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.task_jitter var
+R16346:16365 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership job_jitter def
+R16346:16365 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership job_jitter def
+R16368:16385 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership task_jitter def
+R16368:16385 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership task_jitter def
+R16387:16400 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.H_job_of_tsk_i var
+R16387:16400 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.H_job_of_tsk_i var
+R16417:16419 Corelib.ssr.ssrbool <> ifP thm
+R16417:16419 Corelib.ssr.ssrbool <> ifP thm
+R16417:16419 Corelib.ssr.ssrbool <> ifP thm
+R16428:16431 Corelib.ssr.ssrbool <> andP thm
+R16461:16464 mathcomp.boot.ssrnat <> minn def
+R16473:16475 Corelib.ssr.ssrbool <> ifP thm
+R16461:16464 mathcomp.boot.ssrnat <> minn def
+R16461:16464 mathcomp.boot.ssrnat <> minn def
+R16473:16475 Corelib.ssr.ssrbool <> ifP thm
+R16473:16475 Corelib.ssr.ssrbool <> ifP thm
+R16533:16536 mathcomp.boot.ssrnat <> leqP thm
+R16555:16565 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_arrival var
+R16567:16571 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.any_j var
+R16539:16549 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_arrival var
+R16551:16551 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.j var
+R16621:16629 mathcomp.boot.ssrnat <> leq_trans thm
+R16660:16664 mathcomp.boot.ssrnat <> leqn0 thm
+R16666:16673 mathcomp.boot.ssrnat <> subn_eq0 thm
+R16533:16536 mathcomp.boot.ssrnat <> leqP thm
+R16555:16565 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_arrival var
+R16567:16571 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.any_j var
+R16539:16549 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_arrival var
+R16551:16551 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.j var
+R16621:16629 mathcomp.boot.ssrnat <> leq_trans thm
+R16660:16664 mathcomp.boot.ssrnat <> leqn0 thm
+R16660:16664 mathcomp.boot.ssrnat <> leqn0 thm
+R16666:16673 mathcomp.boot.ssrnat <> subn_eq0 thm
+R16666:16673 mathcomp.boot.ssrnat <> subn_eq0 thm
+R16737:16739 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R16711:16730 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership actual_response_time def
+R16732:16736 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.any_j var
+R16740:16747 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_cost var
+R16749:16753 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.any_j var
+R16690:16698 mathcomp.boot.ssrnat <> leq_trans thm
+R16772:16775 mathcomp.boot.ssrnat <> ltnW thm
+R16737:16739 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R16711:16730 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership actual_response_time def
+R16732:16736 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.any_j var
+R16740:16747 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.job_cost var
+R16749:16753 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter.any_j var
+R16690:16698 mathcomp.boot.ssrnat <> leq_trans thm
+R16772:16775 mathcomp.boot.ssrnat <> ltnW thm
+R16821:16848 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership.ProvingMembership.JobJitterBoundedByTaskJitter <> sec
+R16858:16874 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership.ProvingMembership <> sec
+R16882:16898 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership <> mod

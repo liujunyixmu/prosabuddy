@@ -1,0 +1,141 @@
+DIGEST 969f0d1b68e7b839f4c291cec98e72ec
+Fprosa.classic.model.arrival.basic.job
+R15:38 prosa.classic.model.time <> <> lib
+R40:77 prosa.classic.model.arrival.basic.task <> <> lib
+R79:128 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R160:165 mathcomp.boot.ssrnat <> <> lib
+R167:173 mathcomp.boot.ssrbool <> <> lib
+R175:180 mathcomp.boot.eqtype <> <> lib
+mod 239:241 <> Job
+R254:257 prosa.classic.model.time Time <> mod
+R259:273 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence <> mod
+sec 310:317 Job ValidJob
+var  334:336 Job.ValidJob Job
+R339:344 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 361:368 Job.ValidJob job_cost
+R374:377 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R371:373 prosa.classic.model.arrival.basic.job <> Job.ValidJob.Job var
+R378:381 prosa.classic.model.time Time time def
+var 398:398 Job.ValidJob j
+R401:403 prosa.classic.model.arrival.basic.job <> Job.ValidJob.Job var
+def 463:479 Job job_cost_positive
+R494:496 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R484:491 prosa.classic.model.arrival.basic.job <> Job.ValidJob.job_cost var
+R493:493 prosa.classic.model.arrival.basic.job <> Job.ValidJob.j var
+R507:514 prosa.classic.model.arrival.basic.job Job.ValidJob <> sec
+sec 571:586 Job ValidRealtimeJob
+var  603:605 Job.ValidRealtimeJob Job
+R608:613 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 630:637 Job.ValidRealtimeJob job_cost
+R643:646 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R640:642 prosa.classic.model.arrival.basic.job <> Job.ValidRealtimeJob.Job var
+R647:650 prosa.classic.model.time Time time def
+var 666:677 Job.ValidRealtimeJob job_deadline
+R683:686 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R680:682 prosa.classic.model.arrival.basic.job <> Job.ValidRealtimeJob.Job var
+R687:690 prosa.classic.model.time Time time def
+var 711:711 Job.ValidRealtimeJob j
+R714:716 prosa.classic.model.arrival.basic.job <> Job.ValidRealtimeJob.Job var
+def 806:826 Job job_deadline_positive
+R845:847 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R831:842 prosa.classic.model.arrival.basic.job <> Job.ValidRealtimeJob.job_deadline var
+R844:844 prosa.classic.model.arrival.basic.job <> Job.ValidRealtimeJob.j var
+def 866:885 Job job_cost_le_deadline
+R900:903 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R890:897 prosa.classic.model.arrival.basic.job <> Job.ValidRealtimeJob.job_cost var
+R899:899 prosa.classic.model.arrival.basic.job <> Job.ValidRealtimeJob.j var
+R904:915 prosa.classic.model.arrival.basic.job <> Job.ValidRealtimeJob.job_deadline var
+R917:917 prosa.classic.model.arrival.basic.job <> Job.ValidRealtimeJob.j var
+def 944:961 Job valid_realtime_job
+R1000:1009 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R972:988 prosa.classic.model.arrival.basic.job Job job_cost_positive def
+R999:999 prosa.classic.model.arrival.basic.job <> Job.ValidRealtimeJob.j var
+R990:997 prosa.classic.model.arrival.basic.job <> Job.ValidRealtimeJob.job_cost var
+R1030:1039 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R1010:1029 prosa.classic.model.arrival.basic.job Job job_cost_le_deadline def
+R1040:1060 prosa.classic.model.arrival.basic.job Job job_deadline_positive def
+R1070:1085 prosa.classic.model.arrival.basic.job Job.ValidRealtimeJob <> sec
+sec 1133:1152 Job ValidSporadicTaskJob
+var  1169:1181 Job.ValidSporadicTaskJob sporadic_task
+R1184:1189 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1206:1214 Job.ValidSporadicTaskJob task_cost
+R1230:1233 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1217:1229 prosa.classic.model.arrival.basic.job <> Job.ValidSporadicTaskJob.sporadic_task var
+R1234:1237 prosa.classic.model.time Time time def
+var 1253:1265 Job.ValidSporadicTaskJob task_deadline
+R1281:1284 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1268:1280 prosa.classic.model.arrival.basic.job <> Job.ValidSporadicTaskJob.sporadic_task var
+R1285:1288 prosa.classic.model.time Time time def
+var  1309:1311 Job.ValidSporadicTaskJob Job
+R1314:1319 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1336:1343 Job.ValidSporadicTaskJob job_cost
+R1349:1352 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1346:1348 prosa.classic.model.arrival.basic.job <> Job.ValidSporadicTaskJob.Job var
+R1353:1356 prosa.classic.model.time Time time def
+var 1372:1383 Job.ValidSporadicTaskJob job_deadline
+R1389:1392 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1386:1388 prosa.classic.model.arrival.basic.job <> Job.ValidSporadicTaskJob.Job var
+R1393:1396 prosa.classic.model.time Time time def
+var 1412:1419 Job.ValidSporadicTaskJob job_task
+R1425:1428 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1422:1424 prosa.classic.model.arrival.basic.job <> Job.ValidSporadicTaskJob.Job var
+R1429:1441 prosa.classic.model.arrival.basic.job <> Job.ValidSporadicTaskJob.sporadic_task var
+var 1462:1462 Job.ValidSporadicTaskJob j
+R1465:1467 prosa.classic.model.arrival.basic.job <> Job.ValidSporadicTaskJob.Job var
+def 1546:1566 Job job_cost_le_task_cost
+R1587:1590 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R1577:1584 prosa.classic.model.arrival.basic.job <> Job.ValidSporadicTaskJob.job_cost var
+R1586:1586 prosa.classic.model.arrival.basic.job <> Job.ValidSporadicTaskJob.j var
+R1591:1599 prosa.classic.model.arrival.basic.job <> Job.ValidSporadicTaskJob.task_cost var
+R1602:1609 prosa.classic.model.arrival.basic.job <> Job.ValidSporadicTaskJob.job_task var
+R1611:1611 prosa.classic.model.arrival.basic.job <> Job.ValidSporadicTaskJob.j var
+def 1694:1722 Job job_deadline_eq_task_deadline
+R1747:1749 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1733:1744 prosa.classic.model.arrival.basic.job <> Job.ValidSporadicTaskJob.job_deadline var
+R1746:1746 prosa.classic.model.arrival.basic.job <> Job.ValidSporadicTaskJob.j var
+R1750:1762 prosa.classic.model.arrival.basic.job <> Job.ValidSporadicTaskJob.task_deadline var
+R1765:1772 prosa.classic.model.arrival.basic.job <> Job.ValidSporadicTaskJob.job_task var
+R1774:1774 prosa.classic.model.arrival.basic.job <> Job.ValidSporadicTaskJob.j var
+def 1794:1811 Job valid_sporadic_job
+R1864:1873 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R1822:1839 prosa.classic.model.arrival.basic.job Job valid_realtime_job def
+R1863:1863 prosa.classic.model.arrival.basic.job <> Job.ValidSporadicTaskJob.j var
+R1850:1861 prosa.classic.model.arrival.basic.job <> Job.ValidSporadicTaskJob.job_deadline var
+R1841:1848 prosa.classic.model.arrival.basic.job <> Job.ValidSporadicTaskJob.job_cost var
+R1895:1904 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R1874:1894 prosa.classic.model.arrival.basic.job Job job_cost_le_task_cost def
+R1905:1933 prosa.classic.model.arrival.basic.job Job job_deadline_eq_task_deadline def
+R1943:1962 prosa.classic.model.arrival.basic.job Job.ValidSporadicTaskJob <> sec
+sec 1999:2010 Job ValidTaskJob
+var  2027:2030 Job.ValidTaskJob Task
+R2033:2038 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 2055:2063 Job.ValidTaskJob task_cost
+R2070:2073 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2066:2069 prosa.classic.model.arrival.basic.job <> Job.ValidTaskJob.Task var
+R2074:2077 prosa.classic.model.time Time time def
+var  2098:2100 Job.ValidTaskJob Job
+R2103:2108 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 2125:2132 Job.ValidTaskJob job_cost
+R2138:2141 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2135:2137 prosa.classic.model.arrival.basic.job <> Job.ValidTaskJob.Job var
+R2142:2145 prosa.classic.model.time Time time def
+var 2162:2169 Job.ValidTaskJob job_task
+R2175:2178 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2172:2174 prosa.classic.model.arrival.basic.job <> Job.ValidTaskJob.Job var
+R2179:2182 prosa.classic.model.arrival.basic.job <> Job.ValidTaskJob.Task var
+var 2240:2246 Job.ValidTaskJob arr_seq
+R2249:2264 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R2266:2268 prosa.classic.model.arrival.basic.job <> Job.ValidTaskJob.Job var
+def 2385:2431 Job cost_of_jobs_from_arrival_sequence_le_task_cost
+binder 2449:2449 <> j:37
+R2480:2491 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2460:2469 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R2479:2479 prosa.classic.model.arrival.basic.job <> j:37 var
+R2471:2477 prosa.classic.model.arrival.basic.job <> Job.ValidTaskJob.arr_seq var
+R2492:2512 prosa.classic.model.arrival.basic.job Job job_cost_le_task_cost def
+R2542:2542 prosa.classic.model.arrival.basic.job <> j:37 var
+R2533:2540 prosa.classic.model.arrival.basic.job <> Job.ValidTaskJob.job_task var
+R2524:2531 prosa.classic.model.arrival.basic.job <> Job.ValidTaskJob.job_cost var
+R2514:2522 prosa.classic.model.arrival.basic.job <> Job.ValidTaskJob.task_cost var
+R2552:2563 prosa.classic.model.arrival.basic.job Job.ValidTaskJob <> sec
+R2571:2573 prosa.classic.model.arrival.basic.job Job <> mod

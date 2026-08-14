@@ -1,0 +1,76 @@
+DIGEST a0643dcd04be4cb56fc365c45d1b1aff
+Fprosa.classic.model.schedule.uni.schedule_of_task
+R15:36 prosa.classic.util.all <> <> lib
+R54:77 prosa.classic.model.time <> <> lib
+R79:116 prosa.classic.model.arrival.basic.task <> <> lib
+R118:154 prosa.classic.model.arrival.basic.job <> <> lib
+R156:205 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R223:263 prosa.classic.model.schedule.uni.schedule <> <> lib
+R295:303 mathcomp.boot.ssreflect <> <> lib
+R305:311 mathcomp.boot.ssrbool <> <> lib
+R313:318 mathcomp.boot.eqtype <> <> lib
+R320:325 mathcomp.boot.ssrnat <> <> lib
+R327:329 mathcomp.boot.seq <> <> lib
+R331:337 mathcomp.boot.fintype <> <> lib
+R339:343 mathcomp.boot.bigop <> <> lib
+mod 354:367 <> ScheduleOfTask
+R380:394 prosa.classic.model.arrival.basic.task SporadicTaskset <> mod
+R396:415 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule <> mod
+sec 501:518 ScheduleOfTask ScheduleProperties
+var  535:538 ScheduleOfTask.ScheduleProperties Task
+R541:546 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  563:565 ScheduleOfTask.ScheduleProperties Job
+R568:573 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 590:597 ScheduleOfTask.ScheduleProperties job_cost
+R603:606 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R600:602 prosa.classic.model.schedule.uni.schedule_of_task <> ScheduleOfTask.ScheduleProperties.Job var
+R607:610 prosa.classic.model.time Time time def
+var 626:633 ScheduleOfTask.ScheduleProperties job_task
+R639:642 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R636:638 prosa.classic.model.schedule.uni.schedule_of_task <> ScheduleOfTask.ScheduleProperties.Job var
+R643:646 prosa.classic.model.schedule.uni.schedule_of_task <> ScheduleOfTask.ScheduleProperties.Task var
+var 709:713 ScheduleOfTask.ScheduleProperties sched
+R716:723 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R725:727 prosa.classic.model.schedule.uni.schedule_of_task <> ScheduleOfTask.ScheduleProperties.Job var
+sec 743:756 ScheduleOfTask.ScheduleProperties TaskProperties
+var 808:810 ScheduleOfTask.ScheduleProperties.TaskProperties tsk
+R813:816 prosa.classic.model.schedule.uni.schedule_of_task <> ScheduleOfTask.ScheduleProperties.Task var
+def 907:923 ScheduleOfTask task_scheduled_at
+R929:932 prosa.classic.model.time Time time def
+binder 926:926 <> t:11
+R949:953 prosa.classic.model.schedule.uni.schedule_of_task <> ScheduleOfTask.ScheduleProperties.sched var
+R955:955 prosa.classic.model.schedule.uni.schedule_of_task <> t:11 var
+R960:963 Corelib.Init.Datatypes <> Some constr
+R992:995 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R982:989 prosa.classic.model.schedule.uni.schedule_of_task <> ScheduleOfTask.ScheduleProperties.job_task var
+R996:998 prosa.classic.model.schedule.uni.schedule_of_task <> ScheduleOfTask.ScheduleProperties.TaskProperties.tsk var
+R1013:1017 Corelib.Init.Datatypes <> false constr
+def 1118:1132 ScheduleOfTask task_service_at
+R1138:1141 prosa.classic.model.time Time time def
+binder 1135:1135 <> t:12
+R1146:1149 prosa.classic.model.time Time time def
+R1154:1170 prosa.classic.model.schedule.uni.schedule_of_task ScheduleOfTask task_scheduled_at def
+R1172:1172 prosa.classic.model.schedule.uni.schedule_of_task <> t:12 var
+def 1341:1359 ScheduleOfTask task_service_during
+R1369:1372 prosa.classic.model.time Time time def
+binder 1362:1363 <> t1:13
+binder 1365:1366 <> t2:14
+R1386:1391 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R1394:1397 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R1399:1401 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R1404:1405 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R1392:1393 prosa.classic.model.schedule.uni.schedule_of_task <> t1:13 var
+R1402:1403 prosa.classic.model.schedule.uni.schedule_of_task <> t2:14 var
+binder 1398:1398 <> t:15
+binder 1398:1398 <> t:16
+binder 1398:1398 <> t:17
+R1406:1420 prosa.classic.model.schedule.uni.schedule_of_task ScheduleOfTask task_service_at def
+R1422:1422 prosa.classic.model.schedule.uni.schedule_of_task <> t:15 var
+def 1556:1567 ScheduleOfTask task_service
+R1574:1577 prosa.classic.model.time Time time def
+binder 1570:1571 <> t2:18
+R1583:1601 prosa.classic.model.schedule.uni.schedule_of_task ScheduleOfTask task_service_during def
+R1605:1606 prosa.classic.model.schedule.uni.schedule_of_task <> t2:18 var
+R1618:1631 prosa.classic.model.schedule.uni.schedule_of_task ScheduleOfTask.ScheduleProperties.TaskProperties <> sec
+R1641:1658 prosa.classic.model.schedule.uni.schedule_of_task ScheduleOfTask.ScheduleProperties <> sec
+R1666:1679 prosa.classic.model.schedule.uni.schedule_of_task ScheduleOfTask <> mod

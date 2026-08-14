@@ -1,0 +1,204 @@
+DIGEST 6cb72807eae48ff8e2f1a7d4665fd8c7
+Fprosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule
+R15:36 prosa.classic.util.all <> <> lib
+R54:81 prosa.classic.model.priority <> <> lib
+R83:112 prosa.classic.model.suspension <> <> lib
+R130:179 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R197:244 prosa.classic.model.schedule.uni.jitter.schedule <> <> lib
+R262:321 prosa.classic.model.schedule.uni.transformation.construction <> <> lib
+R353:361 mathcomp.boot.ssreflect <> <> lib
+R363:369 mathcomp.boot.ssrbool <> <> lib
+R371:376 mathcomp.boot.eqtype <> <> lib
+R378:383 mathcomp.boot.ssrnat <> <> lib
+R385:387 mathcomp.boot.seq <> <> lib
+mod 507:532 <> JitterScheduleConstruction
+R545:574 prosa.classic.model.schedule.uni.jitter.schedule UniprocessorScheduleWithJitter <> mod
+R576:585 prosa.classic.model.suspension Suspension <> mod
+R587:594 prosa.classic.model.priority Priority <> mod
+R596:615 prosa.classic.model.schedule.uni.transformation.construction ScheduleConstruction <> mod
+sec 629:654 JitterScheduleConstruction ConstructingJitterSchedule
+var  671:674 JitterScheduleConstruction.ConstructingJitterSchedule Task
+R677:682 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  703:705 JitterScheduleConstruction.ConstructingJitterSchedule Job
+R708:713 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 730:740 JitterScheduleConstruction.ConstructingJitterSchedule job_arrival
+R746:749 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R743:745 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.Job var
+R750:753 prosa.classic.model.time Time time def
+var 769:776 JitterScheduleConstruction.ConstructingJitterSchedule job_task
+R782:785 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R779:781 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.Job var
+R786:789 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.Task var
+var 888:894 JitterScheduleConstruction.ConstructingJitterSchedule arr_seq
+R897:912 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R914:916 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.Job var
+var 1019:1036 JitterScheduleConstruction.ConstructingJitterSchedule higher_eq_priority
+R1039:1047 prosa.classic.model.priority Priority FP_policy def
+R1049:1052 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.Task var
+var 1063:1084 JitterScheduleConstruction.ConstructingJitterSchedule job_higher_eq_priority
+R1089:1098 prosa.classic.model.priority Priority FP_to_JLFP def
+R1109:1126 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.higher_eq_priority var
+R1100:1107 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.job_task var
+var 1236:1243 JitterScheduleConstruction.ConstructingJitterSchedule job_cost
+R1249:1252 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1246:1248 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.Job var
+R1253:1256 prosa.classic.model.time Time time def
+var 1272:1280 JitterScheduleConstruction.ConstructingJitterSchedule task_cost
+R1287:1290 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1283:1286 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.Task var
+R1291:1294 prosa.classic.model.time Time time def
+var 1379:1401 JitterScheduleConstruction.ConstructingJitterSchedule job_suspension_duration
+R1404:1417 prosa.classic.model.suspension Suspension job_suspension def
+R1419:1421 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.Job var
+var 1524:1533 JitterScheduleConstruction.ConstructingJitterSchedule sched_susp
+R1536:1543 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R1545:1547 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.Job var
+var 1686:1686 JitterScheduleConstruction.ConstructingJitterSchedule j
+R1689:1691 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.Job var
+var 1788:1792 JitterScheduleConstruction.ConstructingJitterSchedule arr_j
+R1797:1807 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.job_arrival var
+R1809:1809 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.j var
+var 1820:1828 JitterScheduleConstruction.ConstructingJitterSchedule task_of_j
+R1833:1840 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.job_task var
+R1842:1842 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.j var
+var 1934:1947 JitterScheduleConstruction.ConstructingJitterSchedule other_hep_task
+binder 1949:1957 <> tsk_other:21
+R2006:2010 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R2033:2033 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R1968:1985 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.higher_eq_priority var
+R1987:1995 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> tsk_other:21 var
+R1997:2005 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.task_of_j var
+R2020:2023 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R2011:2019 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> tsk_other:21 var
+R2024:2032 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.task_of_j var
+var 2158:2158 JitterScheduleConstruction.ConstructingJitterSchedule R
+R2164:2167 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2161:2163 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.Job var
+R2168:2171 prosa.classic.model.time Time time def
+sec 2267:2287 JitterScheduleConstruction.ConstructingJitterSchedule DefiningJobParameters
+sec 2367:2379 JitterScheduleConstruction.ConstructingJitterSchedule.DefiningJobParameters CostInflation
+var 2477:2496 JitterScheduleConstruction.ConstructingJitterSchedule.DefiningJobParameters.CostInflation job_total_suspension
+R2511:2526 prosa.classic.model.suspension Suspension total_suspension def
+R2537:2559 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.job_suspension_duration var
+R2528:2535 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.job_cost var
+def 2767:2783 JitterScheduleConstruction inflated_job_cost
+R2793:2795 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.Job var
+binder 2786:2790 <> any_j:24
+R2811:2813 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R2824:2841 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R2885:2912 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R2819:2822 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R2814:2818 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> any_j:24 var
+R2823:2823 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.j var
+R2856:2858 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R2842:2849 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.job_cost var
+R2851:2855 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> any_j:24 var
+R2859:2878 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.DefiningJobParameters.CostInflation.job_total_suspension var
+R2880:2884 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> any_j:24 var
+R2913:2920 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.job_cost var
+R2922:2926 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> any_j:24 var
+R2948:2960 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule JitterScheduleConstruction.ConstructingJitterSchedule.DefiningJobParameters.CostInflation <> sec
+sec 3100:3127 JitterScheduleConstruction.ConstructingJitterSchedule.DefiningJobParameters ConvertingSuspensionToJitter
+var 3204:3208 JitterScheduleConstruction.ConstructingJitterSchedule.DefiningJobParameters.ConvertingSuspensionToJitter any_j
+R3211:3213 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.Job var
+var 3440:3452 JitterScheduleConstruction.ConstructingJitterSchedule.DefiningJobParameters.ConvertingSuspensionToJitter distance_to_j
+R3470:3472 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R3457:3467 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.job_arrival var
+R3469:3469 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.j var
+R3473:3483 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.job_arrival var
+R3485:3489 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.DefiningJobParameters.ConvertingSuspensionToJitter.any_j var
+def 4123:4132 JitterScheduleConstruction job_jitter
+R4147:4149 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R4181:4198 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R4244:4259 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R4150:4163 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.other_hep_task var
+R4166:4173 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.job_task var
+R4175:4179 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.DefiningJobParameters.ConvertingSuspensionToJitter.any_j var
+R4199:4202 mathcomp.boot.ssrnat <> minn def
+R4226:4228 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R4219:4219 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.R var
+R4221:4225 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.DefiningJobParameters.ConvertingSuspensionToJitter.any_j var
+R4229:4236 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.job_cost var
+R4238:4242 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.DefiningJobParameters.ConvertingSuspensionToJitter.any_j var
+R4204:4216 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.DefiningJobParameters.ConvertingSuspensionToJitter.distance_to_j var
+R4274:4301 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule JitterScheduleConstruction.ConstructingJitterSchedule.DefiningJobParameters.ConvertingSuspensionToJitter <> sec
+R4319:4339 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule JitterScheduleConstruction.ConstructingJitterSchedule.DefiningJobParameters <> sec
+sec 4709:4728 JitterScheduleConstruction.ConstructingJitterSchedule ScheduleConstruction
+sec 4811:4826 JitterScheduleConstruction.ConstructingJitterSchedule.ScheduleConstruction ConstructionStep
+var 5028:5039 JitterScheduleConstruction.ConstructingJitterSchedule.ScheduleConstruction.ConstructionStep sched_prefix
+R5042:5049 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R5051:5053 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.Job var
+var 5073:5073 JitterScheduleConstruction.ConstructingJitterSchedule.ScheduleConstruction.ConstructionStep t
+R5076:5079 prosa.classic.model.time Time time def
+var 5156:5169 JitterScheduleConstruction.ConstructingJitterSchedule.ScheduleConstruction.ConstructionStep job_is_pending
+R5174:5180 prosa.classic.model.schedule.uni.jitter.schedule UniprocessorScheduleWithJitter pending def
+R5223:5234 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.ScheduleConstruction.ConstructionStep.sched_prefix var
+R5212:5221 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule JitterScheduleConstruction job_jitter def
+R5194:5210 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule JitterScheduleConstruction inflated_job_cost def
+R5182:5192 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.job_arrival var
+var 5249:5273 JitterScheduleConstruction.ConstructingJitterSchedule.ScheduleConstruction.ConstructionStep actual_job_arrivals_up_to
+R5278:5298 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_up_to def
+R5323:5329 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.arr_seq var
+R5312:5321 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule JitterScheduleConstruction job_jitter def
+R5300:5310 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.job_arrival var
+var 5344:5357 JitterScheduleConstruction.ConstructingJitterSchedule.ScheduleConstruction.ConstructionStep lower_priority
+binder 5359:5360 <> j1:31
+binder 5362:5363 <> j2:32
+R5368:5370 Corelib.ssr.ssrbool <> ::bool_scope:'~~'_x not
+R5371:5392 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.job_higher_eq_priority var
+R5394:5395 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> j1:31 var
+R5397:5398 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> j2:32 var
+def 5572:5596 JitterScheduleConstruction pending_jobs_other_than_j
+R5611:5615 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_'&'_x_']' not
+R5623:5626 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_'&'_x_']' not
+R5654:5656 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_'&'_x_']' not
+R5681:5683 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_'&'_x_']' not
+R5696:5696 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_'&'_x_']' not
+binder 5616:5622 <> j_other:33
+R5657:5670 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.ScheduleConstruction.ConstructionStep.job_is_pending var
+R5672:5678 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> j_other:33 var
+R5680:5680 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.ScheduleConstruction.ConstructionStep.t var
+R5691:5694 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R5684:5690 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> j_other:33 var
+R5695:5695 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.j var
+R5627:5651 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.ScheduleConstruction.ConstructionStep.actual_job_arrivals_up_to var
+R5653:5653 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.ScheduleConstruction.ConstructionStep.t var
+def 5883:5915 JitterScheduleConstruction highest_priority_job_other_than_j
+R5930:5936 prosa.classic.util.minmax <> seq_min def
+R5961:5985 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule JitterScheduleConstruction pending_jobs_other_than_j def
+R5938:5959 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.job_higher_eq_priority var
+def 6317:6330 JitterScheduleConstruction build_schedule
+R6334:6339 Corelib.Init.Datatypes <> option ind
+R6341:6343 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.Job var
+R6358:6360 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R6379:6396 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R6571:6588 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R6361:6374 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.ScheduleConstruction.ConstructionStep.job_is_pending var
+R6376:6376 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.j var
+R6378:6378 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.ScheduleConstruction.ConstructionStep.t var
+R6400:6432 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule JitterScheduleConstruction highest_priority_job_other_than_j def
+R6437:6440 Corelib.Init.Datatypes <> Some constr
+R6466:6468 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R6490:6511 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R6518:6537 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R6469:6482 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.ScheduleConstruction.ConstructionStep.lower_priority var
+R6489:6489 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.j var
+R6512:6515 Corelib.Init.Datatypes <> Some constr
+R6517:6517 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.j var
+R6538:6541 Corelib.Init.Datatypes <> Some constr
+R6565:6568 Corelib.Init.Datatypes <> Some constr
+R6570:6570 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.j var
+R6589:6621 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule JitterScheduleConstruction highest_priority_job_other_than_j def
+R6635:6650 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule JitterScheduleConstruction.ConstructingJitterSchedule.ScheduleConstruction.ConstructionStep <> sec
+var 6722:6735 JitterScheduleConstruction.ConstructingJitterSchedule.ScheduleConstruction empty_schedule
+R6739:6746 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R6748:6750 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.Job var
+binder 6759:6759 <> t:34
+R6764:6767 Corelib.Init.Datatypes <> None constr
+def 6881:6892 JitterScheduleConstruction sched_jitter
+R6897:6924 prosa.classic.model.schedule.uni.transformation.construction ScheduleConstruction build_schedule_from_prefixes def
+R6941:6954 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> JitterScheduleConstruction.ConstructingJitterSchedule.ScheduleConstruction.empty_schedule var
+R6926:6939 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule JitterScheduleConstruction build_schedule def
+R6966:6985 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule JitterScheduleConstruction.ConstructingJitterSchedule.ScheduleConstruction <> sec
+R6999:7024 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule JitterScheduleConstruction.ConstructingJitterSchedule <> sec
+R7034:7059 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule JitterScheduleConstruction <> mod

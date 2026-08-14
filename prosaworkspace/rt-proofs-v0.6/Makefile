@@ -1,0 +1,130 @@
+# Makefile for Prosa
+
+COQ_PROJ := _CoqProject
+COQ_MAKEFILE := Makefile.coq
+FIND_OPTS := . -name '*.v' ! -name '*\#*' ! -path './.git/*' ! -path './with-proof-state/*'
+
+default: prosa
+
+all: allCoqProject
+	$(MAKE) $(COQ_MAKEFILE)
+	$(MAKE) -f $(COQ_MAKEFILE)
+
+prosa: prosaCoqProject
+	$(MAKE) $(COQ_MAKEFILE)
+	$(MAKE) -f $(COQ_MAKEFILE)
+
+refinements: refinementsCoqProject
+	$(MAKE) $(COQ_MAKEFILE)
+	$(MAKE) -f $(COQ_MAKEFILE)
+
+mangle-names: mangle-namesCoqProject
+	$(MAKE) $(COQ_MAKEFILE)
+	$(MAKE) -f $(COQ_MAKEFILE)
+
+commonCoqProject:
+	@$(RM) -f $(COQ_PROJ)
+	@echo "# Automatically created by make, do not edit" > $(COQ_PROJ)
+	@echo "# (edit Makefile instead)" >> $(COQ_PROJ)
+	@echo "" >> $(COQ_PROJ)
+	@echo "-arg \"-w -notation-overriden,-parsing,-projection-no-head-constant,-ambiguous-paths\"" >> $(COQ_PROJ)
+	@echo "" >> $(COQ_PROJ)
+
+allCoqProject: commonCoqProject
+	@echo "-R . prosa" >> $(COQ_PROJ)
+	@echo "" >> $(COQ_PROJ)
+	@find $(FIND_OPTS) \
+	  -print | scripts/module-toc-order.py >> $(COQ_PROJ)
+
+prosaCoqProject: commonCoqProject
+	@echo "-R . prosa" >> $(COQ_PROJ)
+	@echo "" >> $(COQ_PROJ)
+	@find $(FIND_OPTS) \
+	  ! -path './implementation/refinements/*' \
+	  -print | scripts/module-toc-order.py >> $(COQ_PROJ)
+
+refinementsCoqProject: commonCoqProject
+	@echo "-R implementation/refinements prosa.implementation.refinements" >> $(COQ_PROJ)
+	@echo "" >> $(COQ_PROJ)
+	@find $(FIND_OPTS) \
+	  -path './implementation/refinements/*' \
+	  -print | scripts/module-toc-order.py >> $(COQ_PROJ)
+
+mangle-namesCoqProject: commonCoqProject
+	@echo "-arg \"-mangle-names __\"" >> $(COQ_PROJ)
+	@echo "" >> $(COQ_PROJ)
+	@echo "-R . prosa" >> $(COQ_PROJ)
+	@echo "" >> $(COQ_PROJ)
+	@find $(FIND_OPTS) \
+	  -print | scripts/module-toc-order.py >> $(COQ_PROJ)
+
+$(COQ_MAKEFILE): $(COQ_PROJ)
+	@coq_makefile -f $< -o $@ COQDOCEXTRAFLAGS = "--parse-comments --external https://math-comp.github.io/htmldoc/ mathcomp --external mathcomp https://math-comp.github.io/htmldoc/"
+
+install htmlpretty clean cleanall validate alectryon: $(COQ_MAKEFILE)
+	$(MAKE) -f $(COQ_MAKEFILE) $@
+
+html gallinahtml: $(COQ_MAKEFILE)
+	$(MAKE) -f $(COQ_MAKEFILE) $@
+	@# Prosa hack: let's tweak the style a bit
+	@sed -i.bak "s/#90bdff/#eeeeee/" html/coqdoc.css
+	@rm html/coqdoc.css.bak
+
+%.vo: %.v
+	$(MAKE) -f $(COQ_MAKEFILE) $@
+
+vacuum: allCoqProject cleanall
+	@echo 'VACUUMING *.vo *.vok *.vos *.glob .*.aux <empty directories>'
+	@find . -depth \( -iname '*.vo' -or -iname "*.vok" -or -iname "*.vos" -or  -iname '*.glob' -or -iname '.*.aux' \)  ! -path './.git/*' -delete
+	@find . -depth -type d -empty ! -path './.git/*' -delete
+	@echo 'REMOVING ${COQ_MAKEFILE} ${COQ_PROJ}'
+	@rm -f ${COQ_MAKEFILE} ${COQ_PROJ}
+
+macos-clean:
+	@echo 'CLEAN .DS_Store'
+	@find . -depth -iname '.DS_Store' ! -path './.git/*' -delete
+
+spell:
+	./scripts/flag-typos-in-comments.sh `find . -iname '*.v'`
+	./scripts/flag-typos-in-Markdown.sh `find . -iname '*.md'`
+
+lint:
+	./scripts/prosa-linter.py -e  `find . -iname '*.v'`
+
+proof-length:
+	./scripts/proofloc.py --check `find . -iname '*.v'`
+
+distclean: cleanall
+	$(RM) $(COQ_PROJ)
+
+help:
+	@echo "You can run:"
+	@echo
+	@echo "'make' or 'make prosa' to build Prosa main development"
+	@echo "'make refinements' to build the refinement part only"
+	@echo "    (requires the main development to be installed)"
+	@echo "'make all' to build everything"
+	@echo
+	@echo "'make install' to install previously compiled files"
+	@echo "'make validate' to check and verify all proofs"
+	@echo
+	@echo "'make htmlpretty' to build the documentation based on CoqdocJS"
+	@echo "    (can hide/show proofs)"
+	@echo "'make gallinahtml' to build the documentation without proofs"
+	@echo "'make html' to build the documentation with all proofs"
+	@echo
+	@echo "'make clean' to remove generated files"
+	@echo "'make vacumm' to clean .vo .glob .aux files and empty dirs"
+	@echo "'make macos-clean' to clean macos' .DS_Store dirs"
+	@echo "'make distclean' to remove all generated files"
+	@echo
+	@echo "'make mangle-names' to compile with mangle-names option"
+	@echo "'make spell' to run a spell checker on comments and Markdown files"
+	@echo "'make proof-length' to flag overlength proofs"
+	@echo "'make lint'" to flag some common coding-style issues
+	@echo
+
+.PHONY: all prosa refinements mangle-names mangle-namesCoqProject
+.PHONY: commonCoqProject allCoqProject prosaCoqProject refinementsCoqProject
+.PHONY: install html gallinahtml htmlpretty clean cleanall validate alectryon
+.PHONY: vacuum macos-clean spell proof-length distclean help

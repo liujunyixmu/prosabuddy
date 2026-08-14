@@ -1,0 +1,218 @@
+DIGEST 849cf28f4eabab18fff55e261dd4b33a
+Fprosa.classic.util.ord_quantifier
+R15:40 prosa.classic.util.tactics <> <> lib
+R72:80 mathcomp.boot.ssreflect <> <> lib
+R82:88 mathcomp.boot.ssrbool <> <> lib
+R90:95 mathcomp.boot.eqtype <> <> lib
+R97:102 mathcomp.boot.ssrnat <> <> lib
+R104:106 mathcomp.boot.seq <> <> lib
+R108:114 mathcomp.boot.fintype <> <> lib
+sec 187:195 <> OrdExists
+prf 207:217 <> exists_ord0
+binder 231:231 <> P:1
+R263:265 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R240:247 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_'in'_x_x_']' not
+R249:252 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_'in'_x_x_']' not
+R262:262 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_'in'_x_x_']' not
+binder 248:248 <> x:2
+binder 248:248 <> x:3
+binder 248:248 <> x:4
+R253:255 mathcomp.boot.fintype <> :::'''I_'_x not
+R257:258 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R259:259 prosa.classic.util.ord_quantifier <> P:1 var
+R261:261 prosa.classic.util.ord_quantifier <> x:2 var
+binder 248:248 <> x:5
+binder 248:248 <> x:6
+R266:270 Corelib.Init.Datatypes <> false constr
+R306:311 Corelib.ssr.ssrbool <> negbTE thm
+R322:332 mathcomp.boot.fintype <> negb_exists thm
+R341:350 mathcomp.boot.fintype <> forall_inP thm
+R306:311 Corelib.ssr.ssrbool <> negbTE thm
+R322:332 mathcomp.boot.fintype <> negb_exists thm
+R322:332 mathcomp.boot.fintype <> negb_exists thm
+R341:350 mathcomp.boot.fintype <> forall_inP thm
+R413:416 mathcomp.boot.ssrnat <> ltn0 thm
+R413:416 mathcomp.boot.ssrnat <> ltn0 thm
+R413:416 mathcomp.boot.ssrnat <> ltn0 thm
+prf 441:451 <> exists_recr
+binder 465:465 <> n:7
+binder 467:467 <> P:8
+R502:510 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R476:483 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_'in'_x_x_']' not
+R485:488 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_'in'_x_x_']' not
+R501:501 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_'in'_x_x_']' not
+binder 484:484 <> x:9
+binder 484:484 <> x:10
+binder 484:484 <> x:11
+R489:491 mathcomp.boot.fintype <> :::'''I_'_x not
+R493:495 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R492:492 prosa.classic.util.ord_quantifier <> n:7 var
+R496:497 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R498:498 prosa.classic.util.ord_quantifier <> P:8 var
+R500:500 prosa.classic.util.ord_quantifier <> x:9 var
+binder 484:484 <> x:12
+binder 484:484 <> x:13
+R557:560 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R511:518 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_'in'_x_x_']' not
+R520:523 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_'in'_x_x_']' not
+R556:556 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_'in'_x_x_']' not
+binder 519:519 <> x:14
+binder 519:519 <> x:15
+binder 519:519 <> x:16
+R524:526 mathcomp.boot.fintype <> :::'''I_'_x not
+R527:527 prosa.classic.util.ord_quantifier <> n:7 var
+R528:529 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R530:530 prosa.classic.util.ord_quantifier <> P:8 var
+R533:541 mathcomp.boot.fintype <> widen_ord def
+R554:554 prosa.classic.util.ord_quantifier <> x:14 var
+R544:549 mathcomp.boot.ssrnat <> leqnSn thm
+R551:551 prosa.classic.util.ord_quantifier <> n:7 var
+binder 519:519 <> x:17
+binder 519:519 <> x:18
+R561:561 prosa.classic.util.ord_quantifier <> P:8 var
+R564:570 mathcomp.boot.fintype <> ord_max def
+R609:611 Corelib.ssr.ssrbool <> idP thm
+R613:615 Corelib.ssr.ssrbool <> idP thm
+R609:611 Corelib.ssr.ssrbool <> idP thm
+R613:615 Corelib.ssr.ssrbool <> idP thm
+R639:648 mathcomp.boot.fintype <> exists_inP thm
+R763:766 mathcomp.boot.ssrnat <> ltnS thm
+R768:776 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R763:766 mathcomp.boot.ssrnat <> ltnS thm
+R763:766 mathcomp.boot.ssrnat <> ltnS thm
+R768:776 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R768:776 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R798:800 Corelib.ssr.ssrbool <> orP thm
+R804:806 mathcomp.boot.eqtype <> eqP def
+R840:842 Corelib.ssr.ssrbool <> orP thm
+R840:842 Corelib.ssr.ssrbool <> orP thm
+R867:873 mathcomp.boot.fintype <> ord_max def
+R922:928 mathcomp.boot.fintype <> Ordinal constr
+R899:906 Corelib.Init.Logic <> eq_trans thm
+R922:928 mathcomp.boot.fintype <> Ordinal constr
+R899:906 Corelib.Init.Logic <> eq_trans thm
+R977:983 mathcomp.boot.fintype <> ord_inj thm
+R977:983 mathcomp.boot.fintype <> ord_inj thm
+R1016:1018 Corelib.ssr.ssrbool <> orP thm
+R1016:1018 Corelib.ssr.ssrbool <> orP thm
+R1041:1050 mathcomp.boot.fintype <> exists_inP thm
+R1061:1067 mathcomp.boot.fintype <> Ordinal constr
+R1041:1050 mathcomp.boot.fintype <> exists_inP thm
+R1061:1067 mathcomp.boot.fintype <> Ordinal constr
+R1126:1132 mathcomp.boot.fintype <> Ordinal constr
+R1103:1110 Corelib.Init.Logic <> eq_trans thm
+R1126:1132 mathcomp.boot.fintype <> Ordinal constr
+R1103:1110 Corelib.Init.Logic <> eq_trans thm
+R1181:1187 mathcomp.boot.fintype <> ord_inj thm
+R1181:1187 mathcomp.boot.fintype <> ord_inj thm
+R1232:1241 mathcomp.boot.fintype <> exists_inP thm
+R1232:1241 mathcomp.boot.fintype <> exists_inP thm
+R1263:1265 Corelib.ssr.ssrbool <> orP thm
+R1269:1278 mathcomp.boot.fintype <> exists_inP thm
+R1344:1352 mathcomp.boot.fintype <> widen_ord def
+R1355:1360 mathcomp.boot.ssrnat <> leqnSn thm
+R1344:1352 mathcomp.boot.fintype <> widen_ord def
+R1355:1360 mathcomp.boot.ssrnat <> leqnSn thm
+R1393:1399 mathcomp.boot.fintype <> ord_max def
+R1393:1399 mathcomp.boot.fintype <> ord_max def
+R1420:1428 prosa.classic.util.ord_quantifier OrdExists <> sec
+sec 1501:1509 <> OrdForall
+prf 1521:1531 <> forall_ord0
+binder 1545:1545 <> P:19
+R1554:1561 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'forall'_x_'in'_x_x_']' not
+R1563:1566 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'forall'_x_'in'_x_x_']' not
+R1576:1576 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'forall'_x_'in'_x_x_']' not
+binder 1562:1562 <> x:20
+binder 1562:1562 <> x:21
+binder 1562:1562 <> x:22
+R1567:1569 mathcomp.boot.fintype <> :::'''I_'_x not
+R1571:1572 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R1573:1573 prosa.classic.util.ord_quantifier <> P:19 var
+R1575:1575 prosa.classic.util.ord_quantifier <> x:20 var
+binder 1562:1562 <> x:23
+binder 1562:1562 <> x:24
+R1608:1617 mathcomp.boot.fintype <> forall_inP thm
+R1608:1617 mathcomp.boot.fintype <> forall_inP thm
+prf 1669:1679 <> forall_recr
+binder 1693:1693 <> n:25
+binder 1695:1695 <> P:26
+R1730:1738 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1704:1711 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'forall'_x_'in'_x_x_']' not
+R1713:1716 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'forall'_x_'in'_x_x_']' not
+R1729:1729 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'forall'_x_'in'_x_x_']' not
+binder 1712:1712 <> x:27
+binder 1712:1712 <> x:28
+binder 1712:1712 <> x:29
+R1717:1719 mathcomp.boot.fintype <> :::'''I_'_x not
+R1721:1723 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R1720:1720 prosa.classic.util.ord_quantifier <> n:25 var
+R1724:1725 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R1726:1726 prosa.classic.util.ord_quantifier <> P:26 var
+R1728:1728 prosa.classic.util.ord_quantifier <> x:27 var
+binder 1712:1712 <> x:30
+binder 1712:1712 <> x:31
+R1785:1788 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R1739:1746 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'forall'_x_'in'_x_x_']' not
+R1748:1751 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'forall'_x_'in'_x_x_']' not
+R1784:1784 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'forall'_x_'in'_x_x_']' not
+binder 1747:1747 <> x:32
+binder 1747:1747 <> x:33
+binder 1747:1747 <> x:34
+R1752:1754 mathcomp.boot.fintype <> :::'''I_'_x not
+R1755:1755 prosa.classic.util.ord_quantifier <> n:25 var
+R1756:1757 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R1758:1758 prosa.classic.util.ord_quantifier <> P:26 var
+R1761:1769 mathcomp.boot.fintype <> widen_ord def
+R1782:1782 prosa.classic.util.ord_quantifier <> x:32 var
+R1772:1777 mathcomp.boot.ssrnat <> leqnSn thm
+R1779:1779 prosa.classic.util.ord_quantifier <> n:25 var
+binder 1747:1747 <> x:35
+binder 1747:1747 <> x:36
+R1789:1789 prosa.classic.util.ord_quantifier <> P:26 var
+R1792:1798 mathcomp.boot.fintype <> ord_max def
+R1837:1839 Corelib.ssr.ssrbool <> idP thm
+R1841:1843 Corelib.ssr.ssrbool <> idP thm
+R1837:1839 Corelib.ssr.ssrbool <> idP thm
+R1841:1843 Corelib.ssr.ssrbool <> idP thm
+R1867:1876 mathcomp.boot.fintype <> forall_inP thm
+R1895:1898 Corelib.ssr.ssrbool <> andP thm
+R1895:1898 Corelib.ssr.ssrbool <> andP thm
+R1942:1951 mathcomp.boot.fintype <> forall_inP thm
+R1942:1951 mathcomp.boot.fintype <> forall_inP thm
+R2005:2008 Corelib.ssr.ssrbool <> andP thm
+R2012:2021 mathcomp.boot.fintype <> forall_inP thm
+R2045:2054 mathcomp.boot.fintype <> forall_inP thm
+R2045:2054 mathcomp.boot.fintype <> forall_inP thm
+R2111:2117 mathcomp.boot.fintype <> ord_max def
+R2179:2182 mathcomp.boot.ssrnat <> ltnS thm
+R2184:2192 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R2179:2182 mathcomp.boot.ssrnat <> ltnS thm
+R2179:2182 mathcomp.boot.ssrnat <> ltnS thm
+R2184:2192 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R2184:2192 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R2214:2216 Corelib.ssr.ssrbool <> orP thm
+R2220:2222 mathcomp.boot.eqtype <> eqP def
+R2273:2275 mathcomp.boot.eqtype <> eqP def
+R2298:2300 mathcomp.boot.eqtype <> eqP def
+R2273:2275 mathcomp.boot.eqtype <> eqP def
+R2298:2300 mathcomp.boot.eqtype <> eqP def
+R2321:2327 mathcomp.boot.fintype <> ord_max def
+R2336:2342 Corelib.Init.Logic <> f_equal thm
+R2345:2351 mathcomp.boot.fintype <> ord_inj thm
+R2336:2342 Corelib.Init.Logic <> f_equal thm
+R2345:2351 mathcomp.boot.fintype <> ord_inj thm
+R2389:2395 mathcomp.boot.fintype <> Ordinal constr
+R2389:2395 mathcomp.boot.fintype <> Ordinal constr
+R2432:2434 mathcomp.boot.eqtype <> eqP def
+R2457:2459 mathcomp.boot.eqtype <> eqP def
+R2432:2434 mathcomp.boot.eqtype <> eqP def
+R2457:2459 mathcomp.boot.eqtype <> eqP def
+R2479:2485 Corelib.Init.Logic <> f_equal thm
+R2488:2494 mathcomp.boot.fintype <> ord_inj thm
+R2479:2485 Corelib.Init.Logic <> f_equal thm
+R2488:2494 mathcomp.boot.fintype <> ord_inj thm
+R2523:2531 prosa.classic.util.ord_quantifier OrdForall <> sec
+R2618:2628 prosa.classic.util.ord_quantifier <> exists_recr thm
+R2631:2641 prosa.classic.util.ord_quantifier <> exists_ord0 thm
+R2681:2691 prosa.classic.util.ord_quantifier <> forall_recr thm
+R2694:2704 prosa.classic.util.ord_quantifier <> forall_ord0 thm

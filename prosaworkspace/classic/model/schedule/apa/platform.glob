@@ -1,0 +1,232 @@
+DIGEST 911ead30210d7369f8780eb91583136b
+Fprosa.classic.model.schedule.apa.platform
+R15:36 prosa.classic.util.all <> <> lib
+R54:90 prosa.classic.model.arrival.basic.job <> <> lib
+R92:129 prosa.classic.model.arrival.basic.task <> <> lib
+R131:158 prosa.classic.model.priority <> <> lib
+R160:205 prosa.classic.model.arrival.basic.task_arrival <> <> lib
+R223:272 prosa.classic.model.schedule.global.basic.schedule <> <> lib
+R290:334 prosa.classic.model.schedule.apa.interference <> <> lib
+R336:376 prosa.classic.model.schedule.apa.affinity <> <> lib
+R408:416 mathcomp.boot.ssreflect <> <> lib
+R418:424 mathcomp.boot.ssrbool <> <> lib
+R426:431 mathcomp.boot.ssrfun <> <> lib
+R433:438 mathcomp.boot.eqtype <> <> lib
+R440:445 mathcomp.boot.ssrnat <> <> lib
+R447:449 mathcomp.boot.seq <> <> lib
+R451:457 mathcomp.boot.fintype <> <> lib
+R459:463 mathcomp.boot.bigop <> <> lib
+mod 474:481 <> Platform
+R494:496 prosa.classic.model.arrival.basic.job Job <> mod
+R498:512 prosa.classic.model.arrival.basic.task SporadicTaskset <> mod
+R514:535 prosa.classic.model.schedule.global.basic.schedule ScheduleOfSporadicTask <> mod
+R537:551 prosa.classic.model.arrival.basic.task SporadicTaskset <> mod
+R562:572 prosa.classic.model.arrival.basic.task_arrival TaskArrival <> mod
+R574:585 prosa.classic.model.schedule.apa.interference Interference <> mod
+R587:594 prosa.classic.model.priority Priority <> mod
+R596:603 prosa.classic.model.schedule.apa.affinity Affinity <> mod
+sec 617:626 Platform Properties
+var  647:659 Platform.Properties sporadic_task
+R662:667 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 684:692 Platform.Properties task_cost
+R708:711 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R695:707 prosa.classic.model.schedule.apa.platform <> Platform.Properties.sporadic_task var
+R712:715 prosa.classic.model.time Time time def
+var 731:741 Platform.Properties task_period
+R757:760 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R744:756 prosa.classic.model.schedule.apa.platform <> Platform.Properties.sporadic_task var
+R761:764 prosa.classic.model.time Time time def
+var 780:792 Platform.Properties task_deadline
+R808:811 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R795:807 prosa.classic.model.schedule.apa.platform <> Platform.Properties.sporadic_task var
+R812:815 prosa.classic.model.time Time time def
+var  836:838 Platform.Properties Job
+R841:846 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 863:873 Platform.Properties job_arrival
+R879:882 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R876:878 prosa.classic.model.schedule.apa.platform <> Platform.Properties.Job var
+R883:886 prosa.classic.model.time Time time def
+var 902:909 Platform.Properties job_cost
+R915:918 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R912:914 prosa.classic.model.schedule.apa.platform <> Platform.Properties.Job var
+R919:922 prosa.classic.model.time Time time def
+var 938:949 Platform.Properties job_deadline
+R955:958 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R952:954 prosa.classic.model.schedule.apa.platform <> Platform.Properties.Job var
+R959:962 prosa.classic.model.time Time time def
+var 978:985 Platform.Properties job_task
+R991:994 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R988:990 prosa.classic.model.schedule.apa.platform <> Platform.Properties.Job var
+R995:1007 prosa.classic.model.schedule.apa.platform <> Platform.Properties.sporadic_task var
+var 1074:1080 Platform.Properties arr_seq
+R1083:1098 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R1100:1102 prosa.classic.model.schedule.apa.platform <> Platform.Properties.Job var
+var  1176:1183 Platform.Properties num_cpus
+R1186:1188 Corelib.Init.Datatypes <> nat ind
+var 1205:1209 Platform.Properties sched
+R1212:1219 prosa.classic.model.schedule.global.basic.schedule Schedule schedule def
+R1225:1232 prosa.classic.model.schedule.apa.platform <> Platform.Properties.num_cpus var
+R1221:1223 prosa.classic.model.schedule.apa.platform <> Platform.Properties.Job var
+var 1314:1318 Platform.Properties alpha
+R1321:1333 prosa.classic.model.schedule.apa.affinity Affinity task_affinity def
+R1349:1356 prosa.classic.model.schedule.apa.platform <> Platform.Properties.num_cpus var
+R1335:1347 prosa.classic.model.schedule.apa.platform <> Platform.Properties.sporadic_task var
+sec 1376:1384 Platform.Properties Execution
+def 1559:1577 Platform apa_work_conserving
+binder 1597:1597 <> j:24
+binder 1599:1599 <> t:25
+R1632:1645 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1612:1621 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R1631:1631 prosa.classic.model.schedule.apa.platform <> j:24 var
+R1623:1629 prosa.classic.model.schedule.apa.platform <> Platform.Properties.arr_seq var
+R1687:1700 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1646:1655 prosa.classic.model.schedule.global.basic.schedule Schedule backlogged def
+R1686:1686 prosa.classic.model.schedule.apa.platform <> t:25 var
+R1684:1684 prosa.classic.model.schedule.apa.platform <> j:24 var
+R1678:1682 prosa.classic.model.schedule.apa.platform <> Platform.Properties.sched var
+R1669:1676 prosa.classic.model.schedule.apa.platform <> Platform.Properties.job_cost var
+R1657:1667 prosa.classic.model.schedule.apa.platform <> Platform.Properties.job_arrival var
+binder 1708:1710 <> cpu:26
+R1762:1777 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1725:1738 prosa.classic.model.schedule.apa.affinity Affinity can_execute_on def
+R1759:1761 prosa.classic.model.schedule.apa.platform <> cpu:26 var
+R1747:1754 prosa.classic.model.schedule.apa.platform <> Platform.Properties.job_task var
+R1756:1756 prosa.classic.model.schedule.apa.platform <> j:24 var
+R1740:1744 prosa.classic.model.schedule.apa.platform <> Platform.Properties.alpha var
+R1778:1784 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1792:1807 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 1785:1791 <> j_other:27
+R1808:1819 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled_on def
+R1835:1837 prosa.classic.model.schedule.apa.platform <> cpu:26 var
+R1839:1839 prosa.classic.model.schedule.apa.platform <> t:25 var
+R1827:1833 prosa.classic.model.schedule.apa.platform <> j_other:27 var
+R1821:1825 prosa.classic.model.schedule.apa.platform <> Platform.Properties.sched var
+def 1972:1988 Platform respects_affinity
+binder 2008:2008 <> j:28
+binder 2010:2012 <> cpu:29
+binder 2014:2014 <> t:30
+R2053:2066 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2027:2038 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled_on def
+R2048:2050 prosa.classic.model.schedule.apa.platform <> cpu:29 var
+R2052:2052 prosa.classic.model.schedule.apa.platform <> t:30 var
+R2046:2046 prosa.classic.model.schedule.apa.platform <> j:28 var
+R2040:2044 prosa.classic.model.schedule.apa.platform <> Platform.Properties.sched var
+R2067:2080 prosa.classic.model.schedule.apa.affinity Affinity can_execute_on def
+R2101:2103 prosa.classic.model.schedule.apa.platform <> cpu:29 var
+R2089:2096 prosa.classic.model.schedule.apa.platform <> Platform.Properties.job_task var
+R2098:2098 prosa.classic.model.schedule.apa.platform <> j:28 var
+R2082:2086 prosa.classic.model.schedule.apa.platform <> Platform.Properties.alpha var
+R2115:2123 prosa.classic.model.schedule.apa.platform Platform.Properties.Execution <> sec
+sec 2139:2140 Platform.Properties FP
+var 2187:2204 Platform.Properties.FP higher_eq_priority
+R2207:2215 prosa.classic.model.priority Priority FP_policy def
+R2217:2229 prosa.classic.model.schedule.apa.platform <> Platform.Properties.sporadic_task var
+def 2480:2512 Platform respects_FP_policy_under_weak_APA
+binder 2532:2532 <> j:33
+binder 2534:2537 <> j_hp:34
+binder 2539:2541 <> cpu:35
+binder 2543:2543 <> t:36
+R2576:2589 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2556:2565 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R2575:2575 prosa.classic.model.schedule.apa.platform <> j:33 var
+R2567:2573 prosa.classic.model.schedule.apa.platform <> Platform.Properties.arr_seq var
+R2631:2644 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2590:2599 prosa.classic.model.schedule.global.basic.schedule Schedule backlogged def
+R2630:2630 prosa.classic.model.schedule.apa.platform <> t:36 var
+R2628:2628 prosa.classic.model.schedule.apa.platform <> j:33 var
+R2622:2626 prosa.classic.model.schedule.apa.platform <> Platform.Properties.sched var
+R2613:2620 prosa.classic.model.schedule.apa.platform <> Platform.Properties.job_cost var
+R2601:2611 prosa.classic.model.schedule.apa.platform <> Platform.Properties.job_arrival var
+R2674:2687 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2645:2656 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled_on def
+R2669:2671 prosa.classic.model.schedule.apa.platform <> cpu:35 var
+R2673:2673 prosa.classic.model.schedule.apa.platform <> t:36 var
+R2664:2667 prosa.classic.model.schedule.apa.platform <> j_hp:34 var
+R2658:2662 prosa.classic.model.schedule.apa.platform <> Platform.Properties.sched var
+R2725:2738 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2688:2701 prosa.classic.model.schedule.apa.affinity Affinity can_execute_on def
+R2722:2724 prosa.classic.model.schedule.apa.platform <> cpu:35 var
+R2710:2717 prosa.classic.model.schedule.apa.platform <> Platform.Properties.job_task var
+R2719:2719 prosa.classic.model.schedule.apa.platform <> j:33 var
+R2703:2707 prosa.classic.model.schedule.apa.platform <> Platform.Properties.alpha var
+R2739:2756 prosa.classic.model.schedule.apa.platform <> Platform.Properties.FP.higher_eq_priority var
+R2759:2766 prosa.classic.model.schedule.apa.platform <> Platform.Properties.job_task var
+R2768:2771 prosa.classic.model.schedule.apa.platform <> j_hp:34 var
+R2775:2782 prosa.classic.model.schedule.apa.platform <> Platform.Properties.job_task var
+R2784:2784 prosa.classic.model.schedule.apa.platform <> j:33 var
+R2797:2798 prosa.classic.model.schedule.apa.platform Platform.Properties.FP <> sec
+sec 2814:2817 Platform.Properties JLFP
+var 2865:2882 Platform.Properties.JLFP higher_eq_priority
+R2885:2895 prosa.classic.model.priority Priority JLFP_policy def
+R2897:2899 prosa.classic.model.schedule.apa.platform <> Platform.Properties.Job var
+def 3140:3174 Platform respects_JLFP_policy_under_weak_APA
+binder 3194:3194 <> j:39
+binder 3196:3199 <> j_hp:40
+binder 3201:3203 <> cpu:41
+binder 3205:3205 <> t:42
+R3238:3251 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3218:3227 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R3237:3237 prosa.classic.model.schedule.apa.platform <> j:39 var
+R3229:3235 prosa.classic.model.schedule.apa.platform <> Platform.Properties.arr_seq var
+R3293:3306 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3252:3261 prosa.classic.model.schedule.global.basic.schedule Schedule backlogged def
+R3292:3292 prosa.classic.model.schedule.apa.platform <> t:42 var
+R3290:3290 prosa.classic.model.schedule.apa.platform <> j:39 var
+R3284:3288 prosa.classic.model.schedule.apa.platform <> Platform.Properties.sched var
+R3275:3282 prosa.classic.model.schedule.apa.platform <> Platform.Properties.job_cost var
+R3263:3273 prosa.classic.model.schedule.apa.platform <> Platform.Properties.job_arrival var
+R3336:3349 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3307:3318 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled_on def
+R3331:3333 prosa.classic.model.schedule.apa.platform <> cpu:41 var
+R3335:3335 prosa.classic.model.schedule.apa.platform <> t:42 var
+R3326:3329 prosa.classic.model.schedule.apa.platform <> j_hp:40 var
+R3320:3324 prosa.classic.model.schedule.apa.platform <> Platform.Properties.sched var
+R3387:3400 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3350:3363 prosa.classic.model.schedule.apa.affinity Affinity can_execute_on def
+R3384:3386 prosa.classic.model.schedule.apa.platform <> cpu:41 var
+R3372:3379 prosa.classic.model.schedule.apa.platform <> Platform.Properties.job_task var
+R3381:3381 prosa.classic.model.schedule.apa.platform <> j:39 var
+R3365:3369 prosa.classic.model.schedule.apa.platform <> Platform.Properties.alpha var
+R3401:3418 prosa.classic.model.schedule.apa.platform <> Platform.Properties.JLFP.higher_eq_priority var
+R3420:3423 prosa.classic.model.schedule.apa.platform <> j_hp:40 var
+R3425:3425 prosa.classic.model.schedule.apa.platform <> j:39 var
+R3443:3446 prosa.classic.model.schedule.apa.platform Platform.Properties.JLFP <> sec
+sec 3462:3465 Platform.Properties JLDP
+var 3518:3535 Platform.Properties.JLDP higher_eq_priority
+R3538:3548 prosa.classic.model.priority Priority JLDP_policy def
+R3550:3552 prosa.classic.model.schedule.apa.platform <> Platform.Properties.Job var
+def 3808:3842 Platform respects_JLDP_policy_under_weak_APA
+binder 3862:3862 <> j:45
+binder 3864:3867 <> j_hp:46
+binder 3869:3871 <> cpu:47
+binder 3873:3873 <> t:48
+R3906:3919 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3886:3895 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R3905:3905 prosa.classic.model.schedule.apa.platform <> j:45 var
+R3897:3903 prosa.classic.model.schedule.apa.platform <> Platform.Properties.arr_seq var
+R3961:3974 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3920:3929 prosa.classic.model.schedule.global.basic.schedule Schedule backlogged def
+R3960:3960 prosa.classic.model.schedule.apa.platform <> t:48 var
+R3958:3958 prosa.classic.model.schedule.apa.platform <> j:45 var
+R3952:3956 prosa.classic.model.schedule.apa.platform <> Platform.Properties.sched var
+R3943:3950 prosa.classic.model.schedule.apa.platform <> Platform.Properties.job_cost var
+R3931:3941 prosa.classic.model.schedule.apa.platform <> Platform.Properties.job_arrival var
+R4004:4017 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3975:3986 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled_on def
+R3999:4001 prosa.classic.model.schedule.apa.platform <> cpu:47 var
+R4003:4003 prosa.classic.model.schedule.apa.platform <> t:48 var
+R3994:3997 prosa.classic.model.schedule.apa.platform <> j_hp:46 var
+R3988:3992 prosa.classic.model.schedule.apa.platform <> Platform.Properties.sched var
+R4055:4068 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4018:4031 prosa.classic.model.schedule.apa.affinity Affinity can_execute_on def
+R4052:4054 prosa.classic.model.schedule.apa.platform <> cpu:47 var
+R4040:4047 prosa.classic.model.schedule.apa.platform <> Platform.Properties.job_task var
+R4049:4049 prosa.classic.model.schedule.apa.platform <> j:45 var
+R4033:4037 prosa.classic.model.schedule.apa.platform <> Platform.Properties.alpha var
+R4069:4086 prosa.classic.model.schedule.apa.platform <> Platform.Properties.JLDP.higher_eq_priority var
+R4088:4088 prosa.classic.model.schedule.apa.platform <> t:48 var
+R4090:4093 prosa.classic.model.schedule.apa.platform <> j_hp:46 var
+R4095:4095 prosa.classic.model.schedule.apa.platform <> j:45 var
+R4113:4116 prosa.classic.model.schedule.apa.platform Platform.Properties.JLDP <> sec
+R4130:4139 prosa.classic.model.schedule.apa.platform Platform.Properties <> sec
+R4149:4156 prosa.classic.model.schedule.apa.platform Platform <> mod

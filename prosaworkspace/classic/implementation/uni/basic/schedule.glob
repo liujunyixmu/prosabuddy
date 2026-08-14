@@ -1,0 +1,427 @@
+DIGEST 37a958c16cefdb11fbf3ebdd76baa83d
+Fprosa.classic.implementation.uni.basic.schedule
+R15:36 prosa.classic.util.all <> <> lib
+R54:90 prosa.classic.model.arrival.basic.job <> <> lib
+R92:141 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R143:170 prosa.classic.model.priority <> <> lib
+R188:228 prosa.classic.model.schedule.uni.schedule <> <> lib
+R246:292 prosa.classic.model.schedule.uni.basic.platform <> <> lib
+R310:369 prosa.classic.model.schedule.uni.transformation.construction <> <> lib
+R401:409 mathcomp.boot.ssreflect <> <> lib
+R411:417 mathcomp.boot.ssrbool <> <> lib
+R419:424 mathcomp.boot.ssrfun <> <> lib
+R426:431 mathcomp.boot.eqtype <> <> lib
+R433:438 mathcomp.boot.ssrnat <> <> lib
+R440:446 mathcomp.boot.fintype <> <> lib
+R448:452 mathcomp.boot.bigop <> <> lib
+R454:456 mathcomp.boot.seq <> <> lib
+R458:461 mathcomp.boot.path <> <> lib
+mod 472:488 <> ConcreteScheduler
+R501:503 prosa.classic.model.arrival.basic.job Job <> mod
+R505:519 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence <> mod
+R521:540 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule <> mod
+R542:549 prosa.classic.model.schedule.uni.basic.platform Platform <> mod
+R551:558 prosa.classic.model.priority Priority <> mod
+R560:579 prosa.classic.model.schedule.uni.transformation.construction ScheduleConstruction <> mod
+sec 671:684 ConcreteScheduler Implementation
+var  705:707 ConcreteScheduler.Implementation Job
+R710:715 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 732:742 ConcreteScheduler.Implementation job_arrival
+R748:751 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R745:747 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Implementation.Job var
+R752:755 prosa.classic.model.time Time time def
+var 771:778 ConcreteScheduler.Implementation job_cost
+R784:787 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R781:783 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Implementation.Job var
+R788:791 prosa.classic.model.time Time time def
+var 883:889 ConcreteScheduler.Implementation arr_seq
+R892:907 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R909:911 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Implementation.Job var
+var 929:958 ConcreteScheduler.Implementation H_arrival_times_are_consistent
+R961:988 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_times_are_consistent def
+R1002:1008 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Implementation.arr_seq var
+R990:1000 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Implementation.job_arrival var
+var 1099:1116 ConcreteScheduler.Implementation higher_eq_priority
+R1119:1129 prosa.classic.model.priority Priority JLDP_policy def
+R1131:1133 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Implementation.Job var
+sec 1216:1235 ConcreteScheduler.Implementation ScheduleConstruction
+var 1423:1434 ConcreteScheduler.Implementation.ScheduleConstruction sched_prefix
+R1437:1444 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R1446:1448 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Implementation.Job var
+var 1466:1466 ConcreteScheduler.Implementation.ScheduleConstruction t
+R1469:1472 prosa.classic.model.time Time time def
+var 1548:1557 ConcreteScheduler.Implementation.ScheduleConstruction is_pending
+R1562:1568 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R1591:1602 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Implementation.ScheduleConstruction.sched_prefix var
+R1582:1589 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Implementation.job_cost var
+R1570:1580 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Implementation.job_arrival var
+def 1680:1691 ConcreteScheduler pending_jobs
+R1704:1708 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R1710:1713 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R1742:1744 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R1759:1759 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+binder 1709:1709 <> j:16
+R1745:1754 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Implementation.ScheduleConstruction.is_pending var
+R1756:1756 prosa.classic.implementation.uni.basic.schedule <> j:16 var
+R1758:1758 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Implementation.ScheduleConstruction.t var
+R1714:1731 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_up_to def
+R1741:1741 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Implementation.ScheduleConstruction.t var
+R1733:1739 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Implementation.arr_seq var
+def 1921:1940 ConcreteScheduler highest_priority_job
+R1953:1959 prosa.classic.util.minmax <> seq_min def
+R1984:1995 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler pending_jobs def
+R1962:1979 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Implementation.higher_eq_priority var
+R1981:1981 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Implementation.ScheduleConstruction.t var
+R2007:2026 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler.Implementation.ScheduleConstruction <> sec
+var 2169:2182 ConcreteScheduler.Implementation empty_schedule
+R2186:2193 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R2195:2197 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Implementation.Job var
+binder 2206:2206 <> t:17
+R2211:2214 Corelib.Init.Datatypes <> None constr
+def 2232:2240 ConcreteScheduler scheduler
+R2251:2278 prosa.classic.model.schedule.uni.transformation.construction ScheduleConstruction build_schedule_from_prefixes def
+R2301:2314 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Implementation.empty_schedule var
+R2280:2299 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler highest_priority_job def
+prf 2418:2449 ConcreteScheduler scheduler_depends_only_on_prefix
+binder 2465:2470 <> sched1:18
+binder 2472:2477 <> sched2:19
+binder 2479:2479 <> t:20
+R2490:2490 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2533:2545 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+binder 2498:2499 <> t0:21
+R2508:2511 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2504:2506 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R2502:2503 prosa.classic.implementation.uni.basic.schedule <> t0:21 var
+R2507:2507 prosa.classic.implementation.uni.basic.schedule <> t:20 var
+R2521:2523 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2512:2517 prosa.classic.implementation.uni.basic.schedule <> sched1:18 var
+R2519:2520 prosa.classic.implementation.uni.basic.schedule <> t0:21 var
+R2524:2529 prosa.classic.implementation.uni.basic.schedule <> sched2:19 var
+R2531:2532 prosa.classic.implementation.uni.basic.schedule <> t0:21 var
+R2575:2577 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2546:2565 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler highest_priority_job def
+R2574:2574 prosa.classic.implementation.uni.basic.schedule <> t:20 var
+R2567:2572 prosa.classic.implementation.uni.basic.schedule <> sched1:18 var
+R2578:2597 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler highest_priority_job def
+R2606:2606 prosa.classic.implementation.uni.basic.schedule <> t:20 var
+R2599:2604 prosa.classic.implementation.uni.basic.schedule <> sched2:19 var
+R2669:2688 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler highest_priority_job def
+R2669:2688 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler highest_priority_job def
+R2669:2688 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler highest_priority_job def
+R2729:2731 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2708:2719 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler pending_jobs def
+R2732:2743 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler pending_jobs def
+R2783:2794 mathcomp.boot.seq <> eq_in_filter thm
+R2783:2794 mathcomp.boot.seq <> eq_in_filter thm
+R2885:2895 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Implementation.job_arrival var
+R2829:2862 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived_before thm
+R2885:2895 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Implementation.job_arrival var
+R2829:2862 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived_before thm
+R2943:2956 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrived_before def
+R2958:2961 mathcomp.boot.ssrnat <> ltnS thm
+R2943:2956 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrived_before def
+R2943:2956 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrived_before def
+R2958:2961 mathcomp.boot.ssrnat <> ltnS thm
+R2958:2961 mathcomp.boot.ssrnat <> ltnS thm
+R2986:2992 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R2995:3005 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence has_arrived def
+R3013:3017 Corelib.ssr.ssrbool <> andTb thm
+R2986:2992 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R2986:2992 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R2995:3005 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence has_arrived def
+R2995:3005 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence has_arrived def
+R3013:3017 Corelib.ssr.ssrbool <> andTb thm
+R3013:3017 Corelib.ssr.ssrbool <> andTb thm
+R3013:3017 Corelib.ssr.ssrbool <> andTb thm
+R3044:3055 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R3044:3055 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R3044:3055 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R3079:3088 mathcomp.boot.bigop <> eq_big_nat thm
+R3079:3088 mathcomp.boot.bigop <> eq_big_nat thm
+R3127:3136 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_at def
+R3139:3150 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R3127:3136 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_at def
+R3127:3136 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_at def
+R3139:3150 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R3139:3150 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+prf 3283:3318 ConcreteScheduler scheduler_uses_construction_function
+binder 3334:3334 <> t:22
+R3348:3350 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3337:3345 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler scheduler def
+R3347:3347 prosa.classic.implementation.uni.basic.schedule <> t:22 var
+R3351:3370 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler highest_priority_job def
+R3382:3382 prosa.classic.implementation.uni.basic.schedule <> t:22 var
+R3372:3380 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler scheduler def
+R3416:3453 prosa.classic.model.schedule.uni.transformation.construction ScheduleConstruction prefix_dependent_schedule_construction thm
+R3476:3507 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler scheduler_depends_only_on_prefix thm
+R3416:3453 prosa.classic.model.schedule.uni.transformation.construction ScheduleConstruction prefix_dependent_schedule_construction thm
+R3476:3507 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler scheduler_depends_only_on_prefix thm
+R3530:3543 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler.Implementation <> sec
+sec 3673:3678 ConcreteScheduler Proofs
+var  3695:3697 ConcreteScheduler.Proofs Job
+R3700:3705 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 3722:3732 ConcreteScheduler.Proofs job_arrival
+R3738:3741 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3735:3737 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.Job var
+R3742:3745 prosa.classic.model.time Time time def
+var 3761:3768 ConcreteScheduler.Proofs job_cost
+R3774:3777 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3771:3773 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.Job var
+R3778:3781 prosa.classic.model.time Time time def
+var 3890:3896 ConcreteScheduler.Proofs arr_seq
+R3899:3914 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R3916:3918 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.Job var
+var 3936:3965 ConcreteScheduler.Proofs H_arrival_times_are_consistent
+R3968:3995 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_times_are_consistent def
+R4009:4015 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.arr_seq var
+R3997:4007 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.job_arrival var
+var 4033:4059 ConcreteScheduler.Proofs H_arrival_sequence_is_a_set
+R4062:4086 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence_is_a_set def
+R4088:4094 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.arr_seq var
+var 4176:4193 ConcreteScheduler.Proofs higher_eq_priority
+R4196:4206 prosa.classic.model.priority Priority JLDP_policy def
+R4208:4210 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.Job var
+var 4228:4251 ConcreteScheduler.Proofs H_priority_is_transitive
+binder 4261:4261 <> t:36
+R4264:4273 Corelib.ssr.ssrbool <> transitive def
+R4276:4293 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.higher_eq_priority var
+R4295:4295 prosa.classic.implementation.uni.basic.schedule <> t:36 var
+var 4314:4332 ConcreteScheduler.Proofs H_priority_is_total
+binder 4342:4342 <> t:39
+R4345:4349 Corelib.ssr.ssrbool <> total def
+R4352:4369 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.higher_eq_priority var
+R4371:4371 prosa.classic.implementation.uni.basic.schedule <> t:39 var
+var 4450:4454 ConcreteScheduler.Proofs sched
+R4459:4467 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler scheduler def
+R4498:4515 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.higher_eq_priority var
+R4490:4496 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.arr_seq var
+R4481:4488 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.job_cost var
+R4469:4479 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.job_arrival var
+prf 4703:4743 ConcreteScheduler scheduler_jobs_come_from_arrival_sequence
+R4754:4784 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule jobs_come_from_arrival_sequence def
+R4792:4798 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.arr_seq var
+R4786:4790 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.sched var
+R4835:4837 mathcomp.boot.eqtype <> eqP def
+R4863:4867 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.sched var
+R4869:4904 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler scheduler_uses_construction_function thm
+R4910:4929 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler highest_priority_job def
+R4863:4867 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.sched var
+R4863:4867 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.sched var
+R4869:4904 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler scheduler_uses_construction_function thm
+R4869:4904 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler scheduler_uses_construction_function thm
+R4910:4929 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler highest_priority_job def
+R4910:4929 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler highest_priority_job def
+R4955:4968 prosa.classic.util.minmax <> seq_min_in_seq thm
+R4955:4968 prosa.classic.util.minmax <> seq_min_in_seq thm
+R4996:5005 mathcomp.boot.seq <> mem_filter thm
+R4996:5005 mathcomp.boot.seq <> mem_filter thm
+R4996:5005 mathcomp.boot.seq <> mem_filter thm
+R5041:5044 Corelib.ssr.ssrbool <> andP thm
+R5073:5099 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R5073:5099 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+prf 5201:5237 ConcreteScheduler scheduler_jobs_must_arrive_to_execute
+R5246:5272 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule jobs_must_arrive_to_execute def
+R5286:5290 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.sched var
+R5274:5284 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.job_arrival var
+R5323:5325 mathcomp.boot.eqtype <> eqP def
+R5349:5353 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.sched var
+R5355:5390 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler scheduler_uses_construction_function thm
+R5396:5415 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler highest_priority_job def
+R5349:5353 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.sched var
+R5349:5353 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.sched var
+R5355:5390 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler scheduler_uses_construction_function thm
+R5355:5390 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler scheduler_uses_construction_function thm
+R5396:5415 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler highest_priority_job def
+R5396:5415 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler highest_priority_job def
+R5439:5452 prosa.classic.util.minmax <> seq_min_in_seq thm
+R5439:5452 prosa.classic.util.minmax <> seq_min_in_seq thm
+R5478:5487 mathcomp.boot.seq <> mem_filter thm
+R5478:5487 mathcomp.boot.seq <> mem_filter thm
+R5478:5487 mathcomp.boot.seq <> mem_filter thm
+R5524:5527 Corelib.ssr.ssrbool <> andP thm
+R5531:5534 Corelib.ssr.ssrbool <> andP thm
+prf 5606:5642 ConcreteScheduler scheduler_completed_jobs_dont_execute
+R5651:5677 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_jobs_dont_execute def
+R5688:5692 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.sched var
+R5679:5686 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.job_cost var
+R5769:5775 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R5778:5791 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R5793:5799 mathcomp.boot.bigop <> big_geq thm
+R5769:5775 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R5769:5775 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R5778:5791 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R5778:5791 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R5793:5799 mathcomp.boot.bigop <> big_geq thm
+R5793:5799 mathcomp.boot.bigop <> big_geq thm
+R5820:5826 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R5829:5842 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R5844:5855 mathcomp.boot.bigop <> big_nat_recr thm
+R5820:5826 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R5820:5826 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R5829:5842 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R5829:5842 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R5844:5855 mathcomp.boot.bigop <> big_nat_recr thm
+R5844:5855 mathcomp.boot.bigop <> big_nat_recr thm
+R5876:5884 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R5876:5884 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R5876:5884 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R5908:5910 Corelib.ssr.ssrbool <> orP thm
+R5914:5916 mathcomp.boot.eqtype <> eqP def
+R5963:5971 mathcomp.boot.ssrnat <> leq_trans thm
+R5986:5990 mathcomp.boot.ssrnat <> addn1 thm
+R5963:5971 mathcomp.boot.ssrnat <> leq_trans thm
+R5986:5990 mathcomp.boot.ssrnat <> addn1 thm
+R5986:5990 mathcomp.boot.ssrnat <> addn1 thm
+R6012:6018 mathcomp.boot.ssrnat <> leq_add thm
+R6035:6040 mathcomp.boot.ssrnat <> leq_b1 thm
+R6012:6018 mathcomp.boot.ssrnat <> leq_add thm
+R6035:6040 mathcomp.boot.ssrnat <> leq_b1 thm
+R6067:6074 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.job_cost var
+R6078:6082 mathcomp.boot.ssrnat <> addn0 thm
+R6091:6097 mathcomp.boot.ssrnat <> leq_add thm
+R6078:6082 mathcomp.boot.ssrnat <> addn0 thm
+R6067:6074 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.job_cost var
+R6067:6074 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.job_cost var
+R6078:6082 mathcomp.boot.ssrnat <> addn0 thm
+R6091:6097 mathcomp.boot.ssrnat <> leq_add thm
+R6136:6140 mathcomp.boot.ssrnat <> leqn0 thm
+R6142:6145 mathcomp.boot.ssrnat <> eqb0 thm
+R6148:6159 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R6136:6140 mathcomp.boot.ssrnat <> leqn0 thm
+R6136:6140 mathcomp.boot.ssrnat <> leqn0 thm
+R6142:6145 mathcomp.boot.ssrnat <> eqb0 thm
+R6142:6145 mathcomp.boot.ssrnat <> eqb0 thm
+R6148:6159 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R6148:6159 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R6177:6181 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.sched var
+R6183:6218 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler scheduler_uses_construction_function thm
+R6177:6181 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.sched var
+R6177:6181 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.sched var
+R6183:6218 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler scheduler_uses_construction_function thm
+R6183:6218 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler scheduler_uses_construction_function thm
+R6239:6258 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler highest_priority_job def
+R6239:6258 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler highest_priority_job def
+R6239:6258 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler highest_priority_job def
+R6273:6275 mathcomp.boot.eqtype <> eqP def
+R6273:6275 mathcomp.boot.eqtype <> eqP def
+R6300:6313 prosa.classic.util.minmax <> seq_min_in_seq thm
+R6300:6313 prosa.classic.util.minmax <> seq_min_in_seq thm
+R6341:6350 mathcomp.boot.seq <> mem_filter thm
+R6353:6359 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R6362:6373 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R6380:6384 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.sched var
+R6386:6390 mathcomp.boot.ssrnat <> leqnn thm
+R6392:6396 Corelib.ssr.ssrbool <> andbF thm
+R6398:6402 Corelib.ssr.ssrbool <> andFb thm
+R6341:6350 mathcomp.boot.seq <> mem_filter thm
+R6341:6350 mathcomp.boot.seq <> mem_filter thm
+R6353:6359 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R6353:6359 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R6362:6373 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R6362:6373 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R6380:6384 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.sched var
+R6380:6384 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.sched var
+R6386:6390 mathcomp.boot.ssrnat <> leqnn thm
+R6386:6390 mathcomp.boot.ssrnat <> leqnn thm
+R6392:6396 Corelib.ssr.ssrbool <> andbF thm
+R6392:6396 Corelib.ssr.ssrbool <> andbF thm
+R6398:6402 Corelib.ssr.ssrbool <> andFb thm
+R6398:6402 Corelib.ssr.ssrbool <> andFb thm
+prf 6494:6518 ConcreteScheduler scheduler_work_conserving
+R6527:6541 prosa.classic.model.schedule.uni.basic.platform Platform work_conserving def
+R6572:6576 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.sched var
+R6564:6570 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.arr_seq var
+R6555:6562 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.job_cost var
+R6543:6553 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.job_arrival var
+R6638:6641 Corelib.ssr.ssrbool <> andP thm
+R6645:6648 Corelib.ssr.ssrbool <> andP thm
+R6690:6701 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R6704:6708 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.sched var
+R6710:6745 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler scheduler_uses_construction_function thm
+R6690:6701 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R6690:6701 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R6704:6708 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.sched var
+R6704:6708 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.sched var
+R6710:6745 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler scheduler_uses_construction_function thm
+R6710:6745 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler scheduler_uses_construction_function thm
+R6778:6789 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R6792:6796 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.sched var
+R6798:6833 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler scheduler_uses_construction_function thm
+R6778:6789 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R6778:6789 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R6792:6796 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.sched var
+R6792:6796 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.sched var
+R6798:6833 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler scheduler_uses_construction_function thm
+R6798:6833 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler scheduler_uses_construction_function thm
+R6855:6874 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler highest_priority_job def
+R6855:6874 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler highest_priority_job def
+R6855:6874 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler highest_priority_job def
+R6936:6955 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler highest_priority_job def
+R6936:6955 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler highest_priority_job def
+R6936:6955 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler highest_priority_job def
+R7003:7006 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R7007:7010 Corelib.Init.Datatypes <> None constr
+R7046:7059 prosa.classic.util.minmax <> seq_min_exists thm
+R7046:7059 prosa.classic.util.minmax <> seq_min_exists thm
+R7090:7099 mathcomp.boot.seq <> mem_filter thm
+R7102:7108 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R7090:7099 mathcomp.boot.seq <> mem_filter thm
+R7090:7099 mathcomp.boot.seq <> mem_filter thm
+R7102:7108 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R7102:7108 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R7142:7176 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrived_between_implies_in_arrivals thm
+R7142:7176 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrived_between_implies_in_arrivals thm
+prf 7249:7273 ConcreteScheduler scheduler_respects_policy
+R7283:7302 prosa.classic.model.schedule.uni.basic.platform Platform respects_JLDP_policy def
+R7339:7356 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.higher_eq_priority var
+R7333:7337 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.sched var
+R7325:7331 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.arr_seq var
+R7316:7323 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.job_cost var
+R7304:7314 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.job_arrival var
+R7485:7487 mathcomp.boot.eqtype <> eqP def
+R7517:7520 Corelib.ssr.ssrbool <> andP thm
+R7524:7527 Corelib.ssr.ssrbool <> andP thm
+R7569:7580 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R7583:7587 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.sched var
+R7589:7624 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler scheduler_uses_construction_function thm
+R7569:7580 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R7569:7580 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R7583:7587 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.sched var
+R7583:7587 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.sched var
+R7589:7624 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler scheduler_uses_construction_function thm
+R7589:7624 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler scheduler_uses_construction_function thm
+R7657:7668 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R7671:7675 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.sched var
+R7677:7712 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler scheduler_uses_construction_function thm
+R7657:7668 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R7657:7668 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R7671:7675 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.sched var
+R7671:7675 prosa.classic.implementation.uni.basic.schedule <> ConcreteScheduler.Proofs.sched var
+R7677:7712 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler scheduler_uses_construction_function thm
+R7677:7712 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler scheduler_uses_construction_function thm
+R7742:7761 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler highest_priority_job def
+R7742:7761 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler highest_priority_job def
+R7742:7761 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler highest_priority_job def
+R7800:7811 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler pending_jobs def
+R7800:7811 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler pending_jobs def
+R7800:7811 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler pending_jobs def
+R7859:7863 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R7894:7903 mathcomp.boot.seq <> mem_filter thm
+R7906:7912 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R7894:7903 mathcomp.boot.seq <> mem_filter thm
+R7894:7903 mathcomp.boot.seq <> mem_filter thm
+R7906:7912 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R7906:7912 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R7948:7982 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrived_between_implies_in_arrivals thm
+R7948:7982 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrived_between_implies_in_arrivals thm
+R8010:8029 prosa.classic.util.minmax <> seq_min_computes_min thm
+R8010:8029 prosa.classic.util.minmax <> seq_min_computes_min thm
+R8102:8111 mathcomp.boot.seq <> mem_filter thm
+R8180:8206 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R8102:8111 mathcomp.boot.seq <> mem_filter thm
+R8102:8111 mathcomp.boot.seq <> mem_filter thm
+R8102:8111 mathcomp.boot.seq <> mem_filter thm
+R8123:8126 Corelib.ssr.ssrbool <> andP thm
+R8137:8140 Corelib.ssr.ssrbool <> andP thm
+R8234:8239 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler.Proofs <> sec
+R8251:8267 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler <> mod

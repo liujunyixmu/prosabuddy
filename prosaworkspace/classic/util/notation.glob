@@ -1,0 +1,147 @@
+DIGEST 2e535c8ff2225521aef79324ec6a8167
+Fprosa.classic.util.notation
+R15:33 prosa.util.notation <> <> lib
+R66:74 mathcomp.boot.ssreflect <> <> lib
+R76:82 mathcomp.boot.ssrbool <> <> lib
+R84:89 mathcomp.boot.eqtype <> <> lib
+R91:96 mathcomp.boot.ssrnat <> <> lib
+R98:100 mathcomp.boot.seq <> <> lib
+R102:108 mathcomp.boot.fintype <> <> lib
+R110:114 mathcomp.boot.bigop <> <> lib
+sec 199:202 <> Pair
+var  217:217 Pair A
+var  219:219 Pair B
+var 240:240 Pair p
+R244:246 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R243:243 prosa.classic.util.notation <> Pair.A var
+R247:247 prosa.classic.util.notation <> Pair.B var
+def 263:270 <> pair_1st
+R275:277 Corelib.Init.Datatypes <> fst def
+R279:279 prosa.classic.util.notation <> Pair.p var
+def 295:302 <> pair_2nd
+R307:309 Corelib.Init.Datatypes <> snd def
+R311:311 prosa.classic.util.notation <> Pair.p var
+R319:322 prosa.classic.util.notation Pair <> sec
+sec 356:361 <> Triple
+var  376:376 Triple A
+var  378:378 Triple B
+var  380:380 Triple C
+var 401:401 Triple p
+R409:411 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R405:407 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R404:404 prosa.classic.util.notation <> Triple.A var
+R408:408 prosa.classic.util.notation <> Triple.B var
+R412:412 prosa.classic.util.notation <> Triple.C var
+def 428:437 <> triple_1st
+R448:450 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R444:446 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R443:443 prosa.classic.util.notation <> Triple.A var
+R447:447 prosa.classic.util.notation <> Triple.B var
+R451:451 prosa.classic.util.notation <> Triple.C var
+binder 440:440 <> p:10
+R457:459 Corelib.Init.Datatypes <> fst def
+R462:464 Corelib.Init.Datatypes <> fst def
+R466:466 prosa.classic.util.notation <> p:10 var
+def 483:492 <> triple_2nd
+R497:499 Corelib.Init.Datatypes <> snd def
+R502:504 Corelib.Init.Datatypes <> fst def
+R506:506 prosa.classic.util.notation <> Triple.p var
+def 523:532 <> triple_3rd
+R537:539 Corelib.Init.Datatypes <> snd def
+R541:541 prosa.classic.util.notation <> Triple.p var
+R549:554 prosa.classic.util.notation Triple <> sec
+def 629:641 <> make_sequence
+binder 644:644 <> T:11
+R659:664 Corelib.Init.Datatypes <> option ind
+R666:666 prosa.classic.util.notation <> T:11 var
+binder 654:656 <> opt:12
+R680:682 prosa.classic.util.notation <> opt:12 var
+R695:698 Corelib.Init.Datatypes <> Some constr
+R705:708 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_']' not
+R710:710 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_']' not
+R718:721 Corelib.Init.Datatypes <> None constr
+R726:729 mathcomp.boot.seq <> ::seq_scope:'['_'::'_']' not
+R990:995 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R997:1000 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R1002:1004 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R1025:1025 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+binder 996:996 <> i:14
+binder 996:996 <> i:15
+binder 996:996 <> i:16
+R1019:1019 prosa.classic.util.notation <> i:14 var
+R1010:1010 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1012:1012 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1014:1014 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+not 955:955 <> ::nat_scope:'\sum_'_'('_'('_x_','_x_')'_'<-'_x_')'_x
+R1264:1269 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R1271:1274 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R1276:1279 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R1300:1307 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R1328:1328 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+binder 1270:1270 <> i:18
+binder 1270:1270 <> i:19
+binder 1270:1270 <> i:20
+R1294:1294 prosa.classic.util.notation <> i:18 var
+R1285:1285 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1287:1287 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1289:1289 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1322:1322 prosa.classic.util.notation <> i:18 var
+R1313:1313 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1315:1315 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1317:1317 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+not 1225:1225 <> ::nat_scope:'\sum_'_'('_'('_x_','_x_')'_'<-'_x_'|'_x_')'_x
+R1540:1545 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<-'_x_')'_x not
+R1547:1550 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<-'_x_')'_x not
+R1552:1554 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<-'_x_')'_x not
+R1575:1575 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<-'_x_')'_x not
+binder 1546:1546 <> i:23
+binder 1546:1546 <> i:24
+binder 1546:1546 <> i:25
+R1569:1569 prosa.classic.util.notation <> i:23 var
+R1560:1560 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1562:1562 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1564:1564 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+not 1505:1505 <> ::nat_scope:'\max_'_'('_'('_x_','_x_')'_'<-'_x_')'_x
+R1814:1819 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<-'_x_'|'_x_')'_x not
+R1821:1824 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<-'_x_'|'_x_')'_x not
+R1826:1829 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<-'_x_'|'_x_')'_x not
+R1850:1857 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<-'_x_'|'_x_')'_x not
+R1878:1878 mathcomp.boot.bigop <> ::nat_scope:'\max_'_'('_x_'<-'_x_'|'_x_')'_x not
+binder 1820:1820 <> i:27
+binder 1820:1820 <> i:28
+binder 1820:1820 <> i:29
+R1844:1844 prosa.classic.util.notation <> i:27 var
+R1835:1835 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1837:1837 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1839:1839 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1872:1872 prosa.classic.util.notation <> i:27 var
+R1863:1863 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1865:1865 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1867:1867 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+not 1775:1775 <> ::nat_scope:'\max_'_'('_'('_x_','_x_')'_'<-'_x_'|'_x_')'_x
+R1943:1948 mathcomp.boot.seq <> filter def
+binder 1955:1955 <> i:32
+R1974:1974 prosa.classic.util.notation <> i:32 var
+R1965:1965 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1967:1967 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1969:1969 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+not 1904:1904 <> ::seq_scope:'['_'pairs'_'('_x_','_x_')'_'<-'_x_'|'_x_']'
+R2138:2140 mathcomp.boot.seq <> map def
+binder 2147:2147 <> y:34
+R2152:2152 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2183:2184 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2215:2215 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+binder 2158:2159 <> x1:35
+R2173:2174 prosa.classic.util.notation <> x1:35 var
+binder 2168:2168 <> x:36
+R2182:2182 prosa.classic.util.notation <> y:34 var
+binder 2190:2191 <> x2:37
+R2205:2206 prosa.classic.util.notation <> x2:37 var
+binder 2200:2200 <> x:38
+R2214:2214 prosa.classic.util.notation <> y:34 var
+not 2097:2097 <> ::seq_scope:'['_'pairs'_'('_x_','_x_')'_'|'_x_'<-'_x_']'
+R2576:2579 Corelib.Init.Datatypes <> Some constr
+R2588:2593 Corelib.ssr.ssrbool <> in_mem def
+R2598:2600 Corelib.ssr.ssrbool <> mem def
+R2610:2614 Corelib.Init.Datatypes <> false constr
+not 2552:2552 <> ::bool_scope:x_'\In'_x

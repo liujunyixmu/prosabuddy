@@ -1,0 +1,25 @@
+Checkpoint-only Coq compiler. Restricts coqc to milestone or completion checkpoints.
+
+Unlike raw coqc which can be called after every edit, this tool enforces a checkpoint-only policy:
+- Compile after a meaningful proof milestone
+- Compile when a helper lemma is newly written
+- Compile at explicit milestones
+
+The tool detects repeated same-error compilations and blocks them.
+Output is summarized: first error location, first error message, warning summary, and whether the result matches the previous checkpoint.
+
+Progress output has three levels:
+- `progress_level: hard` is genuine accepted proof progress: a proof-region compiler certificate, reduced unresolved semantic debt, a certified missing premise, or final `Qed.` success. It may update the committable transaction snapshot and reset repair/livelock counters.
+- `progress_level: structural` is a dependency-complete split into smaller locally provable regions. It may update a committable structural snapshot, but it does not certify the proof route, reduce semantic debt by itself, or reset repair/livelock counters.
+- `progress_level: debug` is diagnostic-only movement such as a later compiler error or changed tactic shape. It is journaled as a draft and is not written back as accepted proof progress.
+
+`proof_transaction: recoverable` means a later child can resume the journaled staged revision. It does not mean that the staged source was committed to the workspace file.
+
+Parameters:
+- "file": Path to the .v file to compile
+- "reason": Why this checkpoint is being taken (node_completed | bridge_lemma | milestone)
+- "flags": Optional extra coqc flags
+
+The tool will refuse compilation if:
+1. The reason is not one of the allowed checkpoint reasons
+2. The same error was produced by the previous checkpoint for the same file and session

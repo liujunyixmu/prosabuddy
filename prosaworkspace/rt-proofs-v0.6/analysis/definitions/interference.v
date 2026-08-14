@@ -1,0 +1,129 @@
+Require Export prosa.analysis.definitions.service.
+Require Export prosa.model.aggregate.workload.
+
+(** * Interference and Interfering Workload *)
+
+(** In the following, we introduce definitions of interference,
+    interfering workload and a function that bounds cumulative
+    interference. *)
+Section Definitions.
+  (** Consider any type of tasks ... *)
+  Context {Task : TaskType}.
+
+  (** ... and any type of jobs associated with these tasks. *)
+  Context {Job : JobType} {jt : JobTask Job Task} {jc : JobCost Job}.
+
+  (** Consider any kind of processor state model. *)
+  Context {PState : ProcessorState Job}.
+
+  (** Consider any arrival sequence ... *)
+  Variable arr_seq : arrival_sequence Job.
+
+  (** ... and any schedule. *)
+  Variable sched : schedule PState.
+
+  (** Definitions of interference for FP policies. *)
+  Section FPDefinitions.
+    Context {FP : FP_policy Task}.
+
+    (** We first define interference from higher-priority tasks. *)
+    Definition hp_task_interference (j : Job) (t : instant) :=
+      has (fun jhp => hp_task (job_task jhp) (job_task j)
+                      && receives_service_at sched jhp t)
+        (arrivals_up_to arr_seq t).
+
+    (** Next, consider a job-level priority policy in addition to the given [FP]
+        policy to break ties among jobs of equal-priority tasks. *)
+    Context {JLFP : JLFP_policy Job}.
+
+    (** In order to define interference from equal-priority tasks, we first
+        define the notion of higher-or-equal-priority jobs from an
+        equal-priority task ... *)
+    Definition ep_task_hep_job j1 j2 :=
+      hep_job j1 j2 && ep_task (job_task j1) (job_task j2).
+
+    (** ... and higher-or-equal-priority-jobs of equal-priority tasks that
+        do not stem from the same task. *)
+    Definition other_ep_task_hep_job j1 j2 :=
+      ep_task_hep_job j1 j2 && (job_task j1 != job_task j2).
+
+    (** This enables us to define interference from equal-priority tasks. *)
+    Definition hep_job_from_other_ep_task_interference (j : Job) (t : instant) :=
+      has (other_ep_task_hep_job^~ j) (served_jobs_at arr_seq sched t).
+
+    (** Similarly, to define interference from strictly higher-priority tasks, we first
+        define higher-or-equal-priority jobs from a strictly higher-priority task, which... *)
+    Definition hp_task_hep_job :=
+      fun j1 j2 => hep_job j1 j2 && (hp_task (job_task j1) (job_task j2)).
+
+    (** ... enables us to define interference from strictly higher-priority tasks. *)
+    Definition hep_job_from_hp_task_interference (j : Job) (t : instant) :=
+      has (hp_task_hep_job^~ j) (served_jobs_at arr_seq sched t).
+
+    (** Using the above definitions, we define the cumulative interference incurred in the interval
+        <<[t1, t2)>> from (1) higher-or-equal-priority jobs from strictly higher-priority tasks... *)
+    Definition cumulative_interference_from_hep_jobs_from_hp_tasks (j : Job) (t1 t2 : instant) :=
+      \sum_(t1 <= t < t2) hep_job_from_hp_task_interference j t.
+
+    (** ... and (2) higher-or-equal-priority jobs from equal-priority tasks. *)
+    Definition cumulative_interference_from_hep_jobs_from_other_ep_tasks (j : Job) (t1 t2 : instant) :=
+      \sum_(t1 <= t < t2) hep_job_from_other_ep_task_interference j t.
+
+  End FPDefinitions.
+
+  (** Definitions of interference for JLFP policies. *)
+  Section JLFPDefinitions.
+
+    (** Consider a JLFP-policy that indicates a higher-or-equal priority
+        relation. *)
+    Context {JLFP : JLFP_policy Job}.
+
+    (** We say that job [j] is incurring interference from another
+        job with higher-or-equal priority at time [t] if there exists a
+        job [jhp] (different from [j]) with a higher-or-equal priority
+        that executes at time [t]. *)
+    Definition another_hep_job_interference (j : Job) (t : instant) :=
+      has (another_hep_job^~ j) (served_jobs_at arr_seq sched t).
+
+    (** Similarly, we say that job [j] is incurring interference from a
+        job with higher-or-equal priority of another task at time [t]
+        if there exists a job [jhp] (of a different task) with
+        higher-or-equal priority that executes at time [t]. *)
+    Definition another_task_hep_job_interference (j : Job) (t : instant) :=
+      has (another_task_hep_job^~ j) (served_jobs_at arr_seq sched t).
+
+    (** Similarly, we say that job [j] is incurring interference from a
+        job with higher-or-equal priority of the same task at time [t]
+        if there exists another job [jhp] (of the same task) with
+        higher-or-equal priority that executes at time [t]. *)
+    Definition another_hep_job_of_same_task_interference (j : Job) (t : instant) :=
+      has (fun jhp => another_hep_job_of_same_task jhp j
+                      && receives_service_at sched jhp t)
+        (arrivals_up_to arr_seq t).
+
+    (** Now, we define the notion of cumulative interfering workload,
+        called [other_hep_jobs_interfering_workload], that says how many
+        units of workload are generated by jobs with higher-or-equal
+        priority released at time [t]. *)
+    Definition other_hep_jobs_interfering_workload (j : Job) (t : instant) :=
+      \sum_(jhp <- arrivals_at arr_seq t | another_hep_job jhp j) job_cost jhp.
+
+    (** For each of the concepts defined above, we introduce a
+        corresponding cumulative function: *)
+
+    (** (a) cumulative interference from other jobs with higher-or-equal priority ... *)
+    Definition cumulative_another_hep_job_interference (j : Job) (t1 t2 : instant) :=
+      \sum_(t1 <= t < t2) another_hep_job_interference j t.
+
+    (** ... (b) and cumulative interference from jobs with higher or
+        equal priority from other tasks, ... *)
+    Definition cumulative_another_task_hep_job_interference (j : Job) (t1 t2 : instant) :=
+      \sum_(t1 <= t < t2) another_task_hep_job_interference j t.
+
+    (** ... and (c) cumulative workload from jobs with higher or equal priority. *)
+    Definition cumulative_other_hep_jobs_interfering_workload (j : Job) (t1 t2 : instant) :=
+      \sum_(t1 <= t < t2) other_hep_jobs_interfering_workload j t.
+
+  End JLFPDefinitions.
+
+End Definitions.

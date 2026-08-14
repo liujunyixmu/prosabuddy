@@ -1,0 +1,96 @@
+DIGEST c1f12422d6d3ade93e905b073d72a6c3
+Fprosa.classic.model.schedule.uni.susp.valid_schedule
+R15:36 prosa.classic.util.all <> <> lib
+R54:81 prosa.classic.model.priority <> <> lib
+R83:112 prosa.classic.model.suspension <> <> lib
+R130:179 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R197:242 prosa.classic.model.schedule.uni.susp.schedule <> <> lib
+R259:304 prosa.classic.model.schedule.uni.susp.platform <> <> lib
+R337:345 mathcomp.boot.ssreflect <> <> lib
+R347:353 mathcomp.boot.ssrbool <> <> lib
+R355:360 mathcomp.boot.eqtype <> <> lib
+R362:367 mathcomp.boot.ssrnat <> <> lib
+R369:371 mathcomp.boot.seq <> <> lib
+R373:379 mathcomp.boot.fintype <> <> lib
+R381:385 mathcomp.boot.bigop <> <> lib
+mod 489:516 <> ValidSuspensionAwareSchedule
+R529:551 prosa.classic.model.schedule.uni.susp.schedule ScheduleWithSuspensions <> mod
+R553:562 prosa.classic.model.suspension Suspension <> mod
+R564:571 prosa.classic.model.priority Priority <> mod
+R573:595 prosa.classic.model.schedule.uni.susp.platform PlatformWithSuspensions <> mod
+sec 639:659 ValidSuspensionAwareSchedule DefiningValidSchedule
+var  676:679 ValidSuspensionAwareSchedule.DefiningValidSchedule Task
+R682:687 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  704:706 ValidSuspensionAwareSchedule.DefiningValidSchedule Job
+R709:714 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 731:741 ValidSuspensionAwareSchedule.DefiningValidSchedule job_arrival
+R747:750 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R744:746 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.Job var
+R751:754 prosa.classic.model.time Time time def
+var 770:777 ValidSuspensionAwareSchedule.DefiningValidSchedule job_task
+R783:786 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R780:782 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.Job var
+R787:790 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.Task var
+var 852:858 ValidSuspensionAwareSchedule.DefiningValidSchedule arr_seq
+R861:876 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R878:880 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.Job var
+var 944:961 ValidSuspensionAwareSchedule.DefiningValidSchedule higher_eq_priority
+R964:974 prosa.classic.model.priority Priority JLDP_policy def
+R976:978 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.Job var
+var 1038:1060 ValidSuspensionAwareSchedule.DefiningValidSchedule job_suspension_duration
+R1063:1076 prosa.classic.model.suspension Suspension job_suspension def
+R1078:1080 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.Job var
+var 1208:1215 ValidSuspensionAwareSchedule.DefiningValidSchedule job_cost
+R1221:1224 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1218:1220 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.Job var
+R1225:1228 prosa.classic.model.time Time time def
+var 1298:1307 ValidSuspensionAwareSchedule.DefiningValidSchedule sched_susp
+R1310:1317 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R1319:1321 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.Job var
+var 1524:1557 ValidSuspensionAwareSchedule.DefiningValidSchedule H1_jobs_come_from_arrival_sequence
+R1562:1592 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule jobs_come_from_arrival_sequence def
+R1605:1611 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.arr_seq var
+R1594:1603 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.sched_susp var
+var 1673:1702 ValidSuspensionAwareSchedule.DefiningValidSchedule H2_jobs_must_arrive_to_execute
+R1707:1733 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule jobs_must_arrive_to_execute def
+R1747:1756 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.sched_susp var
+R1735:1745 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.job_arrival var
+var 1830:1859 ValidSuspensionAwareSchedule.DefiningValidSchedule H3_completed_jobs_dont_execute
+R1864:1890 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_jobs_dont_execute def
+R1901:1910 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.sched_susp var
+R1892:1899 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.job_cost var
+var 2000:2017 ValidSuspensionAwareSchedule.DefiningValidSchedule H4_work_conserving
+R2028:2042 prosa.classic.model.schedule.uni.susp.platform PlatformWithSuspensions work_conserving def
+R2097:2106 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.sched_susp var
+R2089:2095 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.arr_seq var
+R2065:2087 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.job_suspension_duration var
+R2056:2063 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.job_cost var
+R2044:2054 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.job_arrival var
+var 2170:2189 ValidSuspensionAwareSchedule.DefiningValidSchedule H5_respects_priority
+R2200:2219 prosa.classic.model.schedule.uni.susp.platform PlatformWithSuspensions respects_JLDP_policy def
+R2312:2329 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.higher_eq_priority var
+R2301:2310 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.sched_susp var
+R2266:2272 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.arr_seq var
+R2242:2264 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.job_suspension_duration var
+R2233:2240 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.job_cost var
+R2221:2231 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.job_arrival var
+var 2401:2428 ValidSuspensionAwareSchedule.DefiningValidSchedule H6_respects_self_suspensions
+R2439:2463 prosa.classic.model.schedule.uni.susp.suspension_intervals SuspensionIntervals respects_self_suspensions def
+R2510:2519 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.sched_susp var
+R2486:2508 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.job_suspension_duration var
+R2477:2484 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.job_cost var
+R2465:2475 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.job_arrival var
+def 2615:2645 ValidSuspensionAwareSchedule valid_suspension_aware_schedule
+R2690:2699 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R2656:2689 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.H1_jobs_come_from_arrival_sequence var
+R2730:2739 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R2700:2729 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.H2_jobs_must_arrive_to_execute var
+R2770:2779 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R2740:2769 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.H3_completed_jobs_dont_execute var
+R2798:2807 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R2780:2797 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.H4_work_conserving var
+R2828:2837 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R2808:2827 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.H5_respects_priority var
+R2838:2865 prosa.classic.model.schedule.uni.susp.valid_schedule <> ValidSuspensionAwareSchedule.DefiningValidSchedule.H6_respects_self_suspensions var
+R2884:2904 prosa.classic.model.schedule.uni.susp.valid_schedule ValidSuspensionAwareSchedule.DefiningValidSchedule <> sec
+R2914:2941 prosa.classic.model.schedule.uni.susp.valid_schedule ValidSuspensionAwareSchedule <> mod

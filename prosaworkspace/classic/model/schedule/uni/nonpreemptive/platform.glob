@@ -1,0 +1,189 @@
+DIGEST af9eb64865082aefa18c56411fa0ffe2
+Fprosa.classic.model.schedule.uni.nonpreemptive.platform
+R15:36 prosa.classic.util.all <> <> lib
+R54:91 prosa.classic.model.arrival.basic.task <> <> lib
+R93:129 prosa.classic.model.arrival.basic.job <> <> lib
+R131:158 prosa.classic.model.priority <> <> lib
+R160:205 prosa.classic.model.arrival.basic.task_arrival <> <> lib
+R223:263 prosa.classic.model.schedule.uni.schedule <> <> lib
+R280:326 prosa.classic.model.schedule.uni.basic.platform <> <> lib
+R344:398 prosa.classic.model.schedule.uni.nonpreemptive.schedule <> <> lib
+R430:438 mathcomp.boot.ssreflect <> <> lib
+R440:446 mathcomp.boot.ssrbool <> <> lib
+R448:453 mathcomp.boot.ssrfun <> <> lib
+R455:460 mathcomp.boot.eqtype <> <> lib
+R462:467 mathcomp.boot.ssrnat <> <> lib
+R469:471 mathcomp.boot.seq <> <> lib
+R473:479 mathcomp.boot.fintype <> <> lib
+R481:485 mathcomp.boot.bigop <> <> lib
+mod 497:517 <> NonpreemptivePlatform
+R530:532 prosa.classic.model.arrival.basic.job Job <> mod
+R534:548 prosa.classic.model.arrival.basic.task SporadicTaskset <> mod
+R550:569 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule <> mod
+R571:578 prosa.classic.model.priority Priority <> mod
+sec 665:674 NonpreemptivePlatform Properties
+var  695:707 NonpreemptivePlatform.Properties sporadic_task
+R710:715 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  737:739 NonpreemptivePlatform.Properties Job
+R742:747 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 764:774 NonpreemptivePlatform.Properties job_arrival
+R780:783 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R777:779 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.Job var
+R784:787 prosa.classic.model.time Time time def
+var 803:810 NonpreemptivePlatform.Properties job_cost
+R816:819 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R813:815 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.Job var
+R820:823 prosa.classic.model.time Time time def
+var 839:846 NonpreemptivePlatform.Properties job_task
+R852:855 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R849:851 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.Job var
+R856:868 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.sporadic_task var
+var 932:938 NonpreemptivePlatform.Properties arr_seq
+R941:956 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R958:960 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.Job var
+var 1039:1043 NonpreemptivePlatform.Properties sched
+R1046:1053 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R1055:1057 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.Job var
+var 1126:1141 NonpreemptivePlatform.Properties job_completed_by
+R1146:1157 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R1168:1172 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.sched var
+R1159:1166 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.job_cost var
+var 1183:1198 NonpreemptivePlatform.Properties job_scheduled_at
+R1203:1214 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R1216:1220 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.sched var
+sec 1297:1311 NonpreemptivePlatform.Properties PreemptionPoint
+def 1557:1576 NonpreemptivePlatform is_preemption_point'
+R1582:1585 prosa.classic.model.time Time time def
+binder 1579:1579 <> t:13
+R1604:1615 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R1600:1602 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1599:1599 prosa.classic.model.schedule.uni.nonpreemptive.platform <> t:13 var
+R1634:1645 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R1627:1629 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1616:1620 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.sched var
+R1624:1624 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R1623:1623 prosa.classic.model.schedule.uni.nonpreemptive.platform <> t:13 var
+R1630:1633 Corelib.Init.Datatypes <> None constr
+R1646:1652 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1654:1655 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 1653:1653 <> j:14
+R1684:1687 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R1656:1667 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R1679:1681 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R1678:1678 prosa.classic.model.schedule.uni.nonpreemptive.platform <> t:13 var
+R1675:1675 prosa.classic.model.schedule.uni.nonpreemptive.platform <> j:14 var
+R1669:1673 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.sched var
+R1688:1703 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.job_completed_by var
+R1705:1705 prosa.classic.model.schedule.uni.nonpreemptive.platform <> j:14 var
+R1707:1707 prosa.classic.model.schedule.uni.nonpreemptive.platform <> t:13 var
+def 1815:1833 NonpreemptivePlatform is_preemption_point
+R1839:1842 prosa.classic.model.time Time time def
+binder 1836:1836 <> t:15
+R1861:1864 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R1857:1859 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1856:1856 prosa.classic.model.schedule.uni.nonpreemptive.platform <> t:15 var
+binder 1872:1872 <> j:16
+R1901:1904 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1875:1890 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.job_scheduled_at var
+R1892:1892 prosa.classic.model.schedule.uni.nonpreemptive.platform <> j:16 var
+R1896:1898 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R1895:1895 prosa.classic.model.schedule.uni.nonpreemptive.platform <> t:15 var
+R1905:1920 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.job_completed_by var
+R1922:1922 prosa.classic.model.schedule.uni.nonpreemptive.platform <> j:16 var
+R1924:1924 prosa.classic.model.schedule.uni.nonpreemptive.platform <> t:15 var
+prf 2002:2040 NonpreemptivePlatform defitions_of_preemption_point_are_equal
+binder 2058:2058 <> t:17
+R2082:2086 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R2061:2079 prosa.classic.model.schedule.uni.nonpreemptive.platform NonpreemptivePlatform is_preemption_point def
+R2081:2081 prosa.classic.model.schedule.uni.nonpreemptive.platform <> t:17 var
+R2087:2106 prosa.classic.model.schedule.uni.nonpreemptive.platform NonpreemptivePlatform is_preemption_point' def
+R2108:2108 prosa.classic.model.schedule.uni.nonpreemptive.platform <> t:17 var
+R2139:2157 prosa.classic.model.schedule.uni.nonpreemptive.platform NonpreemptivePlatform is_preemption_point def
+R2160:2179 prosa.classic.model.schedule.uni.nonpreemptive.platform NonpreemptivePlatform is_preemption_point' def
+R2295:2299 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.sched var
+R2303:2303 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R2295:2299 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.sched var
+R2303:2303 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R2374:2376 mathcomp.boot.eqtype <> eqP def
+R2539:2554 prosa.classic.model.schedule.uni.nonpreemptive.platform <> job_scheduled_at vardef
+R2557:2568 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R2656:2671 prosa.classic.model.schedule.uni.nonpreemptive.platform <> job_scheduled_at vardef
+R2700:2702 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2761:2761 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R2719:2740 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule only_one_job_scheduled thm
+R2742:2746 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.sched var
+R2761:2761 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R2719:2740 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule only_one_job_scheduled thm
+R2742:2746 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.sched var
+R2836:2850 prosa.classic.model.schedule.uni.nonpreemptive.platform NonpreemptivePlatform.Properties.PreemptionPoint <> sec
+sec 2929:2937 NonpreemptivePlatform.Properties Execution
+def 3156:3170 NonpreemptivePlatform work_conserving
+R3175:3198 prosa.classic.model.schedule.uni.basic.platform Platform work_conserving def
+R3200:3207 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.job_cost var
+R3219:3227 prosa.classic.model.schedule.uni.nonpreemptive.platform NonpreemptivePlatform.Properties.Execution <> sec
+sec 3306:3307 NonpreemptivePlatform.Properties FP
+var 3365:3382 NonpreemptivePlatform.Properties.FP higher_eq_priority
+R3385:3393 prosa.classic.model.priority Priority FP_policy def
+R3395:3407 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.sporadic_task var
+def 3605:3642 NonpreemptivePlatform respects_FP_policy_at_preemption_point
+binder 3662:3662 <> j:20
+binder 3664:3667 <> j_hp:21
+binder 3669:3669 <> t:22
+R3702:3715 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3682:3691 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R3701:3701 prosa.classic.model.schedule.uni.nonpreemptive.platform <> j:20 var
+R3693:3699 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.arr_seq var
+R3757:3770 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3716:3725 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule backlogged def
+R3756:3756 prosa.classic.model.schedule.uni.nonpreemptive.platform <> t:22 var
+R3754:3754 prosa.classic.model.schedule.uni.nonpreemptive.platform <> j:20 var
+R3748:3752 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.sched var
+R3739:3746 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.job_cost var
+R3727:3737 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.job_arrival var
+R3796:3809 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3771:3782 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R3795:3795 prosa.classic.model.schedule.uni.nonpreemptive.platform <> t:22 var
+R3790:3793 prosa.classic.model.schedule.uni.nonpreemptive.platform <> j_hp:21 var
+R3784:3788 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.sched var
+R3831:3844 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3810:3828 prosa.classic.model.schedule.uni.nonpreemptive.platform NonpreemptivePlatform is_preemption_point def
+R3830:3830 prosa.classic.model.schedule.uni.nonpreemptive.platform <> t:22 var
+R3845:3862 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.FP.higher_eq_priority var
+R3865:3872 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.job_task var
+R3874:3877 prosa.classic.model.schedule.uni.nonpreemptive.platform <> j_hp:21 var
+R3881:3888 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.job_task var
+R3890:3890 prosa.classic.model.schedule.uni.nonpreemptive.platform <> j:20 var
+R3909:3910 prosa.classic.model.schedule.uni.nonpreemptive.platform NonpreemptivePlatform.Properties.FP <> sec
+sec 3993:3996 NonpreemptivePlatform.Properties JLFP
+var 4056:4073 NonpreemptivePlatform.Properties.JLFP higher_eq_priority
+R4076:4086 prosa.classic.model.priority Priority JLFP_policy def
+R4088:4090 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.Job var
+def 4287:4326 NonpreemptivePlatform respects_JLFP_policy_at_preemption_point
+binder 4346:4346 <> j:25
+binder 4348:4351 <> j_hp:26
+binder 4353:4353 <> t:27
+R4386:4399 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4366:4375 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R4385:4385 prosa.classic.model.schedule.uni.nonpreemptive.platform <> j:25 var
+R4377:4383 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.arr_seq var
+R4441:4454 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4400:4409 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule backlogged def
+R4440:4440 prosa.classic.model.schedule.uni.nonpreemptive.platform <> t:27 var
+R4438:4438 prosa.classic.model.schedule.uni.nonpreemptive.platform <> j:25 var
+R4432:4436 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.sched var
+R4423:4430 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.job_cost var
+R4411:4421 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.job_arrival var
+R4480:4493 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4455:4466 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R4479:4479 prosa.classic.model.schedule.uni.nonpreemptive.platform <> t:27 var
+R4474:4477 prosa.classic.model.schedule.uni.nonpreemptive.platform <> j_hp:26 var
+R4468:4472 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.sched var
+R4515:4528 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4494:4512 prosa.classic.model.schedule.uni.nonpreemptive.platform NonpreemptivePlatform is_preemption_point def
+R4514:4514 prosa.classic.model.schedule.uni.nonpreemptive.platform <> t:27 var
+R4529:4546 prosa.classic.model.schedule.uni.nonpreemptive.platform <> NonpreemptivePlatform.Properties.JLFP.higher_eq_priority var
+R4548:4551 prosa.classic.model.schedule.uni.nonpreemptive.platform <> j_hp:26 var
+R4553:4553 prosa.classic.model.schedule.uni.nonpreemptive.platform <> j:25 var
+R4571:4574 prosa.classic.model.schedule.uni.nonpreemptive.platform NonpreemptivePlatform.Properties.JLFP <> sec
+R4584:4593 prosa.classic.model.schedule.uni.nonpreemptive.platform NonpreemptivePlatform.Properties <> sec
+R4603:4623 prosa.classic.model.schedule.uni.nonpreemptive.platform NonpreemptivePlatform <> mod

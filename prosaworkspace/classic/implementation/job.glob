@@ -1,0 +1,116 @@
+DIGEST 93e9628d31db508b1b7e85482d60d02a
+Fprosa.classic.implementation.job
+R15:38 prosa.classic.model.time <> <> lib
+R40:61 prosa.classic.util.all <> <> lib
+R79:111 prosa.classic.implementation.task <> <> lib
+R143:151 mathcomp.boot.ssreflect <> <> lib
+R153:159 mathcomp.boot.ssrbool <> <> lib
+R161:166 mathcomp.boot.ssrnat <> <> lib
+R168:173 mathcomp.boot.eqtype <> <> lib
+R175:177 mathcomp.boot.seq <> <> lib
+R203:212 HB.structures <> <> lib
+mod 222:232 <> ConcreteJob
+R245:248 prosa.classic.model.time Time <> mod
+R260:271 prosa.classic.implementation.task ConcreteTask <> mod
+sec 285:288 ConcreteJob Defs
+rec 344:355 ConcreteJob concrete_job
+proj 372:377 ConcreteJob job_id
+proj 391:401 ConcreteJob job_arrival
+proj 416:423 ConcreteJob job_cost
+proj 438:449 ConcreteJob job_deadline
+proj 464:471 ConcreteJob job_task
+R380:382 Corelib.Init.Datatypes <> nat ind
+R404:407 prosa.classic.model.time Time time def
+R426:429 prosa.classic.model.time Time time def
+R452:455 prosa.classic.model.time Time time def
+R474:486 prosa.classic.implementation.task ConcreteTask concrete_task rec
+def 616:624 ConcreteJob job_eqdef
+R634:645 prosa.classic.implementation.job ConcreteJob concrete_job rec
+binder 627:628 <> j1:7
+binder 630:631 <> j2:8
+R809:819 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R846:846 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R763:773 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R808:808 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R725:735 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R762:762 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R657:657 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R680:691 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R724:724 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R667:670 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R658:663 prosa.classic.implementation.job ConcreteJob job_id proj
+R665:666 prosa.classic.implementation.job <> j1:7 var
+R671:676 prosa.classic.implementation.job ConcreteJob job_id proj
+R678:679 prosa.classic.implementation.job <> j2:8 var
+R706:709 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R692:702 prosa.classic.implementation.job ConcreteJob job_arrival proj
+R704:705 prosa.classic.implementation.job <> j1:7 var
+R710:720 prosa.classic.implementation.job ConcreteJob job_arrival proj
+R722:723 prosa.classic.implementation.job <> j2:8 var
+R747:750 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R736:743 prosa.classic.implementation.job ConcreteJob job_cost proj
+R745:746 prosa.classic.implementation.job <> j1:7 var
+R751:758 prosa.classic.implementation.job ConcreteJob job_cost proj
+R760:761 prosa.classic.implementation.job <> j2:8 var
+R789:792 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R774:785 prosa.classic.implementation.job ConcreteJob job_deadline proj
+R787:788 prosa.classic.implementation.job <> j1:7 var
+R793:804 prosa.classic.implementation.job ConcreteJob job_deadline proj
+R806:807 prosa.classic.implementation.job <> j2:8 var
+R831:834 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R820:827 prosa.classic.implementation.job ConcreteJob job_task proj
+R829:830 prosa.classic.implementation.job <> j1:7 var
+R835:842 prosa.classic.implementation.job ConcreteJob job_task proj
+R844:845 prosa.classic.implementation.job <> j2:8 var
+prf 927:933 ConcreteJob eqn_job
+R937:950 mathcomp.boot.eqtype MathCompCompatEquality.Equality axiom abbrev
+R952:960 prosa.classic.implementation.job ConcreteJob job_eqdef def
+R987:1000 mathcomp.boot.eqtype <> eq_axiom def
+R1031:1039 prosa.classic.implementation.job ConcreteJob job_eqdef def
+R1031:1039 prosa.classic.implementation.job ConcreteJob job_eqdef def
+R1076:1083 Corelib.Init.Datatypes <> ReflectT constr
+R1093:1101 prosa.classic.implementation.job ConcreteJob job_eqdef def
+R1076:1083 Corelib.Init.Datatypes <> ReflectT constr
+R1130:1133 Corelib.ssr.ssrbool <> andP thm
+R1137:1140 Corelib.ssr.ssrbool <> andP thm
+R1144:1147 Corelib.ssr.ssrbool <> andP thm
+R1151:1154 Corelib.ssr.ssrbool <> andP thm
+R1158:1160 mathcomp.boot.eqtype <> eqP def
+R1166:1168 mathcomp.boot.eqtype <> eqP def
+R1176:1178 mathcomp.boot.eqtype <> eqP def
+R1187:1189 mathcomp.boot.eqtype <> eqP def
+R1196:1198 mathcomp.boot.eqtype <> eqP def
+R1282:1289 Corelib.Init.Datatypes <> ReflectF constr
+R1282:1289 Corelib.Init.Datatypes <> ReflectF constr
+R1307:1315 prosa.classic.implementation.job ConcreteJob job_eqdef def
+R1318:1320 Corelib.Init.Logic <> not def
+R1353:1357 Corelib.ssr.ssrbool <> negbT thm
+R1374:1381 Corelib.ssr.ssrbool <> negb_and thm
+R1353:1357 Corelib.ssr.ssrbool <> negbT thm
+R1374:1381 Corelib.ssr.ssrbool <> negb_and thm
+R1374:1381 Corelib.ssr.ssrbool <> negb_and thm
+R1429:1436 Corelib.ssr.ssrbool <> negb_and thm
+R1429:1436 Corelib.ssr.ssrbool <> negb_and thm
+R1429:1436 Corelib.ssr.ssrbool <> negb_and thm
+R1466:1468 Corelib.ssr.ssrbool <> orP thm
+R1477:1479 mathcomp.boot.eqtype <> eqP def
+R1510:1512 Corelib.ssr.ssrbool <> orP thm
+R1521:1523 mathcomp.boot.eqtype <> eqP def
+R1547:1554 Corelib.ssr.ssrbool <> negb_and thm
+R1547:1554 Corelib.ssr.ssrbool <> negb_and thm
+R1547:1554 Corelib.ssr.ssrbool <> negb_and thm
+R1584:1586 Corelib.ssr.ssrbool <> orP thm
+R1595:1597 mathcomp.boot.eqtype <> eqP def
+R1623:1630 Corelib.ssr.ssrbool <> negb_and thm
+R1623:1630 Corelib.ssr.ssrbool <> negb_and thm
+R1623:1630 Corelib.ssr.ssrbool <> negb_and thm
+R1660:1662 Corelib.ssr.ssrbool <> orP thm
+R1666:1668 mathcomp.boot.eqtype <> eqP def
+R1676:1678 mathcomp.boot.eqtype <> eqP def
+R1995:2008 mathcomp.boot.eqtype hasDecEq Build abbrev
+R2010:2021 prosa.classic.implementation.job ConcreteJob concrete_job rec
+R2023:2029 prosa.classic.implementation.job ConcreteJob eqn_job thm
+def 1967:2030 ConcreteJob HB_unnamed_factory_1
+def 1967:2030 ConcreteJob ConcreteJob_concrete_job__canonical__eqtype_Equality
+R2040:2043 prosa.classic.implementation.job ConcreteJob.Defs <> sec
+R2055:2065 prosa.classic.implementation.job ConcreteJob <> mod

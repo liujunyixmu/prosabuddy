@@ -1,0 +1,67 @@
+DIGEST 44d0736c7ca0dbfeac3d098a11125bbb
+Fprosa.classic.model.arrival.jitter.job
+R15:38 prosa.classic.model.time <> <> lib
+R40:77 prosa.classic.model.arrival.basic.task <> <> lib
+R109:114 mathcomp.boot.ssrnat <> <> lib
+R116:122 mathcomp.boot.ssrbool <> <> lib
+R124:129 mathcomp.boot.eqtype <> <> lib
+R150:186 prosa.classic.model.arrival.basic.job <> <> lib
+mod 259:271 <> JobWithJitter
+R284:287 prosa.classic.model.time Time <> mod
+R299:301 prosa.classic.model.arrival.basic.job Job <> mod
+sec 317:346 JobWithJitter ValidSporadicTaskJobWithJitter
+var  363:375 JobWithJitter.ValidSporadicTaskJobWithJitter sporadic_task
+R378:383 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 400:408 JobWithJitter.ValidSporadicTaskJobWithJitter task_cost
+R424:427 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R411:423 prosa.classic.model.arrival.jitter.job <> JobWithJitter.ValidSporadicTaskJobWithJitter.sporadic_task var
+R428:431 prosa.classic.model.time Time time def
+var 447:459 JobWithJitter.ValidSporadicTaskJobWithJitter task_deadline
+R475:478 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R462:474 prosa.classic.model.arrival.jitter.job <> JobWithJitter.ValidSporadicTaskJobWithJitter.sporadic_task var
+R479:482 prosa.classic.model.time Time time def
+var 498:508 JobWithJitter.ValidSporadicTaskJobWithJitter task_jitter
+R524:527 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R511:523 prosa.classic.model.arrival.jitter.job <> JobWithJitter.ValidSporadicTaskJobWithJitter.sporadic_task var
+R528:531 prosa.classic.model.time Time time def
+var  552:554 JobWithJitter.ValidSporadicTaskJobWithJitter Job
+R557:562 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 579:586 JobWithJitter.ValidSporadicTaskJobWithJitter job_cost
+R592:595 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R589:591 prosa.classic.model.arrival.jitter.job <> JobWithJitter.ValidSporadicTaskJobWithJitter.Job var
+R596:599 prosa.classic.model.time Time time def
+var 615:626 JobWithJitter.ValidSporadicTaskJobWithJitter job_deadline
+R632:635 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R629:631 prosa.classic.model.arrival.jitter.job <> JobWithJitter.ValidSporadicTaskJobWithJitter.Job var
+R636:639 prosa.classic.model.time Time time def
+var 655:664 JobWithJitter.ValidSporadicTaskJobWithJitter job_jitter
+R670:673 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R667:669 prosa.classic.model.arrival.jitter.job <> JobWithJitter.ValidSporadicTaskJobWithJitter.Job var
+R674:677 prosa.classic.model.time Time time def
+var 693:700 JobWithJitter.ValidSporadicTaskJobWithJitter job_task
+R706:709 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R703:705 prosa.classic.model.arrival.jitter.job <> JobWithJitter.ValidSporadicTaskJobWithJitter.Job var
+R710:722 prosa.classic.model.arrival.jitter.job <> JobWithJitter.ValidSporadicTaskJobWithJitter.sporadic_task var
+var 767:767 JobWithJitter.ValidSporadicTaskJobWithJitter j
+R770:772 prosa.classic.model.arrival.jitter.job <> JobWithJitter.ValidSporadicTaskJobWithJitter.Job var
+def 904:929 JobWithJitter job_jitter_leq_task_jitter
+R952:955 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R940:949 prosa.classic.model.arrival.jitter.job <> JobWithJitter.ValidSporadicTaskJobWithJitter.job_jitter var
+R951:951 prosa.classic.model.arrival.jitter.job <> JobWithJitter.ValidSporadicTaskJobWithJitter.j var
+R956:966 prosa.classic.model.arrival.jitter.job <> JobWithJitter.ValidSporadicTaskJobWithJitter.task_jitter var
+R969:976 prosa.classic.model.arrival.jitter.job <> JobWithJitter.ValidSporadicTaskJobWithJitter.job_task var
+R978:978 prosa.classic.model.arrival.jitter.job <> JobWithJitter.ValidSporadicTaskJobWithJitter.j var
+var 1057:1070 JobWithJitter.ValidSporadicTaskJobWithJitter j_is_valid_job
+R1081:1098 prosa.classic.model.arrival.basic.job Job valid_sporadic_job def
+R1155:1155 prosa.classic.model.arrival.jitter.job <> JobWithJitter.ValidSporadicTaskJobWithJitter.j var
+R1146:1153 prosa.classic.model.arrival.jitter.job <> JobWithJitter.ValidSporadicTaskJobWithJitter.job_task var
+R1133:1144 prosa.classic.model.arrival.jitter.job <> JobWithJitter.ValidSporadicTaskJobWithJitter.job_deadline var
+R1124:1131 prosa.classic.model.arrival.jitter.job <> JobWithJitter.ValidSporadicTaskJobWithJitter.job_cost var
+R1110:1122 prosa.classic.model.arrival.jitter.job <> JobWithJitter.ValidSporadicTaskJobWithJitter.task_deadline var
+R1100:1108 prosa.classic.model.arrival.jitter.job <> JobWithJitter.ValidSporadicTaskJobWithJitter.task_cost var
+def 1231:1260 JobWithJitter valid_sporadic_job_with_jitter
+R1285:1288 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R1271:1284 prosa.classic.model.arrival.jitter.job <> JobWithJitter.ValidSporadicTaskJobWithJitter.j_is_valid_job var
+R1289:1314 prosa.classic.model.arrival.jitter.job JobWithJitter job_jitter_leq_task_jitter def
+R1324:1353 prosa.classic.model.arrival.jitter.job JobWithJitter.ValidSporadicTaskJobWithJitter <> sec
+R1361:1373 prosa.classic.model.arrival.jitter.job JobWithJitter <> mod

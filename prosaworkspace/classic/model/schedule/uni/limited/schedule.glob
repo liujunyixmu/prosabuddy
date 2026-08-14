@@ -1,0 +1,274 @@
+DIGEST 0285380af5922e6463abfc82f0856d15
+Fprosa.classic.model.schedule.uni.limited.schedule
+R15:36 prosa.classic.util.all <> <> lib
+R55:91 prosa.classic.model.arrival.basic.job <> <> lib
+R109:148 prosa.classic.model.schedule.uni.service <> <> lib
+R165:205 prosa.classic.model.schedule.uni.schedule <> <> lib
+R238:246 mathcomp.boot.ssreflect <> <> lib
+R248:254 mathcomp.boot.ssrbool <> <> lib
+R256:261 mathcomp.boot.eqtype <> <> lib
+R263:268 mathcomp.boot.ssrnat <> <> lib
+R270:272 mathcomp.boot.seq <> <> lib
+R274:280 mathcomp.boot.fintype <> <> lib
+R282:286 mathcomp.boot.bigop <> <> lib
+R411:413 prosa.classic.model.arrival.basic.job Job <> mod
+R415:421 prosa.classic.model.schedule.uni.service Service <> mod
+R423:442 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule <> mod
+sec 456:466 <> Definitions
+var  483:486 Definitions Task
+R489:494 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 511:519 Definitions task_cost
+R526:529 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R522:525 prosa.classic.model.schedule.uni.limited.schedule <> Definitions.Task var
+R530:533 prosa.classic.model.time Time time def
+var  554:556 Definitions Job
+R559:564 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 581:591 Definitions job_arrival
+R597:600 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R594:596 prosa.classic.model.schedule.uni.limited.schedule <> Definitions.Job var
+R601:604 prosa.classic.model.time Time time def
+var 620:627 Definitions job_cost
+R633:636 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R630:632 prosa.classic.model.schedule.uni.limited.schedule <> Definitions.Job var
+R637:640 prosa.classic.model.time Time time def
+var 656:663 Definitions job_task
+R669:672 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R666:668 prosa.classic.model.schedule.uni.limited.schedule <> Definitions.Job var
+R673:676 prosa.classic.model.schedule.uni.limited.schedule <> Definitions.Task var
+var 736:742 Definitions arr_seq
+R745:760 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R762:764 prosa.classic.model.schedule.uni.limited.schedule <> Definitions.Job var
+var 829:833 Definitions sched
+R836:843 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R845:847 prosa.classic.model.schedule.uni.limited.schedule <> Definitions.Job var
+var 1024:1042 Definitions job_lock_in_service
+R1048:1051 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1045:1047 prosa.classic.model.schedule.uni.limited.schedule <> Definitions.Job var
+R1052:1055 prosa.classic.model.time Time time def
+def 1240:1267 <> job_lock_in_service_positive
+binder 1285:1285 <> j:17
+R1316:1327 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1296:1305 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R1315:1315 prosa.classic.model.schedule.uni.limited.schedule <> j:17 var
+R1307:1313 prosa.classic.model.schedule.uni.limited.schedule <> Definitions.arr_seq var
+R1356:1368 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1328:1344 prosa.classic.model.arrival.basic.job Job job_cost_positive def
+R1355:1355 prosa.classic.model.schedule.uni.limited.schedule <> j:17 var
+R1346:1353 prosa.classic.model.schedule.uni.limited.schedule <> Definitions.job_cost var
+R1370:1372 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R1373:1391 prosa.classic.model.schedule.uni.limited.schedule <> Definitions.job_lock_in_service var
+R1393:1393 prosa.classic.model.schedule.uni.limited.schedule <> j:17 var
+def 1498:1528 <> job_lock_in_service_le_job_cost
+binder 1546:1546 <> j:18
+R1577:1588 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1557:1566 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R1576:1576 prosa.classic.model.schedule.uni.limited.schedule <> j:18 var
+R1568:1574 prosa.classic.model.schedule.uni.limited.schedule <> Definitions.arr_seq var
+R1617:1629 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1589:1605 prosa.classic.model.arrival.basic.job Job job_cost_positive def
+R1616:1616 prosa.classic.model.schedule.uni.limited.schedule <> j:18 var
+R1607:1614 prosa.classic.model.schedule.uni.limited.schedule <> Definitions.job_cost var
+R1651:1654 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R1630:1648 prosa.classic.model.schedule.uni.limited.schedule <> Definitions.job_lock_in_service var
+R1650:1650 prosa.classic.model.schedule.uni.limited.schedule <> j:18 var
+R1655:1662 prosa.classic.model.schedule.uni.limited.schedule <> Definitions.job_cost var
+R1664:1664 prosa.classic.model.schedule.uni.limited.schedule <> j:18 var
+def 1910:1948 <> job_nonpreemptive_after_lock_in_service
+binder 1966:1966 <> j:19
+binder 1968:1968 <> t:20
+binder 1970:1971 <> t':21
+R2002:2013 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1982:1991 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R2001:2001 prosa.classic.model.schedule.uni.limited.schedule <> j:19 var
+R1993:1999 prosa.classic.model.schedule.uni.limited.schedule <> Definitions.arr_seq var
+R2021:2032 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2015:2018 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R2014:2014 prosa.classic.model.schedule.uni.limited.schedule <> t:20 var
+R2019:2020 prosa.classic.model.schedule.uni.limited.schedule <> t':21 var
+R2075:2086 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2054:2057 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R2033:2051 prosa.classic.model.schedule.uni.limited.schedule <> Definitions.job_lock_in_service var
+R2053:2053 prosa.classic.model.schedule.uni.limited.schedule <> j:19 var
+R2058:2064 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R2074:2074 prosa.classic.model.schedule.uni.limited.schedule <> t:20 var
+R2072:2072 prosa.classic.model.schedule.uni.limited.schedule <> j:19 var
+R2066:2070 prosa.classic.model.schedule.uni.limited.schedule <> Definitions.sched var
+R2122:2133 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2087:2089 Corelib.ssr.ssrbool <> ::bool_scope:'~~'_x not
+R2090:2101 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R2120:2121 prosa.classic.model.schedule.uni.limited.schedule <> t':21 var
+R2118:2118 prosa.classic.model.schedule.uni.limited.schedule <> j:19 var
+R2112:2116 prosa.classic.model.schedule.uni.limited.schedule <> Definitions.sched var
+R2103:2110 prosa.classic.model.schedule.uni.limited.schedule <> Definitions.job_cost var
+R2134:2145 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R2155:2156 prosa.classic.model.schedule.uni.limited.schedule <> t':21 var
+R2153:2153 prosa.classic.model.schedule.uni.limited.schedule <> j:19 var
+R2147:2151 prosa.classic.model.schedule.uni.limited.schedule <> Definitions.sched var
+def 2479:2504 <> proper_job_lock_in_service
+R2543:2553 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R2515:2542 prosa.classic.model.schedule.uni.limited.schedule <> job_lock_in_service_positive def
+R2585:2595 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R2554:2584 prosa.classic.model.schedule.uni.limited.schedule <> job_lock_in_service_le_job_cost def
+R2596:2634 prosa.classic.model.schedule.uni.limited.schedule <> job_nonpreemptive_after_lock_in_service def
+var 2838:2857 Definitions task_lock_in_service
+R2864:2867 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2860:2863 prosa.classic.model.schedule.uni.limited.schedule <> Definitions.Task var
+R2868:2871 prosa.classic.model.time Time time def
+def 2965:2997 <> task_lock_in_service_le_task_cost
+binder 2999:3001 <> tsk:24
+R3036:3039 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R3012:3031 prosa.classic.model.schedule.uni.limited.schedule <> Definitions.task_lock_in_service var
+R3033:3035 prosa.classic.model.schedule.uni.limited.schedule <> tsk:24 var
+R3040:3048 prosa.classic.model.schedule.uni.limited.schedule <> Definitions.task_cost var
+R3050:3052 prosa.classic.model.schedule.uni.limited.schedule <> tsk:24 var
+def 3284:3330 <> task_lock_in_service_bounds_job_lock_in_service
+binder 3332:3334 <> tsk:25
+binder 3352:3352 <> j:26
+R3383:3394 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3363:3372 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R3382:3382 prosa.classic.model.schedule.uni.limited.schedule <> j:26 var
+R3374:3380 prosa.classic.model.schedule.uni.limited.schedule <> Definitions.arr_seq var
+R3411:3422 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3405:3407 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3395:3402 prosa.classic.model.schedule.uni.limited.schedule <> Definitions.job_task var
+R3404:3404 prosa.classic.model.schedule.uni.limited.schedule <> j:26 var
+R3408:3410 prosa.classic.model.schedule.uni.limited.schedule <> tsk:25 var
+R3444:3447 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R3423:3441 prosa.classic.model.schedule.uni.limited.schedule <> Definitions.job_lock_in_service var
+R3443:3443 prosa.classic.model.schedule.uni.limited.schedule <> j:26 var
+R3448:3467 prosa.classic.model.schedule.uni.limited.schedule <> Definitions.task_lock_in_service var
+R3469:3471 prosa.classic.model.schedule.uni.limited.schedule <> tsk:25 var
+def 3748:3774 <> proper_task_lock_in_service
+binder 3776:3778 <> tsk:27
+R3826:3835 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3789:3821 prosa.classic.model.schedule.uni.limited.schedule <> task_lock_in_service_le_task_cost def
+R3823:3825 prosa.classic.model.schedule.uni.limited.schedule <> tsk:27 var
+R3836:3882 prosa.classic.model.schedule.uni.limited.schedule <> task_lock_in_service_bounds_job_lock_in_service def
+R3884:3886 prosa.classic.model.schedule.uni.limited.schedule <> tsk:27 var
+R3900:3910 prosa.classic.model.schedule.uni.limited.schedule Definitions <> sec
+sec 3924:3931 <> Examples
+var  3948:3950 Examples Job
+R3953:3958 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 3975:3985 Examples job_arrival
+R3991:3994 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3988:3990 prosa.classic.model.schedule.uni.limited.schedule <> Examples.Job var
+R3995:3998 prosa.classic.model.time Time time def
+var 4014:4021 Examples job_cost
+R4027:4030 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4024:4026 prosa.classic.model.schedule.uni.limited.schedule <> Examples.Job var
+R4031:4034 prosa.classic.model.time Time time def
+var 4094:4100 Examples arr_seq
+R4103:4118 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R4120:4122 prosa.classic.model.schedule.uni.limited.schedule <> Examples.Job var
+var 4187:4191 Examples sched
+R4194:4201 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R4203:4205 prosa.classic.model.schedule.uni.limited.schedule <> Examples.Job var
+var 4277:4305 Examples H_completed_jobs_dont_execute
+R4314:4340 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_jobs_dont_execute def
+R4351:4355 prosa.classic.model.schedule.uni.limited.schedule <> Examples.sched var
+R4342:4349 prosa.classic.model.schedule.uni.limited.schedule <> Examples.job_cost var
+sec 4540:4559 Examples FullyPreemptiveModel
+var 4655:4673 Examples.FullyPreemptiveModel job_lock_in_service
+R4679:4681 prosa.classic.model.schedule.uni.limited.schedule <> Examples.Job var
+binder 4676:4676 <> j:39
+R4687:4694 prosa.classic.model.schedule.uni.limited.schedule <> Examples.job_cost var
+R4696:4696 prosa.classic.model.schedule.uni.limited.schedule <> j:39 var
+prf 4811:4857 <> job_nonpreemptive_after_lock_in_service_trivial
+R4869:4907 prosa.classic.model.schedule.uni.limited.schedule <> job_nonpreemptive_after_lock_in_service def
+R4932:4950 prosa.classic.model.schedule.uni.limited.schedule <> Examples.FullyPreemptiveModel.job_lock_in_service var
+R4926:4930 prosa.classic.model.schedule.uni.limited.schedule <> Examples.sched var
+R4918:4924 prosa.classic.model.schedule.uni.limited.schedule <> Examples.arr_seq var
+R4909:4916 prosa.classic.model.schedule.uni.limited.schedule <> Examples.job_cost var
+R5031:5034 Corelib.ssr.ssrbool <> negP thm
+R5081:5109 prosa.classic.model.schedule.uni.limited.schedule <> Examples.H_completed_jobs_dont_execute var
+R5081:5109 prosa.classic.model.schedule.uni.limited.schedule <> Examples.H_completed_jobs_dont_execute var
+R5081:5109 prosa.classic.model.schedule.uni.limited.schedule <> Examples.H_completed_jobs_dont_execute var
+R5145:5164 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completion_monotonic thm
+R5145:5164 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completion_monotonic thm
+R5194:5213 prosa.classic.model.schedule.uni.limited.schedule Examples.FullyPreemptiveModel <> sec
+sec 5393:5415 Examples FullyNonPreemptiveModel
+var 5544:5562 Examples.FullyNonPreemptiveModel job_lock_in_service
+R5568:5570 prosa.classic.model.schedule.uni.limited.schedule <> Examples.Job var
+binder 5565:5565 <> j:40
+R5576:5577 prosa.util.epsilon <> ε abbrev
+R5665:5719 prosa.classic.model.schedule.uni.nonpreemptive.schedule <> <> lib
+var 5811:5837 Examples.FullyNonPreemptiveModel H_is_nonpreemptive_schedule
+R5849:5895 prosa.classic.model.schedule.uni.nonpreemptive.schedule NonpreemptiveSchedule is_nonpreemptive_schedule def
+R5906:5910 prosa.classic.model.schedule.uni.limited.schedule <> Examples.sched var
+R5897:5904 prosa.classic.model.schedule.uni.limited.schedule <> Examples.job_cost var
+prf 6020:6063 <> property_last_segment_is_nonpreemptive_holds
+R6074:6112 prosa.classic.model.schedule.uni.limited.schedule <> job_nonpreemptive_after_lock_in_service def
+R6137:6155 prosa.classic.model.schedule.uni.limited.schedule <> Examples.FullyNonPreemptiveModel.job_lock_in_service var
+R6131:6135 prosa.classic.model.schedule.uni.limited.schedule <> Examples.sched var
+R6123:6129 prosa.classic.model.schedule.uni.limited.schedule <> Examples.arr_seq var
+R6114:6121 prosa.classic.model.schedule.uni.limited.schedule <> Examples.job_cost var
+R6187:6233 prosa.classic.model.schedule.uni.nonpreemptive.schedule NonpreemptiveSchedule is_nonpreemptive_schedule def
+R6289:6307 prosa.classic.model.schedule.uni.limited.schedule <> job_lock_in_service vardef
+R6334:6336 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R6337:6344 prosa.classic.model.schedule.uni.limited.schedule <> Examples.job_cost var
+R6370:6372 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R6375:6394 Stdlib.Bool.Bool <> negb_involutive thm
+R6397:6403 mathcomp.boot.ssrnat <> eqn0Ngt thm
+R6412:6415 Corelib.ssr.ssrbool <> negP thm
+R6375:6394 Stdlib.Bool.Bool <> negb_involutive thm
+R6370:6372 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R6370:6372 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R6375:6394 Stdlib.Bool.Bool <> negb_involutive thm
+R6397:6403 mathcomp.boot.ssrnat <> eqn0Ngt thm
+R6397:6403 mathcomp.boot.ssrnat <> eqn0Ngt thm
+R6412:6415 Corelib.ssr.ssrbool <> negP thm
+R6456:6458 mathcomp.boot.eqtype <> eqP def
+R6485:6496 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R6485:6496 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R6485:6496 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R6533:6536 mathcomp.boot.ssrnat <> lt0n thm
+R6533:6536 mathcomp.boot.ssrnat <> lt0n thm
+R6533:6536 mathcomp.boot.ssrnat <> lt0n thm
+R6566:6594 prosa.classic.model.schedule.uni.limited.schedule <> Examples.H_completed_jobs_dont_execute var
+R6566:6594 prosa.classic.model.schedule.uni.limited.schedule <> Examples.H_completed_jobs_dont_execute var
+R6566:6594 prosa.classic.model.schedule.uni.limited.schedule <> Examples.H_completed_jobs_dont_execute var
+R6637:6642 mathcomp.boot.ssrnat <> leqNgt thm
+R6637:6642 mathcomp.boot.ssrnat <> leqNgt thm
+R6637:6642 mathcomp.boot.ssrnat <> leqNgt thm
+R6664:6667 Corelib.ssr.ssrbool <> negP thm
+R6711:6717 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R6720:6733 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R6735:6745 prosa.util.sum <> sum_nat_gt0 thm
+R6711:6717 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R6711:6717 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R6720:6733 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R6720:6733 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R6735:6745 prosa.util.sum <> sum_nat_gt0 thm
+R6735:6745 prosa.util.sum <> sum_nat_gt0 thm
+R6777:6780 mathcomp.boot.seq <> hasP thm
+R6804:6813 mathcomp.boot.seq <> mem_filter thm
+R6804:6813 mathcomp.boot.seq <> mem_filter thm
+R6804:6813 mathcomp.boot.seq <> mem_filter thm
+R6819:6822 Corelib.ssr.ssrbool <> andP thm
+R6854:6857 mathcomp.boot.ssrnat <> lt0n thm
+R6859:6862 mathcomp.boot.ssrnat <> eqb0 thm
+R6864:6868 Corelib.ssr.ssrbool <> negbK thm
+R6854:6857 mathcomp.boot.ssrnat <> lt0n thm
+R6854:6857 mathcomp.boot.ssrnat <> lt0n thm
+R6859:6862 mathcomp.boot.ssrnat <> eqb0 thm
+R6859:6862 mathcomp.boot.ssrnat <> eqb0 thm
+R6864:6868 Corelib.ssr.ssrbool <> negbK thm
+R6864:6868 Corelib.ssr.ssrbool <> negbK thm
+R6894:6920 prosa.classic.model.schedule.uni.limited.schedule <> Examples.FullyNonPreemptiveModel.H_is_nonpreemptive_schedule var
+R6894:6920 prosa.classic.model.schedule.uni.limited.schedule <> Examples.FullyNonPreemptiveModel.H_is_nonpreemptive_schedule var
+R6955:6958 mathcomp.boot.ssrnat <> ltnW thm
+R6961:6969 mathcomp.boot.ssrnat <> leq_trans thm
+R6955:6958 mathcomp.boot.ssrnat <> ltnW thm
+R6961:6969 mathcomp.boot.ssrnat <> leq_trans thm
+R7014:7021 mathcomp.boot.seq <> mem_iota thm
+R7023:7027 mathcomp.boot.ssrnat <> add0n thm
+R7029:7033 mathcomp.boot.ssrnat <> subn0 thm
+R7014:7021 mathcomp.boot.seq <> mem_iota thm
+R7014:7021 mathcomp.boot.seq <> mem_iota thm
+R7023:7027 mathcomp.boot.ssrnat <> add0n thm
+R7023:7027 mathcomp.boot.ssrnat <> add0n thm
+R7029:7033 mathcomp.boot.ssrnat <> subn0 thm
+R7029:7033 mathcomp.boot.ssrnat <> subn0 thm
+R7055:7058 Corelib.ssr.ssrbool <> andP thm
+R7088:7110 prosa.classic.model.schedule.uni.limited.schedule Examples.FullyNonPreemptiveModel <> sec
+R7124:7131 prosa.classic.model.schedule.uni.limited.schedule Examples <> sec

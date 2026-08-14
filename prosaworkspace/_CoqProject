@@ -1,0 +1,3 @@
+-arg "-w -notation-overriden,-parsing,-projection-no-head-constant,-ambiguous-paths"
+
+-R . prosa

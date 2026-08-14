@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prosabuddy Guard Recovery"
+  short_description: "Recover safely from proof guard and transaction failures"
+  default_prompt: "Use $prosabuddy-guard-recovery to interpret this Prosabuddy guard error and choose the next safe proof action."

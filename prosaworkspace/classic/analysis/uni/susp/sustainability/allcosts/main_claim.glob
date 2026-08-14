@@ -1,0 +1,374 @@
+DIGEST e66071e0f774ada3a8f173abcf19b586
+Fprosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim
+R15:36 prosa.classic.util.all <> <> lib
+R54:81 prosa.classic.model.priority <> <> lib
+R83:112 prosa.classic.model.suspension <> <> lib
+R130:179 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R197:242 prosa.classic.model.schedule.uni.response_time <> <> lib
+R259:305 prosa.classic.model.schedule.uni.sustainability <> <> lib
+R323:380 prosa.classic.model.schedule.uni.susp.suspension_intervals <> <> lib
+R397:442 prosa.classic.model.schedule.uni.susp.schedule <> <> lib
+R459:510 prosa.classic.model.schedule.uni.susp.valid_schedule <> <> lib
+R527:586 prosa.classic.model.schedule.uni.susp.build_suspension_table <> <> lib
+R603:648 prosa.classic.model.schedule.uni.susp.platform <> <> lib
+R666:730 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> <> lib
+R747:822 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction_properties <> <> lib
+R840:899 prosa.classic.model.schedule.uni.transformation.construction <> <> lib
+R932:940 mathcomp.boot.ssreflect <> <> lib
+R942:948 mathcomp.boot.ssrbool <> <> lib
+R950:955 mathcomp.boot.eqtype <> <> lib
+R957:962 mathcomp.boot.ssrnat <> <> lib
+R964:966 mathcomp.boot.seq <> <> lib
+R968:974 mathcomp.boot.fintype <> <> lib
+R976:980 mathcomp.boot.bigop <> <> lib
+mod 1155:1184 <> SustainabilityAllCostsProperty
+R1199:1221 prosa.classic.model.schedule.uni.susp.schedule ScheduleWithSuspensions <> mod
+R1223:1232 prosa.classic.model.suspension Suspension <> mod
+R1234:1241 prosa.classic.model.priority Priority <> mod
+R1243:1261 prosa.classic.model.schedule.uni.susp.suspension_intervals SuspensionIntervals <> mod
+R1272:1294 prosa.classic.model.schedule.uni.susp.platform PlatformWithSuspensions <> mod
+R1296:1307 prosa.classic.model.schedule.uni.response_time ResponseTime <> mod
+R1309:1322 prosa.classic.model.schedule.uni.sustainability Sustainability <> mod
+R1333:1360 prosa.classic.model.schedule.uni.susp.valid_schedule ValidSuspensionAwareSchedule <> mod
+R1386:1407 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction SustainabilityAllCosts <> mod
+mod 1373:1381 <> SustainabilityAllCostsProperty.reduction
+R1437:1468 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction_properties SustainabilityAllCostsProperties <> mod
+mod 1419:1432 <> SustainabilityAllCostsProperty.reduction_prop
+sec 1484:1505 SustainabilityAllCostsProperty SustainabilityProperty
+var  1526:1529 SustainabilityAllCostsProperty.SustainabilityProperty Task
+R1532:1537 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  1554:1556 SustainabilityAllCostsProperty.SustainabilityProperty Job
+R1559:1564 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1622:1639 SustainabilityAllCostsProperty.SustainabilityProperty higher_eq_priority
+R1642:1652 prosa.classic.model.priority Priority JLDP_policy def
+R1654:1656 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.Job var
+var 1674:1693 SustainabilityAllCostsProperty.SustainabilityProperty H_priority_reflexive
+R1696:1712 prosa.classic.model.priority Priority JLDP_is_reflexive def
+R1714:1731 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.higher_eq_priority var
+var 1749:1769 SustainabilityAllCostsProperty.SustainabilityProperty H_priority_transitive
+R1772:1789 prosa.classic.model.priority Priority JLDP_is_transitive def
+R1791:1808 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.higher_eq_priority var
+var 1825:1832 SustainabilityAllCostsProperty.SustainabilityProperty job_task
+R1838:1841 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1835:1837 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.Job var
+R1842:1845 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.Task var
+var 1861:1881 SustainabilityAllCostsProperty.SustainabilityProperty task_suspension_bound
+R1888:1891 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1884:1887 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.Task var
+R1892:1899 prosa.classic.model.time Time duration def
+var 1974:2004 SustainabilityAllCostsProperty.SustainabilityProperty satisfies_suspension_properties
+R2015:2017 mathcomp.boot.seq <> seq abbrev
+R2020:2032 prosa.classic.model.schedule.uni.sustainability Sustainability job_parameter rec
+R2034:2036 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.Job var
+binder 2007:2012 <> params:13
+R2049:2072 prosa.classic.model.suspension Suspension dynamic_suspension_model def
+R2182:2202 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.task_suspension_bound var
+R2146:2157 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R2159:2172 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_SUSPENSION constr
+R2174:2179 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> params:13 var
+R2105:2112 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.job_task var
+R2075:2086 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R2088:2095 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_COST constr
+R2097:2102 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> params:13 var
+var 2263:2291 SustainabilityAllCostsProperty.SustainabilityProperty satisfies_schedule_properties
+R2302:2304 mathcomp.boot.seq <> seq abbrev
+R2307:2319 prosa.classic.model.schedule.uni.sustainability Sustainability job_parameter rec
+R2321:2323 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.Job var
+binder 2294:2299 <> params:14
+R2337:2352 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R2354:2356 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.Job var
+binder 2328:2334 <> arr_seq:15
+R2405:2412 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R2414:2416 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.Job var
+binder 2398:2402 <> sched:16
+R2447:2458 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R2460:2470 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_ARRIVAL constr
+R2472:2477 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> params:14 var
+binder 2432:2442 <> job_arrival:17
+R2504:2515 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R2517:2524 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_COST constr
+R2526:2531 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> params:14 var
+binder 2492:2499 <> job_cost:18
+R2573:2584 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R2586:2599 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_SUSPENSION constr
+R2601:2606 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> params:14 var
+binder 2546:2568 <> job_suspension_duration:19
+R2664:2675 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R2619:2649 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule jobs_come_from_arrival_sequence def
+R2657:2663 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> arr_seq:15 var
+R2651:2655 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> sched:16 var
+R2721:2732 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R2676:2702 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule jobs_must_arrive_to_execute def
+R2716:2720 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> sched:16 var
+R2704:2714 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> job_arrival:17 var
+R2775:2786 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R2733:2759 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_jobs_dont_execute def
+R2770:2774 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> sched:16 var
+R2761:2768 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> job_cost:18 var
+R2861:2872 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R2787:2801 prosa.classic.model.schedule.uni.susp.platform PlatformWithSuspensions work_conserving def
+R2856:2860 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> sched:16 var
+R2848:2854 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> arr_seq:15 var
+R2824:2846 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> job_suspension_duration:19 var
+R2815:2822 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> job_cost:18 var
+R2803:2813 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> job_arrival:17 var
+R3000:3011 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R2873:2892 prosa.classic.model.schedule.uni.susp.platform PlatformWithSuspensions respects_JLDP_policy def
+R2982:2999 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.higher_eq_priority var
+R2976:2980 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> sched:16 var
+R2939:2945 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> arr_seq:15 var
+R2915:2937 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> job_suspension_duration:19 var
+R2906:2913 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> job_cost:18 var
+R2894:2904 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> job_arrival:17 var
+R3012:3036 prosa.classic.model.schedule.uni.susp.suspension_intervals SuspensionIntervals respects_self_suspensions def
+R3083:3087 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> sched:16 var
+R3059:3081 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> job_suspension_duration:19 var
+R3050:3057 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> job_cost:18 var
+R3038:3048 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> job_arrival:17 var
+var 3156:3192 SustainabilityAllCostsProperty.SustainabilityProperty satisfies_arrival_sequence_properties
+R3203:3205 mathcomp.boot.seq <> seq abbrev
+R3208:3220 prosa.classic.model.schedule.uni.sustainability Sustainability job_parameter rec
+R3222:3224 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.Job var
+binder 3195:3200 <> params:20
+R3284:3299 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R3301:3303 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.Job var
+binder 3275:3281 <> arr_seq:21
+R3385:3394 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3315:3342 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_times_are_consistent def
+R3378:3384 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> arr_seq:21 var
+R3345:3356 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R3358:3368 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_ARRIVAL constr
+R3370:3375 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> params:20 var
+R3395:3407 prosa.classic.model.priority Priority JLDP_is_total def
+R3417:3434 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.higher_eq_priority var
+R3409:3415 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> arr_seq:21 var
+var 3526:3546 SustainabilityAllCostsProperty.SustainabilityProperty belongs_to_task_model
+R3557:3559 mathcomp.boot.seq <> seq abbrev
+R3562:3574 prosa.classic.model.schedule.uni.sustainability Sustainability job_parameter rec
+R3576:3578 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.Job var
+binder 3549:3554 <> params:22
+R3622:3637 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R3639:3641 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.Job var
+binder 3613:3619 <> arr_seq:23
+R3652:3659 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R3661:3663 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.Job var
+binder 3645:3649 <> sched:24
+R3727:3736 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3675:3711 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.satisfies_arrival_sequence_properties var
+R3713:3718 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> params:22 var
+R3720:3726 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> arr_seq:23 var
+R3787:3796 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3737:3765 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.satisfies_schedule_properties var
+R3767:3772 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> params:22 var
+R3774:3780 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> arr_seq:23 var
+R3782:3786 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> sched:24 var
+R3797:3827 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.satisfies_suspension_properties var
+R3829:3834 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> params:22 var
+var 4067:4067 SustainabilityAllCostsProperty.SustainabilityProperty R
+R4070:4073 prosa.classic.model.time Time time def
+var 4084:4109 SustainabilityAllCostsProperty.SustainabilityProperty response_time_bounded_by_R
+R4120:4122 mathcomp.boot.seq <> seq abbrev
+R4125:4137 prosa.classic.model.schedule.uni.sustainability Sustainability job_parameter rec
+R4139:4141 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.Job var
+binder 4112:4117 <> params:27
+R4153:4160 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R4162:4164 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.Job var
+binder 4146:4150 <> sched:28
+R4171:4173 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.Job var
+binder 4168:4168 <> j:29
+R4185:4213 prosa.classic.model.schedule.uni.response_time ResponseTime is_response_time_bound_of_job def
+R4324:4324 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.R var
+R4322:4322 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> j:29 var
+R4316:4320 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> sched:28 var
+R4286:4297 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R4299:4306 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_COST constr
+R4308:4313 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> params:27 var
+R4216:4227 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R4229:4239 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_ARRIVAL constr
+R4241:4246 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> params:27 var
+var 4460:4469 SustainabilityAllCostsProperty.SustainabilityProperty all_params
+R4474:4477 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_';'_x_';'_'..'_';'_x_']' not
+R4489:4490 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_';'_x_';'_'..'_';'_x_']' not
+R4499:4500 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_';'_x_';'_'..'_';'_x_']' not
+R4515:4515 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_';'_x_';'_'..'_';'_x_']' not
+R4478:4488 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_ARRIVAL constr
+R4491:4498 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_COST constr
+R4501:4514 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_SUSPENSION constr
+var 4526:4542 SustainabilityAllCostsProperty.SustainabilityProperty sustainable_param
+R4547:4554 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_COST constr
+var 4565:4579 SustainabilityAllCostsProperty.SustainabilityProperty variable_params
+R4584:4587 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_']' not
+R4602:4602 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_']' not
+R4588:4601 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_SUSPENSION constr
+var 4613:4640 SustainabilityAllCostsProperty.SustainabilityProperty has_better_sustainable_param
+R4658:4661 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4655:4657 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.Job var
+R4662:4665 prosa.classic.model.time Time time def
+binder 4643:4646 <> cost:30
+binder 4648:4652 <> cost':31
+binder 4678:4678 <> j:32
+R4687:4690 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R4691:4695 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> cost':31 var
+R4697:4697 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> j:32 var
+R4681:4684 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> cost:30 var
+R4686:4686 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> j:32 var
+var 4713:4775 SustainabilityAllCostsProperty.SustainabilityProperty weakly_sustainable_with_job_costs_and_variable_suspension_times
+R4786:4803 prosa.classic.model.schedule.uni.sustainability Sustainability weakly_sustainable def
+R4937:4951 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.variable_params var
+R4908:4935 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.has_better_sustainable_param var
+R4890:4906 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.sustainable_param var
+R4843:4863 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.belongs_to_task_model var
+R4816:4841 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.response_time_bounded_by_R var
+R4805:4814 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.all_params var
+prf 5047:5074 SustainabilityAllCostsProperty policy_is_weakly_sustainable
+R5083:5145 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.weakly_sustainable_with_job_costs_and_variable_suspension_times var
+R5374:5385 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R5387:5397 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_ARRIVAL constr
+R5374:5385 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R5387:5397 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_ARRIVAL constr
+R5374:5385 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R5387:5397 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_ARRIVAL constr
+R5425:5438 prosa.classic.model.schedule.uni.sustainability Sustainability differ_only_by def
+R5475:5477 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5478:5489 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R5491:5501 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_ARRIVAL constr
+R5609:5613 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R5598:5608 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_ARRIVAL constr
+R5614:5622 prosa.classic.model.schedule.uni.sustainability Sustainability labels_of def
+R5675:5679 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R5664:5674 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_ARRIVAL constr
+R5680:5688 prosa.classic.model.schedule.uni.sustainability Sustainability labels_of def
+R5744:5748 prosa.classic.util.list <> mapP2 thm
+R5764:5768 prosa.classic.util.list <> mapP2 thm
+R5845:5861 prosa.classic.model.schedule.uni.sustainability Sustainability found_param_label thm
+R5872:5882 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_ARRIVAL constr
+R5917:5933 prosa.classic.model.schedule.uni.sustainability Sustainability found_param_label thm
+R5950:5960 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_ARRIVAL constr
+R6165:6176 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R6178:6185 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_COST constr
+R6165:6176 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R6178:6185 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_COST constr
+R6165:6176 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R6178:6185 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_COST constr
+R6222:6233 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R6235:6242 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_COST constr
+R6222:6233 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R6235:6242 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_COST constr
+R6222:6233 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R6235:6242 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_COST constr
+R6281:6292 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R6294:6307 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_SUSPENSION constr
+R6281:6292 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R6294:6307 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_SUSPENSION constr
+R6281:6292 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R6294:6307 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_SUSPENSION constr
+R6345:6363 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim SustainabilityAllCostsProperty sched_new def
+R6489:6489 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.R var
+R6400:6417 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.higher_eq_priority var
+R6345:6363 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim SustainabilityAllCostsProperty sched_new def
+R6489:6489 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.R var
+R6400:6417 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.higher_eq_priority var
+R6345:6363 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim SustainabilityAllCostsProperty sched_new def
+R6489:6489 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.R var
+R6400:6417 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.higher_eq_priority var
+R6533:6569 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim SustainabilityAllCostsProperty reduced_suspension_duration def
+R6676:6676 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.R var
+R6614:6631 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.higher_eq_priority var
+R6533:6569 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim SustainabilityAllCostsProperty reduced_suspension_duration def
+R6676:6676 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.R var
+R6614:6631 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.higher_eq_priority var
+R6533:6569 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim SustainabilityAllCostsProperty reduced_suspension_duration def
+R6676:6676 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.R var
+R6614:6631 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.higher_eq_priority var
+R6703:6706 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_';'_x_';'_'..'_';'_x_']' not
+R6736:6737 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_';'_x_';'_'..'_';'_x_']' not
+R6761:6790 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_';'_x_';'_'..'_';'_x_']' not
+R6839:6839 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_';'_x_';'_'..'_';'_x_']' not
+R6707:6711 prosa.classic.model.schedule.uni.sustainability Sustainability param constr
+R6713:6723 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_ARRIVAL constr
+R6738:6742 prosa.classic.model.schedule.uni.sustainability Sustainability param constr
+R6744:6751 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_COST constr
+R6791:6795 prosa.classic.model.schedule.uni.sustainability Sustainability param constr
+R6797:6810 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_SUSPENSION constr
+R6703:6706 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_';'_x_';'_'..'_';'_x_']' not
+R6736:6737 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_';'_x_';'_'..'_';'_x_']' not
+R6761:6790 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_';'_x_';'_'..'_';'_x_']' not
+R6839:6839 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_';'_x_';'_'..'_';'_x_']' not
+R6707:6711 prosa.classic.model.schedule.uni.sustainability Sustainability param constr
+R6713:6723 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_ARRIVAL constr
+R6738:6742 prosa.classic.model.schedule.uni.sustainability Sustainability param constr
+R6744:6751 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_COST constr
+R6791:6795 prosa.classic.model.schedule.uni.sustainability Sustainability param constr
+R6797:6810 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_SUSPENSION constr
+R6703:6706 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_';'_x_';'_'..'_';'_x_']' not
+R6736:6737 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_';'_x_';'_'..'_';'_x_']' not
+R6761:6790 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_';'_x_';'_'..'_';'_x_']' not
+R6839:6839 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_';'_x_';'_'..'_';'_x_']' not
+R6707:6711 prosa.classic.model.schedule.uni.sustainability Sustainability param constr
+R6713:6723 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_ARRIVAL constr
+R6738:6742 prosa.classic.model.schedule.uni.sustainability Sustainability param constr
+R6744:6751 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_COST constr
+R6791:6795 prosa.classic.model.schedule.uni.sustainability Sustainability param constr
+R6797:6810 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_SUSPENSION constr
+R6966:6983 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.higher_eq_priority var
+R6856:6902 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim SustainabilityAllCostsProperty sched_new_response_time_of_job_j thm
+R6966:6983 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim <> SustainabilityAllCostsProperty.SustainabilityProperty.higher_eq_priority var
+R6856:6902 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim SustainabilityAllCostsProperty sched_new_response_time_of_job_j thm
+R7183:7189 mathcomp.boot.seq <> in_cons thm
+R7191:7198 mathcomp.boot.seq <> mem_seq1 thm
+R7183:7189 mathcomp.boot.seq <> in_cons thm
+R7183:7189 mathcomp.boot.seq <> in_cons thm
+R7183:7189 mathcomp.boot.seq <> in_cons thm
+R7191:7198 mathcomp.boot.seq <> mem_seq1 thm
+R7191:7198 mathcomp.boot.seq <> mem_seq1 thm
+R7183:7189 mathcomp.boot.seq <> in_cons thm
+R7183:7189 mathcomp.boot.seq <> in_cons thm
+R7183:7189 mathcomp.boot.seq <> in_cons thm
+R7191:7198 mathcomp.boot.seq <> mem_seq1 thm
+R7191:7198 mathcomp.boot.seq <> mem_seq1 thm
+R7230:7232 Corelib.ssr.ssrbool <> orP thm
+R7236:7238 mathcomp.boot.eqtype <> eqP def
+R7246:7248 Corelib.ssr.ssrbool <> orP thm
+R7252:7254 mathcomp.boot.eqtype <> eqP def
+R7262:7264 mathcomp.boot.eqtype <> eqP def
+R7230:7232 Corelib.ssr.ssrbool <> orP thm
+R7236:7238 mathcomp.boot.eqtype <> eqP def
+R7246:7248 Corelib.ssr.ssrbool <> orP thm
+R7252:7254 mathcomp.boot.eqtype <> eqP def
+R7262:7264 mathcomp.boot.eqtype <> eqP def
+R7404:7410 mathcomp.boot.seq <> in_cons thm
+R7412:7419 mathcomp.boot.seq <> mem_seq1 thm
+R7404:7410 mathcomp.boot.seq <> in_cons thm
+R7404:7410 mathcomp.boot.seq <> in_cons thm
+R7404:7410 mathcomp.boot.seq <> in_cons thm
+R7412:7419 mathcomp.boot.seq <> mem_seq1 thm
+R7412:7419 mathcomp.boot.seq <> mem_seq1 thm
+R7456:7458 Corelib.ssr.ssrbool <> orP thm
+R7462:7464 mathcomp.boot.eqtype <> eqP def
+R7472:7474 Corelib.ssr.ssrbool <> orP thm
+R7478:7480 mathcomp.boot.eqtype <> eqP def
+R7488:7490 mathcomp.boot.eqtype <> eqP def
+R7860:7876 prosa.classic.model.schedule.uni.sustainability Sustainability found_param_label thm
+R7860:7876 prosa.classic.model.schedule.uni.sustainability Sustainability found_param_label thm
+R7940:7956 prosa.classic.model.schedule.uni.sustainability Sustainability found_param_label thm
+R7940:7956 prosa.classic.model.schedule.uni.sustainability Sustainability found_param_label thm
+R8053:8108 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim SustainabilityAllCostsProperty sched_new_jobs_come_from_arrival_sequence thm
+R8053:8108 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim SustainabilityAllCostsProperty sched_new_jobs_come_from_arrival_sequence thm
+R8130:8181 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim SustainabilityAllCostsProperty sched_new_jobs_must_arrive_to_execute thm
+R8130:8181 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim SustainabilityAllCostsProperty sched_new_jobs_must_arrive_to_execute thm
+R8203:8254 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim SustainabilityAllCostsProperty sched_new_completed_jobs_dont_execute thm
+R8203:8254 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim SustainabilityAllCostsProperty sched_new_completed_jobs_dont_execute thm
+R8276:8315 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim SustainabilityAllCostsProperty sched_new_work_conserving thm
+R8276:8315 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim SustainabilityAllCostsProperty sched_new_work_conserving thm
+R8337:8376 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim SustainabilityAllCostsProperty sched_new_respects_policy thm
+R8337:8376 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim SustainabilityAllCostsProperty sched_new_respects_policy thm
+R8398:8447 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim SustainabilityAllCostsProperty sched_new_respects_self_suspensions thm
+R8398:8447 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim SustainabilityAllCostsProperty sched_new_respects_self_suspensions thm
+R8506:8521 prosa.classic.model.suspension Suspension total_suspension def
+R8485:8493 mathcomp.boot.ssrnat <> leq_trans thm
+R8506:8521 prosa.classic.model.suspension Suspension total_suspension def
+R8485:8493 mathcomp.boot.ssrnat <> leq_trans thm
+R8585:8637 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim SustainabilityAllCostsProperty sched_new_has_shorter_total_suspension thm
+R8585:8637 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim SustainabilityAllCostsProperty sched_new_has_shorter_total_suspension thm
+R8666:8687 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim SustainabilityAllCostsProperty.SustainabilityProperty <> sec
+R8697:8726 prosa.classic.analysis.uni.susp.sustainability.allcosts.main_claim SustainabilityAllCostsProperty <> mod

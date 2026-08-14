@@ -1,0 +1,545 @@
+DIGEST d2954725185b787860cafbe6545cb10f
+Fprosa.classic.analysis.uni.basic.workload_bound_fp
+R15:36 prosa.classic.util.all <> <> lib
+R54:91 prosa.classic.model.arrival.basic.task <> <> lib
+R93:129 prosa.classic.model.arrival.basic.job <> <> lib
+R131:158 prosa.classic.model.priority <> <> lib
+R175:220 prosa.classic.model.arrival.basic.task_arrival <> <> lib
+R222:269 prosa.classic.model.arrival.basic.arrival_bounds <> <> lib
+R287:327 prosa.classic.model.schedule.uni.schedule <> <> lib
+R329:369 prosa.classic.model.schedule.uni.workload <> <> lib
+R401:409 mathcomp.boot.ssreflect <> <> lib
+R411:417 mathcomp.boot.ssrbool <> <> lib
+R419:424 mathcomp.boot.eqtype <> <> lib
+R426:431 mathcomp.boot.ssrnat <> <> lib
+R433:435 mathcomp.boot.seq <> <> lib
+R437:443 mathcomp.boot.fintype <> <> lib
+R445:449 mathcomp.boot.bigop <> <> lib
+R451:453 mathcomp.boot.div <> <> lib
+mod 464:478 <> WorkloadBoundFP
+R491:493 prosa.classic.model.arrival.basic.job Job <> mod
+R495:509 prosa.classic.model.arrival.basic.task SporadicTaskset <> mod
+R511:530 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule <> mod
+R532:539 prosa.classic.model.priority Priority <> mod
+R541:548 prosa.classic.model.schedule.uni.workload Workload <> mod
+R559:569 prosa.classic.model.arrival.basic.task_arrival TaskArrival <> mod
+R571:583 prosa.classic.model.arrival.basic.arrival_bounds ArrivalBounds <> mod
+sec 713:722 WorkloadBoundFP SingleTask
+var  739:742 WorkloadBoundFP.SingleTask Task
+R745:750 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 767:775 WorkloadBoundFP.SingleTask task_cost
+R782:785 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R778:781 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.SingleTask.Task var
+R786:789 prosa.classic.model.time Time time def
+var 805:815 WorkloadBoundFP.SingleTask task_period
+R822:825 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R818:821 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.SingleTask.Task var
+R826:829 prosa.classic.model.time Time time def
+var 934:936 WorkloadBoundFP.SingleTask tsk
+R939:942 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.SingleTask.Task var
+var 958:962 WorkloadBoundFP.SingleTask delta
+R965:968 prosa.classic.model.time Time time def
+def 1082:1089 WorkloadBoundFP max_jobs
+R1094:1101 prosa.classic.util.div_mod <> div_ceil def
+R1103:1107 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.SingleTask.delta var
+R1110:1120 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.SingleTask.task_period var
+R1122:1124 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.SingleTask.tsk var
+def 1211:1232 WorkloadBoundFP task_workload_bound_FP
+R1245:1247 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R1237:1244 prosa.classic.analysis.uni.basic.workload_bound_fp WorkloadBoundFP max_jobs def
+R1248:1256 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.SingleTask.task_cost var
+R1258:1260 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.SingleTask.tsk var
+R1271:1280 prosa.classic.analysis.uni.basic.workload_bound_fp WorkloadBoundFP.SingleTask <> sec
+sec 1373:1380 WorkloadBoundFP AllTasks
+var  1401:1404 WorkloadBoundFP.AllTasks Task
+R1407:1412 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1429:1437 WorkloadBoundFP.AllTasks task_cost
+R1444:1447 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1440:1443 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.AllTasks.Task var
+R1448:1451 prosa.classic.model.time Time time def
+var 1467:1477 WorkloadBoundFP.AllTasks task_period
+R1484:1487 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1480:1483 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.AllTasks.Task var
+R1488:1491 prosa.classic.model.time Time time def
+var 1540:1557 WorkloadBoundFP.AllTasks higher_eq_priority
+R1560:1568 prosa.classic.model.priority Priority FP_policy def
+R1570:1573 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.AllTasks.Task var
+var 1630:1631 WorkloadBoundFP.AllTasks ts
+R1634:1637 Corelib.Init.Datatypes <> list ind
+R1639:1642 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.AllTasks.Task var
+var 1716:1718 WorkloadBoundFP.AllTasks tsk
+R1721:1724 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.AllTasks.Task var
+var 1808:1812 WorkloadBoundFP.AllTasks delta
+R1815:1818 prosa.classic.model.time Time time def
+var 1953:1963 WorkloadBoundFP.AllTasks is_hep_task
+binder 1965:1973 <> tsk_other:23
+R1978:1995 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.AllTasks.higher_eq_priority var
+R1997:2005 prosa.classic.analysis.uni.basic.workload_bound_fp <> tsk_other:23 var
+R2007:2009 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.AllTasks.tsk var
+var 2020:2020 WorkloadBoundFP.AllTasks W
+binder 2022:2030 <> tsk_other:24
+R2041:2062 prosa.classic.analysis.uni.basic.workload_bound_fp WorkloadBoundFP task_workload_bound_FP def
+R2096:2100 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.AllTasks.delta var
+R2086:2094 prosa.classic.analysis.uni.basic.workload_bound_fp <> tsk_other:24 var
+R2074:2084 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.AllTasks.task_period var
+R2064:2072 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.AllTasks.task_cost var
+def 2333:2355 WorkloadBoundFP total_workload_bound_fp
+R2366:2371 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R2381:2384 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R2387:2389 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R2411:2412 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R2385:2386 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.AllTasks.ts var
+binder 2372:2380 <> tsk_other:25
+binder 2372:2380 <> tsk_other:26
+binder 2372:2380 <> tsk_other:27
+R2390:2400 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.AllTasks.is_hep_task var
+R2402:2410 prosa.classic.analysis.uni.basic.workload_bound_fp <> tsk_other:25 var
+R2413:2413 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.AllTasks.W var
+R2415:2423 prosa.classic.analysis.uni.basic.workload_bound_fp <> tsk_other:25 var
+R2439:2446 prosa.classic.analysis.uni.basic.workload_bound_fp WorkloadBoundFP.AllTasks <> sec
+sec 2538:2548 WorkloadBoundFP BasicLemmas
+var  2565:2568 WorkloadBoundFP.BasicLemmas Task
+R2571:2576 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 2593:2601 WorkloadBoundFP.BasicLemmas task_cost
+R2608:2611 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2604:2607 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.Task var
+R2612:2615 prosa.classic.model.time Time time def
+var 2631:2641 WorkloadBoundFP.BasicLemmas task_period
+R2648:2651 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2644:2647 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.Task var
+R2652:2655 prosa.classic.model.time Time time def
+var 2671:2683 WorkloadBoundFP.BasicLemmas task_deadline
+R2690:2693 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2686:2689 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.Task var
+R2694:2697 prosa.classic.model.time Time time def
+var 2746:2763 WorkloadBoundFP.BasicLemmas higher_eq_priority
+R2766:2774 prosa.classic.model.priority Priority FP_policy def
+R2776:2779 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.Task var
+var 2838:2839 WorkloadBoundFP.BasicLemmas ts
+R2842:2845 Corelib.Init.Datatypes <> list ind
+R2847:2850 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.Task var
+var 2915:2917 WorkloadBoundFP.BasicLemmas tsk
+R2920:2923 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.Task var
+var 2941:2951 WorkloadBoundFP.BasicLemmas H_tsk_in_ts
+R2957:2961 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R2954:2956 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.tsk var
+R2962:2963 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.ts var
+var 3043:3056 WorkloadBoundFP.BasicLemmas workload_bound
+R3067:3089 prosa.classic.analysis.uni.basic.workload_bound_fp WorkloadBoundFP total_workload_bound_fp def
+R3135:3137 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.tsk var
+R3132:3133 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.ts var
+R3113:3130 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.higher_eq_priority var
+R3101:3111 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.task_period var
+R3091:3099 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.task_cost var
+sec 3385:3401 WorkloadBoundFP.BasicLemmas NoSmallerThanCost
+var 3479:3501 WorkloadBoundFP.BasicLemmas.NoSmallerThanCost H_priority_is_reflexive
+R3504:3518 prosa.classic.model.priority Priority FP_is_reflexive def
+R3520:3537 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.higher_eq_priority var
+var 3624:3638 WorkloadBoundFP.BasicLemmas.NoSmallerThanCost H_cost_positive
+R3654:3656 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R3641:3649 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.task_cost var
+R3651:3653 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.tsk var
+var 3677:3693 WorkloadBoundFP.BasicLemmas.NoSmallerThanCost H_period_positive
+R3711:3713 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R3696:3706 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.task_period var
+R3708:3710 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.tsk var
+prf 3863:3893 WorkloadBoundFP total_workload_bound_fp_ge_cost
+R3934:3937 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R3938:3946 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.task_cost var
+R3948:3950 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.tsk var
+R3904:3917 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.workload_bound var
+R3920:3928 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.task_cost var
+R3930:3932 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.tsk var
+R4031:4044 prosa.classic.analysis.uni.basic.workload_bound_fp <> workload_bound vardef
+R4047:4069 prosa.classic.analysis.uni.basic.workload_bound_fp WorkloadBoundFP total_workload_bound_fp def
+R4088:4097 mathcomp.boot.bigop <> big_mkcond thm
+R4100:4106 mathcomp.boot.bigop <> big_rem thm
+R4108:4110 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.tsk var
+R4088:4097 mathcomp.boot.bigop <> big_mkcond thm
+R4088:4097 mathcomp.boot.bigop <> big_mkcond thm
+R4100:4106 mathcomp.boot.bigop <> big_rem thm
+R4108:4110 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.tsk var
+R4100:4106 mathcomp.boot.bigop <> big_rem thm
+R4108:4110 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.tsk var
+R4153:4174 prosa.classic.analysis.uni.basic.workload_bound_fp WorkloadBoundFP task_workload_bound_FP def
+R4153:4174 prosa.classic.analysis.uni.basic.workload_bound_fp WorkloadBoundFP task_workload_bound_FP def
+R4153:4174 prosa.classic.analysis.uni.basic.workload_bound_fp WorkloadBoundFP task_workload_bound_FP def
+R4252:4254 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R4212:4219 prosa.classic.analysis.uni.basic.workload_bound_fp WorkloadBoundFP max_jobs def
+R4238:4246 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.task_cost var
+R4248:4250 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.tsk var
+R4233:4235 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.tsk var
+R4221:4231 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.task_period var
+R4255:4263 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.task_cost var
+R4265:4267 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.tsk var
+R4191:4199 mathcomp.boot.ssrnat <> leq_trans thm
+R4295:4302 mathcomp.boot.ssrnat <> leq_addr thm
+R4252:4254 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R4212:4219 prosa.classic.analysis.uni.basic.workload_bound_fp WorkloadBoundFP max_jobs def
+R4238:4246 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.task_cost var
+R4248:4250 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.tsk var
+R4233:4235 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.tsk var
+R4221:4231 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.task_period var
+R4255:4263 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.task_cost var
+R4265:4267 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.tsk var
+R4191:4199 mathcomp.boot.ssrnat <> leq_trans thm
+R4295:4302 mathcomp.boot.ssrnat <> leq_addr thm
+R4326:4334 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.task_cost var
+R4336:4338 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.tsk var
+R4340:4344 mathcomp.boot.ssrnat <> mul1n thm
+R4346:4354 mathcomp.boot.ssrnat <> leq_mul2r thm
+R4363:4365 Corelib.ssr.ssrbool <> orP thm
+R4340:4344 mathcomp.boot.ssrnat <> mul1n thm
+R4326:4334 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.task_cost var
+R4336:4338 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.tsk var
+R4326:4334 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.task_cost var
+R4336:4338 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.tsk var
+R4340:4344 mathcomp.boot.ssrnat <> mul1n thm
+R4346:4354 mathcomp.boot.ssrnat <> leq_mul2r thm
+R4346:4354 mathcomp.boot.ssrnat <> leq_mul2r thm
+R4363:4365 Corelib.ssr.ssrbool <> orP thm
+R4392:4400 prosa.classic.util.div_mod <> ceil_neq0 thm
+R4392:4400 prosa.classic.util.div_mod <> ceil_neq0 thm
+R4423:4439 prosa.classic.analysis.uni.basic.workload_bound_fp WorkloadBoundFP.BasicLemmas.NoSmallerThanCost <> sec
+sec 4548:4560 WorkloadBoundFP.BasicLemmas NonDecreasing
+var 4659:4675 WorkloadBoundFP.BasicLemmas.NonDecreasing H_period_positive
+binder 4693:4695 <> tsk:49
+R4718:4731 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4711:4715 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R4708:4710 prosa.classic.analysis.uni.basic.workload_bound_fp <> tsk:49 var
+R4716:4717 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.ts var
+R4747:4749 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R4732:4742 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.task_period var
+R4744:4746 prosa.classic.analysis.uni.basic.workload_bound_fp <> tsk:49 var
+prf 4916:4953 WorkloadBoundFP total_workload_bound_fp_non_decreasing
+binder 4971:4976 <> delta1:52
+binder 4978:4983 <> delta2:53
+R5012:5025 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5002:5005 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R4996:5001 prosa.classic.analysis.uni.basic.workload_bound_fp <> delta1:52 var
+R5006:5011 prosa.classic.analysis.uni.basic.workload_bound_fp <> delta2:53 var
+R5047:5050 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R5026:5039 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.workload_bound var
+R5041:5046 prosa.classic.analysis.uni.basic.workload_bound_fp <> delta1:52 var
+R5051:5064 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.workload_bound var
+R5066:5071 prosa.classic.analysis.uni.basic.workload_bound_fp <> delta2:53 var
+R5102:5115 prosa.classic.analysis.uni.basic.workload_bound_fp <> workload_bound vardef
+R5118:5140 prosa.classic.analysis.uni.basic.workload_bound_fp WorkloadBoundFP total_workload_bound_fp def
+R5174:5184 prosa.util.sum <> leq_sum_seq thm
+R5174:5184 prosa.util.sum <> leq_sum_seq thm
+R5222:5230 mathcomp.boot.ssrnat <> leq_mul2r thm
+R5239:5241 Corelib.ssr.ssrbool <> orP thm
+R5222:5230 mathcomp.boot.ssrnat <> leq_mul2r thm
+R5222:5230 mathcomp.boot.ssrnat <> leq_mul2r thm
+R5239:5241 Corelib.ssr.ssrbool <> orP thm
+R5265:5277 prosa.classic.util.div_mod <> leq_divceil2r thm
+R5265:5277 prosa.classic.util.div_mod <> leq_divceil2r thm
+R5311:5327 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.NonDecreasing.H_period_positive var
+R5311:5327 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.BasicLemmas.NonDecreasing.H_period_positive var
+R5356:5368 prosa.classic.analysis.uni.basic.workload_bound_fp WorkloadBoundFP.BasicLemmas.NonDecreasing <> sec
+R5378:5388 prosa.classic.analysis.uni.basic.workload_bound_fp WorkloadBoundFP.BasicLemmas <> sec
+sec 5541:5558 WorkloadBoundFP ProofWorkloadBound
+var  5575:5578 WorkloadBoundFP.ProofWorkloadBound Task
+R5581:5586 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 5603:5611 WorkloadBoundFP.ProofWorkloadBound task_cost
+R5618:5621 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5614:5617 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.Task var
+R5622:5625 prosa.classic.model.time Time time def
+var 5641:5651 WorkloadBoundFP.ProofWorkloadBound task_period
+R5658:5661 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5654:5657 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.Task var
+R5662:5665 prosa.classic.model.time Time time def
+var 5681:5693 WorkloadBoundFP.ProofWorkloadBound task_deadline
+R5700:5703 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5696:5699 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.Task var
+R5704:5707 prosa.classic.model.time Time time def
+var  5728:5730 WorkloadBoundFP.ProofWorkloadBound Job
+R5733:5738 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 5755:5765 WorkloadBoundFP.ProofWorkloadBound job_arrival
+R5771:5774 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5768:5770 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.Job var
+R5775:5778 prosa.classic.model.time Time time def
+var 5794:5801 WorkloadBoundFP.ProofWorkloadBound job_cost
+R5807:5810 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5804:5806 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.Job var
+R5811:5814 prosa.classic.model.time Time time def
+var 5830:5841 WorkloadBoundFP.ProofWorkloadBound job_deadline
+R5847:5850 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5844:5846 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.Job var
+R5851:5854 prosa.classic.model.time Time time def
+var 5870:5877 WorkloadBoundFP.ProofWorkloadBound job_task
+R5883:5886 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5880:5882 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.Job var
+R5887:5890 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.Task var
+var 5968:5969 WorkloadBoundFP.ProofWorkloadBound ts
+R5972:5974 mathcomp.boot.seq <> seq abbrev
+R5976:5979 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.Task var
+var 5997:6019 WorkloadBoundFP.ProofWorkloadBound H_valid_task_parameters
+R6028:6049 prosa.classic.model.arrival.basic.task SporadicTaskset valid_sporadic_taskset def
+R6087:6088 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.ts var
+R6073:6085 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.task_deadline var
+R6061:6071 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.task_period var
+R6051:6059 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.task_cost var
+var 6195:6201 WorkloadBoundFP.ProofWorkloadBound arr_seq
+R6204:6219 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R6221:6223 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.Job var
+var 6241:6270 WorkloadBoundFP.ProofWorkloadBound H_arrival_times_are_consistent
+R6273:6300 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_times_are_consistent def
+R6314:6320 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.arr_seq var
+R6302:6312 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.job_arrival var
+var 6338:6355 WorkloadBoundFP.ProofWorkloadBound H_arr_seq_is_a_set
+R6358:6382 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence_is_a_set def
+R6384:6390 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.arr_seq var
+var 6466:6488 WorkloadBoundFP.ProofWorkloadBound H_all_jobs_from_taskset
+binder 6504:6504 <> j:80
+R6527:6530 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6507:6516 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R6526:6526 prosa.classic.analysis.uni.basic.workload_bound_fp <> j:80 var
+R6518:6524 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.arr_seq var
+R6541:6545 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R6531:6538 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.job_task var
+R6540:6540 prosa.classic.analysis.uni.basic.workload_bound_fp <> j:80 var
+R6546:6547 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.ts var
+var 6606:6627 WorkloadBoundFP.ProofWorkloadBound H_valid_job_parameters
+binder 6643:6643 <> j:83
+R6674:6685 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6654:6663 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R6673:6673 prosa.classic.analysis.uni.basic.workload_bound_fp <> j:83 var
+R6665:6671 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.arr_seq var
+R6686:6703 prosa.classic.model.arrival.basic.job Job valid_sporadic_job def
+R6760:6760 prosa.classic.analysis.uni.basic.workload_bound_fp <> j:83 var
+R6751:6758 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.job_task var
+R6738:6749 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.job_deadline var
+R6729:6736 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.job_cost var
+R6715:6727 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.task_deadline var
+R6705:6713 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.task_cost var
+var 6828:6846 WorkloadBoundFP.ProofWorkloadBound H_sporadic_arrivals
+R6855:6873 prosa.classic.model.arrival.basic.task_arrival TaskArrival sporadic_task_model def
+R6908:6914 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.arr_seq var
+R6899:6906 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.job_task var
+R6887:6897 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.job_arrival var
+R6875:6885 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.task_period var
+var 6968:6970 WorkloadBoundFP.ProofWorkloadBound tsk
+R6973:6976 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.Task var
+var 6994:7004 WorkloadBoundFP.ProofWorkloadBound H_tsk_in_ts
+R7010:7014 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R7007:7009 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.tsk var
+R7015:7016 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.ts var
+var 7077:7094 WorkloadBoundFP.ProofWorkloadBound higher_eq_priority
+R7097:7105 prosa.classic.model.priority Priority FP_policy def
+R7107:7110 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.Task var
+var 7186:7201 WorkloadBoundFP.ProofWorkloadBound arrivals_between
+R7206:7225 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R7227:7233 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.arr_seq var
+var 7244:7254 WorkloadBoundFP.ProofWorkloadBound hp_workload
+binder 7256:7257 <> t1:94
+binder 7259:7260 <> t2:95
+R7270:7311 prosa.classic.model.schedule.uni.workload Workload workload_of_higher_or_equal_priority_tasks def
+R7424:7426 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.tsk var
+R7405:7422 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.higher_eq_priority var
+R7332:7347 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.arrivals_between var
+R7349:7350 prosa.classic.analysis.uni.basic.workload_bound_fp <> t1:94 var
+R7352:7353 prosa.classic.analysis.uni.basic.workload_bound_fp <> t2:95 var
+R7322:7329 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.job_task var
+R7313:7320 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.job_cost var
+var 7437:7450 WorkloadBoundFP.ProofWorkloadBound workload_bound
+R7461:7483 prosa.classic.analysis.uni.basic.workload_bound_fp WorkloadBoundFP total_workload_bound_fp def
+R7529:7531 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.tsk var
+R7526:7527 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.ts var
+R7507:7524 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.higher_eq_priority var
+R7495:7505 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.task_period var
+R7485:7493 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.task_cost var
+var 7695:7695 WorkloadBoundFP.ProofWorkloadBound R
+R7698:7701 prosa.classic.model.time Time time def
+var 7719:7731 WorkloadBoundFP.ProofWorkloadBound H_fixed_point
+R7735:7737 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7734:7734 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.R var
+R7738:7751 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.workload_bound var
+R7753:7753 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.R var
+prf 7827:7849 WorkloadBoundFP fp_workload_bound_holds
+binder 7865:7865 <> t:100
+R7897:7900 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R7876:7886 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.hp_workload var
+R7888:7888 prosa.classic.analysis.uni.basic.workload_bound_fp <> t:100 var
+R7892:7894 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R7891:7891 prosa.classic.analysis.uni.basic.workload_bound_fp <> t:100 var
+R7895:7895 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.R var
+R7901:7901 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.R var
+R7935:7961 prosa.classic.model.arrival.basic.arrival_bounds ArrivalBounds sporadic_task_arrival_bound thm
+R7996:8002 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.arr_seq var
+R7987:7994 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.job_task var
+R7975:7985 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.job_arrival var
+R7963:7973 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.task_period var
+R8231:8241 prosa.classic.analysis.uni.basic.workload_bound_fp <> hp_workload vardef
+R8244:8285 prosa.classic.model.schedule.uni.workload Workload workload_of_higher_or_equal_priority_tasks def
+R8301:8318 prosa.classic.model.arrival.basic.job Job valid_sporadic_job def
+R8321:8338 prosa.classic.model.arrival.basic.job Job valid_realtime_job def
+R8354:8375 prosa.classic.model.arrival.basic.task SporadicTaskset valid_sporadic_taskset def
+R8378:8399 prosa.classic.model.arrival.basic.task SporadicTask is_valid_sporadic_task def
+R8444:8457 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.workload_bound var
+R8460:8482 prosa.classic.analysis.uni.basic.workload_bound_fp WorkloadBoundFP total_workload_bound_fp def
+R8444:8457 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.workload_bound var
+R8444:8457 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.workload_bound var
+R8460:8482 prosa.classic.analysis.uni.basic.workload_bound_fp WorkloadBoundFP total_workload_bound_fp def
+R8460:8482 prosa.classic.analysis.uni.basic.workload_bound_fp WorkloadBoundFP total_workload_bound_fp def
+R8500:8519 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R8533:8535 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8536:8536 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.R var
+R8521:8527 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.arr_seq var
+R8500:8519 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R8533:8535 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8536:8536 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.R var
+R8521:8527 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.arr_seq var
+R8500:8519 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R8533:8535 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8536:8536 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.R var
+R8521:8527 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.arr_seq var
+R8557:8574 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.higher_eq_priority var
+R8557:8574 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.higher_eq_priority var
+R8557:8574 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.higher_eq_priority var
+R8610:8615 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R8620:8623 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R8626:8628 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R8641:8677 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R8726:8726 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R8624:8625 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.ts var
+binder 8616:8619 <> tsk':101
+binder 8616:8619 <> tsk':102
+binder 8616:8619 <> tsk':103
+R8633:8636 prosa.classic.analysis.uni.basic.workload_bound_fp <> tsk':101 var
+R8638:8640 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.tsk var
+R8678:8683 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R8686:8689 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R8691:8693 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R8713:8714 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+binder 8684:8685 <> j0:104
+binder 8684:8685 <> j0:105
+binder 8684:8685 <> j0:106
+R8705:8708 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R8694:8701 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.job_task var
+R8703:8704 prosa.classic.analysis.uni.basic.workload_bound_fp <> j0:104 var
+R8709:8712 prosa.classic.analysis.uni.basic.workload_bound_fp <> tsk':101 var
+R8715:8722 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.job_cost var
+R8724:8725 prosa.classic.analysis.uni.basic.workload_bound_fp <> j0:104 var
+R8589:8597 mathcomp.boot.ssrnat <> leq_trans thm
+R8610:8615 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R8620:8623 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R8626:8628 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R8641:8677 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R8726:8726 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R8624:8625 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.ts var
+binder 8616:8619 <> tsk':107
+binder 8616:8619 <> tsk':108
+binder 8616:8619 <> tsk':109
+R8633:8636 prosa.classic.analysis.uni.basic.workload_bound_fp <> tsk':107 var
+R8638:8640 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.tsk var
+R8678:8683 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R8686:8689 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R8691:8693 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R8713:8714 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+binder 8684:8685 <> j0:110
+binder 8684:8685 <> j0:111
+binder 8684:8685 <> j0:112
+R8705:8708 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R8694:8701 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.job_task var
+R8703:8704 prosa.classic.analysis.uni.basic.workload_bound_fp <> j0:110 var
+R8709:8712 prosa.classic.analysis.uni.basic.workload_bound_fp <> tsk':107 var
+R8715:8722 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.job_cost var
+R8724:8725 prosa.classic.analysis.uni.basic.workload_bound_fp <> j0:110 var
+R8589:8597 mathcomp.boot.ssrnat <> leq_trans thm
+R8763:8778 mathcomp.boot.bigop <> exchange_big_dep thm
+binder 8785:8785 <> x:113
+R8795:8802 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.job_task var
+R8804:8804 prosa.classic.analysis.uni.basic.workload_bound_fp <> x:113 var
+R8807:8809 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.tsk var
+R8871:8873 mathcomp.boot.eqtype <> eqP def
+R8912:8927 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R8933:8944 mathcomp.boot.bigop <> big_seq_cond thm
+R8953:8956 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R8959:8970 mathcomp.boot.bigop <> big_seq_cond thm
+R8912:8927 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R8912:8927 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R8933:8944 mathcomp.boot.bigop <> big_seq_cond thm
+R8933:8944 mathcomp.boot.bigop <> big_seq_cond thm
+R8959:8970 mathcomp.boot.bigop <> big_seq_cond thm
+R8953:8956 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R8953:8956 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R8957:8957 prosa.classic.analysis.uni.basic.workload_bound_fp <> X:114 var
+R8959:8970 mathcomp.boot.bigop <> big_seq_cond thm
+R8987:8993 mathcomp.boot.bigop <> leq_sum thm
+R8987:8993 mathcomp.boot.bigop <> leq_sum thm
+R9008:9011 Corelib.ssr.ssrbool <> andP thm
+R9040:9049 mathcomp.boot.bigop <> big_mkcond thm
+R9052:9058 mathcomp.boot.bigop <> big_rem thm
+R9061:9068 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.job_task var
+R9110:9114 Corelib.ssr.ssrbool <> andTb thm
+R9116:9122 mathcomp.boot.eqtype <> eq_refl thm
+R9131:9138 mathcomp.boot.ssrnat <> leq_addr thm
+R9040:9049 mathcomp.boot.bigop <> big_mkcond thm
+R9040:9049 mathcomp.boot.bigop <> big_mkcond thm
+R9052:9058 mathcomp.boot.bigop <> big_rem thm
+R9061:9068 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.job_task var
+R9052:9058 mathcomp.boot.bigop <> big_rem thm
+R9061:9068 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.job_task var
+R9110:9114 Corelib.ssr.ssrbool <> andTb thm
+R9110:9114 Corelib.ssr.ssrbool <> andTb thm
+R9116:9122 mathcomp.boot.eqtype <> eq_refl thm
+R9116:9122 mathcomp.boot.eqtype <> eq_refl thm
+R9131:9138 mathcomp.boot.ssrnat <> leq_addr thm
+R9158:9184 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R9158:9184 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R9228:9238 prosa.util.sum <> leq_sum_seq thm
+R9228:9238 prosa.util.sum <> leq_sum_seq thm
+R9404:9406 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R9298:9317 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R9399:9401 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R9402:9402 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.R var
+R9328:9334 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.arr_seq var
+R9319:9326 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.job_task var
+R9407:9415 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.task_cost var
+R9277:9285 mathcomp.boot.ssrnat <> leq_trans thm
+R9404:9406 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R9298:9317 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R9399:9401 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R9402:9402 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.R var
+R9328:9334 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.arr_seq var
+R9319:9326 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.job_task var
+R9407:9415 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.task_cost var
+R9277:9285 mathcomp.boot.ssrnat <> leq_trans thm
+R9449:9468 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R9471:9479 mathcomp.boot.bigop <> sum1_size thm
+R9481:9490 mathcomp.boot.bigop <> big_distrl thm
+R9495:9504 mathcomp.boot.bigop <> big_filter thm
+R9449:9468 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R9449:9468 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R9471:9479 mathcomp.boot.bigop <> sum1_size thm
+R9471:9479 mathcomp.boot.bigop <> sum1_size thm
+R9481:9490 mathcomp.boot.bigop <> big_distrl thm
+R9481:9490 mathcomp.boot.bigop <> big_distrl thm
+R9495:9504 mathcomp.boot.bigop <> big_filter thm
+R9495:9504 mathcomp.boot.bigop <> big_filter thm
+R9521:9531 prosa.util.sum <> leq_sum_seq thm
+R9521:9531 prosa.util.sum <> leq_sum_seq thm
+R9550:9552 mathcomp.boot.eqtype <> eqP def
+R9578:9582 mathcomp.boot.ssrnat <> mul1n thm
+R9578:9582 mathcomp.boot.ssrnat <> mul1n thm
+R9578:9582 mathcomp.boot.ssrnat <> mul1n thm
+R9630:9656 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R9630:9656 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R9733:9754 prosa.classic.analysis.uni.basic.workload_bound_fp WorkloadBoundFP task_workload_bound_FP def
+R9756:9764 mathcomp.boot.ssrnat <> leq_mul2r thm
+R9773:9775 Corelib.ssr.ssrbool <> orP thm
+R9733:9754 prosa.classic.analysis.uni.basic.workload_bound_fp WorkloadBoundFP task_workload_bound_FP def
+R9733:9754 prosa.classic.analysis.uni.basic.workload_bound_fp WorkloadBoundFP task_workload_bound_FP def
+R9756:9764 mathcomp.boot.ssrnat <> leq_mul2r thm
+R9756:9764 mathcomp.boot.ssrnat <> leq_mul2r thm
+R9773:9775 Corelib.ssr.ssrbool <> orP thm
+R9807:9809 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R9810:9810 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.R var
+R9807:9809 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R9810:9810 prosa.classic.analysis.uni.basic.workload_bound_fp <> WorkloadBoundFP.ProofWorkloadBound.R var
+R9879:9883 mathcomp.boot.ssrnat <> addKn thm
+R9879:9883 mathcomp.boot.ssrnat <> addKn thm
+R9879:9883 mathcomp.boot.ssrnat <> addKn thm
+R9911:9928 prosa.classic.analysis.uni.basic.workload_bound_fp WorkloadBoundFP.ProofWorkloadBound <> sec
+R9938:9952 prosa.classic.analysis.uni.basic.workload_bound_fp WorkloadBoundFP <> mod

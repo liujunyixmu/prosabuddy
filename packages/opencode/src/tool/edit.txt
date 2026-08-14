@@ -1,0 +1,15 @@
+Performs exact string replacements in files within the workspace.
+
+IMPORTANT: All edits are restricted to files within the current workspace. Do NOT edit files outside the workspace directory.
+
+Usage:
+- You must use your `Read` tool at least once in the conversation before editing. This tool will error if you attempt an edit without reading the file. 
+- Edits to `.v` files reject ssreflect repeat-rewrite syntax `rewrite !...` and `rewrite -!...`; use explicit rewrites or a named normalization bridge instead.
+- Edits to `.v` files reject the `intuition` tactic; use explicit tactics (`left`/`right`/`split`/`apply`/`exact`) instead.
+- When editing text from Read tool output, ensure you preserve the exact indentation (tabs/spaces) as it appears AFTER the line number prefix. The line number prefix format is: line number + colon + space (e.g., `1: `). Everything after that space is the actual file content to match. Never include any part of the line number prefix in the oldString or newString.
+- ALWAYS prefer editing existing files in the codebase. NEVER write new files unless explicitly required.
+- Only use emojis if the user explicitly requests it. Avoid adding emojis to files unless asked.
+- The edit will FAIL if `oldString` is not found in the file with an error "oldString not found in content".
+- The edit will FAIL if `oldString` is found multiple times in the file with an error "Found multiple matches for oldString. Provide more surrounding lines in oldString to identify the correct match." Either provide a larger string with more surrounding context to make it unique or use `replaceAll` to change every instance of `oldString`. 
+- After three consecutive stale/mismatched edit conflicts on the same source, further `edit`/`apply_patch` calls are blocked until you read the current file again. The conflict response includes the current source hash and an exact current proof excerpt; use that returned text rather than retrying the stale `oldString`.
+- Use `replaceAll` for replacing and renaming strings across the file. This parameter is useful if you want to rename a variable for instance.

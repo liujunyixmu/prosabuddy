@@ -1,0 +1,152 @@
+DIGEST 0d2e521ebc6787efa890ba57d4d337dd
+Fprosa.classic.model.schedule.partitioned.schedule
+R15:36 prosa.classic.util.all <> <> lib
+R54:77 prosa.classic.model.time <> <> lib
+R79:116 prosa.classic.model.arrival.basic.task <> <> lib
+R118:154 prosa.classic.model.arrival.basic.job <> <> lib
+R172:221 prosa.classic.model.schedule.global.schedulability <> <> lib
+R239:288 prosa.classic.model.schedule.global.basic.schedule <> <> lib
+R299:339 prosa.classic.model.schedule.uni.schedule <> <> lib
+R341:387 prosa.classic.model.schedule.uni.schedulability <> <> lib
+R419:427 mathcomp.boot.ssreflect <> <> lib
+R429:435 mathcomp.boot.ssrbool <> <> lib
+R437:442 mathcomp.boot.eqtype <> <> lib
+R444:449 mathcomp.boot.ssrnat <> <> lib
+R451:453 mathcomp.boot.seq <> <> lib
+R455:461 mathcomp.boot.fintype <> <> lib
+R463:467 mathcomp.boot.bigop <> <> lib
+mod 478:488 <> Partitioned
+R508:569 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule <> mod
+mod 501:503 <> Partitioned.uni
+R594:655 prosa.classic.model.schedule.uni.schedulability Schedulability <> mod
+mod 581:589 <> Partitioned.uni_sched
+R667:681 prosa.classic.model.arrival.basic.task SporadicTaskset <> mod
+R683:690 prosa.classic.model.schedule.global.basic.schedule Schedule <> mod
+R692:705 prosa.classic.model.schedule.global.schedulability Schedulability <> mod
+R717:720 prosa.classic.model.time Time <> mod
+sec 736:750 Partitioned PartitionedDefs
+var  767:770 Partitioned.PartitionedDefs Task
+R773:778 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  795:797 Partitioned.PartitionedDefs Job
+R800:805 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 822:829 Partitioned.PartitionedDefs job_task
+R835:838 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R832:834 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.PartitionedDefs.Job var
+R839:842 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.PartitionedDefs.Task var
+var 904:910 Partitioned.PartitionedDefs arr_seq
+R913:928 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R930:932 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.PartitionedDefs.Job var
+var  1012:1019 Partitioned.PartitionedDefs num_cpus
+R1022:1024 Corelib.Init.Datatypes <> nat ind
+var 1041:1045 Partitioned.PartitionedDefs sched
+R1048:1055 prosa.classic.model.schedule.global.basic.schedule Schedule schedule def
+R1061:1068 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.PartitionedDefs.num_cpus var
+R1057:1059 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.PartitionedDefs.Job var
+sec 1228:1241 Partitioned.PartitionedDefs NoJobMigration
+var 1422:1422 Partitioned.PartitionedDefs.NoJobMigration j
+R1425:1427 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.PartitionedDefs.Job var
+def 1508:1521 Partitioned never_migrates
+binder 1585:1585 <> t:12
+binder 1647:1649 <> cpu:13
+R1760:1818 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1734:1745 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled_on def
+R1755:1757 prosa.classic.model.schedule.partitioned.schedule <> cpu:13 var
+R1759:1759 prosa.classic.model.schedule.partitioned.schedule <> t:12 var
+R1753:1753 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.PartitionedDefs.NoJobMigration.j var
+R1747:1751 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.PartitionedDefs.sched var
+binder 1826:1827 <> t':14
+binder 1959:1962 <> cpu':15
+R2007:2010 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1979:1990 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled_on def
+R2000:2003 prosa.classic.model.schedule.partitioned.schedule <> cpu':15 var
+R2005:2006 prosa.classic.model.schedule.partitioned.schedule <> t':14 var
+R1998:1998 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.PartitionedDefs.NoJobMigration.j var
+R1992:1996 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.PartitionedDefs.sched var
+R2015:2017 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2011:2014 prosa.classic.model.schedule.partitioned.schedule <> cpu':15 var
+R2018:2020 prosa.classic.model.schedule.partitioned.schedule <> cpu:13 var
+var 2170:2181 Partitioned.PartitionedDefs.NoJobMigration assigned_cpu
+R2185:2193 prosa.classic.model.schedule.global.basic.schedule Schedule processor def
+R2195:2202 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.PartitionedDefs.num_cpus var
+def 2222:2243 Partitioned job_local_to_processor
+binder 2263:2263 <> t:18
+binder 2273:2275 <> cpu:19
+R2314:2317 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2288:2299 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled_on def
+R2309:2311 prosa.classic.model.schedule.partitioned.schedule <> cpu:19 var
+R2313:2313 prosa.classic.model.schedule.partitioned.schedule <> t:18 var
+R2307:2307 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.PartitionedDefs.NoJobMigration.j var
+R2301:2305 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.PartitionedDefs.sched var
+R2321:2323 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2318:2320 prosa.classic.model.schedule.partitioned.schedule <> cpu:19 var
+R2324:2335 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.PartitionedDefs.NoJobMigration.assigned_cpu var
+R2347:2360 prosa.classic.model.schedule.partitioned.schedule Partitioned.PartitionedDefs.NoJobMigration <> sec
+sec 2487:2501 Partitioned.PartitionedDefs NoTaskMigration
+var 2562:2564 Partitioned.PartitionedDefs.NoTaskMigration tsk
+R2567:2570 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.PartitionedDefs.Task var
+var 2662:2673 Partitioned.PartitionedDefs.NoTaskMigration assigned_cpu
+R2677:2685 prosa.classic.model.schedule.global.basic.schedule Schedule processor def
+R2687:2694 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.PartitionedDefs.num_cpus var
+def 2789:2811 Partitioned task_local_to_processor
+binder 2831:2831 <> j:24
+R2860:2873 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2854:2856 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2844:2851 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.PartitionedDefs.job_task var
+R2853:2853 prosa.classic.model.schedule.partitioned.schedule <> j:24 var
+R2857:2859 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.PartitionedDefs.NoTaskMigration.tsk var
+R2874:2895 prosa.classic.model.schedule.partitioned.schedule Partitioned job_local_to_processor def
+R2899:2910 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.PartitionedDefs.NoTaskMigration.assigned_cpu var
+R2897:2897 prosa.classic.model.schedule.partitioned.schedule <> j:24 var
+R2922:2936 prosa.classic.model.schedule.partitioned.schedule Partitioned.PartitionedDefs.NoTaskMigration <> sec
+sec 3056:3074 Partitioned.PartitionedDefs PartitionedSchedule
+var 3145:3146 Partitioned.PartitionedDefs.PartitionedSchedule ts
+R3149:3152 Corelib.Init.Datatypes <> list ind
+R3154:3157 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.PartitionedDefs.Task var
+var 3255:3266 Partitioned.PartitionedDefs.PartitionedSchedule assigned_cpu
+R3273:3276 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3269:3272 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.PartitionedDefs.Task var
+R3277:3285 prosa.classic.model.schedule.global.basic.schedule Schedule processor def
+R3287:3294 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.PartitionedDefs.num_cpus var
+def 3433:3452 Partitioned partitioned_schedule
+binder 3472:3474 <> tsk:29
+R3497:3510 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3490:3494 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R3487:3489 prosa.classic.model.schedule.partitioned.schedule <> tsk:29 var
+R3495:3496 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.PartitionedDefs.PartitionedSchedule.ts var
+R3511:3533 prosa.classic.model.schedule.partitioned.schedule Partitioned task_local_to_processor def
+R3540:3551 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.PartitionedDefs.PartitionedSchedule.assigned_cpu var
+R3553:3555 prosa.classic.model.schedule.partitioned.schedule <> tsk:29 var
+R3535:3537 prosa.classic.model.schedule.partitioned.schedule <> tsk:29 var
+R3574:3592 prosa.classic.model.schedule.partitioned.schedule Partitioned.PartitionedDefs.PartitionedSchedule <> sec
+R3602:3616 prosa.classic.model.schedule.partitioned.schedule Partitioned.PartitionedDefs <> sec
+sec 3630:3645 Partitioned SimpleProperties
+var  3662:3664 Partitioned.SimpleProperties Job
+R3667:3672 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  3690:3697 Partitioned.SimpleProperties num_cpus
+R3700:3702 Corelib.Init.Datatypes <> nat ind
+var 3719:3723 Partitioned.SimpleProperties sched
+R3726:3733 prosa.classic.model.schedule.global.basic.schedule Schedule schedule def
+R3739:3746 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.SimpleProperties.num_cpus var
+R3735:3737 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.SimpleProperties.Job var
+sec 3762:3781 Partitioned.SimpleProperties NoJobMigrationLemmas
+var 3800:3800 Partitioned.SimpleProperties.NoJobMigrationLemmas j
+R3803:3805 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.SimpleProperties.Job var
+prf 3821:3843 Partitioned local_jobs_dont_migrate
+binder 3861:3863 <> cpu:36
+R3910:3913 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3876:3897 prosa.classic.model.schedule.partitioned.schedule Partitioned job_local_to_processor def
+R3907:3909 prosa.classic.model.schedule.partitioned.schedule <> cpu:36 var
+R3905:3905 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.SimpleProperties.NoJobMigrationLemmas.j var
+R3899:3903 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.SimpleProperties.sched var
+R3914:3927 prosa.classic.model.schedule.partitioned.schedule Partitioned never_migrates def
+R3935:3935 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.SimpleProperties.NoJobMigrationLemmas.j var
+R3929:3933 prosa.classic.model.schedule.partitioned.schedule <> Partitioned.SimpleProperties.sched var
+R3968:3989 prosa.classic.model.schedule.partitioned.schedule Partitioned job_local_to_processor def
+R3992:4005 prosa.classic.model.schedule.partitioned.schedule Partitioned never_migrates def
+R3968:3989 prosa.classic.model.schedule.partitioned.schedule Partitioned job_local_to_processor def
+R3968:3989 prosa.classic.model.schedule.partitioned.schedule Partitioned job_local_to_processor def
+R3992:4005 prosa.classic.model.schedule.partitioned.schedule Partitioned never_migrates def
+R3992:4005 prosa.classic.model.schedule.partitioned.schedule Partitioned never_migrates def
+R4235:4254 prosa.classic.model.schedule.partitioned.schedule Partitioned.SimpleProperties.NoJobMigrationLemmas <> sec
+R4264:4279 prosa.classic.model.schedule.partitioned.schedule Partitioned.SimpleProperties <> sec
+R4287:4297 prosa.classic.model.schedule.partitioned.schedule Partitioned <> mod

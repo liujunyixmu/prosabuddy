@@ -1,0 +1,376 @@
+DIGEST c4341c8d6502b3571cf8b8286a183e0a
+Fprosa.classic.model.schedule.uni.limited.abstract_RTA.definitions
+R15:36 prosa.classic.util.all <> <> lib
+R54:90 prosa.classic.model.arrival.basic.job <> <> lib
+R108:148 prosa.classic.model.schedule.uni.schedule <> <> lib
+R182:190 mathcomp.boot.ssreflect <> <> lib
+R192:198 mathcomp.boot.ssrbool <> <> lib
+R200:205 mathcomp.boot.eqtype <> <> lib
+R207:212 mathcomp.boot.ssrnat <> <> lib
+R214:216 mathcomp.boot.seq <> <> lib
+R218:221 mathcomp.boot.path <> <> lib
+R223:229 mathcomp.boot.fintype <> <> lib
+R231:235 mathcomp.boot.bigop <> <> lib
+mod 499:520 <> AbstractRTADefinitions
+R534:536 prosa.classic.model.arrival.basic.job Job <> mod
+R538:557 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule <> mod
+sec 660:670 AbstractRTADefinitions Definitions
+var  688:691 AbstractRTADefinitions.Definitions Task
+R694:699 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  722:724 AbstractRTADefinitions.Definitions Job
+R727:732 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 749:759 AbstractRTADefinitions.Definitions job_arrival
+R765:768 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R762:764 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.Job var
+R769:772 prosa.classic.model.time Time time def
+var 788:795 AbstractRTADefinitions.Definitions job_cost
+R801:804 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R798:800 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.Job var
+R805:808 prosa.classic.model.time Time time def
+var 824:831 AbstractRTADefinitions.Definitions job_task
+R837:840 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R834:836 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.Job var
+R841:844 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.Task var
+var 909:915 AbstractRTADefinitions.Definitions arr_seq
+R918:933 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R935:937 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.Job var
+var 1028:1032 AbstractRTADefinitions.Definitions sched
+R1035:1042 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R1044:1046 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.Job var
+var 1116:1118 AbstractRTADefinitions.Definitions tsk
+R1121:1124 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.Task var
+var 1197:1212 AbstractRTADefinitions.Definitions job_scheduled_at
+R1217:1228 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R1230:1234 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.sched var
+var 1245:1260 AbstractRTADefinitions.Definitions job_completed_by
+R1265:1276 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R1287:1291 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.sched var
+R1278:1285 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.job_cost var
+var 1453:1478 AbstractRTADefinitions.Definitions job_pending_earlier_and_at
+R1483:1504 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending_earlier_and_at def
+R1527:1531 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.sched var
+R1518:1525 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.job_cost var
+R1506:1516 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.job_arrival var
+var 2842:2853 AbstractRTADefinitions.Definitions interference
+R2859:2862 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2856:2858 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.Job var
+R2867:2870 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2863:2866 prosa.classic.model.time Time time def
+R2871:2874 Corelib.Init.Datatypes <> bool ind
+var 3767:3786 AbstractRTADefinitions.Definitions interfering_workload
+R3792:3795 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3789:3791 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.Job var
+R3800:3803 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3796:3799 prosa.classic.model.time Time time def
+R3804:3807 prosa.classic.model.time Time time def
+def 3975:3992 AbstractRTADefinitions cumul_interference
+binder 3994:3994 <> j:19
+binder 3996:3997 <> t1:20
+binder 3999:4000 <> t2:21
+R4005:4010 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R4013:4016 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R4018:4020 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R4023:4024 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R4011:4012 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t1:20 var
+R4021:4022 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t2:21 var
+binder 4017:4017 <> t:22
+binder 4017:4017 <> t:23
+binder 4017:4017 <> t:24
+R4025:4036 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.interference var
+R4038:4038 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:19 var
+R4040:4040 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t:22 var
+def 4058:4083 AbstractRTADefinitions cumul_interfering_workload
+binder 4085:4085 <> j:25
+binder 4087:4088 <> t1:26
+binder 4090:4091 <> t2:27
+R4096:4101 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R4104:4107 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R4109:4111 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R4114:4115 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R4102:4103 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t1:26 var
+R4112:4113 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t2:27 var
+binder 4108:4108 <> t:28
+binder 4108:4108 <> t:29
+binder 4108:4108 <> t:30
+R4116:4135 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.interfering_workload var
+R4137:4137 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:25 var
+R4139:4139 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t:28 var
+sec 4491:4502 AbstractRTADefinitions.Definitions BusyInterval
+def 5225:5234 AbstractRTADefinitions quiet_time
+R5240:5242 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.Job var
+binder 5237:5237 <> j:31
+R5249:5252 prosa.classic.model.time Time time def
+binder 5246:5246 <> t:32
+R5325:5336 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R5290:5292 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5266:5283 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions AbstractRTADefinitions cumul_interference def
+R5285:5285 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:31 var
+R5289:5289 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t:32 var
+R5293:5318 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions AbstractRTADefinitions cumul_interfering_workload def
+R5320:5320 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:31 var
+R5324:5324 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t:32 var
+R5337:5339 Corelib.ssr.ssrbool <> ::bool_scope:'~~'_x not
+R5340:5365 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.job_pending_earlier_and_at var
+R5367:5367 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:31 var
+R5369:5369 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t:32 var
+def 5677:5696 AbstractRTADefinitions busy_interval_prefix
+R5702:5704 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.Job var
+binder 5699:5699 <> j:33
+R5715:5718 prosa.classic.model.time Time time def
+binder 5708:5709 <> t1:34
+binder 5711:5712 <> t2:35
+R5756:5767 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R5734:5737 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R5751:5753 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R5732:5733 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t1:34 var
+R5738:5748 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.job_arrival var
+R5750:5750 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:33 var
+R5738:5748 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.job_arrival var
+R5750:5750 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:33 var
+R5754:5755 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t2:35 var
+R5783:5795 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R5837:5837 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R5768:5777 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions AbstractRTADefinitions quiet_time def
+R5779:5779 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:33 var
+R5781:5782 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t1:34 var
+binder 5803:5803 <> t:36
+R5817:5820 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5808:5810 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x_'<'_x not
+R5812:5814 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x_'<'_x not
+R5806:5807 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t1:34 var
+R5811:5811 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t:36 var
+R5811:5811 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t:36 var
+R5815:5816 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t2:35 var
+R5821:5822 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R5823:5832 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions AbstractRTADefinitions quiet_time def
+R5834:5834 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:33 var
+R5836:5836 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t:36 var
+def 6001:6013 AbstractRTADefinitions busy_interval
+R6019:6021 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.Job var
+binder 6016:6016 <> j:37
+R6032:6035 prosa.classic.model.time Time time def
+binder 6025:6026 <> t1:38
+binder 6028:6029 <> t2:39
+R6077:6088 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R6049:6068 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions AbstractRTADefinitions busy_interval_prefix def
+R6070:6070 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:37 var
+R6072:6073 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t1:38 var
+R6075:6076 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t2:39 var
+R6089:6098 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions AbstractRTADefinitions quiet_time def
+R6100:6100 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:37 var
+R6102:6103 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t2:39 var
+prf 6185:6207 AbstractRTADefinitions busy_interval_is_unique
+binder 6225:6225 <> j:40
+binder 6227:6228 <> t1:41
+binder 6230:6231 <> t2:42
+binder 6233:6235 <> t1':43
+binder 6237:6239 <> t2':44
+R6273:6286 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6252:6264 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions AbstractRTADefinitions busy_interval def
+R6266:6266 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:40 var
+R6268:6269 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t1:41 var
+R6271:6272 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t2:42 var
+R6310:6323 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6287:6299 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions AbstractRTADefinitions busy_interval def
+R6301:6301 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:40 var
+R6303:6305 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t1':43 var
+R6307:6309 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t2':44 var
+R6332:6335 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R6326:6328 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6324:6325 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t1:41 var
+R6329:6331 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t1':43 var
+R6338:6340 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6336:6337 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t2:42 var
+R6341:6343 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t2':44 var
+R6415:6417 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6439:6441 mathcomp.boot.eqtype <> eqP def
+R6439:6441 mathcomp.boot.eqtype <> eqP def
+R6460:6464 Corelib.ssr.ssrbool <> negPn thm
+R6466:6469 Corelib.ssr.ssrbool <> negP thm
+R6460:6464 Corelib.ssr.ssrbool <> negPn thm
+R6466:6469 Corelib.ssr.ssrbool <> negP thm
+R6607:6613 mathcomp.boot.ssrnat <> neq_ltn thm
+R6607:6613 mathcomp.boot.ssrnat <> neq_ltn thm
+R6607:6613 mathcomp.boot.ssrnat <> neq_ltn thm
+R6625:6627 Corelib.ssr.ssrbool <> orP thm
+R6707:6710 Corelib.ssr.ssrbool <> andP thm
+R6707:6710 Corelib.ssr.ssrbool <> andP thm
+R6764:6767 Corelib.ssr.ssrbool <> andP thm
+R6777:6780 Corelib.ssr.ssrbool <> andP thm
+R6833:6843 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.job_arrival var
+R6813:6825 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R6833:6843 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.job_arrival var
+R6813:6825 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R6931:6934 Corelib.ssr.ssrbool <> andP thm
+R6931:6934 Corelib.ssr.ssrbool <> andP thm
+R6988:6991 Corelib.ssr.ssrbool <> andP thm
+R7001:7004 Corelib.ssr.ssrbool <> andP thm
+R7057:7067 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.job_arrival var
+R7037:7049 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R7057:7067 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.job_arrival var
+R7037:7049 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R7133:7135 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7157:7159 mathcomp.boot.eqtype <> eqP def
+R7157:7159 mathcomp.boot.eqtype <> eqP def
+R7178:7182 Corelib.ssr.ssrbool <> negPn thm
+R7184:7187 Corelib.ssr.ssrbool <> negP thm
+R7178:7182 Corelib.ssr.ssrbool <> negPn thm
+R7184:7187 Corelib.ssr.ssrbool <> negP thm
+R7325:7331 mathcomp.boot.ssrnat <> neq_ltn thm
+R7325:7331 mathcomp.boot.ssrnat <> neq_ltn thm
+R7325:7331 mathcomp.boot.ssrnat <> neq_ltn thm
+R7343:7345 Corelib.ssr.ssrbool <> orP thm
+R7426:7429 Corelib.ssr.ssrbool <> andP thm
+R7426:7429 Corelib.ssr.ssrbool <> andP thm
+R7482:7485 Corelib.ssr.ssrbool <> andP thm
+R7495:7498 Corelib.ssr.ssrbool <> andP thm
+R7551:7561 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.job_arrival var
+R7531:7543 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R7551:7561 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.job_arrival var
+R7531:7543 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R7648:7651 Corelib.ssr.ssrbool <> andP thm
+R7648:7651 Corelib.ssr.ssrbool <> andP thm
+R7704:7707 Corelib.ssr.ssrbool <> andP thm
+R7717:7720 Corelib.ssr.ssrbool <> andP thm
+R7773:7783 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.job_arrival var
+R7753:7765 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R7773:7783 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.job_arrival var
+R7753:7765 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R7875:7886 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions AbstractRTADefinitions.Definitions.BusyInterval <> sec
+sec 8029:8050 AbstractRTADefinitions.Definitions BusyIntervalProperties
+def 8321:8335 AbstractRTADefinitions work_conserving
+binder 8355:8355 <> j:45
+binder 8357:8358 <> t1:46
+binder 8360:8361 <> t2:47
+binder 8363:8363 <> t:48
+R8396:8409 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8376:8385 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R8395:8395 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:45 var
+R8387:8393 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.arr_seq var
+R8426:8439 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8420:8422 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8410:8417 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.job_task var
+R8419:8419 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:45 var
+R8423:8425 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.tsk var
+R8454:8467 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8450:8452 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R8440:8447 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.job_cost var
+R8449:8449 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:45 var
+R8489:8502 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8468:8480 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions AbstractRTADefinitions busy_interval def
+R8482:8482 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:45 var
+R8484:8485 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t1:46 var
+R8487:8488 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t2:47 var
+R8515:8528 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8505:8508 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R8510:8512 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R8503:8504 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t1:46 var
+R8509:8509 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t:48 var
+R8509:8509 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t:48 var
+R8513:8514 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t2:47 var
+R8547:8551 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R8529:8530 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R8531:8542 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.interference var
+R8544:8544 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:45 var
+R8546:8546 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t:48 var
+R8552:8567 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.job_scheduled_at var
+R8569:8569 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:45 var
+R8571:8571 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t:48 var
+def 9020:9048 AbstractRTADefinitions busy_intervals_are_bounded_by
+binder 9050:9050 <> L:49
+binder 9070:9070 <> j:50
+R9103:9116 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9083:9092 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R9102:9102 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:50 var
+R9094:9100 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.arr_seq var
+R9133:9146 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9127:9129 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9117:9124 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.job_task var
+R9126:9126 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:50 var
+R9130:9132 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.tsk var
+R9161:9175 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9157:9159 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R9147:9154 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.job_cost var
+R9156:9156 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:50 var
+R9176:9182 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R9188:9201 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 9183:9184 <> t1:51
+binder 9186:9187 <> t2:52
+R9226:9241 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R9204:9207 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R9221:9223 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R9202:9203 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t1:51 var
+R9208:9218 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.job_arrival var
+R9220:9220 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:50 var
+R9208:9218 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.job_arrival var
+R9220:9220 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:50 var
+R9224:9225 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t2:52 var
+R9254:9269 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R9244:9247 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R9242:9243 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t2:52 var
+R9250:9252 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R9248:9249 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t1:51 var
+R9253:9253 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> L:49 var
+R9270:9282 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions AbstractRTADefinitions busy_interval def
+R9284:9284 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:50 var
+R9286:9287 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t1:51 var
+R9289:9290 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t2:52 var
+def 10873:10902 AbstractRTADefinitions job_interference_is_bounded_by
+R10938:10941 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R10934:10937 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.Task var
+R10946:10949 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R10942:10945 prosa.classic.model.time Time time def
+R10954:10957 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R10950:10953 prosa.classic.model.time Time time def
+R10958:10961 prosa.classic.model.time Time time def
+binder 10905:10931 <> interference_bound_function:53
+binder 10983:10984 <> t1:54
+binder 10986:10987 <> t2:55
+binder 10989:10993 <> delta:56
+binder 10995:10995 <> j:57
+R11029:11125 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R11008:11020 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions AbstractRTADefinitions busy_interval def
+R11022:11022 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:57 var
+R11024:11025 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t1:54 var
+R11027:11028 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t2:55 var
+R11141:11243 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R11136:11138 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R11128:11130 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R11126:11127 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t1:54 var
+R11131:11135 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> delta:56 var
+R11139:11140 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t2:55 var
+R11264:11337 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R11244:11253 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R11263:11263 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:57 var
+R11255:11261 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.arr_seq var
+R11354:11430 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R11348:11350 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11338:11345 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.job_task var
+R11347:11347 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:57 var
+R11351:11353 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.tsk var
+R11465:11546 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R11431:11433 Corelib.ssr.ssrbool <> ::bool_scope:'~~'_x not
+R11434:11449 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.job_completed_by var
+R11451:11451 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:57 var
+R11456:11458 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R11454:11455 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t1:54 var
+R11459:11463 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> delta:56 var
+R11574:11576 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R11561:11571 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.job_arrival var
+R11573:11573 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:57 var
+R11577:11578 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t1:54 var
+binder 11551:11556 <> offset:58
+R11630:11633 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R11594:11611 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions AbstractRTADefinitions cumul_interference def
+R11613:11613 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> j:57 var
+R11615:11616 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t1:54 var
+R11621:11623 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R11619:11620 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> t1:54 var
+R11624:11628 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> delta:56 var
+R11634:11660 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> interference_bound_function:53 var
+R11673:11677 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> delta:56 var
+R11666:11671 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> offset:58 var
+R11662:11664 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> AbstractRTADefinitions.Definitions.tsk var
+R11700:11721 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions AbstractRTADefinitions.Definitions.BusyIntervalProperties <> sec
+R11735:11745 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions AbstractRTADefinitions.Definitions <> sec
+R11757:11778 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions AbstractRTADefinitions <> mod

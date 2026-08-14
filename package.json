@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "opencode",
+  "description": "AI-powered development tool",
+  "private": true,
+  "type": "module",
+  "packageManager": "bun@1.3.10",
+  "scripts": {
+    "dev": "bun run --cwd packages/opencode --conditions=browser src/index.ts",
+    "typecheck": "bun turbo typecheck",
+    "test": "echo 'do not run tests from root' && exit 1"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "packages/sdk/js"
+    ],
+    "catalog": {
+      "@types/bun": "1.3.9",
+      "@types/node": "22.13.9",
+      "@octokit/rest": "22.0.0",
+      "@hono/zod-validator": "0.4.2",
+      "@tsconfig/node22": "22.0.2",
+      "@tsconfig/bun": "1.0.9",
+      "@openauthjs/openauth": "0.0.0-20250322224806",
+      "@pierre/diffs": "1.1.0-beta.18",
+      "@typescript/native-preview": "7.0.0-dev.20251207.1",
+      "ai": "5.0.124",
+      "diff": "8.0.2",
+      "drizzle-kit": "1.0.0-beta.16-ea816b6",
+      "drizzle-orm": "1.0.0-beta.16-ea816b6",
+      "fuzzysort": "3.1.0",
+      "hono": "4.10.7",
+      "hono-openapi": "1.1.2",
+      "remeda": "2.26.0",
+      "solid-js": "1.9.10",
+      "typescript": "5.8.2",
+      "ulid": "3.0.1",
+      "zod": "4.1.8"
+    }
+  },
+  "devDependencies": {
+    "@tsconfig/bun": "catalog:",
+    "@typescript/native-preview": "catalog:",
+    "prettier": "3.6.2",
+    "turbo": "2.8.13"
+  },
+  "dependencies": {
+    "@opencode-ai/plugin": "workspace:*",
+    "@opencode-ai/script": "workspace:*",
+    "@opencode-ai/sdk": "workspace:*",
+    "typescript": "catalog:"
+  },
+  "license": "MIT",
+  "prettier": {
+    "semi": false,
+    "printWidth": 120
+  },
+  "trustedDependencies": [
+    "esbuild",
+    "protobufjs",
+    "tree-sitter",
+    "tree-sitter-bash",
+    "web-tree-sitter"
+  ],
+  "overrides": {
+    "@types/bun": "catalog:",
+    "@types/node": "catalog:"
+  }
+}

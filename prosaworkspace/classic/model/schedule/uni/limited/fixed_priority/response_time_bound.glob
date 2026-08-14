@@ -1,0 +1,907 @@
+DIGEST 62a7dee1f44129ee6427c579ef0b6297
+Fprosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound
+R15:36 prosa.classic.util.all <> <> lib
+R54:90 prosa.classic.model.arrival.basic.job <> <> lib
+R107:152 prosa.classic.model.arrival.basic.task_arrival <> <> lib
+R169:196 prosa.classic.model.priority <> <> lib
+R215:254 prosa.classic.model.schedule.uni.service <> <> lib
+R271:311 prosa.classic.model.schedule.uni.workload <> <> lib
+R328:368 prosa.classic.model.schedule.uni.schedule <> <> lib
+R385:430 prosa.classic.model.schedule.uni.response_time <> <> lib
+R447:495 prosa.classic.model.schedule.uni.schedule_of_task <> <> lib
+R513:573 prosa.classic.model.schedule.uni.limited.platform.definitions <> <> lib
+R590:638 prosa.classic.model.schedule.uni.limited.schedule <> <> lib
+R655:698 prosa.classic.model.schedule.uni.limited.rbf <> <> lib
+R715:779 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions <> <> lib
+R796:874 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space <> <> lib
+R891:960 prosa.classic.model.schedule.uni.limited.abstract_RTA.abstract_seq_rta <> <> lib
+R977:1035 prosa.classic.model.schedule.uni.limited.jlfp_instantiation <> <> lib
+R1053:1093 prosa.classic.model.arrival.curves.bounds <> <> lib
+R1111:1166 prosa.classic.analysis.uni.arrival_curves.workload_bound <> <> lib
+R1184:1237 prosa.classic.model.schedule.uni.limited.busy_interval <> <> lib
+R1271:1279 mathcomp.boot.ssreflect <> <> lib
+R1281:1287 mathcomp.boot.ssrbool <> <> lib
+R1289:1294 mathcomp.boot.eqtype <> <> lib
+R1296:1301 mathcomp.boot.ssrnat <> <> lib
+R1303:1305 mathcomp.boot.seq <> <> lib
+R1307:1310 mathcomp.boot.path <> <> lib
+R1312:1318 mathcomp.boot.fintype <> <> lib
+R1320:1324 mathcomp.boot.bigop <> <> lib
+mod 1538:1570 <> AbstractRTAforFPwithArrivalCurves
+R1586:1588 prosa.classic.model.arrival.basic.job Job <> mod
+R1590:1602 prosa.classic.model.arrival.curves.bounds ArrivalCurves <> mod
+R1604:1614 prosa.classic.model.arrival.basic.task_arrival TaskArrival <> mod
+R1616:1623 prosa.classic.model.priority Priority <> mod
+R1625:1638 prosa.classic.model.schedule.uni.schedule_of_task ScheduleOfTask <> mod
+R1649:1668 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule <> mod
+R1670:1677 prosa.classic.model.schedule.uni.workload Workload <> mod
+R1679:1685 prosa.classic.model.schedule.uni.service Service <> mod
+R1687:1698 prosa.classic.model.schedule.uni.response_time ResponseTime <> mod
+R1700:1723 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound <> mod
+R1734:1758 prosa.classic.model.schedule.uni.limited.platform.definitions LimitedPreemptionPlatform <> mod
+R1760:1762 prosa.classic.model.schedule.uni.limited.rbf RBF <> mod
+R1764:1779 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP <> mod
+R1781:1797 prosa.classic.model.schedule.uni.limited.jlfp_instantiation JLFPInstantiation <> mod
+sec 1813:1845 AbstractRTAforFPwithArrivalCurves AbstractResponseTimeAnalysisForFP
+var  1862:1865 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP Task
+R1868:1873 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1890:1898 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP task_cost
+R1905:1908 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1901:1904 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.Task var
+R1909:1912 prosa.classic.model.time Time time def
+var  1938:1940 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP Job
+R1943:1948 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1965:1975 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP job_arrival
+R1981:1984 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1978:1980 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.Job var
+R1985:1988 prosa.classic.model.time Time time def
+var 2004:2011 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP job_cost
+R2017:2020 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2014:2016 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.Job var
+R2021:2024 prosa.classic.model.time Time time def
+var 2041:2048 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP job_task
+R2054:2057 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2051:2053 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.Job var
+R2058:2061 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.Task var
+var 2161:2167 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP arr_seq
+R2170:2185 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R2187:2189 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.Job var
+var 2207:2236 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP H_arrival_times_are_consistent
+R2239:2266 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_times_are_consistent def
+R2280:2286 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.arr_seq var
+R2268:2278 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_arrival var
+var 2304:2321 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP H_arr_seq_is_a_set
+R2324:2348 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence_is_a_set def
+R2350:2356 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.arr_seq var
+var 2451:2455 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP sched
+R2458:2465 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R2467:2469 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.Job var
+var 2487:2519 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP H_jobs_come_from_arrival_sequence
+R2522:2552 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule jobs_come_from_arrival_sequence def
+R2560:2566 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.arr_seq var
+R2554:2558 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+var 2668:2696 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP H_jobs_must_arrive_to_execute
+R2699:2725 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule jobs_must_arrive_to_execute def
+R2739:2743 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+R2727:2737 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_arrival var
+var 2761:2789 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP H_completed_jobs_dont_execute
+R2792:2818 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_jobs_dont_execute def
+R2829:2833 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+R2820:2827 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+var 2932:2948 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP H_work_conserving
+R2951:2965 prosa.classic.model.schedule.uni.limited.platform.definitions LimitedPreemptionPlatform work_conserving def
+R2979:2986 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R2988:2994 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.arr_seq var
+R2996:3000 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+R2967:2977 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_arrival var
+var 3137:3153 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP H_sequential_jobs
+R3156:3170 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule sequential_jobs def
+R3199:3206 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_task var
+R3193:3197 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+R3184:3191 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R3172:3182 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_arrival var
+var 3293:3315 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP H_job_cost_le_task_cost
+R3324:3370 prosa.classic.model.arrival.basic.job Job cost_of_jobs_from_arrival_sequence_le_task_cost def
+R3408:3414 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.arr_seq var
+R3399:3406 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_task var
+R3390:3397 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R3380:3388 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.task_cost var
+var 3481:3482 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP ts
+R3485:3488 Corelib.Init.Datatypes <> list ind
+R3490:3493 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.Task var
+var 3576:3598 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP H_all_jobs_from_taskset
+binder 3614:3614 <> j:33
+R3637:3640 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3617:3626 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R3636:3636 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> j:33 var
+R3628:3634 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.arr_seq var
+R3651:3655 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R3641:3648 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_task var
+R3650:3650 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> j:33 var
+R3656:3657 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.ts var
+var 3914:3925 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP max_arrivals
+R3932:3935 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3928:3931 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.Task var
+R3940:3943 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3936:3939 prosa.classic.model.time Time time def
+R3944:3946 Corelib.Init.Datatypes <> nat ind
+var 3964:3996 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP H_family_of_proper_arrival_curves
+R4005:4035 prosa.classic.model.arrival.curves.bounds ArrivalCurves family_of_proper_arrival_curves def
+R4067:4068 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.ts var
+R4054:4065 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.max_arrivals var
+R4046:4052 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.arr_seq var
+R4037:4044 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_task var
+var 4153:4155 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP tsk
+R4158:4161 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.Task var
+var 4179:4189 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP H_tsk_in_ts
+R4195:4199 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R4192:4194 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.tsk var
+R4200:4201 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.ts var
+var 4303:4321 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP job_lock_in_service
+R4327:4330 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4324:4326 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.Job var
+R4331:4334 prosa.classic.model.time Time time def
+var 4350:4369 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP task_lock_in_service
+R4376:4379 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4372:4375 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.Task var
+R4380:4383 prosa.classic.model.time Time time def
+var 4666:4693 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP H_proper_job_lock_in_service
+R4702:4727 prosa.classic.model.schedule.uni.limited.schedule <> proper_job_lock_in_service def
+R4752:4770 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_lock_in_service var
+R4746:4750 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+R4738:4744 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.arr_seq var
+R4729:4736 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+var 4963:4991 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP H_proper_task_lock_in_service
+R5000:5026 prosa.classic.model.schedule.uni.limited.schedule <> proper_task_lock_in_service def
+R5104:5106 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.tsk var
+R5083:5102 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.task_lock_in_service var
+R5063:5081 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_lock_in_service var
+R5055:5061 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.arr_seq var
+R5046:5053 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_task var
+R5036:5044 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.task_cost var
+var 5595:5612 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP higher_eq_priority
+R5615:5623 prosa.classic.model.priority Priority FP_policy def
+R5625:5628 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.Task var
+var 5646:5668 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP H_priority_is_reflexive
+R5671:5685 prosa.classic.model.priority Priority FP_is_reflexive def
+R5687:5704 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.higher_eq_priority var
+var 5808:5830 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP jlfp_higher_eq_priority
+binder 5832:5833 <> j1:56
+binder 5835:5836 <> j2:57
+R5841:5850 prosa.classic.model.priority Priority FP_to_JLFP def
+R5861:5878 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.higher_eq_priority var
+R5880:5881 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> j1:56 var
+R5883:5884 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> j2:57 var
+R5852:5859 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_task var
+var 5956:5969 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP job_pending_at
+R5974:5980 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R6003:6007 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+R5994:6001 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R5982:5992 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_arrival var
+var 6018:6033 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP job_scheduled_at
+R6038:6049 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R6051:6055 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+var 6066:6081 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP job_completed_by
+R6086:6097 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R6108:6112 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+R6099:6106 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+var 6123:6139 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP job_backlogged_at
+R6144:6153 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule backlogged def
+R6176:6180 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+R6167:6174 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R6155:6165 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_arrival var
+var 6191:6206 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP arrivals_between
+R6211:6230 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R6232:6238 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.arr_seq var
+var 6249:6272 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP response_time_bounded_by
+R6277:6306 prosa.classic.model.schedule.uni.response_time ResponseTime is_response_time_bound_of_task def
+R6346:6350 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+R6338:6344 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.arr_seq var
+R6329:6336 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_task var
+R6320:6327 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R6308:6318 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_arrival var
+var 6365:6374 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP quiet_time
+R6379:6388 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP quiet_time def
+R6425:6447 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.jlfp_higher_eq_priority var
+R6419:6423 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+R6411:6417 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.arr_seq var
+R6402:6409 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R6390:6400 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_arrival var
+var 6458:6470 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP busy_interval
+R6476:6488 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP busy_interval def
+R6525:6547 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.jlfp_higher_eq_priority var
+R6519:6523 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+R6511:6517 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.arr_seq var
+R6502:6509 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R6490:6500 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_arrival var
+var 6558:6574 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP task_scheduled_at
+R6580:6596 prosa.classic.model.schedule.uni.schedule_of_task ScheduleOfTask task_scheduled_at def
+R6607:6611 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+R6598:6605 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_task var
+var 6622:6649 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP cumulative_task_interference
+R6660:6697 prosa.classic.model.schedule.uni.limited.abstract_RTA.abstract_seq_rta AbstractSeqRTA cumul_task_interference def
+R6716:6720 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+R6708:6714 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.arr_seq var
+R6699:6706 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_task var
+var 6888:6895 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP task_rbf
+R6900:6926 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound task_request_bound_function def
+R6951:6953 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.tsk var
+R6938:6949 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.max_arrivals var
+R6928:6936 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.task_cost var
+var 7139:7151 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP total_hep_rbf
+R7162:7196 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound total_hep_request_bound_function_FP def
+R7243:7245 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.tsk var
+R7240:7241 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.ts var
+R7227:7238 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.max_arrivals var
+R7208:7225 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.higher_eq_priority var
+R7198:7206 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.task_cost var
+var 7404:7417 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP total_ohep_rbf
+R7428:7463 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound total_ohep_request_bound_function_FP def
+R7510:7512 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.tsk var
+R7507:7508 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.ts var
+R7494:7505 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.max_arrivals var
+R7475:7492 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.higher_eq_priority var
+R7465:7473 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.task_cost var
+var 7814:7837 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP priority_inversion_bound
+R7840:7843 prosa.classic.model.time Time time def
+var 7861:7891 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP H_priority_inversion_is_bounded
+R7900:7931 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP priority_inversion_is_bounded_by def
+R8013:8036 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.priority_inversion_bound var
+R8009:8011 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.tsk var
+R7985:8007 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.jlfp_higher_eq_priority var
+R7979:7983 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+R7971:7977 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.arr_seq var
+R7962:7969 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_task var
+R7953:7960 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R7941:7951 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_arrival var
+var 8130:8130 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP L
+R8133:8136 prosa.classic.model.time Time time def
+var 8154:8165 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP H_L_positive
+R8169:8171 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R8168:8168 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.L var
+var 8190:8202 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP H_fixed_point
+R8206:8208 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8205:8205 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.L var
+R8233:8235 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8209:8232 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.priority_inversion_bound var
+R8236:8248 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.total_hep_rbf var
+R8250:8250 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.L var
+var 8523:8540 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP is_in_search_space
+binder 8542:8542 <> A:68
+R8547:8547 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8553:8558 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8590:8590 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8549:8551 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R8548:8548 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> A:68 var
+R8552:8552 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.L var
+R8569:8572 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R8559:8566 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.task_rbf var
+R8568:8568 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> A:68 var
+R8573:8580 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.task_rbf var
+R8584:8586 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8583:8583 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> A:68 var
+R8587:8588 prosa.util.epsilon <> ε abbrev
+var 8871:8871 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP R
+R8874:8877 prosa.classic.model.time Time time def
+var 8895:8908 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP H_R_is_maximum
+binder 8925:8925 <> A:71
+R8956:8968 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8936:8953 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.is_in_search_space var
+R8955:8955 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> A:71 var
+R8969:8975 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R8977:8988 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 8976:8976 <> F:72
+R9149:9162 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8994:8996 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8990:8992 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8989:8989 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> A:71 var
+R8993:8993 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> F:72 var
+R9106:9126 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R9021:9042 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R9105:9105 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8997:9020 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.priority_inversion_bound var
+R9060:9063 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R9104:9104 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R9043:9050 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.task_rbf var
+R9054:9056 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R9053:9053 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> A:71 var
+R9057:9058 prosa.util.epsilon <> ε abbrev
+R9077:9079 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R9064:9072 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.task_cost var
+R9074:9076 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.tsk var
+R9080:9099 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.task_lock_in_service var
+R9101:9103 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.tsk var
+R9127:9140 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.total_ohep_rbf var
+R9144:9146 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R9143:9143 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> A:71 var
+R9147:9147 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> F:72 var
+R9209:9212 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R9164:9167 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R9208:9208 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R9163:9163 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> F:72 var
+R9181:9183 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R9168:9176 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.task_cost var
+R9178:9180 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.tsk var
+R9184:9203 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.task_lock_in_service var
+R9205:9207 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.tsk var
+R9213:9213 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.R var
+var 9516:9527 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP interference
+R9533:9535 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.Job var
+binder 9530:9530 <> j:75
+R9542:9545 prosa.classic.model.time Time time def
+binder 9539:9539 <> t:76
+R9557:9568 prosa.classic.model.schedule.uni.limited.jlfp_instantiation JLFPInstantiation interference def
+R9600:9600 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> j:75 var
+R9602:9602 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> t:76 var
+R9576:9598 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.jlfp_higher_eq_priority var
+R9570:9574 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+var 9908:9927 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP interfering_workload
+R9933:9935 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.Job var
+binder 9930:9930 <> j:77
+R9942:9945 prosa.classic.model.time Time time def
+binder 9939:9939 <> t:78
+R9957:9976 prosa.classic.model.schedule.uni.limited.jlfp_instantiation JLFPInstantiation interfering_workload def
+R10025:10025 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> j:77 var
+R10027:10027 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> t:78 var
+R10001:10023 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.jlfp_higher_eq_priority var
+R9995:9999 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+R9987:9993 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.arr_seq var
+R9978:9985 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+var 10197:10199 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP IBF
+binder 10201:10201 <> R:79
+R10230:10232 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R10206:10229 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.priority_inversion_bound var
+R10233:10246 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.total_ohep_rbf var
+R10248:10248 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> R:79 var
+sec 10437:10476 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP FillingOutHypothesesOfAbstractRTATheorem
+prf 10767:10815 AbstractRTAforFPwithArrivalCurves instantiated_i_and_w_are_consistent_with_schedule
+R10826:10863 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions AbstractRTADefinitions work_conserving def
+R10936:10955 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.interfering_workload var
+R10923:10934 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.interference var
+R10919:10921 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.tsk var
+R10913:10917 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+R10905:10911 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.arr_seq var
+R10896:10903 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_task var
+R10887:10894 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R10875:10885 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_arrival var
+R11054:11089 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions AbstractRTADefinitions busy_interval def
+R11092:11134 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions AbstractRTADefinitions busy_interval_prefix def
+R11166:11169 Corelib.ssr.ssrbool <> negP thm
+R11190:11196 Corelib.ssr.ssrbool <> negb_or thm
+R11199:11219 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP is_priority_inversion def
+R11222:11259 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP is_priority_inversion def
+R11280:11335 prosa.classic.model.schedule.uni.limited.jlfp_instantiation JLFPInstantiation is_interference_from_another_job_with_higher_eq_priority def
+R11190:11196 Corelib.ssr.ssrbool <> negb_or thm
+R11190:11196 Corelib.ssr.ssrbool <> negb_or thm
+R11199:11219 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP is_priority_inversion def
+R11199:11219 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP is_priority_inversion def
+R11222:11259 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP is_priority_inversion def
+R11222:11259 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP is_priority_inversion def
+R11280:11335 prosa.classic.model.schedule.uni.limited.jlfp_instantiation JLFPInstantiation is_interference_from_another_job_with_higher_eq_priority def
+R11280:11335 prosa.classic.model.schedule.uni.limited.jlfp_instantiation JLFPInstantiation is_interference_from_another_job_with_higher_eq_priority def
+R11357:11360 Corelib.ssr.ssrbool <> andP thm
+R11398:11402 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+R11398:11402 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+R11398:11402 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+R11510:11529 Stdlib.Bool.Bool <> negb_involutive thm
+R11531:11538 Corelib.ssr.ssrbool <> negb_and thm
+R11540:11559 Stdlib.Bool.Bool <> negb_involutive thm
+R11510:11529 Stdlib.Bool.Bool <> negb_involutive thm
+R11510:11529 Stdlib.Bool.Bool <> negb_involutive thm
+R11510:11529 Stdlib.Bool.Bool <> negb_involutive thm
+R11531:11538 Corelib.ssr.ssrbool <> negb_and thm
+R11531:11538 Corelib.ssr.ssrbool <> negb_and thm
+R11540:11559 Stdlib.Bool.Bool <> negb_involutive thm
+R11540:11559 Stdlib.Bool.Bool <> negb_involutive thm
+R11588:11590 Corelib.ssr.ssrbool <> orP thm
+R11594:11597 Corelib.ssr.ssrbool <> negP thm
+R11606:11608 mathcomp.boot.eqtype <> eqP def
+R11678:11689 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R11678:11689 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R11678:11689 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R11768:11822 prosa.classic.model.schedule.uni.limited.jlfp_instantiation JLFPInstantiation instantiated_busy_interval_equivalent_edf_busy_interval thm
+R11768:11822 prosa.classic.model.schedule.uni.limited.jlfp_instantiation JLFPInstantiation instantiated_busy_interval_equivalent_edf_busy_interval thm
+R11888:11910 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.H_priority_is_reflexive var
+R11888:11910 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.H_priority_is_reflexive var
+R11938:11945 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_task var
+R11938:11945 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_task var
+R11973:11998 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP not_quiet_implies_not_idle thm
+R12085:12107 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.jlfp_higher_eq_priority var
+R12079:12083 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+R12045:12051 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.arr_seq var
+R12036:12043 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R12024:12034 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_arrival var
+R12193:12215 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.jlfp_higher_eq_priority var
+R12218:12234 prosa.classic.model.priority Priority JLFP_is_reflexive def
+R12237:12246 prosa.classic.model.priority Priority FP_to_JLFP def
+R12193:12215 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.jlfp_higher_eq_priority var
+R12193:12215 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.jlfp_higher_eq_priority var
+R12218:12234 prosa.classic.model.priority Priority JLFP_is_reflexive def
+R12218:12234 prosa.classic.model.priority Priority JLFP_is_reflexive def
+R12237:12246 prosa.classic.model.priority Priority FP_to_JLFP def
+R12237:12246 prosa.classic.model.priority Priority FP_to_JLFP def
+R12323:12325 mathcomp.boot.eqtype <> eqP def
+R12323:12325 mathcomp.boot.eqtype <> eqP def
+R12375:12377 mathcomp.boot.eqtype <> eqP def
+R12400:12403 Corelib.ssr.ssrbool <> negP thm
+R12400:12403 Corelib.ssr.ssrbool <> negP thm
+R12425:12436 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.interference var
+R12439:12468 prosa.classic.model.schedule.uni.limited.jlfp_instantiation JLFPInstantiation interference def
+R12471:12491 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP is_priority_inversion def
+R12512:12549 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP is_priority_inversion def
+R12570:12592 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.jlfp_higher_eq_priority var
+R12595:12650 prosa.classic.model.schedule.uni.limited.jlfp_instantiation JLFPInstantiation is_interference_from_another_job_with_higher_eq_priority def
+R12656:12662 Corelib.ssr.ssrbool <> negb_or thm
+R12425:12436 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.interference var
+R12425:12436 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.interference var
+R12439:12468 prosa.classic.model.schedule.uni.limited.jlfp_instantiation JLFPInstantiation interference def
+R12439:12468 prosa.classic.model.schedule.uni.limited.jlfp_instantiation JLFPInstantiation interference def
+R12471:12491 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP is_priority_inversion def
+R12471:12491 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP is_priority_inversion def
+R12512:12549 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP is_priority_inversion def
+R12512:12549 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP is_priority_inversion def
+R12570:12592 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.jlfp_higher_eq_priority var
+R12570:12592 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.jlfp_higher_eq_priority var
+R12595:12650 prosa.classic.model.schedule.uni.limited.jlfp_instantiation JLFPInstantiation is_interference_from_another_job_with_higher_eq_priority def
+R12595:12650 prosa.classic.model.schedule.uni.limited.jlfp_instantiation JLFPInstantiation is_interference_from_another_job_with_higher_eq_priority def
+R12656:12662 Corelib.ssr.ssrbool <> negb_or thm
+R12656:12662 Corelib.ssr.ssrbool <> negb_or thm
+R12681:12684 Corelib.ssr.ssrbool <> andP thm
+R12681:12684 Corelib.ssr.ssrbool <> andP thm
+R12717:12736 Stdlib.Bool.Bool <> negb_involutive thm
+R12739:12748 prosa.classic.model.priority Priority FP_to_JLFP def
+R12717:12736 Stdlib.Bool.Bool <> negb_involutive thm
+R12717:12736 Stdlib.Bool.Bool <> negb_involutive thm
+R12739:12748 prosa.classic.model.priority Priority FP_to_JLFP def
+R12739:12748 prosa.classic.model.priority Priority FP_to_JLFP def
+R12774:12781 Corelib.ssr.ssrbool <> negb_and thm
+R12783:12802 Stdlib.Bool.Bool <> negb_involutive thm
+R12811:12813 Corelib.ssr.ssrbool <> orP thm
+R12774:12781 Corelib.ssr.ssrbool <> negb_and thm
+R12774:12781 Corelib.ssr.ssrbool <> negb_and thm
+R12783:12802 Stdlib.Bool.Bool <> negb_involutive thm
+R12783:12802 Stdlib.Bool.Bool <> negb_involutive thm
+R12811:12813 Corelib.ssr.ssrbool <> orP thm
+prf 12987:13056 AbstractRTAforFPwithArrivalCurves instantiated_interference_and_workload_consistent_with_sequential_jobs
+R13068:13139 prosa.classic.model.schedule.uni.limited.abstract_RTA.abstract_seq_rta AbstractSeqRTA interference_and_workload_consistent_with_sequential_jobs def
+R13212:13231 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.interfering_workload var
+R13199:13210 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.interference var
+R13195:13197 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.tsk var
+R13189:13193 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+R13181:13187 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.arr_seq var
+R13172:13179 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_task var
+R13163:13170 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R13151:13161 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_arrival var
+R13304:13358 prosa.classic.model.schedule.uni.limited.jlfp_instantiation JLFPInstantiation instantiated_busy_interval_equivalent_edf_busy_interval thm
+R13304:13358 prosa.classic.model.schedule.uni.limited.jlfp_instantiation JLFPInstantiation instantiated_busy_interval_equivalent_edf_busy_interval thm
+R13423:13445 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.H_priority_is_reflexive var
+R13423:13445 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.H_priority_is_reflexive var
+R13469:13476 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_task var
+R13469:13476 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_task var
+R13496:13544 prosa.classic.model.schedule.uni.service Service all_jobs_have_completed_equiv_workload_eq_service thm
+R13496:13544 prosa.classic.model.schedule.uni.service Service all_jobs_have_completed_equiv_workload_eq_service thm
+R13653:13679 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R13653:13679 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R13715:13717 mathcomp.boot.eqtype <> eqP def
+R13749:13771 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.jlfp_higher_eq_priority var
+R13774:13783 prosa.classic.model.priority Priority FP_to_JLFP def
+R13749:13771 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.jlfp_higher_eq_priority var
+R13749:13771 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.jlfp_higher_eq_priority var
+R13774:13783 prosa.classic.model.priority Priority FP_to_JLFP def
+R13774:13783 prosa.classic.model.priority Priority FP_to_JLFP def
+R13815:13848 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived_before thm
+R13815:13848 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived_before thm
+prf 14387:14425 AbstractRTAforFPwithArrivalCurves instantiated_busy_intervals_are_bounded
+R14436:14487 prosa.classic.model.schedule.uni.limited.abstract_RTA.definitions AbstractRTADefinitions busy_intervals_are_bounded_by def
+R14581:14581 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.L var
+R14560:14579 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.interfering_workload var
+R14547:14558 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.interference var
+R14543:14545 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.tsk var
+R14537:14541 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+R14529:14535 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.arr_seq var
+R14520:14527 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_task var
+R14511:14518 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R14499:14509 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_arrival var
+R14646:14665 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP exists_busy_interval thm
+R14813:14813 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.L var
+R14786:14809 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.priority_inversion_bound var
+R14748:14770 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.jlfp_higher_eq_priority var
+R14719:14723 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+R14709:14715 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.arr_seq var
+R14700:14707 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R14688:14698 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_arrival var
+R14873:14889 prosa.classic.model.priority Priority JLFP_is_reflexive def
+R14892:14914 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.jlfp_higher_eq_priority var
+R14917:14926 prosa.classic.model.priority Priority FP_to_JLFP def
+R14873:14889 prosa.classic.model.priority Priority JLFP_is_reflexive def
+R14873:14889 prosa.classic.model.priority Priority JLFP_is_reflexive def
+R14892:14914 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.jlfp_higher_eq_priority var
+R14892:14914 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.jlfp_higher_eq_priority var
+R14917:14926 prosa.classic.model.priority Priority FP_to_JLFP def
+R14917:14926 prosa.classic.model.priority Priority FP_to_JLFP def
+R14972:14984 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.H_fixed_point var
+R14986:14992 mathcomp.boot.ssrnat <> leq_add thm
+R14972:14984 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.H_fixed_point var
+R14972:14984 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.H_fixed_point var
+R14986:14992 mathcomp.boot.ssrnat <> leq_add thm
+R14986:14992 mathcomp.boot.ssrnat <> leq_add thm
+R15016:15043 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound total_workload_le_total_rbf' thm
+R15016:15043 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound total_workload_le_total_rbf' thm
+R15096:15128 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.H_family_of_proper_arrival_curves var
+R15096:15128 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.H_family_of_proper_arrival_curves var
+R15096:15128 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.H_family_of_proper_arrival_curves var
+R15299:15353 prosa.classic.model.schedule.uni.limited.jlfp_instantiation JLFPInstantiation instantiated_busy_interval_equivalent_edf_busy_interval thm
+R15299:15353 prosa.classic.model.schedule.uni.limited.jlfp_instantiation JLFPInstantiation instantiated_busy_interval_equivalent_edf_busy_interval thm
+R15394:15416 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.H_priority_is_reflexive var
+R15394:15416 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.H_priority_is_reflexive var
+prf 16493:16533 AbstractRTAforFPwithArrivalCurves instantiated_task_interference_is_bounded
+R16544:16589 prosa.classic.model.schedule.uni.limited.abstract_RTA.abstract_seq_rta AbstractSeqRTA task_interference_is_bounded_by def
+binder 16698:16698 <> t:80
+binder 16700:16700 <> A:81
+binder 16702:16702 <> R:82
+R16707:16709 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.IBF var
+R16711:16711 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> R:82 var
+R16662:16681 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.interfering_workload var
+R16649:16660 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.interference var
+R16645:16647 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.tsk var
+R16639:16643 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+R16631:16637 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.arr_seq var
+R16622:16629 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_task var
+R16613:16620 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R16601:16611 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_arrival var
+R16790:16794 mathcomp.boot.ssrnat <> posnP thm
+R16797:16804 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R16790:16794 mathcomp.boot.ssrnat <> posnP thm
+R16797:16804 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R16790:16794 mathcomp.boot.ssrnat <> posnP thm
+R16797:16804 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R16871:16874 Corelib.ssr.ssrbool <> negP thm
+R16921:16949 prosa.classic.model.schedule.uni.response_time ResponseTime is_response_time_bound_of_job def
+R16952:16963 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R16921:16949 prosa.classic.model.schedule.uni.response_time ResponseTime is_response_time_bound_of_job def
+R16921:16949 prosa.classic.model.schedule.uni.response_time ResponseTime is_response_time_bound_of_job def
+R16952:16963 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R16952:16963 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R17000:17054 prosa.classic.model.schedule.uni.limited.jlfp_instantiation JLFPInstantiation instantiated_busy_interval_equivalent_edf_busy_interval thm
+R17000:17054 prosa.classic.model.schedule.uni.limited.jlfp_instantiation JLFPInstantiation instantiated_busy_interval_equivalent_edf_busy_interval thm
+R17116:17138 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.H_priority_is_reflexive var
+R17116:17138 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.H_priority_is_reflexive var
+R17162:17169 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_task var
+R17162:17169 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_task var
+R17196:17229 prosa.classic.model.schedule.uni.limited.jlfp_instantiation JLFPInstantiation cumulative_task_interference_split thm
+R17249:17276 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.cumulative_task_interference var
+R17249:17276 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.cumulative_task_interference var
+R17249:17276 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.cumulative_task_interference var
+R17313:17323 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_arrival var
+R17325:17332 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R17313:17323 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_arrival var
+R17325:17332 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R17313:17323 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_arrival var
+R17325:17332 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R17408:17411 Corelib.ssr.ssrbool <> andP thm
+R17450:17484 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrived_between_implies_in_arrivals thm
+R17450:17484 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrived_between_implies_in_arrivals thm
+R17517:17557 prosa.classic.model.priority Priority any_reflexive_FP_respects_sequential_jobs thm
+R17517:17557 prosa.classic.model.priority Priority any_reflexive_FP_respects_sequential_jobs thm
+R17578:17580 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> IBF vardef
+R17583:17594 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> interference vardef
+R17613:17619 mathcomp.boot.ssrnat <> leq_add thm
+R17613:17619 mathcomp.boot.ssrnat <> leq_add thm
+R17613:17619 mathcomp.boot.ssrnat <> leq_add thm
+R17650:17670 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP is_priority_inversion def
+R17673:17682 prosa.classic.model.priority Priority FP_to_JLFP def
+R17702:17733 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP priority_inversion_is_bounded_by def
+R17758:17788 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.H_priority_inversion_is_bounded var
+R17758:17788 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.H_priority_inversion_is_bounded var
+R17758:17788 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.H_priority_inversion_is_bounded var
+R17843:17871 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP cumulative_priority_inversion def
+R17911:17913 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R17879:17901 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.jlfp_higher_eq_priority var
+R17873:17877 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+R17827:17835 mathcomp.boot.ssrnat <> leq_trans thm
+R17843:17871 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP cumulative_priority_inversion def
+R17911:17913 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R17879:17901 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.jlfp_higher_eq_priority var
+R17873:17877 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+R17827:17835 mathcomp.boot.ssrnat <> leq_trans thm
+R17977:18005 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP cumulative_priority_inversion def
+R18013:18035 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.jlfp_higher_eq_priority var
+R18007:18011 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+R17961:17969 mathcomp.boot.ssrnat <> leq_trans thm
+R17977:18005 prosa.classic.model.schedule.uni.limited.busy_interval BusyIntervalJLFP cumulative_priority_inversion def
+R18013:18035 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.jlfp_higher_eq_priority var
+R18007:18011 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.sched var
+R17961:17969 mathcomp.boot.ssrnat <> leq_trans thm
+R18076:18079 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R18084:18094 mathcomp.boot.bigop <> big_cat_nat thm
+R18105:18107 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R18084:18094 mathcomp.boot.bigop <> big_cat_nat thm
+R18105:18107 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R18076:18079 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R18076:18079 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R18080:18080 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> X:83 var
+R18084:18094 mathcomp.boot.bigop <> big_cat_nat thm
+R18105:18107 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R18145:18152 mathcomp.boot.ssrnat <> leq_addr thm
+R18145:18152 mathcomp.boot.ssrnat <> leq_addr thm
+R18145:18152 mathcomp.boot.ssrnat <> leq_addr thm
+R18182:18189 mathcomp.boot.ssrnat <> leq_addr thm
+R18182:18189 mathcomp.boot.ssrnat <> leq_addr thm
+R18182:18189 mathcomp.boot.ssrnat <> leq_addr thm
+R18219:18222 mathcomp.boot.ssrnat <> ltnW thm
+R18219:18222 mathcomp.boot.ssrnat <> ltnW thm
+R18219:18222 mathcomp.boot.ssrnat <> ltnW thm
+R18368:18454 prosa.classic.model.schedule.uni.limited.jlfp_instantiation JLFPInstantiation instantiated_cumulative_interference_of_hep_tasks_equal_total_interference_of_hep_tasks thm
+R18494:18500 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.arr_seq var
+R18483:18490 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R18471:18481 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_arrival var
+R18368:18454 prosa.classic.model.schedule.uni.limited.jlfp_instantiation JLFPInstantiation instantiated_cumulative_interference_of_hep_tasks_equal_total_interference_of_hep_tasks thm
+R18494:18500 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.arr_seq var
+R18483:18490 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R18471:18481 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_arrival var
+R18368:18454 prosa.classic.model.schedule.uni.limited.jlfp_instantiation JLFPInstantiation instantiated_cumulative_interference_of_hep_tasks_equal_total_interference_of_hep_tasks thm
+R18494:18500 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.arr_seq var
+R18483:18490 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R18471:18481 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_arrival var
+R18548:18557 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> quiet_time vardef
+R18639:18654 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R18742:18744 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.Job var
+binder 18736:18738 <> jhp:84
+R18778:18782 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R18809:18809 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R18749:18771 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.jlfp_higher_eq_priority var
+R18773:18775 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> jhp:84 var
+R18795:18798 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R18783:18790 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_task var
+R18792:18794 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> jhp:84 var
+R18799:18806 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_task var
+R18683:18698 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.arrivals_between var
+R18706:18708 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R18673:18680 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R18609:18617 mathcomp.boot.ssrnat <> leq_trans thm
+R18639:18654 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R18742:18744 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.Job var
+binder 18736:18738 <> jhp:85
+R18778:18782 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R18809:18809 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R18749:18771 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.jlfp_higher_eq_priority var
+R18773:18775 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> jhp:85 var
+R18795:18798 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R18783:18790 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_task var
+R18792:18794 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> jhp:85 var
+R18799:18806 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_task var
+R18683:18698 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.arrivals_between var
+R18706:18708 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R18673:18680 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R18609:18617 mathcomp.boot.ssrnat <> leq_trans thm
+R18835:18861 prosa.classic.model.schedule.uni.service Service service_of_jobs_le_workload thm
+R18835:18861 prosa.classic.model.schedule.uni.service Service service_of_jobs_le_workload thm
+R18888:18903 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R18926:18939 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.total_ohep_rbf var
+R18942:18977 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound total_ohep_request_bound_function_FP def
+R18888:18903 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R18888:18903 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R18926:18939 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.total_ohep_rbf var
+R18926:18939 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.total_ohep_rbf var
+R18942:18977 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound total_ohep_request_bound_function_FP def
+R18942:18977 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound total_ohep_request_bound_function_FP def
+R19012:19038 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound total_workload_le_total_rbf thm
+R19012:19038 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound total_workload_le_total_rbf thm
+R19093:19125 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.H_family_of_proper_arrival_curves var
+R19093:19125 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.H_family_of_proper_arrival_curves var
+R19093:19125 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.H_family_of_proper_arrival_curves var
+sec 19290:19327 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem SolutionOfResponseTimeReccurenceExists
+var 19389:19389 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists j
+R19392:19394 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.Job var
+var 19416:19426 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists H_j_arrives
+R19429:19438 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R19448:19448 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists.j var
+R19440:19446 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.arr_seq var
+var 19470:19481 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists H_job_of_tsk
+R19494:19496 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19484:19491 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_task var
+R19493:19493 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists.j var
+R19497:19499 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.tsk var
+var 19521:19539 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists H_job_cost_positive
+R19542:19558 prosa.classic.model.arrival.basic.job Job job_cost_positive def
+R19569:19569 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists.j var
+R19560:19567 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+var 19862:19885 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists total_interference_bound
+binder 19887:19889 <> tsk:94
+binder 19891:19891 <> A:95
+binder 19893:19894 <> Δ:96
+R19942:19944 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R19926:19928 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R19909:19916 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.task_rbf var
+R19920:19922 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R19919:19919 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> A:95 var
+R19923:19924 prosa.util.epsilon <> ε abbrev
+R19929:19937 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.task_cost var
+R19939:19941 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> tsk:94 var
+R19945:19947 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.IBF var
+R19949:19950 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> Δ:96 var
+var 20053:20053 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists A
+R20056:20059 prosa.classic.model.time Time time def
+var 20081:20111 AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists H_A_is_in_abstract_search_space
+R20124:20162 prosa.classic.model.schedule.uni.limited.abstract_RTA.reduction_of_search_space AbstractRTAReduction is_in_search_space def
+R20195:20195 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists.A var
+R20170:20193 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists.total_interference_bound var
+R20168:20168 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.L var
+R20164:20166 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.tsk var
+prf 20281:20309 AbstractRTAforFPwithArrivalCurves A_is_in_concrete_search_space
+R20322:20339 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.is_in_search_space var
+R20341:20341 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists.A var
+R20376:20399 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> total_interference_bound vardef
+R20423:20453 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists.H_A_is_in_abstract_search_space var
+R20423:20453 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists.H_A_is_in_abstract_search_space var
+R20423:20453 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists.H_A_is_in_abstract_search_space var
+R20468:20471 Corelib.ssr.ssrbool <> andP thm
+R20547:20550 Corelib.ssr.ssrbool <> andP thm
+R20547:20550 Corelib.ssr.ssrbool <> andP thm
+R20595:20601 mathcomp.boot.ssrnat <> neq_ltn thm
+R20610:20612 Corelib.ssr.ssrbool <> orP thm
+R20595:20601 mathcomp.boot.ssrnat <> neq_ltn thm
+R20595:20601 mathcomp.boot.ssrnat <> neq_ltn thm
+R20610:20612 Corelib.ssr.ssrbool <> orP thm
+R20645:20652 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.task_rbf var
+R20664:20686 prosa.classic.model.schedule.uni.limited.rbf RBF task_rbf_0_zero thm
+R20645:20652 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.task_rbf var
+R20645:20652 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.task_rbf var
+R20664:20686 prosa.classic.model.schedule.uni.limited.rbf RBF task_rbf_0_zero thm
+R20664:20686 prosa.classic.model.schedule.uni.limited.rbf RBF task_rbf_0_zero thm
+R20664:20686 prosa.classic.model.schedule.uni.limited.rbf RBF task_rbf_0_zero thm
+R20728:20732 mathcomp.boot.ssrnat <> add0n thm
+R20735:20742 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.task_rbf var
+R20728:20732 mathcomp.boot.ssrnat <> add0n thm
+R20728:20732 mathcomp.boot.ssrnat <> add0n thm
+R20735:20742 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.task_rbf var
+R20735:20742 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.task_rbf var
+R20781:20789 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.task_cost var
+R20791:20793 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.tsk var
+R20765:20773 mathcomp.boot.ssrnat <> leq_trans thm
+R20781:20789 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.task_cost var
+R20791:20793 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.tsk var
+R20765:20773 mathcomp.boot.ssrnat <> leq_trans thm
+R20836:20843 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R20845:20845 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists.j var
+R20820:20828 mathcomp.boot.ssrnat <> leq_trans thm
+R20859:20870 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists.H_job_of_tsk var
+R20836:20843 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R20845:20845 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists.j var
+R20820:20828 mathcomp.boot.ssrnat <> leq_trans thm
+R20859:20870 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists.H_job_of_tsk var
+R20859:20870 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists.H_job_of_tsk var
+R20859:20870 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists.H_job_of_tsk var
+R20859:20870 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists.H_job_of_tsk var
+R20859:20870 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists.H_job_of_tsk var
+R20906:20936 prosa.classic.model.schedule.uni.limited.rbf RBF task_rbf_1_ge_task_cost thm
+R20906:20936 prosa.classic.model.schedule.uni.limited.rbf RBF task_rbf_1_ge_task_cost thm
+R20966:20969 Corelib.ssr.ssrbool <> andP thm
+R20966:20969 Corelib.ssr.ssrbool <> andP thm
+R21012:21015 Corelib.ssr.ssrbool <> negP thm
+R21012:21015 Corelib.ssr.ssrbool <> negP thm
+R21042:21044 mathcomp.boot.eqtype <> eqP def
+R21095:21099 mathcomp.boot.ssrnat <> subn1 thm
+R21101:21105 mathcomp.boot.ssrnat <> addn1 thm
+R21107:21112 mathcomp.boot.ssrnat <> prednK thm
+R21095:21099 mathcomp.boot.ssrnat <> subn1 thm
+R21095:21099 mathcomp.boot.ssrnat <> subn1 thm
+R21101:21105 mathcomp.boot.ssrnat <> addn1 thm
+R21101:21105 mathcomp.boot.ssrnat <> addn1 thm
+R21107:21112 mathcomp.boot.ssrnat <> prednK thm
+R21107:21112 mathcomp.boot.ssrnat <> prednK thm
+prf 21307:21326 AbstractRTAforFPwithArrivalCurves correct_search_space
+R21339:21345 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R21347:21360 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 21346:21346 <> F:101
+R21445:21460 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21366:21368 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21362:21364 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R21361:21361 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists.A var
+R21365:21365 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> F:101 var
+R21431:21433 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R21386:21389 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R21430:21430 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R21369:21376 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.task_rbf var
+R21380:21382 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R21379:21379 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists.A var
+R21383:21384 prosa.util.epsilon <> ε abbrev
+R21403:21405 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R21390:21398 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.task_cost var
+R21400:21402 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.tsk var
+R21406:21425 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.task_lock_in_service var
+R21427:21429 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.tsk var
+R21434:21436 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.IBF var
+R21440:21442 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R21439:21439 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists.A var
+R21443:21443 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> F:101 var
+R21507:21510 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R21462:21465 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R21506:21506 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R21461:21461 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> F:101 var
+R21479:21481 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R21466:21474 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.task_cost var
+R21476:21478 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.tsk var
+R21482:21501 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.task_lock_in_service var
+R21503:21505 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.tsk var
+R21511:21511 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.R var
+R21546:21559 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.H_R_is_maximum var
+R21561:21561 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists.A var
+R21546:21559 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.H_R_is_maximum var
+R21561:21561 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists.A var
+R21546:21559 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.H_R_is_maximum var
+R21561:21561 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists.A var
+R21607:21635 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound AbstractRTAforFPwithArrivalCurves A_is_in_concrete_search_space thm
+R21607:21635 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound AbstractRTAforFPwithArrivalCurves A_is_in_concrete_search_space thm
+R21734:21736 mathcomp.boot.eqtype <> eqP def
+R21734:21736 mathcomp.boot.eqtype <> eqP def
+R21778:21782 mathcomp.boot.ssrnat <> addnA thm
+R21786:21788 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R21789:21812 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.priority_inversion_bound var
+R21814:21818 mathcomp.boot.ssrnat <> addnC thm
+R21822:21826 mathcomp.boot.ssrnat <> addnA thm
+R21778:21782 mathcomp.boot.ssrnat <> addnA thm
+R21778:21782 mathcomp.boot.ssrnat <> addnA thm
+R21814:21818 mathcomp.boot.ssrnat <> addnC thm
+R21786:21788 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R21789:21812 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.priority_inversion_bound var
+R21786:21788 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R21789:21812 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.priority_inversion_bound var
+R21814:21818 mathcomp.boot.ssrnat <> addnC thm
+R21822:21826 mathcomp.boot.ssrnat <> addnA thm
+R21822:21826 mathcomp.boot.ssrnat <> addnA thm
+R21822:21826 mathcomp.boot.ssrnat <> addnA thm
+R21853:21890 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem.SolutionOfResponseTimeReccurenceExists <> sec
+R21902:21941 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.FillingOutHypothesesOfAbstractRTATheorem <> sec
+prf 22138:22172 AbstractRTAforFPwithArrivalCurves uniprocessor_response_time_bound_fp
+R22181:22204 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.response_time_bounded_by var
+R22206:22208 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.tsk var
+R22210:22210 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.R var
+R22264:22268 mathcomp.boot.ssrnat <> posnP thm
+R22271:22278 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R22264:22268 mathcomp.boot.ssrnat <> posnP thm
+R22271:22278 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R22264:22268 mathcomp.boot.ssrnat <> posnP thm
+R22271:22278 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.job_cost var
+R22320:22348 prosa.classic.model.schedule.uni.response_time ResponseTime is_response_time_bound_of_job def
+R22351:22362 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R22320:22348 prosa.classic.model.schedule.uni.response_time ResponseTime is_response_time_bound_of_job def
+R22320:22348 prosa.classic.model.schedule.uni.response_time ResponseTime is_response_time_bound_of_job def
+R22351:22362 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R22351:22362 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R22384:22411 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.H_proper_job_lock_in_service var
+R22384:22411 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.H_proper_job_lock_in_service var
+R22384:22411 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.H_proper_job_lock_in_service var
+R22442:22470 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.H_proper_task_lock_in_service var
+R22442:22470 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.H_proper_task_lock_in_service var
+R22442:22470 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.H_proper_task_lock_in_service var
+R22582:22593 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.interference var
+R22621:22640 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.interfering_workload var
+binder 22696:22696 <> A:102
+binder 22698:22698 <> R:103
+R22703:22705 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.IBF var
+R22707:22707 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> R:103 var
+R22716:22716 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.L var
+R22726:22727 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.ts var
+R22498:22548 prosa.classic.model.schedule.uni.limited.abstract_RTA.abstract_seq_rta AbstractSeqRTA uniprocessor_response_time_bound_seq thm
+R22582:22593 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.interference var
+R22621:22640 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.interfering_workload var
+binder 22696:22696 <> A:104
+binder 22698:22698 <> R:105
+R22703:22705 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.IBF var
+R22707:22707 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> R:105 var
+R22716:22716 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.L var
+R22726:22727 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound <> AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP.ts var
+R22498:22548 prosa.classic.model.schedule.uni.limited.abstract_RTA.abstract_seq_rta AbstractSeqRTA uniprocessor_response_time_bound_seq thm
+R22757:22805 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound AbstractRTAforFPwithArrivalCurves instantiated_i_and_w_are_consistent_with_schedule thm
+R22757:22805 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound AbstractRTAforFPwithArrivalCurves instantiated_i_and_w_are_consistent_with_schedule thm
+R22826:22895 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound AbstractRTAforFPwithArrivalCurves instantiated_interference_and_workload_consistent_with_sequential_jobs thm
+R22826:22895 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound AbstractRTAforFPwithArrivalCurves instantiated_interference_and_workload_consistent_with_sequential_jobs thm
+R22916:22954 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound AbstractRTAforFPwithArrivalCurves instantiated_busy_intervals_are_bounded thm
+R22916:22954 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound AbstractRTAforFPwithArrivalCurves instantiated_busy_intervals_are_bounded thm
+R22974:23014 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound AbstractRTAforFPwithArrivalCurves instantiated_task_interference_is_bounded thm
+R22974:23014 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound AbstractRTAforFPwithArrivalCurves instantiated_task_interference_is_bounded thm
+R23035:23054 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound AbstractRTAforFPwithArrivalCurves correct_search_space thm
+R23035:23054 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound AbstractRTAforFPwithArrivalCurves correct_search_space thm
+R23087:23119 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound AbstractRTAforFPwithArrivalCurves.AbstractResponseTimeAnalysisForFP <> sec
+R23138:23170 prosa.classic.model.schedule.uni.limited.fixed_priority.response_time_bound AbstractRTAforFPwithArrivalCurves <> mod

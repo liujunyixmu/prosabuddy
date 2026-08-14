@@ -1,0 +1,649 @@
+DIGEST fd7074a87fbcb98267fa935d0019d4e9
+Fprosa.classic.model.schedule.uni.sustainability
+R15:36 prosa.classic.util.all <> <> lib
+R54:103 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R120:160 prosa.classic.model.schedule.uni.schedule <> <> lib
+R177:223 prosa.classic.model.schedule.uni.schedulability <> <> lib
+R255:263 mathcomp.boot.ssreflect <> <> lib
+R265:271 mathcomp.boot.ssrbool <> <> lib
+R273:278 mathcomp.boot.eqtype <> <> lib
+R280:285 mathcomp.boot.ssrnat <> <> lib
+R287:289 mathcomp.boot.seq <> <> lib
+R291:297 mathcomp.boot.fintype <> <> lib
+R299:303 mathcomp.boot.bigop <> <> lib
+R329:338 HB.structures <> <> lib
+mod 349:362 <> Sustainability
+R375:389 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence <> mod
+R391:410 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule <> mod
+R412:425 prosa.classic.model.schedule.uni.schedulability Schedulability <> mod
+sec 439:456 Sustainability SustainabilityDefs
+var  506:508 Sustainability.SustainabilityDefs Job
+R511:516 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+sec 533:550 Sustainability.SustainabilityDefs DefiningParameters
+sec 605:617 Sustainability.SustainabilityDefs.DefiningParameters ParameterType
+ind 716:730 Sustainability parameter_label
+constr 745:755 Sustainability JOB_ARRIVAL
+constr 767:774 Sustainability JOB_COST
+constr 786:797 Sustainability JOB_DEADLINE
+constr 809:818 Sustainability JOB_JITTER
+constr 830:843 Sustainability JOB_SUSPENSION
+scheme 716:730 Sustainability parameter_label_rect
+scheme 716:730 Sustainability parameter_label_ind
+scheme 716:730 Sustainability parameter_label_rec
+scheme 716:730 Sustainability parameter_label_sind
+R952:966 prosa.classic.model.schedule.uni.sustainability Sustainability parameter_label ind
+scheme 932:967 Sustainability parameter_label_eq_dec
+prf 983:990 Sustainability eqlabelP
+R993:1006 mathcomp.boot.eqtype MathCompCompatEquality.Equality axiom abbrev
+R1008:1026 prosa.classic.model.schedule.uni.sustainability Sustainability parameter_label_beq scheme
+R1117:1124 Corelib.Init.Datatypes <> ReflectT constr
+R1142:1149 Corelib.Init.Datatypes <> ReflectF constr
+R1117:1124 Corelib.Init.Datatypes <> ReflectT constr
+R1117:1124 Corelib.Init.Datatypes <> ReflectT constr
+R1117:1124 Corelib.Init.Datatypes <> ReflectT constr
+R1117:1124 Corelib.Init.Datatypes <> ReflectT constr
+R1117:1124 Corelib.Init.Datatypes <> ReflectT constr
+R1117:1124 Corelib.Init.Datatypes <> ReflectT constr
+R1117:1124 Corelib.Init.Datatypes <> ReflectT constr
+R1117:1124 Corelib.Init.Datatypes <> ReflectT constr
+R1117:1124 Corelib.Init.Datatypes <> ReflectT constr
+R1117:1124 Corelib.Init.Datatypes <> ReflectT constr
+R1117:1124 Corelib.Init.Datatypes <> ReflectT constr
+R1117:1124 Corelib.Init.Datatypes <> ReflectT constr
+R1117:1124 Corelib.Init.Datatypes <> ReflectT constr
+R1117:1124 Corelib.Init.Datatypes <> ReflectT constr
+R1117:1124 Corelib.Init.Datatypes <> ReflectT constr
+R1117:1124 Corelib.Init.Datatypes <> ReflectT constr
+R1117:1124 Corelib.Init.Datatypes <> ReflectT constr
+R1117:1124 Corelib.Init.Datatypes <> ReflectT constr
+R1117:1124 Corelib.Init.Datatypes <> ReflectT constr
+R1117:1124 Corelib.Init.Datatypes <> ReflectT constr
+R1117:1124 Corelib.Init.Datatypes <> ReflectT constr
+R1117:1124 Corelib.Init.Datatypes <> ReflectT constr
+R1117:1124 Corelib.Init.Datatypes <> ReflectT constr
+R1117:1124 Corelib.Init.Datatypes <> ReflectT constr
+R1117:1124 Corelib.Init.Datatypes <> ReflectT constr
+R1142:1149 Corelib.Init.Datatypes <> ReflectF constr
+R1142:1149 Corelib.Init.Datatypes <> ReflectF constr
+R1142:1149 Corelib.Init.Datatypes <> ReflectF constr
+R1142:1149 Corelib.Init.Datatypes <> ReflectF constr
+R1142:1149 Corelib.Init.Datatypes <> ReflectF constr
+R1142:1149 Corelib.Init.Datatypes <> ReflectF constr
+R1142:1149 Corelib.Init.Datatypes <> ReflectF constr
+R1142:1149 Corelib.Init.Datatypes <> ReflectF constr
+R1142:1149 Corelib.Init.Datatypes <> ReflectF constr
+R1142:1149 Corelib.Init.Datatypes <> ReflectF constr
+R1142:1149 Corelib.Init.Datatypes <> ReflectF constr
+R1142:1149 Corelib.Init.Datatypes <> ReflectF constr
+R1142:1149 Corelib.Init.Datatypes <> ReflectF constr
+R1142:1149 Corelib.Init.Datatypes <> ReflectF constr
+R1142:1149 Corelib.Init.Datatypes <> ReflectF constr
+R1142:1149 Corelib.Init.Datatypes <> ReflectF constr
+R1142:1149 Corelib.Init.Datatypes <> ReflectF constr
+R1142:1149 Corelib.Init.Datatypes <> ReflectF constr
+R1142:1149 Corelib.Init.Datatypes <> ReflectF constr
+R1142:1149 Corelib.Init.Datatypes <> ReflectF constr
+R1202:1215 mathcomp.boot.eqtype hasDecEq Build abbrev
+R1217:1231 prosa.classic.model.schedule.uni.sustainability Sustainability parameter_label ind
+R1233:1240 prosa.classic.model.schedule.uni.sustainability Sustainability eqlabelP thm
+def 1174:1241 Sustainability HB_unnamed_factory_1
+def 1174:1241 Sustainability Sustainability_parameter_label__canonical__eqtype_Equality
+def 1348:1360 Sustainability type_of_label
+R1366:1380 prosa.classic.model.schedule.uni.sustainability Sustainability parameter_label ind
+binder 1363:1363 <> l:4
+R1409:1409 prosa.classic.model.schedule.uni.sustainability <> l:4 var
+R1428:1438 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_ARRIVAL constr
+R1446:1449 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1443:1445 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.Job var
+R1450:1456 prosa.classic.model.time Time instant def
+R1470:1477 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_COST constr
+R1485:1488 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1482:1484 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.Job var
+R1489:1492 prosa.classic.model.time Time time def
+R1506:1517 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_DEADLINE constr
+R1525:1528 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1522:1524 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.Job var
+R1529:1532 prosa.classic.model.time Time time def
+R1546:1555 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_JITTER constr
+R1563:1566 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1560:1562 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.Job var
+R1567:1570 prosa.classic.model.time Time time def
+R1584:1597 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_SUSPENSION constr
+R1605:1608 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1602:1604 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.Job var
+R1613:1616 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1609:1612 prosa.classic.model.time Time time def
+R1617:1624 prosa.classic.model.time Time duration def
+def 1751:1761 Sustainability default_val
+R1768:1782 prosa.classic.model.schedule.uni.sustainability Sustainability parameter_label ind
+binder 1764:1764 <> l:6
+R1787:1799 prosa.classic.model.schedule.uni.sustainability Sustainability type_of_label def
+R1801:1801 prosa.classic.model.schedule.uni.sustainability <> l:6 var
+R1822:1822 prosa.classic.model.schedule.uni.sustainability <> l:6 var
+R1841:1851 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_ARRIVAL constr
+R1879:1886 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_COST constr
+R1914:1925 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_DEADLINE constr
+R1953:1962 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_JITTER constr
+R1990:2003 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_SUSPENSION constr
+rec 2146:2158 Sustainability job_parameter
+proj 2189:2195 Sustainability p_label
+proj 2226:2235 Sustainability p_function
+R2199:2213 prosa.classic.model.schedule.uni.sustainability Sustainability parameter_label ind
+R2239:2251 prosa.classic.model.schedule.uni.sustainability Sustainability type_of_label def
+R2253:2259 prosa.classic.model.schedule.uni.sustainability <> p_label:9 meth
+var 2375:2390 Sustainability.SustainabilityDefs.DefiningParameters.ParameterType example_job_cost
+R2396:2399 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2393:2395 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.Job var
+R2400:2403 prosa.classic.model.time Time time def
+var 2423:2444 Sustainability.SustainabilityDefs.DefiningParameters.ParameterType example_job_suspension
+R2450:2453 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2447:2449 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.Job var
+R2458:2461 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2454:2457 prosa.classic.model.time Time time def
+R2462:2469 prosa.classic.model.time Time duration def
+var 2484:2497 Sustainability.SustainabilityDefs.DefiningParameters.ParameterType example_params
+R2512:2515 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_';'_x_';'_'..'_';'_x_']' not
+R2547:2548 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_';'_x_';'_'..'_';'_x_']' not
+R2592:2592 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_';'_x_';'_'..'_';'_x_']' not
+R2516:2520 prosa.classic.model.schedule.uni.sustainability Sustainability param constr
+R2522:2529 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_COST constr
+R2531:2546 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.DefiningParameters.ParameterType.example_job_cost var
+R2549:2553 prosa.classic.model.schedule.uni.sustainability Sustainability param constr
+R2555:2568 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_SUSPENSION constr
+R2570:2591 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.DefiningParameters.ParameterType.example_job_suspension var
+R2606:2618 prosa.classic.model.schedule.uni.sustainability Sustainability.SustainabilityDefs.DefiningParameters.ParameterType <> sec
+sec 2671:2685 Sustainability.SustainabilityDefs.DefiningParameters ParameterLookup
+def 2806:2815 Sustainability find_param
+R2822:2836 prosa.classic.model.schedule.uni.sustainability Sustainability parameter_label ind
+binder 2818:2818 <> l:15
+R2844:2846 mathcomp.boot.seq <> seq abbrev
+R2848:2860 prosa.classic.model.schedule.uni.sustainability Sustainability job_parameter rec
+binder 2840:2840 <> s:16
+R2876:2878 mathcomp.boot.seq <> nth def
+R2923:2926 mathcomp.boot.seq <> find def
+R2954:2954 prosa.classic.model.schedule.uni.sustainability <> s:16 var
+binder 2933:2933 <> x:17
+R2947:2950 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R2938:2944 prosa.classic.model.schedule.uni.sustainability Sustainability p_label proj
+R2946:2946 prosa.classic.model.schedule.uni.sustainability <> x:17 var
+R2951:2951 prosa.classic.model.schedule.uni.sustainability <> l:15 var
+R2906:2906 prosa.classic.model.schedule.uni.sustainability <> s:16 var
+R2881:2885 prosa.classic.model.schedule.uni.sustainability Sustainability param constr
+R2887:2887 prosa.classic.model.schedule.uni.sustainability <> l:15 var
+R2890:2900 prosa.classic.model.schedule.uni.sustainability Sustainability default_val def
+R2902:2902 prosa.classic.model.schedule.uni.sustainability <> l:15 var
+var 3128:3149 Sustainability.SustainabilityDefs.DefiningParameters.ParameterLookup convert_parameter_type
+R3155:3167 prosa.classic.model.schedule.uni.sustainability Sustainability job_parameter rec
+binder 3152:3152 <> p:18
+R3174:3188 prosa.classic.model.schedule.uni.sustainability Sustainability parameter_label ind
+binder 3171:3171 <> l:19
+R3246:3248 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3237:3243 prosa.classic.model.schedule.uni.sustainability Sustainability p_label proj
+R3245:3245 prosa.classic.model.schedule.uni.sustainability <> p:18 var
+R3249:3249 prosa.classic.model.schedule.uni.sustainability <> l:19 var
+binder 3227:3234 <> EQ_PROOF:20
+R3265:3271 Corelib.Init.Logic <> eq_rect scheme
+R3329:3336 prosa.classic.model.schedule.uni.sustainability <> EQ_PROOF:20 var
+R3327:3327 prosa.classic.model.schedule.uni.sustainability <> l:19 var
+R3313:3322 prosa.classic.model.schedule.uni.sustainability Sustainability p_function proj
+R3324:3324 prosa.classic.model.schedule.uni.sustainability <> p:18 var
+binder 3290:3290 <> x:21
+R3295:3307 prosa.classic.model.schedule.uni.sustainability Sustainability type_of_label def
+R3309:3309 prosa.classic.model.schedule.uni.sustainability <> x:21 var
+R3274:3280 prosa.classic.model.schedule.uni.sustainability Sustainability p_label proj
+R3282:3282 prosa.classic.model.schedule.uni.sustainability <> p:18 var
+def 3531:3548 Sustainability get_param_function
+R3554:3568 prosa.classic.model.schedule.uni.sustainability Sustainability parameter_label ind
+binder 3551:3551 <> l:22
+R3575:3587 prosa.classic.model.schedule.uni.sustainability Sustainability job_parameter rec
+binder 3572:3572 <> p:23
+R3592:3604 prosa.classic.model.schedule.uni.sustainability Sustainability type_of_label def
+R3606:3606 prosa.classic.model.schedule.uni.sustainability <> l:22 var
+R3625:3646 prosa.classic.model.schedule.uni.sustainability Sustainability parameter_label_eq_dec scheme
+R3649:3655 prosa.classic.model.schedule.uni.sustainability Sustainability p_label proj
+R3657:3657 prosa.classic.model.schedule.uni.sustainability <> p:23 var
+R3660:3660 prosa.classic.model.schedule.uni.sustainability <> l:22 var
+R3666:3669 Corelib.Init.Specif <> left constr
+R3697:3718 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.DefiningParameters.ParameterLookup.convert_parameter_type var
+R3720:3720 prosa.classic.model.schedule.uni.sustainability <> p:23 var
+R3722:3722 prosa.classic.model.schedule.uni.sustainability <> l:22 var
+R3749:3759 prosa.classic.model.schedule.uni.sustainability Sustainability default_val def
+R3761:3761 prosa.classic.model.schedule.uni.sustainability <> l:22 var
+def 3895:3906 Sustainability return_param
+R3912:3926 prosa.classic.model.schedule.uni.sustainability Sustainability parameter_label ind
+binder 3909:3909 <> l:24
+R3933:3935 mathcomp.boot.seq <> seq abbrev
+R3937:3949 prosa.classic.model.schedule.uni.sustainability Sustainability job_parameter rec
+binder 3930:3930 <> s:25
+R3954:3966 prosa.classic.model.schedule.uni.sustainability Sustainability type_of_label def
+R3968:3968 prosa.classic.model.schedule.uni.sustainability <> l:24 var
+R3983:4000 prosa.classic.model.schedule.uni.sustainability Sustainability get_param_function def
+R4002:4002 prosa.classic.model.schedule.uni.sustainability <> l:24 var
+R4005:4014 prosa.classic.model.schedule.uni.sustainability Sustainability find_param def
+R4016:4016 prosa.classic.model.schedule.uni.sustainability <> l:24 var
+R4018:4018 prosa.classic.model.schedule.uni.sustainability <> s:25 var
+var 4131:4146 Sustainability.SustainabilityDefs.DefiningParameters.ParameterLookup example_job_cost
+R4152:4155 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4149:4151 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.Job var
+R4156:4159 prosa.classic.model.time Time time def
+var 4179:4200 Sustainability.SustainabilityDefs.DefiningParameters.ParameterLookup example_job_suspension
+R4206:4209 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4203:4205 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.Job var
+R4214:4217 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4210:4213 prosa.classic.model.time Time time def
+R4218:4225 prosa.classic.model.time Time duration def
+var 4240:4253 Sustainability.SustainabilityDefs.DefiningParameters.ParameterLookup example_params
+R4268:4271 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_';'_x_';'_'..'_';'_x_']' not
+R4303:4304 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_';'_x_';'_'..'_';'_x_']' not
+R4348:4348 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_';'_x_';'_'..'_';'_x_']' not
+R4272:4276 prosa.classic.model.schedule.uni.sustainability Sustainability param constr
+R4278:4285 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_COST constr
+R4287:4302 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.DefiningParameters.ParameterLookup.example_job_cost var
+R4305:4309 prosa.classic.model.schedule.uni.sustainability Sustainability param constr
+R4311:4324 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_SUSPENSION constr
+R4326:4347 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.DefiningParameters.ParameterLookup.example_job_suspension var
+def 4447:4465 Sustainability return_param_works1
+R4514:4516 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4478:4489 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R4491:4498 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_COST constr
+R4500:4513 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.DefiningParameters.ParameterLookup.example_params var
+R4517:4532 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.DefiningParameters.ParameterLookup.example_job_cost var
+def 4671:4689 Sustainability return_param_works2
+R4744:4746 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4702:4713 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R4715:4728 prosa.classic.model.schedule.uni.sustainability Sustainability JOB_SUSPENSION constr
+R4730:4743 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.DefiningParameters.ParameterLookup.example_params var
+R4747:4768 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.DefiningParameters.ParameterLookup.example_job_suspension var
+R4811:4825 prosa.classic.model.schedule.uni.sustainability Sustainability.SustainabilityDefs.DefiningParameters.ParameterLookup <> sec
+sec 4903:4912 Sustainability.SustainabilityDefs.DefiningParameters Properties
+def 5156:5169 Sustainability differ_only_by
+R5189:5191 mathcomp.boot.seq <> seq abbrev
+R5193:5207 prosa.classic.model.schedule.uni.sustainability Sustainability parameter_label ind
+binder 5172:5186 <> variable_labels:30
+R5218:5220 mathcomp.boot.seq <> seq abbrev
+R5222:5234 prosa.classic.model.schedule.uni.sustainability Sustainability job_parameter rec
+binder 5211:5212 <> s1:31
+binder 5214:5215 <> s2:32
+R5272:5284 prosa.classic.model.schedule.uni.sustainability Sustainability job_parameter rec
+binder 5258:5262 <> param:33
+binder 5264:5269 <> param':34
+R5316:5331 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5300:5306 Stdlib.Lists.List <> In def
+R5314:5315 prosa.classic.model.schedule.uni.sustainability <> s1:31 var
+R5308:5312 prosa.classic.model.schedule.uni.sustainability <> param:33 var
+R5349:5364 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5332:5338 Stdlib.Lists.List <> In def
+R5347:5348 prosa.classic.model.schedule.uni.sustainability <> s2:32 var
+R5340:5345 prosa.classic.model.schedule.uni.sustainability <> param':34 var
+R5395:5410 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5378:5380 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5365:5371 prosa.classic.model.schedule.uni.sustainability Sustainability p_label proj
+R5373:5377 prosa.classic.model.schedule.uni.sustainability <> param:33 var
+R5381:5387 prosa.classic.model.schedule.uni.sustainability Sustainability p_label proj
+R5389:5394 prosa.classic.model.schedule.uni.sustainability <> param':34 var
+R5447:5462 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5424:5431 Corelib.ssr.ssrbool <> ::bool_scope:x_'\notin'_x not
+R5411:5417 prosa.classic.model.schedule.uni.sustainability Sustainability p_label proj
+R5419:5423 prosa.classic.model.schedule.uni.sustainability <> param:33 var
+R5432:5446 prosa.classic.model.schedule.uni.sustainability <> variable_labels:30 var
+R5468:5470 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5463:5467 prosa.classic.model.schedule.uni.sustainability <> param:33 var
+R5471:5476 prosa.classic.model.schedule.uni.sustainability <> param':34 var
+def 5585:5593 Sustainability labels_of
+R5604:5606 mathcomp.boot.seq <> seq abbrev
+R5608:5620 prosa.classic.model.schedule.uni.sustainability Sustainability job_parameter rec
+binder 5596:5601 <> params:35
+R5626:5630 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'|'_x_'<-'_x_']' not
+R5640:5642 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'|'_x_'<-'_x_']' not
+R5644:5647 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'|'_x_'<-'_x_']' not
+R5654:5654 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'|'_x_'<-'_x_']' not
+binder 5643:5643 <> p:36
+binder 5643:5643 <> p:37
+R5631:5637 prosa.classic.model.schedule.uni.sustainability Sustainability p_label proj
+R5639:5639 prosa.classic.model.schedule.uni.sustainability <> p:36 var
+R5648:5653 prosa.classic.model.schedule.uni.sustainability <> params:35 var
+def 5759:5775 Sustainability has_unique_labels
+R5786:5788 mathcomp.boot.seq <> seq abbrev
+R5790:5802 prosa.classic.model.schedule.uni.sustainability Sustainability job_parameter rec
+binder 5778:5783 <> params:38
+R5808:5811 mathcomp.boot.seq <> uniq def
+R5814:5822 prosa.classic.model.schedule.uni.sustainability Sustainability labels_of def
+R5824:5829 prosa.classic.model.schedule.uni.sustainability <> params:38 var
+def 5945:5964 Sustainability corresponding_labels
+R5975:5977 mathcomp.boot.seq <> seq abbrev
+R5979:5991 prosa.classic.model.schedule.uni.sustainability Sustainability job_parameter rec
+binder 5967:5972 <> params:39
+R6003:6005 mathcomp.boot.seq <> seq abbrev
+R6007:6021 prosa.classic.model.schedule.uni.sustainability Sustainability parameter_label ind
+binder 5995:6000 <> labels:40
+binder 6044:6044 <> l:41
+R6069:6073 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R6048:6052 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R6047:6047 prosa.classic.model.schedule.uni.sustainability <> l:41 var
+R6053:6061 prosa.classic.model.schedule.uni.sustainability Sustainability labels_of def
+R6063:6068 prosa.classic.model.schedule.uni.sustainability <> params:39 var
+R6075:6079 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R6074:6074 prosa.classic.model.schedule.uni.sustainability <> l:41 var
+R6080:6085 prosa.classic.model.schedule.uni.sustainability <> labels:40 var
+prf 6250:6266 Sustainability found_param_label
+R6295:6297 mathcomp.boot.seq <> seq abbrev
+R6299:6311 prosa.classic.model.schedule.uni.sustainability Sustainability job_parameter rec
+binder 6287:6292 <> params:42
+R6318:6330 prosa.classic.model.schedule.uni.sustainability Sustainability job_parameter rec
+binder 6315:6315 <> p:43
+R6341:6355 prosa.classic.model.schedule.uni.sustainability Sustainability parameter_label ind
+binder 6334:6338 <> label:44
+R6395:6410 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6371:6387 prosa.classic.model.schedule.uni.sustainability Sustainability has_unique_labels def
+R6389:6394 prosa.classic.model.schedule.uni.sustainability <> params:42 var
+R6427:6442 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6411:6417 Stdlib.Lists.List <> In def
+R6421:6426 prosa.classic.model.schedule.uni.sustainability <> params:42 var
+R6419:6419 prosa.classic.model.schedule.uni.sustainability <> p:43 var
+R6460:6475 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6452:6454 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6443:6449 prosa.classic.model.schedule.uni.sustainability Sustainability p_label proj
+R6451:6451 prosa.classic.model.schedule.uni.sustainability <> p:43 var
+R6455:6459 prosa.classic.model.schedule.uni.sustainability <> label:44 var
+R6477:6479 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6476:6476 prosa.classic.model.schedule.uni.sustainability <> p:43 var
+R6480:6484 prosa.classic.model.schedule.uni.sustainability Sustainability param constr
+R6486:6490 prosa.classic.model.schedule.uni.sustainability <> label:44 var
+R6493:6504 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R6506:6510 prosa.classic.model.schedule.uni.sustainability <> label:44 var
+R6512:6517 prosa.classic.model.schedule.uni.sustainability <> params:42 var
+R6627:6630 Corelib.ssr.ssrbool <> andP thm
+R6732:6743 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R6746:6755 prosa.classic.model.schedule.uni.sustainability Sustainability find_param def
+R6763:6769 mathcomp.boot.eqtype <> eq_refl thm
+R6732:6743 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R6732:6743 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R6746:6755 prosa.classic.model.schedule.uni.sustainability Sustainability find_param def
+R6746:6755 prosa.classic.model.schedule.uni.sustainability Sustainability find_param def
+R6763:6769 mathcomp.boot.eqtype <> eq_refl thm
+R6763:6769 mathcomp.boot.eqtype <> eq_refl thm
+R6873:6884 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R6887:6896 prosa.classic.model.schedule.uni.sustainability Sustainability find_param def
+R6873:6884 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R6873:6884 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R6887:6896 prosa.classic.model.schedule.uni.sustainability Sustainability find_param def
+R6887:6896 prosa.classic.model.schedule.uni.sustainability Sustainability find_param def
+R6926:6929 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R6926:6929 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R6926:6929 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R6985:6987 mathcomp.boot.eqtype <> eqP def
+R7044:7047 Corelib.ssr.ssrbool <> negP thm
+R7099:7103 prosa.classic.util.list <> mapP2 thm
+R7099:7103 prosa.classic.util.list <> mapP2 thm
+R7160:7169 prosa.classic.model.schedule.uni.sustainability Sustainability.SustainabilityDefs.DefiningParameters.Properties <> sec
+R7181:7198 prosa.classic.model.schedule.uni.sustainability Sustainability.SustainabilityDefs.DefiningParameters <> sec
+sec 7279:7298 Sustainability.SustainabilityDefs SustainabilityPolicy
+var 7397:7406 Sustainability.SustainabilityDefs.SustainabilityPolicy all_labels
+R7409:7411 mathcomp.boot.seq <> seq abbrev
+R7413:7427 prosa.classic.model.schedule.uni.sustainability Sustainability parameter_label ind
+var 7765:7778 Sustainability.SustainabilityDefs.SustainabilityPolicy is_schedulable
+R7806:7809 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7789:7791 mathcomp.boot.seq <> seq abbrev
+R7793:7805 prosa.classic.model.schedule.uni.sustainability Sustainability job_parameter rec
+R7822:7825 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7810:7817 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R7819:7821 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.Job var
+R7829:7832 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7826:7828 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.Job var
+R7833:7836 Corelib.Init.Datatypes <> bool ind
+var 8016:8036 Sustainability.SustainabilityDefs.SustainabilityPolicy belongs_to_task_model
+R8064:8067 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8047:8049 mathcomp.boot.seq <> seq abbrev
+R8051:8063 prosa.classic.model.schedule.uni.sustainability Sustainability job_parameter rec
+R8088:8091 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8068:8083 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R8085:8087 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.Job var
+R8104:8107 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8092:8099 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R8101:8103 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.Job var
+var 8239:8255 Sustainability.SustainabilityDefs.SustainabilityPolicy sustainable_param
+R8258:8272 prosa.classic.model.schedule.uni.sustainability Sustainability parameter_label ind
+var 8680:8696 Sustainability.SustainabilityDefs.SustainabilityPolicy has_better_params
+R8699:8699 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8731:8769 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8700:8712 prosa.classic.model.schedule.uni.sustainability Sustainability type_of_label def
+R8714:8730 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.SustainabilityPolicy.sustainable_param var
+R8770:8770 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8802:8806 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8771:8783 prosa.classic.model.schedule.uni.sustainability Sustainability type_of_label def
+R8785:8801 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.SustainabilityPolicy.sustainable_param var
+def 8958:8989 Sustainability sustainable_param_becomes_better
+R9008:9010 mathcomp.boot.seq <> seq abbrev
+R9012:9024 prosa.classic.model.schedule.uni.sustainability Sustainability job_parameter rec
+binder 8992:8997 <> params:55
+binder 8999:9005 <> params':56
+R9047:9058 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R9060:9076 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.SustainabilityPolicy.sustainable_param var
+R9078:9083 prosa.classic.model.schedule.uni.sustainability <> params:55 var
+binder 9042:9042 <> P:57
+R9106:9117 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R9119:9135 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.SustainabilityPolicy.sustainable_param var
+R9137:9143 prosa.classic.model.schedule.uni.sustainability <> params':56 var
+binder 9100:9101 <> P':58
+R9158:9174 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.SustainabilityPolicy.has_better_params var
+R9176:9176 prosa.classic.model.schedule.uni.sustainability <> P:57 var
+R9178:9179 prosa.classic.model.schedule.uni.sustainability <> P':58 var
+sec 9197:9213 Sustainability.SustainabilityDefs.SustainabilityPolicy VaryingParameters
+var 9331:9345 Sustainability.SustainabilityDefs.SustainabilityPolicy.VaryingParameters variable_params
+R9348:9350 mathcomp.boot.seq <> seq abbrev
+R9352:9366 prosa.classic.model.schedule.uni.sustainability Sustainability parameter_label ind
+def 9502:9534 Sustainability sustainable_and_varying_params_in
+R9545:9547 mathcomp.boot.seq <> seq abbrev
+R9549:9561 prosa.classic.model.schedule.uni.sustainability Sustainability job_parameter rec
+binder 9537:9542 <> params:61
+binder 9584:9588 <> label:62
+R9649:9664 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9608:9612 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R9603:9607 prosa.classic.model.schedule.uni.sustainability <> label:62 var
+R9630:9633 mathcomp.boot.seq <> ::seq_scope:x_'::'_x not
+R9613:9629 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.SustainabilityPolicy.sustainable_param var
+R9634:9648 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.SustainabilityPolicy.VaryingParameters.variable_params var
+R9670:9674 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R9665:9669 prosa.classic.model.schedule.uni.sustainability <> label:62 var
+R9675:9683 prosa.classic.model.schedule.uni.sustainability Sustainability labels_of def
+R9685:9690 prosa.classic.model.schedule.uni.sustainability <> params:61 var
+def 9926:9946 Sustainability has_consistent_labels
+R9957:9959 mathcomp.boot.seq <> seq abbrev
+R9961:9973 prosa.classic.model.schedule.uni.sustainability Sustainability job_parameter rec
+binder 9949:9954 <> params:63
+R10011:10022 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R9987:10003 prosa.classic.model.schedule.uni.sustainability Sustainability has_unique_labels def
+R10005:10010 prosa.classic.model.schedule.uni.sustainability <> params:63 var
+R10061:10072 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R10023:10042 prosa.classic.model.schedule.uni.sustainability Sustainability corresponding_labels def
+R10044:10049 prosa.classic.model.schedule.uni.sustainability <> params:63 var
+R10051:10060 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.SustainabilityPolicy.all_labels var
+R10073:10105 prosa.classic.model.schedule.uni.sustainability Sustainability sustainable_and_varying_params_in def
+R10107:10112 prosa.classic.model.schedule.uni.sustainability <> params:63 var
+def 10232:10256 Sustainability jobs_are_schedulable_with
+R10267:10269 mathcomp.boot.seq <> seq abbrev
+R10271:10283 prosa.classic.model.schedule.uni.sustainability Sustainability job_parameter rec
+binder 10259:10264 <> params:64
+binder 10306:10312 <> arr_seq:65
+binder 10314:10318 <> sched:66
+binder 10320:10320 <> j:67
+R10377:10392 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R10335:10355 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.SustainabilityPolicy.belongs_to_task_model var
+R10357:10362 prosa.classic.model.schedule.uni.sustainability <> params:64 var
+R10364:10370 prosa.classic.model.schedule.uni.sustainability <> arr_seq:65 var
+R10372:10376 prosa.classic.model.schedule.uni.sustainability <> sched:66 var
+R10393:10406 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.SustainabilityPolicy.is_schedulable var
+R10408:10413 prosa.classic.model.schedule.uni.sustainability <> params:64 var
+R10415:10419 prosa.classic.model.schedule.uni.sustainability <> sched:66 var
+R10421:10421 prosa.classic.model.schedule.uni.sustainability <> j:67 var
+def 10605:10631 Sustainability jobs_are_V_schedulable_with
+R10642:10644 mathcomp.boot.seq <> seq abbrev
+R10646:10658 prosa.classic.model.schedule.uni.sustainability Sustainability job_parameter rec
+binder 10634:10639 <> params:68
+R10698:10700 mathcomp.boot.seq <> seq abbrev
+R10702:10714 prosa.classic.model.schedule.uni.sustainability Sustainability job_parameter rec
+binder 10682:10695 <> similar_params:69
+R10766:10781 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R10730:10750 prosa.classic.model.schedule.uni.sustainability Sustainability has_consistent_labels def
+R10752:10765 prosa.classic.model.schedule.uni.sustainability <> similar_params:69 var
+R10834:10849 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R10782:10795 prosa.classic.model.schedule.uni.sustainability Sustainability differ_only_by def
+R10797:10811 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.SustainabilityPolicy.VaryingParameters.variable_params var
+R10813:10818 prosa.classic.model.schedule.uni.sustainability <> params:68 var
+R10820:10833 prosa.classic.model.schedule.uni.sustainability <> similar_params:69 var
+R10850:10874 prosa.classic.model.schedule.uni.sustainability Sustainability jobs_are_schedulable_with def
+R10876:10889 prosa.classic.model.schedule.uni.sustainability <> similar_params:69 var
+def 11252:11269 Sustainability weakly_sustainable
+R11314:11316 mathcomp.boot.seq <> seq abbrev
+R11318:11330 prosa.classic.model.schedule.uni.sustainability Sustainability job_parameter rec
+binder 11292:11297 <> params:70
+binder 11299:11311 <> better_params:71
+R11374:11389 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R11346:11366 prosa.classic.model.schedule.uni.sustainability Sustainability has_consistent_labels def
+R11368:11373 prosa.classic.model.schedule.uni.sustainability <> params:70 var
+R11425:11440 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R11390:11410 prosa.classic.model.schedule.uni.sustainability Sustainability has_consistent_labels def
+R11412:11424 prosa.classic.model.schedule.uni.sustainability <> better_params:71 var
+R11498:11513 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R11441:11454 prosa.classic.model.schedule.uni.sustainability Sustainability differ_only_by def
+R11456:11458 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_']' not
+R11476:11476 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_']' not
+R11459:11475 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.SustainabilityPolicy.sustainable_param var
+R11478:11483 prosa.classic.model.schedule.uni.sustainability <> params:70 var
+R11485:11497 prosa.classic.model.schedule.uni.sustainability <> better_params:71 var
+R11567:11582 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R11514:11545 prosa.classic.model.schedule.uni.sustainability Sustainability sustainable_param_becomes_better def
+R11547:11552 prosa.classic.model.schedule.uni.sustainability <> params:70 var
+R11554:11566 prosa.classic.model.schedule.uni.sustainability <> better_params:71 var
+R11617:11632 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R11583:11609 prosa.classic.model.schedule.uni.sustainability Sustainability jobs_are_V_schedulable_with def
+R11611:11616 prosa.classic.model.schedule.uni.sustainability <> params:70 var
+R11633:11657 prosa.classic.model.schedule.uni.sustainability Sustainability jobs_are_schedulable_with def
+R11659:11671 prosa.classic.model.schedule.uni.sustainability <> better_params:71 var
+sec 11831:11851 Sustainability.SustainabilityDefs.SustainabilityPolicy.VaryingParameters AlternativeDefinition
+def 12012:12042 Sustainability sustainable_param_becomes_worse
+R12061:12063 mathcomp.boot.seq <> seq abbrev
+R12065:12077 prosa.classic.model.schedule.uni.sustainability Sustainability job_parameter rec
+binder 12045:12050 <> params:72
+binder 12052:12058 <> params':73
+R12104:12115 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R12117:12133 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.SustainabilityPolicy.sustainable_param var
+R12135:12140 prosa.classic.model.schedule.uni.sustainability <> params:72 var
+binder 12099:12099 <> P:74
+R12167:12178 prosa.classic.model.schedule.uni.sustainability Sustainability return_param def
+R12180:12196 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.SustainabilityPolicy.sustainable_param var
+R12198:12204 prosa.classic.model.schedule.uni.sustainability <> params':73 var
+binder 12161:12162 <> P':75
+R12223:12239 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.SustainabilityPolicy.has_better_params var
+R12241:12242 prosa.classic.model.schedule.uni.sustainability <> P':75 var
+R12244:12244 prosa.classic.model.schedule.uni.sustainability <> P:74 var
+def 12366:12394 Sustainability jobs_are_not_schedulable_with
+R12405:12407 mathcomp.boot.seq <> seq abbrev
+R12409:12421 prosa.classic.model.schedule.uni.sustainability Sustainability job_parameter rec
+binder 12397:12402 <> params:76
+R12439:12445 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R12461:12476 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 12446:12452 <> arr_seq:77
+binder 12454:12458 <> sched:78
+binder 12460:12460 <> j:79
+R12519:12536 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R12477:12497 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.SustainabilityPolicy.belongs_to_task_model var
+R12499:12504 prosa.classic.model.schedule.uni.sustainability <> params:76 var
+R12506:12512 prosa.classic.model.schedule.uni.sustainability <> arr_seq:77 var
+R12514:12518 prosa.classic.model.schedule.uni.sustainability <> sched:78 var
+R12537:12539 Corelib.ssr.ssrbool <> ::bool_scope:'~~'_x not
+R12540:12553 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.SustainabilityPolicy.is_schedulable var
+R12555:12560 prosa.classic.model.schedule.uni.sustainability <> params:76 var
+R12562:12566 prosa.classic.model.schedule.uni.sustainability <> sched:78 var
+R12568:12568 prosa.classic.model.schedule.uni.sustainability <> j:79 var
+def 12687:12719 Sustainability weakly_sustainable_contrapositive
+binder 12743:12748 <> params:80
+binder 12750:12761 <> params_worse:81
+R12806:12823 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R12778:12798 prosa.classic.model.schedule.uni.sustainability Sustainability has_consistent_labels def
+R12800:12805 prosa.classic.model.schedule.uni.sustainability <> params:80 var
+R12858:12875 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R12824:12844 prosa.classic.model.schedule.uni.sustainability Sustainability has_consistent_labels def
+R12846:12857 prosa.classic.model.schedule.uni.sustainability <> params_worse:81 var
+R12912:12929 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R12876:12904 prosa.classic.model.schedule.uni.sustainability Sustainability jobs_are_not_schedulable_with def
+R12906:12911 prosa.classic.model.schedule.uni.sustainability <> params:80 var
+R12987:13004 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R12930:12943 prosa.classic.model.schedule.uni.sustainability Sustainability differ_only_by def
+R12945:12948 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_']' not
+R12966:12966 mathcomp.boot.seq <> ::seq_scope:'['_'::'_x_']' not
+R12949:12965 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.SustainabilityPolicy.sustainable_param var
+R12968:12973 prosa.classic.model.schedule.uni.sustainability <> params:80 var
+R12975:12986 prosa.classic.model.schedule.uni.sustainability <> params_worse:81 var
+R13056:13073 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R13005:13035 prosa.classic.model.schedule.uni.sustainability Sustainability sustainable_param_becomes_worse def
+R13037:13042 prosa.classic.model.schedule.uni.sustainability <> params:80 var
+R13044:13055 prosa.classic.model.schedule.uni.sustainability <> params_worse:81 var
+R13074:13080 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R13094:13111 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 13081:13093 <> params_worse':82
+R13147:13166 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13112:13132 prosa.classic.model.schedule.uni.sustainability Sustainability has_consistent_labels def
+R13134:13146 prosa.classic.model.schedule.uni.sustainability <> params_worse':82 var
+R13224:13243 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13167:13180 prosa.classic.model.schedule.uni.sustainability Sustainability differ_only_by def
+R13182:13196 prosa.classic.model.schedule.uni.sustainability <> Sustainability.SustainabilityDefs.SustainabilityPolicy.VaryingParameters.variable_params var
+R13198:13209 prosa.classic.model.schedule.uni.sustainability <> params_worse:81 var
+R13211:13223 prosa.classic.model.schedule.uni.sustainability <> params_worse':82 var
+R13244:13272 prosa.classic.model.schedule.uni.sustainability Sustainability jobs_are_not_schedulable_with def
+R13274:13286 prosa.classic.model.schedule.uni.sustainability <> params_worse':82 var
+var 13389:13413 Sustainability.SustainabilityDefs.SustainabilityPolicy.VaryingParameters.AlternativeDefinition H_classical_forall_exists
+binder 13436:13436 <> T:83
+R13450:13453 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R13449:13449 prosa.classic.model.schedule.uni.sustainability <> T:83 var
+binder 13446:13446 <> P:84
+R13494:13497 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R13475:13477 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R13493:13493 Corelib.Init.Logic <> ::type_scope:'~'_x not
+binder 13485:13485 <> x:85
+R13488:13489 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R13490:13490 prosa.classic.model.schedule.uni.sustainability <> P:84 var
+R13492:13492 prosa.classic.model.schedule.uni.sustainability <> x:85 var
+R13498:13504 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R13506:13507 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 13505:13505 <> x:86
+R13508:13508 prosa.classic.model.schedule.uni.sustainability <> P:84 var
+R13510:13510 prosa.classic.model.schedule.uni.sustainability <> x:86 var
+var 13534:13551 Sustainability.SustainabilityDefs.SustainabilityPolicy.VaryingParameters.AlternativeDefinition H_classical_and_or
+binder 13574:13574 <> P:89
+binder 13576:13576 <> Q:90
+R13596:13599 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R13586:13588 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R13595:13595 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R13590:13593 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13589:13589 prosa.classic.model.schedule.uni.sustainability <> P:89 var
+R13594:13594 prosa.classic.model.schedule.uni.sustainability <> Q:90 var
+R13603:13606 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R13600:13601 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R13602:13602 prosa.classic.model.schedule.uni.sustainability <> P:89 var
+R13607:13608 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R13609:13609 prosa.classic.model.schedule.uni.sustainability <> Q:90 var
+prf 13706:13736 Sustainability weak_sustainability_equivalence
+R13769:13773 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R13751:13768 prosa.classic.model.schedule.uni.sustainability Sustainability weakly_sustainable def
+R13774:13806 prosa.classic.model.schedule.uni.sustainability Sustainability weakly_sustainable_contrapositive def
+R14090:14107 prosa.classic.model.schedule.uni.sustainability Sustainability weakly_sustainable def
+R14672:14700 prosa.classic.model.schedule.uni.sustainability Sustainability jobs_are_not_schedulable_with def
+R14762:14768 Corelib.ssr.ssrbool <> contraT thm
+R14762:14768 Corelib.ssr.ssrbool <> contraT thm
+R14890:14914 prosa.classic.model.schedule.uni.sustainability Sustainability jobs_are_schedulable_with def
+R14917:14945 prosa.classic.model.schedule.uni.sustainability Sustainability jobs_are_not_schedulable_with def
+R15326:15332 Corelib.ssr.ssrbool <> contraT thm
+R15326:15332 Corelib.ssr.ssrbool <> contraT thm
+R15373:15405 prosa.classic.model.schedule.uni.sustainability Sustainability weakly_sustainable_contrapositive def
+R15893:15919 prosa.classic.model.schedule.uni.sustainability Sustainability jobs_are_V_schedulable_with def
+R16229:16249 prosa.classic.model.schedule.uni.sustainability Sustainability.SustainabilityDefs.SustainabilityPolicy.VaryingParameters.AlternativeDefinition <> sec
+R16263:16279 prosa.classic.model.schedule.uni.sustainability Sustainability.SustainabilityDefs.SustainabilityPolicy.VaryingParameters <> sec
+def 16514:16533 Sustainability strongly_sustainable
+R16538:16555 prosa.classic.model.schedule.uni.sustainability Sustainability weakly_sustainable def
+R16557:16560 mathcomp.boot.seq <> ::seq_scope:'['_'::'_']' not
+R16578:16597 prosa.classic.model.schedule.uni.sustainability Sustainability.SustainabilityDefs.SustainabilityPolicy <> sec
+R16611:16628 prosa.classic.model.schedule.uni.sustainability Sustainability.SustainabilityDefs <> sec
+R16651:16663 prosa.classic.model.schedule.uni.sustainability Sustainability job_parameter rec
+R16651:16663 prosa.classic.model.schedule.uni.sustainability Sustainability job_parameter rec
+R16688:16701 prosa.classic.model.schedule.uni.sustainability Sustainability <> mod

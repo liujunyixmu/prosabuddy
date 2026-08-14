@@ -1,0 +1,261 @@
+DIGEST 18e01b8500453f478e33da0005997689
+Fprosa.classic.model.schedule.global.response_time
+R15:36 prosa.classic.util.all <> <> lib
+R54:91 prosa.classic.model.arrival.basic.task <> <> lib
+R93:129 prosa.classic.model.arrival.basic.job <> <> lib
+R131:176 prosa.classic.model.arrival.basic.task_arrival <> <> lib
+R194:243 prosa.classic.model.schedule.global.basic.schedule <> <> lib
+R275:283 mathcomp.boot.ssreflect <> <> lib
+R285:291 mathcomp.boot.ssrbool <> <> lib
+R293:298 mathcomp.boot.eqtype <> <> lib
+R300:305 mathcomp.boot.ssrnat <> <> lib
+R307:309 mathcomp.boot.seq <> <> lib
+R311:317 mathcomp.boot.fintype <> <> lib
+R319:323 mathcomp.boot.bigop <> <> lib
+mod 398:409 <> ResponseTime
+R422:429 prosa.classic.model.schedule.global.basic.schedule Schedule <> mod
+R431:445 prosa.classic.model.arrival.basic.task SporadicTaskset <> mod
+R447:457 prosa.classic.model.arrival.basic.task_arrival TaskArrival <> mod
+sec 473:489 ResponseTime ResponseTimeBound
+var  506:518 ResponseTime.ResponseTimeBound sporadic_task
+R521:526 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  543:545 ResponseTime.ResponseTimeBound Job
+R548:553 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 570:580 ResponseTime.ResponseTimeBound job_arrival
+R586:589 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R583:585 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.Job var
+R590:593 prosa.classic.model.time Time time def
+var 609:616 ResponseTime.ResponseTimeBound job_cost
+R622:625 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R619:621 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.Job var
+R626:629 prosa.classic.model.time Time time def
+var 645:652 ResponseTime.ResponseTimeBound job_task
+R658:661 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R655:657 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.Job var
+R662:674 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.sporadic_task var
+var 738:744 ResponseTime.ResponseTimeBound arr_seq
+R747:762 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R764:766 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.Job var
+var  843:850 ResponseTime.ResponseTimeBound num_cpus
+R854:856 Corelib.Init.Datatypes <> nat ind
+var 873:877 ResponseTime.ResponseTimeBound sched
+R880:887 prosa.classic.model.schedule.global.basic.schedule Schedule schedule def
+R893:900 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.num_cpus var
+R889:891 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.Job var
+var 968:987 ResponseTime.ResponseTimeBound job_has_completed_by
+R992:1000 prosa.classic.model.schedule.global.basic.schedule Schedule completed def
+R1011:1015 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.sched var
+R1002:1009 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.job_cost var
+sec 1031:1041 ResponseTime.ResponseTimeBound Definitions
+var 1097:1099 ResponseTime.ResponseTimeBound.Definitions tsk
+R1102:1114 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.sporadic_task var
+var 1216:1216 ResponseTime.ResponseTimeBound.Definitions R
+R1219:1222 prosa.classic.model.time Time time def
+def 1343:1372 ResponseTime is_response_time_bound_of_task
+binder 1392:1392 <> j:18
+R1425:1438 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1405:1414 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R1424:1424 prosa.classic.model.schedule.global.response_time <> j:18 var
+R1416:1422 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.arr_seq var
+R1455:1468 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1449:1451 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1439:1446 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.job_task var
+R1448:1448 prosa.classic.model.schedule.global.response_time <> j:18 var
+R1452:1454 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.Definitions.tsk var
+R1469:1488 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.job_has_completed_by var
+R1490:1490 prosa.classic.model.schedule.global.response_time <> j:18 var
+R1506:1508 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R1493:1503 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.job_arrival var
+R1505:1505 prosa.classic.model.schedule.global.response_time <> j:18 var
+R1509:1509 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.Definitions.R var
+R1522:1532 prosa.classic.model.schedule.global.response_time ResponseTime.ResponseTimeBound.Definitions <> sec
+sec 1552:1562 ResponseTime.ResponseTimeBound BasicLemmas
+var 1643:1671 ResponseTime.ResponseTimeBound.BasicLemmas H_completed_jobs_dont_execute
+R1682:1708 prosa.classic.model.schedule.global.basic.schedule Schedule completed_jobs_dont_execute def
+R1719:1723 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.sched var
+R1710:1717 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.job_cost var
+sec 1741:1751 ResponseTime.ResponseTimeBound.BasicLemmas SpecificJob
+var 1809:1809 ResponseTime.ResponseTimeBound.BasicLemmas.SpecificJob j
+R1812:1814 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.Job var
+var 1836:1846 ResponseTime.ResponseTimeBound.BasicLemmas.SpecificJob H_j_arrives
+R1849:1858 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R1868:1868 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.BasicLemmas.SpecificJob.j var
+R1860:1866 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.arr_seq var
+var 1955:1955 ResponseTime.ResponseTimeBound.BasicLemmas.SpecificJob R
+R1958:1961 prosa.classic.model.time Time time def
+var 1983:2001 ResponseTime.ResponseTimeBound.BasicLemmas.SpecificJob response_time_bound
+R2014:2033 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.job_has_completed_by var
+R2035:2035 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.BasicLemmas.SpecificJob.j var
+R2051:2053 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R2038:2048 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.job_arrival var
+R2050:2050 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.BasicLemmas.SpecificJob.j var
+R2054:2054 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.BasicLemmas.SpecificJob.R var
+prf 2162:2186 ResponseTime service_after_job_rt_zero
+binder 2207:2208 <> t':29
+R2246:2261 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2225:2228 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R2242:2244 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R2229:2239 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.job_arrival var
+R2241:2241 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.BasicLemmas.SpecificJob.j var
+R2245:2245 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.BasicLemmas.SpecificJob.R var
+R2223:2224 prosa.classic.model.schedule.global.response_time <> t':29 var
+R2283:2285 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2262:2271 prosa.classic.model.schedule.global.basic.schedule Schedule service_at def
+R2281:2282 prosa.classic.model.schedule.global.response_time <> t':29 var
+R2279:2279 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.BasicLemmas.SpecificJob.j var
+R2273:2277 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.sched var
+R2430:2459 prosa.classic.model.schedule.global.response_time ResponseTime is_response_time_bound_of_task def
+R2462:2470 prosa.classic.model.schedule.global.basic.schedule Schedule completed def
+R2490:2516 prosa.classic.model.schedule.global.basic.schedule Schedule completed_jobs_dont_execute def
+R2540:2542 mathcomp.boot.eqtype <> eqP def
+R2554:2558 mathcomp.boot.ssrnat <> leqn0 thm
+R2540:2542 mathcomp.boot.eqtype <> eqP def
+R2554:2558 mathcomp.boot.ssrnat <> leqn0 thm
+R2554:2558 mathcomp.boot.ssrnat <> leqn0 thm
+R2578:2597 prosa.classic.model.schedule.global.basic.schedule Schedule completion_monotonic thm
+R2578:2597 prosa.classic.model.schedule.global.basic.schedule Schedule completion_monotonic thm
+R2631:2661 prosa.classic.model.schedule.global.basic.schedule Schedule completed_implies_not_scheduled thm
+R2631:2661 prosa.classic.model.schedule.global.basic.schedule Schedule completed_implies_not_scheduled thm
+R2712:2735 prosa.classic.model.schedule.global.basic.schedule Schedule not_scheduled_no_service thm
+R2712:2735 prosa.classic.model.schedule.global.basic.schedule Schedule not_scheduled_no_service thm
+R2712:2735 prosa.classic.model.schedule.global.basic.schedule Schedule not_scheduled_no_service thm
+R2747:2749 mathcomp.boot.eqtype <> eqP def
+prf 2863:2898 ResponseTime cumulative_service_after_job_rt_zero
+binder 2919:2920 <> t':30
+binder 2922:2924 <> t'':31
+R2962:2977 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2941:2944 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R2958:2960 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R2945:2955 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.job_arrival var
+R2957:2957 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.BasicLemmas.SpecificJob.j var
+R2961:2961 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.BasicLemmas.SpecificJob.R var
+R2939:2940 prosa.classic.model.schedule.global.response_time <> t':30 var
+R3019:3021 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2978:2983 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R2986:2989 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R2991:2993 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R2997:2998 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R2984:2985 prosa.classic.model.schedule.global.response_time <> t':30 var
+R2994:2996 prosa.classic.model.schedule.global.response_time <> t'':31 var
+binder 2990:2990 <> t:32
+binder 2990:2990 <> t:33
+binder 2990:2990 <> t:34
+R2999:3008 prosa.classic.model.schedule.global.basic.schedule Schedule service_at def
+R3018:3018 prosa.classic.model.schedule.global.response_time <> t:32 var
+R3016:3016 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.BasicLemmas.SpecificJob.j var
+R3010:3014 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.sched var
+R3061:3063 mathcomp.boot.eqtype <> eqP def
+R3075:3079 mathcomp.boot.ssrnat <> leqn0 thm
+R3061:3063 mathcomp.boot.eqtype <> eqP def
+R3075:3079 mathcomp.boot.ssrnat <> leqn0 thm
+R3075:3079 mathcomp.boot.ssrnat <> leqn0 thm
+R3100:3111 mathcomp.boot.bigop <> big_nat_cond thm
+binder 3149:3149 <> i:35
+R3125:3131 mathcomp.boot.bigop <> eq_bigr thm
+R3187:3199 mathcomp.boot.bigop <> big_const_seq thm
+R3201:3209 mathcomp.boot.ssrnat <> iter_addn thm
+R3211:3215 mathcomp.boot.ssrnat <> mul0n thm
+R3217:3221 mathcomp.boot.ssrnat <> addn0 thm
+R3223:3227 mathcomp.boot.ssrnat <> leqnn thm
+R3100:3111 mathcomp.boot.bigop <> big_nat_cond thm
+R3100:3111 mathcomp.boot.bigop <> big_nat_cond thm
+binder 3149:3149 <> i:36
+R3125:3131 mathcomp.boot.bigop <> eq_bigr thm
+binder 3149:3149 <> i:37
+R3125:3131 mathcomp.boot.bigop <> eq_bigr thm
+binder 3149:3149 <> i:38
+R3125:3131 mathcomp.boot.bigop <> eq_bigr thm
+R3187:3199 mathcomp.boot.bigop <> big_const_seq thm
+R3187:3199 mathcomp.boot.bigop <> big_const_seq thm
+R3201:3209 mathcomp.boot.ssrnat <> iter_addn thm
+R3201:3209 mathcomp.boot.ssrnat <> iter_addn thm
+R3211:3215 mathcomp.boot.ssrnat <> mul0n thm
+R3211:3215 mathcomp.boot.ssrnat <> mul0n thm
+R3217:3221 mathcomp.boot.ssrnat <> addn0 thm
+R3217:3221 mathcomp.boot.ssrnat <> addn0 thm
+R3223:3227 mathcomp.boot.ssrnat <> leqnn thm
+R3223:3227 mathcomp.boot.ssrnat <> leqnn thm
+R3257:3261 Corelib.ssr.ssrbool <> andbT thm
+R3257:3261 Corelib.ssr.ssrbool <> andbT thm
+R3257:3261 Corelib.ssr.ssrbool <> andbT thm
+R3273:3276 Corelib.ssr.ssrbool <> andP thm
+R3307:3331 prosa.classic.model.schedule.global.response_time ResponseTime service_after_job_rt_zero thm
+R3365:3373 mathcomp.boot.ssrnat <> leq_trans thm
+R3307:3331 prosa.classic.model.schedule.global.response_time ResponseTime service_after_job_rt_zero thm
+R3307:3331 prosa.classic.model.schedule.global.response_time ResponseTime service_after_job_rt_zero thm
+R3365:3373 mathcomp.boot.ssrnat <> leq_trans thm
+R3416:3426 prosa.classic.model.schedule.global.response_time ResponseTime.ResponseTimeBound.BasicLemmas.SpecificJob <> sec
+sec 3444:3450 ResponseTime.ResponseTimeBound.BasicLemmas AllJobs
+var 3510:3512 ResponseTime.ResponseTimeBound.BasicLemmas.AllJobs tsk
+R3515:3527 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.sporadic_task var
+var 3610:3610 ResponseTime.ResponseTimeBound.BasicLemmas.AllJobs R
+R3613:3616 prosa.classic.model.time Time time def
+var 3638:3656 ResponseTime.ResponseTimeBound.BasicLemmas.AllJobs response_time_bound
+R3669:3698 prosa.classic.model.schedule.global.response_time ResponseTime is_response_time_bound_of_task def
+R3704:3704 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.BasicLemmas.AllJobs.R var
+R3700:3702 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.BasicLemmas.AllJobs.tsk var
+var 3776:3776 ResponseTime.ResponseTimeBound.BasicLemmas.AllJobs j
+R3779:3781 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.Job var
+var 3803:3813 ResponseTime.ResponseTimeBound.BasicLemmas.AllJobs H_j_arrives
+R3816:3825 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R3835:3835 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.BasicLemmas.AllJobs.j var
+R3827:3833 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.arr_seq var
+var 3857:3869 ResponseTime.ResponseTimeBound.BasicLemmas.AllJobs H_job_of_task
+R3882:3884 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3872:3879 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.job_task var
+R3881:3881 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.BasicLemmas.AllJobs.j var
+R3885:3887 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.BasicLemmas.AllJobs.tsk var
+prf 3997:4022 ResponseTime service_after_task_rt_zero
+binder 4043:4044 <> t':51
+R4082:4097 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4061:4064 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R4078:4080 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R4065:4075 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.job_arrival var
+R4077:4077 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.BasicLemmas.AllJobs.j var
+R4081:4081 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.BasicLemmas.AllJobs.R var
+R4059:4060 prosa.classic.model.schedule.global.response_time <> t':51 var
+R4119:4121 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4098:4107 prosa.classic.model.schedule.global.basic.schedule Schedule service_at def
+R4117:4118 prosa.classic.model.schedule.global.response_time <> t':51 var
+R4115:4115 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.BasicLemmas.AllJobs.j var
+R4109:4113 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.sched var
+R4201:4201 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.BasicLemmas.AllJobs.R var
+R4164:4188 prosa.classic.model.schedule.global.response_time ResponseTime service_after_job_rt_zero thm
+R4212:4230 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.BasicLemmas.AllJobs.response_time_bound var
+R4201:4201 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.BasicLemmas.AllJobs.R var
+R4164:4188 prosa.classic.model.schedule.global.response_time ResponseTime service_after_job_rt_zero thm
+R4212:4230 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.BasicLemmas.AllJobs.response_time_bound var
+prf 4332:4368 ResponseTime cumulative_service_after_task_rt_zero
+binder 4389:4390 <> t':52
+binder 4392:4394 <> t'':53
+R4432:4447 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4411:4414 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R4428:4430 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R4415:4425 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.job_arrival var
+R4427:4427 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.BasicLemmas.AllJobs.j var
+R4431:4431 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.BasicLemmas.AllJobs.R var
+R4409:4410 prosa.classic.model.schedule.global.response_time <> t':52 var
+R4489:4491 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4448:4453 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R4456:4459 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R4461:4463 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R4467:4468 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R4454:4455 prosa.classic.model.schedule.global.response_time <> t':52 var
+R4464:4466 prosa.classic.model.schedule.global.response_time <> t'':53 var
+binder 4460:4460 <> t:54
+binder 4460:4460 <> t:55
+binder 4460:4460 <> t:56
+R4469:4478 prosa.classic.model.schedule.global.basic.schedule Schedule service_at def
+R4488:4488 prosa.classic.model.schedule.global.response_time <> t:54 var
+R4486:4486 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.BasicLemmas.AllJobs.j var
+R4480:4484 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.sched var
+R4582:4582 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.BasicLemmas.AllJobs.R var
+R4534:4569 prosa.classic.model.schedule.global.response_time ResponseTime cumulative_service_after_job_rt_zero thm
+R4613:4631 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.BasicLemmas.AllJobs.response_time_bound var
+R4582:4582 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.BasicLemmas.AllJobs.R var
+R4534:4569 prosa.classic.model.schedule.global.response_time ResponseTime cumulative_service_after_job_rt_zero thm
+R4613:4631 prosa.classic.model.schedule.global.response_time <> ResponseTime.ResponseTimeBound.BasicLemmas.AllJobs.response_time_bound var
+R4659:4665 prosa.classic.model.schedule.global.response_time ResponseTime.ResponseTimeBound.BasicLemmas.AllJobs <> sec
+R4677:4687 prosa.classic.model.schedule.global.response_time ResponseTime.ResponseTimeBound.BasicLemmas <> sec
+R4697:4713 prosa.classic.model.schedule.global.response_time ResponseTime.ResponseTimeBound <> sec
+R4721:4732 prosa.classic.model.schedule.global.response_time ResponseTime <> mod

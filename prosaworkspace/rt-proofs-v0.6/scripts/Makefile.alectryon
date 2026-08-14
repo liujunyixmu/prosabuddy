@@ -1,0 +1,6 @@
+ALECTRYONFILES = $(patsubst %,html-alectryon/prosa.%,$(subst /,.,$(subst ./,,$(VFILES:.v=.html))))
+
+html-alectryon/%.html: $(VOFILES)
+	$(HIDE)scripts/alectryon.sh $(patsubst %,%.v,$(subst html-alectryon/prosa/,,$(subst .,/,$(@:.html=))))
+
+alectryon: $(ALECTRYONFILES)

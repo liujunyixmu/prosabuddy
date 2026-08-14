@@ -1,0 +1,17 @@
+Compile a Coq source file using coqc. Returns success/fail status.
+
+On success: returns "success" status plus `status_detail`:
+- `final_theorem_success` means compilation succeeded, there is no unfinished proof/admit marker, and the current target theorem proof ends with `Qed.`.
+- `compile_success_nonfinal` means compilation succeeded but the file is not yet a final theorem success, usually because admits/unfinished proofs remain or the target theorem is not closed with `Qed.`.
+On failure: returns "fail" status with compiler error information. A line number is included when it can be parsed from stderr.
+
+Usage:
+- The filePath parameter must be an absolute path to a .v file within the workspace.
+- Use the optional flags parameter to pass extra coqc flags (e.g. "-Q dir Module").
+- Compilation times out after 120 seconds by default and reports a tool error on timeout; set OPENCODE_COQC_TIMEOUT_MS to override this.
+- Compilation rejects `.v` files that contain ssreflect repeat-rewrite syntax `rewrite !...` or `rewrite -!...`; use explicit rewrites or a named normalization bridge instead.
+- Compilation rejects `.v` files that contain the `intuition` tactic; use explicit tactics (`left`/`right`/`split`/`apply`/`exact`) instead.
+- This is the primary tool to verify that a Coq proof compiles correctly.
+- Always compile after writing or editing a .v file to check for errors.
+- If compilation fails, read the error output carefully and fix the specific line.
+- `coqc` only returns compiler error information. It does not include proof goals or hypotheses.

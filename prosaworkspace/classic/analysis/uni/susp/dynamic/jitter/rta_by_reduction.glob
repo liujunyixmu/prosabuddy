@@ -1,0 +1,375 @@
+DIGEST 9f6711c305a21bcfbead0fa50193cba7
+Fprosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction
+R15:36 prosa.classic.util.all <> <> lib
+R54:81 prosa.classic.model.priority <> <> lib
+R83:112 prosa.classic.model.suspension <> <> lib
+R130:166 prosa.classic.model.arrival.basic.job <> <> lib
+R168:205 prosa.classic.model.arrival.basic.task <> <> lib
+R222:271 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R273:318 prosa.classic.model.arrival.basic.task_arrival <> <> lib
+R336:373 prosa.classic.model.arrival.jitter.job <> <> lib
+R391:437 prosa.classic.model.schedule.uni.schedulability <> <> lib
+R439:478 prosa.classic.model.schedule.uni.service <> <> lib
+R495:535 prosa.classic.model.schedule.uni.workload <> <> lib
+R552:597 prosa.classic.model.schedule.uni.response_time <> <> lib
+R615:662 prosa.classic.model.schedule.uni.jitter.schedule <> <> lib
+R679:726 prosa.classic.model.schedule.uni.jitter.platform <> <> lib
+R744:801 prosa.classic.model.schedule.uni.susp.suspension_intervals <> <> lib
+R818:863 prosa.classic.model.schedule.uni.susp.schedule <> <> lib
+R880:931 prosa.classic.model.schedule.uni.susp.valid_schedule <> <> lib
+R948:993 prosa.classic.model.schedule.uni.susp.platform <> <> lib
+R1011:1072 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule <> <> lib
+R1089:1161 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule_properties <> <> lib
+R1178:1247 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule_service <> <> lib
+R1264:1335 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation <> <> lib
+R1367:1375 mathcomp.boot.ssreflect <> <> lib
+R1377:1383 mathcomp.boot.ssrbool <> <> lib
+R1385:1390 mathcomp.boot.ssrfun <> <> lib
+R1392:1397 mathcomp.boot.eqtype <> <> lib
+R1399:1404 mathcomp.boot.ssrnat <> <> lib
+R1406:1408 mathcomp.boot.seq <> <> lib
+R1410:1416 mathcomp.boot.fintype <> <> lib
+R1418:1422 mathcomp.boot.bigop <> <> lib
+mod 1570:1583 <> RTAByReduction
+R1596:1606 prosa.classic.model.arrival.basic.task_arrival TaskArrival <> mod
+R1608:1622 prosa.classic.model.arrival.basic.task SporadicTaskset <> mod
+R1624:1633 prosa.classic.model.suspension Suspension <> mod
+R1635:1642 prosa.classic.model.priority Priority <> mod
+R1644:1651 prosa.classic.model.schedule.uni.workload Workload <> mod
+R1653:1659 prosa.classic.model.schedule.uni.service Service <> mod
+R1661:1674 prosa.classic.model.schedule.uni.schedulability Schedulability <> mod
+R1685:1714 prosa.classic.model.schedule.uni.jitter.schedule UniprocessorScheduleWithJitter <> mod
+R1716:1727 prosa.classic.model.schedule.uni.response_time ResponseTime <> mod
+R1729:1747 prosa.classic.model.schedule.uni.susp.suspension_intervals SuspensionIntervals <> mod
+R1749:1776 prosa.classic.model.schedule.uni.susp.valid_schedule ValidSuspensionAwareSchedule <> mod
+R1803:1825 prosa.classic.model.schedule.uni.susp.platform PlatformWithSuspensions <> mod
+mod 1789:1798 <> RTAByReduction.susp_aware
+R1850:1875 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule JitterScheduleConstruction <> mod
+mod 1837:1845 <> RTAByReduction.reduction
+R1905:1928 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule_properties JitterScheduleProperties <> mod
+mod 1887:1900 <> RTAByReduction.reduction_prop
+R1958:1978 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_schedule_service JitterScheduleService <> mod
+mod 1940:1953 <> RTAByReduction.reduction_serv
+R2000:2022 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation JitterTaskSetGeneration <> mod
+mod 1990:1995 <> RTAByReduction.ts_gen
+sec 2036:2062 RTAByReduction ComparingResponseTimeBounds
+var  2079:2082 RTAByReduction.ComparingResponseTimeBounds Task
+R2085:2090 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 2107:2117 RTAByReduction.ComparingResponseTimeBounds task_period
+R2124:2127 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2120:2123 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.Task var
+R2128:2131 prosa.classic.model.time Time time def
+var 2147:2159 RTAByReduction.ComparingResponseTimeBounds task_deadline
+R2166:2169 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2162:2165 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.Task var
+R2170:2173 prosa.classic.model.time Time time def
+var  2189:2191 RTAByReduction.ComparingResponseTimeBounds Job
+R2194:2199 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 2216:2226 RTAByReduction.ComparingResponseTimeBounds job_arrival
+R2232:2235 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2229:2231 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.Job var
+R2236:2239 prosa.classic.model.time Time time def
+var 2255:2266 RTAByReduction.ComparingResponseTimeBounds job_deadline
+R2272:2275 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2269:2271 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.Job var
+R2276:2279 prosa.classic.model.time Time time def
+var 2295:2302 RTAByReduction.ComparingResponseTimeBounds job_task
+R2308:2311 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2305:2307 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.Job var
+R2312:2315 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.Task var
+var 2431:2432 RTAByReduction.ComparingResponseTimeBounds ts
+R2435:2437 mathcomp.boot.seq <> seq abbrev
+R2439:2442 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.Task var
+var 2460:2482 RTAByReduction.ComparingResponseTimeBounds H_constrained_deadlines
+R2491:2516 prosa.classic.model.arrival.basic.task SporadicTaskset constrained_deadline_model def
+R2544:2545 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.ts var
+R2530:2542 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.task_deadline var
+R2518:2528 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.task_period var
+var 2636:2642 RTAByReduction.ComparingResponseTimeBounds arr_seq
+R2645:2660 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R2662:2664 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.Job var
+var 2682:2711 RTAByReduction.ComparingResponseTimeBounds H_arrival_times_are_consistent
+R2720:2747 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_times_are_consistent def
+R2761:2767 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.arr_seq var
+R2749:2759 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_arrival var
+var 2785:2811 RTAByReduction.ComparingResponseTimeBounds H_arrival_sequence_is_a_set
+R2814:2838 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence_is_a_set def
+R2840:2846 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.arr_seq var
+var 2908:2926 RTAByReduction.ComparingResponseTimeBounds H_sporadic_arrivals
+R2935:2953 prosa.classic.model.arrival.basic.task_arrival TaskArrival sporadic_task_model def
+R2988:2994 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.arr_seq var
+R2979:2986 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_task var
+R2967:2977 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_arrival var
+R2955:2965 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.task_period var
+var 3071:3089 RTAByReduction.ComparingResponseTimeBounds H_jobs_from_taskset
+binder 3105:3105 <> j:25
+R3128:3131 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3108:3117 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R3127:3127 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> j:25 var
+R3119:3125 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.arr_seq var
+R3142:3146 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R3132:3139 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_task var
+R3141:3141 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> j:25 var
+R3147:3148 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.ts var
+var 3267:3302 RTAByReduction.ComparingResponseTimeBounds H_job_deadlines_equal_task_deadlines
+binder 3318:3318 <> j:28
+R3341:3344 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3321:3330 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R3340:3340 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> j:28 var
+R3332:3338 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.arr_seq var
+R3359:3361 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3345:3356 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_deadline var
+R3358:3358 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> j:28 var
+R3362:3374 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.task_deadline var
+R3377:3384 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_task var
+R3386:3386 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> j:28 var
+var 3539:3556 RTAByReduction.ComparingResponseTimeBounds higher_eq_priority
+R3559:3567 prosa.classic.model.priority Priority FP_policy def
+R3569:3572 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.Task var
+var 3590:3612 RTAByReduction.ComparingResponseTimeBounds H_priority_is_reflexive
+R3615:3629 prosa.classic.model.priority Priority FP_is_reflexive def
+R3631:3648 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.higher_eq_priority var
+var 3666:3689 RTAByReduction.ComparingResponseTimeBounds H_priority_is_transitive
+R3692:3707 prosa.classic.model.priority Priority FP_is_transitive def
+R3709:3726 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.higher_eq_priority var
+var 3744:3762 RTAByReduction.ComparingResponseTimeBounds H_priority_is_total
+R3765:3789 prosa.classic.model.priority Priority FP_is_total_over_task_set def
+R3810:3811 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.ts var
+R3791:3808 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.higher_eq_priority var
+var 3822:3843 RTAByReduction.ComparingResponseTimeBounds job_higher_eq_priority
+R3848:3857 prosa.classic.model.priority Priority FP_to_JLDP def
+R3868:3885 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.higher_eq_priority var
+R3859:3866 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_task var
+var 3969:3976 RTAByReduction.ComparingResponseTimeBounds job_cost
+R3982:3985 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3979:3981 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.Job var
+R3986:3989 prosa.classic.model.time Time time def
+var 4005:4013 RTAByReduction.ComparingResponseTimeBounds task_cost
+R4020:4023 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4016:4019 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.Task var
+R4024:4027 prosa.classic.model.time Time time def
+var 4079:4101 RTAByReduction.ComparingResponseTimeBounds job_suspension_duration
+R4104:4117 prosa.classic.model.suspension Suspension job_suspension def
+R4119:4121 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.Job var
+var 4137:4157 RTAByReduction.ComparingResponseTimeBounds task_suspension_bound
+R4164:4167 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4160:4163 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.Task var
+R4168:4171 prosa.classic.model.time Time time def
+var 4237:4252 RTAByReduction.ComparingResponseTimeBounds H_positive_costs
+binder 4268:4268 <> j:47
+R4291:4294 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4271:4280 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R4290:4290 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> j:47 var
+R4282:4288 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.arr_seq var
+R4305:4307 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R4295:4302 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_cost var
+R4304:4304 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> j:47 var
+var 4502:4511 RTAByReduction.ComparingResponseTimeBounds sched_susp
+R4514:4521 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R4523:4525 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.Job var
+var 4543:4558 RTAByReduction.ComparingResponseTimeBounds H_valid_schedule
+R4567:4597 prosa.classic.model.schedule.uni.susp.valid_schedule ValidSuspensionAwareSchedule valid_suspension_aware_schedule def
+R4713:4722 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.sched_susp var
+R4704:4711 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_cost var
+R4680:4702 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_suspension_duration var
+R4619:4640 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_higher_eq_priority var
+R4611:4617 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.arr_seq var
+R4599:4609 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_arrival var
+var 4847:4849 RTAByReduction.ComparingResponseTimeBounds tsk
+R4852:4855 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.Task var
+var 4873:4883 RTAByReduction.ComparingResponseTimeBounds H_tsk_in_ts
+R4889:4893 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R4886:4888 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.tsk var
+R4894:4895 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.ts var
+var 4964:4977 RTAByReduction.ComparingResponseTimeBounds other_hep_task
+binder 4979:4987 <> tsk_other:58
+R5030:5034 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R5051:5051 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R4998:5015 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.higher_eq_priority var
+R5017:5025 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> tsk_other:58 var
+R5027:5029 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.tsk var
+R5044:5047 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R5035:5043 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> tsk_other:58 var
+R5048:5050 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.tsk var
+var 5066:5108 RTAByReduction.ComparingResponseTimeBounds task_response_time_in_sched_susp_bounded_by
+R5119:5148 prosa.classic.model.schedule.uni.response_time ResponseTime is_response_time_bound_of_task def
+R5188:5197 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.sched_susp var
+R5180:5186 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.arr_seq var
+R5171:5178 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_task var
+R5162:5169 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_cost var
+R5150:5160 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_arrival var
+var 5208:5249 RTAByReduction.ComparingResponseTimeBounds job_response_time_in_sched_susp_bounded_by
+R5260:5288 prosa.classic.model.schedule.uni.response_time ResponseTime is_response_time_bound_of_job def
+R5311:5320 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.sched_susp var
+R5302:5309 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_cost var
+R5290:5300 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_arrival var
+var 5331:5356 RTAByReduction.ComparingResponseTimeBounds completed_in_sched_susp_by
+R5361:5372 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R5383:5392 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.sched_susp var
+R5374:5381 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_cost var
+var 5403:5438 RTAByReduction.ComparingResponseTimeBounds job_misses_no_deadline_in_sched_susp
+R5449:5470 prosa.classic.model.schedule.uni.schedulability Schedulability job_misses_no_deadline def
+R5506:5515 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.sched_susp var
+R5493:5504 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_deadline var
+R5484:5491 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_cost var
+R5472:5482 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_arrival var
+var 5595:5595 RTAByReduction.ComparingResponseTimeBounds R
+R5602:5605 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5598:5601 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.Task var
+R5606:5609 prosa.classic.model.time Time time def
+var 5790:5828 RTAByReduction.ComparingResponseTimeBounds H_valid_response_time_bound_of_hp_tasks
+binder 5844:5849 <> tsk_hp:61
+R5873:5884 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5866:5870 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R5860:5865 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> tsk_hp:61 var
+R5871:5872 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.ts var
+R5906:5917 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5885:5898 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.other_hep_task var
+R5900:5905 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> tsk_hp:61 var
+R5918:5960 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.task_response_time_in_sched_susp_bounded_by var
+R5962:5967 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> tsk_hp:61 var
+R5970:5970 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.R var
+R5972:5977 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> tsk_hp:61 var
+def 6155:6174 RTAByReduction actual_response_time
+R6183:6185 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.Job var
+binder 6177:6180 <> j_hp:64
+R6190:6193 prosa.classic.model.time Time time def
+R6204:6213 prosa.classic.util.pick <> ::form_scope:'['_'pick-min'_x_'<='_x_'|'_x_']' not
+R6215:6218 prosa.classic.util.pick <> ::form_scope:'['_'pick-min'_x_'<='_x_'|'_x_']' not
+R6236:6247 prosa.classic.util.pick <> ::form_scope:'['_'pick-min'_x_'<='_x_'|'_x_']' not
+R6297:6297 prosa.classic.util.pick <> ::form_scope:'['_'pick-min'_x_'<='_x_'|'_x_']' not
+R6219:6219 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.R var
+R6222:6229 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_task var
+R6231:6234 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> j_hp:64 var
+binder 6214:6214 <> r:65
+R6248:6289 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_response_time_in_sched_susp_bounded_by var
+R6291:6294 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> j_hp:64 var
+R6296:6296 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> r:65 var
+var 6357:6357 RTAByReduction.ComparingResponseTimeBounds j
+R6360:6362 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.Job var
+var 6380:6390 RTAByReduction.ComparingResponseTimeBounds H_j_arrives
+R6393:6402 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R6412:6412 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.j var
+R6404:6410 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.arr_seq var
+var 6430:6441 RTAByReduction.ComparingResponseTimeBounds H_job_of_tsk
+R6454:6456 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6444:6451 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_task var
+R6453:6453 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.j var
+R6457:6459 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.tsk var
+var 6590:6627 RTAByReduction.ComparingResponseTimeBounds H_no_deadline_misses_for_previous_jobs
+binder 6643:6644 <> j0:72
+R6676:6687 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6655:6664 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R6674:6675 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> j0:72 var
+R6666:6672 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.arr_seq var
+R6718:6729 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6702:6704 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R6688:6698 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_arrival var
+R6700:6701 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> j0:72 var
+R6705:6715 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_arrival var
+R6717:6717 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.j var
+R6754:6765 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6741:6743 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6730:6737 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_task var
+R6739:6740 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> j0:72 var
+R6744:6751 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_task var
+R6753:6753 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.j var
+R6766:6801 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_misses_no_deadline_in_sched_susp var
+R6803:6804 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> j0:72 var
+var 6936:6953 RTAByReduction.ComparingResponseTimeBounds inflated_task_cost
+R6958:6982 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction RTAByReduction inflated_task_cost def
+R7016:7018 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.tsk var
+R6994:7014 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.task_suspension_bound var
+R6984:6992 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.task_cost var
+var 7029:7039 RTAByReduction.ComparingResponseTimeBounds task_jitter
+R7044:7061 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction RTAByReduction task_jitter def
+R7092:7094 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.tsk var
+R7073:7090 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.higher_eq_priority var
+R7063:7071 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.task_cost var
+var 7256:7267 RTAByReduction.ComparingResponseTimeBounds sched_jitter
+R7272:7293 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction RTAByReduction sched_jitter def
+R7402:7421 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction RTAByReduction actual_response_time def
+R7400:7400 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.j var
+R7376:7398 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_suspension_duration var
+R7367:7374 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_cost var
+R7324:7341 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.higher_eq_priority var
+R7316:7322 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.arr_seq var
+R7307:7314 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_task var
+R7295:7305 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_arrival var
+var 7492:7508 RTAByReduction.ComparingResponseTimeBounds inflated_job_cost
+R7513:7539 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction RTAByReduction inflated_job_cost def
+R7574:7574 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.j var
+R7550:7572 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_suspension_duration var
+R7541:7548 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_cost var
+var 7585:7594 RTAByReduction.ComparingResponseTimeBounds job_jitter
+R7599:7618 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction RTAByReduction job_jitter def
+R7714:7733 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction RTAByReduction actual_response_time def
+R7669:7669 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.j var
+R7660:7667 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_cost var
+R7641:7658 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.higher_eq_priority var
+R7632:7639 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_task var
+R7620:7630 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_arrival var
+var 7825:7868 RTAByReduction.ComparingResponseTimeBounds job_response_time_in_sched_jitter_bounded_by
+R7879:7907 prosa.classic.model.schedule.uni.response_time ResponseTime is_response_time_bound_of_job def
+R7939:7950 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.sched_jitter var
+R7921:7937 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.inflated_job_cost var
+R7909:7919 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_arrival var
+var 8138:8180 RTAByReduction.ComparingResponseTimeBounds H_valid_response_time_bound_in_sched_jitter
+R8189:8232 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_response_time_in_sched_jitter_bounded_by var
+R8234:8234 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.j var
+R8237:8237 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.R var
+R8239:8241 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.tsk var
+prf 8445:8483 RTAByReduction valid_response_time_bound_in_sched_susp
+R8492:8533 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_response_time_in_sched_susp_bounded_by var
+R8535:8535 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.j var
+R8538:8538 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.R var
+R8540:8542 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.tsk var
+R8866:8877 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.H_job_of_tsk var
+R8880:8921 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_response_time_in_sched_susp_bounded_by var
+R8866:8877 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.H_job_of_tsk var
+R8866:8877 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.H_job_of_tsk var
+R8880:8921 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_response_time_in_sched_susp_bounded_by var
+R8880:8921 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_response_time_in_sched_susp_bounded_by var
+R9011:9018 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_task var
+R9036:9037 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.ts var
+R9052:9058 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.arr_seq var
+R9084:9101 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.higher_eq_priority var
+R9128:9138 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.task_period var
+R9159:9171 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.task_deadline var
+R9191:9202 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_deadline var
+R9241:9263 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_suspension_duration var
+R9275:9294 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction RTAByReduction actual_response_time def
+R8936:8991 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction RTAByReduction jitter_reduction_job_j_completes_no_later thm
+R9011:9018 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_task var
+R9036:9037 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.ts var
+R9052:9058 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.arr_seq var
+R9084:9101 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.higher_eq_priority var
+R9128:9138 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.task_period var
+R9159:9171 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.task_deadline var
+R9191:9202 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_deadline var
+R9241:9263 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_suspension_duration var
+R9275:9294 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction RTAByReduction actual_response_time def
+R8936:8991 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction RTAByReduction jitter_reduction_job_j_completes_no_later thm
+R9381:9400 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction RTAByReduction actual_response_time def
+R9381:9400 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction RTAByReduction actual_response_time def
+R9381:9400 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction RTAByReduction actual_response_time def
+R9417:9430 prosa.classic.util.pick <> pick_min_holds thm
+R9417:9430 prosa.classic.util.pick <> pick_min_holds thm
+R9476:9476 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.R var
+R9479:9486 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_task var
+R9476:9476 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.R var
+R9479:9486 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.job_task var
+R9584:9597 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.other_hep_task var
+R9600:9611 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.H_job_of_tsk var
+R9584:9597 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.other_hep_task var
+R9584:9597 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.other_hep_task var
+R9600:9611 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.H_job_of_tsk var
+R9600:9611 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.H_job_of_tsk var
+R9651:9679 prosa.classic.model.schedule.uni.response_time ResponseTime is_response_time_bound_of_job def
+R9681:9692 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.H_job_of_tsk var
+R9651:9679 prosa.classic.model.schedule.uni.response_time ResponseTime is_response_time_bound_of_job def
+R9651:9679 prosa.classic.model.schedule.uni.response_time ResponseTime is_response_time_bound_of_job def
+R9681:9692 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.H_job_of_tsk var
+R9681:9692 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> RTAByReduction.ComparingResponseTimeBounds.H_job_of_tsk var
+R9740:9766 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction RTAByReduction.ComparingResponseTimeBounds <> sec
+R9774:9787 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction RTAByReduction <> mod

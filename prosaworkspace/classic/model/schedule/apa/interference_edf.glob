@@ -1,0 +1,263 @@
+DIGEST b1bf2f84d0e096eaf2eaef2da16012e0
+Fprosa.classic.model.schedule.apa.interference_edf
+R15:36 prosa.classic.util.all <> <> lib
+R54:91 prosa.classic.model.arrival.basic.task <> <> lib
+R93:129 prosa.classic.model.arrival.basic.job <> <> lib
+R131:158 prosa.classic.model.priority <> <> lib
+R160:205 prosa.classic.model.arrival.basic.task_arrival <> <> lib
+R223:272 prosa.classic.model.schedule.global.basic.schedule <> <> lib
+R290:330 prosa.classic.model.schedule.apa.affinity <> <> lib
+R332:376 prosa.classic.model.schedule.apa.interference <> <> lib
+R393:433 prosa.classic.model.schedule.apa.platform <> <> lib
+R465:473 mathcomp.boot.ssreflect <> <> lib
+R475:481 mathcomp.boot.ssrbool <> <> lib
+R483:488 mathcomp.boot.ssrfun <> <> lib
+R490:495 mathcomp.boot.eqtype <> <> lib
+R497:502 mathcomp.boot.ssrnat <> <> lib
+R504:506 mathcomp.boot.seq <> <> lib
+R508:514 mathcomp.boot.fintype <> <> lib
+R516:520 mathcomp.boot.bigop <> <> lib
+mod 531:545 <> InterferenceEDF
+R558:565 prosa.classic.model.schedule.global.basic.schedule Schedule <> mod
+R567:574 prosa.classic.model.priority Priority <> mod
+R576:583 prosa.classic.model.schedule.apa.platform Platform <> mod
+R585:596 prosa.classic.model.schedule.apa.interference Interference <> mod
+R598:605 prosa.classic.model.priority Priority <> mod
+R607:614 prosa.classic.model.schedule.apa.affinity Affinity <> mod
+sec 630:635 InterferenceEDF Lemmas
+var  653:665 InterferenceEDF.Lemmas sporadic_task
+R668:673 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  690:692 InterferenceEDF.Lemmas Job
+R695:700 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 717:727 InterferenceEDF.Lemmas job_arrival
+R733:736 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R730:732 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.Job var
+R737:740 prosa.classic.model.time Time time def
+var 756:763 InterferenceEDF.Lemmas job_cost
+R769:772 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R766:768 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.Job var
+R773:776 prosa.classic.model.time Time time def
+var 792:803 InterferenceEDF.Lemmas job_deadline
+R809:812 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R806:808 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.Job var
+R813:816 prosa.classic.model.time Time time def
+var 832:839 InterferenceEDF.Lemmas job_task
+R845:848 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R842:844 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.Job var
+R849:861 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.sporadic_task var
+var 927:933 InterferenceEDF.Lemmas arr_seq
+R936:951 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R953:955 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.Job var
+var 1005:1012 InterferenceEDF.Lemmas num_cpus
+R1015:1017 Corelib.Init.Datatypes <> nat ind
+var 1033:1037 InterferenceEDF.Lemmas sched
+R1040:1047 prosa.classic.model.schedule.global.basic.schedule Schedule schedule def
+R1053:1060 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.num_cpus var
+R1049:1051 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.Job var
+var 1153:1157 InterferenceEDF.Lemmas alpha
+R1160:1172 prosa.classic.model.schedule.apa.affinity Affinity task_affinity def
+R1188:1195 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.num_cpus var
+R1174:1186 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.sporadic_task var
+var 1430:1449 InterferenceEDF.Lemmas H_scheduler_uses_EDF
+R1458:1492 prosa.classic.model.schedule.apa.platform Platform respects_JLFP_policy_under_weak_APA def
+R1587:1589 prosa.classic.model.priority Priority EDF def
+R1603:1614 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.job_deadline var
+R1591:1601 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.job_arrival var
+R1580:1584 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.alpha var
+R1532:1536 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.sched var
+R1524:1530 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.arr_seq var
+R1515:1522 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.job_task var
+R1506:1513 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.job_cost var
+R1494:1504 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.job_arrival var
+prf 1769:1816 InterferenceEDF interference_under_edf_implies_shorter_deadlines
+binder 1833:1833 <> j:21
+binder 1835:1836 <> j':22
+binder 1838:1839 <> t1:23
+binder 1841:1842 <> t2:24
+R1874:1885 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1853:1862 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R1872:1873 prosa.classic.model.schedule.apa.interference_edf <> j':22 var
+R1864:1870 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.arr_seq var
+R1960:1971 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1955:1958 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R1886:1901 prosa.classic.model.schedule.apa.interference Interference job_interference def
+R1950:1951 prosa.classic.model.schedule.apa.interference_edf <> t1:23 var
+R1953:1954 prosa.classic.model.schedule.apa.interference_edf <> t2:24 var
+R1948:1948 prosa.classic.model.schedule.apa.interference_edf <> j:21 var
+R1945:1946 prosa.classic.model.schedule.apa.interference_edf <> j':22 var
+R1939:1943 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.alpha var
+R1933:1937 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.sched var
+R1924:1931 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.job_task var
+R1915:1922 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.job_cost var
+R1903:1913 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.job_arrival var
+R2002:2005 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R1985:1987 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R1972:1982 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.job_arrival var
+R1984:1984 prosa.classic.model.schedule.apa.interference_edf <> j:21 var
+R1988:1999 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.job_deadline var
+R2001:2001 prosa.classic.model.schedule.apa.interference_edf <> j:21 var
+R2020:2022 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R2006:2016 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.job_arrival var
+R2018:2019 prosa.classic.model.schedule.apa.interference_edf <> j':22 var
+R2023:2034 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.job_deadline var
+R2036:2037 prosa.classic.model.schedule.apa.interference_edf <> j':22 var
+R2109:2143 prosa.classic.model.schedule.apa.platform Platform respects_JLDP_policy_under_weak_APA def
+R2201:2216 prosa.classic.model.schedule.apa.interference Interference job_interference def
+R2245:2252 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R2255:2256 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R2535:2535 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R2257:2259 mathcomp.boot.fintype <> :::'''I_'_x not
+binder 2253:2254 <> t':25
+R2262:2282 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R2283:2290 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R2294:2295 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R2534:2534 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R2296:2304 prosa.classic.model.schedule.global.basic.schedule Schedule processor def
+R2306:2313 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.num_cpus var
+binder 2291:2293 <> cpu:26
+R2314:2337 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R2481:2506 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R2417:2442 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R2338:2338 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R2347:2373 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R2341:2344 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R2339:2340 prosa.classic.model.schedule.apa.interference_edf <> t':25 var
+R2374:2383 prosa.classic.model.schedule.global.basic.schedule Schedule backlogged def
+R2415:2416 prosa.classic.model.schedule.apa.interference_edf <> t':25 var
+R2406:2410 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.sched var
+R2397:2404 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.job_cost var
+R2385:2395 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.job_arrival var
+R2443:2456 prosa.classic.model.schedule.apa.affinity Affinity can_execute_on def
+R2478:2480 prosa.classic.model.schedule.apa.interference_edf <> cpu:26 var
+R2465:2472 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.job_task var
+R2458:2462 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.alpha var
+R2507:2518 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled_on def
+R2528:2530 prosa.classic.model.schedule.apa.interference_edf <> cpu:26 var
+R2532:2533 prosa.classic.model.schedule.apa.interference_edf <> t':25 var
+R2520:2524 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.sched var
+binder 2291:2293 <> cpu:27
+binder 2291:2293 <> cpu:28
+binder 2253:2254 <> t':29
+binder 2253:2254 <> t':30
+R2245:2252 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R2255:2256 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R2535:2535 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R2257:2259 mathcomp.boot.fintype <> :::'''I_'_x not
+binder 2253:2254 <> t':31
+R2262:2282 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R2283:2290 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R2294:2295 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R2534:2534 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_':'_x_x_']' not
+R2296:2304 prosa.classic.model.schedule.global.basic.schedule Schedule processor def
+R2306:2313 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.num_cpus var
+binder 2291:2293 <> cpu:32
+R2314:2337 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R2481:2506 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R2417:2442 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R2338:2338 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R2347:2373 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R2341:2344 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R2339:2340 prosa.classic.model.schedule.apa.interference_edf <> t':31 var
+R2374:2383 prosa.classic.model.schedule.global.basic.schedule Schedule backlogged def
+R2415:2416 prosa.classic.model.schedule.apa.interference_edf <> t':31 var
+R2406:2410 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.sched var
+R2397:2404 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.job_cost var
+R2385:2395 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.job_arrival var
+R2443:2456 prosa.classic.model.schedule.apa.affinity Affinity can_execute_on def
+R2478:2480 prosa.classic.model.schedule.apa.interference_edf <> cpu:32 var
+R2465:2472 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.job_task var
+R2458:2462 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.alpha var
+R2507:2518 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled_on def
+R2528:2530 prosa.classic.model.schedule.apa.interference_edf <> cpu:32 var
+R2532:2533 prosa.classic.model.schedule.apa.interference_edf <> t':31 var
+R2520:2524 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.sched var
+binder 2291:2293 <> cpu:33
+binder 2291:2293 <> cpu:34
+binder 2253:2254 <> t':35
+binder 2253:2254 <> t':36
+R2575:2581 mathcomp.boot.fintype <> existsP thm
+R2588:2594 mathcomp.boot.fintype <> existsP thm
+R2602:2605 Corelib.ssr.ssrbool <> andP thm
+R2609:2612 Corelib.ssr.ssrbool <> andP thm
+R2616:2619 Corelib.ssr.ssrbool <> andP thm
+R2738:2742 Corelib.ssr.ssrbool <> negbT thm
+R2759:2769 mathcomp.boot.fintype <> negb_exists thm
+R2738:2742 Corelib.ssr.ssrbool <> negbT thm
+R2759:2769 mathcomp.boot.fintype <> negb_exists thm
+R2759:2769 mathcomp.boot.fintype <> negb_exists thm
+R2791:2797 mathcomp.boot.fintype <> forallP thm
+R2820:2831 mathcomp.boot.bigop <> big_nat_cond thm
+R2834:2840 mathcomp.boot.bigop <> eq_bigr thm
+binder 2847:2847 <> x:37
+R2895:2906 mathcomp.boot.bigop <> big_nat_cond thm
+R2908:2920 mathcomp.boot.bigop <> big_const_nat thm
+R2922:2930 mathcomp.boot.ssrnat <> iter_addn thm
+R2932:2936 mathcomp.boot.ssrnat <> mul0n thm
+R2939:2943 mathcomp.boot.ssrnat <> addn0 thm
+R2945:2951 mathcomp.boot.eqtype <> eq_refl thm
+R2820:2831 mathcomp.boot.bigop <> big_nat_cond thm
+R2820:2831 mathcomp.boot.bigop <> big_nat_cond thm
+R2834:2840 mathcomp.boot.bigop <> eq_bigr thm
+binder 2847:2847 <> x:38
+R2834:2840 mathcomp.boot.bigop <> eq_bigr thm
+binder 2847:2847 <> x:39
+R2895:2906 mathcomp.boot.bigop <> big_nat_cond thm
+R2895:2906 mathcomp.boot.bigop <> big_nat_cond thm
+R2908:2920 mathcomp.boot.bigop <> big_const_nat thm
+R2908:2920 mathcomp.boot.bigop <> big_const_nat thm
+R2922:2930 mathcomp.boot.ssrnat <> iter_addn thm
+R2922:2930 mathcomp.boot.ssrnat <> iter_addn thm
+R2932:2936 mathcomp.boot.ssrnat <> mul0n thm
+R2932:2936 mathcomp.boot.ssrnat <> mul0n thm
+R2939:2943 mathcomp.boot.ssrnat <> addn0 thm
+R2939:2943 mathcomp.boot.ssrnat <> addn0 thm
+R2945:2951 mathcomp.boot.eqtype <> eq_refl thm
+R2945:2951 mathcomp.boot.eqtype <> eq_refl thm
+R2983:2986 Corelib.ssr.ssrbool <> andP thm
+R2990:2993 Corelib.ssr.ssrbool <> andP thm
+R3034:3040 mathcomp.boot.fintype <> Ordinal constr
+R3034:3040 mathcomp.boot.fintype <> Ordinal constr
+R3065:3075 mathcomp.boot.fintype <> negb_exists thm
+R3065:3075 mathcomp.boot.fintype <> negb_exists thm
+R3065:3075 mathcomp.boot.fintype <> negb_exists thm
+R3107:3113 mathcomp.boot.fintype <> forallP thm
+R3137:3143 mathcomp.boot.bigop <> eq_bigr thm
+binder 3150:3150 <> x:40
+R3187:3199 mathcomp.boot.bigop <> big_const_ord thm
+R3201:3209 mathcomp.boot.ssrnat <> iter_addn thm
+R3211:3215 mathcomp.boot.ssrnat <> mul0n thm
+R3217:3221 mathcomp.boot.ssrnat <> addn0 thm
+R3137:3143 mathcomp.boot.bigop <> eq_bigr thm
+binder 3150:3150 <> x:41
+R3137:3143 mathcomp.boot.bigop <> eq_bigr thm
+binder 3150:3150 <> x:42
+R3187:3199 mathcomp.boot.bigop <> big_const_ord thm
+R3187:3199 mathcomp.boot.bigop <> big_const_ord thm
+R3201:3209 mathcomp.boot.ssrnat <> iter_addn thm
+R3201:3209 mathcomp.boot.ssrnat <> iter_addn thm
+R3211:3215 mathcomp.boot.ssrnat <> mul0n thm
+R3211:3215 mathcomp.boot.ssrnat <> mul0n thm
+R3217:3221 mathcomp.boot.ssrnat <> addn0 thm
+R3217:3221 mathcomp.boot.ssrnat <> addn0 thm
+R3300:3309 prosa.classic.model.schedule.global.basic.schedule Schedule backlogged def
+R3332:3336 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.sched var
+R3323:3330 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.job_cost var
+R3311:3321 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.job_arrival var
+R3361:3365 Corelib.ssr.ssrbool <> andFb thm
+R3300:3309 prosa.classic.model.schedule.global.basic.schedule Schedule backlogged def
+R3332:3336 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.sched var
+R3323:3330 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.job_cost var
+R3311:3321 prosa.classic.model.schedule.apa.interference_edf <> InterferenceEDF.Lemmas.job_arrival var
+R3361:3365 Corelib.ssr.ssrbool <> andFb thm
+R3361:3365 Corelib.ssr.ssrbool <> andFb thm
+R3390:3394 Corelib.ssr.ssrbool <> andTb thm
+R3412:3416 Corelib.ssr.ssrbool <> andTb thm
+R3390:3394 Corelib.ssr.ssrbool <> andTb thm
+R3390:3394 Corelib.ssr.ssrbool <> andTb thm
+R3390:3394 Corelib.ssr.ssrbool <> andTb thm
+R3412:3416 Corelib.ssr.ssrbool <> andTb thm
+R3412:3416 Corelib.ssr.ssrbool <> andTb thm
+R3436:3441 Corelib.ssr.ssrbool <> negbTE thm
+R3436:3441 Corelib.ssr.ssrbool <> negbTE thm
+R3488:3493 prosa.classic.model.schedule.apa.interference_edf InterferenceEDF.Lemmas <> sec
+R3501:3515 prosa.classic.model.schedule.apa.interference_edf InterferenceEDF <> mod

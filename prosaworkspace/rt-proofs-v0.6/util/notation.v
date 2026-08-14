@@ -1,0 +1,49 @@
+From mathcomp Require Import ssreflect ssrbool eqtype ssrnat seq fintype bigop.
+
+(** We define a function converting a constant [c] to a function that
+    ignores its argument and returns [c].  *)
+Definition constant {X Y : Type} (c : Y) : (X -> Y) := fun _ => c.
+
+(** We define a notation for the big concatenation operator.*)
+
+ Reserved Notation "\cat_ ( m <= i < n ) F"
+  (at level 41, F at level 41, i, m, n at level 50,
+   format "'[' \cat_ ( m <= i < n ) '/ ' F ']'").
+
+Notation "\cat_ ( m <= i < n ) F" :=
+  (\big[cat/[::]]_(m <= i < n) F%N) : nat_scope.
+
+Reserved Notation "\cat_ ( m <= i < n | P ) F"
+  (at level 41, F at level 41, P at level 41, i, m, n at level 50,
+   format "'[' \cat_ ( m <= i < n | P ) '/ ' F ']'").
+
+Notation "\cat_ ( m <= i < n | P ) F" :=
+  (\big[cat/[::]]_(m <= i < n | P) F%N) : nat_scope.
+
+Reserved Notation "\cat_ ( i < n ) F"
+  (at level 41, F at level 41, i, n at level 50,
+   format "'[' \cat_ ( i < n ) '/ ' F ']'").
+
+Notation "\cat_ ( i < n ) F" :=
+  (\big[cat/[::]]_(i < n) F%N) : nat_scope.
+
+Reserved Notation "\cat_ ( i < n | P ) F"
+  (at level 41, F at level 41, i, n at level 50,
+   format "'[' \cat_ ( i < n | P ) '/ ' F ']'").
+
+Notation "\cat_ ( i < n | P ) F" :=
+  (\big[cat/[::]]_(i < n | P) F%N) : nat_scope.
+
+Reserved Notation "\cat_ ( x <- xs | P ) F"
+  (at level 41, F at level 41, x, xs at level 50,
+   format "'[' \cat_ ( x <- xs | P ) '/ ' F ']'").
+
+Notation "\cat_ ( x <- xs | P ) F" :=
+  (\big[cat/[::]]_(x <- xs | P) F) : big_scope.
+
+Reserved Notation "\cat_ ( x <- xs ) F"
+  (at level 41, F at level 41, x, xs at level 50,
+   format "'[' \cat_ ( x <- xs ) '/ ' F ']'").
+
+Notation "\cat_ ( x <- xs ) F" :=
+   (\big[cat/[::]]_(x <- xs) F) : big_scope.

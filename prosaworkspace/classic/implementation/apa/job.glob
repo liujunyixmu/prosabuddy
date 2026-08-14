@@ -1,0 +1,119 @@
+DIGEST f3e3717a0710f860b32948a480639c69
+Fprosa.classic.implementation.apa.job
+R15:38 prosa.classic.model.time <> <> lib
+R40:61 prosa.classic.util.all <> <> lib
+R79:115 prosa.classic.implementation.apa.task <> <> lib
+R147:155 mathcomp.boot.ssreflect <> <> lib
+R157:163 mathcomp.boot.ssrbool <> <> lib
+R165:170 mathcomp.boot.ssrnat <> <> lib
+R172:177 mathcomp.boot.eqtype <> <> lib
+R179:181 mathcomp.boot.seq <> <> lib
+R207:216 HB.structures <> <> lib
+mod 226:236 <> ConcreteJob
+R249:252 prosa.classic.model.time Time <> mod
+R264:275 prosa.classic.implementation.apa.task ConcreteTask <> mod
+sec 289:292 ConcreteJob Defs
+var  309:316 ConcreteJob.Defs num_cpus
+R319:321 Corelib.Init.Datatypes <> nat ind
+rec 382:393 ConcreteJob concrete_job
+proj 410:415 ConcreteJob job_id
+proj 429:439 ConcreteJob job_arrival
+proj 453:460 ConcreteJob job_cost
+proj 475:486 ConcreteJob job_deadline
+proj 501:508 ConcreteJob job_task
+R418:420 Corelib.Init.Datatypes <> nat ind
+R442:444 Corelib.Init.Datatypes <> nat ind
+R463:466 prosa.classic.model.time Time time def
+R489:492 prosa.classic.model.time Time time def
+R512:524 prosa.classic.implementation.apa.task ConcreteTask concrete_task rec
+R526:533 prosa.classic.implementation.apa.job <> ConcreteJob.Defs.num_cpus var
+def 663:671 ConcreteJob job_eqdef
+R681:692 prosa.classic.implementation.apa.job ConcreteJob concrete_job rec
+binder 674:675 <> j1:8
+binder 677:678 <> j2:9
+R856:866 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R893:893 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R810:820 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R855:855 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R772:782 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R809:809 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R704:704 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R727:738 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R771:771 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R714:717 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R705:710 prosa.classic.implementation.apa.job ConcreteJob job_id proj
+R712:713 prosa.classic.implementation.apa.job <> j1:8 var
+R718:723 prosa.classic.implementation.apa.job ConcreteJob job_id proj
+R725:726 prosa.classic.implementation.apa.job <> j2:9 var
+R753:756 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R739:749 prosa.classic.implementation.apa.job ConcreteJob job_arrival proj
+R751:752 prosa.classic.implementation.apa.job <> j1:8 var
+R757:767 prosa.classic.implementation.apa.job ConcreteJob job_arrival proj
+R769:770 prosa.classic.implementation.apa.job <> j2:9 var
+R794:797 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R783:790 prosa.classic.implementation.apa.job ConcreteJob job_cost proj
+R792:793 prosa.classic.implementation.apa.job <> j1:8 var
+R798:805 prosa.classic.implementation.apa.job ConcreteJob job_cost proj
+R807:808 prosa.classic.implementation.apa.job <> j2:9 var
+R836:839 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R821:832 prosa.classic.implementation.apa.job ConcreteJob job_deadline proj
+R834:835 prosa.classic.implementation.apa.job <> j1:8 var
+R840:851 prosa.classic.implementation.apa.job ConcreteJob job_deadline proj
+R853:854 prosa.classic.implementation.apa.job <> j2:9 var
+R878:881 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R867:874 prosa.classic.implementation.apa.job ConcreteJob job_task proj
+R876:877 prosa.classic.implementation.apa.job <> j1:8 var
+R882:889 prosa.classic.implementation.apa.job ConcreteJob job_task proj
+R891:892 prosa.classic.implementation.apa.job <> j2:9 var
+prf 974:980 ConcreteJob eqn_job
+R984:997 mathcomp.boot.eqtype MathCompCompatEquality.Equality axiom abbrev
+R999:1007 prosa.classic.implementation.apa.job ConcreteJob job_eqdef def
+R1034:1047 mathcomp.boot.eqtype <> eq_axiom def
+R1078:1086 prosa.classic.implementation.apa.job ConcreteJob job_eqdef def
+R1078:1086 prosa.classic.implementation.apa.job ConcreteJob job_eqdef def
+R1123:1130 Corelib.Init.Datatypes <> ReflectT constr
+R1140:1148 prosa.classic.implementation.apa.job ConcreteJob job_eqdef def
+R1123:1130 Corelib.Init.Datatypes <> ReflectT constr
+R1177:1180 Corelib.ssr.ssrbool <> andP thm
+R1184:1187 Corelib.ssr.ssrbool <> andP thm
+R1191:1194 Corelib.ssr.ssrbool <> andP thm
+R1198:1201 Corelib.ssr.ssrbool <> andP thm
+R1205:1207 mathcomp.boot.eqtype <> eqP def
+R1213:1215 mathcomp.boot.eqtype <> eqP def
+R1227:1229 mathcomp.boot.eqtype <> eqP def
+R1238:1240 mathcomp.boot.eqtype <> eqP def
+R1247:1249 mathcomp.boot.eqtype <> eqP def
+R1333:1340 Corelib.Init.Datatypes <> ReflectF constr
+R1333:1340 Corelib.Init.Datatypes <> ReflectF constr
+R1358:1366 prosa.classic.implementation.apa.job ConcreteJob job_eqdef def
+R1369:1371 Corelib.Init.Logic <> not def
+R1404:1408 Corelib.ssr.ssrbool <> negbT thm
+R1425:1432 Corelib.ssr.ssrbool <> negb_and thm
+R1404:1408 Corelib.ssr.ssrbool <> negbT thm
+R1425:1432 Corelib.ssr.ssrbool <> negb_and thm
+R1425:1432 Corelib.ssr.ssrbool <> negb_and thm
+R1480:1487 Corelib.ssr.ssrbool <> negb_and thm
+R1480:1487 Corelib.ssr.ssrbool <> negb_and thm
+R1480:1487 Corelib.ssr.ssrbool <> negb_and thm
+R1517:1519 Corelib.ssr.ssrbool <> orP thm
+R1528:1530 mathcomp.boot.eqtype <> eqP def
+R1595:1597 Corelib.ssr.ssrbool <> orP thm
+R1606:1608 mathcomp.boot.eqtype <> eqP def
+R1664:1671 Corelib.ssr.ssrbool <> negb_and thm
+R1664:1671 Corelib.ssr.ssrbool <> negb_and thm
+R1664:1671 Corelib.ssr.ssrbool <> negb_and thm
+R1701:1703 Corelib.ssr.ssrbool <> orP thm
+R1712:1714 mathcomp.boot.eqtype <> eqP def
+R1774:1781 Corelib.ssr.ssrbool <> negb_and thm
+R1774:1781 Corelib.ssr.ssrbool <> negb_and thm
+R1774:1781 Corelib.ssr.ssrbool <> negb_and thm
+R1811:1813 Corelib.ssr.ssrbool <> orP thm
+R1817:1819 mathcomp.boot.eqtype <> eqP def
+R1827:1829 mathcomp.boot.eqtype <> eqP def
+R2033:2046 mathcomp.boot.eqtype hasDecEq Build abbrev
+R2048:2059 prosa.classic.implementation.apa.job ConcreteJob concrete_job rec
+R2061:2067 prosa.classic.implementation.apa.job ConcreteJob eqn_job thm
+def 2005:2068 ConcreteJob HB_unnamed_factory_1
+def 2005:2068 ConcreteJob ConcreteJob_concrete_job__canonical__eqtype_Equality
+R2078:2081 prosa.classic.implementation.apa.job ConcreteJob.Defs <> sec
+R2093:2103 prosa.classic.implementation.apa.job ConcreteJob <> mod

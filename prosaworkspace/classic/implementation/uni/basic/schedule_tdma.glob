@@ -1,0 +1,853 @@
+DIGEST cfaeb615238bcdac87b2d4bc92aa36c5
+Fprosa.classic.implementation.uni.basic.schedule_tdma
+R15:36 prosa.classic.util.all <> <> lib
+R38:64 prosa.classic.util.find_seq <> <> lib
+R81:85 Stdlib.Arith.Arith <> <> lib
+R103:139 prosa.classic.model.arrival.basic.job <> <> lib
+R156:205 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R222:273 prosa.classic.model.schedule.uni.basic.platform_tdma <> <> lib
+R290:327 prosa.classic.model.arrival.basic.task <> <> lib
+R329:359 prosa.classic.model.policy_tdma <> <> lib
+R377:417 prosa.classic.model.schedule.uni.schedule <> <> lib
+R419:465 prosa.classic.model.schedule.uni.schedulability <> <> lib
+R483:510 prosa.classic.model.priority <> <> lib
+R527:574 prosa.classic.analysis.uni.basic.tdma_rta_theory <> <> lib
+R591:650 prosa.classic.model.schedule.uni.transformation.construction <> <> lib
+R668:699 prosa.classic.implementation.job <> <> lib
+R701:733 prosa.classic.implementation.task <> <> lib
+R750:794 prosa.classic.implementation.arrival_sequence <> <> lib
+R811:857 prosa.classic.implementation.uni.basic.schedule <> <> lib
+R890:898 mathcomp.boot.ssreflect <> <> lib
+R900:906 mathcomp.boot.ssrbool <> <> lib
+R908:913 mathcomp.boot.ssrnat <> <> lib
+R915:920 mathcomp.boot.eqtype <> <> lib
+R922:924 mathcomp.boot.seq <> <> lib
+R926:930 mathcomp.boot.bigop <> <> lib
+R932:934 mathcomp.boot.div <> <> lib
+mod 985:1005 <> ConcreteSchedulerTDMA
+R1018:1020 prosa.classic.model.arrival.basic.job Job <> mod
+R1022:1036 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence <> mod
+R1038:1057 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule <> mod
+R1059:1073 prosa.classic.model.arrival.basic.task SporadicTaskset <> mod
+R1075:1088 prosa.classic.model.schedule.uni.schedulability Schedulability <> mod
+R1090:1097 prosa.classic.model.priority Priority <> mod
+R1108:1131 prosa.classic.analysis.uni.basic.tdma_rta_theory ResponseTimeAnalysisTDMA <> mod
+R1133:1142 prosa.classic.model.policy_tdma PolicyTDMA <> mod
+R1144:1163 prosa.classic.model.schedule.uni.transformation.construction ScheduleConstruction <> mod
+R1165:1177 prosa.classic.model.schedule.uni.basic.platform_tdma Platform_TDMA <> mod
+R1189:1199 prosa.classic.implementation.job ConcreteJob <> mod
+R1201:1212 prosa.classic.implementation.task ConcreteTask <> mod
+R1214:1236 prosa.classic.implementation.arrival_sequence ConcreteArrivalSequence <> mod
+R1238:1254 prosa.classic.implementation.uni.basic.schedule ConcreteScheduler <> mod
+sec 1269:1286 ConcreteSchedulerTDMA ImplementationTDMA
+var  1303:1306 ConcreteSchedulerTDMA.ImplementationTDMA Task
+R1309:1314 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  1331:1333 ConcreteSchedulerTDMA.ImplementationTDMA Job
+R1336:1341 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1358:1368 ConcreteSchedulerTDMA.ImplementationTDMA job_arrival
+R1374:1377 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1371:1373 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.Job var
+R1378:1381 prosa.classic.model.time Time time def
+var 1397:1404 ConcreteSchedulerTDMA.ImplementationTDMA job_cost
+R1410:1413 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1407:1409 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.Job var
+R1414:1417 prosa.classic.model.time Time time def
+var 1433:1440 ConcreteSchedulerTDMA.ImplementationTDMA job_task
+R1446:1449 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1443:1445 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.Job var
+R1450:1453 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.Task var
+var 1470:1476 ConcreteSchedulerTDMA.ImplementationTDMA arr_seq
+R1479:1494 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R1496:1498 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.Job var
+var 1515:1516 ConcreteSchedulerTDMA.ImplementationTDMA ts
+R1519:1523 prosa.util.seqset <> :::'{set'_x_'}' not
+R1528:1528 prosa.util.seqset <> :::'{set'_x_'}' not
+R1524:1527 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.Task var
+var 1545:1553 ConcreteSchedulerTDMA.ImplementationTDMA time_slot
+R1556:1564 prosa.classic.model.policy_tdma PolicyTDMA TDMA_slot def
+R1566:1569 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.Task var
+var 1586:1595 ConcreteSchedulerTDMA.ImplementationTDMA slot_order
+R1598:1612 prosa.classic.model.policy_tdma PolicyTDMA TDMA_slot_order def
+R1614:1617 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.Task var
+var 1636:1665 ConcreteSchedulerTDMA.ImplementationTDMA H_arrival_times_are_consistent
+R1677:1704 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_times_are_consistent def
+R1718:1724 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.arr_seq var
+R1706:1716 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.job_arrival var
+sec 1740:1750 ConcreteSchedulerTDMA.ImplementationTDMA JobSchedule
+var 1771:1775 ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule sched
+R1778:1785 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R1787:1789 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.Job var
+var 1809:1809 ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule t
+R1811:1814 prosa.classic.model.time Time time def
+var 1830:1839 ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule is_pending
+R1844:1850 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R1873:1877 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.sched var
+R1864:1871 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.job_cost var
+R1852:1862 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.job_arrival var
+def 1900:1911 ConcreteSchedulerTDMA pending_jobs
+R1928:1932 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R1934:1937 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R1966:1968 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R1983:1983 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+binder 1933:1933 <> j:23
+R1969:1978 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.is_pending var
+R1980:1980 prosa.classic.implementation.uni.basic.schedule_tdma <> j:23 var
+R1982:1982 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.t var
+R1938:1955 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_up_to def
+R1965:1965 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.t var
+R1957:1963 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.arr_seq var
+var 2000:2015 ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule job_in_time_slot
+binder 2033:2035 <> job:24
+R2040:2056 prosa.classic.model.policy_tdma PolicyTDMA Task_in_time_slot def
+R2097:2097 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.t var
+R2087:2095 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.time_slot var
+R2073:2080 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.job_task var
+R2082:2084 prosa.classic.implementation.uni.basic.schedule_tdma <> job:24 var
+R2061:2070 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.slot_order var
+R2058:2059 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.ts var
+def 2121:2135 ConcreteSchedulerTDMA job_to_schedule
+R2142:2146 mathcomp.boot.seq <> ohead def
+R2148:2152 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R2156:2159 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R2172:2174 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R2195:2195 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+binder 2153:2155 <> job:25
+R2175:2190 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.job_in_time_slot var
+R2192:2194 prosa.classic.implementation.uni.basic.schedule_tdma <> job:25 var
+R2160:2171 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA pending_jobs def
+sec 2214:2219 ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule Lemmas
+var 2242:2257 ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.Lemmas arr_seq_is_a_set
+R2270:2294 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence_is_a_set def
+R2296:2302 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.arr_seq var
+prf 2320:2336 ConcreteSchedulerTDMA pending_jobs_uniq
+R2349:2352 mathcomp.boot.seq <> uniq def
+R2354:2365 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA pending_jobs def
+R2397:2407 mathcomp.boot.seq <> filter_uniq thm
+R2452:2462 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.job_arrival var
+R2419:2431 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrivals_uniq thm
+R2397:2407 mathcomp.boot.seq <> filter_uniq thm
+R2452:2462 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.job_arrival var
+R2419:2431 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrivals_uniq thm
+prf 2500:2512 ConcreteSchedulerTDMA respects_FIFO
+binder 2532:2532 <> j:28
+binder 2534:2535 <> j':29
+R2556:2559 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2539:2543 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R2538:2538 prosa.classic.implementation.uni.basic.schedule_tdma <> j:28 var
+R2544:2555 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA pending_jobs def
+R2579:2592 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2562:2566 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R2560:2561 prosa.classic.implementation.uni.basic.schedule_tdma <> j':29 var
+R2567:2578 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA pending_jobs def
+R2682:2695 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2631:2644 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R2593:2596 mathcomp.boot.seq <> find def
+R2619:2630 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA pending_jobs def
+binder 2603:2605 <> job:30
+R2613:2614 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R2610:2612 prosa.classic.implementation.uni.basic.schedule_tdma <> job:30 var
+R2615:2616 prosa.classic.implementation.uni.basic.schedule_tdma <> j':29 var
+R2645:2648 mathcomp.boot.seq <> find def
+R2670:2681 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA pending_jobs def
+binder 2655:2657 <> job:31
+R2665:2666 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R2662:2664 prosa.classic.implementation.uni.basic.schedule_tdma <> job:31 var
+R2667:2667 prosa.classic.implementation.uni.basic.schedule_tdma <> j:28 var
+R2710:2713 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R2696:2706 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.job_arrival var
+R2708:2709 prosa.classic.implementation.uni.basic.schedule_tdma <> j':29 var
+R2714:2724 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.job_arrival var
+R2726:2726 prosa.classic.implementation.uni.basic.schedule_tdma <> j:28 var
+R2761:2775 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA job_to_schedule def
+R2778:2789 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA pending_jobs def
+R2792:2809 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_up_to def
+R2820:2839 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R2761:2775 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA job_to_schedule def
+R2761:2775 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA job_to_schedule def
+R2778:2789 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA pending_jobs def
+R2778:2789 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA pending_jobs def
+R2792:2809 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_up_to def
+R2792:2809 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_up_to def
+R2820:2839 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R2820:2839 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R2874:2883 mathcomp.boot.seq <> mem_filter thm
+R2874:2883 mathcomp.boot.seq <> mem_filter thm
+R2874:2883 mathcomp.boot.seq <> mem_filter thm
+R2874:2883 mathcomp.boot.seq <> mem_filter thm
+R2874:2883 mathcomp.boot.seq <> mem_filter thm
+R2874:2883 mathcomp.boot.seq <> mem_filter thm
+R2874:2883 mathcomp.boot.seq <> mem_filter thm
+R2902:2905 Corelib.ssr.ssrbool <> andP thm
+R2919:2922 Corelib.ssr.ssrbool <> andP thm
+R2956:2976 prosa.util.bigcat <> mem_bigcat_nat_exists thm
+R2956:2976 prosa.util.bigcat <> mem_bigcat_nat_exists thm
+R3000:3020 prosa.util.bigcat <> mem_bigcat_nat_exists thm
+R3000:3020 prosa.util.bigcat <> mem_bigcat_nat_exists thm
+R3146:3148 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3133:3143 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.job_arrival var
+R3198:3200 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3184:3194 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.job_arrival var
+R3240:3243 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R3244:3244 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.t var
+R3262:3265 Corelib.ssr.ssrbool <> andP thm
+R3301:3304 mathcomp.boot.ssrnat <> leqP thm
+R3301:3304 mathcomp.boot.ssrnat <> leqP thm
+R3386:3388 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R3351:3364 prosa.util.bigcat <> mem_bigcat_nat thm
+R3386:3388 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R3351:3364 prosa.util.bigcat <> mem_bigcat_nat thm
+R3446:3448 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R3456:3458 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R3455:3455 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.t var
+R3418:3431 prosa.util.bigcat <> mem_bigcat_nat thm
+R3446:3448 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R3456:3458 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R3455:3455 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.t var
+R3418:3431 prosa.util.bigcat <> mem_bigcat_nat thm
+R3628:3637 mathcomp.boot.seq <> mem_filter thm
+R3646:3649 Corelib.ssr.ssrbool <> andP thm
+R3495:3499 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R3500:3504 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R3506:3509 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R3590:3592 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R3607:3607 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+binder 3505:3505 <> j:32
+R3593:3602 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.is_pending var
+R3604:3604 prosa.classic.implementation.uni.basic.schedule_tdma <> j:32 var
+R3606:3606 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.t var
+R3510:3514 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R3518:3518 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R3523:3525 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R3527:3530 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R3532:3534 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R3542:3563 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R3519:3522 mathcomp.boot.seq <> ::seq_scope:'['_'::'_']' not
+R3539:3541 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+binder 3531:3531 <> i:33
+binder 3531:3531 <> i:34
+binder 3531:3531 <> i:35
+R3515:3517 mathcomp.boot.seq <> cat def
+R3564:3579 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arriving_at def
+R3589:3589 prosa.classic.implementation.uni.basic.schedule_tdma <> i:33 var
+R3581:3587 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.arr_seq var
+R3628:3637 mathcomp.boot.seq <> mem_filter thm
+R3628:3637 mathcomp.boot.seq <> mem_filter thm
+R3646:3649 Corelib.ssr.ssrbool <> andP thm
+R3810:3819 mathcomp.boot.seq <> mem_filter thm
+R3828:3831 Corelib.ssr.ssrbool <> andP thm
+R3674:3678 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R3679:3683 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R3685:3688 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R3772:3774 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R3789:3789 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+binder 3684:3684 <> j:36
+R3775:3784 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.is_pending var
+R3786:3786 prosa.classic.implementation.uni.basic.schedule_tdma <> j:36 var
+R3788:3788 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.t var
+R3689:3693 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R3697:3697 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R3702:3704 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R3712:3715 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R3717:3719 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R3724:3745 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R3698:3701 mathcomp.boot.seq <> ::seq_scope:'['_'::'_']' not
+R3709:3711 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R3721:3723 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R3720:3720 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.t var
+binder 3716:3716 <> i:37
+binder 3716:3716 <> i:38
+binder 3716:3716 <> i:39
+R3694:3696 mathcomp.boot.seq <> cat def
+R3746:3761 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arriving_at def
+R3771:3771 prosa.classic.implementation.uni.basic.schedule_tdma <> i:37 var
+R3763:3769 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.arr_seq var
+R3810:3819 mathcomp.boot.seq <> mem_filter thm
+R3810:3819 mathcomp.boot.seq <> mem_filter thm
+R3828:3831 Corelib.ssr.ssrbool <> andP thm
+R3877:3879 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R3852:3862 mathcomp.boot.bigop <> big_cat_nat thm
+R3877:3879 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R3852:3862 mathcomp.boot.bigop <> big_cat_nat thm
+R3877:3879 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R3852:3862 mathcomp.boot.bigop <> big_cat_nat thm
+R3877:3879 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R3852:3862 mathcomp.boot.bigop <> big_cat_nat thm
+R3877:3879 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R3852:3862 mathcomp.boot.bigop <> big_cat_nat thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R3919:3928 mathcomp.boot.seq <> filter_cat thm
+R3930:3937 mathcomp.boot.seq <> find_cat thm
+R3919:3928 mathcomp.boot.seq <> filter_cat thm
+R3919:3928 mathcomp.boot.seq <> filter_cat thm
+R3930:3937 mathcomp.boot.seq <> find_cat thm
+R3930:3937 mathcomp.boot.seq <> find_cat thm
+R3965:3972 mathcomp.boot.seq <> find_cat thm
+R3965:3972 mathcomp.boot.seq <> find_cat thm
+R3965:3972 mathcomp.boot.seq <> find_cat thm
+R4001:4001 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4169:4172 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4002:4004 mathcomp.boot.seq <> has def
+R4045:4049 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R4051:4054 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R4138:4153 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R4168:4168 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+binder 4050:4050 <> j:40
+R4154:4163 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.is_pending var
+R4165:4165 prosa.classic.implementation.uni.basic.schedule_tdma <> j:40 var
+R4167:4167 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.t var
+R4055:4059 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4063:4063 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4068:4070 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4072:4075 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4077:4079 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4087:4111 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4064:4067 mathcomp.boot.seq <> ::seq_scope:'['_'::'_']' not
+R4084:4086 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+binder 4076:4076 <> i:41
+binder 4076:4076 <> i:42
+binder 4076:4076 <> i:43
+R4060:4062 mathcomp.boot.seq <> cat def
+R4112:4127 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arriving_at def
+R4137:4137 prosa.classic.implementation.uni.basic.schedule_tdma <> i:41 var
+R4129:4135 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.arr_seq var
+R4017:4019 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.Job var
+binder 4011:4013 <> job:44
+R4027:4030 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R4024:4026 prosa.classic.implementation.uni.basic.schedule_tdma <> job:44 var
+R4173:4177 Corelib.Init.Datatypes <> false constr
+R4225:4229 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R4231:4234 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R4321:4336 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R4351:4351 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+binder 4230:4230 <> j:45
+R4337:4346 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.is_pending var
+R4348:4348 prosa.classic.implementation.uni.basic.schedule_tdma <> j:45 var
+R4350:4350 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.t var
+R4235:4239 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4243:4243 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4248:4250 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4258:4261 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4263:4265 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4270:4294 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4244:4247 mathcomp.boot.seq <> ::seq_scope:'['_'::'_']' not
+R4255:4257 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R4267:4269 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R4266:4266 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.t var
+binder 4262:4262 <> i:46
+binder 4262:4262 <> i:47
+binder 4262:4262 <> i:48
+R4240:4242 mathcomp.boot.seq <> cat def
+R4295:4310 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arriving_at def
+R4320:4320 prosa.classic.implementation.uni.basic.schedule_tdma <> i:46 var
+R4312:4318 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.arr_seq var
+R4196:4204 prosa.classic.util.find_seq <> find_uniq thm
+R4225:4229 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R4231:4234 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R4321:4336 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R4351:4351 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+binder 4230:4230 <> j:49
+R4337:4346 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.is_pending var
+R4348:4348 prosa.classic.implementation.uni.basic.schedule_tdma <> j:49 var
+R4350:4350 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.t var
+R4235:4239 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4243:4243 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4248:4250 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4258:4261 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4263:4265 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4270:4294 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4244:4247 mathcomp.boot.seq <> ::seq_scope:'['_'::'_']' not
+R4255:4257 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R4267:4269 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R4266:4266 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.t var
+binder 4262:4262 <> i:50
+binder 4262:4262 <> i:51
+binder 4262:4262 <> i:52
+R4240:4242 mathcomp.boot.seq <> cat def
+R4295:4310 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arriving_at def
+R4320:4320 prosa.classic.implementation.uni.basic.schedule_tdma <> i:50 var
+R4312:4318 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.arr_seq var
+R4196:4204 prosa.classic.util.find_seq <> find_uniq thm
+R4377:4386 mathcomp.boot.seq <> filter_cat thm
+R4389:4399 mathcomp.boot.bigop <> big_cat_nat thm
+R4377:4386 mathcomp.boot.seq <> filter_cat thm
+R4377:4386 mathcomp.boot.seq <> filter_cat thm
+R4389:4399 mathcomp.boot.bigop <> big_cat_nat thm
+R4389:4399 mathcomp.boot.bigop <> big_cat_nat thm
+R4414:4430 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA pending_jobs_uniq thm
+R4414:4430 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA pending_jobs_uniq thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R4470:4470 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4637:4640 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4471:4473 mathcomp.boot.seq <> has def
+R4513:4517 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R4519:4522 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R4606:4621 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R4636:4636 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+binder 4518:4518 <> j:53
+R4622:4631 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.is_pending var
+R4633:4633 prosa.classic.implementation.uni.basic.schedule_tdma <> j:53 var
+R4635:4635 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.t var
+R4523:4527 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4531:4531 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4536:4538 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4540:4543 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4545:4547 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4555:4579 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4532:4535 mathcomp.boot.seq <> ::seq_scope:'['_'::'_']' not
+R4552:4554 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+binder 4544:4544 <> i:54
+binder 4544:4544 <> i:55
+binder 4544:4544 <> i:56
+R4528:4530 mathcomp.boot.seq <> cat def
+R4580:4595 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arriving_at def
+R4605:4605 prosa.classic.implementation.uni.basic.schedule_tdma <> i:54 var
+R4597:4603 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.arr_seq var
+R4486:4488 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.Job var
+binder 4480:4482 <> job:57
+R4496:4499 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R4493:4495 prosa.classic.implementation.uni.basic.schedule_tdma <> job:57 var
+R4641:4644 Corelib.Init.Datatypes <> true constr
+R4655:4658 mathcomp.boot.seq <> hasP thm
+R4655:4658 mathcomp.boot.seq <> hasP thm
+R4859:4861 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R4692:4695 mathcomp.boot.seq <> find def
+R4735:4739 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R4741:4744 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R4828:4843 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R4858:4858 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+binder 4740:4740 <> j:58
+R4844:4853 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.is_pending var
+R4855:4855 prosa.classic.implementation.uni.basic.schedule_tdma <> j:58 var
+R4857:4857 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.t var
+R4745:4749 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4753:4753 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4758:4760 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4762:4765 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4767:4769 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4777:4801 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4754:4757 mathcomp.boot.seq <> ::seq_scope:'['_'::'_']' not
+R4774:4776 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+binder 4766:4766 <> t:59
+binder 4766:4766 <> t:60
+binder 4766:4766 <> t:61
+R4750:4752 mathcomp.boot.seq <> cat def
+R4802:4817 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arriving_at def
+R4827:4827 prosa.classic.implementation.uni.basic.schedule_tdma <> t:59 var
+R4819:4825 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.arr_seq var
+R4708:4710 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.Job var
+binder 4702:4704 <> job:62
+R4718:4721 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R4715:4717 prosa.classic.implementation.uni.basic.schedule_tdma <> job:62 var
+R4862:4865 mathcomp.boot.seq <> size def
+R4879:4883 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R4885:4888 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R4972:4987 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R5002:5002 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+binder 4884:4884 <> j:63
+R4988:4997 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.is_pending var
+R4999:4999 prosa.classic.implementation.uni.basic.schedule_tdma <> j:63 var
+R5001:5001 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.t var
+R4889:4893 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4897:4897 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4902:4904 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4906:4909 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4911:4913 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4921:4945 mathcomp.boot.bigop <> ::big_scope:'\big'_'['_x_'/'_x_']_'_'('_x_'<='_x_'<'_x_')'_x not
+R4898:4901 mathcomp.boot.seq <> ::seq_scope:'['_'::'_']' not
+R4918:4920 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+binder 4910:4910 <> t:64
+binder 4910:4910 <> t:65
+binder 4910:4910 <> t:66
+R4894:4896 mathcomp.boot.seq <> cat def
+R4946:4961 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arriving_at def
+R4971:4971 prosa.classic.implementation.uni.basic.schedule_tdma <> t:64 var
+R4963:4969 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.arr_seq var
+R5020:5027 mathcomp.boot.seq <> has_find thm
+R5020:5027 mathcomp.boot.seq <> has_find thm
+R5020:5027 mathcomp.boot.seq <> has_find thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+prf 5104:5130 ConcreteSchedulerTDMA pending_job_in_penging_list
+binder 5150:5150 <> j:67
+R5173:5186 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5153:5162 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R5172:5172 prosa.classic.implementation.uni.basic.schedule_tdma <> j:67 var
+R5164:5170 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.arr_seq var
+R5225:5238 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5187:5193 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R5224:5224 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.t var
+R5222:5222 prosa.classic.implementation.uni.basic.schedule_tdma <> j:67 var
+R5216:5220 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.sched var
+R5207:5214 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.job_cost var
+R5195:5205 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.job_arrival var
+R5240:5244 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R5239:5239 prosa.classic.implementation.uni.basic.schedule_tdma <> j:67 var
+R5245:5256 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA pending_jobs def
+R5316:5325 mathcomp.boot.seq <> mem_filter thm
+R5316:5325 mathcomp.boot.seq <> mem_filter thm
+R5316:5325 mathcomp.boot.seq <> mem_filter thm
+R5335:5338 Corelib.ssr.ssrbool <> andP thm
+R5335:5338 Corelib.ssr.ssrbool <> andP thm
+R5378:5395 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_up_to def
+R5378:5395 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_up_to def
+R5378:5395 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_up_to def
+R5467:5477 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.job_arrival var
+R5412:5446 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrived_between_implies_in_arrivals thm
+R5467:5477 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.job_arrival var
+R5412:5446 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrived_between_implies_in_arrivals thm
+R5496:5525 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.H_arrival_times_are_consistent var
+R5496:5525 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.H_arrival_times_are_consistent var
+R5553:5567 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrived_between def
+R5553:5567 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrived_between def
+R5553:5567 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrived_between def
+R5595:5601 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R5595:5601 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R5595:5601 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R5622:5625 Corelib.ssr.ssrbool <> andP thm
+R5655:5665 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence has_arrived def
+R5655:5665 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence has_arrived def
+R5655:5665 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence has_arrived def
+prf 5711:5737 ConcreteSchedulerTDMA pendinglist_jobs_in_arr_seq
+binder 5757:5757 <> j:68
+R5778:5792 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5761:5765 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R5760:5760 prosa.classic.implementation.uni.basic.schedule_tdma <> j:68 var
+R5766:5777 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA pending_jobs def
+R5793:5802 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R5812:5812 prosa.classic.implementation.uni.basic.schedule_tdma <> j:68 var
+R5804:5810 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.arr_seq var
+R5867:5876 mathcomp.boot.seq <> mem_filter thm
+R5867:5876 mathcomp.boot.seq <> mem_filter thm
+R5867:5876 mathcomp.boot.seq <> mem_filter thm
+R5892:5895 Corelib.ssr.ssrbool <> andP thm
+R5949:5966 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_up_to def
+R5949:5966 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_up_to def
+R5949:5966 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_up_to def
+R6041:6043 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R6040:6040 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.t var
+R5993:6019 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R6041:6043 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R6040:6040 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.t var
+R5993:6019 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R6070:6075 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule.Lemmas <> sec
+R6087:6097 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA.ImplementationTDMA.JobSchedule <> sec
+sec 6115:6127 ConcreteSchedulerTDMA.ImplementationTDMA SchedulerTDMA
+var 6143:6156 ConcreteSchedulerTDMA.ImplementationTDMA.SchedulerTDMA empty_schedule
+R6160:6167 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R6169:6171 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.Job var
+binder 6180:6180 <> t:69
+R6185:6188 Corelib.Init.Datatypes <> None constr
+def 6210:6223 ConcreteSchedulerTDMA scheduler_tdma
+R6238:6265 prosa.classic.model.schedule.uni.transformation.construction ScheduleConstruction build_schedule_from_prefixes def
+R6283:6296 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.SchedulerTDMA.empty_schedule var
+R6267:6281 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA job_to_schedule def
+prf 6314:6345 ConcreteSchedulerTDMA scheduler_depends_only_on_prefix
+binder 6365:6370 <> sched1:70
+binder 6372:6377 <> sched2:71
+binder 6379:6379 <> t:72
+R6392:6392 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6435:6449 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+binder 6400:6401 <> t0:73
+R6410:6413 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6406:6408 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R6404:6405 prosa.classic.implementation.uni.basic.schedule_tdma <> t0:73 var
+R6409:6409 prosa.classic.implementation.uni.basic.schedule_tdma <> t:72 var
+R6423:6425 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6414:6419 prosa.classic.implementation.uni.basic.schedule_tdma <> sched1:70 var
+R6421:6422 prosa.classic.implementation.uni.basic.schedule_tdma <> t0:73 var
+R6426:6431 prosa.classic.implementation.uni.basic.schedule_tdma <> sched2:71 var
+R6433:6434 prosa.classic.implementation.uni.basic.schedule_tdma <> t0:73 var
+R6474:6476 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6450:6464 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA job_to_schedule def
+R6473:6473 prosa.classic.implementation.uni.basic.schedule_tdma <> t:72 var
+R6466:6471 prosa.classic.implementation.uni.basic.schedule_tdma <> sched1:70 var
+R6477:6491 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA job_to_schedule def
+R6500:6500 prosa.classic.implementation.uni.basic.schedule_tdma <> t:72 var
+R6493:6498 prosa.classic.implementation.uni.basic.schedule_tdma <> sched2:71 var
+R6557:6571 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA job_to_schedule def
+R6557:6571 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA job_to_schedule def
+R6557:6571 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA job_to_schedule def
+R6629:6631 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6608:6619 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA pending_jobs def
+R6632:6643 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA pending_jobs def
+R6672:6683 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA pending_jobs def
+R6672:6683 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA pending_jobs def
+R6672:6683 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA pending_jobs def
+R6696:6707 mathcomp.boot.seq <> eq_in_filter thm
+R6696:6707 mathcomp.boot.seq <> eq_in_filter thm
+R6732:6738 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R6732:6738 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R6732:6738 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R6782:6784 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6762:6768 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R6785:6791 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R6824:6830 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R6824:6830 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R6824:6830 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R6843:6852 mathcomp.boot.bigop <> eq_big_nat thm
+R6843:6852 mathcomp.boot.bigop <> eq_big_nat thm
+R6861:6864 Corelib.ssr.ssrbool <> andP thm
+R6888:6897 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_at def
+R6900:6911 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R6888:6897 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_at def
+R6888:6897 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_at def
+R6900:6911 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R6900:6911 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R6961:6972 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R6961:6972 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R6961:6972 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+prf 7054:7089 ConcreteSchedulerTDMA scheduler_uses_construction_function
+binder 7105:7105 <> t:74
+R7124:7126 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7108:7121 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA scheduler_tdma def
+R7123:7123 prosa.classic.implementation.uni.basic.schedule_tdma <> t:74 var
+R7127:7141 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA job_to_schedule def
+R7158:7158 prosa.classic.implementation.uni.basic.schedule_tdma <> t:74 var
+R7143:7156 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA scheduler_tdma def
+R7195:7232 prosa.classic.model.schedule.uni.transformation.construction ScheduleConstruction prefix_dependent_schedule_construction thm
+R7195:7232 prosa.classic.model.schedule.uni.transformation.construction ScheduleConstruction prefix_dependent_schedule_construction thm
+R7247:7278 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA scheduler_depends_only_on_prefix thm
+R7247:7278 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA scheduler_depends_only_on_prefix thm
+R7301:7313 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA.ImplementationTDMA.SchedulerTDMA <> sec
+var 7330:7334 ConcreteSchedulerTDMA.ImplementationTDMA sched
+R7344:7357 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA scheduler_tdma def
+prf 7374:7410 ConcreteSchedulerTDMA scheduler_jobs_must_arrive_to_execute
+R7419:7445 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule jobs_must_arrive_to_execute def
+R7459:7463 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.sched var
+R7447:7457 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.job_arrival var
+R7496:7498 mathcomp.boot.eqtype <> eqP def
+R7522:7526 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.sched var
+R7528:7563 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA scheduler_uses_construction_function thm
+R7566:7580 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA job_to_schedule def
+R7522:7526 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.sched var
+R7522:7526 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.sched var
+R7528:7563 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA scheduler_uses_construction_function thm
+R7528:7563 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA scheduler_uses_construction_function thm
+R7566:7580 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA job_to_schedule def
+R7566:7580 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA job_to_schedule def
+R7624:7628 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R7632:7635 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R7665:7667 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R7726:7726 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+binder 7629:7631 <> job:75
+R7668:7684 prosa.classic.model.policy_tdma PolicyTDMA Task_in_time_slot def
+R7715:7723 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.time_slot var
+R7701:7708 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.job_task var
+R7710:7712 prosa.classic.implementation.uni.basic.schedule_tdma <> job:75 var
+R7689:7698 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.slot_order var
+R7686:7687 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.ts var
+R7636:7647 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA pending_jobs def
+R7649:7662 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA scheduler_tdma def
+R7624:7628 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R7632:7635 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R7665:7667 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R7726:7726 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+binder 7629:7631 <> job:76
+R7668:7684 prosa.classic.model.policy_tdma PolicyTDMA Task_in_time_slot def
+R7715:7723 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.time_slot var
+R7701:7708 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.job_task var
+R7710:7712 prosa.classic.implementation.uni.basic.schedule_tdma <> job:76 var
+R7689:7698 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.slot_order var
+R7686:7687 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.ts var
+R7636:7647 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA pending_jobs def
+R7649:7662 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA scheduler_tdma def
+R7624:7628 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R7632:7635 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R7665:7667 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R7726:7726 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+binder 7629:7631 <> job:77
+R7668:7684 prosa.classic.model.policy_tdma PolicyTDMA Task_in_time_slot def
+R7715:7723 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.time_slot var
+R7701:7708 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.job_task var
+R7710:7712 prosa.classic.implementation.uni.basic.schedule_tdma <> job:77 var
+R7689:7698 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.slot_order var
+R7686:7687 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.ts var
+R7636:7647 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA pending_jobs def
+R7649:7662 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA scheduler_tdma def
+R7779:7783 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R7784:7795 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA pending_jobs def
+R7797:7810 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA scheduler_tdma def
+R7885:7887 mathcomp.boot.seq <> inE def
+R7889:7895 mathcomp.boot.eqtype <> eq_refl thm
+R7861:7865 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R7867:7870 mathcomp.boot.seq <> ::seq_scope:x_'::'_x not
+R7885:7887 mathcomp.boot.seq <> inE def
+R7885:7887 mathcomp.boot.seq <> inE def
+R7889:7895 mathcomp.boot.eqtype <> eq_refl thm
+R7889:7895 mathcomp.boot.eqtype <> eq_refl thm
+R7918:7927 mathcomp.boot.seq <> mem_filter thm
+R7918:7927 mathcomp.boot.seq <> mem_filter thm
+R7918:7927 mathcomp.boot.seq <> mem_filter thm
+R7947:7950 Corelib.ssr.ssrbool <> andP thm
+R7976:7985 mathcomp.boot.seq <> mem_filter thm
+R7976:7985 mathcomp.boot.seq <> mem_filter thm
+R7976:7985 mathcomp.boot.seq <> mem_filter thm
+R8018:8021 Corelib.ssr.ssrbool <> andP thm
+R8025:8028 Corelib.ssr.ssrbool <> andP thm
+prf 8064:8100 ConcreteSchedulerTDMA scheduler_completed_jobs_dont_execute
+R8109:8135 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_jobs_dont_execute def
+R8146:8150 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.sched var
+R8137:8144 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.job_cost var
+R8227:8233 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R8236:8249 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R8251:8257 mathcomp.boot.bigop <> big_geq thm
+R8227:8233 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R8227:8233 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R8236:8249 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R8236:8249 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R8251:8257 mathcomp.boot.bigop <> big_geq thm
+R8251:8257 mathcomp.boot.bigop <> big_geq thm
+R8278:8284 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R8287:8300 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R8302:8313 mathcomp.boot.bigop <> big_nat_recr thm
+R8278:8284 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R8278:8284 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R8287:8300 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R8287:8300 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service_during def
+R8302:8313 mathcomp.boot.bigop <> big_nat_recr thm
+R8302:8313 mathcomp.boot.bigop <> big_nat_recr thm
+R8334:8342 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R8334:8342 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R8334:8342 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R8366:8368 Corelib.ssr.ssrbool <> orP thm
+R8372:8374 mathcomp.boot.eqtype <> eqP def
+R8421:8429 mathcomp.boot.ssrnat <> leq_trans thm
+R8444:8448 mathcomp.boot.ssrnat <> addn1 thm
+R8421:8429 mathcomp.boot.ssrnat <> leq_trans thm
+R8444:8448 mathcomp.boot.ssrnat <> addn1 thm
+R8444:8448 mathcomp.boot.ssrnat <> addn1 thm
+R8470:8476 mathcomp.boot.ssrnat <> leq_add thm
+R8493:8498 mathcomp.boot.ssrnat <> leq_b1 thm
+R8470:8476 mathcomp.boot.ssrnat <> leq_add thm
+R8493:8498 mathcomp.boot.ssrnat <> leq_b1 thm
+R8525:8532 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.job_cost var
+R8536:8540 mathcomp.boot.ssrnat <> addn0 thm
+R8549:8555 mathcomp.boot.ssrnat <> leq_add thm
+R8536:8540 mathcomp.boot.ssrnat <> addn0 thm
+R8525:8532 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.job_cost var
+R8525:8532 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.job_cost var
+R8536:8540 mathcomp.boot.ssrnat <> addn0 thm
+R8549:8555 mathcomp.boot.ssrnat <> leq_add thm
+R8594:8598 mathcomp.boot.ssrnat <> leqn0 thm
+R8600:8603 mathcomp.boot.ssrnat <> eqb0 thm
+R8606:8617 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R8594:8598 mathcomp.boot.ssrnat <> leqn0 thm
+R8594:8598 mathcomp.boot.ssrnat <> leqn0 thm
+R8600:8603 mathcomp.boot.ssrnat <> eqb0 thm
+R8600:8603 mathcomp.boot.ssrnat <> eqb0 thm
+R8606:8617 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R8606:8617 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R8635:8639 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.sched var
+R8641:8676 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA scheduler_uses_construction_function thm
+R8635:8639 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.sched var
+R8635:8639 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.sched var
+R8641:8676 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA scheduler_uses_construction_function thm
+R8641:8676 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA scheduler_uses_construction_function thm
+R8697:8711 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA job_to_schedule def
+R8697:8711 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA job_to_schedule def
+R8697:8711 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA job_to_schedule def
+R8726:8728 mathcomp.boot.eqtype <> eqP def
+R8726:8728 mathcomp.boot.eqtype <> eqP def
+R8775:8779 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R8783:8786 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R8816:8818 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R8877:8877 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+binder 8780:8782 <> job:78
+R8819:8835 prosa.classic.model.policy_tdma PolicyTDMA Task_in_time_slot def
+R8866:8874 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.time_slot var
+R8852:8859 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.job_task var
+R8861:8863 prosa.classic.implementation.uni.basic.schedule_tdma <> job:78 var
+R8840:8849 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.slot_order var
+R8837:8838 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.ts var
+R8787:8798 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA pending_jobs def
+R8800:8813 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA scheduler_tdma def
+R8775:8779 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R8783:8786 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R8816:8818 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R8877:8877 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+binder 8780:8782 <> job:79
+R8819:8835 prosa.classic.model.policy_tdma PolicyTDMA Task_in_time_slot def
+R8866:8874 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.time_slot var
+R8852:8859 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.job_task var
+R8861:8863 prosa.classic.implementation.uni.basic.schedule_tdma <> job:79 var
+R8840:8849 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.slot_order var
+R8837:8838 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.ts var
+R8787:8798 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA pending_jobs def
+R8800:8813 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA scheduler_tdma def
+R8775:8779 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R8783:8786 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R8816:8818 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R8877:8877 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+binder 8780:8782 <> job:80
+R8819:8835 prosa.classic.model.policy_tdma PolicyTDMA Task_in_time_slot def
+R8866:8874 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.time_slot var
+R8852:8859 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.job_task var
+R8861:8863 prosa.classic.implementation.uni.basic.schedule_tdma <> job:80 var
+R8840:8849 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.slot_order var
+R8837:8838 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.ts var
+R8787:8798 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA pending_jobs def
+R8800:8813 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA scheduler_tdma def
+R8930:8934 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R8935:8946 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA pending_jobs def
+R8948:8961 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA scheduler_tdma def
+R9019:9021 mathcomp.boot.seq <> inE def
+R9023:9029 mathcomp.boot.eqtype <> eq_refl thm
+R8995:8999 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R9001:9004 mathcomp.boot.seq <> ::seq_scope:x_'::'_x not
+R9019:9021 mathcomp.boot.seq <> inE def
+R9019:9021 mathcomp.boot.seq <> inE def
+R9023:9029 mathcomp.boot.eqtype <> eq_refl thm
+R9023:9029 mathcomp.boot.eqtype <> eq_refl thm
+R9043:9052 mathcomp.boot.seq <> mem_filter thm
+R9043:9052 mathcomp.boot.seq <> mem_filter thm
+R9043:9052 mathcomp.boot.seq <> mem_filter thm
+R9063:9066 Corelib.ssr.ssrbool <> andP thm
+R9086:9102 prosa.classic.model.policy_tdma PolicyTDMA Task_in_time_slot def
+R9131:9139 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.time_slot var
+R9119:9126 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.job_task var
+R9107:9116 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.slot_order var
+R9104:9105 prosa.classic.implementation.uni.basic.schedule_tdma <> ConcreteSchedulerTDMA.ImplementationTDMA.ts var
+R9197:9199 mathcomp.boot.seq <> inE def
+R9201:9207 mathcomp.boot.eqtype <> eq_refl thm
+R9173:9177 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R9179:9182 mathcomp.boot.seq <> ::seq_scope:x_'::'_x not
+R9197:9199 mathcomp.boot.seq <> inE def
+R9197:9199 mathcomp.boot.seq <> inE def
+R9201:9207 mathcomp.boot.eqtype <> eq_refl thm
+R9201:9207 mathcomp.boot.eqtype <> eq_refl thm
+R9221:9230 mathcomp.boot.seq <> mem_filter thm
+R9221:9230 mathcomp.boot.seq <> mem_filter thm
+R9221:9230 mathcomp.boot.seq <> mem_filter thm
+R9241:9244 Corelib.ssr.ssrbool <> andP thm
+R9266:9275 mathcomp.boot.seq <> mem_filter thm
+R9278:9284 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R9287:9298 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R9304:9308 mathcomp.boot.ssrnat <> leqnn thm
+R9310:9314 Corelib.ssr.ssrbool <> andbF thm
+R9316:9320 Corelib.ssr.ssrbool <> andFb thm
+R9266:9275 mathcomp.boot.seq <> mem_filter thm
+R9266:9275 mathcomp.boot.seq <> mem_filter thm
+R9278:9284 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R9278:9284 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R9287:9298 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R9287:9298 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R9304:9308 mathcomp.boot.ssrnat <> leqnn thm
+R9304:9308 mathcomp.boot.ssrnat <> leqnn thm
+R9310:9314 Corelib.ssr.ssrbool <> andbF thm
+R9310:9314 Corelib.ssr.ssrbool <> andbF thm
+R9316:9320 Corelib.ssr.ssrbool <> andFb thm
+R9316:9320 Corelib.ssr.ssrbool <> andFb thm
+R9346:9363 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA.ImplementationTDMA <> sec
+R9371:9391 prosa.classic.implementation.uni.basic.schedule_tdma ConcreteSchedulerTDMA <> mod

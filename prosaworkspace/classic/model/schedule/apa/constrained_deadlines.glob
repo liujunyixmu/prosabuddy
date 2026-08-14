@@ -1,0 +1,725 @@
+DIGEST db76357e210cc0537abe56741506a22f
+Fprosa.classic.model.schedule.apa.constrained_deadlines
+R15:36 prosa.classic.util.all <> <> lib
+R54:90 prosa.classic.model.arrival.basic.job <> <> lib
+R92:129 prosa.classic.model.arrival.basic.task <> <> lib
+R131:158 prosa.classic.model.priority <> <> lib
+R160:205 prosa.classic.model.arrival.basic.task_arrival <> <> lib
+R223:272 prosa.classic.model.schedule.global.basic.schedule <> <> lib
+R290:334 prosa.classic.model.schedule.apa.interference <> <> lib
+R336:376 prosa.classic.model.schedule.apa.affinity <> <> lib
+R378:418 prosa.classic.model.schedule.apa.platform <> <> lib
+R450:458 mathcomp.boot.ssreflect <> <> lib
+R460:466 mathcomp.boot.ssrbool <> <> lib
+R468:473 mathcomp.boot.ssrfun <> <> lib
+R475:480 mathcomp.boot.eqtype <> <> lib
+R482:487 mathcomp.boot.ssrnat <> <> lib
+R489:491 mathcomp.boot.seq <> <> lib
+R493:499 mathcomp.boot.fintype <> <> lib
+R501:505 mathcomp.boot.bigop <> <> lib
+mod 516:535 <> ConstrainedDeadlines
+R548:550 prosa.classic.model.arrival.basic.job Job <> mod
+R552:566 prosa.classic.model.arrival.basic.task SporadicTaskset <> mod
+R568:589 prosa.classic.model.schedule.global.basic.schedule ScheduleOfSporadicTask <> mod
+R591:605 prosa.classic.model.arrival.basic.task SporadicTaskset <> mod
+R616:626 prosa.classic.model.arrival.basic.task_arrival TaskArrival <> mod
+R628:639 prosa.classic.model.schedule.apa.interference Interference <> mod
+R641:648 prosa.classic.model.priority Priority <> mod
+R650:657 prosa.classic.model.schedule.apa.affinity Affinity <> mod
+R659:666 prosa.classic.model.schedule.apa.platform Platform <> mod
+sec 682:687 ConstrainedDeadlines Lemmas
+var  704:716 ConstrainedDeadlines.Lemmas sporadic_task
+R719:724 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 741:749 ConstrainedDeadlines.Lemmas task_cost
+R765:768 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R752:764 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sporadic_task var
+R769:772 prosa.classic.model.time Time time def
+var 788:798 ConstrainedDeadlines.Lemmas task_period
+R814:817 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R801:813 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sporadic_task var
+R818:821 prosa.classic.model.time Time time def
+var 837:849 ConstrainedDeadlines.Lemmas task_deadline
+R865:868 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R852:864 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sporadic_task var
+R869:872 prosa.classic.model.time Time time def
+var  893:895 ConstrainedDeadlines.Lemmas Job
+R898:903 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 920:930 ConstrainedDeadlines.Lemmas job_arrival
+R936:939 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R933:935 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.Job var
+R940:943 prosa.classic.model.time Time time def
+var 959:966 ConstrainedDeadlines.Lemmas job_cost
+R972:975 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R969:971 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.Job var
+R976:979 prosa.classic.model.time Time time def
+var 995:1006 ConstrainedDeadlines.Lemmas job_deadline
+R1012:1015 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1009:1011 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.Job var
+R1016:1019 prosa.classic.model.time Time time def
+var 1035:1042 ConstrainedDeadlines.Lemmas job_task
+R1048:1051 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1045:1047 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.Job var
+R1052:1064 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sporadic_task var
+var 1131:1137 ConstrainedDeadlines.Lemmas arr_seq
+R1140:1155 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R1157:1159 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.Job var
+var  1233:1240 ConstrainedDeadlines.Lemmas num_cpus
+R1243:1245 Corelib.Init.Datatypes <> nat ind
+var 1262:1266 ConstrainedDeadlines.Lemmas sched
+R1269:1276 prosa.classic.model.schedule.global.basic.schedule Schedule schedule def
+R1282:1289 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.num_cpus var
+R1278:1280 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.Job var
+var 1307:1339 ConstrainedDeadlines.Lemmas H_jobs_come_from_arrival_sequence
+R1348:1378 prosa.classic.model.schedule.global.basic.schedule Schedule jobs_come_from_arrival_sequence def
+R1386:1392 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.arr_seq var
+R1380:1384 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sched var
+var 1474:1478 ConstrainedDeadlines.Lemmas alpha
+R1481:1493 prosa.classic.model.schedule.apa.affinity Affinity task_affinity def
+R1509:1516 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.num_cpus var
+R1495:1507 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sporadic_task var
+var 1591:1612 ConstrainedDeadlines.Lemmas H_valid_job_parameters
+binder 1628:1628 <> j:26
+R1659:1670 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1639:1648 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R1658:1658 prosa.classic.model.schedule.apa.constrained_deadlines <> j:26 var
+R1650:1656 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.arr_seq var
+R1671:1688 prosa.classic.model.arrival.basic.job Job valid_sporadic_job def
+R1745:1745 prosa.classic.model.schedule.apa.constrained_deadlines <> j:26 var
+R1736:1743 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R1723:1734 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_deadline var
+R1714:1721 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_cost var
+R1700:1712 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_deadline var
+R1690:1698 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_cost var
+sec 1890:1903 ConstrainedDeadlines.Lemmas NoMultipleJobs
+var 1987:2004 ConstrainedDeadlines.Lemmas.NoMultipleJobs higher_eq_priority
+R2007:2017 prosa.classic.model.priority Priority JLDP_policy def
+R2019:2021 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.Job var
+var 2041:2057 ConstrainedDeadlines.Lemmas.NoMultipleJobs H_work_conserving
+R2068:2086 prosa.classic.model.schedule.apa.platform Platform apa_work_conserving def
+R2132:2136 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.alpha var
+R2126:2130 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sched var
+R2118:2124 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.arr_seq var
+R2109:2116 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R2100:2107 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_cost var
+R2088:2098 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+var 2156:2177 ConstrainedDeadlines.Lemmas.NoMultipleJobs H_respects_JLDP_policy
+R2188:2222 prosa.classic.model.schedule.apa.platform Platform respects_JLDP_policy_under_weak_APA def
+R2318:2335 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobs.higher_eq_priority var
+R2312:2316 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.alpha var
+R2306:2310 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sched var
+R2254:2260 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.arr_seq var
+R2245:2252 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R2236:2243 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_cost var
+R2224:2234 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+var 2388:2389 ConstrainedDeadlines.Lemmas.NoMultipleJobs ts
+R2392:2401 prosa.classic.model.arrival.basic.task SporadicTaskset taskset_of def
+R2403:2415 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sporadic_task var
+var 2492:2514 ConstrainedDeadlines.Lemmas.NoMultipleJobs H_all_jobs_from_taskset
+binder 2532:2532 <> j:37
+R2555:2558 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2535:2544 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R2554:2554 prosa.classic.model.schedule.apa.constrained_deadlines <> j:37 var
+R2546:2552 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.arr_seq var
+R2569:2573 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R2559:2566 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R2568:2568 prosa.classic.model.schedule.apa.constrained_deadlines <> j:37 var
+R2574:2575 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobs.ts var
+var 2645:2661 ConstrainedDeadlines.Lemmas.NoMultipleJobs H_sequential_jobs
+R2664:2678 prosa.classic.model.schedule.global.basic.schedule Schedule sequential_jobs def
+R2680:2684 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sched var
+var 2761:2789 ConstrainedDeadlines.Lemmas.NoMultipleJobs H_jobs_must_arrive_to_execute
+R2792:2818 prosa.classic.model.schedule.global.basic.schedule Schedule jobs_must_arrive_to_execute def
+R2832:2836 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sched var
+R2820:2830 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+var 2914:2942 ConstrainedDeadlines.Lemmas.NoMultipleJobs H_completed_jobs_dont_execute
+R2945:2971 prosa.classic.model.schedule.global.basic.schedule Schedule completed_jobs_dont_execute def
+R2982:2986 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sched var
+R2973:2980 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_cost var
+var 3081:3096 ConstrainedDeadlines.Lemmas.NoMultipleJobs H_sporadic_tasks
+R3107:3125 prosa.classic.model.arrival.basic.task_arrival TaskArrival sporadic_task_model def
+R3160:3166 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.arr_seq var
+R3151:3158 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R3139:3149 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R3127:3137 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+var 3228:3230 ConstrainedDeadlines.Lemmas.NoMultipleJobs tsk
+R3233:3245 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sporadic_task var
+var 3265:3276 ConstrainedDeadlines.Lemmas.NoMultipleJobs H_valid_task
+R3279:3300 prosa.classic.model.arrival.basic.task SporadicTask is_valid_sporadic_task def
+R3338:3340 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobs.tsk var
+R3324:3336 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_deadline var
+R3312:3322 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R3302:3310 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_cost var
+var 3390:3390 ConstrainedDeadlines.Lemmas.NoMultipleJobs j
+R3393:3395 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.Job var
+var 3415:3425 ConstrainedDeadlines.Lemmas.NoMultipleJobs H_j_arrives
+R3428:3437 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R3447:3447 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobs.j var
+R3439:3445 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.arr_seq var
+var 3467:3478 ConstrainedDeadlines.Lemmas.NoMultipleJobs H_job_of_tsk
+R3491:3493 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3481:3488 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R3490:3490 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobs.j var
+R3494:3496 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobs.tsk var
+var 3555:3555 ConstrainedDeadlines.Lemmas.NoMultipleJobs t
+R3558:3561 prosa.classic.model.time Time time def
+var 3581:3594 ConstrainedDeadlines.Lemmas.NoMultipleJobs H_j_backlogged
+R3597:3606 prosa.classic.model.schedule.global.basic.schedule Schedule backlogged def
+R3637:3637 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobs.t var
+R3635:3635 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobs.j var
+R3629:3633 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sched var
+R3620:3627 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_cost var
+R3608:3618 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+var 3737:3765 ConstrainedDeadlines.Lemmas.NoMultipleJobs H_all_previous_jobs_completed
+binder 3784:3790 <> j_other:62
+binder 3792:3800 <> tsk_other:63
+R3839:3852 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3813:3822 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R3832:3838 prosa.classic.model.schedule.apa.constrained_deadlines <> j_other:62 var
+R3824:3830 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.arr_seq var
+R3881:3894 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3869:3871 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3853:3860 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R3862:3868 prosa.classic.model.schedule.apa.constrained_deadlines <> j_other:62 var
+R3872:3880 prosa.classic.model.schedule.apa.constrained_deadlines <> tsk_other:63 var
+R3943:3956 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3938:3941 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R3914:3916 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R3895:3905 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R3907:3913 prosa.classic.model.schedule.apa.constrained_deadlines <> j_other:62 var
+R3917:3927 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R3929:3937 prosa.classic.model.schedule.apa.constrained_deadlines <> tsk_other:63 var
+R3942:3942 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobs.t var
+R3957:3965 prosa.classic.model.schedule.global.basic.schedule Schedule completed def
+R4010:4012 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R3991:4001 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R4003:4009 prosa.classic.model.schedule.apa.constrained_deadlines <> j_other:62 var
+R4013:4023 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R4026:4033 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R4035:4041 prosa.classic.model.schedule.apa.constrained_deadlines <> j_other:62 var
+R3982:3988 prosa.classic.model.schedule.apa.constrained_deadlines <> j_other:62 var
+R3976:3980 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sched var
+R3967:3974 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_cost var
+var 4057:4081 ConstrainedDeadlines.Lemmas.NoMultipleJobs scheduled_task_other_than
+R4099:4111 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sporadic_task var
+binder 4084:4086 <> tsk:66
+binder 4088:4096 <> tsk_other:67
+R4169:4173 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R4190:4190 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R4125:4141 prosa.classic.model.schedule.global.basic.schedule ScheduleOfSporadicTask task_is_scheduled def
+R4168:4168 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobs.t var
+R4158:4166 prosa.classic.model.schedule.apa.constrained_deadlines <> tsk_other:67 var
+R4152:4156 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sched var
+R4143:4150 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R4183:4186 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R4174:4182 prosa.classic.model.schedule.apa.constrained_deadlines <> tsk_other:67 var
+R4187:4189 prosa.classic.model.schedule.apa.constrained_deadlines <> tsk:66 var
+prf 4285:4329 ConstrainedDeadlines platform_at_most_one_pending_job_of_each_task
+binder 4348:4349 <> j1:68
+binder 4351:4352 <> j2:69
+R4386:4399 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4365:4374 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R4384:4385 prosa.classic.model.schedule.apa.constrained_deadlines <> j1:68 var
+R4376:4382 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.arr_seq var
+R4421:4434 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4400:4409 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R4419:4420 prosa.classic.model.schedule.apa.constrained_deadlines <> j2:69 var
+R4411:4417 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.arr_seq var
+R4474:4487 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4435:4441 prosa.classic.model.schedule.global.basic.schedule Schedule pending def
+R4473:4473 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobs.t var
+R4470:4471 prosa.classic.model.schedule.apa.constrained_deadlines <> j1:68 var
+R4464:4468 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sched var
+R4455:4462 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_cost var
+R4443:4453 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R4527:4540 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4488:4494 prosa.classic.model.schedule.global.basic.schedule Schedule pending def
+R4526:4526 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobs.t var
+R4523:4524 prosa.classic.model.schedule.apa.constrained_deadlines <> j2:69 var
+R4517:4521 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sched var
+R4508:4515 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_cost var
+R4496:4506 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R4566:4579 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4552:4554 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4541:4548 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R4550:4551 prosa.classic.model.schedule.apa.constrained_deadlines <> j1:68 var
+R4555:4562 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R4564:4565 prosa.classic.model.schedule.apa.constrained_deadlines <> j2:69 var
+R4582:4584 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4580:4581 prosa.classic.model.schedule.apa.constrained_deadlines <> j1:68 var
+R4585:4586 prosa.classic.model.schedule.apa.constrained_deadlines <> j2:69 var
+R4757:4759 mathcomp.boot.eqtype <> eqP def
+R4773:4776 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R4779:4783 Corelib.ssr.ssrbool <> negbK thm
+R4792:4795 Corelib.ssr.ssrbool <> negP thm
+R4757:4759 mathcomp.boot.eqtype <> eqP def
+R4779:4783 Corelib.ssr.ssrbool <> negbK thm
+R4773:4776 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R4773:4776 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R4779:4783 Corelib.ssr.ssrbool <> negbK thm
+R4792:4795 Corelib.ssr.ssrbool <> negP thm
+R4812:4814 mathcomp.boot.eqtype <> eqP def
+R4859:4862 Corelib.ssr.ssrbool <> andP thm
+R4875:4878 Corelib.ssr.ssrbool <> negP thm
+R4891:4894 Corelib.ssr.ssrbool <> andP thm
+R4907:4910 Corelib.ssr.ssrbool <> negP thm
+R4941:4944 mathcomp.boot.ssrnat <> leqP thm
+R4964:4974 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R4947:4957 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R4941:4944 mathcomp.boot.ssrnat <> leqP thm
+R4964:4974 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R4947:4957 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R5145:5148 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R5117:5119 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R5103:5113 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R5120:5130 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R5133:5140 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R5149:5149 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobs.t var
+R5145:5148 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R5117:5119 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R5103:5113 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R5120:5130 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R5133:5140 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R5149:5149 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobs.t var
+R5207:5217 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R5186:5194 mathcomp.boot.ssrnat <> leq_trans thm
+R5207:5217 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R5186:5194 mathcomp.boot.ssrnat <> leq_trans thm
+R5279:5286 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R5279:5286 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R5414:5416 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R5400:5410 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R5417:5427 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R5430:5437 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R5368:5387 prosa.classic.model.schedule.global.basic.schedule Schedule completion_monotonic thm
+R5414:5416 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R5400:5410 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R5417:5427 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R5430:5437 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R5368:5387 prosa.classic.model.schedule.global.basic.schedule Schedule completion_monotonic thm
+R5482:5485 mathcomp.boot.ssrnat <> ltnW thm
+R5482:5485 mathcomp.boot.ssrnat <> ltnW thm
+R5645:5648 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R5617:5619 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R5603:5613 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R5620:5630 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R5633:5640 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R5649:5649 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobs.t var
+R5645:5648 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R5617:5619 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R5603:5613 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R5620:5630 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R5633:5640 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R5649:5649 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobs.t var
+R5707:5717 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R5686:5694 mathcomp.boot.ssrnat <> leq_trans thm
+R5707:5717 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R5686:5694 mathcomp.boot.ssrnat <> leq_trans thm
+R5779:5786 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R5779:5786 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R5914:5916 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R5900:5910 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R5917:5927 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R5930:5937 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R5868:5887 prosa.classic.model.schedule.global.basic.schedule Schedule completion_monotonic thm
+R5914:5916 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R5900:5910 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R5917:5927 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R5930:5937 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R5868:5887 prosa.classic.model.schedule.global.basic.schedule Schedule completion_monotonic thm
+R5975:5988 prosa.classic.model.schedule.apa.constrained_deadlines ConstrainedDeadlines.Lemmas.NoMultipleJobs <> sec
+sec 6200:6215 ConstrainedDeadlines.Lemmas NoMultipleJobsFP
+var 6299:6316 ConstrainedDeadlines.Lemmas.NoMultipleJobsFP higher_eq_priority
+R6319:6327 prosa.classic.model.priority Priority FP_policy def
+R6329:6341 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sporadic_task var
+var 6361:6377 ConstrainedDeadlines.Lemmas.NoMultipleJobsFP H_work_conserving
+R6380:6398 prosa.classic.model.schedule.apa.platform Platform apa_work_conserving def
+R6500:6504 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.alpha var
+R6494:6498 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sched var
+R6486:6492 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.arr_seq var
+R6421:6428 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R6412:6419 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_cost var
+R6400:6410 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+var 6524:6545 ConstrainedDeadlines.Lemmas.NoMultipleJobsFP H_respects_JLDP_policy
+R6556:6588 prosa.classic.model.schedule.apa.platform Platform respects_FP_policy_under_weak_APA def
+R6682:6699 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.higher_eq_priority var
+R6676:6680 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.alpha var
+R6670:6674 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sched var
+R6620:6626 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.arr_seq var
+R6611:6618 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R6602:6609 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_cost var
+R6590:6600 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+var 6756:6757 ConstrainedDeadlines.Lemmas.NoMultipleJobsFP ts
+R6760:6769 prosa.classic.model.arrival.basic.task SporadicTaskset taskset_of def
+R6771:6783 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sporadic_task var
+var 6860:6882 ConstrainedDeadlines.Lemmas.NoMultipleJobsFP H_all_jobs_from_taskset
+binder 6900:6900 <> j:78
+R6923:6926 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6903:6912 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R6922:6922 prosa.classic.model.schedule.apa.constrained_deadlines <> j:78 var
+R6914:6920 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.arr_seq var
+R6937:6941 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R6927:6934 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R6936:6936 prosa.classic.model.schedule.apa.constrained_deadlines <> j:78 var
+R6942:6943 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.ts var
+var 7013:7029 ConstrainedDeadlines.Lemmas.NoMultipleJobsFP H_sequential_jobs
+R7032:7046 prosa.classic.model.schedule.global.basic.schedule Schedule sequential_jobs def
+R7048:7052 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sched var
+var 7128:7156 ConstrainedDeadlines.Lemmas.NoMultipleJobsFP H_jobs_must_arrive_to_execute
+R7167:7193 prosa.classic.model.schedule.global.basic.schedule Schedule jobs_must_arrive_to_execute def
+R7207:7211 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sched var
+R7195:7205 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+var 7289:7317 ConstrainedDeadlines.Lemmas.NoMultipleJobsFP H_completed_jobs_dont_execute
+R7328:7354 prosa.classic.model.schedule.global.basic.schedule Schedule completed_jobs_dont_execute def
+R7365:7369 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sched var
+R7356:7363 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_cost var
+var 7464:7479 ConstrainedDeadlines.Lemmas.NoMultipleJobsFP H_sporadic_tasks
+R7490:7508 prosa.classic.model.arrival.basic.task_arrival TaskArrival sporadic_task_model def
+R7543:7549 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.arr_seq var
+R7534:7541 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R7522:7532 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R7510:7520 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+var 7610:7612 ConstrainedDeadlines.Lemmas.NoMultipleJobsFP tsk
+R7615:7627 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sporadic_task var
+var 7647:7658 ConstrainedDeadlines.Lemmas.NoMultipleJobsFP H_valid_task
+R7661:7682 prosa.classic.model.arrival.basic.task SporadicTask is_valid_sporadic_task def
+R7720:7722 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.tsk var
+R7706:7718 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_deadline var
+R7694:7704 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R7684:7692 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_cost var
+var 7772:7772 ConstrainedDeadlines.Lemmas.NoMultipleJobsFP j
+R7775:7777 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.Job var
+var 7797:7807 ConstrainedDeadlines.Lemmas.NoMultipleJobsFP H_j_arrives
+R7810:7819 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R7829:7829 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.j var
+R7821:7827 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.arr_seq var
+var 7847:7858 ConstrainedDeadlines.Lemmas.NoMultipleJobsFP H_job_of_tsk
+R7871:7873 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7861:7868 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R7870:7870 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.j var
+R7874:7876 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.tsk var
+var 7970:7970 ConstrainedDeadlines.Lemmas.NoMultipleJobsFP t
+R7973:7976 prosa.classic.model.time Time time def
+var 7996:8009 ConstrainedDeadlines.Lemmas.NoMultipleJobsFP H_j_backlogged
+R8012:8021 prosa.classic.model.schedule.global.basic.schedule Schedule backlogged def
+R8052:8052 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.t var
+R8050:8050 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.j var
+R8044:8048 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sched var
+R8035:8042 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_cost var
+R8023:8033 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+var 8072:8088 ConstrainedDeadlines.Lemmas.NoMultipleJobsFP H_t_before_period
+R8092:8094 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R8091:8091 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.t var
+R8108:8110 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8095:8105 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R8107:8107 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.j var
+R8111:8121 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R8123:8125 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.tsk var
+var 8225:8234 ConstrainedDeadlines.Lemmas.NoMultipleJobsFP hp_task_in
+binder 8236:8241 <> alpha':105
+R8246:8268 prosa.classic.model.schedule.apa.interference Interference higher_priority_task_in def
+R8299:8304 prosa.classic.model.schedule.apa.constrained_deadlines <> alpha':105 var
+R8295:8297 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.tsk var
+R8276:8293 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.higher_eq_priority var
+R8270:8274 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.alpha var
+var 8409:8437 ConstrainedDeadlines.Lemmas.NoMultipleJobsFP H_all_previous_jobs_completed
+binder 8456:8462 <> j_other:106
+binder 8464:8472 <> tsk_other:107
+R8511:8524 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8485:8494 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R8504:8510 prosa.classic.model.schedule.apa.constrained_deadlines <> j_other:106 var
+R8496:8502 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.arr_seq var
+R8553:8566 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8541:8543 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8525:8532 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R8534:8540 prosa.classic.model.schedule.apa.constrained_deadlines <> j_other:106 var
+R8544:8552 prosa.classic.model.schedule.apa.constrained_deadlines <> tsk_other:107 var
+R8599:8612 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8567:8576 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.hp_task_in var
+R8579:8583 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.alpha var
+R8585:8587 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.tsk var
+R8590:8598 prosa.classic.model.schedule.apa.constrained_deadlines <> tsk_other:107 var
+R8613:8621 prosa.classic.model.schedule.global.basic.schedule Schedule completed def
+R8666:8668 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8647:8657 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R8659:8665 prosa.classic.model.schedule.apa.constrained_deadlines <> j_other:106 var
+R8669:8679 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R8681:8689 prosa.classic.model.schedule.apa.constrained_deadlines <> tsk_other:107 var
+R8638:8644 prosa.classic.model.schedule.apa.constrained_deadlines <> j_other:106 var
+R8632:8636 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sched var
+R8623:8630 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_cost var
+var 8788:8823 ConstrainedDeadlines.Lemmas.NoMultipleJobsFP H_all_previous_jobs_of_tsk_completed
+binder 8842:8843 <> j0:110
+R8877:8890 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8856:8865 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R8875:8876 prosa.classic.model.schedule.apa.constrained_deadlines <> j0:110 var
+R8867:8873 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.arr_seq var
+R8908:8921 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8902:8904 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8891:8898 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R8900:8901 prosa.classic.model.schedule.apa.constrained_deadlines <> j0:110 var
+R8905:8907 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.tsk var
+R8952:8965 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8936:8938 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R8922:8932 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R8934:8935 prosa.classic.model.schedule.apa.constrained_deadlines <> j0:110 var
+R8939:8949 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R8951:8951 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.j var
+R8966:8974 prosa.classic.model.schedule.global.basic.schedule Schedule completed def
+R9009:9011 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8995:9005 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R9007:9008 prosa.classic.model.schedule.apa.constrained_deadlines <> j0:110 var
+R9012:9022 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R9024:9026 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.tsk var
+R8991:8992 prosa.classic.model.schedule.apa.constrained_deadlines <> j0:110 var
+R8985:8989 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sched var
+R8976:8983 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_cost var
+def 9054:9091 ConstrainedDeadlines scheduled_task_with_higher_eq_priority
+R9109:9121 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sporadic_task var
+binder 9094:9096 <> tsk:113
+binder 9098:9106 <> tsk_other:114
+R9179:9190 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R9135:9151 prosa.classic.model.schedule.global.basic.schedule ScheduleOfSporadicTask task_is_scheduled def
+R9178:9178 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.t var
+R9168:9176 prosa.classic.model.schedule.apa.constrained_deadlines <> tsk_other:114 var
+R9162:9166 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sched var
+R9153:9160 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R9191:9200 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.hp_task_in var
+R9203:9207 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.alpha var
+R9209:9211 prosa.classic.model.schedule.apa.constrained_deadlines <> tsk:113 var
+R9214:9222 prosa.classic.model.schedule.apa.constrained_deadlines <> tsk_other:114 var
+prf 9358:9406 ConstrainedDeadlines platform_fp_no_multiple_jobs_of_interfering_tasks
+binder 9427:9428 <> j1:115
+binder 9430:9431 <> j2:116
+R9467:9482 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9446:9455 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R9465:9466 prosa.classic.model.schedule.apa.constrained_deadlines <> j1:115 var
+R9457:9463 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.arr_seq var
+R9504:9519 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9483:9492 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R9502:9503 prosa.classic.model.schedule.apa.constrained_deadlines <> j2:116 var
+R9494:9500 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.arr_seq var
+R9559:9574 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9520:9526 prosa.classic.model.schedule.global.basic.schedule Schedule pending def
+R9558:9558 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.t var
+R9555:9556 prosa.classic.model.schedule.apa.constrained_deadlines <> j1:115 var
+R9549:9553 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sched var
+R9540:9547 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_cost var
+R9528:9538 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R9614:9629 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9575:9581 prosa.classic.model.schedule.global.basic.schedule Schedule pending def
+R9613:9613 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.t var
+R9610:9611 prosa.classic.model.schedule.apa.constrained_deadlines <> j2:116 var
+R9604:9608 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sched var
+R9595:9602 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_cost var
+R9583:9593 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R9655:9670 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9641:9643 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9630:9637 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R9639:9640 prosa.classic.model.schedule.apa.constrained_deadlines <> j1:115 var
+R9644:9651 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R9653:9654 prosa.classic.model.schedule.apa.constrained_deadlines <> j2:116 var
+R9707:9722 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9671:9680 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.hp_task_in var
+R9683:9687 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.alpha var
+R9689:9691 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.tsk var
+R9695:9702 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R9704:9705 prosa.classic.model.schedule.apa.constrained_deadlines <> j1:115 var
+R9725:9727 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9723:9724 prosa.classic.model.schedule.apa.constrained_deadlines <> j1:115 var
+R9728:9729 prosa.classic.model.schedule.apa.constrained_deadlines <> j2:116 var
+R9760:9778 prosa.classic.model.arrival.basic.task_arrival TaskArrival sporadic_task_model def
+R10014:10016 mathcomp.boot.eqtype <> eqP def
+R10030:10033 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R10036:10040 Corelib.ssr.ssrbool <> negbK thm
+R10049:10052 Corelib.ssr.ssrbool <> negP thm
+R10014:10016 mathcomp.boot.eqtype <> eqP def
+R10036:10040 Corelib.ssr.ssrbool <> negbK thm
+R10030:10033 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R10030:10033 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R10036:10040 Corelib.ssr.ssrbool <> negbK thm
+R10049:10052 Corelib.ssr.ssrbool <> negP thm
+R10069:10071 mathcomp.boot.eqtype <> eqP def
+R10115:10118 Corelib.ssr.ssrbool <> andP thm
+R10131:10134 Corelib.ssr.ssrbool <> negP thm
+R10147:10150 Corelib.ssr.ssrbool <> andP thm
+R10163:10166 Corelib.ssr.ssrbool <> negP thm
+R10197:10200 mathcomp.boot.ssrnat <> leqP thm
+R10220:10230 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R10203:10213 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R10197:10200 mathcomp.boot.ssrnat <> leqP thm
+R10220:10230 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R10203:10213 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R10401:10404 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R10373:10375 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R10359:10369 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R10376:10386 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R10389:10396 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R10405:10405 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.t var
+R10401:10404 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R10373:10375 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R10359:10369 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R10376:10386 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R10389:10396 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R10405:10405 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.t var
+R10451:10461 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R10430:10438 mathcomp.boot.ssrnat <> leq_trans thm
+R10451:10461 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R10430:10438 mathcomp.boot.ssrnat <> leq_trans thm
+R10498:10505 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R10498:10505 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R10653:10655 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R10639:10649 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R10656:10666 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R10669:10676 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R10607:10626 prosa.classic.model.schedule.global.basic.schedule Schedule completion_monotonic thm
+R10653:10655 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R10639:10649 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R10656:10666 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R10669:10676 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R10607:10626 prosa.classic.model.schedule.global.basic.schedule Schedule completion_monotonic thm
+R10721:10724 mathcomp.boot.ssrnat <> ltnW thm
+R10721:10724 mathcomp.boot.ssrnat <> ltnW thm
+R10887:10890 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R10859:10861 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R10845:10855 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R10862:10872 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R10875:10882 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R10891:10891 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.t var
+R10887:10890 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R10859:10861 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R10845:10855 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R10862:10872 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R10875:10882 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R10891:10891 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.t var
+R10937:10947 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R10916:10924 mathcomp.boot.ssrnat <> leq_trans thm
+R10937:10947 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R10916:10924 mathcomp.boot.ssrnat <> leq_trans thm
+R10984:10991 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R10984:10991 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R11155:11157 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R11141:11151 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R11158:11168 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R11171:11178 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R11109:11128 prosa.classic.model.schedule.global.basic.schedule Schedule completion_monotonic thm
+R11155:11157 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R11141:11151 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R11158:11168 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R11171:11178 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R11109:11128 prosa.classic.model.schedule.global.basic.schedule Schedule completion_monotonic thm
+prf 11299:11333 ConstrainedDeadlines platform_fp_no_multiple_jobs_of_tsk
+binder 11352:11353 <> j':117
+R11387:11400 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R11366:11375 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R11385:11386 prosa.classic.model.schedule.apa.constrained_deadlines <> j':117 var
+R11377:11383 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.arr_seq var
+R11440:11453 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R11401:11407 prosa.classic.model.schedule.global.basic.schedule Schedule pending def
+R11439:11439 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.t var
+R11436:11437 prosa.classic.model.schedule.apa.constrained_deadlines <> j':117 var
+R11430:11434 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.sched var
+R11421:11428 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_cost var
+R11409:11419 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R11471:11484 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R11465:11467 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11454:11461 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_task var
+R11463:11464 prosa.classic.model.schedule.apa.constrained_deadlines <> j':117 var
+R11468:11470 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.tsk var
+R11487:11489 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11485:11486 prosa.classic.model.schedule.apa.constrained_deadlines <> j':117 var
+R11490:11490 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.j var
+R11521:11539 prosa.classic.model.arrival.basic.task_arrival TaskArrival sporadic_task_model def
+R11874:11876 mathcomp.boot.eqtype <> eqP def
+R11890:11893 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R11896:11900 Corelib.ssr.ssrbool <> negbK thm
+R11909:11912 Corelib.ssr.ssrbool <> negP thm
+R11874:11876 mathcomp.boot.eqtype <> eqP def
+R11896:11900 Corelib.ssr.ssrbool <> negbK thm
+R11890:11893 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R11890:11893 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R11896:11900 Corelib.ssr.ssrbool <> negbK thm
+R11909:11912 Corelib.ssr.ssrbool <> negP thm
+R11929:11931 mathcomp.boot.eqtype <> eqP def
+R11971:11974 Corelib.ssr.ssrbool <> andP thm
+R11978:11981 Corelib.ssr.ssrbool <> andP thm
+R11993:11996 Corelib.ssr.ssrbool <> negP thm
+R12049:12052 Corelib.ssr.ssrbool <> andP thm
+R12065:12068 Corelib.ssr.ssrbool <> negP thm
+R12099:12102 mathcomp.boot.ssrnat <> leqP thm
+R12122:12132 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R12134:12134 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.j var
+R12105:12115 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R12099:12102 mathcomp.boot.ssrnat <> leqP thm
+R12122:12132 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R12134:12134 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.j var
+R12105:12115 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R12197:12197 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.j var
+R12209:12219 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.H_j_arrives var
+R12197:12197 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.j var
+R12209:12219 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.H_j_arrives var
+R12322:12325 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R12304:12306 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R12290:12300 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R12307:12317 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R12319:12321 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.tsk var
+R12326:12326 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.t var
+R12322:12325 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R12304:12306 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R12290:12300 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R12307:12317 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R12319:12321 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.tsk var
+R12326:12326 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.t var
+R12372:12382 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R12384:12384 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.j var
+R12351:12359 mathcomp.boot.ssrnat <> leq_trans thm
+R12372:12382 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R12384:12384 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.j var
+R12351:12359 mathcomp.boot.ssrnat <> leq_trans thm
+R12505:12507 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R12491:12501 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R12508:12518 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R12520:12522 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.tsk var
+R12459:12478 prosa.classic.model.schedule.global.basic.schedule Schedule completion_monotonic thm
+R12505:12507 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R12491:12501 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R12508:12518 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R12520:12522 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.tsk var
+R12459:12478 prosa.classic.model.schedule.global.basic.schedule Schedule completion_monotonic thm
+R12630:12632 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R12616:12626 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R12633:12643 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R12645:12647 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.tsk var
+R12595:12603 mathcomp.boot.ssrnat <> leq_trans thm
+R12630:12632 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R12616:12626 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R12633:12643 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R12645:12647 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.tsk var
+R12595:12603 mathcomp.boot.ssrnat <> leq_trans thm
+R12696:12700 mathcomp.boot.ssrnat <> addn1 thm
+R12709:12715 mathcomp.boot.ssrnat <> leq_add thm
+R12696:12700 mathcomp.boot.ssrnat <> addn1 thm
+R12696:12700 mathcomp.boot.ssrnat <> addn1 thm
+R12709:12715 mathcomp.boot.ssrnat <> leq_add thm
+R12753:12774 prosa.classic.model.arrival.basic.task SporadicTask is_valid_sporadic_task def
+R12824:12834 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence has_arrived def
+R12860:12865 mathcomp.boot.ssrnat <> leqNgt thm
+R12860:12865 mathcomp.boot.ssrnat <> leqNgt thm
+R12860:12865 mathcomp.boot.ssrnat <> leqNgt thm
+R12899:12902 Corelib.ssr.ssrbool <> negP thm
+R12970:12972 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R12957:12967 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R12969:12969 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.j var
+R12973:12983 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R12985:12987 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.tsk var
+R12936:12944 mathcomp.boot.ssrnat <> leq_trans thm
+R12970:12972 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R12957:12967 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.job_arrival var
+R12969:12969 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.j var
+R12973:12983 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.task_period var
+R12985:12987 prosa.classic.model.schedule.apa.constrained_deadlines <> ConstrainedDeadlines.Lemmas.NoMultipleJobsFP.tsk var
+R12936:12944 mathcomp.boot.ssrnat <> leq_trans thm
+R13129:13132 mathcomp.boot.ssrnat <> ltnW thm
+R13129:13132 mathcomp.boot.ssrnat <> ltnW thm
+R13172:13187 prosa.classic.model.schedule.apa.constrained_deadlines ConstrainedDeadlines.Lemmas.NoMultipleJobsFP <> sec
+R13201:13206 prosa.classic.model.schedule.apa.constrained_deadlines ConstrainedDeadlines.Lemmas <> sec
+R13214:13233 prosa.classic.model.schedule.apa.constrained_deadlines ConstrainedDeadlines <> mod

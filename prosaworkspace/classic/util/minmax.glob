@@ -1,0 +1,1155 @@
+DIGEST 1254dd266e7a965c978936e9053b8c57
+Fprosa.classic.util.minmax
+R15:31 prosa.util.minmax <> <> lib
+R49:74 prosa.classic.util.tactics <> <> lib
+R76:102 prosa.classic.util.notation <> <> lib
+R104:129 prosa.classic.util.sorting <> <> lib
+R131:152 prosa.classic.util.nat <> <> lib
+R154:176 prosa.classic.util.list <> <> lib
+R208:216 mathcomp.boot.ssreflect <> <> lib
+R218:224 mathcomp.boot.ssrbool <> <> lib
+R226:231 mathcomp.boot.eqtype <> <> lib
+R233:238 mathcomp.boot.ssrnat <> <> lib
+R240:242 mathcomp.boot.seq <> <> lib
+R244:250 mathcomp.boot.fintype <> <> lib
+R252:256 mathcomp.boot.bigop <> <> lib
+sec 268:276 <> MinMaxSeq
+sec 290:299 MinMaxSeq ArgGeneric
+var  316:317 MinMaxSeq.ArgGeneric T1
+var  319:320 MinMaxSeq.ArgGeneric T2
+R323:328 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 346:348 MinMaxSeq.ArgGeneric rel
+R353:356 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R351:352 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.T2 var
+R359:362 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R357:358 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.T2 var
+R363:366 Corelib.Init.Datatypes <> bool ind
+var 382:382 MinMaxSeq.ArgGeneric F
+R387:390 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R385:386 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.T1 var
+R391:392 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.T2 var
+def 413:422 <> seq_argmin
+R428:430 mathcomp.boot.seq <> seq abbrev
+R432:433 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.T1 var
+binder 425:425 <> l:7
+R448:448 prosa.classic.util.minmax <> l:7 var
+R454:457 mathcomp.boot.seq <> ::seq_scope:x_'::'_x not
+R477:486 prosa.classic.util.minmax <> seq_argmin:8 def
+R494:497 Corelib.Init.Datatypes <> Some constr
+R516:518 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R534:539 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R546:551 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R519:521 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.rel var
+R524:524 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R530:530 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R540:543 Corelib.Init.Datatypes <> Some constr
+R552:555 Corelib.Init.Datatypes <> Some constr
+R572:575 Corelib.Init.Datatypes <> Some constr
+R590:593 Corelib.Init.Datatypes <> None constr
+def 610:619 <> seq_argmax
+R625:627 mathcomp.boot.seq <> seq abbrev
+R629:630 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.T1 var
+binder 622:622 <> l:10
+R645:645 prosa.classic.util.minmax <> l:10 var
+R651:654 mathcomp.boot.seq <> ::seq_scope:x_'::'_x not
+R674:683 prosa.classic.util.minmax <> seq_argmax:11 def
+R691:694 Corelib.Init.Datatypes <> Some constr
+R713:715 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R731:736 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R743:748 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R716:718 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.rel var
+R721:721 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R727:727 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R737:740 Corelib.Init.Datatypes <> Some constr
+R749:752 Corelib.Init.Datatypes <> Some constr
+R769:772 Corelib.Init.Datatypes <> Some constr
+R787:790 Corelib.Init.Datatypes <> None constr
+sec 810:815 MinMaxSeq.ArgGeneric Lemmas
+prf 831:847 <> seq_argmin_exists
+binder 865:865 <> l:13
+binder 867:867 <> x:14
+R887:900 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R881:885 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R880:880 prosa.classic.util.minmax <> x:14 var
+R886:886 prosa.classic.util.minmax <> l:13 var
+R913:916 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R901:910 prosa.classic.util.minmax <> seq_argmin def
+R912:912 prosa.classic.util.minmax <> l:13 var
+R917:920 Corelib.Init.Datatypes <> None constr
+R998:1004 mathcomp.boot.seq <> in_cons thm
+R998:1004 mathcomp.boot.seq <> in_cons thm
+R998:1004 mathcomp.boot.seq <> in_cons thm
+R1083:1092 prosa.classic.util.minmax <> seq_argmin def
+R1113:1115 Corelib.ssr.ssrbool <> ifP thm
+R1024:1026 Corelib.ssr.ssrbool <> orP thm
+R1030:1032 mathcomp.boot.eqtype <> eqP def
+R1083:1092 prosa.classic.util.minmax <> seq_argmin def
+R1113:1115 Corelib.ssr.ssrbool <> ifP thm
+R1113:1115 Corelib.ssr.ssrbool <> ifP thm
+R1139:1148 prosa.classic.util.minmax <> seq_argmin def
+R1169:1171 Corelib.ssr.ssrbool <> ifP thm
+R1139:1148 prosa.classic.util.minmax <> seq_argmin def
+R1169:1171 Corelib.ssr.ssrbool <> ifP thm
+R1169:1171 Corelib.ssr.ssrbool <> ifP thm
+prf 1206:1222 <> seq_argmin_in_seq
+binder 1240:1240 <> l:15
+binder 1242:1242 <> x:16
+R1276:1289 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1267:1269 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1255:1264 prosa.classic.util.minmax <> seq_argmin def
+R1266:1266 prosa.classic.util.minmax <> l:15 var
+R1270:1273 Corelib.Init.Datatypes <> Some constr
+R1275:1275 prosa.classic.util.minmax <> x:16 var
+R1291:1295 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R1290:1290 prosa.classic.util.minmax <> x:16 var
+R1296:1296 prosa.classic.util.minmax <> l:15 var
+R1395:1404 prosa.classic.util.minmax <> seq_argmin def
+R1460:1466 mathcomp.boot.seq <> in_cons thm
+R1468:1474 mathcomp.boot.eqtype <> eq_refl thm
+R1395:1404 prosa.classic.util.minmax <> seq_argmin def
+R1460:1466 mathcomp.boot.seq <> in_cons thm
+R1460:1466 mathcomp.boot.seq <> in_cons thm
+R1468:1474 mathcomp.boot.eqtype <> eq_refl thm
+R1468:1474 mathcomp.boot.eqtype <> eq_refl thm
+R1495:1497 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.rel var
+R1500:1500 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R1506:1506 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R1564:1570 mathcomp.boot.seq <> in_cons thm
+R1572:1578 mathcomp.boot.eqtype <> eq_refl thm
+R1495:1497 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.rel var
+R1500:1500 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R1506:1506 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R1564:1570 mathcomp.boot.seq <> in_cons thm
+R1564:1570 mathcomp.boot.seq <> in_cons thm
+R1572:1578 mathcomp.boot.eqtype <> eq_refl thm
+R1572:1578 mathcomp.boot.eqtype <> eq_refl thm
+R1632:1638 mathcomp.boot.seq <> in_cons thm
+R1647:1649 Corelib.ssr.ssrbool <> orP thm
+R1632:1638 mathcomp.boot.seq <> in_cons thm
+R1632:1638 mathcomp.boot.seq <> in_cons thm
+R1647:1649 Corelib.ssr.ssrbool <> orP thm
+prf 1694:1710 <> seq_argmax_exists
+binder 1728:1728 <> l:17
+binder 1730:1730 <> x:18
+R1750:1763 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1744:1748 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R1743:1743 prosa.classic.util.minmax <> x:18 var
+R1749:1749 prosa.classic.util.minmax <> l:17 var
+R1776:1779 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R1764:1773 prosa.classic.util.minmax <> seq_argmax def
+R1775:1775 prosa.classic.util.minmax <> l:17 var
+R1780:1783 Corelib.Init.Datatypes <> None constr
+R1861:1867 mathcomp.boot.seq <> in_cons thm
+R1861:1867 mathcomp.boot.seq <> in_cons thm
+R1861:1867 mathcomp.boot.seq <> in_cons thm
+R1946:1955 prosa.classic.util.minmax <> seq_argmax def
+R1976:1978 Corelib.ssr.ssrbool <> ifP thm
+R1887:1889 Corelib.ssr.ssrbool <> orP thm
+R1893:1895 mathcomp.boot.eqtype <> eqP def
+R1946:1955 prosa.classic.util.minmax <> seq_argmax def
+R1976:1978 Corelib.ssr.ssrbool <> ifP thm
+R1976:1978 Corelib.ssr.ssrbool <> ifP thm
+R2002:2011 prosa.classic.util.minmax <> seq_argmax def
+R2032:2034 Corelib.ssr.ssrbool <> ifP thm
+R2002:2011 prosa.classic.util.minmax <> seq_argmax def
+R2032:2034 Corelib.ssr.ssrbool <> ifP thm
+R2032:2034 Corelib.ssr.ssrbool <> ifP thm
+prf 2069:2085 <> seq_argmax_in_seq
+binder 2103:2103 <> l:19
+binder 2105:2105 <> x:20
+R2139:2152 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2130:2132 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2118:2127 prosa.classic.util.minmax <> seq_argmax def
+R2129:2129 prosa.classic.util.minmax <> l:19 var
+R2133:2136 Corelib.Init.Datatypes <> Some constr
+R2138:2138 prosa.classic.util.minmax <> x:20 var
+R2154:2158 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R2153:2153 prosa.classic.util.minmax <> x:20 var
+R2159:2159 prosa.classic.util.minmax <> l:19 var
+R2258:2267 prosa.classic.util.minmax <> seq_argmax def
+R2323:2329 mathcomp.boot.seq <> in_cons thm
+R2331:2337 mathcomp.boot.eqtype <> eq_refl thm
+R2258:2267 prosa.classic.util.minmax <> seq_argmax def
+R2323:2329 mathcomp.boot.seq <> in_cons thm
+R2323:2329 mathcomp.boot.seq <> in_cons thm
+R2331:2337 mathcomp.boot.eqtype <> eq_refl thm
+R2331:2337 mathcomp.boot.eqtype <> eq_refl thm
+R2358:2360 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.rel var
+R2363:2363 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R2369:2369 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R2427:2433 mathcomp.boot.seq <> in_cons thm
+R2435:2441 mathcomp.boot.eqtype <> eq_refl thm
+R2358:2360 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.rel var
+R2363:2363 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R2369:2369 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R2427:2433 mathcomp.boot.seq <> in_cons thm
+R2427:2433 mathcomp.boot.seq <> in_cons thm
+R2435:2441 mathcomp.boot.eqtype <> eq_refl thm
+R2435:2441 mathcomp.boot.eqtype <> eq_refl thm
+R2495:2501 mathcomp.boot.seq <> in_cons thm
+R2510:2512 Corelib.ssr.ssrbool <> orP thm
+R2495:2501 mathcomp.boot.seq <> in_cons thm
+R2495:2501 mathcomp.boot.seq <> in_cons thm
+R2510:2512 Corelib.ssr.ssrbool <> orP thm
+sec 2565:2574 MinMaxSeq.ArgGeneric.Lemmas TotalOrder
+var 2597:2608 MinMaxSeq.ArgGeneric.Lemmas.TotalOrder H_transitive
+R2611:2620 Corelib.ssr.ssrbool <> transitive def
+R2622:2624 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.rel var
+var 2653:2653 MinMaxSeq.ArgGeneric.Lemmas.TotalOrder l
+R2656:2658 mathcomp.boot.seq <> seq abbrev
+R2660:2661 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.T1 var
+var 2683:2699 MinMaxSeq.ArgGeneric.Lemmas.TotalOrder H_total_over_list
+binder 2719:2719 <> x:25
+binder 2721:2721 <> y:26
+R2743:2758 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2737:2741 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R2736:2736 prosa.classic.util.minmax <> x:25 var
+R2742:2742 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.Lemmas.TotalOrder.l var
+R2766:2781 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2760:2764 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R2759:2759 prosa.classic.util.minmax <> y:26 var
+R2765:2765 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.Lemmas.TotalOrder.l var
+R2797:2800 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R2782:2784 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.rel var
+R2787:2787 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R2789:2789 prosa.classic.util.minmax <> x:25 var
+R2793:2793 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R2795:2795 prosa.classic.util.minmax <> y:26 var
+R2801:2803 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.rel var
+R2806:2806 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R2808:2808 prosa.classic.util.minmax <> y:26 var
+R2812:2812 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R2814:2814 prosa.classic.util.minmax <> x:25 var
+prf 2833:2855 <> seq_argmin_computes_min
+binder 2875:2875 <> x:29
+binder 2877:2877 <> y:30
+R2913:2928 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2904:2906 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2892:2901 prosa.classic.util.minmax <> seq_argmin def
+R2903:2903 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.Lemmas.TotalOrder.l var
+R2907:2910 Corelib.Init.Datatypes <> Some constr
+R2912:2912 prosa.classic.util.minmax <> x:29 var
+R2936:2951 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2930:2934 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R2929:2929 prosa.classic.util.minmax <> y:30 var
+R2935:2935 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.Lemmas.TotalOrder.l var
+R2952:2954 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.rel var
+R2957:2957 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R2959:2959 prosa.classic.util.minmax <> x:29 var
+R2963:2963 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R2965:2965 prosa.classic.util.minmax <> y:30 var
+R3169:3175 mathcomp.boot.seq <> in_cons thm
+R3169:3175 mathcomp.boot.seq <> in_cons thm
+R3169:3175 mathcomp.boot.seq <> in_cons thm
+R3207:3209 Corelib.ssr.ssrbool <> orP thm
+R3213:3215 mathcomp.boot.eqtype <> eqP def
+R3268:3277 prosa.classic.util.minmax <> seq_argmin def
+R3268:3277 prosa.classic.util.minmax <> seq_argmin def
+R3410:3416 mathcomp.boot.seq <> in_cons thm
+R3418:3424 mathcomp.boot.eqtype <> eq_refl thm
+R3436:3439 Corelib.ssr.ssrbool <> orbb thm
+R3410:3416 mathcomp.boot.seq <> in_cons thm
+R3410:3416 mathcomp.boot.seq <> in_cons thm
+R3418:3424 mathcomp.boot.eqtype <> eq_refl thm
+R3418:3424 mathcomp.boot.eqtype <> eq_refl thm
+R3410:3416 mathcomp.boot.seq <> in_cons thm
+R3410:3416 mathcomp.boot.seq <> in_cons thm
+R3418:3424 mathcomp.boot.eqtype <> eq_refl thm
+R3418:3424 mathcomp.boot.eqtype <> eq_refl thm
+R3410:3416 mathcomp.boot.seq <> in_cons thm
+R3410:3416 mathcomp.boot.seq <> in_cons thm
+R3436:3439 Corelib.ssr.ssrbool <> orbb thm
+R3436:3439 Corelib.ssr.ssrbool <> orbb thm
+R3494:3496 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.rel var
+R3499:3499 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R3505:3505 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R3606:3612 mathcomp.boot.seq <> in_cons thm
+R3614:3620 mathcomp.boot.eqtype <> eq_refl thm
+R3632:3635 Corelib.ssr.ssrbool <> orbb thm
+R3494:3496 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.rel var
+R3499:3499 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R3505:3505 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R3606:3612 mathcomp.boot.seq <> in_cons thm
+R3606:3612 mathcomp.boot.seq <> in_cons thm
+R3614:3620 mathcomp.boot.eqtype <> eq_refl thm
+R3614:3620 mathcomp.boot.eqtype <> eq_refl thm
+R3606:3612 mathcomp.boot.seq <> in_cons thm
+R3606:3612 mathcomp.boot.seq <> in_cons thm
+R3614:3620 mathcomp.boot.eqtype <> eq_refl thm
+R3614:3620 mathcomp.boot.eqtype <> eq_refl thm
+R3606:3612 mathcomp.boot.seq <> in_cons thm
+R3606:3612 mathcomp.boot.seq <> in_cons thm
+R3632:3635 Corelib.ssr.ssrbool <> orbb thm
+R3632:3635 Corelib.ssr.ssrbool <> orbb thm
+R3698:3704 mathcomp.boot.seq <> in_cons thm
+R3706:3712 mathcomp.boot.eqtype <> eq_refl thm
+R3698:3704 mathcomp.boot.seq <> in_cons thm
+R3698:3704 mathcomp.boot.seq <> in_cons thm
+R3706:3712 mathcomp.boot.eqtype <> eq_refl thm
+R3706:3712 mathcomp.boot.eqtype <> eq_refl thm
+R3742:3748 mathcomp.boot.seq <> in_cons thm
+R3757:3759 Corelib.ssr.ssrbool <> orP thm
+R3775:3791 prosa.classic.util.minmax <> seq_argmin_in_seq thm
+R3742:3748 mathcomp.boot.seq <> in_cons thm
+R3742:3748 mathcomp.boot.seq <> in_cons thm
+R3757:3759 Corelib.ssr.ssrbool <> orP thm
+R3775:3791 prosa.classic.util.minmax <> seq_argmin_in_seq thm
+R3890:3899 prosa.classic.util.minmax <> seq_argmin def
+R3890:3899 prosa.classic.util.minmax <> seq_argmin def
+R3952:3954 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.rel var
+R3957:3957 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R3963:3963 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R3952:3954 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.rel var
+R3957:3957 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R3963:3963 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R4143:4149 mathcomp.boot.seq <> in_cons thm
+R4158:4160 Corelib.ssr.ssrbool <> orP thm
+R4143:4149 mathcomp.boot.seq <> in_cons thm
+R4143:4149 mathcomp.boot.seq <> in_cons thm
+R4143:4149 mathcomp.boot.seq <> in_cons thm
+R4143:4149 mathcomp.boot.seq <> in_cons thm
+R4158:4160 Corelib.ssr.ssrbool <> orP thm
+R4158:4160 Corelib.ssr.ssrbool <> orP thm
+R4257:4257 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R4257:4257 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R4389:4395 mathcomp.boot.seq <> in_cons thm
+R4404:4406 Corelib.ssr.ssrbool <> orP thm
+R4389:4395 mathcomp.boot.seq <> in_cons thm
+R4389:4395 mathcomp.boot.seq <> in_cons thm
+R4389:4395 mathcomp.boot.seq <> in_cons thm
+R4389:4395 mathcomp.boot.seq <> in_cons thm
+R4404:4406 Corelib.ssr.ssrbool <> orP thm
+R4404:4406 Corelib.ssr.ssrbool <> orP thm
+R4523:4539 prosa.classic.util.minmax <> seq_argmin_exists thm
+R4523:4539 prosa.classic.util.minmax <> seq_argmin_exists thm
+prf 4621:4643 <> seq_argmax_computes_max
+binder 4663:4663 <> x:31
+binder 4665:4665 <> y:32
+R4701:4716 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4692:4694 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4680:4689 prosa.classic.util.minmax <> seq_argmax def
+R4691:4691 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.Lemmas.TotalOrder.l var
+R4695:4698 Corelib.Init.Datatypes <> Some constr
+R4700:4700 prosa.classic.util.minmax <> x:31 var
+R4724:4739 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4718:4722 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R4717:4717 prosa.classic.util.minmax <> y:32 var
+R4723:4723 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.Lemmas.TotalOrder.l var
+R4740:4742 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.rel var
+R4745:4745 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R4747:4747 prosa.classic.util.minmax <> y:32 var
+R4751:4751 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R4753:4753 prosa.classic.util.minmax <> x:31 var
+R4957:4963 mathcomp.boot.seq <> in_cons thm
+R4957:4963 mathcomp.boot.seq <> in_cons thm
+R4957:4963 mathcomp.boot.seq <> in_cons thm
+R4995:4997 Corelib.ssr.ssrbool <> orP thm
+R5001:5003 mathcomp.boot.eqtype <> eqP def
+R5056:5065 prosa.classic.util.minmax <> seq_argmax def
+R5056:5065 prosa.classic.util.minmax <> seq_argmax def
+R5198:5204 mathcomp.boot.seq <> in_cons thm
+R5206:5212 mathcomp.boot.eqtype <> eq_refl thm
+R5224:5227 Corelib.ssr.ssrbool <> orbb thm
+R5198:5204 mathcomp.boot.seq <> in_cons thm
+R5198:5204 mathcomp.boot.seq <> in_cons thm
+R5206:5212 mathcomp.boot.eqtype <> eq_refl thm
+R5206:5212 mathcomp.boot.eqtype <> eq_refl thm
+R5198:5204 mathcomp.boot.seq <> in_cons thm
+R5198:5204 mathcomp.boot.seq <> in_cons thm
+R5206:5212 mathcomp.boot.eqtype <> eq_refl thm
+R5206:5212 mathcomp.boot.eqtype <> eq_refl thm
+R5198:5204 mathcomp.boot.seq <> in_cons thm
+R5198:5204 mathcomp.boot.seq <> in_cons thm
+R5224:5227 Corelib.ssr.ssrbool <> orbb thm
+R5224:5227 Corelib.ssr.ssrbool <> orbb thm
+R5282:5284 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.rel var
+R5287:5287 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R5293:5293 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R5394:5400 mathcomp.boot.seq <> in_cons thm
+R5402:5408 mathcomp.boot.eqtype <> eq_refl thm
+R5420:5423 Corelib.ssr.ssrbool <> orbb thm
+R5282:5284 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.rel var
+R5287:5287 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R5293:5293 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R5394:5400 mathcomp.boot.seq <> in_cons thm
+R5394:5400 mathcomp.boot.seq <> in_cons thm
+R5402:5408 mathcomp.boot.eqtype <> eq_refl thm
+R5402:5408 mathcomp.boot.eqtype <> eq_refl thm
+R5394:5400 mathcomp.boot.seq <> in_cons thm
+R5394:5400 mathcomp.boot.seq <> in_cons thm
+R5402:5408 mathcomp.boot.eqtype <> eq_refl thm
+R5402:5408 mathcomp.boot.eqtype <> eq_refl thm
+R5394:5400 mathcomp.boot.seq <> in_cons thm
+R5394:5400 mathcomp.boot.seq <> in_cons thm
+R5420:5423 Corelib.ssr.ssrbool <> orbb thm
+R5420:5423 Corelib.ssr.ssrbool <> orbb thm
+R5486:5492 mathcomp.boot.seq <> in_cons thm
+R5494:5500 mathcomp.boot.eqtype <> eq_refl thm
+R5486:5492 mathcomp.boot.seq <> in_cons thm
+R5486:5492 mathcomp.boot.seq <> in_cons thm
+R5494:5500 mathcomp.boot.eqtype <> eq_refl thm
+R5494:5500 mathcomp.boot.eqtype <> eq_refl thm
+R5530:5536 mathcomp.boot.seq <> in_cons thm
+R5545:5547 Corelib.ssr.ssrbool <> orP thm
+R5563:5579 prosa.classic.util.minmax <> seq_argmax_in_seq thm
+R5530:5536 mathcomp.boot.seq <> in_cons thm
+R5530:5536 mathcomp.boot.seq <> in_cons thm
+R5545:5547 Corelib.ssr.ssrbool <> orP thm
+R5563:5579 prosa.classic.util.minmax <> seq_argmax_in_seq thm
+R5613:5616 Corelib.ssr.ssrbool <> orbF thm
+R5613:5616 Corelib.ssr.ssrbool <> orbF thm
+R5613:5616 Corelib.ssr.ssrbool <> orbF thm
+R5680:5689 prosa.classic.util.minmax <> seq_argmax def
+R5680:5689 prosa.classic.util.minmax <> seq_argmax def
+R5742:5744 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.rel var
+R5747:5747 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R5753:5753 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R5742:5744 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.rel var
+R5747:5747 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R5753:5753 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R5933:5939 mathcomp.boot.seq <> in_cons thm
+R5948:5950 Corelib.ssr.ssrbool <> orP thm
+R5933:5939 mathcomp.boot.seq <> in_cons thm
+R5933:5939 mathcomp.boot.seq <> in_cons thm
+R5933:5939 mathcomp.boot.seq <> in_cons thm
+R5933:5939 mathcomp.boot.seq <> in_cons thm
+R5948:5950 Corelib.ssr.ssrbool <> orP thm
+R5948:5950 Corelib.ssr.ssrbool <> orP thm
+R6047:6047 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R6047:6047 prosa.classic.util.minmax <> MinMaxSeq.ArgGeneric.F var
+R6178:6184 mathcomp.boot.seq <> in_cons thm
+R6193:6195 Corelib.ssr.ssrbool <> orP thm
+R6178:6184 mathcomp.boot.seq <> in_cons thm
+R6178:6184 mathcomp.boot.seq <> in_cons thm
+R6178:6184 mathcomp.boot.seq <> in_cons thm
+R6178:6184 mathcomp.boot.seq <> in_cons thm
+R6193:6195 Corelib.ssr.ssrbool <> orP thm
+R6193:6195 Corelib.ssr.ssrbool <> orP thm
+R6312:6328 prosa.classic.util.minmax <> seq_argmax_exists thm
+R6312:6328 prosa.classic.util.minmax <> seq_argmax_exists thm
+R6406:6415 prosa.classic.util.minmax MinMaxSeq.ArgGeneric.Lemmas.TotalOrder <> sec
+R6427:6432 prosa.classic.util.minmax MinMaxSeq.ArgGeneric.Lemmas <> sec
+R6442:6451 prosa.classic.util.minmax MinMaxSeq.ArgGeneric <> sec
+sec 6467:6476 MinMaxSeq MinGeneric
+var  6493:6493 MinMaxSeq.MinGeneric T
+R6496:6501 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 6518:6520 MinMaxSeq.MinGeneric rel
+R6523:6525 Corelib.ssr.ssrbool <> rel def
+R6527:6527 prosa.classic.util.minmax <> MinMaxSeq.MinGeneric.T var
+def 6550:6556 <> seq_min
+R6561:6570 prosa.classic.util.minmax <> seq_argmin def
+R6576:6577 Corelib.Init.Datatypes <> id def
+R6572:6574 prosa.classic.util.minmax <> MinMaxSeq.MinGeneric.rel var
+def 6595:6601 <> seq_max
+R6606:6615 prosa.classic.util.minmax <> seq_argmax def
+R6621:6622 Corelib.Init.Datatypes <> id def
+R6617:6619 prosa.classic.util.minmax <> MinMaxSeq.MinGeneric.rel var
+sec 6638:6643 MinMaxSeq.MinGeneric Lemmas
+prf 6659:6672 <> seq_min_exists
+binder 6690:6690 <> l:36
+binder 6692:6692 <> x:37
+R6712:6725 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6706:6710 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R6705:6705 prosa.classic.util.minmax <> x:37 var
+R6711:6711 prosa.classic.util.minmax <> l:36 var
+R6735:6738 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R6726:6732 prosa.classic.util.minmax <> seq_min def
+R6734:6734 prosa.classic.util.minmax <> l:36 var
+R6739:6742 Corelib.Init.Datatypes <> None constr
+R6775:6791 prosa.classic.util.minmax <> seq_argmin_exists thm
+R6775:6791 prosa.classic.util.minmax <> seq_argmin_exists thm
+prf 6826:6839 <> seq_min_in_seq
+binder 6857:6857 <> l:38
+binder 6859:6859 <> x:39
+R6890:6903 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6881:6883 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6872:6878 prosa.classic.util.minmax <> seq_min def
+R6880:6880 prosa.classic.util.minmax <> l:38 var
+R6884:6887 Corelib.Init.Datatypes <> Some constr
+R6889:6889 prosa.classic.util.minmax <> x:39 var
+R6905:6909 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R6904:6904 prosa.classic.util.minmax <> x:39 var
+R6910:6910 prosa.classic.util.minmax <> l:38 var
+R6943:6959 prosa.classic.util.minmax <> seq_argmin_in_seq thm
+R6943:6959 prosa.classic.util.minmax <> seq_argmin_in_seq thm
+prf 6986:6999 <> seq_max_exists
+binder 7017:7017 <> l:40
+binder 7019:7019 <> x:41
+R7039:7052 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7033:7037 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R7032:7032 prosa.classic.util.minmax <> x:41 var
+R7038:7038 prosa.classic.util.minmax <> l:40 var
+R7062:7065 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R7053:7059 prosa.classic.util.minmax <> seq_max def
+R7061:7061 prosa.classic.util.minmax <> l:40 var
+R7066:7069 Corelib.Init.Datatypes <> None constr
+R7102:7118 prosa.classic.util.minmax <> seq_argmax_exists thm
+R7102:7118 prosa.classic.util.minmax <> seq_argmax_exists thm
+prf 7153:7166 <> seq_max_in_seq
+binder 7184:7184 <> l:42
+binder 7186:7186 <> x:43
+R7217:7230 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7208:7210 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7199:7205 prosa.classic.util.minmax <> seq_max def
+R7207:7207 prosa.classic.util.minmax <> l:42 var
+R7211:7214 Corelib.Init.Datatypes <> Some constr
+R7216:7216 prosa.classic.util.minmax <> x:43 var
+R7232:7236 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R7231:7231 prosa.classic.util.minmax <> x:43 var
+R7237:7237 prosa.classic.util.minmax <> l:42 var
+R7270:7286 prosa.classic.util.minmax <> seq_argmax_in_seq thm
+R7270:7286 prosa.classic.util.minmax <> seq_argmax_in_seq thm
+sec 7321:7330 MinMaxSeq.MinGeneric.Lemmas TotalOrder
+var 7353:7364 MinMaxSeq.MinGeneric.Lemmas.TotalOrder H_transitive
+R7367:7376 Corelib.ssr.ssrbool <> transitive def
+R7378:7380 prosa.classic.util.minmax <> MinMaxSeq.MinGeneric.rel var
+var 7409:7409 MinMaxSeq.MinGeneric.Lemmas.TotalOrder l
+R7412:7414 mathcomp.boot.seq <> seq abbrev
+R7416:7416 prosa.classic.util.minmax <> MinMaxSeq.MinGeneric.T var
+var 7438:7454 MinMaxSeq.MinGeneric.Lemmas.TotalOrder H_total_over_list
+binder 7474:7474 <> x:48
+binder 7476:7476 <> y:49
+R7498:7513 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7492:7496 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R7491:7491 prosa.classic.util.minmax <> x:48 var
+R7497:7497 prosa.classic.util.minmax <> MinMaxSeq.MinGeneric.Lemmas.TotalOrder.l var
+R7521:7536 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7515:7519 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R7514:7514 prosa.classic.util.minmax <> y:49 var
+R7520:7520 prosa.classic.util.minmax <> MinMaxSeq.MinGeneric.Lemmas.TotalOrder.l var
+R7544:7547 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R7537:7539 prosa.classic.util.minmax <> MinMaxSeq.MinGeneric.rel var
+R7541:7541 prosa.classic.util.minmax <> x:48 var
+R7543:7543 prosa.classic.util.minmax <> y:49 var
+R7548:7550 prosa.classic.util.minmax <> MinMaxSeq.MinGeneric.rel var
+R7552:7552 prosa.classic.util.minmax <> y:49 var
+R7554:7554 prosa.classic.util.minmax <> x:48 var
+prf 7572:7591 <> seq_min_computes_min
+binder 7611:7611 <> x:52
+binder 7613:7613 <> y:53
+R7646:7661 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7637:7639 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7628:7634 prosa.classic.util.minmax <> seq_min def
+R7636:7636 prosa.classic.util.minmax <> MinMaxSeq.MinGeneric.Lemmas.TotalOrder.l var
+R7640:7643 Corelib.Init.Datatypes <> Some constr
+R7645:7645 prosa.classic.util.minmax <> x:52 var
+R7669:7684 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7663:7667 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R7662:7662 prosa.classic.util.minmax <> y:53 var
+R7668:7668 prosa.classic.util.minmax <> MinMaxSeq.MinGeneric.Lemmas.TotalOrder.l var
+R7685:7687 prosa.classic.util.minmax <> MinMaxSeq.MinGeneric.rel var
+R7689:7689 prosa.classic.util.minmax <> x:52 var
+R7691:7691 prosa.classic.util.minmax <> y:53 var
+R7728:7750 prosa.classic.util.minmax <> seq_argmin_computes_min thm
+R7728:7750 prosa.classic.util.minmax <> seq_argmin_computes_min thm
+prf 7781:7800 <> seq_max_computes_max
+binder 7820:7820 <> x:54
+binder 7822:7822 <> y:55
+R7855:7870 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7846:7848 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7837:7843 prosa.classic.util.minmax <> seq_max def
+R7845:7845 prosa.classic.util.minmax <> MinMaxSeq.MinGeneric.Lemmas.TotalOrder.l var
+R7849:7852 Corelib.Init.Datatypes <> Some constr
+R7854:7854 prosa.classic.util.minmax <> x:54 var
+R7878:7893 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7872:7876 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R7871:7871 prosa.classic.util.minmax <> y:55 var
+R7877:7877 prosa.classic.util.minmax <> MinMaxSeq.MinGeneric.Lemmas.TotalOrder.l var
+R7894:7896 prosa.classic.util.minmax <> MinMaxSeq.MinGeneric.rel var
+R7898:7898 prosa.classic.util.minmax <> y:55 var
+R7900:7900 prosa.classic.util.minmax <> x:54 var
+R7937:7959 prosa.classic.util.minmax <> seq_argmax_computes_max thm
+R7937:7959 prosa.classic.util.minmax <> seq_argmax_computes_max thm
+R7986:7995 prosa.classic.util.minmax MinMaxSeq.MinGeneric.Lemmas.TotalOrder <> sec
+R8007:8012 prosa.classic.util.minmax MinMaxSeq.MinGeneric.Lemmas <> sec
+R8030:8039 prosa.classic.util.minmax MinMaxSeq.MinGeneric <> sec
+sec 8053:8058 MinMaxSeq ArgNat
+var  8081:8081 MinMaxSeq.ArgNat T
+R8084:8089 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 8107:8107 MinMaxSeq.ArgNat F
+R8111:8114 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8110:8110 prosa.classic.util.minmax <> MinMaxSeq.ArgNat.T var
+R8115:8117 Corelib.Init.Datatypes <> nat ind
+def 8136:8149 <> seq_argmin_nat
+R8154:8163 prosa.classic.util.minmax <> seq_argmin def
+R8169:8169 prosa.classic.util.minmax <> MinMaxSeq.ArgNat.F var
+R8165:8167 mathcomp.boot.ssrnat <> leq def
+def 8187:8200 <> seq_argmax_nat
+R8205:8214 prosa.classic.util.minmax <> seq_argmax def
+R8220:8220 prosa.classic.util.minmax <> MinMaxSeq.ArgNat.F var
+R8216:8218 mathcomp.boot.ssrnat <> leq def
+sec 8236:8241 MinMaxSeq.ArgNat Lemmas
+prf 8257:8277 <> seq_argmin_nat_exists
+binder 8295:8295 <> l:59
+binder 8297:8297 <> x:60
+R8317:8330 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8311:8315 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R8310:8310 prosa.classic.util.minmax <> x:60 var
+R8316:8316 prosa.classic.util.minmax <> l:59 var
+R8347:8350 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R8331:8344 prosa.classic.util.minmax <> seq_argmin_nat def
+R8346:8346 prosa.classic.util.minmax <> l:59 var
+R8351:8354 Corelib.Init.Datatypes <> None constr
+R8387:8403 prosa.classic.util.minmax <> seq_argmin_exists thm
+R8387:8403 prosa.classic.util.minmax <> seq_argmin_exists thm
+prf 8438:8458 <> seq_argmin_nat_in_seq
+binder 8476:8476 <> l:61
+binder 8478:8478 <> x:62
+R8516:8529 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8507:8509 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8491:8504 prosa.classic.util.minmax <> seq_argmin_nat def
+R8506:8506 prosa.classic.util.minmax <> l:61 var
+R8510:8513 Corelib.Init.Datatypes <> Some constr
+R8515:8515 prosa.classic.util.minmax <> x:62 var
+R8531:8535 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R8530:8530 prosa.classic.util.minmax <> x:62 var
+R8536:8536 prosa.classic.util.minmax <> l:61 var
+R8569:8585 prosa.classic.util.minmax <> seq_argmin_in_seq thm
+R8569:8585 prosa.classic.util.minmax <> seq_argmin_in_seq thm
+prf 8612:8632 <> seq_argmax_nat_exists
+binder 8650:8650 <> l:63
+binder 8652:8652 <> x:64
+R8672:8685 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8666:8670 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R8665:8665 prosa.classic.util.minmax <> x:64 var
+R8671:8671 prosa.classic.util.minmax <> l:63 var
+R8702:8705 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R8686:8699 prosa.classic.util.minmax <> seq_argmax_nat def
+R8701:8701 prosa.classic.util.minmax <> l:63 var
+R8706:8709 Corelib.Init.Datatypes <> None constr
+R8742:8758 prosa.classic.util.minmax <> seq_argmax_exists thm
+R8742:8758 prosa.classic.util.minmax <> seq_argmax_exists thm
+prf 8793:8813 <> seq_argmax_nat_in_seq
+binder 8831:8831 <> l:65
+binder 8833:8833 <> x:66
+R8871:8884 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8862:8864 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8846:8859 prosa.classic.util.minmax <> seq_argmax_nat def
+R8861:8861 prosa.classic.util.minmax <> l:65 var
+R8865:8868 Corelib.Init.Datatypes <> Some constr
+R8870:8870 prosa.classic.util.minmax <> x:66 var
+R8886:8890 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R8885:8885 prosa.classic.util.minmax <> x:66 var
+R8891:8891 prosa.classic.util.minmax <> l:65 var
+R8924:8940 prosa.classic.util.minmax <> seq_argmax_in_seq thm
+R8924:8940 prosa.classic.util.minmax <> seq_argmax_in_seq thm
+sec 8975:8984 MinMaxSeq.ArgNat.Lemmas TotalOrder
+prf 9002:9028 <> seq_argmin_nat_computes_min
+binder 9048:9048 <> l:67
+binder 9050:9050 <> x:68
+binder 9052:9052 <> y:69
+R9092:9107 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9083:9085 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9067:9080 prosa.classic.util.minmax <> seq_argmin_nat def
+R9082:9082 prosa.classic.util.minmax <> l:67 var
+R9086:9089 Corelib.Init.Datatypes <> Some constr
+R9091:9091 prosa.classic.util.minmax <> x:68 var
+R9115:9130 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9109:9113 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R9108:9108 prosa.classic.util.minmax <> y:69 var
+R9114:9114 prosa.classic.util.minmax <> l:67 var
+R9134:9137 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R9131:9131 prosa.classic.util.minmax <> MinMaxSeq.ArgNat.F var
+R9133:9133 prosa.classic.util.minmax <> x:68 var
+R9138:9138 prosa.classic.util.minmax <> MinMaxSeq.ArgNat.F var
+R9140:9140 prosa.classic.util.minmax <> y:69 var
+R9206:9228 prosa.classic.util.minmax <> seq_argmin_computes_min thm
+R9206:9228 prosa.classic.util.minmax <> seq_argmin_computes_min thm
+R9298:9306 mathcomp.boot.ssrnat <> leq_trans thm
+R9298:9306 mathcomp.boot.ssrnat <> leq_trans thm
+R9352:9360 mathcomp.boot.ssrnat <> leq_total thm
+R9352:9360 mathcomp.boot.ssrnat <> leq_total thm
+prf 9391:9417 <> seq_argmax_nat_computes_max
+binder 9437:9437 <> l:70
+binder 9439:9439 <> x:71
+binder 9441:9441 <> y:72
+R9481:9496 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9472:9474 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9456:9469 prosa.classic.util.minmax <> seq_argmax_nat def
+R9471:9471 prosa.classic.util.minmax <> l:70 var
+R9475:9478 Corelib.Init.Datatypes <> Some constr
+R9480:9480 prosa.classic.util.minmax <> x:71 var
+R9504:9519 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9498:9502 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R9497:9497 prosa.classic.util.minmax <> y:72 var
+R9503:9503 prosa.classic.util.minmax <> l:70 var
+R9523:9526 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R9527:9527 prosa.classic.util.minmax <> MinMaxSeq.ArgNat.F var
+R9529:9529 prosa.classic.util.minmax <> y:72 var
+R9520:9520 prosa.classic.util.minmax <> MinMaxSeq.ArgNat.F var
+R9522:9522 prosa.classic.util.minmax <> x:71 var
+R9595:9617 prosa.classic.util.minmax <> seq_argmax_computes_max thm
+R9595:9617 prosa.classic.util.minmax <> seq_argmax_computes_max thm
+R9687:9695 mathcomp.boot.ssrnat <> leq_trans thm
+R9687:9695 mathcomp.boot.ssrnat <> leq_trans thm
+R9741:9749 mathcomp.boot.ssrnat <> leq_total thm
+R9741:9749 mathcomp.boot.ssrnat <> leq_total thm
+R9776:9785 prosa.classic.util.minmax MinMaxSeq.ArgNat.Lemmas.TotalOrder <> sec
+R9797:9802 prosa.classic.util.minmax MinMaxSeq.ArgNat.Lemmas <> sec
+R9820:9825 prosa.classic.util.minmax MinMaxSeq.ArgNat <> sec
+sec 9841:9846 MinMaxSeq MinNat
+def 9865:9875 <> seq_min_nat
+R9880:9889 prosa.classic.util.minmax <> seq_argmin def
+R9895:9896 Corelib.Init.Datatypes <> id def
+R9891:9893 mathcomp.boot.ssrnat <> leq def
+def 9914:9924 <> seq_max_nat
+R9929:9938 prosa.classic.util.minmax <> seq_argmax def
+R9944:9945 Corelib.Init.Datatypes <> id def
+R9940:9942 mathcomp.boot.ssrnat <> leq def
+sec 9961:9966 MinMaxSeq.MinNat Lemmas
+prf 9982:9999 <> seq_min_nat_exists
+binder 10017:10017 <> l:73
+binder 10019:10019 <> x:74
+R10039:10052 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R10033:10037 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R10032:10032 prosa.classic.util.minmax <> x:74 var
+R10038:10038 prosa.classic.util.minmax <> l:73 var
+R10066:10069 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R10053:10063 prosa.classic.util.minmax <> seq_min_nat def
+R10065:10065 prosa.classic.util.minmax <> l:73 var
+R10070:10073 Corelib.Init.Datatypes <> None constr
+R10106:10122 prosa.classic.util.minmax <> seq_argmin_exists thm
+R10106:10122 prosa.classic.util.minmax <> seq_argmin_exists thm
+prf 10157:10174 <> seq_min_nat_in_seq
+binder 10192:10192 <> l:75
+binder 10194:10194 <> x:76
+R10229:10242 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R10220:10222 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10207:10217 prosa.classic.util.minmax <> seq_min_nat def
+R10219:10219 prosa.classic.util.minmax <> l:75 var
+R10223:10226 Corelib.Init.Datatypes <> Some constr
+R10228:10228 prosa.classic.util.minmax <> x:76 var
+R10244:10248 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R10243:10243 prosa.classic.util.minmax <> x:76 var
+R10249:10249 prosa.classic.util.minmax <> l:75 var
+R10282:10298 prosa.classic.util.minmax <> seq_argmin_in_seq thm
+R10282:10298 prosa.classic.util.minmax <> seq_argmin_in_seq thm
+prf 10325:10342 <> seq_max_nat_exists
+binder 10360:10360 <> l:77
+binder 10362:10362 <> x:78
+R10382:10395 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R10376:10380 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R10375:10375 prosa.classic.util.minmax <> x:78 var
+R10381:10381 prosa.classic.util.minmax <> l:77 var
+R10409:10412 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R10396:10406 prosa.classic.util.minmax <> seq_max_nat def
+R10408:10408 prosa.classic.util.minmax <> l:77 var
+R10413:10416 Corelib.Init.Datatypes <> None constr
+R10449:10465 prosa.classic.util.minmax <> seq_argmax_exists thm
+R10449:10465 prosa.classic.util.minmax <> seq_argmax_exists thm
+prf 10500:10517 <> seq_max_nat_in_seq
+binder 10535:10535 <> l:79
+binder 10537:10537 <> x:80
+R10572:10585 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R10563:10565 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10550:10560 prosa.classic.util.minmax <> seq_max_nat def
+R10562:10562 prosa.classic.util.minmax <> l:79 var
+R10566:10569 Corelib.Init.Datatypes <> Some constr
+R10571:10571 prosa.classic.util.minmax <> x:80 var
+R10587:10591 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R10586:10586 prosa.classic.util.minmax <> x:80 var
+R10592:10592 prosa.classic.util.minmax <> l:79 var
+R10625:10641 prosa.classic.util.minmax <> seq_argmax_in_seq thm
+R10625:10641 prosa.classic.util.minmax <> seq_argmax_in_seq thm
+sec 10676:10685 MinMaxSeq.MinNat.Lemmas TotalOrder
+prf 10703:10726 <> seq_min_nat_computes_min
+binder 10746:10746 <> l:81
+binder 10748:10748 <> x:82
+binder 10750:10750 <> y:83
+R10787:10802 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R10778:10780 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10765:10775 prosa.classic.util.minmax <> seq_min_nat def
+R10777:10777 prosa.classic.util.minmax <> l:81 var
+R10781:10784 Corelib.Init.Datatypes <> Some constr
+R10786:10786 prosa.classic.util.minmax <> x:82 var
+R10810:10825 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R10804:10808 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R10803:10803 prosa.classic.util.minmax <> y:83 var
+R10809:10809 prosa.classic.util.minmax <> l:81 var
+R10827:10830 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R10826:10826 prosa.classic.util.minmax <> x:82 var
+R10831:10831 prosa.classic.util.minmax <> y:83 var
+R10897:10916 prosa.classic.util.minmax <> seq_min_computes_min thm
+R10897:10916 prosa.classic.util.minmax <> seq_min_computes_min thm
+R10986:10994 mathcomp.boot.ssrnat <> leq_trans thm
+R10986:10994 mathcomp.boot.ssrnat <> leq_trans thm
+R11040:11048 mathcomp.boot.ssrnat <> leq_total thm
+R11040:11048 mathcomp.boot.ssrnat <> leq_total thm
+prf 11079:11102 <> seq_max_nat_computes_max
+binder 11122:11122 <> l:84
+binder 11124:11124 <> x:85
+binder 11126:11126 <> y:86
+R11163:11178 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R11154:11156 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11141:11151 prosa.classic.util.minmax <> seq_max_nat def
+R11153:11153 prosa.classic.util.minmax <> l:84 var
+R11157:11160 Corelib.Init.Datatypes <> Some constr
+R11162:11162 prosa.classic.util.minmax <> x:85 var
+R11186:11201 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R11180:11184 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R11179:11179 prosa.classic.util.minmax <> y:86 var
+R11185:11185 prosa.classic.util.minmax <> l:84 var
+R11203:11206 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R11207:11207 prosa.classic.util.minmax <> y:86 var
+R11202:11202 prosa.classic.util.minmax <> x:85 var
+R11273:11292 prosa.classic.util.minmax <> seq_max_computes_max thm
+R11273:11292 prosa.classic.util.minmax <> seq_max_computes_max thm
+R11362:11370 mathcomp.boot.ssrnat <> leq_trans thm
+R11362:11370 mathcomp.boot.ssrnat <> leq_trans thm
+R11416:11424 mathcomp.boot.ssrnat <> leq_total thm
+R11416:11424 mathcomp.boot.ssrnat <> leq_total thm
+R11451:11460 prosa.classic.util.minmax MinMaxSeq.MinNat.Lemmas.TotalOrder <> sec
+R11472:11477 prosa.classic.util.minmax MinMaxSeq.MinNat.Lemmas <> sec
+R11495:11500 prosa.classic.util.minmax MinMaxSeq.MinNat <> sec
+sec 11514:11521 MinMaxSeq NatRange
+def 11544:11557 <> values_between
+R11565:11567 Corelib.Init.Datatypes <> nat ind
+binder 11560:11560 <> a:87
+binder 11562:11562 <> b:88
+R11579:11584 mathcomp.boot.seq <> filter def
+R11605:11607 mathcomp.boot.seq <> map def
+R11626:11629 mathcomp.boot.fintype <> enum abbrev
+R11631:11633 mathcomp.boot.fintype <> :::'''I_'_x not
+R11634:11634 prosa.classic.util.minmax <> b:88 var
+R11611:11620 mathcomp.boot.fintype <> nat_of_ord coe
+binder 11591:11591 <> x:89
+R11597:11600 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R11601:11601 prosa.classic.util.minmax <> a:87 var
+R11596:11596 prosa.classic.util.minmax <> x:89 var
+prf 11650:11667 <> mem_values_between
+binder 11669:11669 <> a:90
+binder 11671:11671 <> b:91
+binder 11687:11687 <> x:92
+R11714:11717 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11728:11728 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11691:11695 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R11690:11690 prosa.classic.util.minmax <> x:92 var
+R11696:11709 prosa.classic.util.minmax <> values_between def
+R11711:11711 prosa.classic.util.minmax <> a:90 var
+R11713:11713 prosa.classic.util.minmax <> b:91 var
+R11719:11722 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R11724:11726 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R11718:11718 prosa.classic.util.minmax <> a:90 var
+R11723:11723 prosa.classic.util.minmax <> x:92 var
+R11723:11723 prosa.classic.util.minmax <> x:92 var
+R11727:11727 prosa.classic.util.minmax <> b:91 var
+R11766:11775 mathcomp.boot.seq <> mem_filter thm
+R11766:11775 mathcomp.boot.seq <> mem_filter thm
+R11766:11775 mathcomp.boot.seq <> mem_filter thm
+R11790:11792 Corelib.ssr.ssrbool <> idP thm
+R11794:11796 Corelib.ssr.ssrbool <> idP thm
+R11790:11792 Corelib.ssr.ssrbool <> idP thm
+R11794:11796 Corelib.ssr.ssrbool <> idP thm
+R11824:11827 Corelib.ssr.ssrbool <> andP thm
+R11859:11862 mathcomp.boot.seq <> mapP thm
+R11899:11906 mathcomp.boot.fintype <> mem_enum thm
+R11899:11906 mathcomp.boot.fintype <> mem_enum thm
+R11899:11906 mathcomp.boot.fintype <> mem_enum thm
+R11932:11935 Corelib.ssr.ssrbool <> andP thm
+R11932:11935 Corelib.ssr.ssrbool <> andP thm
+R11978:11981 Corelib.ssr.ssrbool <> andP thm
+R12011:12015 Corelib.ssr.ssrbool <> andTb thm
+R12011:12015 Corelib.ssr.ssrbool <> andTb thm
+R12011:12015 Corelib.ssr.ssrbool <> andTb thm
+R12032:12035 mathcomp.boot.seq <> mapP thm
+R12046:12052 mathcomp.boot.fintype <> Ordinal constr
+R12032:12035 mathcomp.boot.seq <> mapP thm
+R12046:12052 mathcomp.boot.fintype <> Ordinal constr
+R12092:12099 mathcomp.boot.fintype <> mem_enum thm
+R12092:12099 mathcomp.boot.fintype <> mem_enum thm
+R12092:12099 mathcomp.boot.fintype <> mem_enum thm
+def 12135:12146 <> min_nat_cond
+binder 12148:12148 <> P:93
+R12156:12158 Corelib.Init.Datatypes <> nat ind
+binder 12151:12151 <> a:94
+binder 12153:12153 <> b:95
+R12170:12180 prosa.classic.util.minmax <> seq_min_nat def
+R12183:12188 mathcomp.boot.seq <> filter def
+R12193:12206 prosa.classic.util.minmax <> values_between def
+R12208:12208 prosa.classic.util.minmax <> a:94 var
+R12210:12210 prosa.classic.util.minmax <> b:95 var
+R12190:12190 prosa.classic.util.minmax <> P:93 var
+def 12231:12242 <> max_nat_cond
+binder 12244:12244 <> P:96
+R12252:12254 Corelib.Init.Datatypes <> nat ind
+binder 12247:12247 <> a:97
+binder 12249:12249 <> b:98
+R12266:12276 prosa.classic.util.minmax <> seq_max_nat def
+R12279:12284 mathcomp.boot.seq <> filter def
+R12289:12302 prosa.classic.util.minmax <> values_between def
+R12304:12304 prosa.classic.util.minmax <> a:97 var
+R12306:12306 prosa.classic.util.minmax <> b:98 var
+R12286:12286 prosa.classic.util.minmax <> P:96 var
+prf 12322:12340 <> min_nat_cond_exists
+R12363:12366 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R12360:12362 Corelib.Init.Datatypes <> nat ind
+R12367:12370 Corelib.Init.Datatypes <> bool ind
+binder 12357:12357 <> P:99
+R12379:12381 Corelib.Init.Datatypes <> nat ind
+binder 12374:12374 <> a:100
+binder 12376:12376 <> b:101
+binder 12384:12384 <> x:102
+R12405:12416 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R12396:12399 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R12401:12403 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R12395:12395 prosa.classic.util.minmax <> a:100 var
+R12400:12400 prosa.classic.util.minmax <> x:102 var
+R12400:12400 prosa.classic.util.minmax <> x:102 var
+R12404:12404 prosa.classic.util.minmax <> b:101 var
+R12420:12431 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R12417:12417 prosa.classic.util.minmax <> P:99 var
+R12419:12419 prosa.classic.util.minmax <> x:102 var
+R12450:12453 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R12432:12443 prosa.classic.util.minmax <> min_nat_cond def
+R12445:12445 prosa.classic.util.minmax <> P:99 var
+R12447:12447 prosa.classic.util.minmax <> a:100 var
+R12449:12449 prosa.classic.util.minmax <> b:101 var
+R12454:12457 Corelib.Init.Datatypes <> None constr
+R12514:12530 prosa.classic.util.minmax <> seq_argmin_exists thm
+R12514:12530 prosa.classic.util.minmax <> seq_argmin_exists thm
+R12564:12573 mathcomp.boot.seq <> mem_filter thm
+R12575:12592 prosa.classic.util.minmax <> mem_values_between thm
+R12564:12573 mathcomp.boot.seq <> mem_filter thm
+R12564:12573 mathcomp.boot.seq <> mem_filter thm
+R12575:12592 prosa.classic.util.minmax <> mem_values_between thm
+R12575:12592 prosa.classic.util.minmax <> mem_values_between thm
+prf 12628:12646 <> min_nat_cond_in_seq
+binder 12662:12662 <> P:103
+binder 12664:12664 <> a:104
+binder 12666:12666 <> b:105
+binder 12668:12668 <> x:106
+R12706:12717 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R12697:12699 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12679:12690 prosa.classic.util.minmax <> min_nat_cond def
+R12692:12692 prosa.classic.util.minmax <> P:103 var
+R12694:12694 prosa.classic.util.minmax <> a:104 var
+R12696:12696 prosa.classic.util.minmax <> b:105 var
+R12700:12703 Corelib.Init.Datatypes <> Some constr
+R12705:12705 prosa.classic.util.minmax <> x:106 var
+R12728:12731 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R12719:12722 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R12724:12726 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R12718:12718 prosa.classic.util.minmax <> a:104 var
+R12723:12723 prosa.classic.util.minmax <> x:106 var
+R12723:12723 prosa.classic.util.minmax <> x:106 var
+R12727:12727 prosa.classic.util.minmax <> b:105 var
+R12732:12732 prosa.classic.util.minmax <> P:103 var
+R12734:12734 prosa.classic.util.minmax <> x:106 var
+R12787:12804 prosa.classic.util.minmax <> seq_min_nat_in_seq thm
+R12787:12804 prosa.classic.util.minmax <> seq_min_nat_in_seq thm
+R12829:12838 mathcomp.boot.seq <> mem_filter thm
+R12829:12838 mathcomp.boot.seq <> mem_filter thm
+R12829:12838 mathcomp.boot.seq <> mem_filter thm
+R12864:12867 Corelib.ssr.ssrbool <> andP thm
+R12911:12928 prosa.classic.util.minmax <> mem_values_between thm
+R12911:12928 prosa.classic.util.minmax <> mem_values_between thm
+R12911:12928 prosa.classic.util.minmax <> mem_values_between thm
+prf 12957:12981 <> min_nat_cond_computes_min
+binder 12997:12997 <> P:107
+binder 12999:12999 <> a:108
+binder 13001:13001 <> b:109
+binder 13003:13003 <> x:110
+R13041:13053 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R13091:13091 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R13032:13034 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13014:13025 prosa.classic.util.minmax <> min_nat_cond def
+R13027:13027 prosa.classic.util.minmax <> P:107 var
+R13029:13029 prosa.classic.util.minmax <> a:108 var
+R13031:13031 prosa.classic.util.minmax <> b:109 var
+R13035:13038 Corelib.Init.Datatypes <> Some constr
+R13040:13040 prosa.classic.util.minmax <> x:110 var
+binder 13061:13061 <> y:111
+R13074:13077 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R13065:13068 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R13070:13072 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R13064:13064 prosa.classic.util.minmax <> a:108 var
+R13069:13069 prosa.classic.util.minmax <> y:111 var
+R13069:13069 prosa.classic.util.minmax <> y:111 var
+R13073:13073 prosa.classic.util.minmax <> b:109 var
+R13081:13084 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R13078:13078 prosa.classic.util.minmax <> P:107 var
+R13080:13080 prosa.classic.util.minmax <> y:111 var
+R13086:13089 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R13085:13085 prosa.classic.util.minmax <> x:110 var
+R13090:13090 prosa.classic.util.minmax <> y:111 var
+R13152:13175 prosa.classic.util.minmax <> seq_min_nat_computes_min thm
+R13152:13175 prosa.classic.util.minmax <> seq_min_nat_computes_min thm
+R13232:13241 mathcomp.boot.seq <> mem_filter thm
+R13246:13250 Corelib.ssr.ssrbool <> andTb thm
+R13252:13269 prosa.classic.util.minmax <> mem_values_between thm
+R13232:13241 mathcomp.boot.seq <> mem_filter thm
+R13232:13241 mathcomp.boot.seq <> mem_filter thm
+R13246:13250 Corelib.ssr.ssrbool <> andTb thm
+R13246:13250 Corelib.ssr.ssrbool <> andTb thm
+R13252:13269 prosa.classic.util.minmax <> mem_values_between thm
+R13252:13269 prosa.classic.util.minmax <> mem_values_between thm
+prf 13292:13310 <> max_nat_cond_exists
+R13333:13336 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R13330:13332 Corelib.Init.Datatypes <> nat ind
+R13337:13340 Corelib.Init.Datatypes <> bool ind
+binder 13327:13327 <> P:112
+R13349:13351 Corelib.Init.Datatypes <> nat ind
+binder 13344:13344 <> a:113
+binder 13346:13346 <> b:114
+binder 13354:13354 <> x:115
+R13375:13386 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R13366:13369 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R13371:13373 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R13365:13365 prosa.classic.util.minmax <> a:113 var
+R13370:13370 prosa.classic.util.minmax <> x:115 var
+R13370:13370 prosa.classic.util.minmax <> x:115 var
+R13374:13374 prosa.classic.util.minmax <> b:114 var
+R13390:13401 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R13387:13387 prosa.classic.util.minmax <> P:112 var
+R13389:13389 prosa.classic.util.minmax <> x:115 var
+R13420:13423 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R13402:13413 prosa.classic.util.minmax <> max_nat_cond def
+R13415:13415 prosa.classic.util.minmax <> P:112 var
+R13417:13417 prosa.classic.util.minmax <> a:113 var
+R13419:13419 prosa.classic.util.minmax <> b:114 var
+R13424:13427 Corelib.Init.Datatypes <> None constr
+R13484:13500 prosa.classic.util.minmax <> seq_argmax_exists thm
+R13484:13500 prosa.classic.util.minmax <> seq_argmax_exists thm
+R13534:13543 mathcomp.boot.seq <> mem_filter thm
+R13545:13562 prosa.classic.util.minmax <> mem_values_between thm
+R13534:13543 mathcomp.boot.seq <> mem_filter thm
+R13534:13543 mathcomp.boot.seq <> mem_filter thm
+R13545:13562 prosa.classic.util.minmax <> mem_values_between thm
+R13545:13562 prosa.classic.util.minmax <> mem_values_between thm
+prf 13594:13612 <> max_nat_cond_in_seq
+binder 13628:13628 <> P:116
+binder 13630:13630 <> a:117
+binder 13632:13632 <> b:118
+binder 13634:13634 <> x:119
+R13672:13683 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R13663:13665 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13645:13656 prosa.classic.util.minmax <> max_nat_cond def
+R13658:13658 prosa.classic.util.minmax <> P:116 var
+R13660:13660 prosa.classic.util.minmax <> a:117 var
+R13662:13662 prosa.classic.util.minmax <> b:118 var
+R13666:13669 Corelib.Init.Datatypes <> Some constr
+R13671:13671 prosa.classic.util.minmax <> x:119 var
+R13694:13697 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13685:13688 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R13690:13692 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R13684:13684 prosa.classic.util.minmax <> a:117 var
+R13689:13689 prosa.classic.util.minmax <> x:119 var
+R13689:13689 prosa.classic.util.minmax <> x:119 var
+R13693:13693 prosa.classic.util.minmax <> b:118 var
+R13698:13698 prosa.classic.util.minmax <> P:116 var
+R13700:13700 prosa.classic.util.minmax <> x:119 var
+R13753:13770 prosa.classic.util.minmax <> seq_max_nat_in_seq thm
+R13753:13770 prosa.classic.util.minmax <> seq_max_nat_in_seq thm
+R13795:13804 mathcomp.boot.seq <> mem_filter thm
+R13795:13804 mathcomp.boot.seq <> mem_filter thm
+R13795:13804 mathcomp.boot.seq <> mem_filter thm
+R13830:13833 Corelib.ssr.ssrbool <> andP thm
+R13877:13894 prosa.classic.util.minmax <> mem_values_between thm
+R13877:13894 prosa.classic.util.minmax <> mem_values_between thm
+R13877:13894 prosa.classic.util.minmax <> mem_values_between thm
+prf 13923:13947 <> max_nat_cond_computes_max
+binder 13963:13963 <> P:120
+binder 13965:13965 <> a:121
+binder 13967:13967 <> b:122
+binder 13969:13969 <> x:123
+R14007:14019 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R14057:14057 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R13998:14000 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13980:13991 prosa.classic.util.minmax <> max_nat_cond def
+R13993:13993 prosa.classic.util.minmax <> P:120 var
+R13995:13995 prosa.classic.util.minmax <> a:121 var
+R13997:13997 prosa.classic.util.minmax <> b:122 var
+R14001:14004 Corelib.Init.Datatypes <> Some constr
+R14006:14006 prosa.classic.util.minmax <> x:123 var
+binder 14027:14027 <> y:124
+R14040:14043 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R14031:14034 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R14036:14038 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R14030:14030 prosa.classic.util.minmax <> a:121 var
+R14035:14035 prosa.classic.util.minmax <> y:124 var
+R14035:14035 prosa.classic.util.minmax <> y:124 var
+R14039:14039 prosa.classic.util.minmax <> b:122 var
+R14047:14050 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R14044:14044 prosa.classic.util.minmax <> P:120 var
+R14046:14046 prosa.classic.util.minmax <> y:124 var
+R14052:14055 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R14051:14051 prosa.classic.util.minmax <> y:124 var
+R14056:14056 prosa.classic.util.minmax <> x:123 var
+R14118:14141 prosa.classic.util.minmax <> seq_max_nat_computes_max thm
+R14118:14141 prosa.classic.util.minmax <> seq_max_nat_computes_max thm
+R14198:14207 mathcomp.boot.seq <> mem_filter thm
+R14212:14216 Corelib.ssr.ssrbool <> andTb thm
+R14218:14235 prosa.classic.util.minmax <> mem_values_between thm
+R14198:14207 mathcomp.boot.seq <> mem_filter thm
+R14198:14207 mathcomp.boot.seq <> mem_filter thm
+R14212:14216 Corelib.ssr.ssrbool <> andTb thm
+R14212:14216 Corelib.ssr.ssrbool <> andTb thm
+R14218:14235 prosa.classic.util.minmax <> mem_values_between thm
+R14218:14235 prosa.classic.util.minmax <> mem_values_between thm
+R14258:14265 prosa.classic.util.minmax MinMaxSeq.NatRange <> sec
+R14273:14281 prosa.classic.util.minmax MinMaxSeq <> sec
+sec 14293:14296 <> Kmin
+var  14313:14314 Kmin T1
+var  14316:14317 Kmin T2
+R14320:14325 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 14343:14345 Kmin rel
+R14350:14353 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R14348:14349 prosa.classic.util.minmax <> Kmin.T2 var
+R14356:14359 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R14354:14355 prosa.classic.util.minmax <> Kmin.T2 var
+R14360:14363 Corelib.Init.Datatypes <> bool ind
+var 14379:14379 Kmin F
+R14384:14387 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R14382:14383 prosa.classic.util.minmax <> Kmin.T1 var
+R14388:14389 prosa.classic.util.minmax <> Kmin.T2 var
+def 14406:14417 <> seq_argmin_k
+R14423:14425 mathcomp.boot.seq <> seq abbrev
+R14427:14428 prosa.classic.util.minmax <> Kmin.T1 var
+binder 14420:14420 <> l:131
+R14435:14437 Corelib.Init.Datatypes <> nat ind
+binder 14432:14432 <> k:132
+R14452:14452 prosa.classic.util.minmax <> k:132 var
+R14457:14457 Corelib.Init.Datatypes <> S constr
+R14479:14488 prosa.classic.util.minmax <> seq_argmin def
+R14496:14496 prosa.classic.util.minmax <> l:131 var
+R14494:14494 prosa.classic.util.minmax <> Kmin.F var
+R14490:14492 prosa.classic.util.minmax <> Kmin.rel var
+R14502:14505 Corelib.Init.Datatypes <> Some constr
+R14549:14551 mathcomp.boot.seq <> rem def
+R14559:14559 prosa.classic.util.minmax <> l:131 var
+binder 14532:14544 <> l_without_min:135
+R14581:14584 mathcomp.boot.seq <> ::seq_scope:x_'::'_x not
+R14585:14596 prosa.classic.util.minmax <> seq_argmin_k:133 def
+R14598:14610 prosa.classic.util.minmax <> l_without_min:135 var
+R14628:14631 mathcomp.boot.seq <> ::seq_scope:'['_'::'_']' not
+R14644:14647 mathcomp.boot.seq <> ::seq_scope:'['_'::'_']' not
+prf 14663:14681 <> seq_argmin_k_exists
+binder 14699:14699 <> k:136
+binder 14701:14701 <> l:137
+binder 14703:14703 <> x:138
+R14721:14734 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R14717:14719 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R14716:14716 prosa.classic.util.minmax <> k:136 var
+R14742:14755 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R14736:14740 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R14735:14735 prosa.classic.util.minmax <> x:138 var
+R14741:14741 prosa.classic.util.minmax <> l:137 var
+R14772:14775 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R14756:14767 prosa.classic.util.minmax <> seq_argmin_k def
+R14769:14769 prosa.classic.util.minmax <> l:137 var
+R14771:14771 prosa.classic.util.minmax <> k:136 var
+R14776:14779 mathcomp.boot.seq <> ::seq_scope:'['_'::'_']' not
+R14878:14887 prosa.classic.util.minmax <> seq_argmin def
+R14893:14893 prosa.classic.util.minmax <> Kmin.F var
+R14889:14891 prosa.classic.util.minmax <> Kmin.rel var
+R14878:14887 prosa.classic.util.minmax <> seq_argmin def
+R14893:14893 prosa.classic.util.minmax <> Kmin.F var
+R14889:14891 prosa.classic.util.minmax <> Kmin.rel var
+R14969:14972 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R14951:14960 prosa.classic.util.minmax <> seq_argmin def
+R14966:14966 prosa.classic.util.minmax <> Kmin.F var
+R14962:14964 prosa.classic.util.minmax <> Kmin.rel var
+R14973:14976 Corelib.Init.Datatypes <> None constr
+R15022:15038 prosa.classic.util.minmax <> seq_argmin_exists thm
+R15022:15038 prosa.classic.util.minmax <> seq_argmin_exists thm
+R15075:15078 prosa.classic.util.minmax Kmin <> sec

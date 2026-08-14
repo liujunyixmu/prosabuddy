@@ -1,0 +1,1583 @@
+DIGEST f3cb27ac7882b55fb8e59d827a2557b4
+Fprosa.classic.analysis.global.parallel.bertogna_edf_theory
+R15:36 prosa.classic.util.all <> <> lib
+R54:91 prosa.classic.model.arrival.basic.task <> <> lib
+R93:129 prosa.classic.model.arrival.basic.job <> <> lib
+R131:176 prosa.classic.model.arrival.basic.task_arrival <> <> lib
+R178:205 prosa.classic.model.priority <> <> lib
+R223:266 prosa.classic.model.schedule.global.workload <> <> lib
+R268:317 prosa.classic.model.schedule.global.schedulability <> <> lib
+R334:382 prosa.classic.model.schedule.global.response_time <> <> lib
+R400:449 prosa.classic.model.schedule.global.basic.schedule <> <> lib
+R451:504 prosa.classic.model.schedule.global.basic.interference <> <> lib
+R521:570 prosa.classic.model.schedule.global.basic.platform <> <> lib
+R588:640 prosa.classic.analysis.global.parallel.workload_bound <> <> lib
+R657:717 prosa.classic.analysis.global.parallel.interference_bound_edf <> <> lib
+R749:757 mathcomp.boot.ssreflect <> <> lib
+R759:765 mathcomp.boot.ssrbool <> <> lib
+R767:772 mathcomp.boot.eqtype <> <> lib
+R774:779 mathcomp.boot.ssrnat <> <> lib
+R781:783 mathcomp.boot.seq <> <> lib
+R785:791 mathcomp.boot.fintype <> <> lib
+R793:797 mathcomp.boot.bigop <> <> lib
+R799:801 mathcomp.boot.div <> <> lib
+R803:806 mathcomp.boot.path <> <> lib
+mod 817:839 <> ResponseTimeAnalysisEDF
+R852:854 prosa.classic.model.arrival.basic.job Job <> mod
+R856:870 prosa.classic.model.arrival.basic.task SporadicTaskset <> mod
+R872:879 prosa.classic.model.schedule.global.basic.schedule Schedule <> mod
+R881:902 prosa.classic.model.schedule.global.basic.schedule ScheduleOfSporadicTask <> mod
+R904:911 prosa.classic.model.schedule.global.workload Workload <> mod
+R913:926 prosa.classic.model.schedule.global.schedulability Schedulability <> mod
+R928:939 prosa.classic.model.schedule.global.response_time ResponseTime <> mod
+R950:957 prosa.classic.model.priority Priority <> mod
+R959:969 prosa.classic.model.arrival.basic.task_arrival TaskArrival <> mod
+R971:983 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound <> mod
+R985:1004 prosa.classic.analysis.global.parallel.interference_bound_edf InterferenceBoundEDF <> mod
+R1015:1026 prosa.classic.model.schedule.global.basic.interference Interference <> mod
+R1028:1035 prosa.classic.model.schedule.global.basic.platform Platform <> mod
+sec 1391:1407 ResponseTimeAnalysisEDF ResponseTimeBound
+var  1424:1436 ResponseTimeAnalysisEDF.ResponseTimeBound sporadic_task
+R1439:1444 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1461:1469 ResponseTimeAnalysisEDF.ResponseTimeBound task_cost
+R1485:1488 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1472:1484 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sporadic_task var
+R1489:1492 prosa.classic.model.time Time time def
+var 1508:1518 ResponseTimeAnalysisEDF.ResponseTimeBound task_period
+R1534:1537 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1521:1533 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sporadic_task var
+R1538:1541 prosa.classic.model.time Time time def
+var 1557:1569 ResponseTimeAnalysisEDF.ResponseTimeBound task_deadline
+R1585:1588 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1572:1584 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sporadic_task var
+R1589:1592 prosa.classic.model.time Time time def
+var  1613:1615 ResponseTimeAnalysisEDF.ResponseTimeBound Job
+R1618:1623 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1640:1650 ResponseTimeAnalysisEDF.ResponseTimeBound job_arrival
+R1656:1659 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1653:1655 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Job var
+R1660:1663 prosa.classic.model.time Time time def
+var 1679:1686 ResponseTimeAnalysisEDF.ResponseTimeBound job_cost
+R1692:1695 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1689:1691 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Job var
+R1696:1699 prosa.classic.model.time Time time def
+var 1715:1726 ResponseTimeAnalysisEDF.ResponseTimeBound job_deadline
+R1732:1735 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1729:1731 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Job var
+R1736:1739 prosa.classic.model.time Time time def
+var 1755:1762 ResponseTimeAnalysisEDF.ResponseTimeBound job_task
+R1768:1771 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1765:1767 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Job var
+R1772:1784 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sporadic_task var
+var 1850:1856 ResponseTimeAnalysisEDF.ResponseTimeBound arr_seq
+R1859:1874 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R1876:1878 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Job var
+var 1972:1987 ResponseTimeAnalysisEDF.ResponseTimeBound H_sporadic_tasks
+R1996:2014 prosa.classic.model.arrival.basic.task_arrival TaskArrival sporadic_task_model def
+R2049:2055 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.arr_seq var
+R2040:2047 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_task var
+R2028:2038 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R2016:2026 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_period var
+var 2073:2094 ResponseTimeAnalysisEDF.ResponseTimeBound H_valid_job_parameters
+binder 2110:2110 <> j:21
+R2141:2152 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2121:2130 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R2140:2140 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> j:21 var
+R2132:2138 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.arr_seq var
+R2153:2170 prosa.classic.model.arrival.basic.job Job valid_sporadic_job def
+R2227:2227 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> j:21 var
+R2218:2225 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_task var
+R2205:2216 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_deadline var
+R2196:2203 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_cost var
+R2182:2194 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_deadline var
+R2172:2180 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_cost var
+var 2361:2362 ResponseTimeAnalysisEDF.ResponseTimeBound ts
+R2365:2374 prosa.classic.model.arrival.basic.task SporadicTaskset taskset_of def
+R2376:2388 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sporadic_task var
+var 2406:2428 ResponseTimeAnalysisEDF.ResponseTimeBound H_valid_task_parameters
+R2437:2458 prosa.classic.model.arrival.basic.task SporadicTaskset valid_sporadic_taskset def
+R2496:2497 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.ts var
+R2482:2494 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_deadline var
+R2470:2480 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_period var
+R2460:2468 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_cost var
+var 2515:2537 ResponseTimeAnalysisEDF.ResponseTimeBound H_constrained_deadlines
+binder 2553:2555 <> tsk:28
+R2568:2571 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2561:2565 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R2558:2560 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk:28 var
+R2566:2567 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.ts var
+R2589:2592 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R2572:2584 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_deadline var
+R2586:2588 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk:28 var
+R2593:2603 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_period var
+R2605:2607 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk:28 var
+var 2706:2728 ResponseTimeAnalysisEDF.ResponseTimeBound H_all_jobs_from_taskset
+binder 2744:2744 <> j:31
+R2767:2770 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2747:2756 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R2766:2766 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> j:31 var
+R2758:2764 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.arr_seq var
+R2781:2785 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R2771:2778 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_task var
+R2780:2780 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> j:31 var
+R2786:2787 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.ts var
+var 2854:2861 ResponseTimeAnalysisEDF.ResponseTimeBound num_cpus
+R2864:2866 Corelib.Init.Datatypes <> nat ind
+var 2882:2886 ResponseTimeAnalysisEDF.ResponseTimeBound sched
+R2889:2896 prosa.classic.model.schedule.global.basic.schedule Schedule schedule def
+R2902:2909 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.num_cpus var
+R2898:2900 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Job var
+var 2927:2959 ResponseTimeAnalysisEDF.ResponseTimeBound H_jobs_come_from_arrival_sequence
+R2968:2998 prosa.classic.model.schedule.global.basic.schedule Schedule jobs_come_from_arrival_sequence def
+R3006:3012 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.arr_seq var
+R3000:3004 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sched var
+var 3137:3165 ResponseTimeAnalysisEDF.ResponseTimeBound H_jobs_must_arrive_to_execute
+R3174:3200 prosa.classic.model.schedule.global.basic.schedule Schedule jobs_must_arrive_to_execute def
+R3214:3218 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sched var
+R3202:3212 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+var 3236:3264 ResponseTimeAnalysisEDF.ResponseTimeBound H_completed_jobs_dont_execute
+R3273:3299 prosa.classic.model.schedule.global.basic.schedule Schedule completed_jobs_dont_execute def
+R3310:3314 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sched var
+R3301:3308 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_cost var
+var 3392:3409 ResponseTimeAnalysisEDF.ResponseTimeBound H_at_least_one_cpu
+R3420:3422 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R3412:3419 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.num_cpus var
+var 3512:3528 ResponseTimeAnalysisEDF.ResponseTimeBound H_work_conserving
+R3531:3545 prosa.classic.model.schedule.global.basic.platform Platform work_conserving def
+R3576:3580 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sched var
+R3568:3574 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.arr_seq var
+R3559:3566 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_cost var
+R3547:3557 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+var 3598:3609 ResponseTimeAnalysisEDF.ResponseTimeBound H_edf_policy
+R3612:3631 prosa.classic.model.schedule.global.basic.platform Platform respects_JLFP_policy def
+R3719:3721 prosa.classic.model.priority Priority EDF def
+R3735:3746 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_deadline var
+R3723:3733 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R3662:3666 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sched var
+R3654:3660 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.arr_seq var
+R3645:3652 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_cost var
+R3633:3643 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+var 3837:3864 ResponseTimeAnalysisEDF.ResponseTimeBound no_deadline_is_missed_by_tsk
+R3872:3884 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sporadic_task var
+binder 3867:3869 <> tsk:50
+R3896:3918 prosa.classic.model.schedule.global.schedulability Schedulability task_misses_no_deadline def
+R3977:3979 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk:50 var
+R3971:3975 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sched var
+R3963:3969 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.arr_seq var
+R3954:3961 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_task var
+R3941:3952 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_deadline var
+R3932:3939 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_cost var
+R3920:3930 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+var 3990:4013 ResponseTimeAnalysisEDF.ResponseTimeBound response_time_bounded_by
+R4021:4033 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sporadic_task var
+binder 4016:4018 <> tsk:51
+R4045:4074 prosa.classic.model.schedule.global.response_time ResponseTime is_response_time_bound_of_task def
+R4120:4122 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk:51 var
+R4114:4118 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sched var
+R4106:4112 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.arr_seq var
+R4097:4104 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_task var
+R4088:4095 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_cost var
+R4076:4086 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+var 4247:4269 ResponseTimeAnalysisEDF.ResponseTimeBound task_with_response_time
+R4288:4290 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R4275:4287 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sporadic_task var
+R4291:4294 prosa.classic.model.time Time time def
+var 4316:4324 ResponseTimeAnalysisEDF.ResponseTimeBound rt_bounds
+R4327:4329 mathcomp.boot.seq <> seq abbrev
+R4331:4353 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_with_response_time var
+var 4419:4448 ResponseTimeAnalysisEDF.ResponseTimeBound H_rt_bounds_contains_all_tasks
+R4467:4469 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4451:4456 mathcomp.boot.seq <> unzip1 def
+R4458:4466 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.rt_bounds var
+R4470:4471 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.ts var
+var 4558:4558 ResponseTimeAnalysisEDF.ResponseTimeBound I
+R4566:4578 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sporadic_task var
+binder 4561:4563 <> tsk:56
+R4589:4592 prosa.classic.model.time Time time def
+binder 4582:4586 <> delta:57
+R4604:4631 prosa.classic.analysis.global.parallel.interference_bound_edf InterferenceBoundEDF total_interference_bound_edf def
+R4683:4687 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> delta:57 var
+R4673:4681 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.rt_bounds var
+R4669:4671 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk:56 var
+R4655:4667 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_deadline var
+R4643:4653 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_period var
+R4633:4641 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_cost var
+var 4705:4734 ResponseTimeAnalysisEDF.ResponseTimeBound H_response_time_is_fixed_point
+binder 4751:4753 <> tsk:58
+binder 4755:4755 <> R:59
+R4788:4799 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4774:4778 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R4766:4766 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R4770:4771 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R4773:4773 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R4767:4769 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk:58 var
+R4772:4772 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> R:59 var
+R4779:4787 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.rt_bounds var
+R4801:4803 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4800:4800 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> R:59 var
+R4817:4819 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R4804:4812 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_cost var
+R4814:4816 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk:58 var
+R4820:4828 prosa.classic.util.div_mod <> div_floor def
+R4831:4831 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.I var
+R4833:4835 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk:58 var
+R4837:4837 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> R:59 var
+R4840:4847 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.num_cpus var
+var 4923:4947 ResponseTimeAnalysisEDF.ResponseTimeBound H_tasks_miss_no_deadlines
+binder 4963:4971 <> tsk_other:62
+binder 4973:4973 <> R:63
+R5012:5015 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4998:5002 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R4984:4984 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R4994:4995 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R4997:4997 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R4985:4993 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk_other:62 var
+R4996:4996 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> R:63 var
+R5003:5011 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.rt_bounds var
+R5017:5020 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R5016:5016 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> R:63 var
+R5021:5033 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_deadline var
+R5035:5043 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk_other:62 var
+sec 5150:5155 ResponseTimeAnalysisEDF.ResponseTimeBound Lemmas
+var 5259:5261 ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas tsk
+R5264:5276 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sporadic_task var
+var 5294:5294 ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas R
+R5297:5300 prosa.classic.model.time Time time def
+var 5320:5339 ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas H_tsk_R_in_rt_bounds
+R5350:5354 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R5342:5342 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5346:5347 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5349:5349 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5343:5345 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.tsk var
+R5348:5348 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+R5355:5363 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.rt_bounds var
+var 5421:5421 ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas j
+R5424:5426 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Job var
+var 5446:5456 ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas H_j_arrives
+R5459:5468 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R5478:5478 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R5470:5476 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.arr_seq var
+var 5498:5509 ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas H_job_of_tsk
+R5522:5524 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5512:5519 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_task var
+R5521:5521 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R5525:5527 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.tsk var
+var 5608:5624 ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas H_j_not_completed
+R5627:5629 Corelib.ssr.ssrbool <> ::bool_scope:'~~'_x not
+R5630:5638 prosa.classic.model.schedule.global.basic.schedule Schedule completed def
+R5671:5673 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R5658:5668 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R5670:5670 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R5674:5674 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+R5655:5655 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R5649:5653 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sched var
+R5640:5647 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_cost var
+var 5780:5816 ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas H_all_previous_jobs_completed_on_time
+binder 5835:5841 <> j_other:80
+binder 5843:5851 <> tsk_other:81
+binder 5853:5859 <> R_other:82
+R5898:5911 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5872:5881 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R5891:5897 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> j_other:80 var
+R5883:5889 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.arr_seq var
+R5940:5953 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5928:5930 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5912:5919 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_task var
+R5921:5927 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> j_other:80 var
+R5931:5939 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk_other:81 var
+R5988:6001 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5974:5978 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R5954:5954 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5964:5965 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5973:5973 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5955:5963 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk_other:81 var
+R5966:5972 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> R_other:82 var
+R5979:5987 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.rt_bounds var
+R6051:6064 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6031:6033 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R6021:6023 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6002:6012 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R6014:6020 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> j_other:80 var
+R6024:6030 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> R_other:82 var
+R6047:6049 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6034:6044 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R6046:6046 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R6050:6050 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+R6065:6073 prosa.classic.model.schedule.global.basic.schedule Schedule completed def
+R6118:6120 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6099:6109 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R6111:6117 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> j_other:80 var
+R6121:6127 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> R_other:82 var
+R6090:6096 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> j_other:80 var
+R6084:6088 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sched var
+R6075:6082 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_cost var
+var 6223:6223 ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas x
+R6237:6249 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sporadic_task var
+binder 6226:6234 <> tsk_other:85
+R6263:6279 prosa.classic.model.schedule.global.basic.interference Interference task_interference def
+R6356:6366 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R6368:6368 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R6385:6387 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6372:6382 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R6384:6384 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R6388:6388 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+R6345:6353 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk_other:85 var
+R6317:6317 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R6311:6315 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sched var
+R6302:6309 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_task var
+R6293:6300 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_cost var
+R6281:6291 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+var 6482:6482 ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas X
+R6487:6504 prosa.classic.model.schedule.global.basic.interference Interference total_interference def
+R6536:6546 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R6548:6548 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R6565:6567 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6552:6562 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R6564:6564 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R6568:6568 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+R6533:6533 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R6527:6531 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sched var
+R6518:6525 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_cost var
+R6506:6516 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+var 6644:6657 ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas workload_bound
+R6671:6683 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sporadic_task var
+binder 6660:6668 <> tsk_other:86
+R6696:6699 prosa.classic.model.time Time time def
+binder 6687:6693 <> R_other:87
+R6713:6713 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound W def
+R6755:6755 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+R6747:6753 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> R_other:87 var
+R6737:6745 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk_other:86 var
+R6725:6735 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_period var
+R6715:6723 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_cost var
+var 6816:6833 ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas edf_specific_bound
+R6847:6859 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sporadic_task var
+binder 6836:6844 <> tsk_other:88
+R6872:6875 prosa.classic.model.time Time time def
+binder 6863:6869 <> R_other:89
+R6889:6919 prosa.classic.analysis.global.parallel.interference_bound_edf InterferenceBoundEDF edf_specific_interference_bound def
+R6971:6977 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> R_other:89 var
+R6961:6969 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk_other:88 var
+R6957:6959 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.tsk var
+R6943:6955 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_deadline var
+R6931:6941 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_period var
+R6921:6929 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_cost var
+var 7051:7068 ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas interference_bound
+R7082:7094 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sporadic_task var
+binder 7071:7079 <> tsk_other:90
+R7107:7110 prosa.classic.model.time Time time def
+binder 7098:7104 <> R_other:91
+R7124:7145 prosa.classic.analysis.global.parallel.interference_bound_edf InterferenceBoundEDF interference_bound_edf def
+R7189:7189 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7199:7200 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7208:7208 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7190:7198 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk_other:90 var
+R7201:7207 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> R_other:91 var
+R7187:7187 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+R7183:7185 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.tsk var
+R7169:7181 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_deadline var
+R7157:7167 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_period var
+R7147:7155 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_cost var
+var 7290:7299 ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas other_task
+R7304:7317 prosa.classic.model.priority Priority different_task def
+R7319:7321 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.tsk var
+var 7419:7429 ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas other_tasks
+R7442:7446 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R7456:7459 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R7462:7464 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R7485:7485 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+binder 7447:7455 <> tsk_other:92
+R7465:7474 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.other_task var
+R7476:7484 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk_other:92 var
+R7460:7461 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.ts var
+sec 7563:7589 ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas LemmasAboutInterferingTasks
+var 7761:7769 ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks tsk_other
+R7772:7784 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sporadic_task var
+var 7804:7810 ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks R_other
+R7813:7816 prosa.classic.model.time Time time def
+var 7838:7865 ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks H_response_time_of_tsk_other
+R7888:7892 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R7868:7868 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7878:7879 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7887:7887 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7869:7877 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.tsk_other var
+R7880:7886 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.R_other var
+R7893:7901 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.rt_bounds var
+prf 7974:8001 ResponseTimeAnalysisEDF bertogna_edf_tsk_other_in_ts
+R8013:8017 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R8004:8012 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.tsk_other var
+R8018:8019 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.ts var
+R8058:8064 prosa.classic.util.seqset <> set_mem thm
+R8067:8096 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.H_rt_bounds_contains_all_tasks var
+R8105:8108 mathcomp.boot.seq <> mapP thm
+R8118:8118 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R8128:8129 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R8137:8137 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R8119:8127 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.tsk_other var
+R8130:8136 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.R_other var
+R8058:8064 prosa.classic.util.seqset <> set_mem thm
+R8058:8064 prosa.classic.util.seqset <> set_mem thm
+R8067:8096 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.H_rt_bounds_contains_all_tasks var
+R8067:8096 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.H_rt_bounds_contains_all_tasks var
+R8105:8108 mathcomp.boot.seq <> mapP thm
+R8118:8118 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R8128:8129 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R8137:8137 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R8119:8127 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.tsk_other var
+R8130:8136 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.R_other var
+prf 8234:8261 ResponseTimeAnalysisEDF bertogna_edf_R_other_ge_cost
+R8282:8285 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R8286:8294 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_cost var
+R8296:8304 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.tsk_other var
+R8275:8281 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.R_other var
+R8344:8350 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.R_other var
+R8353:8382 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.H_response_time_is_fixed_point var
+R8384:8392 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.tsk_other var
+R8423:8430 mathcomp.boot.ssrnat <> leq_addr thm
+R8353:8382 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.H_response_time_is_fixed_point var
+R8384:8392 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.tsk_other var
+R8344:8350 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.R_other var
+R8344:8350 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.R_other var
+R8353:8382 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.H_response_time_is_fixed_point var
+R8384:8392 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.tsk_other var
+R8423:8430 mathcomp.boot.ssrnat <> leq_addr thm
+prf 8628:8668 ResponseTimeAnalysisEDF bertogna_edf_workload_bounds_interference
+R8693:8696 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R8682:8682 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.x var
+R8684:8692 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.tsk_other var
+R8697:8710 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.workload_bound var
+R8712:8720 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.tsk_other var
+R8722:8728 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.R_other var
+R8763:8780 prosa.classic.model.arrival.basic.job Job valid_sporadic_job def
+R9096:9096 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> x vardef
+R9099:9115 prosa.classic.model.schedule.global.basic.interference Interference task_interference def
+R9141:9168 prosa.classic.analysis.global.parallel.bertogna_edf_theory ResponseTimeAnalysisEDF bertogna_edf_tsk_other_in_ts thm
+R9208:9215 prosa.classic.model.schedule.global.workload Workload workload def
+R9284:9294 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R9296:9296 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R9313:9315 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R9300:9310 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R9312:9312 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R9316:9316 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+R9232:9240 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.tsk_other var
+R9226:9230 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sched var
+R9217:9224 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_task var
+R9187:9195 mathcomp.boot.ssrnat <> leq_trans thm
+R9345:9373 prosa.classic.model.schedule.global.basic.interference Interference task_interference_le_workload thm
+R9208:9215 prosa.classic.model.schedule.global.workload Workload workload def
+R9284:9294 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R9296:9296 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R9313:9315 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R9300:9310 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R9312:9312 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R9316:9316 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+R9232:9240 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.tsk_other var
+R9226:9230 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sched var
+R9217:9224 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_task var
+R9187:9195 mathcomp.boot.ssrnat <> leq_trans thm
+R9345:9373 prosa.classic.model.schedule.global.basic.interference Interference task_interference_le_workload thm
+R9400:9420 prosa.classic.analysis.global.parallel.workload_bound WorkloadBound workload_bounded_by_W thm
+R9523:9527 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sched var
+R9513:9519 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.arr_seq var
+R9500:9511 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_deadline var
+R9491:9498 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_task var
+R9482:9489 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_cost var
+R9470:9480 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R9444:9456 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_deadline var
+R9432:9442 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_period var
+R9422:9430 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_cost var
+R9691:9699 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.tsk_other var
+R9691:9699 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.tsk_other var
+prf 9805:9837 ResponseTimeAnalysisEDF bertogna_edf_specific_bound_holds
+R9862:9865 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R9851:9851 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.x var
+R9853:9861 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.tsk_other var
+R9866:9883 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.edf_specific_bound var
+R9885:9893 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.tsk_other var
+R9895:9901 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.R_other var
+R9950:9954 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R9947:9949 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.tsk var
+R9955:9956 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.ts var
+R10008:10012 mathcomp.boot.seq <> map_f thm
+R10015:10034 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.H_tsk_R_in_rt_bounds var
+R9977:9981 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R9974:9976 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.tsk var
+R9982:9987 mathcomp.boot.seq <> unzip1 def
+R9989:9997 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.rt_bounds var
+R10015:10034 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.H_tsk_R_in_rt_bounds var
+R10015:10034 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.H_tsk_R_in_rt_bounds var
+R10008:10012 mathcomp.boot.seq <> map_f thm
+R10052:10081 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.H_rt_bounds_contains_all_tasks var
+R10052:10081 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.H_rt_bounds_contains_all_tasks var
+R10052:10081 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.H_rt_bounds_contains_all_tasks var
+R10129:10133 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R10120:10128 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.tsk_other var
+R10134:10135 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.ts var
+R10197:10201 mathcomp.boot.seq <> map_f thm
+R10204:10231 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.H_response_time_of_tsk_other var
+R10166:10170 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R10157:10165 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.tsk_other var
+R10171:10176 mathcomp.boot.seq <> unzip1 def
+R10178:10186 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.rt_bounds var
+R10204:10231 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.H_response_time_of_tsk_other var
+R10204:10231 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.H_response_time_of_tsk_other var
+R10197:10201 mathcomp.boot.seq <> map_f thm
+R10247:10276 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.H_rt_bounds_contains_all_tasks var
+R10247:10276 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.H_rt_bounds_contains_all_tasks var
+R10247:10276 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.H_rt_bounds_contains_all_tasks var
+R10367:10378 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_deadline var
+R10448:10454 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.arr_seq var
+R10519:10520 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.ts var
+R10302:10343 prosa.classic.analysis.global.parallel.interference_bound_edf InterferenceBoundEDF interference_bound_edf_bounds_interference thm
+R10367:10378 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_deadline var
+R10448:10454 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.arr_seq var
+R10519:10520 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.ts var
+R10302:10343 prosa.classic.analysis.global.parallel.interference_bound_edf InterferenceBoundEDF interference_bound_edf_bounds_interference thm
+R10539:10563 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.H_tasks_miss_no_deadlines var
+R10539:10563 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.H_tasks_miss_no_deadlines var
+R10577:10601 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.H_tasks_miss_no_deadlines var
+R10577:10601 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.H_tasks_miss_no_deadlines var
+R10664:10700 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.H_all_previous_jobs_completed_on_time var
+R10706:10714 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.tsk_other var
+R10716:10722 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.R_other var
+R10747:10774 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.H_response_time_of_tsk_other var
+R10747:10774 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.H_response_time_of_tsk_other var
+R10716:10722 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.R_other var
+R10706:10714 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks.tsk_other var
+R10664:10700 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.H_all_previous_jobs_completed_on_time var
+R10831:10857 prosa.classic.analysis.global.parallel.bertogna_edf_theory ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.LemmasAboutInterferingTasks <> sec
+sec 10949:10969 ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas DerivingContradiction
+prf 11134:11167 ResponseTimeAnalysisEDF bertogna_edf_too_much_interference
+R11172:11175 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R11193:11195 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R11177:11179 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R11176:11176 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+R11180:11188 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_cost var
+R11190:11192 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.tsk var
+R11171:11171 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.X var
+R11478:11486 prosa.classic.model.schedule.global.basic.schedule Schedule completed def
+R11489:11506 prosa.classic.model.arrival.basic.job Job valid_sporadic_job def
+R11529:11529 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> X vardef
+R11532:11549 prosa.classic.model.schedule.global.basic.interference Interference total_interference def
+R11560:11564 mathcomp.boot.ssrnat <> addn1 thm
+R11560:11564 mathcomp.boot.ssrnat <> addn1 thm
+R11560:11564 mathcomp.boot.ssrnat <> addn1 thm
+R11585:11593 mathcomp.boot.ssrnat <> ltn_add2r thm
+R11596:11604 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_cost var
+R11606:11608 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.tsk var
+R11585:11593 mathcomp.boot.ssrnat <> ltn_add2r thm
+R11596:11604 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_cost var
+R11606:11608 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.tsk var
+R11585:11593 mathcomp.boot.ssrnat <> ltn_add2r thm
+R11596:11604 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_cost var
+R11606:11608 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.tsk var
+R11629:11633 prosa.classic.util.nat <> subh1 thm
+R11653:11653 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+R11660:11662 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.tsk var
+R11668:11675 mathcomp.boot.ssrnat <> leq_addr thm
+R11629:11633 prosa.classic.util.nat <> subh1 thm
+R11629:11633 prosa.classic.util.nat <> subh1 thm
+R11660:11662 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.tsk var
+R11653:11653 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+R11653:11653 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+R11660:11662 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.tsk var
+R11668:11675 mathcomp.boot.ssrnat <> leq_addr thm
+R11668:11675 mathcomp.boot.ssrnat <> leq_addr thm
+R11695:11700 mathcomp.boot.ssrnat <> addnBA thm
+R11705:11709 mathcomp.boot.ssrnat <> subnn thm
+R11711:11715 mathcomp.boot.ssrnat <> addn0 thm
+R11695:11700 mathcomp.boot.ssrnat <> addnBA thm
+R11695:11700 mathcomp.boot.ssrnat <> addnBA thm
+R11705:11709 mathcomp.boot.ssrnat <> subnn thm
+R11705:11709 mathcomp.boot.ssrnat <> subnn thm
+R11711:11715 mathcomp.boot.ssrnat <> addn0 thm
+R11711:11715 mathcomp.boot.ssrnat <> addn0 thm
+R11746:11749 Corelib.ssr.ssrbool <> negP thm
+R11778:11783 mathcomp.boot.ssrnat <> ltnNge thm
+R11778:11783 mathcomp.boot.ssrnat <> ltnNge thm
+R11778:11783 mathcomp.boot.ssrnat <> ltnNge thm
+R11836:11836 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R11961:11999 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R11837:11842 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R11856:11859 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R11861:11863 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R11881:11919 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R11843:11853 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R11855:11855 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R11877:11879 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R11864:11874 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R11876:11876 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R11880:11880 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+binder 11860:11860 <> t:99
+binder 11860:11860 <> t:100
+binder 11860:11860 <> t:101
+R11920:11929 prosa.classic.model.schedule.global.basic.schedule Schedule backlogged def
+R11960:11960 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> t:99 var
+R11958:11958 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R11952:11956 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sched var
+R11943:11950 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_cost var
+R11931:11941 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R12000:12006 prosa.classic.model.schedule.global.basic.schedule Schedule service def
+R12030:12032 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R12017:12027 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R12029:12029 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R12033:12033 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+R12014:12014 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R12008:12012 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sched var
+R11811:11823 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R11836:11836 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R11961:11999 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R11837:11842 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R11856:11859 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R11861:11863 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R11881:11919 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R11843:11853 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R11855:11855 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R11877:11879 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R11864:11874 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R11876:11876 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R11880:11880 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+binder 11860:11860 <> t:102
+binder 11860:11860 <> t:103
+binder 11860:11860 <> t:104
+R11920:11929 prosa.classic.model.schedule.global.basic.schedule Schedule backlogged def
+R11960:11960 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> t:102 var
+R11958:11958 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R11952:11956 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sched var
+R11943:11950 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_cost var
+R11931:11941 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R12000:12006 prosa.classic.model.schedule.global.basic.schedule Schedule service def
+R12030:12032 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R12017:12027 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R12029:12029 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R12033:12033 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+R12014:12014 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R12008:12012 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sched var
+R11811:11823 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R12079:12083 mathcomp.boot.ssrnat <> addn1 thm
+R12086:12090 mathcomp.boot.ssrnat <> addnA thm
+R12092:12100 mathcomp.boot.ssrnat <> leq_add2l thm
+R12102:12106 mathcomp.boot.ssrnat <> addn1 thm
+R12079:12083 mathcomp.boot.ssrnat <> addn1 thm
+R12079:12083 mathcomp.boot.ssrnat <> addn1 thm
+R12086:12090 mathcomp.boot.ssrnat <> addnA thm
+R12086:12090 mathcomp.boot.ssrnat <> addnA thm
+R12092:12100 mathcomp.boot.ssrnat <> leq_add2l thm
+R12092:12100 mathcomp.boot.ssrnat <> leq_add2l thm
+R12102:12106 mathcomp.boot.ssrnat <> addn1 thm
+R12102:12106 mathcomp.boot.ssrnat <> addn1 thm
+R12146:12153 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_cost var
+R12155:12155 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R12125:12133 mathcomp.boot.ssrnat <> leq_trans thm
+R12146:12153 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_cost var
+R12155:12155 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R12125:12133 mathcomp.boot.ssrnat <> leq_trans thm
+R12206:12206 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R12208:12218 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.H_j_arrives var
+R12206:12206 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R12208:12218 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.H_j_arrives var
+R12269:12275 prosa.classic.model.schedule.global.basic.schedule Schedule service def
+R12286:12325 prosa.classic.model.schedule.global.basic.schedule Schedule service_before_arrival_eq_service_during thm
+R12286:12325 prosa.classic.model.schedule.global.basic.schedule Schedule service_before_arrival_eq_service_during thm
+R12286:12325 prosa.classic.model.schedule.global.basic.schedule Schedule service_before_arrival_eq_service_during thm
+R12348:12356 mathcomp.boot.bigop <> big_split thm
+R12348:12356 mathcomp.boot.bigop <> big_split thm
+R12348:12356 mathcomp.boot.bigop <> big_split thm
+R12397:12402 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R12416:12419 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R12421:12423 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R12441:12442 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R12403:12413 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R12415:12415 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R12437:12439 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R12424:12434 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R12436:12436 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R12440:12440 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+binder 12420:12420 <> i:105
+binder 12420:12420 <> i:106
+binder 12420:12420 <> i:107
+R12376:12384 mathcomp.boot.ssrnat <> leq_trans thm
+R12474:12486 mathcomp.boot.bigop <> big_const_nat thm
+R12488:12496 mathcomp.boot.ssrnat <> iter_addn thm
+R12498:12502 mathcomp.boot.ssrnat <> mul1n thm
+R12504:12508 mathcomp.boot.ssrnat <> addn0 thm
+R12510:12514 mathcomp.boot.ssrnat <> addKn thm
+R12397:12402 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R12416:12419 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R12421:12423 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R12441:12442 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_')'_x not
+R12403:12413 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R12415:12415 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R12437:12439 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R12424:12434 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R12436:12436 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R12440:12440 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+binder 12420:12420 <> i:108
+binder 12420:12420 <> i:109
+binder 12420:12420 <> i:110
+R12376:12384 mathcomp.boot.ssrnat <> leq_trans thm
+R12474:12486 mathcomp.boot.bigop <> big_const_nat thm
+R12474:12486 mathcomp.boot.bigop <> big_const_nat thm
+R12488:12496 mathcomp.boot.ssrnat <> iter_addn thm
+R12488:12496 mathcomp.boot.ssrnat <> iter_addn thm
+R12498:12502 mathcomp.boot.ssrnat <> mul1n thm
+R12498:12502 mathcomp.boot.ssrnat <> mul1n thm
+R12504:12508 mathcomp.boot.ssrnat <> addn0 thm
+R12504:12508 mathcomp.boot.ssrnat <> addn0 thm
+R12510:12514 mathcomp.boot.ssrnat <> addKn thm
+R12510:12514 mathcomp.boot.ssrnat <> addKn thm
+R12533:12544 mathcomp.boot.bigop <> big_nat_cond thm
+R12547:12552 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R12554:12557 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R12559:12561 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R12563:12565 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R12570:12571 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+binder 12558:12558 <> pat:111
+R12566:12569 Corelib.Init.Datatypes <> true constr
+R12574:12585 mathcomp.boot.bigop <> big_nat_cond thm
+R12533:12544 mathcomp.boot.bigop <> big_nat_cond thm
+R12533:12544 mathcomp.boot.bigop <> big_nat_cond thm
+R12574:12585 mathcomp.boot.bigop <> big_nat_cond thm
+R12547:12552 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R12554:12557 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R12559:12561 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R12563:12565 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R12570:12571 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+binder 12558:12558 <> pat:112
+R12566:12569 Corelib.Init.Datatypes <> true constr
+R12547:12552 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R12554:12557 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R12559:12561 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R12563:12565 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R12570:12571 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+binder 12558:12558 <> pat:113
+R12566:12569 Corelib.Init.Datatypes <> true constr
+R12574:12585 mathcomp.boot.bigop <> big_nat_cond thm
+R12602:12608 mathcomp.boot.bigop <> leq_sum thm
+R12602:12608 mathcomp.boot.bigop <> leq_sum thm
+R12622:12625 Corelib.ssr.ssrbool <> andP thm
+R12629:12632 Corelib.ssr.ssrbool <> andP thm
+R12666:12675 prosa.classic.model.schedule.global.basic.schedule Schedule backlogged def
+R12704:12704 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R12698:12702 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sched var
+R12689:12696 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_cost var
+R12677:12687 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R12747:12751 mathcomp.boot.ssrnat <> addn1 thm
+R12753:12757 mathcomp.boot.ssrnat <> addnC thm
+R12766:12772 mathcomp.boot.ssrnat <> leq_add thm
+R12666:12675 prosa.classic.model.schedule.global.basic.schedule Schedule backlogged def
+R12704:12704 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R12698:12702 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sched var
+R12689:12696 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_cost var
+R12677:12687 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R12747:12751 mathcomp.boot.ssrnat <> addn1 thm
+R12747:12751 mathcomp.boot.ssrnat <> addn1 thm
+R12753:12757 mathcomp.boot.ssrnat <> addnC thm
+R12753:12757 mathcomp.boot.ssrnat <> addnC thm
+R12766:12772 mathcomp.boot.ssrnat <> leq_add thm
+R12789:12793 Corelib.ssr.ssrbool <> negbT thm
+R12789:12793 Corelib.ssr.ssrbool <> negbT thm
+R12820:12824 mathcomp.boot.ssrnat <> add0n thm
+R12826:12829 mathcomp.boot.ssrnat <> lt0n thm
+R12832:12855 prosa.classic.model.schedule.global.basic.schedule Schedule not_scheduled_no_service thm
+R12857:12861 Corelib.ssr.ssrbool <> negbK thm
+R12820:12824 mathcomp.boot.ssrnat <> add0n thm
+R12820:12824 mathcomp.boot.ssrnat <> add0n thm
+R12826:12829 mathcomp.boot.ssrnat <> lt0n thm
+R12826:12829 mathcomp.boot.ssrnat <> lt0n thm
+R12832:12855 prosa.classic.model.schedule.global.basic.schedule Schedule not_scheduled_no_service thm
+R12832:12855 prosa.classic.model.schedule.global.basic.schedule Schedule not_scheduled_no_service thm
+R12857:12861 Corelib.ssr.ssrbool <> negbK thm
+R12857:12861 Corelib.ssr.ssrbool <> negbK thm
+R12881:12890 prosa.classic.model.schedule.global.basic.schedule Schedule backlogged def
+R12892:12899 Corelib.ssr.ssrbool <> negb_and thm
+R12901:12905 Corelib.ssr.ssrbool <> negbK thm
+R12881:12890 prosa.classic.model.schedule.global.basic.schedule Schedule backlogged def
+R12881:12890 prosa.classic.model.schedule.global.basic.schedule Schedule backlogged def
+R12892:12899 Corelib.ssr.ssrbool <> negb_and thm
+R12892:12899 Corelib.ssr.ssrbool <> negb_and thm
+R12901:12905 Corelib.ssr.ssrbool <> negbK thm
+R12901:12905 Corelib.ssr.ssrbool <> negbK thm
+R12939:12941 Corelib.ssr.ssrbool <> orP thm
+R12945:12948 Corelib.ssr.ssrbool <> negP thm
+R13027:13033 prosa.classic.model.schedule.global.basic.schedule Schedule pending def
+R13042:13045 Corelib.ssr.ssrbool <> andP thm
+R13042:13045 Corelib.ssr.ssrbool <> andP thm
+R13084:13087 Corelib.ssr.ssrbool <> negP thm
+R13084:13087 Corelib.ssr.ssrbool <> negP thm
+R13139:13158 prosa.classic.model.schedule.global.basic.schedule Schedule completion_monotonic thm
+R13196:13199 mathcomp.boot.ssrnat <> ltnW thm
+R13139:13158 prosa.classic.model.schedule.global.basic.schedule Schedule completion_monotonic thm
+R13196:13199 mathcomp.boot.ssrnat <> ltnW thm
+prf 13612:13648 ResponseTimeAnalysisEDF bertogna_edf_interference_on_all_cpus
+R13695:13697 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13660:13665 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R13671:13674 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R13686:13687 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R13675:13685 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.other_tasks var
+binder 13666:13670 <> tsk_k:114
+binder 13666:13670 <> tsk_k:115
+binder 13666:13670 <> tsk_k:116
+R13688:13688 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.x var
+R13690:13694 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk_k:114 var
+R13699:13701 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R13698:13698 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.X var
+R13702:13709 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.num_cpus var
+R14286:14304 prosa.classic.model.arrival.basic.task_arrival TaskArrival sporadic_task_model def
+R14327:14327 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> x vardef
+R14330:14330 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> X vardef
+R14333:14350 prosa.classic.model.schedule.global.basic.interference Interference total_interference def
+R14353:14369 prosa.classic.model.schedule.global.basic.interference Interference task_interference def
+R14389:14398 mathcomp.boot.bigop <> big_mkcond thm
+R14401:14412 mathcomp.boot.bigop <> exchange_big thm
+R14414:14423 mathcomp.boot.bigop <> big_distrl thm
+R14389:14398 mathcomp.boot.bigop <> big_mkcond thm
+R14389:14398 mathcomp.boot.bigop <> big_mkcond thm
+R14401:14412 mathcomp.boot.bigop <> exchange_big thm
+R14401:14412 mathcomp.boot.bigop <> exchange_big thm
+R14414:14423 mathcomp.boot.bigop <> big_distrl thm
+R14414:14423 mathcomp.boot.bigop <> big_distrl thm
+R14446:14451 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R14453:14456 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R14458:14460 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R14462:14464 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R14485:14486 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+binder 14457:14457 <> pat:117
+R14465:14474 prosa.classic.model.schedule.global.basic.schedule Schedule backlogged def
+R14489:14498 mathcomp.boot.bigop <> big_mkcond thm
+R14489:14498 mathcomp.boot.bigop <> big_mkcond thm
+R14446:14451 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R14453:14456 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R14458:14460 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R14462:14464 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R14485:14486 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+binder 14457:14457 <> pat:118
+R14465:14474 prosa.classic.model.schedule.global.basic.schedule Schedule backlogged def
+R14446:14451 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R14453:14456 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R14458:14460 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R14462:14464 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+R14485:14486 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<='_x_'<'_x_'|'_x_')'_x not
+binder 14457:14457 <> pat:119
+R14465:14474 prosa.classic.model.schedule.global.basic.schedule Schedule backlogged def
+R14489:14498 mathcomp.boot.bigop <> big_mkcond thm
+R14515:14524 mathcomp.boot.bigop <> eq_big_nat thm
+R14515:14524 mathcomp.boot.bigop <> eq_big_nat thm
+R14538:14541 Corelib.ssr.ssrbool <> andP thm
+R14572:14581 prosa.classic.model.schedule.global.basic.schedule Schedule backlogged def
+R14610:14610 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R14604:14608 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sched var
+R14595:14602 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_cost var
+R14583:14593 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R14572:14581 prosa.classic.model.schedule.global.basic.schedule Schedule backlogged def
+R14610:14610 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R14604:14608 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sched var
+R14595:14602 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_cost var
+R14583:14593 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R14666:14672 mathcomp.boot.bigop <> eq_bigr thm
+binder 14679:14679 <> i:120
+R14718:14730 mathcomp.boot.bigop <> big_const_seq thm
+R14732:14740 mathcomp.boot.ssrnat <> iter_addn thm
+R14742:14746 mathcomp.boot.ssrnat <> mul0n thm
+R14748:14752 mathcomp.boot.ssrnat <> addn0 thm
+R14666:14672 mathcomp.boot.bigop <> eq_bigr thm
+binder 14679:14679 <> i:121
+R14666:14672 mathcomp.boot.bigop <> eq_bigr thm
+binder 14679:14679 <> i:122
+R14718:14730 mathcomp.boot.bigop <> big_const_seq thm
+R14718:14730 mathcomp.boot.bigop <> big_const_seq thm
+R14732:14740 mathcomp.boot.ssrnat <> iter_addn thm
+R14732:14740 mathcomp.boot.ssrnat <> iter_addn thm
+R14742:14746 mathcomp.boot.ssrnat <> mul0n thm
+R14742:14746 mathcomp.boot.ssrnat <> mul0n thm
+R14748:14752 mathcomp.boot.ssrnat <> addn0 thm
+R14748:14752 mathcomp.boot.ssrnat <> addn0 thm
+R14789:14795 mathcomp.boot.bigop <> eq_bigr thm
+binder 14802:14802 <> i:123
+R14841:14853 mathcomp.boot.bigop <> big_const_seq thm
+R14855:14863 mathcomp.boot.ssrnat <> iter_addn thm
+R14865:14869 mathcomp.boot.ssrnat <> mul0n thm
+R14871:14875 mathcomp.boot.ssrnat <> addn0 thm
+R14789:14795 mathcomp.boot.bigop <> eq_bigr thm
+binder 14802:14802 <> i:124
+R14789:14795 mathcomp.boot.bigop <> eq_bigr thm
+binder 14802:14802 <> i:125
+R14841:14853 mathcomp.boot.bigop <> big_const_seq thm
+R14841:14853 mathcomp.boot.bigop <> big_const_seq thm
+R14855:14863 mathcomp.boot.ssrnat <> iter_addn thm
+R14855:14863 mathcomp.boot.ssrnat <> iter_addn thm
+R14865:14869 mathcomp.boot.ssrnat <> mul0n thm
+R14865:14869 mathcomp.boot.ssrnat <> mul0n thm
+R14871:14875 mathcomp.boot.ssrnat <> addn0 thm
+R14871:14875 mathcomp.boot.ssrnat <> addn0 thm
+R14904:14913 mathcomp.boot.bigop <> big_mkcond thm
+R14915:14919 mathcomp.boot.ssrnat <> mul1n thm
+R14904:14913 mathcomp.boot.bigop <> big_mkcond thm
+R14904:14913 mathcomp.boot.bigop <> big_mkcond thm
+R14915:14919 mathcomp.boot.ssrnat <> mul1n thm
+R14915:14919 mathcomp.boot.ssrnat <> mul1n thm
+R14941:14952 mathcomp.boot.bigop <> exchange_big thm
+R14941:14952 mathcomp.boot.bigop <> exchange_big thm
+R14941:14952 mathcomp.boot.bigop <> exchange_big thm
+R14992:14997 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<'_x_')'_x not
+R15001:15003 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<'_x_')'_x not
+R15012:15013 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<'_x_')'_x not
+R15004:15011 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.num_cpus var
+binder 14998:15000 <> cpu:126
+binder 14998:15000 <> cpu:127
+binder 14998:15000 <> cpu:128
+R14972:14979 Corelib.Init.Logic <> eq_trans thm
+R15044:15056 mathcomp.boot.bigop <> big_const_ord thm
+R15058:15066 mathcomp.boot.ssrnat <> iter_addn thm
+R15068:15072 mathcomp.boot.ssrnat <> mul1n thm
+R15074:15078 mathcomp.boot.ssrnat <> addn0 thm
+R14992:14997 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<'_x_')'_x not
+R15001:15003 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<'_x_')'_x not
+R15012:15013 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<'_x_')'_x not
+R15004:15011 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.num_cpus var
+binder 14998:15000 <> cpu:129
+binder 14998:15000 <> cpu:130
+binder 14998:15000 <> cpu:131
+R14972:14979 Corelib.Init.Logic <> eq_trans thm
+R15044:15056 mathcomp.boot.bigop <> big_const_ord thm
+R15044:15056 mathcomp.boot.bigop <> big_const_ord thm
+R15058:15066 mathcomp.boot.ssrnat <> iter_addn thm
+R15058:15066 mathcomp.boot.ssrnat <> iter_addn thm
+R15068:15072 mathcomp.boot.ssrnat <> mul1n thm
+R15068:15072 mathcomp.boot.ssrnat <> mul1n thm
+R15074:15078 mathcomp.boot.ssrnat <> addn0 thm
+R15074:15078 mathcomp.boot.ssrnat <> addn0 thm
+R15095:15101 mathcomp.boot.bigop <> eq_bigr thm
+R15095:15101 mathcomp.boot.bigop <> eq_bigr thm
+R15143:15143 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R15147:15157 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.H_j_arrives var
+R15143:15143 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R15147:15157 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.H_j_arrives var
+R15198:15200 mathcomp.boot.eqtype <> eqP def
+R15232:15241 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R15243:15249 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.arr_seq var
+R15307:15313 mathcomp.boot.fintype <> existsP thm
+R15334:15336 mathcomp.boot.eqtype <> eqP def
+R15307:15313 mathcomp.boot.fintype <> existsP thm
+R15334:15336 mathcomp.boot.eqtype <> eqP def
+R15357:15365 mathcomp.boot.bigop <> bigD1_seq thm
+R15368:15375 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_task var
+R15407:15417 mathcomp.boot.seq <> filter_uniq thm
+R15357:15365 mathcomp.boot.bigop <> bigD1_seq thm
+R15368:15375 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_task var
+R15357:15365 mathcomp.boot.bigop <> bigD1_seq thm
+R15368:15375 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_task var
+R15407:15417 mathcomp.boot.seq <> filter_uniq thm
+R15407:15417 mathcomp.boot.seq <> filter_uniq thm
+R15429:15430 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.ts var
+R15429:15430 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.ts var
+R15462:15468 mathcomp.boot.bigop <> eq_bigr thm
+binder 15475:15475 <> i:132
+R15529:15545 prosa.classic.model.schedule.global.basic.schedule ScheduleOfSporadicTask task_scheduled_on def
+R15559:15561 mathcomp.boot.eqtype <> eqP def
+R15571:15574 mathcomp.boot.ssrnat <> eqb0 thm
+R15576:15581 mathcomp.boot.eqtype <> eq_sym thm
+R15462:15468 mathcomp.boot.bigop <> eq_bigr thm
+binder 15475:15475 <> i:133
+R15462:15468 mathcomp.boot.bigop <> eq_bigr thm
+binder 15475:15475 <> i:134
+R15529:15545 prosa.classic.model.schedule.global.basic.schedule ScheduleOfSporadicTask task_scheduled_on def
+R15529:15545 prosa.classic.model.schedule.global.basic.schedule ScheduleOfSporadicTask task_scheduled_on def
+R15559:15561 mathcomp.boot.eqtype <> eqP def
+R15571:15574 mathcomp.boot.ssrnat <> eqb0 thm
+R15571:15574 mathcomp.boot.ssrnat <> eqb0 thm
+R15576:15581 mathcomp.boot.eqtype <> eq_sym thm
+R15576:15581 mathcomp.boot.eqtype <> eq_sym thm
+R15602:15614 mathcomp.boot.bigop <> big_const_seq thm
+R15616:15624 mathcomp.boot.ssrnat <> iter_addn thm
+R15626:15630 mathcomp.boot.ssrnat <> mul0n thm
+R15634:15638 mathcomp.boot.ssrnat <> addn0 thm
+R15647:15649 mathcomp.boot.eqtype <> eqP def
+R15660:15663 mathcomp.boot.ssrnat <> eqb1 thm
+R15602:15614 mathcomp.boot.bigop <> big_const_seq thm
+R15602:15614 mathcomp.boot.bigop <> big_const_seq thm
+R15616:15624 mathcomp.boot.ssrnat <> iter_addn thm
+R15616:15624 mathcomp.boot.ssrnat <> iter_addn thm
+R15626:15630 mathcomp.boot.ssrnat <> mul0n thm
+R15626:15630 mathcomp.boot.ssrnat <> mul0n thm
+R15634:15638 mathcomp.boot.ssrnat <> addn0 thm
+R15634:15638 mathcomp.boot.ssrnat <> addn0 thm
+R15634:15638 mathcomp.boot.ssrnat <> addn0 thm
+R15647:15649 mathcomp.boot.eqtype <> eqP def
+R15660:15663 mathcomp.boot.ssrnat <> eqb1 thm
+R15660:15663 mathcomp.boot.ssrnat <> eqb1 thm
+R15686:15702 prosa.classic.model.schedule.global.basic.schedule ScheduleOfSporadicTask task_scheduled_on def
+R15746:15755 mathcomp.boot.seq <> mem_filter thm
+R15764:15767 Corelib.ssr.ssrbool <> andP thm
+R15746:15755 mathcomp.boot.seq <> mem_filter thm
+R15746:15755 mathcomp.boot.seq <> mem_filter thm
+R15764:15767 Corelib.ssr.ssrbool <> andP thm
+R15814:15827 prosa.classic.model.priority Priority different_task def
+R15844:15846 mathcomp.boot.eqtype <> eqP def
+R15844:15846 mathcomp.boot.eqtype <> eqP def
+R15893:15901 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled def
+R15903:15907 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sched var
+R15893:15901 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled def
+R15903:15907 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sched var
+R15948:15956 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled def
+R15959:15970 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled_on def
+R15992:15998 mathcomp.boot.fintype <> existsP thm
+R15992:15998 mathcomp.boot.fintype <> existsP thm
+R16177:16184 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_cost var
+R16203:16213 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R16133:16157 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled_implies_pending thm
+R16177:16184 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_cost var
+R16203:16213 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R16133:16157 prosa.classic.model.schedule.global.basic.schedule Schedule scheduled_implies_pending thm
+R16271:16274 mathcomp.boot.ssrnat <> ltnP thm
+R16299:16309 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R16311:16311 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R16277:16287 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R16271:16274 mathcomp.boot.ssrnat <> ltnP thm
+R16299:16309 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R16311:16311 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R16277:16287 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R16401:16409 mathcomp.boot.ssrnat <> ltn_add2r thm
+R16411:16411 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+R16401:16409 mathcomp.boot.ssrnat <> ltn_add2r thm
+R16411:16411 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+R16401:16409 mathcomp.boot.ssrnat <> ltn_add2r thm
+R16411:16411 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+R16460:16462 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.tsk var
+R16464:16464 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+R16460:16462 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.tsk var
+R16464:16464 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+R16525:16528 Corelib.ssr.ssrbool <> andP thm
+R16534:16537 Corelib.ssr.ssrbool <> negP thm
+R16631:16633 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R16612:16622 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R16634:16634 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+R16580:16599 prosa.classic.model.schedule.global.basic.schedule Schedule completion_monotonic thm
+R16631:16633 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R16612:16622 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R16634:16634 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+R16580:16599 prosa.classic.model.schedule.global.basic.schedule Schedule completion_monotonic thm
+R16690:16700 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R16702:16702 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R16669:16677 mathcomp.boot.ssrnat <> leq_trans thm
+R16690:16700 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R16702:16702 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R16669:16677 mathcomp.boot.ssrnat <> leq_trans thm
+R16776:16778 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R16757:16767 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R16779:16791 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_deadline var
+R16793:16795 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.tsk var
+R16736:16744 mathcomp.boot.ssrnat <> leq_trans thm
+R16828:16836 mathcomp.boot.ssrnat <> leq_add2l thm
+R16776:16778 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R16757:16767 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R16779:16791 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_deadline var
+R16793:16795 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.tsk var
+R16736:16744 mathcomp.boot.ssrnat <> leq_trans thm
+R16828:16836 mathcomp.boot.ssrnat <> leq_add2l thm
+R16828:16836 mathcomp.boot.ssrnat <> leq_add2l thm
+R16909:16911 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R16890:16900 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R16912:16922 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_period var
+R16924:16926 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.tsk var
+R16869:16877 mathcomp.boot.ssrnat <> leq_trans thm
+R16959:16967 mathcomp.boot.ssrnat <> leq_add2l thm
+R16909:16911 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R16890:16900 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R16912:16922 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_period var
+R16924:16926 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.tsk var
+R16869:16877 mathcomp.boot.ssrnat <> leq_trans thm
+R16959:16967 mathcomp.boot.ssrnat <> leq_add2l thm
+R16959:16967 mathcomp.boot.ssrnat <> leq_add2l thm
+R17094:17097 mathcomp.boot.ssrnat <> ltnW thm
+R17094:17097 mathcomp.boot.ssrnat <> ltnW thm
+R17144:17147 mathcomp.boot.ssrnat <> ltnn thm
+R17144:17147 mathcomp.boot.ssrnat <> ltnn thm
+R17144:17147 mathcomp.boot.ssrnat <> ltnn thm
+R17213:17216 Corelib.ssr.ssrbool <> andP thm
+R17254:17254 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R17254:17254 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R17351:17354 Corelib.ssr.ssrbool <> negP thm
+R17366:17371 mathcomp.boot.ssrnat <> ltnNge thm
+R17351:17354 Corelib.ssr.ssrbool <> negP thm
+R17366:17371 mathcomp.boot.ssrnat <> ltnNge thm
+R17366:17371 mathcomp.boot.ssrnat <> ltnNge thm
+R17392:17404 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R17392:17404 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R17488:17490 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R17475:17485 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R17487:17487 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R17491:17491 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+R17454:17462 mathcomp.boot.ssrnat <> leq_trans thm
+R17488:17490 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R17475:17485 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R17487:17487 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.j var
+R17491:17491 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+R17454:17462 mathcomp.boot.ssrnat <> leq_trans thm
+R17533:17541 mathcomp.boot.ssrnat <> leq_add2l thm
+R17571:17583 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_deadline var
+R17585:17587 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.tsk var
+R17550:17558 mathcomp.boot.ssrnat <> leq_trans thm
+R17533:17541 mathcomp.boot.ssrnat <> leq_add2l thm
+R17533:17541 mathcomp.boot.ssrnat <> leq_add2l thm
+R17571:17583 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_deadline var
+R17585:17587 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.tsk var
+R17550:17558 mathcomp.boot.ssrnat <> leq_trans thm
+R17728:17737 prosa.classic.model.schedule.global.basic.schedule Schedule backlogged def
+R17745:17749 Corelib.ssr.ssrbool <> andbF thm
+R17728:17737 prosa.classic.model.schedule.global.basic.schedule Schedule backlogged def
+R17728:17737 prosa.classic.model.schedule.global.basic.schedule Schedule backlogged def
+R17745:17749 Corelib.ssr.ssrbool <> andbF thm
+R17745:17749 Corelib.ssr.ssrbool <> andbF thm
+prf 18019:18061 ResponseTimeAnalysisEDF bertogna_edf_sum_exceeds_total_interference
+R18157:18159 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R18160:18160 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.I var
+R18162:18164 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.tsk var
+R18166:18166 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+R18072:18078 prosa.classic.util.notation <> ::nat_scope:'\sum_'_'('_'('_x_','_x_')'_'<-'_x_'|'_x_')'_x not
+R18088:18089 prosa.classic.util.notation <> ::nat_scope:'\sum_'_'('_'('_x_','_x_')'_'<-'_x_'|'_x_')'_x not
+R18097:18101 prosa.classic.util.notation <> ::nat_scope:'\sum_'_'('_'('_x_','_x_')'_'<-'_x_'|'_x_')'_x not
+R18111:18113 prosa.classic.util.notation <> ::nat_scope:'\sum_'_'('_'('_x_','_x_')'_'<-'_x_'|'_x_')'_x not
+R18134:18145 prosa.classic.util.notation <> ::nat_scope:'\sum_'_'('_'('_x_','_x_')'_'<-'_x_'|'_x_')'_x not
+R18102:18110 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.rt_bounds var
+binder 18079:18087 <> tsk_other:135
+binder 18090:18096 <> R_other:136
+R18114:18123 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.other_task var
+R18125:18133 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk_other:135 var
+binder 18079:18087 <> tsk_other:137
+binder 18090:18096 <> R_other:138
+R18146:18146 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.x var
+R18148:18156 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk_other:137 var
+R18206:18233 prosa.classic.analysis.global.parallel.bertogna_edf_theory ResponseTimeAnalysisEDF bertogna_edf_R_other_ge_cost thm
+R18260:18296 prosa.classic.analysis.global.parallel.bertogna_edf_theory ResponseTimeAnalysisEDF bertogna_edf_interference_on_all_cpus thm
+R18323:18356 prosa.classic.analysis.global.parallel.bertogna_edf_theory ResponseTimeAnalysisEDF bertogna_edf_too_much_interference thm
+R18508:18513 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R18523:18526 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R18538:18539 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R18527:18537 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.other_tasks var
+binder 18514:18522 <> tsk_other:139
+binder 18514:18522 <> tsk_other:140
+binder 18514:18522 <> tsk_other:141
+R18540:18540 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.x var
+R18542:18550 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk_other:139 var
+R18487:18495 mathcomp.boot.ssrnat <> leq_trans thm
+R18508:18513 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R18523:18526 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R18538:18539 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R18527:18537 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.other_tasks var
+binder 18514:18522 <> tsk_other:142
+binder 18514:18522 <> tsk_other:143
+binder 18514:18522 <> tsk_other:144
+R18540:18540 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.x var
+R18542:18550 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk_other:142 var
+R18487:18495 mathcomp.boot.ssrnat <> leq_trans thm
+R18605:18611 mathcomp.boot.bigop <> eq_bigr thm
+binder 18618:18618 <> i:145
+R18623:18623 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.x var
+R18626:18628 Corelib.Init.Datatypes <> fst def
+R18630:18630 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> i:145 var
+R18605:18611 mathcomp.boot.bigop <> eq_bigr thm
+binder 18618:18618 <> i:146
+R18623:18623 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.x var
+R18626:18628 Corelib.Init.Datatypes <> fst def
+R18630:18630 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> i:146 var
+R18605:18611 mathcomp.boot.bigop <> eq_bigr thm
+binder 18618:18618 <> i:147
+R18623:18623 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.x var
+R18626:18628 Corelib.Init.Datatypes <> fst def
+R18630:18630 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> i:147 var
+R18733:18761 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18687:18692 mathcomp.boot.seq <> filter def
+R18716:18721 mathcomp.boot.seq <> unzip1 def
+R18723:18731 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.rt_bounds var
+R18695:18708 prosa.classic.model.priority Priority different_task def
+R18710:18712 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.tsk var
+R18762:18767 mathcomp.boot.seq <> filter def
+R18790:18791 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.ts var
+R18770:18783 prosa.classic.model.priority Priority different_task def
+R18785:18787 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.tsk var
+R18733:18761 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18687:18692 mathcomp.boot.seq <> filter def
+R18716:18721 mathcomp.boot.seq <> unzip1 def
+R18723:18731 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.rt_bounds var
+R18695:18708 prosa.classic.model.priority Priority different_task def
+R18710:18712 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.tsk var
+R18762:18767 mathcomp.boot.seq <> filter def
+R18790:18791 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.ts var
+R18770:18783 prosa.classic.model.priority Priority different_task def
+R18785:18787 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.tsk var
+R18838:18848 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> other_tasks vardef
+R18902:18907 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R18909:18912 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R18922:18924 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R18926:18926 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R18913:18921 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.rt_bounds var
+binder 18908:18908 <> pat:148
+R18929:18938 mathcomp.boot.bigop <> big_filter thm
+R18929:18938 mathcomp.boot.bigop <> big_filter thm
+R18902:18907 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R18909:18912 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R18922:18924 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R18926:18926 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R18913:18921 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.rt_bounds var
+binder 18908:18908 <> pat:149
+R18902:18907 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R18909:18912 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R18922:18924 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R18926:18926 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R18913:18921 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.rt_bounds var
+binder 18908:18908 <> pat:150
+R18929:18938 mathcomp.boot.bigop <> big_filter thm
+R19064:19091 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18966:18970 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R18972:18975 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R18985:19014 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R19063:19063 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+binder 18971:18971 <> i:151
+R19038:19038 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> i:151 var
+R19020:19020 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R19030:19031 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R19033:19033 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R19043:19052 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.other_task var
+R18976:18984 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.rt_bounds var
+R19092:19096 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R19098:19101 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R19111:19112 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R19131:19131 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+binder 19097:19097 <> i:153
+R19113:19122 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.other_task var
+R19125:19127 Corelib.Init.Datatypes <> fst def
+R19129:19129 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> i:153 var
+R19102:19110 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.rt_bounds var
+R19064:19091 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18966:18970 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R18972:18975 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R18985:19014 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R19063:19063 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+binder 18971:18971 <> i:154
+R19038:19038 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> i:154 var
+R19020:19020 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R19030:19031 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R19033:19033 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R19043:19052 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.other_task var
+R18976:18984 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.rt_bounds var
+R19092:19096 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R19098:19101 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R19111:19112 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R19131:19131 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+binder 19097:19097 <> i:156
+R19113:19122 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.other_task var
+R19125:19127 Corelib.Init.Datatypes <> fst def
+R19129:19129 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> i:156 var
+R19102:19110 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.rt_bounds var
+R19168:19176 mathcomp.boot.seq <> eq_filter thm
+R19168:19176 mathcomp.boot.seq <> eq_filter thm
+R19276:19282 mathcomp.boot.bigop <> big_map thm
+binder 19322:19322 <> i:157
+R19327:19327 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.x var
+R19329:19329 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> i:157 var
+binder 19306:19306 <> i:158
+R19311:19314 Corelib.Init.Datatypes <> true constr
+binder 19289:19289 <> x:159
+R19294:19296 Corelib.Init.Datatypes <> fst def
+R19298:19298 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> x:159 var
+R19366:19371 mathcomp.boot.ssrnat <> eq_leq thm
+R19391:19400 mathcomp.boot.seq <> filter_map thm
+R19366:19371 mathcomp.boot.ssrnat <> eq_leq thm
+R19391:19400 mathcomp.boot.seq <> filter_map thm
+R19391:19400 mathcomp.boot.seq <> filter_map thm
+R19461:19468 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.num_cpus var
+R19436:19448 prosa.classic.util.div_mod <> ltn_div_trunc thm
+R19487:19504 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.H_at_least_one_cpu var
+R19461:19468 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.num_cpus var
+R19436:19448 prosa.classic.util.div_mod <> ltn_div_trunc thm
+R19487:19504 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.H_at_least_one_cpu var
+R19525:19533 mathcomp.boot.ssrnat <> ltn_add2l thm
+R19536:19544 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_cost var
+R19546:19548 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.tsk var
+R19525:19533 mathcomp.boot.ssrnat <> ltn_add2l thm
+R19536:19544 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_cost var
+R19546:19548 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.tsk var
+R19525:19533 mathcomp.boot.ssrnat <> ltn_add2l thm
+R19536:19544 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_cost var
+R19546:19548 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.tsk var
+R19589:19593 mathcomp.boot.ssrnat <> addn1 thm
+R19596:19604 mathcomp.boot.ssrnat <> leq_subLR thm
+R19589:19593 mathcomp.boot.ssrnat <> addn1 thm
+R19589:19593 mathcomp.boot.ssrnat <> addn1 thm
+R19596:19604 mathcomp.boot.ssrnat <> leq_subLR thm
+R19596:19604 mathcomp.boot.ssrnat <> leq_subLR thm
+R19630:19632 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R19626:19628 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R19625:19625 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+R19635:19639 prosa.classic.util.nat <> subh1 thm
+R19635:19639 prosa.classic.util.nat <> subh1 thm
+R19630:19632 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R19626:19628 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R19625:19625 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+R19630:19632 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R19626:19628 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R19625:19625 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.R var
+R19635:19639 prosa.classic.util.nat <> subh1 thm
+R19681:19689 mathcomp.boot.div <> leq_divRL thm
+R19706:19723 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.H_at_least_one_cpu var
+R19681:19689 mathcomp.boot.div <> leq_divRL thm
+R19681:19689 mathcomp.boot.div <> leq_divRL thm
+R19706:19723 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.H_at_least_one_cpu var
+R19770:19778 mathcomp.boot.ssrnat <> leq_mul2r thm
+R19787:19789 Corelib.ssr.ssrbool <> orP thm
+R19770:19778 mathcomp.boot.ssrnat <> leq_mul2r thm
+R19770:19778 mathcomp.boot.ssrnat <> leq_mul2r thm
+R19787:19789 Corelib.ssr.ssrbool <> orP thm
+prf 20225:20267 ResponseTimeAnalysisEDF bertogna_edf_exists_task_that_exceeds_bound
+R20279:20285 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R20303:20314 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 20286:20294 <> tsk_other:160
+binder 20296:20302 <> R_other:161
+R20349:20362 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R20335:20339 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R20315:20315 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R20325:20326 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R20334:20334 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R20316:20324 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk_other:160 var
+R20327:20333 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> R_other:161 var
+R20340:20348 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.rt_bounds var
+R20374:20376 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R20377:20394 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.interference_bound var
+R20396:20404 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk_other:160 var
+R20406:20412 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> R_other:161 var
+R20363:20363 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.x var
+R20365:20373 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk_other:160 var
+R20448:20490 prosa.classic.analysis.global.parallel.bertogna_edf_theory ResponseTimeAnalysisEDF bertogna_edf_sum_exceeds_total_interference thm
+R20515:20555 prosa.classic.analysis.global.parallel.bertogna_edf_theory ResponseTimeAnalysisEDF bertogna_edf_workload_bounds_interference thm
+R20583:20615 prosa.classic.analysis.global.parallel.bertogna_edf_theory ResponseTimeAnalysisEDF bertogna_edf_specific_bound_holds thm
+R20697:20699 mathcomp.boot.seq <> has def
+R20972:20980 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.rt_bounds var
+R20712:20734 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_with_response_time var
+binder 20706:20708 <> tup:162
+R20790:20792 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tup:162 var
+binder 20767:20775 <> tsk_other:163
+binder 20778:20784 <> R_other:164
+R20864:20892 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R20944:20944 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R20822:20822 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R20839:20843 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R20832:20836 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R20823:20831 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk_other:163 var
+R20837:20838 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.ts var
+R20844:20853 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.other_task var
+R20855:20863 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk_other:163 var
+R20904:20907 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R20908:20925 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.interference_bound var
+R20927:20935 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk_other:163 var
+R20937:20943 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> R_other:164 var
+R20893:20893 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.x var
+R20895:20903 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk_other:163 var
+R20697:20699 mathcomp.boot.seq <> has def
+R20972:20980 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.rt_bounds var
+R20712:20734 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.task_with_response_time var
+binder 20706:20708 <> tup:165
+R20790:20792 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tup:165 var
+binder 20767:20775 <> tsk_other:166
+binder 20778:20784 <> R_other:167
+R20864:20892 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R20944:20944 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R20822:20822 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R20839:20843 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R20832:20836 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R20823:20831 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk_other:166 var
+R20837:20838 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.ts var
+R20844:20853 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.other_task var
+R20855:20863 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk_other:166 var
+R20904:20907 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R20908:20925 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.interference_bound var
+R20927:20935 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk_other:166 var
+R20937:20943 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> R_other:167 var
+R20893:20893 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.x var
+R20895:20903 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk_other:166 var
+R21010:21013 Corelib.ssr.ssrbool <> negP thm
+R21023:21025 Corelib.Init.Logic <> not def
+R21010:21013 Corelib.ssr.ssrbool <> negP thm
+R21069:21072 Corelib.ssr.ssrbool <> negP thm
+R21075:21079 mathcomp.boot.seq <> hasPn thm
+R21107:21109 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R21112:21116 Corelib.ssr.ssrbool <> negbK thm
+R21112:21116 Corelib.ssr.ssrbool <> negbK thm
+R21107:21109 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R21107:21109 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R21112:21116 Corelib.ssr.ssrbool <> negbK thm
+R21180:21185 mathcomp.boot.ssrnat <> leqNgt thm
+R21150:21153 Corelib.ssr.ssrbool <> negP thm
+R21180:21185 mathcomp.boot.ssrnat <> leqNgt thm
+R21180:21185 mathcomp.boot.ssrnat <> leqNgt thm
+R21205:21205 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> I vardef
+R21208:21235 prosa.classic.analysis.global.parallel.interference_bound_edf InterferenceBoundEDF total_interference_bound_edf def
+R21256:21267 mathcomp.boot.bigop <> big_seq_cond thm
+R21276:21279 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R21280:21280 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.X var
+R21282:21293 mathcomp.boot.bigop <> big_seq_cond thm
+R21256:21267 mathcomp.boot.bigop <> big_seq_cond thm
+R21256:21267 mathcomp.boot.bigop <> big_seq_cond thm
+R21282:21293 mathcomp.boot.bigop <> big_seq_cond thm
+R21276:21279 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R21280:21280 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.X var
+R21276:21279 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R21280:21280 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> X:168 var
+R21282:21293 mathcomp.boot.bigop <> big_seq_cond thm
+R21312:21318 mathcomp.boot.bigop <> leq_sum thm
+R21312:21318 mathcomp.boot.bigop <> leq_sum thm
+R21336:21339 Corelib.ssr.ssrbool <> andP thm
+R21419:21419 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R21425:21426 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R21430:21430 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R21419:21419 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R21425:21426 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R21430:21430 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R21461:21482 prosa.classic.analysis.global.parallel.interference_bound_edf InterferenceBoundEDF interference_bound_edf def
+R21518:21524 mathcomp.boot.ssrnat <> leq_min thm
+R21533:21536 Corelib.ssr.ssrbool <> andP thm
+R21518:21524 mathcomp.boot.ssrnat <> leq_min thm
+R21518:21524 mathcomp.boot.ssrnat <> leq_min thm
+R21533:21536 Corelib.ssr.ssrbool <> andP thm
+R21628:21631 mathcomp.boot.seq <> hasP thm
+R21699:21702 Corelib.ssr.ssrbool <> andP thm
+R21706:21709 Corelib.ssr.ssrbool <> andP thm
+R21799:21819 prosa.classic.analysis.global.parallel.bertogna_edf_theory ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas.DerivingContradiction <> sec
+R21837:21842 prosa.classic.analysis.global.parallel.bertogna_edf_theory ResponseTimeAnalysisEDF.ResponseTimeBound.Lemmas <> sec
+sec 21858:21866 ResponseTimeAnalysisEDF.ResponseTimeBound MainProof
+var 21976:21978 ResponseTimeAnalysisEDF.ResponseTimeBound.MainProof tsk
+R21981:21993 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sporadic_task var
+var 22011:22011 ResponseTimeAnalysisEDF.ResponseTimeBound.MainProof R
+R22014:22017 prosa.classic.model.time Time time def
+var 22037:22056 ResponseTimeAnalysisEDF.ResponseTimeBound.MainProof H_tsk_R_in_rt_bounds
+R22067:22071 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R22059:22059 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R22063:22064 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R22066:22066 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R22060:22062 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.MainProof.tsk var
+R22065:22065 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.MainProof.R var
+R22072:22080 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.rt_bounds var
+prf 22188:22227 ResponseTimeAnalysisEDF bertogna_cirinei_response_time_bound_edf
+R22239:22262 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.response_time_bounded_by var
+R22264:22266 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.MainProof.tsk var
+R22268:22268 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.MainProof.R var
+R22453:22455 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R22440:22450 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R22456:22456 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.MainProof.R var
+R22453:22455 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R22440:22450 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R22456:22456 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.MainProof.R var
+R22536:22536 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.MainProof.R var
+R22560:22562 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.MainProof.tsk var
+R22536:22536 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.MainProof.R var
+R22560:22562 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.MainProof.tsk var
+R22722:22731 prosa.classic.util.induction <> strong_ind thm
+R22722:22731 prosa.classic.util.induction <> strong_ind thm
+binder 22895:22896 <> j0:175
+binder 22898:22900 <> tsk:176
+binder 22902:22903 <> R0:177
+R22958:22992 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R22937:22946 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R22956:22957 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> j0:175 var
+R22948:22954 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.arr_seq var
+R23010:23044 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R23004:23006 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22993:23000 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_task var
+R23002:23003 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> j0:175 var
+R23007:23009 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk:176 var
+R23068:23102 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R23054:23058 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R23045:23045 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R23049:23050 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R23053:23053 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R23046:23048 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk:176 var
+R23051:23052 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> R0:177 var
+R23059:23067 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.rt_bounds var
+R23143:23177 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R23122:23124 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R23117:23119 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R23103:23113 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R23115:23116 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> j0:175 var
+R23120:23121 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> R0:177 var
+R23138:23140 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R23125:23135 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R23216:23219 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R23220:23227 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_cost var
+R23229:23230 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> j0:175 var
+R23178:23184 prosa.classic.model.schedule.global.basic.schedule Schedule service def
+R23210:23212 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R23196:23206 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R23208:23209 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> j0:175 var
+R23213:23214 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> R0:177 var
+R23192:23193 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> j0:175 var
+R23186:23190 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sched var
+binder 22895:22896 <> j0:178
+binder 22898:22900 <> tsk:179
+binder 22902:22903 <> R0:180
+R22958:22992 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R22937:22946 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R22956:22957 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> j0:178 var
+R22948:22954 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.arr_seq var
+R23010:23044 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R23004:23006 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22993:23000 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_task var
+R23002:23003 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> j0:178 var
+R23007:23009 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk:179 var
+R23068:23102 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R23054:23058 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R23045:23045 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R23049:23050 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R23053:23053 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R23046:23048 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> tsk:179 var
+R23051:23052 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> R0:180 var
+R23059:23067 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.rt_bounds var
+R23143:23177 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R23122:23124 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R23117:23119 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R23103:23113 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R23115:23116 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> j0:178 var
+R23120:23121 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> R0:180 var
+R23138:23140 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R23125:23135 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R23216:23219 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R23220:23227 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_cost var
+R23229:23230 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> j0:178 var
+R23178:23184 prosa.classic.model.schedule.global.basic.schedule Schedule service def
+R23210:23212 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R23196:23206 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R23208:23209 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> j0:178 var
+R23213:23214 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> R0:180 var
+R23192:23193 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> j0:178 var
+R23186:23190 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sched var
+R23625:23633 prosa.classic.model.schedule.global.basic.schedule Schedule completed def
+R23666:23668 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R23653:23663 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R23644:23648 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sched var
+R23635:23642 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_cost var
+R23625:23633 prosa.classic.model.schedule.global.basic.schedule Schedule completed def
+R23666:23668 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R23653:23663 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_arrival var
+R23644:23648 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.sched var
+R23635:23642 prosa.classic.analysis.global.parallel.bertogna_edf_theory <> ResponseTimeAnalysisEDF.ResponseTimeBound.job_cost var
+R23726:23730 Corelib.ssr.ssrbool <> negbT thm
+R23726:23730 Corelib.ssr.ssrbool <> negbT thm
+R23852:23894 prosa.classic.analysis.global.parallel.bertogna_edf_theory ResponseTimeAnalysisEDF bertogna_edf_exists_task_that_exceeds_bound thm
+R23852:23894 prosa.classic.analysis.global.parallel.bertogna_edf_theory ResponseTimeAnalysisEDF bertogna_edf_exists_task_that_exceeds_bound thm
+R24107:24128 prosa.classic.analysis.global.parallel.interference_bound_edf InterferenceBoundEDF interference_bound_edf def
+R24131:24156 prosa.classic.analysis.global.parallel.interference_bound InterferenceBoundGeneric interference_bound_generic def
+R24195:24235 prosa.classic.analysis.global.parallel.bertogna_edf_theory ResponseTimeAnalysisEDF bertogna_edf_workload_bounds_interference thm
+R24298:24330 prosa.classic.analysis.global.parallel.bertogna_edf_theory ResponseTimeAnalysisEDF bertogna_edf_specific_bound_holds thm
+R24391:24394 mathcomp.boot.ssrnat <> minn def
+R24483:24495 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R24527:24530 mathcomp.boot.ssrnat <> ltnn thm
+R24483:24495 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R24527:24530 mathcomp.boot.ssrnat <> ltnn thm
+R24527:24530 mathcomp.boot.ssrnat <> ltnn thm
+R24583:24595 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R24625:24628 mathcomp.boot.ssrnat <> ltnn thm
+R24583:24595 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R24625:24628 mathcomp.boot.ssrnat <> ltnn thm
+R24625:24628 mathcomp.boot.ssrnat <> ltnn thm
+R24670:24678 prosa.classic.analysis.global.parallel.bertogna_edf_theory ResponseTimeAnalysisEDF.ResponseTimeBound.MainProof <> sec
+R24692:24708 prosa.classic.analysis.global.parallel.bertogna_edf_theory ResponseTimeAnalysisEDF.ResponseTimeBound <> sec
+R24716:24738 prosa.classic.analysis.global.parallel.bertogna_edf_theory ResponseTimeAnalysisEDF <> mod

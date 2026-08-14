@@ -1,0 +1,174 @@
+###################### Global Config ######################
+
+workflow:
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: "$CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS"
+      when: never
+    - if: "$CI_COMMIT_BRANCH"
+
+stages:
+  - build
+
+###################### Rules and Scripts ##################
+
+.not_in_wip_branches:
+  rules:
+    - if: ($CI_COMMIT_BRANCH !~ /^wip-.*$/) || ($CI_PIPELINE_SOURCE == "merge_request_event")
+
+.only_in_wip_branches:
+  rules:
+    - if: ($CI_COMMIT_BRANCH =~ /^wip-.*$/) && ($CI_PIPELINE_SOURCE != "merge_request_event")
+
+.build-common:
+  stage: build
+  script:
+    - opam pin add -n -y -k path rocq-prosa .
+    - opam install -y -v -j ${NJOBS} rocq-prosa
+    - opam pin add -n -y -k path rocq-prosa-refinements .
+    - opam install -y -v -j ${NJOBS} rocq-prosa-refinements
+
+.preferred-stable-version:
+  image: bbbrandenburg/mathcomp-for-prosa:2.4.0-rocq-prover-9.0
+
+.build:
+  image: registry.mpi-sws.org/mathcomp-for-prosa:${CI_JOB_NAME}
+  extends: .build-common
+
+.build-and-test-POET:
+  extends: .build
+  script:
+    - git clone https://gitlab.mpi-sws.org/RT-PROOFS/POET.git -b POET-for-Prosa-CI-v0.6 /tmp/POET
+    - !reference [.build-common, script]
+    - mv /tmp/POET .
+    - cd POET
+    - pip3 install --break-system-packages -r requirements.txt
+    - >-
+      for WORKLOAD in examples/*.yaml;
+      do
+        CERT=certs/cert-for-`basename $WORKLOAD`;
+        echo; echo; echo;
+        echo "==================";
+        echo "Testing $WORKLOAD:";
+        mkdir -p $CERT;
+        time ./poet -v -o $CERT -j ${NJOBS} -s $WORKLOAD;
+      done;
+
+.make-html:
+  script:
+    - make html -j ${NJOBS}
+    - mv html with-proofs
+    - make gallinahtml -j ${NJOBS}
+    - mv html without-proofs
+    - make htmlpretty -j ${NJOBS} 2> /tmp/rocqdoc-warnings.txt
+    - '[ ! -s /tmp/rocqdoc-warnings.txt ] || (echo "Please fix all rocqdoc warnings:" && cat /tmp/rocqdoc-warnings.txt && false)'
+    - mv html pretty
+
+###################### The Jobs ######################
+
+2.4.0-rocq-prover-9.0:
+  extends:
+    - .build
+    - .not_in_wip_branches
+
+POET:
+  extends:
+    - .build-and-test-POET
+    - .preferred-stable-version
+    - .not_in_wip_branches
+
+compile-and-doc:
+  stage: build
+  extends:
+    - .only_in_wip_branches
+    - .preferred-stable-version
+  script:
+    - make -j ${NJOBS} all
+    - !reference [.make-html, script]
+  artifacts:
+    name: "prosa-spec-$CI_COMMIT_REF_NAME"
+    paths:
+      - "with-proofs/"
+      - "without-proofs/"
+      - "pretty/"
+    expire_in: 1 week
+
+compile-and-doc-and-validate:
+  stage: build
+  extends:
+    - .not_in_wip_branches
+    - .preferred-stable-version
+  script:
+    - make -j ${NJOBS} all 2>&1 | tee coqc-messages.txt
+    - if grep -q Warning coqc-messages.txt; then (echo "Please fix all Coq warnings:"; echo "--"; grep -B1 Warning coqc-messages.txt; exit 1); fi
+    - !reference [.make-html, script]
+    - scripts/check-axiom-free.sh results
+  ##### `make validate` disabled because of https://github.com/LPCIC/coq-elpi/issues/677 and https://github.com/coq/coq/issues/17345
+  #     - make validate 2>&1 | tee validation-results.txt
+  #     - scripts/check-validation-output.sh --accept-proof-irrelevance validation-results.txt
+  artifacts:
+    name: "prosa-spec-$CI_COMMIT_REF_NAME"
+    paths:
+      - "with-proofs/"
+      - "without-proofs/"
+      - "pretty/"
+    expire_in: 1 week
+
+mangle-names:
+  stage: build
+  extends:
+    - .not_in_wip_branches
+    - .preferred-stable-version
+  script:
+    - make -j ${NJOBS} mangle-names
+
+# Check that proof irrelevance shows up only due to refinements.
+compile-and-validate:
+  stage: build
+  extends:
+    - .not_in_wip_branches
+    - .preferred-stable-version
+  script:
+    - make -j ${NJOBS}
+    - scripts/check-axiom-free.sh results
+##### `make validate` disabled because of https://github.com/LPCIC/coq-elpi/issues/677 and https://github.com/coq/coq/issues/17345
+#     - make validate 2>&1 | tee validation-results.txt
+#     - scripts/check-validation-output.sh validation-results.txt
+
+proof-length:
+  stage: build
+  image: python:3
+  script:
+    - make proof-length
+
+spell-check:
+  extends:
+    - .not_in_wip_branches
+  stage: build
+  image: registry.mpi-sws.org/aspell-ci:2023-03
+  script:
+    - make spell
+
+lint:
+  extends:
+    - .not_in_wip_branches
+  stage: build
+  image: python:3
+  script:
+    - make lint
+# Disabled until alectryon gains support for Rocq Prover 9.0
+# See https://github.com/cpitclaudel/alectryon/issues/104
+# proof-state:
+#   extends:
+#     - .not_in_wip_branches
+#   stage: build
+#   image: registry.mpi-sws.org/alectryon-ci:2.4.0-rocq-prover-9.0
+#   script:
+#     - eval $(opam env)
+#     - make -j ${NJOBS} all
+#     - make -j ${NJOBS} alectryon
+#   artifacts:
+#     name: "prosa-proof-state-$CI_COMMIT_REF_NAME"
+#     paths:
+#       - "html-alectryon/"
+#     expire_in: 1 week

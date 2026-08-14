@@ -1,0 +1,22 @@
+DIGEST 260d433557530a6204c5cf7cd330c28a
+Fprosa.classic.util.all
+R15:40 prosa.classic.util.tactics <> <> lib
+R58:84 prosa.classic.util.notation <> <> lib
+R102:126 prosa.classic.util.bigcat <> <> lib
+R144:166 prosa.classic.util.pick <> <> lib
+R184:208 prosa.classic.util.bigord <> <> lib
+R226:252 prosa.classic.util.counting <> <> lib
+R270:295 prosa.classic.util.div_mod <> <> lib
+R313:345 prosa.classic.util.ord_quantifier <> <> lib
+R363:391 prosa.classic.util.fixedpoint <> <> lib
+R409:436 prosa.classic.util.induction <> <> lib
+R454:476 prosa.classic.util.list <> <> lib
+R494:515 prosa.classic.util.nat <> <> lib
+R533:559 prosa.classic.util.powerset <> <> lib
+R577:602 prosa.classic.util.sorting <> <> lib
+R620:641 prosa.classic.util.sum <> <> lib
+R659:683 prosa.classic.util.minmax <> <> lib
+R701:725 prosa.classic.util.seqset <> <> lib
+R743:774 prosa.classic.util.step_function <> <> lib
+R792:809 prosa.util.epsilon <> <> lib
+R827:853 prosa.classic.util.ssromega <> <> lib

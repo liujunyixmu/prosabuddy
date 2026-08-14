@@ -1,0 +1,452 @@
+DIGEST ba5cbe0cde2df0e4690f82d12192edff
+Fprosa.classic.model.priority
+R15:36 prosa.classic.util.all <> <> lib
+R54:91 prosa.classic.model.arrival.basic.task <> <> lib
+R93:129 prosa.classic.model.arrival.basic.job <> <> lib
+R131:180 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R212:220 mathcomp.boot.ssreflect <> <> lib
+R222:228 mathcomp.boot.ssrbool <> <> lib
+R230:235 mathcomp.boot.eqtype <> <> lib
+R237:242 mathcomp.boot.ssrnat <> <> lib
+R244:246 mathcomp.boot.seq <> <> lib
+mod 316:323 <> Priority
+R336:350 prosa.classic.model.arrival.basic.task SporadicTaskset <> mod
+R352:366 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence <> mod
+sec 380:391 Priority PriorityDefs
+var 408:411 Priority.PriorityDefs Task
+R414:419 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 435:437 Priority.PriorityDefs Job
+R440:445 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+def 534:542 Priority FP_policy
+R547:549 Corelib.ssr.ssrbool <> rel def
+R551:554 prosa.classic.model.priority <> Priority.PriorityDefs.Task var
+def 630:640 Priority JLFP_policy
+R645:647 Corelib.ssr.ssrbool <> rel def
+R649:651 prosa.classic.model.priority <> Priority.PriorityDefs.Job var
+def 737:747 Priority JLDP_policy
+R756:759 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R752:755 prosa.classic.model.time Time time def
+R760:762 Corelib.ssr.ssrbool <> rel def
+R764:766 prosa.classic.model.priority <> Priority.PriorityDefs.Job var
+R776:787 prosa.classic.model.priority Priority.PriorityDefs <> sec
+sec 927:940 Priority Generalization
+var  1023:1026 Priority.Generalization Task
+R1029:1034 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  1051:1053 Priority.Generalization Job
+R1056:1061 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1078:1085 Priority.Generalization job_task
+R1091:1094 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1088:1090 prosa.classic.model.priority <> Priority.Generalization.Job var
+R1095:1098 prosa.classic.model.priority <> Priority.Generalization.Task var
+def 1165:1174 Priority FP_to_JLFP
+R1186:1194 prosa.classic.model.priority Priority FP_policy def
+R1196:1199 prosa.classic.model.priority <> Priority.Generalization.Task var
+binder 1177:1183 <> task_hp:9
+R1228:1230 prosa.classic.model.priority <> Priority.Generalization.Job var
+binder 1216:1220 <> jhigh:10
+binder 1222:1225 <> jlow:11
+R1244:1250 prosa.classic.model.priority <> task_hp:9 var
+R1253:1260 prosa.classic.model.priority <> Priority.Generalization.job_task var
+R1262:1266 prosa.classic.model.priority <> jhigh:10 var
+R1270:1277 prosa.classic.model.priority <> Priority.Generalization.job_task var
+R1279:1282 prosa.classic.model.priority <> jlow:11 var
+def 1335:1344 Priority FP_to_JLDP
+R1356:1364 prosa.classic.model.priority Priority FP_policy def
+R1366:1369 prosa.classic.model.priority <> Priority.Generalization.Task var
+binder 1347:1353 <> task_hp:12
+R1389:1392 prosa.classic.model.time Time time def
+binder 1386:1386 <> t:13
+R1398:1407 prosa.classic.model.priority Priority FP_to_JLFP def
+R1409:1415 prosa.classic.model.priority <> task_hp:12 var
+def 1465:1476 Priority JLFP_to_JLDP
+R1487:1497 prosa.classic.model.priority Priority JLFP_policy def
+R1499:1501 prosa.classic.model.priority <> Priority.Generalization.Job var
+binder 1479:1484 <> job_hp:14
+R1521:1524 prosa.classic.model.time Time time def
+binder 1518:1518 <> t:15
+R1530:1535 prosa.classic.model.priority <> job_hp:14 var
+R1549:1562 prosa.classic.model.priority Priority.Generalization <> sec
+sec 1627:1638 Priority PropertiesFP
+var  1704:1707 Priority.PropertiesFP Task
+R1710:1715 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  1732:1734 Priority.PropertiesFP Job
+R1737:1742 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1759:1766 Priority.PropertiesFP job_task
+R1772:1775 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1769:1771 prosa.classic.model.priority <> Priority.PropertiesFP.Job var
+R1776:1779 prosa.classic.model.priority <> Priority.PropertiesFP.Task var
+var 1842:1854 Priority.PropertiesFP task_priority
+R1857:1865 prosa.classic.model.priority Priority FP_policy def
+R1867:1870 prosa.classic.model.priority <> Priority.PropertiesFP.Task var
+def 1980:1994 Priority FP_is_reflexive
+R1999:2007 Corelib.ssr.ssrbool <> reflexive def
+R2009:2021 prosa.classic.model.priority <> Priority.PropertiesFP.task_priority var
+def 2088:2104 Priority FP_is_irreflexive
+R2109:2119 Corelib.ssr.ssrbool <> irreflexive def
+R2121:2133 prosa.classic.model.priority <> Priority.PropertiesFP.task_priority var
+def 2199:2214 Priority FP_is_transitive
+R2219:2228 Corelib.ssr.ssrbool <> transitive def
+R2230:2242 prosa.classic.model.priority <> Priority.PropertiesFP.task_priority var
+sec 2262:2273 Priority.PropertiesFP Antisymmetry
+var 2330:2331 Priority.PropertiesFP.Antisymmetry ts
+R2334:2336 mathcomp.boot.seq <> seq abbrev
+R2338:2341 prosa.classic.model.priority <> Priority.PropertiesFP.Task var
+def 2457:2481 Priority FP_is_total_over_task_set
+R2494:2508 prosa.util.rel <> total_over_list def
+R2524:2525 prosa.classic.model.priority <> Priority.PropertiesFP.Antisymmetry.ts var
+R2510:2522 prosa.classic.model.priority <> Priority.PropertiesFP.task_priority var
+def 2695:2727 Priority FP_is_antisymmetric_over_task_set
+R2740:2762 prosa.util.rel <> antisymmetric_over_list def
+R2778:2779 prosa.classic.model.priority <> Priority.PropertiesFP.Antisymmetry.ts var
+R2764:2776 prosa.classic.model.priority <> Priority.PropertiesFP.task_priority var
+R2810:2821 prosa.classic.model.priority Priority.PropertiesFP.Antisymmetry <> sec
+R2831:2842 prosa.classic.model.priority Priority.PropertiesFP <> sec
+sec 2914:2927 Priority PropertiesJLFP
+var  2944:2947 Priority.PropertiesJLFP Task
+R2950:2955 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  2972:2974 Priority.PropertiesJLFP Job
+R2977:2982 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 2999:3006 Priority.PropertiesJLFP job_task
+R3012:3015 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3009:3011 prosa.classic.model.priority <> Priority.PropertiesJLFP.Job var
+R3016:3019 prosa.classic.model.priority <> Priority.PropertiesJLFP.Task var
+var 3035:3045 Priority.PropertiesJLFP job_arrival
+R3051:3054 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3048:3050 prosa.classic.model.priority <> Priority.PropertiesJLFP.Job var
+R3055:3058 prosa.classic.model.time Time time def
+var 3116:3122 Priority.PropertiesJLFP arr_seq
+R3125:3140 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R3142:3144 prosa.classic.model.priority <> Priority.PropertiesJLFP.Job var
+var 3201:3212 Priority.PropertiesJLFP job_priority
+R3215:3225 prosa.classic.model.priority Priority JLFP_policy def
+R3227:3229 prosa.classic.model.priority <> Priority.PropertiesJLFP.Job var
+def 3341:3357 Priority JLFP_is_reflexive
+R3362:3370 Corelib.ssr.ssrbool <> reflexive def
+R3372:3383 prosa.classic.model.priority <> Priority.PropertiesJLFP.job_priority var
+def 3452:3470 Priority JLFP_is_irreflexive
+R3475:3485 Corelib.ssr.ssrbool <> irreflexive def
+R3487:3498 prosa.classic.model.priority <> Priority.PropertiesJLFP.job_priority var
+def 3566:3583 Priority JLFP_is_transitive
+R3588:3597 Corelib.ssr.ssrbool <> transitive def
+R3599:3610 prosa.classic.model.priority <> Priority.PropertiesJLFP.job_priority var
+def 3699:3711 Priority JLFP_is_total
+binder 3729:3730 <> j1:34
+binder 3732:3733 <> j2:35
+R3765:3776 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3744:3753 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R3763:3764 prosa.classic.model.priority <> j1:34 var
+R3755:3761 prosa.classic.model.priority <> Priority.PropertiesJLFP.arr_seq var
+R3798:3809 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3777:3786 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R3796:3797 prosa.classic.model.priority <> j2:35 var
+R3788:3794 prosa.classic.model.priority <> Priority.PropertiesJLFP.arr_seq var
+R3828:3831 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R3810:3821 prosa.classic.model.priority <> Priority.PropertiesJLFP.job_priority var
+R3823:3824 prosa.classic.model.priority <> j1:34 var
+R3826:3827 prosa.classic.model.priority <> j2:35 var
+R3832:3843 prosa.classic.model.priority <> Priority.PropertiesJLFP.job_priority var
+R3845:3846 prosa.classic.model.priority <> j2:35 var
+R3848:3849 prosa.classic.model.priority <> j1:34 var
+def 4611:4639 Priority JLFP_respects_sequential_jobs
+binder 4657:4658 <> j1:36
+binder 4660:4661 <> j2:37
+R4698:4709 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4683:4686 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R4672:4679 prosa.classic.model.priority <> Priority.PropertiesJLFP.job_task var
+R4681:4682 prosa.classic.model.priority <> j1:36 var
+R4687:4694 prosa.classic.model.priority <> Priority.PropertiesJLFP.job_task var
+R4696:4697 prosa.classic.model.priority <> j2:37 var
+R4742:4753 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4724:4727 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R4710:4720 prosa.classic.model.priority <> Priority.PropertiesJLFP.job_arrival var
+R4722:4723 prosa.classic.model.priority <> j1:36 var
+R4728:4738 prosa.classic.model.priority <> Priority.PropertiesJLFP.job_arrival var
+R4740:4741 prosa.classic.model.priority <> j2:37 var
+R4754:4765 prosa.classic.model.priority <> Priority.PropertiesJLFP.job_priority var
+R4767:4768 prosa.classic.model.priority <> j1:36 var
+R4770:4771 prosa.classic.model.priority <> j2:37 var
+R4781:4794 prosa.classic.model.priority Priority.PropertiesJLFP <> sec
+sec 4861:4874 Priority PropertiesJLDP
+var  4927:4929 Priority.PropertiesJLDP Job
+R4932:4937 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 4954:4960 Priority.PropertiesJLDP arr_seq
+R4963:4978 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R4980:4982 prosa.classic.model.priority <> Priority.PropertiesJLDP.Job var
+var 5003:5014 Priority.PropertiesJLDP job_priority
+R5017:5027 prosa.classic.model.priority Priority JLDP_policy def
+R5029:5031 prosa.classic.model.priority <> Priority.PropertiesJLDP.Job var
+def 5143:5159 Priority JLDP_is_reflexive
+binder 5177:5177 <> t:43
+R5180:5188 Corelib.ssr.ssrbool <> reflexive def
+R5191:5202 prosa.classic.model.priority <> Priority.PropertiesJLDP.job_priority var
+R5204:5204 prosa.classic.model.priority <> t:43 var
+def 5274:5292 Priority JLDP_is_irreflexive
+binder 5310:5310 <> t:44
+R5313:5323 Corelib.ssr.ssrbool <> irreflexive def
+R5326:5337 prosa.classic.model.priority <> Priority.PropertiesJLDP.job_priority var
+R5339:5339 prosa.classic.model.priority <> t:44 var
+def 5408:5425 Priority JLDP_is_transitive
+binder 5443:5443 <> t:45
+R5446:5455 Corelib.ssr.ssrbool <> transitive def
+R5458:5469 prosa.classic.model.priority <> Priority.PropertiesJLDP.job_priority var
+R5471:5471 prosa.classic.model.priority <> t:45 var
+def 5535:5547 Priority JLDP_is_total
+binder 5565:5566 <> j1:46
+binder 5568:5569 <> j2:47
+binder 5571:5571 <> t:48
+R5603:5614 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5582:5591 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R5601:5602 prosa.classic.model.priority <> j1:46 var
+R5593:5599 prosa.classic.model.priority <> Priority.PropertiesJLDP.arr_seq var
+R5636:5647 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5615:5624 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R5634:5635 prosa.classic.model.priority <> j2:47 var
+R5626:5632 prosa.classic.model.priority <> Priority.PropertiesJLDP.arr_seq var
+R5668:5671 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R5648:5659 prosa.classic.model.priority <> Priority.PropertiesJLDP.job_priority var
+R5661:5661 prosa.classic.model.priority <> t:48 var
+R5663:5664 prosa.classic.model.priority <> j1:46 var
+R5666:5667 prosa.classic.model.priority <> j2:47 var
+R5672:5683 prosa.classic.model.priority <> Priority.PropertiesJLDP.job_priority var
+R5685:5685 prosa.classic.model.priority <> t:48 var
+R5687:5688 prosa.classic.model.priority <> j2:47 var
+R5690:5691 prosa.classic.model.priority <> j1:46 var
+R5701:5714 prosa.classic.model.priority Priority.PropertiesJLDP <> sec
+sec 5775:5789 Priority KnownFPPolicies
+var  5806:5808 Priority.KnownFPPolicies Job
+R5811:5816 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  5833:5836 Priority.KnownFPPolicies Task
+R5839:5844 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 5861:5871 Priority.KnownFPPolicies task_period
+R5878:5881 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5874:5877 prosa.classic.model.priority <> Priority.KnownFPPolicies.Task var
+R5882:5885 prosa.classic.model.time Time time def
+var 5901:5913 Priority.KnownFPPolicies task_deadline
+R5920:5923 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5916:5919 prosa.classic.model.priority <> Priority.KnownFPPolicies.Task var
+R5924:5927 prosa.classic.model.time Time time def
+var 5943:5953 Priority.KnownFPPolicies job_arrival
+R5959:5962 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5956:5958 prosa.classic.model.priority <> Priority.KnownFPPolicies.Job var
+R5963:5966 prosa.classic.model.time Time time def
+var 5982:5989 Priority.KnownFPPolicies job_task
+R5995:5998 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5992:5994 prosa.classic.model.priority <> Priority.KnownFPPolicies.Job var
+R5999:6002 prosa.classic.model.priority <> Priority.KnownFPPolicies.Task var
+def 6083:6084 Priority RM
+R6098:6101 prosa.classic.model.priority <> Priority.KnownFPPolicies.Task var
+binder 6087:6090 <> tsk1:59
+binder 6092:6095 <> tsk2:60
+R6129:6132 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R6113:6123 prosa.classic.model.priority <> Priority.KnownFPPolicies.task_period var
+R6125:6128 prosa.classic.model.priority <> tsk1:59 var
+R6133:6143 prosa.classic.model.priority <> Priority.KnownFPPolicies.task_period var
+R6145:6148 prosa.classic.model.priority <> tsk2:60 var
+def 6240:6241 Priority DM
+R6255:6258 prosa.classic.model.priority <> Priority.KnownFPPolicies.Task var
+binder 6244:6247 <> tsk1:61
+binder 6249:6252 <> tsk2:62
+R6288:6291 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R6270:6282 prosa.classic.model.priority <> Priority.KnownFPPolicies.task_deadline var
+R6284:6287 prosa.classic.model.priority <> tsk1:61 var
+R6292:6304 prosa.classic.model.priority <> Priority.KnownFPPolicies.task_deadline var
+R6306:6309 prosa.classic.model.priority <> tsk2:62 var
+sec 6325:6334 Priority.KnownFPPolicies Properties
+prf 6379:6393 Priority RM_is_reflexive
+R6397:6411 prosa.classic.model.priority Priority FP_is_reflexive def
+R6413:6414 prosa.classic.model.priority Priority RM def
+R6445:6459 prosa.classic.model.priority Priority FP_is_reflexive def
+R6462:6470 Corelib.ssr.ssrbool <> reflexive def
+R6473:6474 prosa.classic.model.priority Priority RM def
+R6506:6510 mathcomp.boot.ssrnat <> leqnn thm
+R6506:6510 mathcomp.boot.ssrnat <> leqnn thm
+prf 6567:6582 Priority RM_is_transitive
+R6586:6601 prosa.classic.model.priority Priority FP_is_transitive def
+R6603:6604 prosa.classic.model.priority Priority RM def
+R6635:6650 prosa.classic.model.priority Priority FP_is_transitive def
+R6653:6662 Corelib.ssr.ssrbool <> transitive def
+R6665:6666 prosa.classic.model.priority Priority RM def
+R6700:6708 mathcomp.boot.ssrnat <> leq_trans thm
+R6700:6708 mathcomp.boot.ssrnat <> leq_trans thm
+prf 6764:6778 Priority DM_is_reflexive
+R6782:6796 prosa.classic.model.priority Priority FP_is_reflexive def
+R6798:6799 prosa.classic.model.priority Priority DM def
+R6830:6844 prosa.classic.model.priority Priority FP_is_reflexive def
+R6847:6855 Corelib.ssr.ssrbool <> reflexive def
+R6858:6859 prosa.classic.model.priority Priority DM def
+R6891:6895 mathcomp.boot.ssrnat <> leqnn thm
+R6891:6895 mathcomp.boot.ssrnat <> leqnn thm
+prf 6952:6967 Priority DM_is_transitive
+R6971:6986 prosa.classic.model.priority Priority FP_is_transitive def
+R6988:6989 prosa.classic.model.priority Priority DM def
+R7020:7035 prosa.classic.model.priority Priority FP_is_transitive def
+R7038:7047 Corelib.ssr.ssrbool <> transitive def
+R7050:7051 prosa.classic.model.priority Priority DM def
+R7085:7093 mathcomp.boot.ssrnat <> leq_trans thm
+R7085:7093 mathcomp.boot.ssrnat <> leq_trans thm
+prf 7165:7205 Priority any_reflexive_FP_respects_sequential_jobs
+R7237:7245 prosa.classic.model.priority Priority FP_policy def
+R7247:7250 prosa.classic.model.priority <> Priority.KnownFPPolicies.Task var
+binder 7223:7234 <> job_priority:63
+R7291:7304 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7263:7277 prosa.classic.model.priority Priority FP_is_reflexive def
+R7279:7290 prosa.classic.model.priority <> job_priority:63 var
+R7305:7333 prosa.classic.model.priority Priority JLFP_respects_sequential_jobs def
+R7369:7378 prosa.classic.model.priority Priority FP_to_JLFP def
+R7389:7400 prosa.classic.model.priority <> job_priority:63 var
+R7380:7387 prosa.classic.model.priority <> Priority.KnownFPPolicies.job_task var
+R7356:7366 prosa.classic.model.priority <> Priority.KnownFPPolicies.job_arrival var
+R7347:7354 prosa.classic.model.priority <> Priority.KnownFPPolicies.job_task var
+R7477:7479 mathcomp.boot.eqtype <> eqP def
+R7501:7510 prosa.classic.model.priority Priority FP_to_JLFP def
+R7571:7580 prosa.classic.model.priority Priority.KnownFPPolicies.Properties <> sec
+R7590:7604 prosa.classic.model.priority Priority.KnownFPPolicies <> sec
+sec 7674:7690 Priority KnownJLFPPolicies
+sec 7728:7730 Priority.KnownJLFPPolicies EDF
+var  7755:7757 Priority.KnownJLFPPolicies.EDF Job
+R7760:7765 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 7784:7794 Priority.KnownJLFPPolicies.EDF job_arrival
+R7800:7803 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7797:7799 prosa.classic.model.priority <> Priority.KnownJLFPPolicies.EDF.Job var
+R7804:7807 prosa.classic.model.time Time time def
+var 7825:7836 Priority.KnownJLFPPolicies.EDF job_deadline
+R7842:7845 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7839:7841 prosa.classic.model.priority <> Priority.KnownJLFPPolicies.EDF.Job var
+R7846:7849 prosa.classic.model.time Time time def
+var 7874:7880 Priority.KnownJLFPPolicies.EDF arr_seq
+R7883:7898 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R7900:7902 prosa.classic.model.priority <> Priority.KnownJLFPPolicies.EDF.Job var
+def 8015:8017 Priority EDF
+R8027:8029 prosa.classic.model.priority <> Priority.KnownJLFPPolicies.EDF.Job var
+binder 8020:8021 <> j1:71
+binder 8023:8024 <> j2:72
+R8075:8078 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R8057:8059 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8043:8053 prosa.classic.model.priority <> Priority.KnownJLFPPolicies.EDF.job_arrival var
+R8055:8056 prosa.classic.model.priority <> j1:71 var
+R8060:8071 prosa.classic.model.priority <> Priority.KnownJLFPPolicies.EDF.job_deadline var
+R8073:8074 prosa.classic.model.priority <> j1:71 var
+R8093:8095 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8079:8089 prosa.classic.model.priority <> Priority.KnownJLFPPolicies.EDF.job_arrival var
+R8091:8092 prosa.classic.model.priority <> j2:72 var
+R8096:8107 prosa.classic.model.priority <> Priority.KnownJLFPPolicies.EDF.job_deadline var
+R8109:8110 prosa.classic.model.priority <> j2:72 var
+sec 8128:8137 Priority.KnownJLFPPolicies.EDF Properties
+prf 8195:8210 Priority EDF_is_reflexive
+R8214:8230 prosa.classic.model.priority Priority JLFP_is_reflexive def
+R8232:8234 prosa.classic.model.priority Priority EDF def
+R8283:8287 mathcomp.boot.ssrnat <> leqnn thm
+R8283:8287 mathcomp.boot.ssrnat <> leqnn thm
+prf 8351:8367 Priority EDF_is_transitive
+R8371:8388 prosa.classic.model.priority Priority JLFP_is_transitive def
+R8390:8392 prosa.classic.model.priority Priority EDF def
+R8445:8453 mathcomp.boot.ssrnat <> leq_trans thm
+R8445:8453 mathcomp.boot.ssrnat <> leq_trans thm
+prf 8512:8523 Priority EDF_is_total
+R8527:8539 prosa.classic.model.priority Priority JLFP_is_total def
+R8549:8551 prosa.classic.model.priority Priority EDF def
+R8541:8547 prosa.classic.model.priority <> Priority.KnownJLFPPolicies.EDF.arr_seq var
+R8586:8588 prosa.classic.model.priority Priority EDF def
+R8629:8632 mathcomp.boot.ssrnat <> leqP thm
+R8702:8704 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8689:8699 prosa.classic.model.priority <> Priority.KnownJLFPPolicies.EDF.job_arrival var
+R8705:8716 prosa.classic.model.priority <> Priority.KnownJLFPPolicies.EDF.job_deadline var
+R8648:8650 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8635:8645 prosa.classic.model.priority <> Priority.KnownJLFPPolicies.EDF.job_arrival var
+R8651:8662 prosa.classic.model.priority <> Priority.KnownJLFPPolicies.EDF.job_deadline var
+R8747:8750 Corelib.ssr.ssrbool <> orTb thm
+R8629:8632 mathcomp.boot.ssrnat <> leqP thm
+R8702:8704 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8689:8699 prosa.classic.model.priority <> Priority.KnownJLFPPolicies.EDF.job_arrival var
+R8705:8716 prosa.classic.model.priority <> Priority.KnownJLFPPolicies.EDF.job_deadline var
+R8648:8650 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8635:8645 prosa.classic.model.priority <> Priority.KnownJLFPPolicies.EDF.job_arrival var
+R8651:8662 prosa.classic.model.priority <> Priority.KnownJLFPPolicies.EDF.job_deadline var
+R8747:8750 Corelib.ssr.ssrbool <> orTb thm
+R8747:8750 Corelib.ssr.ssrbool <> orTb thm
+R8762:8765 mathcomp.boot.ssrnat <> ltnW thm
+R8799:8808 prosa.classic.model.priority Priority.KnownJLFPPolicies.EDF.Properties <> sec
+R8820:8822 prosa.classic.model.priority Priority.KnownJLFPPolicies.EDF <> sec
+sec 8878:8889 Priority.KnownJLFPPolicies EDFwithTasks
+var  8914:8917 Priority.KnownJLFPPolicies.EDFwithTasks Task
+R8920:8925 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 8944:8956 Priority.KnownJLFPPolicies.EDFwithTasks task_deadline
+R8963:8966 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8959:8962 prosa.classic.model.priority <> Priority.KnownJLFPPolicies.EDFwithTasks.Task var
+R8967:8970 prosa.classic.model.time Time time def
+var  8989:8991 Priority.KnownJLFPPolicies.EDFwithTasks Job
+R8994:8999 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 9018:9028 Priority.KnownJLFPPolicies.EDFwithTasks job_arrival
+R9034:9037 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9031:9033 prosa.classic.model.priority <> Priority.KnownJLFPPolicies.EDFwithTasks.Job var
+R9038:9041 prosa.classic.model.time Time time def
+var 9059:9066 Priority.KnownJLFPPolicies.EDFwithTasks job_task
+R9072:9075 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9069:9071 prosa.classic.model.priority <> Priority.KnownJLFPPolicies.EDFwithTasks.Job var
+R9076:9079 prosa.classic.model.priority <> Priority.KnownJLFPPolicies.EDFwithTasks.Task var
+def 9236:9255 Priority job_relative_dealine
+R9261:9263 prosa.classic.model.priority <> Priority.KnownJLFPPolicies.EDFwithTasks.Job var
+binder 9258:9258 <> j:81
+R9269:9281 prosa.classic.model.priority <> Priority.KnownJLFPPolicies.EDFwithTasks.task_deadline var
+R9284:9291 prosa.classic.model.priority <> Priority.KnownJLFPPolicies.EDFwithTasks.job_task var
+R9293:9293 prosa.classic.model.priority <> j:81 var
+prf 9351:9378 Priority EDF_respects_sequential_jobs
+R9389:9417 prosa.classic.model.priority Priority JLFP_respects_sequential_jobs def
+R9451:9453 prosa.classic.model.priority Priority EDF def
+R9467:9486 prosa.classic.model.priority Priority job_relative_dealine def
+R9455:9465 prosa.classic.model.priority <> Priority.KnownJLFPPolicies.EDFwithTasks.job_arrival var
+R9438:9448 prosa.classic.model.priority <> Priority.KnownJLFPPolicies.EDFwithTasks.job_arrival var
+R9429:9436 prosa.classic.model.priority <> Priority.KnownJLFPPolicies.EDFwithTasks.job_task var
+R9555:9557 mathcomp.boot.eqtype <> eqP def
+R9579:9581 prosa.classic.model.priority Priority EDF def
+R9584:9603 prosa.classic.model.priority Priority job_relative_dealine def
+R9640:9648 mathcomp.boot.ssrnat <> leq_add2r thm
+R9640:9648 mathcomp.boot.ssrnat <> leq_add2r thm
+R9640:9648 mathcomp.boot.ssrnat <> leq_add2r thm
+R9677:9688 prosa.classic.model.priority Priority.KnownJLFPPolicies.EDFwithTasks <> sec
+R9702:9718 prosa.classic.model.priority Priority.KnownJLFPPolicies <> sec
+sec 9810:9833 Priority PossibleInterferingTasks
+var  9850:9862 Priority.PossibleInterferingTasks sporadic_task
+R9865:9870 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 9887:9895 Priority.PossibleInterferingTasks task_cost
+R9911:9914 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9898:9910 prosa.classic.model.priority <> Priority.PossibleInterferingTasks.sporadic_task var
+R9915:9918 prosa.classic.model.time Time time def
+var 9934:9944 Priority.PossibleInterferingTasks task_period
+R9960:9963 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9947:9959 prosa.classic.model.priority <> Priority.PossibleInterferingTasks.sporadic_task var
+R9964:9967 prosa.classic.model.time Time time def
+var 9983:9995 Priority.PossibleInterferingTasks task_deadline
+R10011:10014 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9998:10010 prosa.classic.model.priority <> Priority.PossibleInterferingTasks.sporadic_task var
+R10015:10018 prosa.classic.model.time Time time def
+sec 10034:10035 Priority.PossibleInterferingTasks FP
+var 10087:10104 Priority.PossibleInterferingTasks.FP higher_eq_priority
+R10107:10115 prosa.classic.model.priority Priority FP_policy def
+R10117:10129 prosa.classic.model.priority <> Priority.PossibleInterferingTasks.sporadic_task var
+var 10199:10201 Priority.PossibleInterferingTasks.FP tsk
+R10204:10216 prosa.classic.model.priority <> Priority.PossibleInterferingTasks.sporadic_task var
+var 10285:10293 Priority.PossibleInterferingTasks.FP tsk_other
+R10296:10308 prosa.classic.model.priority <> Priority.PossibleInterferingTasks.sporadic_task var
+def 10484:10503 Priority higher_priority_task
+R10548:10560 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R10577:10577 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R10516:10533 prosa.classic.model.priority <> Priority.PossibleInterferingTasks.FP.higher_eq_priority var
+R10535:10543 prosa.classic.model.priority <> Priority.PossibleInterferingTasks.FP.tsk_other var
+R10545:10547 prosa.classic.model.priority <> Priority.PossibleInterferingTasks.FP.tsk var
+R10570:10573 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R10561:10569 prosa.classic.model.priority <> Priority.PossibleInterferingTasks.FP.tsk_other var
+R10574:10576 prosa.classic.model.priority <> Priority.PossibleInterferingTasks.FP.tsk var
+R10589:10590 prosa.classic.model.priority Priority.PossibleInterferingTasks.FP <> sec
+sec 10606:10609 Priority.PossibleInterferingTasks JLFP
+var 10679:10681 Priority.PossibleInterferingTasks.JLFP tsk
+R10684:10696 prosa.classic.model.priority <> Priority.PossibleInterferingTasks.sporadic_task var
+var 10765:10773 Priority.PossibleInterferingTasks.JLFP tsk_other
+R10776:10788 prosa.classic.model.priority <> Priority.PossibleInterferingTasks.sporadic_task var
+def 10950:10963 Priority different_task
+R10977:10980 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R10968:10976 prosa.classic.model.priority <> Priority.PossibleInterferingTasks.JLFP.tsk_other var
+R10981:10983 prosa.classic.model.priority <> Priority.PossibleInterferingTasks.JLFP.tsk var
+R10995:10998 prosa.classic.model.priority Priority.PossibleInterferingTasks.JLFP <> sec
+R11012:11035 prosa.classic.model.priority Priority.PossibleInterferingTasks <> sec
+R11045:11052 prosa.classic.model.priority Priority <> mod

@@ -1,0 +1,97 @@
+DIGEST dedc4b52e09f6310e9c322da70fd6359
+Fprosa.classic.analysis.apa.interference_bound_fp
+R15:36 prosa.classic.util.all <> <> lib
+R54:81 prosa.classic.model.priority <> <> lib
+R99:142 prosa.classic.model.schedule.global.workload <> <> lib
+R160:209 prosa.classic.model.schedule.global.basic.schedule <> <> lib
+R227:271 prosa.classic.model.schedule.apa.interference <> <> lib
+R273:313 prosa.classic.model.schedule.apa.affinity <> <> lib
+R331:371 prosa.classic.analysis.apa.workload_bound <> <> lib
+R373:417 prosa.classic.analysis.apa.interference_bound <> <> lib
+R449:457 mathcomp.boot.ssreflect <> <> lib
+R459:465 mathcomp.boot.ssrbool <> <> lib
+R467:472 mathcomp.boot.eqtype <> <> lib
+R474:479 mathcomp.boot.ssrnat <> <> lib
+R481:483 mathcomp.boot.seq <> <> lib
+R485:491 mathcomp.boot.fintype <> <> lib
+R493:497 mathcomp.boot.bigop <> <> lib
+mod 508:526 <> InterferenceBoundFP
+R539:546 prosa.classic.model.schedule.global.basic.schedule Schedule <> mod
+R548:560 prosa.classic.analysis.apa.workload_bound WorkloadBound <> mod
+R562:569 prosa.classic.model.priority Priority <> mod
+R571:582 prosa.classic.model.schedule.apa.interference Interference <> mod
+R584:591 prosa.classic.model.schedule.apa.affinity Affinity <> mod
+R603:626 prosa.classic.analysis.apa.interference_bound InterferenceBoundGeneric <> mod
+sec 642:652 InterferenceBoundFP Definitions
+var  673:685 InterferenceBoundFP.Definitions sporadic_task
+R688:693 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 710:718 InterferenceBoundFP.Definitions task_cost
+R734:737 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R721:733 prosa.classic.analysis.apa.interference_bound_fp <> InterferenceBoundFP.Definitions.sporadic_task var
+R738:741 prosa.classic.model.time Time time def
+var 757:767 InterferenceBoundFP.Definitions task_period
+R783:786 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R770:782 prosa.classic.analysis.apa.interference_bound_fp <> InterferenceBoundFP.Definitions.sporadic_task var
+R787:790 prosa.classic.model.time Time time def
+var 806:818 InterferenceBoundFP.Definitions task_deadline
+R834:837 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R821:833 prosa.classic.analysis.apa.interference_bound_fp <> InterferenceBoundFP.Definitions.sporadic_task var
+R838:841 prosa.classic.model.time Time time def
+var  926:933 InterferenceBoundFP.Definitions num_cpus
+R936:938 Corelib.Init.Datatypes <> nat ind
+var 955:959 InterferenceBoundFP.Definitions alpha
+R962:974 prosa.classic.model.schedule.apa.affinity Affinity task_affinity def
+R990:997 prosa.classic.analysis.apa.interference_bound_fp <> InterferenceBoundFP.Definitions.num_cpus var
+R976:988 prosa.classic.analysis.apa.interference_bound_fp <> InterferenceBoundFP.Definitions.sporadic_task var
+var 1063:1065 InterferenceBoundFP.Definitions tsk
+R1068:1080 prosa.classic.analysis.apa.interference_bound_fp <> InterferenceBoundFP.Definitions.sporadic_task var
+var 1137:1142 InterferenceBoundFP.Definitions alpha'
+R1145:1152 prosa.classic.model.schedule.apa.affinity Affinity affinity def
+R1154:1161 prosa.classic.analysis.apa.interference_bound_fp <> InterferenceBoundFP.Definitions.num_cpus var
+var 1173:1195 InterferenceBoundFP.Definitions task_with_response_time
+R1214:1216 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R1201:1213 prosa.classic.analysis.apa.interference_bound_fp <> InterferenceBoundFP.Definitions.sporadic_task var
+R1217:1220 prosa.classic.model.time Time time def
+var 1322:1327 InterferenceBoundFP.Definitions R_prev
+R1330:1332 mathcomp.boot.seq <> seq abbrev
+R1334:1356 prosa.classic.analysis.apa.interference_bound_fp <> InterferenceBoundFP.Definitions.task_with_response_time var
+var 1417:1421 InterferenceBoundFP.Definitions delta
+R1424:1427 prosa.classic.model.time Time time def
+var 1481:1498 InterferenceBoundFP.Definitions higher_eq_priority
+R1501:1509 prosa.classic.model.priority Priority FP_policy def
+R1511:1523 prosa.classic.analysis.apa.interference_bound_fp <> InterferenceBoundFP.Definitions.sporadic_task var
+var 1584:1607 InterferenceBoundFP.Definitions total_interference_bound
+R1612:1637 prosa.classic.analysis.apa.interference_bound InterferenceBoundGeneric interference_bound_generic def
+R1665:1669 prosa.classic.analysis.apa.interference_bound_fp <> InterferenceBoundFP.Definitions.delta var
+R1661:1663 prosa.classic.analysis.apa.interference_bound_fp <> InterferenceBoundFP.Definitions.tsk var
+R1649:1659 prosa.classic.analysis.apa.interference_bound_fp <> InterferenceBoundFP.Definitions.task_period var
+R1639:1647 prosa.classic.analysis.apa.interference_bound_fp <> InterferenceBoundFP.Definitions.task_cost var
+var 1776:1785 InterferenceBoundFP.Definitions hp_task_in
+binder 1787:1792 <> alpha':21
+R1797:1819 prosa.classic.model.schedule.apa.interference Interference higher_priority_task_in def
+R1850:1855 prosa.classic.analysis.apa.interference_bound_fp <> alpha':21 var
+R1846:1848 prosa.classic.analysis.apa.interference_bound_fp <> InterferenceBoundFP.Definitions.tsk var
+R1827:1844 prosa.classic.analysis.apa.interference_bound_fp <> InterferenceBoundFP.Definitions.higher_eq_priority var
+R1821:1825 prosa.classic.analysis.apa.interference_bound_fp <> InterferenceBoundFP.Definitions.alpha var
+def 2022:2048 InterferenceBoundFP total_interference_bound_fp
+R2059:2065 prosa.classic.util.notation <> ::nat_scope:'\sum_'_'('_'('_x_','_x_')'_'<-'_x_'|'_x_')'_x not
+R2075:2076 prosa.classic.util.notation <> ::nat_scope:'\sum_'_'('_'('_x_','_x_')'_'<-'_x_'|'_x_')'_x not
+R2084:2088 prosa.classic.util.notation <> ::nat_scope:'\sum_'_'('_'('_x_','_x_')'_'<-'_x_'|'_x_')'_x not
+R2095:2097 prosa.classic.util.notation <> ::nat_scope:'\sum_'_'('_'('_x_','_x_')'_'<-'_x_'|'_x_')'_x not
+R2125:2135 prosa.classic.util.notation <> ::nat_scope:'\sum_'_'('_'('_x_','_x_')'_'<-'_x_'|'_x_')'_x not
+R2089:2094 prosa.classic.analysis.apa.interference_bound_fp <> InterferenceBoundFP.Definitions.R_prev var
+binder 2066:2074 <> tsk_other:22
+binder 2077:2083 <> R_other:23
+R2098:2107 prosa.classic.analysis.apa.interference_bound_fp <> InterferenceBoundFP.Definitions.hp_task_in var
+R2109:2114 prosa.classic.analysis.apa.interference_bound_fp <> InterferenceBoundFP.Definitions.alpha' var
+R2116:2124 prosa.classic.analysis.apa.interference_bound_fp <> tsk_other:22 var
+binder 2066:2074 <> tsk_other:24
+binder 2077:2083 <> R_other:25
+R2136:2159 prosa.classic.analysis.apa.interference_bound_fp <> InterferenceBoundFP.Definitions.total_interference_bound var
+R2161:2161 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2171:2172 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2180:2180 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2162:2170 prosa.classic.analysis.apa.interference_bound_fp <> tsk_other:24 var
+R2173:2179 prosa.classic.analysis.apa.interference_bound_fp <> R_other:25 var
+R2196:2206 prosa.classic.analysis.apa.interference_bound_fp InterferenceBoundFP.Definitions <> sec
+R2214:2232 prosa.classic.analysis.apa.interference_bound_fp InterferenceBoundFP <> mod

@@ -1,0 +1,284 @@
+DIGEST 2e959cf93dd90114b696315d1c913818
+Fprosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta
+R15:36 prosa.classic.util.all <> <> lib
+R54:90 prosa.classic.model.arrival.basic.job <> <> lib
+R92:129 prosa.classic.model.arrival.basic.task <> <> lib
+R131:180 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R197:224 prosa.classic.model.priority <> <> lib
+R226:255 prosa.classic.model.suspension <> <> lib
+R257:302 prosa.classic.model.arrival.basic.task_arrival <> <> lib
+R320:360 prosa.classic.model.schedule.uni.schedule <> <> lib
+R362:408 prosa.classic.model.schedule.uni.schedulability <> <> lib
+R426:483 prosa.classic.model.schedule.uni.susp.suspension_intervals <> <> lib
+R500:545 prosa.classic.model.schedule.uni.susp.schedule <> <> lib
+R547:592 prosa.classic.model.schedule.uni.susp.platform <> <> lib
+R610:653 prosa.classic.analysis.uni.basic.fp_rta_comp <> <> lib
+R671:729 prosa.classic.analysis.uni.susp.dynamic.oblivious.reduction <> <> lib
+R761:769 mathcomp.boot.ssreflect <> <> lib
+R771:777 mathcomp.boot.ssrbool <> <> lib
+R779:784 mathcomp.boot.eqtype <> <> lib
+R786:791 mathcomp.boot.ssrnat <> <> lib
+R793:795 mathcomp.boot.seq <> <> lib
+R797:803 mathcomp.boot.fintype <> <> lib
+R805:809 mathcomp.boot.bigop <> <> lib
+mod 820:840 <> SuspensionObliviousFP
+R853:855 prosa.classic.model.arrival.basic.job Job <> mod
+R857:867 prosa.classic.model.arrival.basic.task_arrival TaskArrival <> mod
+R869:883 prosa.classic.model.arrival.basic.task SporadicTaskset <> mod
+R885:894 prosa.classic.model.suspension Suspension <> mod
+R896:903 prosa.classic.model.priority Priority <> mod
+R905:918 prosa.classic.model.schedule.uni.schedulability Schedulability <> mod
+R929:951 prosa.classic.model.schedule.uni.susp.platform PlatformWithSuspensions <> mod
+R953:971 prosa.classic.model.schedule.uni.susp.suspension_intervals SuspensionIntervals <> mod
+R983:1005 prosa.classic.analysis.uni.basic.fp_rta_comp ResponseTimeIterationFP <> mod
+R1007:1030 prosa.classic.analysis.uni.susp.dynamic.oblivious.reduction ReductionToBasicSchedule <> mod
+sec 1378:1401 SuspensionObliviousFP ReductionToBasicAnalysis
+var  1418:1429 SuspensionObliviousFP.ReductionToBasicAnalysis SporadicTask
+R1432:1437 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1454:1462 SuspensionObliviousFP.ReductionToBasicAnalysis task_cost
+R1477:1480 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1465:1476 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.SporadicTask var
+R1481:1484 prosa.classic.model.time Time time def
+var 1500:1510 SuspensionObliviousFP.ReductionToBasicAnalysis task_period
+R1525:1528 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1513:1524 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.SporadicTask var
+R1529:1532 prosa.classic.model.time Time time def
+var 1548:1560 SuspensionObliviousFP.ReductionToBasicAnalysis task_deadline
+R1575:1578 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1563:1574 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.SporadicTask var
+R1579:1582 prosa.classic.model.time Time time def
+var  1603:1605 SuspensionObliviousFP.ReductionToBasicAnalysis Job
+R1608:1613 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1630:1640 SuspensionObliviousFP.ReductionToBasicAnalysis job_arrival
+R1646:1649 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1643:1645 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.Job var
+R1650:1653 prosa.classic.model.time Time time def
+var 1669:1676 SuspensionObliviousFP.ReductionToBasicAnalysis job_cost
+R1682:1685 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1679:1681 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.Job var
+R1686:1689 prosa.classic.model.time Time time def
+var 1705:1716 SuspensionObliviousFP.ReductionToBasicAnalysis job_deadline
+R1722:1725 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1719:1721 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.Job var
+R1726:1729 prosa.classic.model.time Time time def
+var 1745:1752 SuspensionObliviousFP.ReductionToBasicAnalysis job_task
+R1758:1761 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1755:1757 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.Job var
+R1762:1773 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.SporadicTask var
+var 1841:1842 SuspensionObliviousFP.ReductionToBasicAnalysis ts
+R1845:1854 prosa.classic.model.arrival.basic.task SporadicTaskset taskset_of def
+R1856:1867 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.SporadicTask var
+var 1942:1964 SuspensionObliviousFP.ReductionToBasicAnalysis H_valid_task_parameters
+R1973:1994 prosa.classic.model.arrival.basic.task SporadicTaskset valid_sporadic_taskset def
+R2032:2033 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.ts var
+R2018:2030 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.task_deadline var
+R2006:2016 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.task_period var
+R1996:2004 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.task_cost var
+var 2149:2155 SuspensionObliviousFP.ReductionToBasicAnalysis arr_seq
+R2158:2173 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R2175:2177 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.Job var
+var 2195:2224 SuspensionObliviousFP.ReductionToBasicAnalysis H_arrival_times_are_consistent
+R2227:2254 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_times_are_consistent def
+R2268:2274 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.arr_seq var
+R2256:2266 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.job_arrival var
+var 2296:2322 SuspensionObliviousFP.ReductionToBasicAnalysis H_arrival_sequence_is_a_set
+R2325:2349 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence_is_a_set def
+R2351:2357 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.arr_seq var
+var 2434:2452 SuspensionObliviousFP.ReductionToBasicAnalysis H_jobs_from_taskset
+binder 2468:2468 <> j:27
+R2491:2494 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2471:2480 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R2490:2490 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> j:27 var
+R2482:2488 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.arr_seq var
+R2505:2509 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R2495:2502 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.job_task var
+R2504:2504 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> j:27 var
+R2510:2511 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.ts var
+var 2568:2589 SuspensionObliviousFP.ReductionToBasicAnalysis H_valid_job_parameters
+binder 2605:2605 <> j:30
+R2636:2647 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2616:2625 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R2635:2635 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> j:30 var
+R2627:2633 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.arr_seq var
+R2648:2665 prosa.classic.model.arrival.basic.job Job valid_sporadic_job def
+R2722:2722 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> j:30 var
+R2713:2720 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.job_task var
+R2700:2711 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.job_deadline var
+R2691:2698 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.job_cost var
+R2677:2689 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.task_deadline var
+R2667:2675 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.task_cost var
+var 2792:2807 SuspensionObliviousFP.ReductionToBasicAnalysis H_sporadic_tasks
+R2816:2834 prosa.classic.model.arrival.basic.task_arrival TaskArrival sporadic_task_model def
+R2869:2875 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.arr_seq var
+R2860:2867 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.job_task var
+R2848:2858 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.job_arrival var
+R2836:2846 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.task_period var
+var 3022:3039 SuspensionObliviousFP.ReductionToBasicAnalysis higher_eq_priority
+R3042:3050 prosa.classic.model.priority Priority FP_policy def
+R3052:3063 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.SporadicTask var
+var 3081:3103 SuspensionObliviousFP.ReductionToBasicAnalysis H_priority_is_reflexive
+R3106:3120 prosa.classic.model.priority Priority FP_is_reflexive def
+R3122:3139 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.higher_eq_priority var
+var 3157:3180 SuspensionObliviousFP.ReductionToBasicAnalysis H_priority_is_transitive
+R3183:3198 prosa.classic.model.priority Priority FP_is_transitive def
+R3200:3217 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.higher_eq_priority var
+var 3235:3253 SuspensionObliviousFP.ReductionToBasicAnalysis H_priority_is_total
+R3256:3280 prosa.classic.model.priority Priority FP_is_total_over_task_set def
+R3301:3302 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.ts var
+R3282:3299 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.higher_eq_priority var
+var 3445:3459 SuspensionObliviousFP.ReductionToBasicAnalysis next_suspension
+R3462:3475 prosa.classic.model.suspension Suspension job_suspension def
+R3477:3479 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.Job var
+var 3495:3515 SuspensionObliviousFP.ReductionToBasicAnalysis task_suspension_bound
+R3530:3533 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3518:3529 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.SporadicTask var
+R3534:3537 prosa.classic.model.time Time time def
+var 3555:3575 SuspensionObliviousFP.ReductionToBasicAnalysis H_dynamic_suspensions
+R3584:3607 prosa.classic.model.suspension Suspension dynamic_suspension_model def
+R3643:3663 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.task_suspension_bound var
+R3627:3641 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.next_suspension var
+R3618:3625 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.job_task var
+R3609:3616 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.job_cost var
+var 3778:3790 SuspensionObliviousFP.ReductionToBasicAnalysis inflated_cost
+R3795:3812 prosa.classic.analysis.uni.susp.dynamic.oblivious.reduction ReductionToBasicSchedule inflated_task_cost def
+R3824:3844 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.task_suspension_bound var
+R3814:3822 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.task_cost var
+var 3966:4003 SuspensionObliviousFP.ReductionToBasicAnalysis H_inflated_cost_le_deadline_and_period
+binder 4019:4021 <> tsk:49
+R4042:4055 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4035:4039 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R4032:4034 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> tsk:49 var
+R4040:4041 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.ts var
+R4094:4107 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4073:4076 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R4056:4068 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.inflated_cost var
+R4070:4072 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> tsk:49 var
+R4077:4089 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.task_deadline var
+R4091:4093 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> tsk:49 var
+R4125:4128 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R4108:4120 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.inflated_cost var
+R4122:4124 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> tsk:49 var
+R4129:4139 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.task_period var
+R4141:4143 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> tsk:49 var
+sec 4224:4232 SuspensionObliviousFP.ReductionToBasicAnalysis MainProof
+var 4329:4333 SuspensionObliviousFP.ReductionToBasicAnalysis.MainProof sched
+R4336:4343 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R4345:4347 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.Job var
+var 4367:4399 SuspensionObliviousFP.ReductionToBasicAnalysis.MainProof H_jobs_come_from_arrival_sequence
+R4410:4440 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule jobs_come_from_arrival_sequence def
+R4448:4454 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.arr_seq var
+R4442:4446 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.MainProof.sched var
+var 4535:4563 SuspensionObliviousFP.ReductionToBasicAnalysis.MainProof H_jobs_must_arrive_to_execute
+R4566:4592 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule jobs_must_arrive_to_execute def
+R4606:4610 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.MainProof.sched var
+R4594:4604 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.job_arrival var
+var 4688:4716 SuspensionObliviousFP.ReductionToBasicAnalysis.MainProof H_completed_jobs_dont_execute
+R4719:4745 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_jobs_dont_execute def
+R4756:4760 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.MainProof.sched var
+R4747:4754 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.job_cost var
+var 4881:4897 SuspensionObliviousFP.ReductionToBasicAnalysis.MainProof H_work_conserving
+R4900:4914 prosa.classic.model.schedule.uni.susp.platform PlatformWithSuspensions work_conserving def
+R4961:4965 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.MainProof.sched var
+R4953:4959 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.arr_seq var
+R4937:4951 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.next_suspension var
+R4928:4935 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.job_cost var
+R4916:4926 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.job_arrival var
+var 5044:5062 SuspensionObliviousFP.ReductionToBasicAnalysis.MainProof H_respects_priority
+R5073:5090 prosa.classic.model.schedule.uni.susp.platform PlatformWithSuspensions respects_FP_policy def
+R5179:5196 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.higher_eq_priority var
+R5173:5177 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.MainProof.sched var
+R5138:5144 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.arr_seq var
+R5122:5136 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.next_suspension var
+R5113:5120 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.job_task var
+R5104:5111 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.job_cost var
+R5092:5102 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.job_arrival var
+var 5289:5315 SuspensionObliviousFP.ReductionToBasicAnalysis.MainProof H_respects_self_suspensions
+R5326:5350 prosa.classic.model.schedule.uni.susp.suspension_intervals SuspensionIntervals respects_self_suspensions def
+R5389:5393 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.MainProof.sched var
+R5373:5387 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.next_suspension var
+R5364:5371 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.job_cost var
+R5352:5362 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.job_arrival var
+var 5471:5489 SuspensionObliviousFP.ReductionToBasicAnalysis.MainProof task_is_schedulable
+R5502:5524 prosa.classic.model.schedule.uni.schedulability Schedulability task_misses_no_deadline def
+R5577:5581 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.MainProof.sched var
+R5569:5575 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.arr_seq var
+R5560:5567 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.job_task var
+R5547:5558 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.job_deadline var
+R5538:5545 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.job_cost var
+R5526:5536 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.job_arrival var
+var 5723:5747 SuspensionObliviousFP.ReductionToBasicAnalysis.MainProof claimed_to_be_schedulable
+R5760:5773 prosa.classic.analysis.uni.basic.fp_rta_comp ResponseTimeIterationFP fp_schedulable def
+R5815:5832 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.higher_eq_priority var
+R5801:5813 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.task_deadline var
+R5789:5799 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.task_period var
+R5775:5787 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.inflated_cost var
+var 5948:5996 SuspensionObliviousFP.ReductionToBasicAnalysis.MainProof H_claimed_schedulable_by_suspension_oblivious_RTA
+R6007:6031 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.MainProof.claimed_to_be_schedulable var
+R6033:6034 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.ts var
+prf 6283:6332 SuspensionObliviousFP suspension_oblivious_fp_rta_implies_schedulability
+binder 6350:6352 <> tsk:68
+R6375:6388 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6368:6372 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R6365:6367 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> tsk:68 var
+R6373:6374 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.ts var
+R6389:6407 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.MainProof.task_is_schedulable var
+R6409:6411 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> tsk:68 var
+R6744:6753 prosa.classic.model.priority Priority FP_to_JLDP def
+R6764:6781 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.higher_eq_priority var
+R6755:6762 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.job_task var
+R6811:6817 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.arr_seq var
+R6840:6854 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.next_suspension var
+R6655:6699 prosa.classic.analysis.uni.susp.dynamic.oblivious.reduction ReductionToBasicSchedule suspension_oblivious_preserves_schedulability thm
+R6744:6753 prosa.classic.model.priority Priority FP_to_JLDP def
+R6764:6781 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.higher_eq_priority var
+R6755:6762 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.job_task var
+R6811:6817 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.arr_seq var
+R6840:6854 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.next_suspension var
+R6655:6699 prosa.classic.analysis.uni.susp.dynamic.oblivious.reduction ReductionToBasicSchedule suspension_oblivious_preserves_schedulability thm
+R6908:6931 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.H_priority_is_transitive var
+R6908:6931 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.H_priority_is_transitive var
+R6979:6981 Corelib.ssr.ssrbool <> orP thm
+R6990:7008 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.H_priority_is_total var
+R6979:6981 Corelib.ssr.ssrbool <> orP thm
+R6990:7008 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.H_priority_is_total var
+R7086:7098 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.inflated_cost var
+R7108:7109 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.ts var
+R7140:7150 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.task_period var
+R7171:7183 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.task_deadline var
+R7199:7206 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.job_task var
+R7244:7261 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.higher_eq_priority var
+R7040:7065 prosa.classic.analysis.uni.basic.fp_rta_comp ResponseTimeIterationFP jobs_schedulable_by_fp_rta thm
+R7086:7098 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.inflated_cost var
+R7108:7109 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.ts var
+R7140:7150 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.task_period var
+R7171:7183 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.task_deadline var
+R7199:7206 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.job_task var
+R7244:7261 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.higher_eq_priority var
+R7040:7065 prosa.classic.analysis.uni.basic.fp_rta_comp ResponseTimeIterationFP jobs_schedulable_by_fp_rta thm
+R7299:7347 prosa.classic.analysis.uni.susp.dynamic.oblivious.reduction ReductionToBasicSchedule suspension_oblivious_task_parameters_remain_valid thm
+R7299:7347 prosa.classic.analysis.uni.susp.dynamic.oblivious.reduction ReductionToBasicSchedule suspension_oblivious_task_parameters_remain_valid thm
+R7430:7431 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.ts var
+R7505:7515 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.task_period var
+R7369:7416 prosa.classic.analysis.uni.susp.dynamic.oblivious.reduction ReductionToBasicSchedule suspension_oblivious_job_parameters_remain_valid thm
+R7430:7431 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.ts var
+R7505:7515 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.task_period var
+R7369:7416 prosa.classic.analysis.uni.susp.dynamic.oblivious.reduction ReductionToBasicSchedule suspension_oblivious_job_parameters_remain_valid thm
+R7538:7577 prosa.classic.analysis.uni.susp.dynamic.oblivious.reduction ReductionToBasicSchedule sched_newjobs_come_from_arrival_sequence thm
+R7538:7577 prosa.classic.analysis.uni.susp.dynamic.oblivious.reduction ReductionToBasicSchedule sched_newjobs_come_from_arrival_sequence thm
+R7599:7635 prosa.classic.analysis.uni.susp.dynamic.oblivious.reduction ReductionToBasicSchedule sched_new_jobs_must_arrive_to_execute thm
+R7599:7635 prosa.classic.analysis.uni.susp.dynamic.oblivious.reduction ReductionToBasicSchedule sched_new_jobs_must_arrive_to_execute thm
+R7658:7694 prosa.classic.analysis.uni.susp.dynamic.oblivious.reduction ReductionToBasicSchedule sched_new_completed_jobs_dont_execute thm
+R7658:7694 prosa.classic.analysis.uni.susp.dynamic.oblivious.reduction ReductionToBasicSchedule sched_new_completed_jobs_dont_execute thm
+R7716:7740 prosa.classic.analysis.uni.susp.dynamic.oblivious.reduction ReductionToBasicSchedule sched_new_work_conserving thm
+R7716:7740 prosa.classic.analysis.uni.susp.dynamic.oblivious.reduction ReductionToBasicSchedule sched_new_work_conserving thm
+R7790:7814 prosa.classic.analysis.uni.susp.dynamic.oblivious.reduction ReductionToBasicSchedule sched_new_respects_policy thm
+R7790:7814 prosa.classic.analysis.uni.susp.dynamic.oblivious.reduction ReductionToBasicSchedule sched_new_respects_policy thm
+R7873:7896 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.H_priority_is_transitive var
+R7873:7896 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.H_priority_is_transitive var
+R7947:7949 Corelib.ssr.ssrbool <> orP thm
+R7958:7976 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.H_priority_is_total var
+R7947:7949 Corelib.ssr.ssrbool <> orP thm
+R7958:7976 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta <> SuspensionObliviousFP.ReductionToBasicAnalysis.H_priority_is_total var
+R8022:8030 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta SuspensionObliviousFP.ReductionToBasicAnalysis.MainProof <> sec
+R8040:8063 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta SuspensionObliviousFP.ReductionToBasicAnalysis <> sec
+R8071:8091 prosa.classic.analysis.uni.susp.dynamic.oblivious.fp_rta SuspensionObliviousFP <> mod

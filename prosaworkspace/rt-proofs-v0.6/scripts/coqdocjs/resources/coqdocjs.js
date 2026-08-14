@@ -1,0 +1,308 @@
+var coqdocjs = coqdocjs || {};
+(function(){
+
+function replace(s, letter_subscripts = true){
+  var m;
+  if (m = s.match(/^(.+)'$/)) {
+    return replace(m[1])+"'";
+  } else if (m = s.match(/^([A-Za-z_]*[A-Za-z]+)_?(\d+)$/)) {
+    return replace(m[1], false)+m[2].replace(/(\d)/g, function(d){
+      if (coqdocjs.subscr.hasOwnProperty(d)) {
+        return coqdocjs.subscr[d];
+      } else {
+        return d;
+      }
+    });
+  } else if (letter_subscripts
+             && (m = s.match(/^([A-Za-z_]*[A-Za-z]+)(_[aehijklmnoprstuvx])$/))) {
+    return replace(m[1], false)+m[2].replace(/_([aehijklmnoprstuvx])/g, function(d){
+      last = d[d.length - 1];
+      if (coqdocjs.subscr.hasOwnProperty(last)) {
+        return coqdocjs.subscr[last];
+      } else {
+        return d;
+      }
+    });
+  } else if (coqdocjs.repl.hasOwnProperty(s)){
+    return coqdocjs.repl[s]
+  } else {
+    return s;
+  }
+}
+
+function toArray(nl){
+    return Array.prototype.slice.call(nl);
+}
+
+function replInTextNodes() {
+  coqdocjs.replInText.forEach(function(toReplace){
+    toArray(document.getElementsByClassName("code")).concat(toArray(document.getElementsByClassName("inlinecode"))).forEach(function(elem){
+      toArray(elem.childNodes).forEach(function(node){
+        if (node.nodeType != Node.TEXT_NODE) return;
+        var fragments = node.textContent.split(toReplace);
+        node.textContent = fragments[fragments.length-1];
+        for (var k = 0; k < fragments.length - 1; ++k) {
+          node.parentNode.insertBefore(document.createTextNode(fragments[k]),node);
+          var replacement = document.createElement("span");
+          replacement.appendChild(document.createTextNode(toReplace));
+          replacement.setAttribute("class", "id");
+          replacement.setAttribute("type", "keyword");
+          node.parentNode.insertBefore(replacement, node);
+        }
+      });
+    });
+  });
+}
+
+function replNodes() {
+  toArray(document.getElementsByClassName("id")).forEach(function(node){
+    if (["var", "variable", "keyword", "notation", "definition", "inductive", "binder"].indexOf(node.getAttribute("type"))>=0){
+      var text = node.textContent;
+      var replText = replace(text);
+      if(text != replText) {
+        node.setAttribute("repl", replText);
+        node.setAttribute("title", text);
+        var hidden = document.createElement("span");
+        hidden.setAttribute("class", "hidden");
+        while (node.firstChild) {
+          hidden.appendChild(node.firstChild);
+        }
+        node.appendChild(hidden);
+      }
+    }
+  });
+}
+
+function mergeAdjacentAnchorTags() {
+  // Step 1: Select all <a> elements
+  const aElements = Array.from(document.querySelectorAll("a"));
+
+  // Step 2: Process in reverse order to avoid disrupting the order of elements
+  for (let i = aElements.length - 1; i >= 0; i--) {
+    const a = aElements[i];
+
+    // Step 3: Check if this <a> has exactly one <span> child
+    if (a.children.length !== 1 || a.children[0].tagName !== "SPAN") continue;
+
+    const nextSibling = a.nextSibling;
+
+    // Step 4: Ensure the next sibling is an <a> element
+    if (!nextSibling || nextSibling.tagName !== "A") continue;
+
+    const nextA = nextSibling;
+
+    // Step 5: Check if the next <a> also has exactly one <span> child
+    if (nextA.children.length !== 1 || nextA.children[0].tagName !== "SPAN")
+      continue;
+
+    // Step 6: Check if href and class match
+    if (a.href !== nextA.href || a.className !== nextA.className) continue;
+
+    // Step 7: Extract and compare span attributes
+    const span1 = a.children[0];
+    const span2 = nextA.children[0];
+
+    const spanAttrsMatch =
+      span1.getAttribute("class") === span2.getAttribute("class") &&
+      span1.getAttribute("title") === span2.getAttribute("title") &&
+      span1.getAttribute("type") === span2.getAttribute("type");
+
+    if (!spanAttrsMatch) continue;
+
+    // Step 8: Create the new <a> element
+    const newA = document.createElement("a");
+    newA.href = a.href;
+    newA.className = a.className;
+
+    // Step 9: Create the new <span> with combined content
+    const newSpan = document.createElement("span");
+    newSpan.setAttribute("class", span1.getAttribute("class") || "");
+    newSpan.setAttribute("title", span1.getAttribute("title") || "");
+    newSpan.setAttribute("type", span1.getAttribute("type") || "");
+    newSpan.textContent = span1.textContent + span2.textContent;
+
+    newA.appendChild(newSpan);
+
+    // Step 10: Remove the original elements and insert the new one
+    const parent = a.parentNode;
+    parent.insertBefore(newA, nextA.nextSibling);
+    parent.removeChild(a);
+    parent.removeChild(nextA);
+  }
+}
+
+
+function isVernacStart(l, t){
+  t = t.trim();
+  for(var s of l){
+    if (t == s || t.startsWith(s+" ") || t.startsWith(s+".")){
+      return true;
+    }
+  }
+  return false;
+}
+
+function isProofStart(n){
+    return isVernacStart(["Proof"], n.textContent) ||
+        (isVernacStart(["Next"], n.textContent) && isVernacStart(["Obligation"], n.nextSibling.nextSibling.textContent));
+}
+
+function isProofEnd(s){
+  return isVernacStart(["Qed", "Admitted", "Defined", "Abort"], s);
+}
+
+function eventuallyProofStart(node) {
+  while (node && !isProofStart(node)) {
+    node = node.nextSibling;
+  }
+  return node !== null;
+}
+
+function eventuallyProofEnd(node) {
+  while (node && !isProofEnd(node.textContent)) {
+    node = node.nextSibling;
+  }
+  return node !== null;
+}
+
+function mergeNextSibling(node) {
+  ns = node.nextSibling;
+  while (ns && (ns.nodeType != Node.ELEMENT_NODE || ns.firstChild === null)) {
+    ns = ns.nextSibling;
+  }
+  if (ns === null) {
+    return false;
+  }
+  if (ns.getAttribute("class") == "doc") {
+    /* fold comments interspersed in the proof into the given node */
+    ns.setAttribute("class", "doc-in-proof");
+    // node.appendChild(document.createElement("hr"));
+    node.appendChild(ns);
+    // node.appendChild(document.createElement("hr"));
+  } else if (
+    !eventuallyProofEnd(ns.firstChild) &&
+    eventuallyProofStart(ns.firstChild)
+  ) {
+    /* this doesn't look right, another proof is starting already */
+    return false;
+  } else {
+    /* merge next code block into node */
+    while (ns.firstChild) {
+      node.appendChild(ns.firstChild);
+    }
+  }
+  return true;
+}
+
+function proofStatus(){
+  var proofs = toArray(document.getElementsByClassName("proof"));
+  if(proofs.length) {
+    for(var proof of proofs) {
+      if (proof.getAttribute("show") === "false") {
+          return "some-hidden";
+      }
+    }
+    return "all-shown";
+  }
+  else {
+    return "no-proofs";
+  }
+}
+
+function updateView(){
+  document.getElementById("toggle-proofs").setAttribute("proof-status", proofStatus());
+}
+
+function foldProofs() {
+  var hasCommands = true;
+  var nodes = document.getElementsByClassName("command");
+  if(nodes.length == 0) {
+    hasCommands = false;
+    console.log("no command tags found")
+    nodes = document.getElementsByClassName("id");
+  }
+  toArray(nodes).forEach(function(node){
+    if(isProofStart(node)) {
+      var proof = document.createElement("span");
+      proof.setAttribute("class", "proof");
+
+      node.parentNode.insertBefore(proof, node);
+      if(proof.previousSibling.nodeType === Node.TEXT_NODE)
+        proof.appendChild(proof.previousSibling);
+
+      /* check if there are any comments interspersed with the proof */
+      while (
+        !eventuallyProofEnd(node) &&
+        mergeNextSibling(node.parentNode)
+      ) {}
+
+      while(node && !isProofEnd(node.textContent)) {
+        proof.appendChild(node);
+        node = proof.nextSibling;
+      }
+      if (proof.nextSibling) proof.appendChild(proof.nextSibling); // the Qed
+      if (!hasCommands && proof.nextSibling) proof.appendChild(proof.nextSibling); // the dot after the Qed
+
+      proof.addEventListener("click", function(proof){return function(e){
+        if (e.target.parentNode.tagName.toLowerCase() === "a")
+          return;
+        proof.setAttribute("show", proof.getAttribute("show") === "true" ? "false" : "true");
+        proof.setAttribute("animate", "");
+        updateView();
+      };}(proof));
+      proof.setAttribute("show", "false");
+    }
+  });
+}
+
+function toggleProofs(){
+  var someProofsHidden = proofStatus() === "some-hidden";
+  toArray(document.getElementsByClassName("proof")).forEach(function(proof){
+    proof.setAttribute("show", someProofsHidden);
+    proof.setAttribute("animate", "");
+  });
+  updateView();
+}
+
+function repairDom(){
+  // pull whitespace out of command
+  toArray(document.getElementsByClassName("command")).forEach(function(node){
+    while(node.firstChild && node.firstChild.textContent.trim() == ""){
+      console.log("try move");
+      node.parentNode.insertBefore(node.firstChild, node);
+    }
+  });
+  toArray(document.getElementsByClassName("id")).forEach(function(node){
+    node.setAttribute("type", node.getAttribute("title"));
+  });
+  toArray(document.getElementsByClassName("idref")).forEach(function(ref){
+    toArray(ref.childNodes).forEach(function(child){
+      if (["var", "variable"].indexOf(child.getAttribute("type")) > -1)
+        ref.removeAttribute("href");
+    });
+  });
+  mergeAdjacentAnchorTags()
+}
+
+function fixTitle(){
+  var url = "/" + window.location.pathname;
+  var basename = url.substring(url.lastIndexOf('/')+1, url.lastIndexOf('.'));
+  if (basename === "toc") {document.title = "Table of Contents";}
+  else if (basename === "index") {document.title = "Index";}
+  else {document.title = basename;}
+}
+
+function postprocess(){
+  repairDom();
+  replInTextNodes()
+  replNodes();
+  foldProofs();
+  document.getElementById("toggle-proofs").addEventListener("click", toggleProofs);
+  updateView();
+}
+
+fixTitle();
+document.addEventListener('DOMContentLoaded', postprocess);
+
+coqdocjs.toggleProofs = toggleProofs;
+})();

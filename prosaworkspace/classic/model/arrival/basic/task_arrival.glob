@@ -1,0 +1,549 @@
+DIGEST c7ae6412f2b2bc441a1f618ab8acf517
+Fprosa.classic.model.arrival.basic.task_arrival
+R15:36 prosa.classic.util.all <> <> lib
+R54:103 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R105:142 prosa.classic.model.arrival.basic.task <> <> lib
+R144:180 prosa.classic.model.arrival.basic.job <> <> lib
+R212:220 mathcomp.boot.ssreflect <> <> lib
+R222:228 mathcomp.boot.ssrbool <> <> lib
+R230:235 mathcomp.boot.eqtype <> <> lib
+R237:242 mathcomp.boot.ssrnat <> <> lib
+R244:246 mathcomp.boot.seq <> <> lib
+R248:251 mathcomp.boot.path <> <> lib
+R253:257 mathcomp.boot.bigop <> <> lib
+mod 301:311 <> TaskArrival
+R324:338 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence <> mod
+R340:354 prosa.classic.model.arrival.basic.task SporadicTaskset <> mod
+sec 370:382 TaskArrival ArrivalModels
+var  399:402 TaskArrival.ArrivalModels Task
+R405:410 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 427:437 TaskArrival.ArrivalModels task_period
+R444:447 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R440:443 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.ArrivalModels.Task var
+R448:451 prosa.classic.model.time Time time def
+var  472:474 TaskArrival.ArrivalModels Job
+R477:482 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 499:509 TaskArrival.ArrivalModels job_arrival
+R515:518 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R512:514 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.ArrivalModels.Job var
+R519:522 prosa.classic.model.time Time time def
+var 538:545 TaskArrival.ArrivalModels job_task
+R551:554 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R548:550 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.ArrivalModels.Job var
+R555:558 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.ArrivalModels.Task var
+var 620:626 TaskArrival.ArrivalModels arr_seq
+R629:644 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R646:648 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.ArrivalModels.Job var
+def 728:746 TaskArrival sporadic_task_model
+R771:773 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.ArrivalModels.Job var
+binder 765:765 <> j:11
+binder 767:768 <> j':12
+R792:847 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R786:789 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R785:785 prosa.classic.model.arrival.basic.task_arrival <> j:11 var
+R790:791 prosa.classic.model.arrival.basic.task_arrival <> j':12 var
+R868:927 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R848:857 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R867:867 prosa.classic.model.arrival.basic.task_arrival <> j:11 var
+R859:865 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.ArrivalModels.arr_seq var
+R949:960 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R928:937 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R947:948 prosa.classic.model.arrival.basic.task_arrival <> j':12 var
+R939:945 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.ArrivalModels.arr_seq var
+R985:1049 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R971:973 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R961:968 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.ArrivalModels.job_task var
+R970:970 prosa.classic.model.arrival.basic.task_arrival <> j:11 var
+R974:981 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.ArrivalModels.job_task var
+R983:984 prosa.classic.model.arrival.basic.task_arrival <> j':12 var
+R1081:1251 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1063:1066 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R1050:1060 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.ArrivalModels.job_arrival var
+R1062:1062 prosa.classic.model.arrival.basic.task_arrival <> j:11 var
+R1067:1077 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.ArrivalModels.job_arrival var
+R1079:1080 prosa.classic.model.arrival.basic.task_arrival <> j':12 var
+R1266:1269 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R1283:1285 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R1270:1280 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.ArrivalModels.job_arrival var
+R1282:1282 prosa.classic.model.arrival.basic.task_arrival <> j:11 var
+R1286:1296 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.ArrivalModels.task_period var
+R1299:1306 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.ArrivalModels.job_task var
+R1308:1308 prosa.classic.model.arrival.basic.task_arrival <> j:11 var
+R1252:1262 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.ArrivalModels.job_arrival var
+R1264:1265 prosa.classic.model.arrival.basic.task_arrival <> j':12 var
+R1319:1331 prosa.classic.model.arrival.basic.task_arrival TaskArrival.ArrivalModels <> sec
+sec 1345:1360 TaskArrival NumberOfArrivals
+var  1377:1380 TaskArrival.NumberOfArrivals Task
+R1383:1388 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  1405:1407 TaskArrival.NumberOfArrivals Job
+R1410:1415 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1432:1442 TaskArrival.NumberOfArrivals job_arrival
+R1448:1451 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1445:1447 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.NumberOfArrivals.Job var
+R1452:1455 prosa.classic.model.time Time time def
+var 1471:1478 TaskArrival.NumberOfArrivals job_task
+R1484:1487 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1481:1483 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.NumberOfArrivals.Job var
+R1488:1491 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.NumberOfArrivals.Task var
+var 1555:1561 TaskArrival.NumberOfArrivals arr_seq
+R1564:1579 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R1581:1583 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.NumberOfArrivals.Job var
+var 1665:1680 TaskArrival.NumberOfArrivals arrivals_between
+R1685:1704 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R1706:1712 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.NumberOfArrivals.arr_seq var
+var 1760:1762 TaskArrival.NumberOfArrivals tsk
+R1765:1768 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.NumberOfArrivals.Task var
+def 1843:1856 TaskArrival is_job_of_task
+R1862:1864 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.NumberOfArrivals.Job var
+binder 1859:1859 <> j:23
+R1880:1883 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R1870:1877 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.NumberOfArrivals.job_task var
+R1879:1879 prosa.classic.model.arrival.basic.task_arrival <> j:23 var
+R1884:1886 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.NumberOfArrivals.tsk var
+def 1992:2015 TaskArrival arrivals_of_task_between
+R2025:2028 prosa.classic.model.time Time time def
+binder 2018:2019 <> t1:24
+binder 2021:2022 <> t2:25
+R2040:2044 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R2046:2049 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R2072:2074 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R2091:2091 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+binder 2045:2045 <> j:26
+R2075:2088 prosa.classic.model.arrival.basic.task_arrival TaskArrival is_job_of_task def
+R2090:2090 prosa.classic.model.arrival.basic.task_arrival <> j:26 var
+R2050:2065 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.NumberOfArrivals.arrivals_between var
+R2067:2068 prosa.classic.model.arrival.basic.task_arrival <> t1:24 var
+R2070:2071 prosa.classic.model.arrival.basic.task_arrival <> t2:25 var
+def 2197:2219 TaskArrival arrivals_of_task_before
+R2225:2228 prosa.classic.model.time Time time def
+binder 2222:2222 <> t:27
+R2240:2263 prosa.classic.model.arrival.basic.task_arrival TaskArrival arrivals_of_task_between def
+R2267:2267 prosa.classic.model.arrival.basic.task_arrival <> t:27 var
+def 2346:2365 TaskArrival num_arrivals_of_task
+R2375:2378 prosa.classic.model.time Time time def
+binder 2368:2369 <> t1:28
+binder 2371:2372 <> t2:29
+R2390:2393 mathcomp.boot.seq <> size def
+R2396:2419 prosa.classic.model.arrival.basic.task_arrival TaskArrival arrivals_of_task_between def
+R2421:2422 prosa.classic.model.arrival.basic.task_arrival <> t1:28 var
+R2424:2425 prosa.classic.model.arrival.basic.task_arrival <> t2:29 var
+sec 2529:2534 TaskArrival.NumberOfArrivals Lemmas
+prf 2645:2668 TaskArrival num_arrivals_of_task_cat
+binder 2686:2686 <> t:30
+binder 2688:2689 <> t1:31
+binder 2691:2692 <> t2:32
+R2718:2731 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2707:2710 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<='_x not
+R2712:2715 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<='_x not
+R2705:2706 prosa.classic.model.arrival.basic.task_arrival <> t1:31 var
+R2711:2711 prosa.classic.model.arrival.basic.task_arrival <> t:30 var
+R2711:2711 prosa.classic.model.arrival.basic.task_arrival <> t:30 var
+R2716:2717 prosa.classic.model.arrival.basic.task_arrival <> t2:32 var
+R2758:2760 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2732:2751 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R2753:2754 prosa.classic.model.arrival.basic.task_arrival <> t1:31 var
+R2756:2757 prosa.classic.model.arrival.basic.task_arrival <> t2:32 var
+R2786:2788 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R2761:2780 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R2782:2783 prosa.classic.model.arrival.basic.task_arrival <> t1:31 var
+R2785:2785 prosa.classic.model.arrival.basic.task_arrival <> t:30 var
+R2789:2808 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R2810:2810 prosa.classic.model.arrival.basic.task_arrival <> t:30 var
+R2812:2813 prosa.classic.model.arrival.basic.task_arrival <> t2:32 var
+R2854:2857 Corelib.ssr.ssrbool <> andP thm
+R2885:2904 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R2907:2930 prosa.classic.model.arrival.basic.task_arrival TaskArrival arrivals_of_task_between def
+R2949:2964 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.NumberOfArrivals.arrivals_between var
+R2967:2986 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R2885:2904 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R2885:2904 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R2907:2930 prosa.classic.model.arrival.basic.task_arrival TaskArrival arrivals_of_task_between def
+R2907:2930 prosa.classic.model.arrival.basic.task_arrival TaskArrival arrivals_of_task_between def
+R2949:2964 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.NumberOfArrivals.arrivals_between var
+R2949:2964 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.NumberOfArrivals.arrivals_between var
+R2967:2986 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R2967:2986 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R3007:3017 mathcomp.boot.bigop <> big_cat_nat thm
+R3007:3017 mathcomp.boot.bigop <> big_cat_nat thm
+R3007:3017 mathcomp.boot.bigop <> big_cat_nat thm
+R3054:3063 mathcomp.boot.seq <> filter_cat thm
+R3065:3072 mathcomp.boot.seq <> size_cat thm
+R3054:3063 mathcomp.boot.seq <> filter_cat thm
+R3054:3063 mathcomp.boot.seq <> filter_cat thm
+R3065:3072 mathcomp.boot.seq <> size_cat thm
+R3065:3072 mathcomp.boot.seq <> size_cat thm
+R3101:3106 prosa.classic.model.arrival.basic.task_arrival TaskArrival.NumberOfArrivals.Lemmas <> sec
+R3120:3135 prosa.classic.model.arrival.basic.task_arrival TaskArrival.NumberOfArrivals <> sec
+sec 3266:3292 TaskArrival DistanceBetweenSporadicJobs
+var  3309:3312 TaskArrival.DistanceBetweenSporadicJobs Task
+R3315:3320 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 3337:3347 TaskArrival.DistanceBetweenSporadicJobs task_period
+R3354:3357 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3350:3353 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.Task var
+R3358:3361 prosa.classic.model.time Time time def
+var  3382:3384 TaskArrival.DistanceBetweenSporadicJobs Job
+R3387:3392 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 3409:3419 TaskArrival.DistanceBetweenSporadicJobs job_arrival
+R3425:3428 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3422:3424 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.Job var
+R3429:3432 prosa.classic.model.time Time time def
+var 3448:3455 TaskArrival.DistanceBetweenSporadicJobs job_task
+R3461:3464 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3458:3460 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.Job var
+R3465:3468 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.Task var
+var 3570:3576 TaskArrival.DistanceBetweenSporadicJobs arr_seq
+R3579:3594 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R3596:3598 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.Job var
+var 3616:3636 TaskArrival.DistanceBetweenSporadicJobs H_consistent_arrivals
+R3639:3666 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_times_are_consistent def
+R3680:3686 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.arr_seq var
+R3668:3678 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.job_arrival var
+var 3704:3726 TaskArrival.DistanceBetweenSporadicJobs H_no_duplicate_arrivals
+R3729:3753 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence_is_a_set def
+R3755:3761 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.arr_seq var
+var 3836:3850 TaskArrival.DistanceBetweenSporadicJobs H_sporadic_jobs
+R3859:3877 prosa.classic.model.arrival.basic.task_arrival TaskArrival sporadic_task_model def
+R3912:3918 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.arr_seq var
+R3903:3910 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.job_task var
+R3891:3901 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.job_arrival var
+R3879:3889 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.task_period var
+var 3986:3988 TaskArrival.DistanceBetweenSporadicJobs tsk
+R3991:3994 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.Task var
+var 4058:4059 TaskArrival.DistanceBetweenSporadicJobs t1
+var 4061:4062 TaskArrival.DistanceBetweenSporadicJobs t2
+R4065:4068 prosa.classic.model.time Time time def
+var 4165:4177 TaskArrival.DistanceBetweenSporadicJobs arriving_jobs
+R4182:4205 prosa.classic.model.arrival.basic.task_arrival TaskArrival arrivals_of_task_between def
+R4228:4229 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.t1 var
+R4231:4232 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.t2 var
+R4224:4226 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.tsk var
+R4216:4222 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.arr_seq var
+R4207:4214 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.job_task var
+var 4243:4254 TaskArrival.DistanceBetweenSporadicJobs num_arrivals
+R4259:4278 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R4301:4302 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.t1 var
+R4304:4305 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.t2 var
+R4297:4299 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.tsk var
+R4289:4295 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.arr_seq var
+R4280:4287 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.job_task var
+var 4383:4397 TaskArrival.DistanceBetweenSporadicJobs by_arrival_time
+R4406:4408 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.Job var
+binder 4400:4400 <> j:55
+binder 4402:4403 <> j':56
+R4427:4430 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R4414:4424 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.job_arrival var
+R4426:4426 prosa.classic.model.arrival.basic.task_arrival <> j:55 var
+R4431:4441 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.job_arrival var
+R4443:4444 prosa.classic.model.arrival.basic.task_arrival <> j':56 var
+var 4456:4466 TaskArrival.DistanceBetweenSporadicJobs sorted_jobs
+R4471:4474 mathcomp.boot.path <> sort def
+R4492:4504 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.arriving_jobs var
+R4476:4490 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.by_arrival_time var
+var 4591:4594 TaskArrival.DistanceBetweenSporadicJobs elem
+R4597:4599 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.Job var
+var 4610:4616 TaskArrival.DistanceBetweenSporadicJobs nth_job
+R4621:4623 mathcomp.boot.seq <> nth def
+R4630:4640 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.sorted_jobs var
+R4625:4628 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.elem var
+prf 4721:4753 TaskArrival sorted_arrivals_properties_of_nth
+binder 4769:4771 <> idx:59
+R4800:4811 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4785:4787 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R4782:4784 prosa.classic.model.arrival.basic.task_arrival <> idx:59 var
+R4788:4799 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.num_arrivals var
+R4848:4859 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4814:4817 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R4843:4845 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R4812:4813 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.t1 var
+R4818:4828 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.job_arrival var
+R4831:4837 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.nth_job var
+R4839:4841 prosa.classic.model.arrival.basic.task_arrival <> idx:59 var
+R4818:4828 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.job_arrival var
+R4831:4837 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.nth_job var
+R4839:4841 prosa.classic.model.arrival.basic.task_arrival <> idx:59 var
+R4846:4847 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.t2 var
+R4888:4899 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4882:4884 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4860:4867 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.job_task var
+R4870:4876 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.nth_job var
+R4878:4880 prosa.classic.model.arrival.basic.task_arrival <> idx:59 var
+R4885:4887 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.tsk var
+R4900:4909 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R4920:4926 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.nth_job var
+R4928:4930 prosa.classic.model.arrival.basic.task_arrival <> idx:59 var
+R4911:4917 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.arr_seq var
+R5069:5075 mathcomp.boot.seq <> mem_nth thm
+R5080:5088 mathcomp.boot.path <> size_sort thm
+R5041:5045 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R5030:5036 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.nth_job var
+R5046:5056 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.sorted_jobs var
+R5069:5075 mathcomp.boot.seq <> mem_nth thm
+R5069:5075 mathcomp.boot.seq <> mem_nth thm
+R5080:5088 mathcomp.boot.path <> size_sort thm
+R5080:5088 mathcomp.boot.path <> size_sort thm
+R5105:5112 mathcomp.boot.path <> mem_sort thm
+R5114:5123 mathcomp.boot.seq <> mem_filter thm
+R5105:5112 mathcomp.boot.path <> mem_sort thm
+R5105:5112 mathcomp.boot.path <> mem_sort thm
+R5114:5123 mathcomp.boot.seq <> mem_filter thm
+R5114:5123 mathcomp.boot.seq <> mem_filter thm
+R5151:5154 Corelib.ssr.ssrbool <> andP thm
+R5196:5222 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R5196:5222 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R5244:5278 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived_between thm
+R5244:5278 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived_between thm
+R5346:5348 mathcomp.boot.eqtype <> eqP def
+R5346:5348 mathcomp.boot.eqtype <> eqP def
+prf 5436:5476 TaskArrival sorted_arrivals_current_differs_from_next
+binder 5492:5494 <> idx:60
+R5526:5537 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5508:5510 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R5505:5507 prosa.classic.model.arrival.basic.task_arrival <> idx:60 var
+R5523:5525 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R5511:5522 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.num_arrivals var
+R5549:5552 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5538:5544 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.nth_job var
+R5546:5548 prosa.classic.model.arrival.basic.task_arrival <> idx:60 var
+R5553:5559 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.nth_job var
+R5564:5566 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R5561:5563 prosa.classic.model.arrival.basic.task_arrival <> idx:60 var
+R5607:5609 mathcomp.boot.eqtype <> eqP def
+R5607:5609 mathcomp.boot.eqtype <> eqP def
+R5665:5668 mathcomp.boot.ssrnat <> ltn0 thm
+R5627:5638 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.num_arrivals var
+R5665:5668 mathcomp.boot.ssrnat <> ltn0 thm
+R5665:5668 mathcomp.boot.ssrnat <> ltn0 thm
+R5707:5710 mathcomp.boot.ssrnat <> ltn0 thm
+R5707:5710 mathcomp.boot.ssrnat <> ltn0 thm
+R5707:5710 mathcomp.boot.ssrnat <> ltn0 thm
+R5748:5755 mathcomp.boot.seq <> nth_uniq thm
+R5758:5766 mathcomp.boot.path <> size_sort thm
+R5769:5781 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.arriving_jobs var
+R5800:5819 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R5834:5845 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.num_arrivals var
+R5873:5879 mathcomp.boot.ssrnat <> neq_ltn thm
+R5881:5885 mathcomp.boot.ssrnat <> ltnSn thm
+R5887:5890 Corelib.ssr.ssrbool <> orTb thm
+R5748:5755 mathcomp.boot.seq <> nth_uniq thm
+R5748:5755 mathcomp.boot.seq <> nth_uniq thm
+R5758:5766 mathcomp.boot.path <> size_sort thm
+R5758:5766 mathcomp.boot.path <> size_sort thm
+R5758:5766 mathcomp.boot.path <> size_sort thm
+R5758:5766 mathcomp.boot.path <> size_sort thm
+R5758:5766 mathcomp.boot.path <> size_sort thm
+R5758:5766 mathcomp.boot.path <> size_sort thm
+R5758:5766 mathcomp.boot.path <> size_sort thm
+R5758:5766 mathcomp.boot.path <> size_sort thm
+R5758:5766 mathcomp.boot.path <> size_sort thm
+R5758:5766 mathcomp.boot.path <> size_sort thm
+R5769:5781 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.arriving_jobs var
+R5769:5781 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.arriving_jobs var
+R5769:5781 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.arriving_jobs var
+R5769:5781 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.arriving_jobs var
+R5769:5781 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.arriving_jobs var
+R5769:5781 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.arriving_jobs var
+R5769:5781 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.arriving_jobs var
+R5769:5781 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.arriving_jobs var
+R5800:5819 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R5800:5819 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R5800:5819 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R5800:5819 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R5800:5819 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R5800:5819 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R5800:5819 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R5800:5819 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R5834:5845 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.num_arrivals var
+R5834:5845 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.num_arrivals var
+R5834:5845 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.num_arrivals var
+R5834:5845 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.num_arrivals var
+R5834:5845 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.num_arrivals var
+R5834:5845 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.num_arrivals var
+R5834:5845 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.num_arrivals var
+R5834:5845 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.num_arrivals var
+R5873:5879 mathcomp.boot.ssrnat <> neq_ltn thm
+R5873:5879 mathcomp.boot.ssrnat <> neq_ltn thm
+R5881:5885 mathcomp.boot.ssrnat <> ltnSn thm
+R5881:5885 mathcomp.boot.ssrnat <> ltnSn thm
+R5887:5890 Corelib.ssr.ssrbool <> orTb thm
+R5887:5890 Corelib.ssr.ssrbool <> orTb thm
+R5932:5934 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R5910:5918 mathcomp.boot.ssrnat <> leq_trans thm
+R5932:5934 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R5910:5918 mathcomp.boot.ssrnat <> leq_trans thm
+R5981:5984 mathcomp.boot.ssrnat <> ltnS thm
+R5981:5984 mathcomp.boot.ssrnat <> ltnS thm
+R5981:5984 mathcomp.boot.ssrnat <> ltnS thm
+R6006:6014 mathcomp.boot.path <> sort_uniq thm
+R6016:6026 mathcomp.boot.seq <> filter_uniq thm
+R6039:6051 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrivals_uniq thm
+R6006:6014 mathcomp.boot.path <> sort_uniq thm
+R6006:6014 mathcomp.boot.path <> sort_uniq thm
+R6016:6026 mathcomp.boot.seq <> filter_uniq thm
+R6016:6026 mathcomp.boot.seq <> filter_uniq thm
+R6039:6051 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrivals_uniq thm
+prf 6219:6253 TaskArrival sorted_arrivals_separated_by_period
+binder 6269:6271 <> idx:61
+R6303:6314 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6285:6287 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R6282:6284 prosa.classic.model.arrival.basic.task_arrival <> idx:61 var
+R6300:6302 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R6288:6299 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.num_arrivals var
+R6343:6346 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R6372:6374 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6347:6357 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.job_arrival var
+R6360:6366 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.nth_job var
+R6368:6370 prosa.classic.model.arrival.basic.task_arrival <> idx:61 var
+R6375:6385 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.task_period var
+R6387:6389 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.tsk var
+R6315:6325 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.job_arrival var
+R6328:6334 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.nth_job var
+R6339:6341 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R6336:6338 prosa.classic.model.arrival.basic.task_arrival <> idx:61 var
+R6421:6453 prosa.classic.model.arrival.basic.task_arrival TaskArrival sorted_arrivals_properties_of_nth thm
+R6474:6514 prosa.classic.model.arrival.basic.task_arrival TaskArrival sorted_arrivals_current_differs_from_next thm
+R6630:6633 mathcomp.boot.ssrnat <> ltn0 thm
+R6592:6603 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.num_arrivals var
+R6630:6633 mathcomp.boot.ssrnat <> ltn0 thm
+R6630:6633 mathcomp.boot.ssrnat <> ltn0 thm
+R6672:6675 mathcomp.boot.ssrnat <> ltn0 thm
+R6672:6675 mathcomp.boot.ssrnat <> ltn0 thm
+R6672:6675 mathcomp.boot.ssrnat <> ltn0 thm
+R6764:6766 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R6742:6750 mathcomp.boot.ssrnat <> leq_trans thm
+R6764:6766 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R6742:6750 mathcomp.boot.ssrnat <> leq_trans thm
+R6806:6808 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R6824:6827 mathcomp.boot.ssrnat <> ltnS thm
+R6806:6808 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R6824:6827 mathcomp.boot.ssrnat <> ltnS thm
+R6824:6827 mathcomp.boot.ssrnat <> ltnS thm
+R7016:7030 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.by_arrival_time var
+R7033:7039 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.nth_job var
+R7047:7053 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.nth_job var
+R7058:7060 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R7084:7095 prosa.classic.util.sorting <> sort_ordered thm
+R7121:7131 mathcomp.boot.path <> sort_sorted thm
+R7152:7160 mathcomp.boot.ssrnat <> leq_total thm
+R7084:7095 prosa.classic.util.sorting <> sort_ordered thm
+R7121:7131 mathcomp.boot.path <> sort_sorted thm
+R7152:7160 mathcomp.boot.ssrnat <> leq_total thm
+R7178:7186 mathcomp.boot.path <> size_sort thm
+R7178:7186 mathcomp.boot.path <> size_sort thm
+R7178:7186 mathcomp.boot.path <> size_sort thm
+R7204:7216 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.arriving_jobs var
+R7221:7240 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R7255:7266 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.num_arrivals var
+R7204:7216 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.arriving_jobs var
+R7204:7216 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.arriving_jobs var
+R7221:7240 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R7221:7240 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R7255:7266 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.num_arrivals var
+R7255:7266 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.num_arrivals var
+sec 7424:7439 TaskArrival.DistanceBetweenSporadicJobs FirstAndLastJobs
+var 7516:7533 TaskArrival.DistanceBetweenSporadicJobs.FirstAndLastJobs H_at_least_one_job
+R7556:7559 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R7544:7555 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.num_arrivals var
+var 7729:7735 TaskArrival.DistanceBetweenSporadicJobs.FirstAndLastJobs j_first
+R7740:7746 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.nth_job var
+var 7761:7766 TaskArrival.DistanceBetweenSporadicJobs.FirstAndLastJobs j_last
+R7771:7777 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.nth_job var
+R7792:7794 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R7780:7791 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.num_arrivals var
+var 7808:7814 TaskArrival.DistanceBetweenSporadicJobs.FirstAndLastJobs a_first
+R7819:7829 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.job_arrival var
+R7831:7837 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.FirstAndLastJobs.j_first var
+var 7850:7855 TaskArrival.DistanceBetweenSporadicJobs.FirstAndLastJobs a_last
+R7860:7870 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.job_arrival var
+R7872:7877 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.FirstAndLastJobs.j_last var
+prf 8045:8083 TaskArrival sorted_arrivals_distance_from_first_job
+binder 8101:8103 <> idx:64
+R8134:8147 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8119:8121 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R8116:8118 prosa.classic.model.arrival.basic.task_arrival <> idx:64 var
+R8122:8133 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.num_arrivals var
+R8173:8176 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R8184:8186 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8177:8183 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.FirstAndLastJobs.a_first var
+R8190:8192 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R8187:8189 prosa.classic.model.arrival.basic.task_arrival <> idx:64 var
+R8193:8203 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.task_period var
+R8205:8207 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.tsk var
+R8148:8158 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.job_arrival var
+R8161:8167 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.nth_job var
+R8169:8171 prosa.classic.model.arrival.basic.task_arrival <> idx:64 var
+R8243:8277 prosa.classic.model.arrival.basic.task_arrival TaskArrival sorted_arrivals_separated_by_period thm
+R8295:8313 prosa.classic.model.arrival.basic.task_arrival TaskArrival sporadic_task_model def
+R8412:8416 mathcomp.boot.ssrnat <> mul0n thm
+R8418:8422 mathcomp.boot.ssrnat <> addn0 thm
+R8412:8416 mathcomp.boot.ssrnat <> mul0n thm
+R8412:8416 mathcomp.boot.ssrnat <> mul0n thm
+R8418:8422 mathcomp.boot.ssrnat <> addn0 thm
+R8418:8422 mathcomp.boot.ssrnat <> addn0 thm
+R8518:8520 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R8490:8502 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R8465:8467 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R8468:8479 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.num_arrivals var
+R8518:8520 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R8490:8502 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R8617:8619 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8592:8602 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.job_arrival var
+R8605:8611 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.nth_job var
+R8620:8630 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.task_period var
+R8632:8634 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.tsk var
+R8571:8579 mathcomp.boot.ssrnat <> leq_trans thm
+R8665:8669 mathcomp.boot.ssrnat <> mulSn thm
+R8685:8687 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8672:8682 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.task_period var
+R8690:8694 mathcomp.boot.ssrnat <> addnC thm
+R8696:8700 mathcomp.boot.ssrnat <> addnA thm
+R8702:8710 mathcomp.boot.ssrnat <> leq_add2r thm
+R8617:8619 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8592:8602 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.job_arrival var
+R8605:8611 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.nth_job var
+R8620:8630 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.task_period var
+R8632:8634 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.tsk var
+R8571:8579 mathcomp.boot.ssrnat <> leq_trans thm
+R8665:8669 mathcomp.boot.ssrnat <> mulSn thm
+R8665:8669 mathcomp.boot.ssrnat <> mulSn thm
+R8690:8694 mathcomp.boot.ssrnat <> addnC thm
+R8685:8687 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8672:8682 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.task_period var
+R8685:8687 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8672:8682 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.task_period var
+R8690:8694 mathcomp.boot.ssrnat <> addnC thm
+R8696:8700 mathcomp.boot.ssrnat <> addnA thm
+R8696:8700 mathcomp.boot.ssrnat <> addnA thm
+R8702:8710 mathcomp.boot.ssrnat <> leq_add2r thm
+R8702:8710 mathcomp.boot.ssrnat <> leq_add2r thm
+R8753:8761 mathcomp.boot.ssrnat <> ltn_add2r thm
+R8768:8772 mathcomp.boot.ssrnat <> addn1 thm
+R8775:8783 mathcomp.boot.ssrnat <> ltn_predK thm
+R8753:8761 mathcomp.boot.ssrnat <> ltn_add2r thm
+R8753:8761 mathcomp.boot.ssrnat <> ltn_add2r thm
+R8768:8772 mathcomp.boot.ssrnat <> addn1 thm
+R8768:8772 mathcomp.boot.ssrnat <> addn1 thm
+R8768:8772 mathcomp.boot.ssrnat <> addn1 thm
+R8775:8783 mathcomp.boot.ssrnat <> ltn_predK thm
+R8775:8783 mathcomp.boot.ssrnat <> ltn_predK thm
+prf 8928:8974 TaskArrival sorted_arrivals_distance_between_first_and_last
+R8991:8994 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R9002:9004 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8995:9001 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.FirstAndLastJobs.a_first var
+R9005:9005 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R9020:9023 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R9018:9018 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R9006:9017 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.num_arrivals var
+R9024:9034 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.task_period var
+R9036:9038 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.tsk var
+R8985:8990 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.FirstAndLastJobs.a_last var
+R9119:9157 prosa.classic.model.arrival.basic.task_arrival TaskArrival sorted_arrivals_distance_from_first_job thm
+R9176:9180 mathcomp.boot.ssrnat <> subn1 thm
+R9176:9180 mathcomp.boot.ssrnat <> subn1 thm
+R9176:9180 mathcomp.boot.ssrnat <> subn1 thm
+R9246:9249 mathcomp.boot.ssrnat <> ltn0 thm
+R9215:9226 prosa.classic.model.arrival.basic.task_arrival <> TaskArrival.DistanceBetweenSporadicJobs.num_arrivals var
+R9246:9249 mathcomp.boot.ssrnat <> ltn0 thm
+R9246:9249 mathcomp.boot.ssrnat <> ltn0 thm
+R9279:9294 prosa.classic.model.arrival.basic.task_arrival TaskArrival.DistanceBetweenSporadicJobs.FirstAndLastJobs <> sec
+R9304:9330 prosa.classic.model.arrival.basic.task_arrival TaskArrival.DistanceBetweenSporadicJobs <> sec
+R9340:9350 prosa.classic.model.arrival.basic.task_arrival TaskArrival <> mod

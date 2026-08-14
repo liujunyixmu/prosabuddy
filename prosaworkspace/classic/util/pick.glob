@@ -1,0 +1,624 @@
+DIGEST e53b3b042b34d049a238f68e4c3e9a66
+Fprosa.classic.util.pick
+R29:37 mathcomp.boot.ssreflect <> <> lib
+R39:45 mathcomp.boot.ssrbool <> <> lib
+R47:52 mathcomp.boot.ssrfun <> <> lib
+R54:59 mathcomp.boot.eqtype <> <> lib
+R61:66 mathcomp.boot.ssrnat <> <> lib
+R68:70 mathcomp.boot.seq <> <> lib
+R72:78 mathcomp.boot.fintype <> <> lib
+def 205:212 <> default0
+binder 215:215 <> n:1
+R222:227 Corelib.Init.Datatypes <> option ind
+R229:231 mathcomp.boot.fintype <> :::'''I_'_x not
+R232:232 prosa.classic.util.pick <> n:1 var
+binder 219:219 <> x:2
+R237:239 Corelib.Init.Datatypes <> nat ind
+R247:247 prosa.classic.util.pick <> x:2 var
+R252:255 Corelib.Init.Datatypes <> Some constr
+def 286:297 <> arg_pred_nat
+binder 299:299 <> n:4
+R305:308 Corelib.ssr.ssrbool <> pred def
+R310:312 mathcomp.boot.fintype <> :::'''I_'_x not
+R313:313 prosa.classic.util.pick <> n:4 var
+binder 302:302 <> P:5
+binder 316:318 <> ord:6
+R325:330 Corelib.ssr.ssrbool <> ::function_scope:'['_'pred'_x_'|'_x_'&'_x_']' not
+R332:334 Corelib.ssr.ssrbool <> ::function_scope:'['_'pred'_x_'|'_x_'&'_x_']' not
+R338:340 Corelib.ssr.ssrbool <> ::function_scope:'['_'pred'_x_'|'_x_'&'_x_']' not
+R374:374 Corelib.ssr.ssrbool <> ::function_scope:'['_'pred'_x_'|'_x_'&'_x_']' not
+binder 331:331 <> i:7
+R335:335 prosa.classic.util.pick <> P:5 var
+R337:337 prosa.classic.util.pick <> i:7 var
+R341:348 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'forall'_x_':'_x_x_']' not
+R350:351 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'forall'_x_':'_x_x_']' not
+R373:373 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'forall'_x_':'_x_x_']' not
+R352:354 mathcomp.boot.fintype <> :::'''I_'_x not
+R355:355 prosa.classic.util.pick <> n:4 var
+binder 349:349 <> j:8
+R356:357 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R361:365 Corelib.ssr.ssrbool <> ::bool_scope:x_'==>'_x not
+R358:358 prosa.classic.util.pick <> P:5 var
+R360:360 prosa.classic.util.pick <> j:8 var
+R366:368 prosa.classic.util.pick <> ord:6 var
+R370:370 prosa.classic.util.pick <> i:7 var
+R372:372 prosa.classic.util.pick <> j:8 var
+binder 349:349 <> j:9
+binder 349:349 <> j:10
+def 389:400 <> pred_min_nat
+binder 402:402 <> n:11
+R408:411 Corelib.ssr.ssrbool <> pred def
+R413:415 mathcomp.boot.fintype <> :::'''I_'_x not
+R416:416 prosa.classic.util.pick <> n:11 var
+binder 405:405 <> P:12
+R422:433 prosa.classic.util.pick <> arg_pred_nat def
+R435:435 prosa.classic.util.pick <> n:11 var
+R437:437 prosa.classic.util.pick <> P:12 var
+R439:441 mathcomp.boot.ssrnat <> leq def
+def 455:466 <> pred_max_nat
+binder 468:468 <> n:13
+R474:477 Corelib.ssr.ssrbool <> pred def
+R479:481 mathcomp.boot.fintype <> :::'''I_'_x not
+R482:482 prosa.classic.util.pick <> n:13 var
+binder 471:471 <> P:14
+R488:499 prosa.classic.util.pick <> arg_pred_nat def
+R501:501 prosa.classic.util.pick <> n:13 var
+R503:503 prosa.classic.util.pick <> P:14 var
+binder 510:510 <> x:15
+binder 512:512 <> y:16
+R517:519 mathcomp.boot.ssrnat <> geq def
+R523:523 prosa.classic.util.pick <> y:16 var
+R521:521 prosa.classic.util.pick <> x:15 var
+def 538:548 <> to_pred_ord
+binder 550:550 <> n:17
+R556:559 Corelib.ssr.ssrbool <> pred def
+R561:563 Corelib.Init.Datatypes <> nat ind
+binder 553:553 <> P:18
+R576:578 mathcomp.boot.fintype <> :::'''I_'_x not
+R579:579 prosa.classic.util.pick <> n:17 var
+binder 574:574 <> x:19
+R584:584 prosa.classic.util.pick <> P:18 var
+R587:596 mathcomp.boot.fintype <> nat_of_ord coe
+R598:598 prosa.classic.util.pick <> x:19 var
+def 738:745 <> pick_any
+binder 747:747 <> n:20
+R753:756 Corelib.ssr.ssrbool <> pred def
+R758:760 Corelib.Init.Datatypes <> nat ind
+binder 750:750 <> P:21
+R766:773 prosa.classic.util.pick <> default0 def
+R776:779 mathcomp.boot.fintype <> pick def
+R782:792 prosa.classic.util.pick <> to_pred_ord def
+R794:794 prosa.classic.util.pick <> n:20 var
+R796:796 prosa.classic.util.pick <> P:21 var
+def 912:919 <> pick_min
+binder 921:921 <> n:22
+R927:930 Corelib.ssr.ssrbool <> pred def
+R932:934 Corelib.Init.Datatypes <> nat ind
+binder 924:924 <> P:23
+R940:947 prosa.classic.util.pick <> default0 def
+R950:953 mathcomp.boot.fintype <> pick def
+R956:967 prosa.classic.util.pick <> pred_min_nat def
+R969:969 prosa.classic.util.pick <> n:22 var
+R972:982 prosa.classic.util.pick <> to_pred_ord def
+R984:984 prosa.classic.util.pick <> n:22 var
+R986:986 prosa.classic.util.pick <> P:23 var
+def 1102:1109 <> pick_max
+binder 1111:1111 <> n:24
+R1117:1120 Corelib.ssr.ssrbool <> pred def
+R1122:1124 Corelib.Init.Datatypes <> nat ind
+binder 1114:1114 <> P:25
+R1130:1137 prosa.classic.util.pick <> default0 def
+R1140:1143 mathcomp.boot.fintype <> pick def
+R1146:1157 prosa.classic.util.pick <> pred_max_nat def
+R1159:1159 prosa.classic.util.pick <> n:24 var
+R1162:1172 prosa.classic.util.pick <> to_pred_ord def
+R1174:1174 prosa.classic.util.pick <> n:24 var
+R1176:1176 prosa.classic.util.pick <> P:25 var
+R1473:1480 prosa.classic.util.pick <> pick_any def
+R1483:1485 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R1496:1498 Corelib.Init.Datatypes <> nat ind
+binder 1492:1492 <> x:26
+not 1439:1439 <> ::form_scope:'['_'pick-any'_x_'<='_x_'|'_x_']'
+R1608:1615 prosa.classic.util.pick <> pick_any def
+R1628:1630 Corelib.Init.Datatypes <> nat ind
+binder 1624:1624 <> x:27
+not 1575:1575 <> ::form_scope:'['_'pick-any'_x_'<'_x_'|'_x_']'
+R1737:1744 prosa.classic.util.pick <> pick_min def
+R1747:1749 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R1760:1762 Corelib.Init.Datatypes <> nat ind
+binder 1756:1756 <> x:28
+not 1703:1703 <> ::form_scope:'['_'pick-min'_x_'<='_x_'|'_x_']'
+R1868:1875 prosa.classic.util.pick <> pick_min def
+R1888:1890 Corelib.Init.Datatypes <> nat ind
+binder 1884:1884 <> x:29
+not 1835:1835 <> ::form_scope:'['_'pick-min'_x_'<'_x_'|'_x_']'
+R1997:2004 prosa.classic.util.pick <> pick_max def
+R2007:2009 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R2020:2022 Corelib.Init.Datatypes <> nat ind
+binder 2016:2016 <> x:30
+not 1963:1963 <> ::form_scope:'['_'pick-max'_x_'<='_x_'|'_x_']'
+R2128:2135 prosa.classic.util.pick <> pick_max def
+R2148:2150 Corelib.Init.Datatypes <> nat ind
+binder 2144:2144 <> x:31
+not 2095:2095 <> ::form_scope:'['_'pick-max'_x_'<'_x_'|'_x_']'
+sec 2252:2258 <> PickAny
+var 2273:2273 PickAny n
+R2276:2278 Corelib.Init.Datatypes <> nat ind
+var 2292:2292 PickAny p
+R2295:2298 Corelib.ssr.ssrbool <> pred def
+R2300:2302 Corelib.Init.Datatypes <> nat ind
+var 2317:2317 PickAny P
+R2323:2326 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2320:2322 Corelib.Init.Datatypes <> nat ind
+var 2347:2348 PickAny EX
+R2351:2357 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R2359:2360 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 2358:2358 <> x:38
+R2366:2369 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R2362:2364 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R2361:2361 prosa.classic.util.pick <> x:38 var
+R2365:2365 prosa.classic.util.pick <> PickAny.n var
+R2370:2370 prosa.classic.util.pick <> PickAny.p var
+R2372:2372 prosa.classic.util.pick <> x:38 var
+var 2389:2393 PickAny HOLDS
+binder 2403:2403 <> x:41
+R2409:2412 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2406:2406 prosa.classic.util.pick <> PickAny.p var
+R2408:2408 prosa.classic.util.pick <> x:41 var
+R2413:2413 prosa.classic.util.pick <> PickAny.P var
+R2415:2415 prosa.classic.util.pick <> x:41 var
+prf 2568:2581 <> pick_any_holds
+R2584:2584 prosa.classic.util.pick <> PickAny.P var
+R2587:2594 prosa.classic.util.pick <> pick_any def
+R2596:2596 prosa.classic.util.pick <> PickAny.n var
+R2598:2598 prosa.classic.util.pick <> PickAny.p var
+R2624:2631 prosa.classic.util.pick <> pick_any def
+R2634:2641 prosa.classic.util.pick <> default0 def
+R2624:2631 prosa.classic.util.pick <> pick_any def
+R2624:2631 prosa.classic.util.pick <> pick_any def
+R2634:2641 prosa.classic.util.pick <> default0 def
+R2634:2641 prosa.classic.util.pick <> default0 def
+R2654:2658 mathcomp.boot.fintype <> pickP thm
+R2691:2695 prosa.classic.util.pick <> PickAny.HOLDS var
+R2654:2658 mathcomp.boot.fintype <> pickP thm
+R2654:2658 mathcomp.boot.fintype <> pickP thm
+R2691:2695 prosa.classic.util.pick <> PickAny.HOLDS var
+R2747:2748 prosa.classic.util.pick <> PickAny.EX var
+R2747:2748 prosa.classic.util.pick <> PickAny.EX var
+R2747:2748 prosa.classic.util.pick <> PickAny.EX var
+R2794:2800 mathcomp.boot.fintype <> Ordinal constr
+R2818:2828 prosa.classic.util.pick <> to_pred_ord def
+R2794:2800 mathcomp.boot.fintype <> Ordinal constr
+R2818:2828 prosa.classic.util.pick <> to_pred_ord def
+R2818:2828 prosa.classic.util.pick <> to_pred_ord def
+R2859:2865 prosa.classic.util.pick PickAny <> sec
+sec 2906:2912 <> PickMin
+var 2927:2927 PickMin n
+R2930:2932 Corelib.Init.Datatypes <> nat ind
+var 2946:2946 PickMin p
+R2949:2952 Corelib.ssr.ssrbool <> pred def
+R2954:2956 Corelib.Init.Datatypes <> nat ind
+var 2971:2971 PickMin P
+R2977:2980 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2974:2976 Corelib.Init.Datatypes <> nat ind
+var 3064:3065 PickMin EX
+R3068:3074 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R3076:3077 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 3075:3075 <> x:50
+R3083:3086 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3079:3081 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R3078:3078 prosa.classic.util.pick <> x:50 var
+R3082:3082 prosa.classic.util.pick <> PickMin.n var
+R3087:3087 prosa.classic.util.pick <> PickMin.p var
+R3089:3089 prosa.classic.util.pick <> x:50 var
+sec 3103:3107 PickMin Bound
+prf 3171:3182 <> pick_min_ltn
+R3197:3199 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R3185:3192 prosa.classic.util.pick <> pick_min def
+R3194:3194 prosa.classic.util.pick <> PickMin.n var
+R3196:3196 prosa.classic.util.pick <> PickMin.p var
+R3200:3200 prosa.classic.util.pick <> PickMin.n var
+R3229:3236 prosa.classic.util.pick <> pick_min def
+R3239:3243 Corelib.ssr.ssrfun <> odflt abbrev
+R3246:3249 Corelib.ssr.ssrfun <> oapp abbrev
+R3229:3236 prosa.classic.util.pick <> pick_min def
+R3229:3236 prosa.classic.util.pick <> pick_min def
+R3239:3243 Corelib.ssr.ssrfun <> odflt abbrev
+R3239:3243 Corelib.ssr.ssrfun <> odflt abbrev
+R3246:3249 Corelib.ssr.ssrfun <> oapp abbrev
+R3246:3249 Corelib.ssr.ssrfun <> oapp abbrev
+R3264:3268 mathcomp.boot.fintype <> pickP thm
+R3264:3268 mathcomp.boot.fintype <> pickP thm
+R3264:3268 mathcomp.boot.fintype <> pickP thm
+R3298:3301 Corelib.ssr.ssrbool <> andP thm
+R3310:3316 mathcomp.boot.fintype <> forallP thm
+R3344:3351 prosa.classic.util.pick <> default0 def
+R3344:3351 prosa.classic.util.pick <> default0 def
+R3344:3351 prosa.classic.util.pick <> default0 def
+R3427:3428 prosa.classic.util.pick <> PickMin.EX var
+R3427:3428 prosa.classic.util.pick <> PickMin.EX var
+R3427:3428 prosa.classic.util.pick <> PickMin.EX var
+R3480:3486 mathcomp.boot.fintype <> arg_min def
+R3503:3504 Corelib.ssr.ssrfun <> id abbrev
+R3501:3501 prosa.classic.util.pick <> PickMin.p var
+R3489:3495 mathcomp.boot.fintype <> Ordinal constr
+R3480:3486 mathcomp.boot.fintype <> arg_min def
+R3503:3504 Corelib.ssr.ssrfun <> id abbrev
+R3501:3501 prosa.classic.util.pick <> PickMin.p var
+R3489:3495 mathcomp.boot.fintype <> Ordinal constr
+R3480:3486 mathcomp.boot.fintype <> arg_min def
+R3503:3504 Corelib.ssr.ssrfun <> id abbrev
+R3501:3501 prosa.classic.util.pick <> PickMin.p var
+R3489:3495 mathcomp.boot.fintype <> Ordinal constr
+R3563:3574 prosa.classic.util.pick <> pred_min_nat def
+R3576:3576 prosa.classic.util.pick <> PickMin.n var
+R3578:3578 prosa.classic.util.pick <> PickMin.p var
+R3646:3654 mathcomp.boot.fintype <> arg_minnP thm
+R3646:3654 mathcomp.boot.fintype <> arg_minnP thm
+R3646:3654 mathcomp.boot.fintype <> arg_minnP thm
+R3712:3715 Corelib.ssr.ssrbool <> andP thm
+R3712:3715 Corelib.ssr.ssrbool <> andP thm
+R3757:3763 mathcomp.boot.fintype <> forallP thm
+R3783:3788 Corelib.ssr.ssrbool <> implyP thm
+R3757:3763 mathcomp.boot.fintype <> forallP thm
+R3783:3788 Corelib.ssr.ssrbool <> implyP thm
+R3839:3843 prosa.classic.util.pick PickMin.Bound <> sec
+sec 3857:3863 PickMin Minimum
+var 3886:3888 PickMin.Minimum MIN
+binder 3904:3904 <> x:53
+R3920:3931 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3916:3918 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R3915:3915 prosa.classic.util.pick <> x:53 var
+R3919:3919 prosa.classic.util.pick <> PickMin.n var
+R3935:3946 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3932:3932 prosa.classic.util.pick <> PickMin.p var
+R3934:3934 prosa.classic.util.pick <> x:53 var
+R3947:3947 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3980:3992 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+binder 3955:3955 <> y:54
+R3963:3966 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3959:3961 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R3958:3958 prosa.classic.util.pick <> y:54 var
+R3962:3962 prosa.classic.util.pick <> PickMin.n var
+R3970:3973 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3967:3967 prosa.classic.util.pick <> PickMin.p var
+R3969:3969 prosa.classic.util.pick <> y:54 var
+R3975:3978 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R3974:3974 prosa.classic.util.pick <> x:53 var
+R3979:3979 prosa.classic.util.pick <> y:54 var
+R3993:3993 prosa.classic.util.pick <> PickMin.P var
+R3995:3995 prosa.classic.util.pick <> x:53 var
+prf 4166:4179 <> pick_min_holds
+R4182:4182 prosa.classic.util.pick <> PickMin.P var
+R4185:4192 prosa.classic.util.pick <> pick_min def
+R4194:4194 prosa.classic.util.pick <> PickMin.n var
+R4196:4196 prosa.classic.util.pick <> PickMin.p var
+R4226:4233 prosa.classic.util.pick <> pick_min def
+R4236:4240 Corelib.ssr.ssrfun <> odflt abbrev
+R4243:4246 Corelib.ssr.ssrfun <> oapp abbrev
+R4226:4233 prosa.classic.util.pick <> pick_min def
+R4226:4233 prosa.classic.util.pick <> pick_min def
+R4236:4240 Corelib.ssr.ssrfun <> odflt abbrev
+R4236:4240 Corelib.ssr.ssrfun <> odflt abbrev
+R4243:4246 Corelib.ssr.ssrfun <> oapp abbrev
+R4243:4246 Corelib.ssr.ssrfun <> oapp abbrev
+R4261:4265 mathcomp.boot.fintype <> pickP thm
+R4261:4265 mathcomp.boot.fintype <> pickP thm
+R4261:4265 mathcomp.boot.fintype <> pickP thm
+R4295:4298 Corelib.ssr.ssrbool <> andP thm
+R4307:4313 mathcomp.boot.fintype <> forallP thm
+R4335:4337 prosa.classic.util.pick <> PickMin.Minimum.MIN var
+R4353:4360 prosa.classic.util.pick <> default0 def
+R4335:4337 prosa.classic.util.pick <> PickMin.Minimum.MIN var
+R4353:4360 prosa.classic.util.pick <> default0 def
+R4353:4360 prosa.classic.util.pick <> default0 def
+R4418:4424 mathcomp.boot.fintype <> Ordinal constr
+R4418:4424 mathcomp.boot.fintype <> Ordinal constr
+R4458:4463 Corelib.ssr.ssrbool <> implyP thm
+R4554:4555 prosa.classic.util.pick <> PickMin.EX var
+R4554:4555 prosa.classic.util.pick <> PickMin.EX var
+R4554:4555 prosa.classic.util.pick <> PickMin.EX var
+R4607:4613 mathcomp.boot.fintype <> arg_min def
+R4630:4631 Corelib.ssr.ssrfun <> id abbrev
+R4628:4628 prosa.classic.util.pick <> PickMin.p var
+R4616:4622 mathcomp.boot.fintype <> Ordinal constr
+R4607:4613 mathcomp.boot.fintype <> arg_min def
+R4630:4631 Corelib.ssr.ssrfun <> id abbrev
+R4628:4628 prosa.classic.util.pick <> PickMin.p var
+R4616:4622 mathcomp.boot.fintype <> Ordinal constr
+R4607:4613 mathcomp.boot.fintype <> arg_min def
+R4630:4631 Corelib.ssr.ssrfun <> id abbrev
+R4628:4628 prosa.classic.util.pick <> PickMin.p var
+R4616:4622 mathcomp.boot.fintype <> Ordinal constr
+R4690:4701 prosa.classic.util.pick <> pred_min_nat def
+R4703:4703 prosa.classic.util.pick <> PickMin.n var
+R4705:4705 prosa.classic.util.pick <> PickMin.p var
+R4773:4781 mathcomp.boot.fintype <> arg_minnP thm
+R4773:4781 mathcomp.boot.fintype <> arg_minnP thm
+R4773:4781 mathcomp.boot.fintype <> arg_minnP thm
+R4839:4842 Corelib.ssr.ssrbool <> andP thm
+R4839:4842 Corelib.ssr.ssrbool <> andP thm
+R4884:4890 mathcomp.boot.fintype <> forallP thm
+R4910:4915 Corelib.ssr.ssrbool <> implyP thm
+R4884:4890 mathcomp.boot.fintype <> forallP thm
+R4910:4915 Corelib.ssr.ssrbool <> implyP thm
+R4966:4972 prosa.classic.util.pick PickMin.Minimum <> sec
+R4980:4986 prosa.classic.util.pick PickMin <> sec
+sec 5027:5033 <> PickMax
+var 5048:5048 PickMax n
+R5051:5053 Corelib.Init.Datatypes <> nat ind
+var 5067:5067 PickMax p
+R5070:5073 Corelib.ssr.ssrbool <> pred def
+R5075:5077 Corelib.Init.Datatypes <> nat ind
+var 5092:5092 PickMax P
+R5098:5101 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5095:5097 Corelib.Init.Datatypes <> nat ind
+var 5185:5186 PickMax EX
+R5189:5195 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R5197:5198 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 5196:5196 <> x:63
+R5204:5207 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R5200:5202 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R5199:5199 prosa.classic.util.pick <> x:63 var
+R5203:5203 prosa.classic.util.pick <> PickMax.n var
+R5208:5208 prosa.classic.util.pick <> PickMax.p var
+R5210:5210 prosa.classic.util.pick <> x:63 var
+sec 5224:5228 PickMax Bound
+prf 5298:5309 <> pick_max_ltn
+R5324:5326 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R5312:5319 prosa.classic.util.pick <> pick_max def
+R5321:5321 prosa.classic.util.pick <> PickMax.n var
+R5323:5323 prosa.classic.util.pick <> PickMax.p var
+R5327:5327 prosa.classic.util.pick <> PickMax.n var
+R5356:5363 prosa.classic.util.pick <> pick_max def
+R5366:5370 Corelib.ssr.ssrfun <> odflt abbrev
+R5373:5376 Corelib.ssr.ssrfun <> oapp abbrev
+R5356:5363 prosa.classic.util.pick <> pick_max def
+R5356:5363 prosa.classic.util.pick <> pick_max def
+R5366:5370 Corelib.ssr.ssrfun <> odflt abbrev
+R5366:5370 Corelib.ssr.ssrfun <> odflt abbrev
+R5373:5376 Corelib.ssr.ssrfun <> oapp abbrev
+R5373:5376 Corelib.ssr.ssrfun <> oapp abbrev
+R5391:5395 mathcomp.boot.fintype <> pickP thm
+R5391:5395 mathcomp.boot.fintype <> pickP thm
+R5391:5395 mathcomp.boot.fintype <> pickP thm
+R5425:5428 Corelib.ssr.ssrbool <> andP thm
+R5437:5443 mathcomp.boot.fintype <> forallP thm
+R5471:5478 prosa.classic.util.pick <> default0 def
+R5471:5478 prosa.classic.util.pick <> default0 def
+R5471:5478 prosa.classic.util.pick <> default0 def
+R5554:5555 prosa.classic.util.pick <> PickMax.EX var
+R5554:5555 prosa.classic.util.pick <> PickMax.EX var
+R5554:5555 prosa.classic.util.pick <> PickMax.EX var
+R5607:5613 mathcomp.boot.fintype <> arg_max def
+R5630:5631 Corelib.ssr.ssrfun <> id abbrev
+R5628:5628 prosa.classic.util.pick <> PickMax.p var
+R5616:5622 mathcomp.boot.fintype <> Ordinal constr
+R5607:5613 mathcomp.boot.fintype <> arg_max def
+R5630:5631 Corelib.ssr.ssrfun <> id abbrev
+R5628:5628 prosa.classic.util.pick <> PickMax.p var
+R5616:5622 mathcomp.boot.fintype <> Ordinal constr
+R5607:5613 mathcomp.boot.fintype <> arg_max def
+R5630:5631 Corelib.ssr.ssrfun <> id abbrev
+R5628:5628 prosa.classic.util.pick <> PickMax.p var
+R5616:5622 mathcomp.boot.fintype <> Ordinal constr
+R5690:5701 prosa.classic.util.pick <> pred_max_nat def
+R5703:5703 prosa.classic.util.pick <> PickMax.n var
+R5705:5705 prosa.classic.util.pick <> PickMax.p var
+R5773:5781 mathcomp.boot.fintype <> arg_maxnP thm
+R5773:5781 mathcomp.boot.fintype <> arg_maxnP thm
+R5773:5781 mathcomp.boot.fintype <> arg_maxnP thm
+R5839:5842 Corelib.ssr.ssrbool <> andP thm
+R5839:5842 Corelib.ssr.ssrbool <> andP thm
+R5884:5890 mathcomp.boot.fintype <> forallP thm
+R5910:5915 Corelib.ssr.ssrbool <> implyP thm
+R5884:5890 mathcomp.boot.fintype <> forallP thm
+R5910:5915 Corelib.ssr.ssrbool <> implyP thm
+R5966:5970 prosa.classic.util.pick PickMax.Bound <> sec
+sec 5986:5992 PickMax Maximum
+var 6015:6017 PickMax.Maximum MAX
+binder 6033:6033 <> x:66
+R6049:6060 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6045:6047 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R6044:6044 prosa.classic.util.pick <> x:66 var
+R6048:6048 prosa.classic.util.pick <> PickMax.n var
+R6064:6075 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6061:6061 prosa.classic.util.pick <> PickMax.p var
+R6063:6063 prosa.classic.util.pick <> x:66 var
+R6076:6076 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6109:6121 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+binder 6084:6084 <> y:67
+R6092:6095 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6088:6090 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R6087:6087 prosa.classic.util.pick <> y:67 var
+R6091:6091 prosa.classic.util.pick <> PickMax.n var
+R6099:6102 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6096:6096 prosa.classic.util.pick <> PickMax.p var
+R6098:6098 prosa.classic.util.pick <> y:67 var
+R6104:6107 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R6108:6108 prosa.classic.util.pick <> y:67 var
+R6103:6103 prosa.classic.util.pick <> x:66 var
+R6122:6122 prosa.classic.util.pick <> PickMax.P var
+R6124:6124 prosa.classic.util.pick <> x:66 var
+prf 6294:6307 <> pick_max_holds
+R6310:6310 prosa.classic.util.pick <> PickMax.P var
+R6313:6320 prosa.classic.util.pick <> pick_max def
+R6322:6322 prosa.classic.util.pick <> PickMax.n var
+R6324:6324 prosa.classic.util.pick <> PickMax.p var
+R6354:6361 prosa.classic.util.pick <> pick_max def
+R6364:6368 Corelib.ssr.ssrfun <> odflt abbrev
+R6371:6374 Corelib.ssr.ssrfun <> oapp abbrev
+R6354:6361 prosa.classic.util.pick <> pick_max def
+R6354:6361 prosa.classic.util.pick <> pick_max def
+R6364:6368 Corelib.ssr.ssrfun <> odflt abbrev
+R6364:6368 Corelib.ssr.ssrfun <> odflt abbrev
+R6371:6374 Corelib.ssr.ssrfun <> oapp abbrev
+R6371:6374 Corelib.ssr.ssrfun <> oapp abbrev
+R6389:6393 mathcomp.boot.fintype <> pickP thm
+R6389:6393 mathcomp.boot.fintype <> pickP thm
+R6389:6393 mathcomp.boot.fintype <> pickP thm
+R6423:6426 Corelib.ssr.ssrbool <> andP thm
+R6435:6441 mathcomp.boot.fintype <> forallP thm
+R6463:6465 prosa.classic.util.pick <> PickMax.Maximum.MAX var
+R6481:6488 prosa.classic.util.pick <> default0 def
+R6504:6511 prosa.classic.util.pick <> default0 def
+R6463:6465 prosa.classic.util.pick <> PickMax.Maximum.MAX var
+R6481:6488 prosa.classic.util.pick <> default0 def
+R6481:6488 prosa.classic.util.pick <> default0 def
+R6504:6511 prosa.classic.util.pick <> default0 def
+R6504:6511 prosa.classic.util.pick <> default0 def
+R6559:6565 mathcomp.boot.fintype <> Ordinal constr
+R6559:6565 mathcomp.boot.fintype <> Ordinal constr
+R6599:6604 Corelib.ssr.ssrbool <> implyP thm
+R6695:6696 prosa.classic.util.pick <> PickMax.EX var
+R6695:6696 prosa.classic.util.pick <> PickMax.EX var
+R6695:6696 prosa.classic.util.pick <> PickMax.EX var
+R6748:6754 mathcomp.boot.fintype <> arg_max def
+R6771:6772 Corelib.ssr.ssrfun <> id abbrev
+R6769:6769 prosa.classic.util.pick <> PickMax.p var
+R6757:6763 mathcomp.boot.fintype <> Ordinal constr
+R6748:6754 mathcomp.boot.fintype <> arg_max def
+R6771:6772 Corelib.ssr.ssrfun <> id abbrev
+R6769:6769 prosa.classic.util.pick <> PickMax.p var
+R6757:6763 mathcomp.boot.fintype <> Ordinal constr
+R6748:6754 mathcomp.boot.fintype <> arg_max def
+R6771:6772 Corelib.ssr.ssrfun <> id abbrev
+R6769:6769 prosa.classic.util.pick <> PickMax.p var
+R6757:6763 mathcomp.boot.fintype <> Ordinal constr
+R6831:6842 prosa.classic.util.pick <> pred_max_nat def
+R6844:6844 prosa.classic.util.pick <> PickMax.n var
+R6846:6846 prosa.classic.util.pick <> PickMax.p var
+R6914:6922 mathcomp.boot.fintype <> arg_maxnP thm
+R6914:6922 mathcomp.boot.fintype <> arg_maxnP thm
+R6914:6922 mathcomp.boot.fintype <> arg_maxnP thm
+R6980:6983 Corelib.ssr.ssrbool <> andP thm
+R6980:6983 Corelib.ssr.ssrbool <> andP thm
+R7025:7031 mathcomp.boot.fintype <> forallP thm
+R7051:7056 Corelib.ssr.ssrbool <> implyP thm
+R7025:7031 mathcomp.boot.fintype <> forallP thm
+R7051:7056 Corelib.ssr.ssrbool <> implyP thm
+R7107:7113 prosa.classic.util.pick PickMax.Maximum <> sec
+R7121:7127 prosa.classic.util.pick PickMax <> sec
+sec 7139:7147 <> Predicate
+var 7162:7162 Predicate n
+R7165:7167 Corelib.Init.Datatypes <> nat ind
+var 7181:7181 Predicate p
+R7184:7187 Corelib.ssr.ssrbool <> pred def
+R7189:7191 Corelib.Init.Datatypes <> nat ind
+var 7208:7209 Predicate EX
+R7212:7218 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R7220:7221 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 7219:7219 <> x:74
+R7227:7230 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R7223:7225 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R7222:7222 prosa.classic.util.pick <> x:74 var
+R7226:7226 prosa.classic.util.pick <> Predicate.n var
+R7231:7231 prosa.classic.util.pick <> Predicate.p var
+R7233:7233 prosa.classic.util.pick <> x:74 var
+prf 7313:7325 <> pick_any_pred
+R7328:7328 prosa.classic.util.pick <> Predicate.p var
+R7331:7338 prosa.classic.util.pick <> pick_any def
+R7340:7340 prosa.classic.util.pick <> Predicate.n var
+R7342:7342 prosa.classic.util.pick <> Predicate.p var
+R7368:7381 prosa.classic.util.pick <> pick_any_holds thm
+R7368:7381 prosa.classic.util.pick <> pick_any_holds thm
+prf 7446:7458 <> pick_min_pred
+R7461:7461 prosa.classic.util.pick <> Predicate.p var
+R7464:7471 prosa.classic.util.pick <> pick_min def
+R7473:7473 prosa.classic.util.pick <> Predicate.n var
+R7475:7475 prosa.classic.util.pick <> Predicate.p var
+R7501:7514 prosa.classic.util.pick <> pick_min_holds thm
+R7501:7514 prosa.classic.util.pick <> pick_min_holds thm
+prf 7558:7570 <> pick_max_pred
+R7573:7573 prosa.classic.util.pick <> Predicate.p var
+R7576:7583 prosa.classic.util.pick <> pick_max def
+R7585:7585 prosa.classic.util.pick <> Predicate.n var
+R7587:7587 prosa.classic.util.pick <> Predicate.p var
+R7613:7626 prosa.classic.util.pick <> pick_max_holds thm
+R7613:7626 prosa.classic.util.pick <> pick_max_holds thm
+R7641:7649 prosa.classic.util.pick Predicate <> sec
+sec 7661:7674 <> PickMinCompare
+var 7689:7689 PickMinCompare n
+R7692:7694 Corelib.Init.Datatypes <> nat ind
+var 7708:7709 PickMinCompare p1
+var 7711:7712 PickMinCompare p2
+R7715:7718 Corelib.ssr.ssrbool <> pred def
+R7720:7722 Corelib.Init.Datatypes <> nat ind
+var 7739:7741 PickMinCompare EX1
+R7745:7751 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R7753:7754 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 7752:7752 <> x:83
+R7760:7763 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R7756:7758 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R7755:7755 prosa.classic.util.pick <> x:83 var
+R7759:7759 prosa.classic.util.pick <> PickMinCompare.n var
+R7764:7765 prosa.classic.util.pick <> PickMinCompare.p1 var
+R7767:7767 prosa.classic.util.pick <> x:83 var
+var 7783:7785 PickMinCompare EX2
+R7789:7795 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R7797:7798 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 7796:7796 <> x:86
+R7804:7807 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R7800:7802 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R7799:7799 prosa.classic.util.pick <> x:86 var
+R7803:7803 prosa.classic.util.pick <> PickMinCompare.n var
+R7808:7809 prosa.classic.util.pick <> PickMinCompare.p2 var
+R7811:7811 prosa.classic.util.pick <> x:86 var
+var 7828:7830 PickMinCompare OUT
+binder 7844:7844 <> x:89
+binder 7846:7846 <> y:90
+R7854:7857 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7850:7852 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R7849:7849 prosa.classic.util.pick <> x:89 var
+R7853:7853 prosa.classic.util.pick <> PickMinCompare.n var
+R7863:7866 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7859:7861 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R7858:7858 prosa.classic.util.pick <> y:90 var
+R7862:7862 prosa.classic.util.pick <> PickMinCompare.n var
+R7871:7874 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7867:7868 prosa.classic.util.pick <> PickMinCompare.p1 var
+R7870:7870 prosa.classic.util.pick <> x:89 var
+R7879:7882 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7875:7876 prosa.classic.util.pick <> PickMinCompare.p2 var
+R7878:7878 prosa.classic.util.pick <> y:90 var
+R7890:7893 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7883:7885 Corelib.ssr.ssrbool <> ::bool_scope:'~~'_x not
+R7886:7887 prosa.classic.util.pick <> PickMinCompare.p1 var
+R7889:7889 prosa.classic.util.pick <> y:90 var
+R7895:7898 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R7894:7894 prosa.classic.util.pick <> x:89 var
+R7899:7899 prosa.classic.util.pick <> y:90 var
+prf 7914:7929 <> pick_min_compare
+R7945:7948 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R7932:7939 prosa.classic.util.pick <> pick_min def
+R7941:7941 prosa.classic.util.pick <> PickMinCompare.n var
+R7943:7944 prosa.classic.util.pick <> PickMinCompare.p1 var
+R7949:7956 prosa.classic.util.pick <> pick_min def
+R7958:7958 prosa.classic.util.pick <> PickMinCompare.n var
+R7960:7961 prosa.classic.util.pick <> PickMinCompare.p2 var
+R7986:7993 prosa.classic.util.pick <> pick_min def
+R7986:7993 prosa.classic.util.pick <> pick_min def
+R7986:7993 prosa.classic.util.pick <> pick_min def
+R8013:8020 prosa.classic.util.pick <> pick_min def
+R8013:8020 prosa.classic.util.pick <> pick_min def
+R8013:8020 prosa.classic.util.pick <> pick_min def
+R8041:8042 prosa.classic.util.pick <> PickMinCompare.p1 var
+R8041:8042 prosa.classic.util.pick <> PickMinCompare.p1 var
+R8041:8042 prosa.classic.util.pick <> PickMinCompare.p1 var
+R8067:8080 prosa.classic.util.pick <> pick_min_holds thm
+R8067:8080 prosa.classic.util.pick <> pick_min_holds thm
+R8160:8171 prosa.classic.util.pick <> pick_min_ltn thm
+R8160:8171 prosa.classic.util.pick <> pick_min_ltn thm
+R8199:8201 prosa.classic.util.pick <> PickMinCompare.OUT var
+R8199:8201 prosa.classic.util.pick <> PickMinCompare.OUT var
+R8228:8239 prosa.classic.util.pick <> pick_min_ltn thm
+R8228:8239 prosa.classic.util.pick <> pick_min_ltn thm
+R8259:8270 prosa.classic.util.pick <> pick_min_ltn thm
+R8259:8270 prosa.classic.util.pick <> pick_min_ltn thm
+R8290:8302 prosa.classic.util.pick <> pick_min_pred thm
+R8290:8302 prosa.classic.util.pick <> pick_min_pred thm
+R8322:8334 prosa.classic.util.pick <> pick_min_pred thm
+R8322:8334 prosa.classic.util.pick <> pick_min_pred thm
+R8354:8358 Corelib.ssr.ssrbool <> negbT thm
+R8354:8358 Corelib.ssr.ssrbool <> negbT thm
+R8381:8394 prosa.classic.util.pick PickMinCompare <> sec

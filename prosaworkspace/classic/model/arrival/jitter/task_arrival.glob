@@ -1,0 +1,455 @@
+DIGEST 38499221e50f300d4b8be502614c594c
+Fprosa.classic.model.arrival.jitter.task_arrival
+R15:36 prosa.classic.util.all <> <> lib
+R54:91 prosa.classic.model.arrival.basic.task <> <> lib
+R93:129 prosa.classic.model.arrival.basic.job <> <> lib
+R147:192 prosa.classic.model.arrival.basic.task_arrival <> <> lib
+R210:260 prosa.classic.model.arrival.jitter.arrival_sequence <> <> lib
+R292:300 mathcomp.boot.ssreflect <> <> lib
+R302:308 mathcomp.boot.ssrbool <> <> lib
+R310:315 mathcomp.boot.eqtype <> <> lib
+R317:322 mathcomp.boot.ssrnat <> <> lib
+R324:326 mathcomp.boot.seq <> <> lib
+R328:331 mathcomp.boot.path <> <> lib
+mod 446:466 <> TaskArrivalWithJitter
+R479:503 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter <> mod
+R505:519 prosa.classic.model.arrival.basic.task SporadicTaskset <> mod
+R531:541 prosa.classic.model.arrival.basic.task_arrival TaskArrival <> mod
+sec 617:632 TaskArrivalWithJitter NumberOfArrivals
+var  649:652 TaskArrivalWithJitter.NumberOfArrivals Task
+R655:660 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var  677:679 TaskArrivalWithJitter.NumberOfArrivals Job
+R682:687 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 704:714 TaskArrivalWithJitter.NumberOfArrivals job_arrival
+R720:723 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R717:719 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.NumberOfArrivals.Job var
+R724:727 prosa.classic.model.time Time time def
+var 743:752 TaskArrivalWithJitter.NumberOfArrivals job_jitter
+R758:761 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R755:757 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.NumberOfArrivals.Job var
+R762:765 prosa.classic.model.time Time time def
+var 781:788 TaskArrivalWithJitter.NumberOfArrivals job_task
+R794:797 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R791:793 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.NumberOfArrivals.Job var
+R798:801 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.NumberOfArrivals.Task var
+var 865:871 TaskArrivalWithJitter.NumberOfArrivals arr_seq
+R874:889 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R891:893 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.NumberOfArrivals.Job var
+var 992:1007 TaskArrivalWithJitter.NumberOfArrivals arrivals_between
+R1012:1034 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_between def
+R1059:1065 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.NumberOfArrivals.arr_seq var
+R1048:1057 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.NumberOfArrivals.job_jitter var
+R1036:1046 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.NumberOfArrivals.job_arrival var
+var 1119:1121 TaskArrivalWithJitter.NumberOfArrivals tsk
+R1124:1127 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.NumberOfArrivals.Task var
+def 1195:1207 TaskArrivalWithJitter is_job_of_tsk
+R1212:1225 prosa.classic.model.arrival.basic.task_arrival TaskArrival is_job_of_task def
+R1236:1238 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.NumberOfArrivals.tsk var
+R1227:1234 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.NumberOfArrivals.job_task var
+def 1340:1370 TaskArrivalWithJitter actual_arrivals_of_task_between
+R1380:1383 prosa.classic.model.time Time time def
+binder 1373:1374 <> t1:13
+binder 1376:1377 <> t2:14
+R1395:1399 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R1401:1404 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R1427:1429 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R1445:1445 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+binder 1400:1400 <> j:15
+R1430:1442 prosa.classic.model.arrival.jitter.task_arrival TaskArrivalWithJitter is_job_of_tsk def
+R1444:1444 prosa.classic.model.arrival.jitter.task_arrival <> j:15 var
+R1405:1420 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.NumberOfArrivals.arrivals_between var
+R1422:1423 prosa.classic.model.arrival.jitter.task_arrival <> t1:13 var
+R1425:1426 prosa.classic.model.arrival.jitter.task_arrival <> t2:14 var
+def 1527:1553 TaskArrivalWithJitter num_actual_arrivals_of_task
+R1563:1566 prosa.classic.model.time Time time def
+binder 1556:1557 <> t1:16
+binder 1559:1560 <> t2:17
+R1578:1581 mathcomp.boot.seq <> size def
+R1584:1614 prosa.classic.model.arrival.jitter.task_arrival TaskArrivalWithJitter actual_arrivals_of_task_between def
+R1616:1617 prosa.classic.model.arrival.jitter.task_arrival <> t1:16 var
+R1619:1620 prosa.classic.model.arrival.jitter.task_arrival <> t2:17 var
+R1631:1646 prosa.classic.model.arrival.jitter.task_arrival TaskArrivalWithJitter.NumberOfArrivals <> sec
+sec 1763:1789 TaskArrivalWithJitter DistanceBetweenSporadicJobs
+var  1806:1809 TaskArrivalWithJitter.DistanceBetweenSporadicJobs Task
+R1812:1817 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1834:1844 TaskArrivalWithJitter.DistanceBetweenSporadicJobs task_period
+R1851:1854 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1847:1850 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.Task var
+R1855:1858 prosa.classic.model.time Time time def
+var  1879:1881 TaskArrivalWithJitter.DistanceBetweenSporadicJobs Job
+R1884:1889 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1906:1916 TaskArrivalWithJitter.DistanceBetweenSporadicJobs job_arrival
+R1922:1925 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1919:1921 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.Job var
+R1926:1929 prosa.classic.model.time Time time def
+var 1945:1954 TaskArrivalWithJitter.DistanceBetweenSporadicJobs job_jitter
+R1960:1963 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1957:1959 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.Job var
+R1964:1967 prosa.classic.model.time Time time def
+var 1983:1990 TaskArrivalWithJitter.DistanceBetweenSporadicJobs job_task
+R1996:1999 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1993:1995 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.Job var
+R2000:2003 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.Task var
+var 2106:2112 TaskArrivalWithJitter.DistanceBetweenSporadicJobs arr_seq
+R2115:2130 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R2132:2134 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.Job var
+var 2152:2172 TaskArrivalWithJitter.DistanceBetweenSporadicJobs H_consistent_arrivals
+R2175:2202 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_times_are_consistent def
+R2216:2222 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.arr_seq var
+R2204:2214 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.job_arrival var
+var 2240:2262 TaskArrivalWithJitter.DistanceBetweenSporadicJobs H_no_duplicate_arrivals
+R2265:2289 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence_is_a_set def
+R2291:2297 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.arr_seq var
+var 2354:2368 TaskArrivalWithJitter.DistanceBetweenSporadicJobs H_sporadic_jobs
+R2377:2395 prosa.classic.model.arrival.basic.task_arrival TaskArrival sporadic_task_model def
+R2430:2436 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.arr_seq var
+R2421:2428 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.job_task var
+R2409:2419 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.job_arrival var
+R2397:2407 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.task_period var
+var 2505:2522 TaskArrivalWithJitter.DistanceBetweenSporadicJobs actual_job_arrival
+R2527:2540 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrival def
+R2554:2563 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.job_jitter var
+R2542:2552 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.job_arrival var
+var 2637:2639 TaskArrivalWithJitter.DistanceBetweenSporadicJobs tsk
+R2642:2645 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.Task var
+var 2711:2712 TaskArrivalWithJitter.DistanceBetweenSporadicJobs t1
+var 2714:2715 TaskArrivalWithJitter.DistanceBetweenSporadicJobs t2
+R2718:2721 prosa.classic.model.time Time time def
+var 2794:2806 TaskArrivalWithJitter.DistanceBetweenSporadicJobs arriving_jobs
+R2811:2841 prosa.classic.model.arrival.jitter.task_arrival TaskArrivalWithJitter actual_arrivals_of_task_between def
+R2944:2945 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.t1 var
+R2947:2948 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.t2 var
+R2940:2942 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.tsk var
+R2932:2938 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.arr_seq var
+R2923:2930 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.job_task var
+R2855:2864 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.job_jitter var
+R2843:2853 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.job_arrival var
+var 2959:2970 TaskArrivalWithJitter.DistanceBetweenSporadicJobs num_arrivals
+R2975:3001 prosa.classic.model.arrival.jitter.task_arrival TaskArrivalWithJitter num_actual_arrivals_of_task def
+R3047:3048 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.t1 var
+R3050:3051 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.t2 var
+R3043:3045 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.tsk var
+R3035:3041 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.arr_seq var
+R3026:3033 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.job_task var
+R3015:3024 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.job_jitter var
+R3003:3013 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.job_arrival var
+var 3142:3156 TaskArrivalWithJitter.DistanceBetweenSporadicJobs by_arrival_time
+binder 3158:3158 <> j:42
+binder 3160:3161 <> j':43
+R3179:3182 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R3166:3176 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.job_arrival var
+R3178:3178 prosa.classic.model.arrival.jitter.task_arrival <> j:42 var
+R3183:3193 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.job_arrival var
+R3195:3196 prosa.classic.model.arrival.jitter.task_arrival <> j':43 var
+var 3208:3218 TaskArrivalWithJitter.DistanceBetweenSporadicJobs sorted_jobs
+R3223:3226 mathcomp.boot.path <> sort def
+R3244:3256 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.arriving_jobs var
+R3228:3242 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.by_arrival_time var
+var 3350:3353 TaskArrivalWithJitter.DistanceBetweenSporadicJobs elem
+R3356:3358 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.Job var
+var 3369:3375 TaskArrivalWithJitter.DistanceBetweenSporadicJobs nth_job
+R3380:3382 mathcomp.boot.seq <> nth def
+R3389:3399 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.sorted_jobs var
+R3384:3387 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.elem var
+prf 3480:3512 TaskArrivalWithJitter sorted_arrivals_properties_of_nth
+binder 3528:3530 <> idx:46
+R3559:3570 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3544:3546 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R3541:3543 prosa.classic.model.arrival.jitter.task_arrival <> idx:46 var
+R3547:3558 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.num_arrivals var
+R3614:3625 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3573:3576 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R3609:3611 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x_'<'_x not
+R3571:3572 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.t1 var
+R3577:3594 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.actual_job_arrival var
+R3597:3603 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.nth_job var
+R3605:3607 prosa.classic.model.arrival.jitter.task_arrival <> idx:46 var
+R3577:3594 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.actual_job_arrival var
+R3597:3603 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.nth_job var
+R3605:3607 prosa.classic.model.arrival.jitter.task_arrival <> idx:46 var
+R3612:3613 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.t2 var
+R3654:3665 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3648:3650 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3626:3633 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.job_task var
+R3636:3642 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.nth_job var
+R3644:3646 prosa.classic.model.arrival.jitter.task_arrival <> idx:46 var
+R3651:3653 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.tsk var
+R3666:3675 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R3686:3692 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.nth_job var
+R3694:3696 prosa.classic.model.arrival.jitter.task_arrival <> idx:46 var
+R3677:3683 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.arr_seq var
+R3789:3795 mathcomp.boot.seq <> mem_nth thm
+R3800:3808 mathcomp.boot.path <> size_sort thm
+R3761:3765 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R3750:3756 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.nth_job var
+R3766:3776 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.sorted_jobs var
+R3789:3795 mathcomp.boot.seq <> mem_nth thm
+R3789:3795 mathcomp.boot.seq <> mem_nth thm
+R3800:3808 mathcomp.boot.path <> size_sort thm
+R3800:3808 mathcomp.boot.path <> size_sort thm
+R3825:3832 mathcomp.boot.path <> mem_sort thm
+R3834:3843 mathcomp.boot.seq <> mem_filter thm
+R3825:3832 mathcomp.boot.path <> mem_sort thm
+R3825:3832 mathcomp.boot.path <> mem_sort thm
+R3834:3843 mathcomp.boot.seq <> mem_filter thm
+R3834:3843 mathcomp.boot.seq <> mem_filter thm
+R3871:3874 Corelib.ssr.ssrbool <> andP thm
+R3916:3957 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter in_actual_arrivals_between_implies_arrived thm
+R3916:3957 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter in_actual_arrivals_between_implies_arrived thm
+R3979:4020 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter in_actual_arrivals_implies_arrived_between thm
+R3979:4020 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter in_actual_arrivals_implies_arrived_between thm
+R4073:4075 mathcomp.boot.eqtype <> eqP def
+R4073:4075 mathcomp.boot.eqtype <> eqP def
+prf 4163:4203 TaskArrivalWithJitter sorted_arrivals_current_differs_from_next
+binder 4219:4221 <> idx:47
+R4253:4264 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4235:4237 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R4232:4234 prosa.classic.model.arrival.jitter.task_arrival <> idx:47 var
+R4250:4252 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R4238:4249 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.num_arrivals var
+R4276:4279 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R4265:4271 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.nth_job var
+R4273:4275 prosa.classic.model.arrival.jitter.task_arrival <> idx:47 var
+R4280:4286 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.nth_job var
+R4291:4293 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R4288:4290 prosa.classic.model.arrival.jitter.task_arrival <> idx:47 var
+R4334:4336 mathcomp.boot.eqtype <> eqP def
+R4334:4336 mathcomp.boot.eqtype <> eqP def
+R4392:4395 mathcomp.boot.ssrnat <> ltn0 thm
+R4354:4365 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.num_arrivals var
+R4392:4395 mathcomp.boot.ssrnat <> ltn0 thm
+R4392:4395 mathcomp.boot.ssrnat <> ltn0 thm
+R4434:4437 mathcomp.boot.ssrnat <> ltn0 thm
+R4434:4437 mathcomp.boot.ssrnat <> ltn0 thm
+R4434:4437 mathcomp.boot.ssrnat <> ltn0 thm
+R4475:4482 mathcomp.boot.seq <> nth_uniq thm
+R4485:4493 mathcomp.boot.path <> size_sort thm
+R4496:4508 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.arriving_jobs var
+R4527:4553 prosa.classic.model.arrival.jitter.task_arrival TaskArrivalWithJitter num_actual_arrivals_of_task def
+R4572:4583 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.num_arrivals var
+R4611:4617 mathcomp.boot.ssrnat <> neq_ltn thm
+R4619:4623 mathcomp.boot.ssrnat <> ltnSn thm
+R4625:4628 Corelib.ssr.ssrbool <> orTb thm
+R4475:4482 mathcomp.boot.seq <> nth_uniq thm
+R4475:4482 mathcomp.boot.seq <> nth_uniq thm
+R4485:4493 mathcomp.boot.path <> size_sort thm
+R4485:4493 mathcomp.boot.path <> size_sort thm
+R4485:4493 mathcomp.boot.path <> size_sort thm
+R4485:4493 mathcomp.boot.path <> size_sort thm
+R4485:4493 mathcomp.boot.path <> size_sort thm
+R4485:4493 mathcomp.boot.path <> size_sort thm
+R4485:4493 mathcomp.boot.path <> size_sort thm
+R4485:4493 mathcomp.boot.path <> size_sort thm
+R4485:4493 mathcomp.boot.path <> size_sort thm
+R4485:4493 mathcomp.boot.path <> size_sort thm
+R4496:4508 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.arriving_jobs var
+R4496:4508 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.arriving_jobs var
+R4496:4508 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.arriving_jobs var
+R4496:4508 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.arriving_jobs var
+R4496:4508 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.arriving_jobs var
+R4496:4508 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.arriving_jobs var
+R4496:4508 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.arriving_jobs var
+R4496:4508 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.arriving_jobs var
+R4527:4553 prosa.classic.model.arrival.jitter.task_arrival TaskArrivalWithJitter num_actual_arrivals_of_task def
+R4527:4553 prosa.classic.model.arrival.jitter.task_arrival TaskArrivalWithJitter num_actual_arrivals_of_task def
+R4527:4553 prosa.classic.model.arrival.jitter.task_arrival TaskArrivalWithJitter num_actual_arrivals_of_task def
+R4527:4553 prosa.classic.model.arrival.jitter.task_arrival TaskArrivalWithJitter num_actual_arrivals_of_task def
+R4527:4553 prosa.classic.model.arrival.jitter.task_arrival TaskArrivalWithJitter num_actual_arrivals_of_task def
+R4527:4553 prosa.classic.model.arrival.jitter.task_arrival TaskArrivalWithJitter num_actual_arrivals_of_task def
+R4527:4553 prosa.classic.model.arrival.jitter.task_arrival TaskArrivalWithJitter num_actual_arrivals_of_task def
+R4527:4553 prosa.classic.model.arrival.jitter.task_arrival TaskArrivalWithJitter num_actual_arrivals_of_task def
+R4572:4583 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.num_arrivals var
+R4572:4583 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.num_arrivals var
+R4572:4583 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.num_arrivals var
+R4572:4583 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.num_arrivals var
+R4572:4583 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.num_arrivals var
+R4572:4583 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.num_arrivals var
+R4572:4583 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.num_arrivals var
+R4572:4583 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.num_arrivals var
+R4611:4617 mathcomp.boot.ssrnat <> neq_ltn thm
+R4611:4617 mathcomp.boot.ssrnat <> neq_ltn thm
+R4619:4623 mathcomp.boot.ssrnat <> ltnSn thm
+R4619:4623 mathcomp.boot.ssrnat <> ltnSn thm
+R4625:4628 Corelib.ssr.ssrbool <> orTb thm
+R4625:4628 Corelib.ssr.ssrbool <> orTb thm
+R4670:4672 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R4648:4656 mathcomp.boot.ssrnat <> leq_trans thm
+R4670:4672 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R4648:4656 mathcomp.boot.ssrnat <> leq_trans thm
+R4719:4722 mathcomp.boot.ssrnat <> ltnS thm
+R4719:4722 mathcomp.boot.ssrnat <> ltnS thm
+R4719:4722 mathcomp.boot.ssrnat <> ltnS thm
+R4744:4752 mathcomp.boot.path <> sort_uniq thm
+R4754:4764 mathcomp.boot.seq <> filter_uniq thm
+R4776:4795 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_uniq thm
+R4744:4752 mathcomp.boot.path <> sort_uniq thm
+R4744:4752 mathcomp.boot.path <> sort_uniq thm
+R4754:4764 mathcomp.boot.seq <> filter_uniq thm
+R4754:4764 mathcomp.boot.seq <> filter_uniq thm
+R4776:4795 prosa.classic.model.arrival.jitter.arrival_sequence ArrivalSequenceWithJitter actual_arrivals_uniq thm
+prf 4963:4997 TaskArrivalWithJitter sorted_arrivals_separated_by_period
+binder 5013:5015 <> idx:48
+R5047:5058 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5029:5031 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R5026:5028 prosa.classic.model.arrival.jitter.task_arrival <> idx:48 var
+R5044:5046 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R5032:5043 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.num_arrivals var
+R5087:5090 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R5116:5118 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R5091:5101 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.job_arrival var
+R5104:5110 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.nth_job var
+R5112:5114 prosa.classic.model.arrival.jitter.task_arrival <> idx:48 var
+R5119:5129 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.task_period var
+R5131:5133 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.tsk var
+R5059:5069 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.job_arrival var
+R5072:5078 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.nth_job var
+R5083:5085 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R5080:5082 prosa.classic.model.arrival.jitter.task_arrival <> idx:48 var
+R5165:5197 prosa.classic.model.arrival.jitter.task_arrival TaskArrivalWithJitter sorted_arrivals_properties_of_nth thm
+R5218:5258 prosa.classic.model.arrival.jitter.task_arrival TaskArrivalWithJitter sorted_arrivals_current_differs_from_next thm
+R5374:5377 mathcomp.boot.ssrnat <> ltn0 thm
+R5336:5347 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.num_arrivals var
+R5374:5377 mathcomp.boot.ssrnat <> ltn0 thm
+R5374:5377 mathcomp.boot.ssrnat <> ltn0 thm
+R5416:5419 mathcomp.boot.ssrnat <> ltn0 thm
+R5416:5419 mathcomp.boot.ssrnat <> ltn0 thm
+R5416:5419 mathcomp.boot.ssrnat <> ltn0 thm
+R5508:5510 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R5486:5494 mathcomp.boot.ssrnat <> leq_trans thm
+R5508:5510 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R5486:5494 mathcomp.boot.ssrnat <> leq_trans thm
+R5550:5552 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R5568:5571 mathcomp.boot.ssrnat <> ltnS thm
+R5550:5552 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R5568:5571 mathcomp.boot.ssrnat <> ltnS thm
+R5568:5571 mathcomp.boot.ssrnat <> ltnS thm
+R5760:5774 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.by_arrival_time var
+R5777:5783 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.nth_job var
+R5791:5797 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.nth_job var
+R5802:5804 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R5828:5839 prosa.classic.util.sorting <> sort_ordered thm
+R5865:5875 mathcomp.boot.path <> sort_sorted thm
+R5896:5904 mathcomp.boot.ssrnat <> leq_total thm
+R5828:5839 prosa.classic.util.sorting <> sort_ordered thm
+R5865:5875 mathcomp.boot.path <> sort_sorted thm
+R5896:5904 mathcomp.boot.ssrnat <> leq_total thm
+R5922:5930 mathcomp.boot.path <> size_sort thm
+R5922:5930 mathcomp.boot.path <> size_sort thm
+R5922:5930 mathcomp.boot.path <> size_sort thm
+R5948:5960 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.arriving_jobs var
+R5965:5991 prosa.classic.model.arrival.jitter.task_arrival TaskArrivalWithJitter num_actual_arrivals_of_task def
+R6010:6021 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.num_arrivals var
+R5948:5960 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.arriving_jobs var
+R5948:5960 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.arriving_jobs var
+R5965:5991 prosa.classic.model.arrival.jitter.task_arrival TaskArrivalWithJitter num_actual_arrivals_of_task def
+R5965:5991 prosa.classic.model.arrival.jitter.task_arrival TaskArrivalWithJitter num_actual_arrivals_of_task def
+R6010:6021 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.num_arrivals var
+R6010:6021 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.num_arrivals var
+sec 6179:6194 TaskArrivalWithJitter.DistanceBetweenSporadicJobs FirstAndLastJobs
+var 6271:6288 TaskArrivalWithJitter.DistanceBetweenSporadicJobs.FirstAndLastJobs H_at_least_one_job
+R6311:6314 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R6299:6310 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.num_arrivals var
+var 6484:6490 TaskArrivalWithJitter.DistanceBetweenSporadicJobs.FirstAndLastJobs j_first
+R6495:6501 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.nth_job var
+var 6516:6521 TaskArrivalWithJitter.DistanceBetweenSporadicJobs.FirstAndLastJobs j_last
+R6526:6532 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.nth_job var
+R6547:6549 mathcomp.boot.ssrnat <> ::nat_scope:x_'.-1' not
+R6535:6546 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.num_arrivals var
+var 6563:6569 TaskArrivalWithJitter.DistanceBetweenSporadicJobs.FirstAndLastJobs a_first
+R6574:6584 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.job_arrival var
+R6586:6592 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.FirstAndLastJobs.j_first var
+var 6605:6610 TaskArrivalWithJitter.DistanceBetweenSporadicJobs.FirstAndLastJobs a_last
+R6615:6625 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.job_arrival var
+R6627:6632 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.FirstAndLastJobs.j_last var
+prf 6800:6838 TaskArrivalWithJitter sorted_arrivals_distance_from_first_job
+binder 6856:6858 <> idx:51
+R6889:6902 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6874:6876 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R6871:6873 prosa.classic.model.arrival.jitter.task_arrival <> idx:51 var
+R6877:6888 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.num_arrivals var
+R6928:6931 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R6939:6941 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6932:6938 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.FirstAndLastJobs.a_first var
+R6945:6947 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R6942:6944 prosa.classic.model.arrival.jitter.task_arrival <> idx:51 var
+R6948:6958 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.task_period var
+R6960:6962 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.tsk var
+R6903:6913 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.job_arrival var
+R6916:6922 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.nth_job var
+R6924:6926 prosa.classic.model.arrival.jitter.task_arrival <> idx:51 var
+R6998:7032 prosa.classic.model.arrival.jitter.task_arrival TaskArrivalWithJitter sorted_arrivals_separated_by_period thm
+R7050:7068 prosa.classic.model.arrival.basic.task_arrival TaskArrival sporadic_task_model def
+R7167:7171 mathcomp.boot.ssrnat <> mul0n thm
+R7173:7177 mathcomp.boot.ssrnat <> addn0 thm
+R7167:7171 mathcomp.boot.ssrnat <> mul0n thm
+R7167:7171 mathcomp.boot.ssrnat <> mul0n thm
+R7173:7177 mathcomp.boot.ssrnat <> addn0 thm
+R7173:7177 mathcomp.boot.ssrnat <> addn0 thm
+R7273:7275 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R7245:7257 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R7220:7222 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R7223:7234 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.num_arrivals var
+R7273:7275 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R7245:7257 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R7372:7374 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R7347:7357 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.job_arrival var
+R7360:7366 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.nth_job var
+R7375:7385 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.task_period var
+R7387:7389 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.tsk var
+R7326:7334 mathcomp.boot.ssrnat <> leq_trans thm
+R7420:7424 mathcomp.boot.ssrnat <> mulSn thm
+R7440:7442 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R7427:7437 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.task_period var
+R7445:7449 mathcomp.boot.ssrnat <> addnC thm
+R7451:7455 mathcomp.boot.ssrnat <> addnA thm
+R7457:7465 mathcomp.boot.ssrnat <> leq_add2r thm
+R7372:7374 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R7347:7357 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.job_arrival var
+R7360:7366 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.nth_job var
+R7375:7385 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.task_period var
+R7387:7389 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.tsk var
+R7326:7334 mathcomp.boot.ssrnat <> leq_trans thm
+R7420:7424 mathcomp.boot.ssrnat <> mulSn thm
+R7420:7424 mathcomp.boot.ssrnat <> mulSn thm
+R7445:7449 mathcomp.boot.ssrnat <> addnC thm
+R7440:7442 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R7427:7437 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.task_period var
+R7440:7442 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R7427:7437 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.task_period var
+R7445:7449 mathcomp.boot.ssrnat <> addnC thm
+R7451:7455 mathcomp.boot.ssrnat <> addnA thm
+R7451:7455 mathcomp.boot.ssrnat <> addnA thm
+R7457:7465 mathcomp.boot.ssrnat <> leq_add2r thm
+R7457:7465 mathcomp.boot.ssrnat <> leq_add2r thm
+R7508:7516 mathcomp.boot.ssrnat <> ltn_add2r thm
+R7523:7527 mathcomp.boot.ssrnat <> addn1 thm
+R7530:7538 mathcomp.boot.ssrnat <> ltn_predK thm
+R7508:7516 mathcomp.boot.ssrnat <> ltn_add2r thm
+R7508:7516 mathcomp.boot.ssrnat <> ltn_add2r thm
+R7523:7527 mathcomp.boot.ssrnat <> addn1 thm
+R7523:7527 mathcomp.boot.ssrnat <> addn1 thm
+R7523:7527 mathcomp.boot.ssrnat <> addn1 thm
+R7530:7538 mathcomp.boot.ssrnat <> ltn_predK thm
+R7530:7538 mathcomp.boot.ssrnat <> ltn_predK thm
+prf 7683:7729 TaskArrivalWithJitter sorted_arrivals_distance_between_first_and_last
+R7746:7749 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R7757:7759 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R7750:7756 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.FirstAndLastJobs.a_first var
+R7760:7760 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R7775:7778 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R7773:7773 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R7761:7772 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.num_arrivals var
+R7779:7789 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.task_period var
+R7791:7793 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.tsk var
+R7740:7745 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.FirstAndLastJobs.a_last var
+R7874:7912 prosa.classic.model.arrival.jitter.task_arrival TaskArrivalWithJitter sorted_arrivals_distance_from_first_job thm
+R7931:7935 mathcomp.boot.ssrnat <> subn1 thm
+R7931:7935 mathcomp.boot.ssrnat <> subn1 thm
+R7931:7935 mathcomp.boot.ssrnat <> subn1 thm
+R8001:8004 mathcomp.boot.ssrnat <> ltn0 thm
+R7970:7981 prosa.classic.model.arrival.jitter.task_arrival <> TaskArrivalWithJitter.DistanceBetweenSporadicJobs.num_arrivals var
+R8001:8004 mathcomp.boot.ssrnat <> ltn0 thm
+R8001:8004 mathcomp.boot.ssrnat <> ltn0 thm
+R8034:8049 prosa.classic.model.arrival.jitter.task_arrival TaskArrivalWithJitter.DistanceBetweenSporadicJobs.FirstAndLastJobs <> sec
+R8059:8085 prosa.classic.model.arrival.jitter.task_arrival TaskArrivalWithJitter.DistanceBetweenSporadicJobs <> sec
+R8095:8115 prosa.classic.model.arrival.jitter.task_arrival TaskArrivalWithJitter <> mod

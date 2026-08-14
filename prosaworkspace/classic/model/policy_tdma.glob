@@ -1,0 +1,765 @@
+DIGEST c5433740099d267397a24ca12d564f71
+Fprosa.classic.model.policy_tdma
+R16:37 prosa.classic.util.all <> <> lib
+R56:79 prosa.classic.model.time <> <> lib
+R97:134 prosa.classic.model.arrival.basic.task <> <> lib
+R153:189 prosa.classic.model.arrival.basic.job <> <> lib
+R221:229 mathcomp.boot.ssreflect <> <> lib
+R231:237 mathcomp.boot.ssrbool <> <> lib
+R239:244 mathcomp.boot.ssrfun <> <> lib
+R246:251 mathcomp.boot.eqtype <> <> lib
+R253:258 mathcomp.boot.ssrnat <> <> lib
+R260:262 mathcomp.boot.seq <> <> lib
+R264:270 mathcomp.boot.fintype <> <> lib
+R272:276 mathcomp.boot.bigop <> <> lib
+R278:280 mathcomp.boot.div <> <> lib
+mod 291:300 <> PolicyTDMA
+R313:316 prosa.classic.model.time Time <> mod
+sec 382:385 PolicyTDMA TDMA
+var 884:887 PolicyTDMA.TDMA Task
+R890:895 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+def 997:1005 PolicyTDMA TDMA_slot
+R1013:1016 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1009:1012 prosa.classic.model.policy_tdma <> PolicyTDMA.TDMA.Task var
+R1017:1024 prosa.classic.model.time Time duration def
+def 1137:1151 PolicyTDMA TDMA_slot_order
+R1155:1157 Corelib.ssr.ssrbool <> rel def
+R1159:1162 prosa.classic.model.policy_tdma <> PolicyTDMA.TDMA.Task var
+R1172:1175 prosa.classic.model.policy_tdma PolicyTDMA.TDMA <> sec
+sec 1277:1290 PolicyTDMA PropertiesTDMA
+var  1307:1310 PolicyTDMA.PropertiesTDMA Task
+R1312:1317 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1373:1374 PolicyTDMA.PropertiesTDMA ts
+R1377:1381 prosa.util.seqset <> :::'{set'_x_'}' not
+R1386:1386 prosa.util.seqset <> :::'{set'_x_'}' not
+R1382:1385 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.Task var
+var 1518:1527 PolicyTDMA.PropertiesTDMA slot_order
+R1530:1544 prosa.classic.model.policy_tdma PolicyTDMA TDMA_slot_order def
+R1546:1549 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.Task var
+sec 1635:1642 PolicyTDMA.PropertiesTDMA Relation
+def 1709:1732 PolicyTDMA slot_order_is_transitive
+R1736:1745 Corelib.ssr.ssrbool <> transitive def
+R1747:1756 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.slot_order var
+def 1831:1863 PolicyTDMA slot_order_is_total_over_task_set
+R1876:1890 prosa.util.rel <> total_over_list def
+R1903:1904 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.ts var
+R1892:1901 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.slot_order var
+def 1974:2014 PolicyTDMA slot_order_is_antisymmetric_over_task_set
+R2027:2049 prosa.util.rel <> antisymmetric_over_list def
+R2062:2063 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.ts var
+R2051:2060 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.slot_order var
+R2076:2083 prosa.classic.model.policy_tdma PolicyTDMA.PropertiesTDMA.Relation <> sec
+sec 2160:2167 PolicyTDMA.PropertiesTDMA TimeSlot
+var 2230:2233 PolicyTDMA.PropertiesTDMA.TimeSlot task
+R2236:2239 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.Task var
+var 2259:2270 PolicyTDMA.PropertiesTDMA.TimeSlot H_task_in_ts
+R2277:2281 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R2273:2276 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task var
+R2282:2283 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.ts var
+var 2365:2378 PolicyTDMA.PropertiesTDMA.TimeSlot task_time_slot
+R2381:2389 prosa.classic.model.policy_tdma PolicyTDMA TDMA_slot def
+R2391:2394 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.Task var
+def 2462:2479 PolicyTDMA is_valid_time_slot
+R2510:2512 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R2491:2504 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task_time_slot var
+R2506:2509 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task var
+def 2611:2620 PolicyTDMA TDMA_cycle
+R2633:2638 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R2642:2645 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R2648:2649 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R2646:2647 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.ts var
+binder 2639:2641 <> tsk:14
+binder 2639:2641 <> tsk:15
+binder 2639:2641 <> tsk:16
+R2650:2663 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task_time_slot var
+R2665:2667 prosa.classic.model.policy_tdma <> tsk:14 var
+def 2876:2891 PolicyTDMA Task_slot_offset
+R2904:2909 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R2919:2922 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R2925:2927 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R2976:2977 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R2923:2924 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.ts var
+binder 2910:2918 <> prev_task:17
+binder 2910:2918 <> prev_task:18
+binder 2910:2918 <> prev_task:19
+R2953:2957 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R2975:2975 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R2928:2937 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.slot_order var
+R2939:2947 prosa.classic.model.policy_tdma <> prev_task:17 var
+R2949:2952 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task var
+R2967:2970 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R2958:2966 prosa.classic.model.policy_tdma <> prev_task:17 var
+R2971:2974 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task var
+R2978:2991 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task_time_slot var
+R2993:3001 prosa.classic.model.policy_tdma <> prev_task:17 var
+def 3111:3127 PolicyTDMA Task_in_time_slot
+R3132:3135 prosa.classic.model.time Time time def
+binder 3130:3130 <> t:20
+R3147:3147 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R3212:3225 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R3245:3245 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R3148:3148 mathcomp.boot.div <> ::nat_scope:x_'%%'_x not
+R3197:3201 mathcomp.boot.div <> ::nat_scope:x_'%%'_x not
+R3163:3165 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R3150:3152 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R3149:3149 prosa.classic.model.policy_tdma <> t:20 var
+R3153:3162 prosa.classic.model.policy_tdma PolicyTDMA TDMA_cycle def
+R3166:3166 mathcomp.boot.div <> ::nat_scope:x_'%%'_x not
+R3183:3186 mathcomp.boot.div <> ::nat_scope:x_'%%'_x not
+R3167:3182 prosa.classic.model.policy_tdma PolicyTDMA Task_slot_offset def
+R3187:3196 prosa.classic.model.policy_tdma PolicyTDMA TDMA_cycle def
+R3202:3211 prosa.classic.model.policy_tdma PolicyTDMA TDMA_cycle def
+R3226:3239 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task_time_slot var
+R3241:3244 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task var
+sec 3263:3273 PolicyTDMA.PropertiesTDMA.TimeSlot BasicLemmas
+var 3350:3367 PolicyTDMA.PropertiesTDMA.TimeSlot.BasicLemmas time_slot_positive
+R3380:3397 prosa.classic.model.policy_tdma PolicyTDMA is_valid_time_slot def
+prf 3533:3560 PolicyTDMA TDMA_cycle_ge_each_time_slot
+R3583:3586 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R3587:3600 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task_time_slot var
+R3602:3605 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task var
+R3573:3582 prosa.classic.model.policy_tdma PolicyTDMA TDMA_cycle def
+R3641:3650 prosa.classic.model.policy_tdma PolicyTDMA TDMA_cycle def
+R3653:3659 mathcomp.boot.bigop <> big_rem thm
+R3661:3664 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task var
+R3641:3650 prosa.classic.model.policy_tdma PolicyTDMA TDMA_cycle def
+R3641:3650 prosa.classic.model.policy_tdma PolicyTDMA TDMA_cycle def
+R3653:3659 mathcomp.boot.bigop <> big_rem thm
+R3661:3664 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task var
+R3653:3659 mathcomp.boot.bigop <> big_rem thm
+R3661:3664 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task var
+R3685:3693 mathcomp.boot.ssrnat <> leq_trans thm
+R3711:3718 mathcomp.boot.ssrnat <> leq_addr thm
+R3685:3693 mathcomp.boot.ssrnat <> leq_trans thm
+R3711:3718 mathcomp.boot.ssrnat <> leq_addr thm
+R3738:3742 mathcomp.boot.ssrnat <> leqnn thm
+R3738:3742 mathcomp.boot.ssrnat <> leqnn thm
+prf 3825:3843 PolicyTDMA TDMA_cycle_positive
+R3866:3868 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R3856:3865 prosa.classic.model.policy_tdma PolicyTDMA TDMA_cycle def
+R3900:3917 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.BasicLemmas.time_slot_positive var
+R3900:3917 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.BasicLemmas.time_slot_positive var
+R3900:3917 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.BasicLemmas.time_slot_positive var
+R3947:3974 prosa.classic.model.policy_tdma PolicyTDMA TDMA_cycle_ge_each_time_slot thm
+R3925:3933 mathcomp.boot.ssrnat <> leq_trans thm
+R3947:3974 prosa.classic.model.policy_tdma PolicyTDMA TDMA_cycle_ge_each_time_slot thm
+prf 4050:4064 PolicyTDMA Offset_lt_cycle
+R4093:4095 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R4077:4092 prosa.classic.model.policy_tdma PolicyTDMA Task_slot_offset def
+R4096:4105 prosa.classic.model.policy_tdma PolicyTDMA TDMA_cycle def
+R4140:4155 prosa.classic.model.policy_tdma PolicyTDMA Task_slot_offset def
+R4158:4167 prosa.classic.model.policy_tdma PolicyTDMA TDMA_cycle def
+R4169:4178 mathcomp.boot.bigop <> big_mkcond thm
+R4140:4155 prosa.classic.model.policy_tdma PolicyTDMA Task_slot_offset def
+R4140:4155 prosa.classic.model.policy_tdma PolicyTDMA Task_slot_offset def
+R4158:4167 prosa.classic.model.policy_tdma PolicyTDMA TDMA_cycle def
+R4158:4167 prosa.classic.model.policy_tdma PolicyTDMA TDMA_cycle def
+R4169:4178 mathcomp.boot.bigop <> big_mkcond thm
+R4169:4178 mathcomp.boot.bigop <> big_mkcond thm
+R4218:4223 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R4233:4236 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R4239:4240 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R4237:4238 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.ts var
+binder 4224:4232 <> prev_task:23
+binder 4224:4232 <> prev_task:24
+binder 4224:4232 <> prev_task:25
+R4241:4243 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R4259:4264 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R4289:4294 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R4253:4254 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R4244:4252 prosa.classic.model.policy_tdma <> prev_task:23 var
+R4255:4258 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task var
+R4265:4278 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task_time_slot var
+R4280:4288 prosa.classic.model.policy_tdma <> prev_task:23 var
+R4195:4207 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R4218:4223 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R4233:4236 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R4239:4240 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R4237:4238 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.ts var
+binder 4224:4232 <> prev_task:26
+binder 4224:4232 <> prev_task:27
+binder 4224:4232 <> prev_task:28
+R4241:4243 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R4259:4264 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R4289:4294 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R4253:4254 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R4244:4252 prosa.classic.model.policy_tdma <> prev_task:26 var
+R4255:4258 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task var
+R4265:4278 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task_time_slot var
+R4280:4288 prosa.classic.model.policy_tdma <> prev_task:26 var
+R4195:4207 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R4315:4321 mathcomp.boot.bigop <> leq_sum thm
+R4315:4321 mathcomp.boot.bigop <> leq_sum thm
+R4341:4350 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.slot_order var
+R4354:4357 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task var
+R4341:4350 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.slot_order var
+R4354:4357 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task var
+R4385:4394 mathcomp.boot.bigop <> big_mkcond thm
+R4385:4394 mathcomp.boot.bigop <> big_mkcond thm
+R4385:4394 mathcomp.boot.bigop <> big_mkcond thm
+R4426:4429 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task var
+R4407:4415 mathcomp.boot.bigop <> bigD1_seq thm
+R4471:4478 prosa.util.seqset <> set_uniq thm
+R4480:4481 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.ts var
+R4426:4429 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task var
+R4407:4415 mathcomp.boot.bigop <> bigD1_seq thm
+R4426:4429 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task var
+R4407:4415 mathcomp.boot.bigop <> bigD1_seq thm
+R4426:4429 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task var
+R4407:4415 mathcomp.boot.bigop <> bigD1_seq thm
+R4426:4429 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task var
+R4407:4415 mathcomp.boot.bigop <> bigD1_seq thm
+R4471:4478 prosa.util.seqset <> set_uniq thm
+R4480:4481 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.ts var
+R4505:4512 mathcomp.boot.ssrnat <> subn_gt0 thm
+R4515:4520 mathcomp.boot.ssrnat <> addnBA thm
+R4535:4539 mathcomp.boot.ssrnat <> subnn thm
+R4541:4545 mathcomp.boot.ssrnat <> addn0 thm
+R4505:4512 mathcomp.boot.ssrnat <> subn_gt0 thm
+R4505:4512 mathcomp.boot.ssrnat <> subn_gt0 thm
+R4515:4520 mathcomp.boot.ssrnat <> addnBA thm
+R4515:4520 mathcomp.boot.ssrnat <> addnBA thm
+R4535:4539 mathcomp.boot.ssrnat <> subnn thm
+R4535:4539 mathcomp.boot.ssrnat <> subnn thm
+R4541:4545 mathcomp.boot.ssrnat <> addn0 thm
+R4541:4545 mathcomp.boot.ssrnat <> addn0 thm
+prf 4704:4728 PolicyTDMA Offset_add_slot_leq_cycle
+R4779:4782 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R4757:4759 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R4741:4756 prosa.classic.model.policy_tdma PolicyTDMA Task_slot_offset def
+R4760:4773 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task_time_slot var
+R4775:4778 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task var
+R4783:4792 prosa.classic.model.policy_tdma PolicyTDMA TDMA_cycle def
+R4827:4842 prosa.classic.model.policy_tdma PolicyTDMA Task_slot_offset def
+R4845:4854 prosa.classic.model.policy_tdma PolicyTDMA TDMA_cycle def
+R4827:4842 prosa.classic.model.policy_tdma PolicyTDMA Task_slot_offset def
+R4827:4842 prosa.classic.model.policy_tdma PolicyTDMA Task_slot_offset def
+R4845:4854 prosa.classic.model.policy_tdma PolicyTDMA TDMA_cycle def
+R4845:4854 prosa.classic.model.policy_tdma PolicyTDMA TDMA_cycle def
+R4873:4877 mathcomp.boot.ssrnat <> addnC thm
+R4880:4888 mathcomp.boot.bigop <> bigD1_seq thm
+R4890:4893 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task var
+R4914:4921 prosa.util.seqset <> set_uniq thm
+R4923:4924 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.ts var
+R4873:4877 mathcomp.boot.ssrnat <> addnC thm
+R4873:4877 mathcomp.boot.ssrnat <> addnC thm
+R4880:4888 mathcomp.boot.bigop <> bigD1_seq thm
+R4890:4893 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task var
+R4880:4888 mathcomp.boot.bigop <> bigD1_seq thm
+R4890:4893 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task var
+R4914:4921 prosa.util.seqset <> set_uniq thm
+R4923:4924 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.ts var
+R4945:4953 mathcomp.boot.ssrnat <> leq_add2l thm
+R4945:4953 mathcomp.boot.ssrnat <> leq_add2l thm
+R4945:4953 mathcomp.boot.ssrnat <> leq_add2l thm
+R4972:4981 mathcomp.boot.bigop <> big_mkcond thm
+R4972:4981 mathcomp.boot.bigop <> big_mkcond thm
+R4972:4981 mathcomp.boot.bigop <> big_mkcond thm
+R5001:5006 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R5008:5011 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R5014:5016 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R5026:5027 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R5012:5013 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.ts var
+binder 5007:5007 <> i:29
+binder 5007:5007 <> i:30
+binder 5007:5007 <> i:31
+R5018:5021 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R5017:5017 prosa.classic.model.policy_tdma <> i:29 var
+R5022:5025 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task var
+R5028:5041 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task_time_slot var
+R5043:5043 prosa.classic.model.policy_tdma <> i:29 var
+R5060:5065 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R5067:5070 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R5073:5075 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R5071:5072 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.ts var
+binder 5066:5066 <> i:32
+binder 5066:5066 <> i:33
+binder 5066:5066 <> i:34
+R5076:5078 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R5088:5093 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R5110:5115 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R5080:5083 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R5079:5079 prosa.classic.model.policy_tdma <> i:32 var
+R5084:5087 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task var
+R5094:5107 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task_time_slot var
+R5109:5109 prosa.classic.model.policy_tdma <> i:32 var
+R5145:5154 mathcomp.boot.bigop <> big_mkcond thm
+R5001:5006 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R5008:5011 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R5014:5016 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R5026:5027 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R5012:5013 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.ts var
+binder 5007:5007 <> i:35
+binder 5007:5007 <> i:36
+binder 5007:5007 <> i:37
+R5018:5021 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R5017:5017 prosa.classic.model.policy_tdma <> i:35 var
+R5022:5025 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task var
+R5028:5041 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task_time_slot var
+R5043:5043 prosa.classic.model.policy_tdma <> i:35 var
+R5060:5065 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R5067:5070 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R5073:5075 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R5071:5072 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.ts var
+binder 5066:5066 <> i:38
+binder 5066:5066 <> i:39
+binder 5066:5066 <> i:40
+R5076:5078 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R5088:5093 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R5110:5115 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R5080:5083 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R5079:5079 prosa.classic.model.policy_tdma <> i:38 var
+R5084:5087 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task var
+R5094:5107 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task_time_slot var
+R5109:5109 prosa.classic.model.policy_tdma <> i:38 var
+R5145:5154 mathcomp.boot.bigop <> big_mkcond thm
+R5145:5154 mathcomp.boot.bigop <> big_mkcond thm
+R5172:5178 mathcomp.boot.bigop <> leq_sum thm
+R5172:5178 mathcomp.boot.bigop <> leq_sum thm
+R5197:5206 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.slot_order var
+R5210:5213 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task var
+R5197:5206 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.slot_order var
+R5210:5213 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.TimeSlot.task var
+R5246:5256 prosa.classic.model.policy_tdma PolicyTDMA.PropertiesTDMA.TimeSlot.BasicLemmas <> sec
+R5268:5275 prosa.classic.model.policy_tdma PolicyTDMA.PropertiesTDMA.TimeSlot <> sec
+sec 5383:5396 PolicyTDMA.PropertiesTDMA InTimeSlotUniq
+var 5477:5490 PolicyTDMA.PropertiesTDMA.InTimeSlotUniq task_time_slot
+R5493:5501 prosa.classic.model.policy_tdma PolicyTDMA TDMA_slot def
+R5503:5506 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.Task var
+var 5574:5589 PolicyTDMA.PropertiesTDMA.InTimeSlotUniq slot_order_total
+R5600:5632 prosa.classic.model.policy_tdma PolicyTDMA slot_order_is_total_over_task_set def
+var 5686:5709 PolicyTDMA.PropertiesTDMA.InTimeSlotUniq slot_order_antisymmetric
+R5720:5760 prosa.classic.model.policy_tdma PolicyTDMA slot_order_is_antisymmetric_over_task_set def
+var 5812:5832 PolicyTDMA.PropertiesTDMA.InTimeSlotUniq slot_order_transitive
+R5843:5866 prosa.classic.model.policy_tdma PolicyTDMA slot_order_is_transitive def
+prf 5986:6000 PolicyTDMA relation_offset
+binder 6018:6021 <> tsk1:49
+binder 6023:6026 <> tsk2:50
+R6040:6043 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6033:6037 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R6029:6032 prosa.classic.model.policy_tdma <> tsk1:49 var
+R6038:6039 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.ts var
+R6055:6066 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6048:6052 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R6044:6047 prosa.classic.model.policy_tdma <> tsk2:50 var
+R6053:6054 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.ts var
+R6087:6090 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6067:6076 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.slot_order var
+R6078:6081 prosa.classic.model.policy_tdma <> tsk1:49 var
+R6083:6086 prosa.classic.model.policy_tdma <> tsk2:50 var
+R6103:6114 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6095:6098 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R6091:6094 prosa.classic.model.policy_tdma <> tsk1:49 var
+R6099:6102 prosa.classic.model.policy_tdma <> tsk2:50 var
+R6151:6154 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R6191:6193 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6155:6170 prosa.classic.model.policy_tdma PolicyTDMA Task_slot_offset def
+R6177:6190 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.task_time_slot var
+R6172:6175 prosa.classic.model.policy_tdma <> tsk1:49 var
+R6194:6207 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.task_time_slot var
+R6209:6212 prosa.classic.model.policy_tdma <> tsk1:49 var
+R6115:6130 prosa.classic.model.policy_tdma PolicyTDMA Task_slot_offset def
+R6137:6150 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.task_time_slot var
+R6132:6135 prosa.classic.model.policy_tdma <> tsk2:50 var
+R6277:6292 prosa.classic.model.policy_tdma PolicyTDMA Task_slot_offset def
+R6294:6303 mathcomp.boot.bigop <> big_mkcond thm
+R6305:6309 mathcomp.boot.ssrnat <> addnC thm
+R6277:6292 prosa.classic.model.policy_tdma PolicyTDMA Task_slot_offset def
+R6277:6292 prosa.classic.model.policy_tdma PolicyTDMA Task_slot_offset def
+R6294:6303 mathcomp.boot.bigop <> big_mkcond thm
+R6294:6303 mathcomp.boot.bigop <> big_mkcond thm
+R6305:6309 mathcomp.boot.ssrnat <> addnC thm
+R6305:6309 mathcomp.boot.ssrnat <> addnC thm
+R6327:6332 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R6336:6339 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R6342:6344 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R6381:6382 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R6340:6341 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.ts var
+binder 6333:6335 <> tsk:51
+binder 6333:6335 <> tsk:52
+binder 6333:6335 <> tsk:53
+R6364:6368 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6380:6380 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6345:6354 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.slot_order var
+R6356:6358 prosa.classic.model.policy_tdma <> tsk:51 var
+R6372:6375 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R6369:6371 prosa.classic.model.policy_tdma <> tsk:51 var
+R6383:6396 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.task_time_slot var
+R6398:6400 prosa.classic.model.policy_tdma <> tsk:51 var
+R6436:6438 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6417:6430 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.task_time_slot var
+R6439:6444 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R6448:6451 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R6454:6455 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R6452:6453 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.ts var
+binder 6445:6447 <> tsk:54
+binder 6445:6447 <> tsk:55
+binder 6445:6447 <> tsk:56
+R6456:6458 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R6510:6515 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R6534:6539 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R6495:6499 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6509:6509 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6478:6482 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6494:6494 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6459:6468 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.slot_order var
+R6470:6472 prosa.classic.model.policy_tdma <> tsk:54 var
+R6486:6489 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R6483:6485 prosa.classic.model.policy_tdma <> tsk:54 var
+R6503:6504 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R6500:6502 prosa.classic.model.policy_tdma <> tsk:54 var
+R6516:6529 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.task_time_slot var
+R6531:6533 prosa.classic.model.policy_tdma <> tsk:54 var
+R6540:6540 Corelib.Init.Datatypes <> O constr
+R6327:6332 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R6336:6339 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R6342:6344 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R6381:6382 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R6340:6341 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.ts var
+binder 6333:6335 <> tsk:57
+binder 6333:6335 <> tsk:58
+binder 6333:6335 <> tsk:59
+R6364:6368 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6380:6380 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6345:6354 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.slot_order var
+R6356:6358 prosa.classic.model.policy_tdma <> tsk:57 var
+R6372:6375 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R6369:6371 prosa.classic.model.policy_tdma <> tsk:57 var
+R6383:6396 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.task_time_slot var
+R6398:6400 prosa.classic.model.policy_tdma <> tsk:57 var
+R6436:6438 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6417:6430 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.task_time_slot var
+R6439:6444 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R6448:6451 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R6454:6455 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R6452:6453 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.ts var
+binder 6445:6447 <> tsk:60
+binder 6445:6447 <> tsk:61
+binder 6445:6447 <> tsk:62
+R6456:6458 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R6510:6515 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R6534:6539 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R6495:6499 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6509:6509 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6478:6482 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6494:6494 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6459:6468 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.slot_order var
+R6470:6472 prosa.classic.model.policy_tdma <> tsk:60 var
+R6486:6489 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R6483:6485 prosa.classic.model.policy_tdma <> tsk:60 var
+R6503:6504 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R6500:6502 prosa.classic.model.policy_tdma <> tsk:60 var
+R6516:6529 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.task_time_slot var
+R6531:6533 prosa.classic.model.policy_tdma <> tsk:60 var
+R6540:6540 Corelib.Init.Datatypes <> O constr
+R6560:6568 mathcomp.boot.ssrnat <> leq_add2l thm
+R6560:6568 mathcomp.boot.ssrnat <> leq_add2l thm
+R6560:6568 mathcomp.boot.ssrnat <> leq_add2l thm
+R6577:6587 prosa.util.sum <> leq_sum_seq thm
+R6577:6587 prosa.util.sum <> leq_sum_seq thm
+R6618:6627 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.slot_order var
+R6618:6627 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.slot_order var
+R6657:6658 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R6657:6658 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R6699:6700 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R6699:6700 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R6780:6803 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.slot_order_antisymmetric var
+R6744:6746 mathcomp.boot.eqtype <> eqP def
+R6780:6803 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.slot_order_antisymmetric var
+R6843:6845 mathcomp.boot.eqtype <> eqP def
+R6877:6897 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.slot_order_transitive var
+R6877:6897 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.slot_order_transitive var
+R6877:6897 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.slot_order_transitive var
+R6945:6954 mathcomp.boot.bigop <> big_mkcond thm
+R6945:6954 mathcomp.boot.bigop <> big_mkcond thm
+R6945:6954 mathcomp.boot.bigop <> big_mkcond thm
+R6969:6977 mathcomp.boot.bigop <> bigD1_seq thm
+R7014:7021 prosa.util.seqset <> set_uniq thm
+R7023:7024 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.ts var
+R6969:6977 mathcomp.boot.bigop <> bigD1_seq thm
+R6969:6977 mathcomp.boot.bigop <> bigD1_seq thm
+R6969:6977 mathcomp.boot.bigop <> bigD1_seq thm
+R6969:6977 mathcomp.boot.bigop <> bigD1_seq thm
+R7014:7021 prosa.util.seqset <> set_uniq thm
+R7023:7024 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.ts var
+R7041:7043 mathcomp.boot.eqtype <> eqP def
+R7046:7048 mathcomp.boot.eqtype <> eqP def
+R7065:7067 mathcomp.boot.eqtype <> eqP def
+R7103:7105 mathcomp.boot.eqtype <> eqP def
+R7103:7105 mathcomp.boot.eqtype <> eqP def
+R7158:7160 mathcomp.boot.eqtype <> eqP def
+R7126:7126 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7139:7142 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7131:7134 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R7143:7146 Corelib.Init.Datatypes <> true constr
+R7158:7160 mathcomp.boot.eqtype <> eqP def
+R7197:7205 mathcomp.boot.ssrnat <> eqn_add2l thm
+R7197:7205 mathcomp.boot.ssrnat <> eqn_add2l thm
+R7197:7205 mathcomp.boot.ssrnat <> eqn_add2l thm
+R7216:7225 mathcomp.boot.bigop <> big_mkcond thm
+R7216:7225 mathcomp.boot.bigop <> big_mkcond thm
+R7216:7225 mathcomp.boot.bigop <> big_mkcond thm
+R7234:7236 mathcomp.boot.eqtype <> eqP def
+R7234:7236 mathcomp.boot.eqtype <> eqP def
+R7245:7251 mathcomp.boot.bigop <> eq_bigr thm
+R7245:7251 mathcomp.boot.bigop <> eq_bigr thm
+R7284:7285 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R7298:7307 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.slot_order var
+R7324:7325 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R7284:7285 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R7298:7307 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.slot_order var
+R7298:7307 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.slot_order var
+R7324:7325 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R7324:7325 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R7324:7325 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R7324:7325 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+prf 7449:7470 PolicyTDMA task_in_time_slot_uniq
+binder 7488:7491 <> tsk1:63
+binder 7493:7496 <> tsk2:64
+binder 7498:7498 <> t:65
+R7512:7515 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7505:7509 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R7501:7504 prosa.classic.model.policy_tdma <> tsk1:63 var
+R7510:7511 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.ts var
+R7539:7550 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7535:7537 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R7516:7529 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.task_time_slot var
+R7531:7534 prosa.classic.model.policy_tdma <> tsk1:63 var
+R7562:7565 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7555:7559 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R7551:7554 prosa.classic.model.policy_tdma <> tsk2:64 var
+R7560:7561 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.ts var
+R7589:7600 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7585:7587 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R7566:7579 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.task_time_slot var
+R7581:7584 prosa.classic.model.policy_tdma <> tsk2:64 var
+R7640:7651 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7601:7617 prosa.classic.model.policy_tdma PolicyTDMA Task_in_time_slot def
+R7639:7639 prosa.classic.model.policy_tdma <> t:65 var
+R7624:7637 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.task_time_slot var
+R7619:7622 prosa.classic.model.policy_tdma <> tsk1:63 var
+R7691:7702 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7652:7668 prosa.classic.model.policy_tdma PolicyTDMA Task_in_time_slot def
+R7690:7690 prosa.classic.model.policy_tdma <> t:65 var
+R7675:7688 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.task_time_slot var
+R7670:7673 prosa.classic.model.policy_tdma <> tsk2:64 var
+R7707:7709 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7703:7706 prosa.classic.model.policy_tdma <> tsk1:63 var
+R7710:7713 prosa.classic.model.policy_tdma <> tsk2:64 var
+R7779:7795 prosa.classic.model.policy_tdma PolicyTDMA Task_in_time_slot def
+R7779:7795 prosa.classic.model.policy_tdma PolicyTDMA Task_in_time_slot def
+R7779:7795 prosa.classic.model.policy_tdma PolicyTDMA Task_in_time_slot def
+R7815:7824 prosa.classic.model.policy_tdma PolicyTDMA TDMA_cycle def
+R7826:7839 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.task_time_slot var
+R7815:7824 prosa.classic.model.policy_tdma PolicyTDMA TDMA_cycle def
+R7826:7839 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.task_time_slot var
+R7815:7824 prosa.classic.model.policy_tdma PolicyTDMA TDMA_cycle def
+R7826:7839 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.task_time_slot var
+R7857:7872 prosa.classic.model.policy_tdma PolicyTDMA Task_slot_offset def
+R7879:7892 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.task_time_slot var
+R7857:7872 prosa.classic.model.policy_tdma PolicyTDMA Task_slot_offset def
+R7879:7892 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.task_time_slot var
+R7857:7872 prosa.classic.model.policy_tdma PolicyTDMA Task_slot_offset def
+R7879:7892 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.task_time_slot var
+R7910:7925 prosa.classic.model.policy_tdma PolicyTDMA Task_slot_offset def
+R7932:7945 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.task_time_slot var
+R7910:7925 prosa.classic.model.policy_tdma PolicyTDMA Task_slot_offset def
+R7932:7945 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.task_time_slot var
+R7910:7925 prosa.classic.model.policy_tdma PolicyTDMA Task_slot_offset def
+R7932:7945 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.task_time_slot var
+R7984:7998 prosa.classic.model.policy_tdma PolicyTDMA Offset_lt_cycle thm
+R7966:7968 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R7984:7998 prosa.classic.model.policy_tdma PolicyTDMA Offset_lt_cycle thm
+R8037:8051 prosa.classic.model.policy_tdma PolicyTDMA Offset_lt_cycle thm
+R8019:8021 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R8037:8051 prosa.classic.model.policy_tdma PolicyTDMA Offset_lt_cycle thm
+R8088:8106 prosa.classic.model.policy_tdma PolicyTDMA TDMA_cycle_positive thm
+R8073:8075 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R8088:8106 prosa.classic.model.policy_tdma PolicyTDMA TDMA_cycle_positive thm
+R8156:8165 mathcomp.boot.div <> modn_small thm
+R8167:8181 prosa.classic.model.policy_tdma PolicyTDMA Offset_lt_cycle thm
+R8141:8143 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8132:8135 mathcomp.boot.div <> ::nat_scope:x_'%%'_x not
+R8156:8165 mathcomp.boot.div <> modn_small thm
+R8167:8181 prosa.classic.model.policy_tdma PolicyTDMA Offset_lt_cycle thm
+R8238:8247 mathcomp.boot.div <> modn_small thm
+R8249:8263 prosa.classic.model.policy_tdma PolicyTDMA Offset_lt_cycle thm
+R8223:8225 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8214:8217 mathcomp.boot.div <> ::nat_scope:x_'%%'_x not
+R8238:8247 mathcomp.boot.div <> modn_small thm
+R8249:8263 prosa.classic.model.policy_tdma PolicyTDMA Offset_lt_cycle thm
+R8338:8362 prosa.classic.model.policy_tdma PolicyTDMA Offset_add_slot_leq_cycle thm
+R8318:8321 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R8296:8298 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8299:8312 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.task_time_slot var
+R8338:8362 prosa.classic.model.policy_tdma PolicyTDMA Offset_add_slot_leq_cycle thm
+R8430:8454 prosa.classic.model.policy_tdma PolicyTDMA Offset_add_slot_leq_cycle thm
+R8410:8413 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R8388:8390 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8391:8404 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.task_time_slot var
+R8430:8454 prosa.classic.model.policy_tdma PolicyTDMA Offset_add_slot_leq_cycle thm
+R8477:8484 prosa.util.div_mod <> mod_elim thm
+R8477:8484 prosa.util.div_mod <> mod_elim thm
+R8477:8484 prosa.util.div_mod <> mod_elim thm
+R8515:8522 prosa.util.div_mod <> mod_elim thm
+R8515:8522 prosa.util.div_mod <> mod_elim thm
+R8515:8522 prosa.util.div_mod <> mod_elim thm
+R8553:8556 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R8558:8559 mathcomp.boot.div <> ::nat_scope:x_'%%'_x not
+R8582:8585 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R8587:8589 mathcomp.boot.div <> ::nat_scope:x_'%%'_x not
+R8553:8556 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R8558:8559 mathcomp.boot.div <> ::nat_scope:x_'%%'_x not
+R8582:8585 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R8587:8589 mathcomp.boot.div <> ::nat_scope:x_'%%'_x not
+R8582:8585 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R8587:8589 mathcomp.boot.div <> ::nat_scope:x_'%%'_x not
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R8647:8648 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R8647:8648 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R8668:8670 mathcomp.boot.eqtype <> eqP def
+R8668:8670 mathcomp.boot.eqtype <> eqP def
+R8701:8716 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.slot_order_total var
+R8758:8772 prosa.classic.model.policy_tdma PolicyTDMA relation_offset thm
+R8701:8716 prosa.classic.model.policy_tdma <> PolicyTDMA.PropertiesTDMA.InTimeSlotUniq.slot_order_total var
+R8758:8772 prosa.classic.model.policy_tdma PolicyTDMA relation_offset thm
+R8758:8772 prosa.classic.model.policy_tdma PolicyTDMA relation_offset thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R8839:8841 mathcomp.boot.eqtype <> eqP def
+R8865:8867 mathcomp.boot.eqtype <> eqP def
+R8865:8867 mathcomp.boot.eqtype <> eqP def
+R8897:8910 prosa.classic.model.policy_tdma PolicyTDMA.PropertiesTDMA.InTimeSlotUniq <> sec
+R8920:8933 prosa.classic.model.policy_tdma PolicyTDMA.PropertiesTDMA <> sec
+R8941:8950 prosa.classic.model.policy_tdma PolicyTDMA <> mod

@@ -1,0 +1,10 @@
+DIGEST 4d92b4a1de31c1937c0cd7a6a6bd5eaf
+Fprosa.classic.model.time
+mod 7:10 <> Time
+def 72:75 Time time
+R80:82 Corelib.Init.Datatypes <> nat ind
+def 98:105 Time duration
+R110:113 prosa.classic.model.time Time time def
+def 129:135 Time instant
+R141:144 prosa.classic.model.time Time time def
+R152:155 prosa.classic.model.time Time <> mod

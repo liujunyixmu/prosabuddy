@@ -1,0 +1,1598 @@
+DIGEST 5e6275455fdb63184286a53884b8b684
+Fprosa.classic.analysis.global.basic.bertogna_fp_comp
+R15:36 prosa.classic.util.all <> <> lib
+R54:107 prosa.classic.analysis.global.basic.bertogna_fp_theory <> <> lib
+R139:147 mathcomp.boot.ssreflect <> <> lib
+R149:155 mathcomp.boot.ssrbool <> <> lib
+R157:162 mathcomp.boot.ssrfun <> <> lib
+R164:169 mathcomp.boot.eqtype <> <> lib
+R171:176 mathcomp.boot.ssrnat <> <> lib
+R178:180 mathcomp.boot.seq <> <> lib
+R182:188 mathcomp.boot.fintype <> <> lib
+R190:194 mathcomp.boot.bigop <> <> lib
+R196:198 mathcomp.boot.div <> <> lib
+R200:203 mathcomp.boot.path <> <> lib
+mod 214:236 <> ResponseTimeIterationFP
+R249:270 prosa.classic.analysis.global.basic.bertogna_fp_theory ResponseTimeAnalysisFP <> mod
+sec 406:413 ResponseTimeIterationFP Analysis
+var  434:446 ResponseTimeIterationFP.Analysis sporadic_task
+R449:454 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 471:479 ResponseTimeIterationFP.Analysis task_cost
+R495:498 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R482:494 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.sporadic_task var
+R499:502 prosa.classic.model.time Time time def
+var 518:528 ResponseTimeIterationFP.Analysis task_period
+R544:547 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R531:543 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.sporadic_task var
+R548:551 prosa.classic.model.time Time time def
+var 567:579 ResponseTimeIterationFP.Analysis task_deadline
+R595:598 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R582:594 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.sporadic_task var
+R599:602 prosa.classic.model.time Time time def
+var 739:761 ResponseTimeIterationFP.Analysis task_with_response_time
+R780:782 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R767:779 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.sporadic_task var
+R783:786 prosa.classic.model.time Time time def
+var  813:815 ResponseTimeIterationFP.Analysis Job
+R818:823 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 840:850 ResponseTimeIterationFP.Analysis job_arrival
+R856:859 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R853:855 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Job var
+R860:863 prosa.classic.model.time Time time def
+var 879:886 ResponseTimeIterationFP.Analysis job_cost
+R892:895 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R889:891 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Job var
+R896:899 prosa.classic.model.time Time time def
+var 915:926 ResponseTimeIterationFP.Analysis job_deadline
+R932:935 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R929:931 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Job var
+R936:939 prosa.classic.model.time Time time def
+var 955:962 ResponseTimeIterationFP.Analysis job_task
+R968:971 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R965:967 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Job var
+R972:984 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.sporadic_task var
+var 1061:1068 ResponseTimeIterationFP.Analysis num_cpus
+R1071:1073 Corelib.Init.Datatypes <> nat ind
+var 1143:1157 ResponseTimeIterationFP.Analysis higher_priority
+R1160:1168 prosa.classic.model.priority Priority FP_policy def
+R1170:1182 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.sporadic_task var
+def 1756:1767 ResponseTimeIterationFP per_task_rta
+R1775:1787 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.sporadic_task var
+binder 1770:1772 <> tsk:21
+R1827:1829 mathcomp.boot.seq <> seq abbrev
+R1831:1853 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_with_response_time var
+binder 1819:1824 <> R_prev:22
+R1863:1865 Corelib.Init.Datatypes <> nat ind
+binder 1857:1860 <> step:23
+R1877:1880 mathcomp.boot.ssrnat <> iter def
+R2121:2129 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_cost var
+R2131:2133 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk:21 var
+binder 1900:1900 <> t:24
+R1918:1938 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R1905:1913 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_cost var
+R1915:1917 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk:21 var
+R1939:1947 prosa.classic.util.div_mod <> div_floor def
+R1970:1996 prosa.classic.analysis.global.basic.interference_bound_fp InterferenceBoundFP total_interference_bound_fp def
+R2079:2079 prosa.classic.analysis.global.basic.bertogna_fp_comp <> t:24 var
+R2072:2077 prosa.classic.analysis.global.basic.bertogna_fp_comp <> R_prev:22 var
+R2020:2022 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk:21 var
+R2008:2018 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_period var
+R1998:2006 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_cost var
+R2102:2109 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.num_cpus var
+R1882:1885 prosa.classic.analysis.global.basic.bertogna_fp_comp <> step:23 var
+def 2373:2381 ResponseTimeIterationFP max_steps
+R2389:2401 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.sporadic_task var
+binder 2384:2386 <> tsk:25
+R2440:2442 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R2424:2426 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R2407:2419 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_deadline var
+R2421:2423 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk:25 var
+R2427:2435 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_cost var
+R2437:2439 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk:25 var
+def 2890:2905 ResponseTimeIterationFP fp_bound_of_task
+binder 2907:2914 <> hp_pairs:26
+binder 2916:2918 <> tsk:27
+R2932:2939 prosa.classic.analysis.global.basic.bertogna_fp_comp <> hp_pairs:26 var
+R2944:2947 Corelib.Init.Datatypes <> Some constr
+R2981:2992 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP per_task_rta def
+R2994:2996 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk:27 var
+R3009:3017 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP max_steps def
+R3019:3021 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk:27 var
+binder 2976:2976 <> R:29
+R3037:3039 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R3062:3079 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R3111:3126 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R3041:3044 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R3040:3040 prosa.classic.analysis.global.basic.bertogna_fp_comp <> R:29 var
+R3045:3057 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_deadline var
+R3059:3061 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk:27 var
+R3080:3083 Corelib.Init.Datatypes <> Some constr
+R3086:3090 mathcomp.boot.seq <> rcons def
+R3102:3102 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3106:3107 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3109:3109 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3103:3105 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk:27 var
+R3108:3108 prosa.classic.analysis.global.basic.bertogna_fp_comp <> R:29 var
+R3127:3130 Corelib.Init.Datatypes <> None constr
+R3143:3146 Corelib.Init.Datatypes <> None constr
+def 3371:3387 ResponseTimeIterationFP fp_claimed_bounds
+R3394:3396 mathcomp.boot.seq <> seq abbrev
+R3398:3410 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.sporadic_task var
+binder 3390:3391 <> ts:30
+R3422:3426 mathcomp.boot.seq <> foldl def
+R3457:3458 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ts:30 var
+R3446:3449 Corelib.Init.Datatypes <> Some constr
+R3451:3454 mathcomp.boot.seq <> ::seq_scope:'['_'::'_']' not
+R3428:3443 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_bound_of_task def
+def 3614:3627 ResponseTimeIterationFP fp_schedulable
+R3634:3636 mathcomp.boot.seq <> seq abbrev
+R3638:3650 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.sporadic_task var
+binder 3630:3631 <> ts:31
+R3682:3685 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R3662:3678 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds def
+R3680:3681 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ts:31 var
+R3686:3689 Corelib.Init.Datatypes <> None constr
+sec 4020:4031 ResponseTimeIterationFP.Analysis SimpleLemmas
+prf 4141:4163 ResponseTimeIterationFP fp_claimed_bounds_unzip
+binder 4182:4183 <> ts:32
+binder 4185:4193 <> hp_bounds:33
+R4244:4257 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4227:4229 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4207:4223 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds def
+R4225:4226 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ts:32 var
+R4230:4233 Corelib.Init.Datatypes <> Some constr
+R4235:4243 prosa.classic.analysis.global.basic.bertogna_fp_comp <> hp_bounds:33 var
+R4274:4276 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4258:4263 mathcomp.boot.seq <> unzip1 def
+R4265:4273 prosa.classic.analysis.global.basic.bertogna_fp_comp <> hp_bounds:33 var
+R4277:4278 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ts:32 var
+R4309:4325 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds def
+R4371:4378 mathcomp.boot.seq <> last_ind thm
+R4371:4378 mathcomp.boot.seq <> last_ind thm
+R4473:4477 mathcomp.boot.seq <> lastP thm
+R4473:4477 mathcomp.boot.seq <> lastP thm
+R4542:4546 mathcomp.boot.seq <> cats1 thm
+R4548:4556 mathcomp.boot.seq <> foldl_cat thm
+R4542:4546 mathcomp.boot.seq <> cats1 thm
+R4542:4546 mathcomp.boot.seq <> cats1 thm
+R4548:4556 mathcomp.boot.seq <> foldl_cat thm
+R4548:4556 mathcomp.boot.seq <> foldl_cat thm
+R4589:4604 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_bound_of_task def
+R4696:4700 mathcomp.boot.seq <> cats1 thm
+R4702:4710 mathcomp.boot.seq <> foldl_cat thm
+R4696:4700 mathcomp.boot.seq <> cats1 thm
+R4696:4700 mathcomp.boot.seq <> cats1 thm
+R4702:4710 mathcomp.boot.seq <> foldl_cat thm
+R4702:4710 mathcomp.boot.seq <> foldl_cat thm
+R4741:4756 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_bound_of_task def
+R4813:4815 mathcomp.boot.eqtype <> eqP def
+R4842:4852 mathcomp.boot.seq <> eqseq_rcons thm
+R4842:4852 mathcomp.boot.seq <> eqseq_rcons thm
+R4842:4852 mathcomp.boot.seq <> eqseq_rcons thm
+R4890:4893 Corelib.ssr.ssrbool <> andP thm
+R4897:4899 mathcomp.boot.eqtype <> eqP def
+R4908:4910 mathcomp.boot.eqtype <> eqP def
+R4944:4949 mathcomp.boot.seq <> unzip1 def
+R4960:4968 mathcomp.boot.seq <> map_rcons thm
+R4960:4968 mathcomp.boot.seq <> map_rcons thm
+R4960:4968 mathcomp.boot.seq <> map_rcons thm
+prf 5275:5297 ResponseTimeIterationFP fp_claimed_bounds_rcons
+binder 5316:5318 <> ts':34
+binder 5320:5328 <> hp_bounds:35
+binder 5330:5333 <> tsk1:36
+binder 5335:5338 <> tsk2:37
+binder 5340:5340 <> R:38
+R5423:5438 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5607:5607 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5388:5390 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5354:5370 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds def
+R5373:5377 mathcomp.boot.seq <> rcons def
+R5383:5386 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk1:36 var
+R5379:5381 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ts':34 var
+R5391:5394 Corelib.Init.Datatypes <> Some constr
+R5397:5401 mathcomp.boot.seq <> rcons def
+R5413:5413 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5418:5419 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5421:5421 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5414:5417 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk2:37 var
+R5420:5420 prosa.classic.analysis.global.basic.bertogna_fp_comp <> R:38 var
+R5403:5411 prosa.classic.analysis.global.basic.bertogna_fp_comp <> hp_bounds:35 var
+R5477:5492 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R5460:5462 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5439:5455 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds def
+R5457:5459 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ts':34 var
+R5463:5466 Corelib.Init.Datatypes <> Some constr
+R5468:5476 prosa.classic.analysis.global.basic.bertogna_fp_comp <> hp_bounds:35 var
+R5504:5519 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R5497:5499 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5493:5496 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk1:36 var
+R5500:5503 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk2:37 var
+R5568:5583 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R5521:5523 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5520:5520 prosa.classic.analysis.global.basic.bertogna_fp_comp <> R:38 var
+R5524:5535 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP per_task_rta def
+R5537:5540 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk1:36 var
+R5542:5550 prosa.classic.analysis.global.basic.bertogna_fp_comp <> hp_bounds:35 var
+R5553:5561 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP max_steps def
+R5563:5566 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk1:36 var
+R5585:5588 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R5584:5584 prosa.classic.analysis.global.basic.bertogna_fp_comp <> R:38 var
+R5589:5601 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_deadline var
+R5603:5606 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk1:36 var
+R5681:5685 mathcomp.boot.seq <> cats1 thm
+R5681:5685 mathcomp.boot.seq <> cats1 thm
+R5681:5685 mathcomp.boot.seq <> cats1 thm
+R5703:5719 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds def
+R5743:5751 mathcomp.boot.seq <> foldl_cat thm
+R5743:5751 mathcomp.boot.seq <> foldl_cat thm
+R5743:5751 mathcomp.boot.seq <> foldl_cat thm
+R5772:5787 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_bound_of_task def
+R5859:5861 mathcomp.boot.eqtype <> eqP def
+R5883:5893 mathcomp.boot.seq <> eqseq_rcons thm
+R5883:5893 mathcomp.boot.seq <> eqseq_rcons thm
+R5883:5893 mathcomp.boot.seq <> eqseq_rcons thm
+R5923:5926 Corelib.ssr.ssrbool <> andP thm
+R5930:5932 mathcomp.boot.eqtype <> eqP def
+R5938:5940 mathcomp.boot.eqtype <> eqP def
+prf 6130:6151 ResponseTimeIterationFP fp_claimed_bounds_take
+binder 6170:6171 <> ts:39
+binder 6173:6181 <> hp_bounds:40
+binder 6183:6183 <> i:41
+R6233:6246 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6216:6218 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6196:6212 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds def
+R6214:6215 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ts:39 var
+R6219:6222 Corelib.Init.Datatypes <> Some constr
+R6224:6232 prosa.classic.analysis.global.basic.bertogna_fp_comp <> hp_bounds:40 var
+R6266:6279 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6248:6251 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R6247:6247 prosa.classic.analysis.global.basic.bertogna_fp_comp <> i:41 var
+R6252:6255 mathcomp.boot.seq <> size def
+R6257:6265 prosa.classic.analysis.global.basic.bertogna_fp_comp <> hp_bounds:40 var
+R6309:6311 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6280:6296 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds def
+R6299:6302 mathcomp.boot.seq <> take def
+R6306:6307 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ts:39 var
+R6304:6304 prosa.classic.analysis.global.basic.bertogna_fp_comp <> i:41 var
+R6312:6315 Corelib.Init.Datatypes <> Some constr
+R6318:6321 mathcomp.boot.seq <> take def
+R6325:6333 prosa.classic.analysis.global.basic.bertogna_fp_comp <> hp_bounds:40 var
+R6323:6323 prosa.classic.analysis.global.basic.bertogna_fp_comp <> i:41 var
+R6468:6490 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds_unzip thm
+R6570:6578 mathcomp.boot.seq <> take_size thm
+R6581:6586 mathcomp.boot.seq <> unzip1 def
+R6588:6595 mathcomp.boot.seq <> map_take thm
+R6570:6578 mathcomp.boot.seq <> take_size thm
+R6570:6578 mathcomp.boot.seq <> take_size thm
+R6581:6586 mathcomp.boot.seq <> unzip1 def
+R6581:6586 mathcomp.boot.seq <> unzip1 def
+R6588:6595 mathcomp.boot.seq <> map_take thm
+R6588:6595 mathcomp.boot.seq <> map_take thm
+R6620:6625 mathcomp.boot.seq <> unzip1 def
+R6620:6625 mathcomp.boot.seq <> unzip1 def
+R6673:6681 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R6673:6681 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R6673:6681 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R6713:6715 Corelib.ssr.ssrbool <> orP thm
+R6719:6721 mathcomp.boot.eqtype <> eqP def
+R6768:6771 mathcomp.boot.seq <> size def
+R6798:6803 mathcomp.boot.ssrnat <> eq_leq thm
+R6768:6771 mathcomp.boot.seq <> size def
+R6798:6803 mathcomp.boot.ssrnat <> eq_leq thm
+R6856:6859 mathcomp.boot.ssrnat <> ltn0 thm
+R6856:6859 mathcomp.boot.ssrnat <> ltn0 thm
+R6856:6859 mathcomp.boot.ssrnat <> ltn0 thm
+R6955:6986 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6906:6922 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds def
+R6925:6928 mathcomp.boot.seq <> take def
+R6935:6940 mathcomp.boot.seq <> unzip1 def
+R6987:6990 Corelib.Init.Datatypes <> Some constr
+R6993:6996 mathcomp.boot.seq <> take def
+R6955:6986 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6906:6922 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds def
+R6925:6928 mathcomp.boot.seq <> take def
+R6935:6940 mathcomp.boot.seq <> unzip1 def
+R6987:6990 Corelib.Init.Datatypes <> Some constr
+R6993:6996 mathcomp.boot.seq <> take def
+R7049:7055 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R7057:7058 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 7056:7056 <> p:42
+R7060:7064 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R7059:7059 prosa.classic.analysis.global.basic.bertogna_fp_comp <> p:42 var
+R7049:7055 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R7057:7058 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 7056:7056 <> p:43
+R7060:7064 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R7059:7059 prosa.classic.analysis.global.basic.bertogna_fp_comp <> p:43 var
+R7142:7145 mathcomp.boot.ssrnat <> ltn0 thm
+R7142:7145 mathcomp.boot.ssrnat <> ltn0 thm
+R7142:7145 mathcomp.boot.ssrnat <> ltn0 thm
+R7193:7199 mathcomp.boot.seq <> in_cons thm
+R7201:7207 mathcomp.boot.eqtype <> eq_refl thm
+R7209:7212 Corelib.ssr.ssrbool <> orTb thm
+R7193:7199 mathcomp.boot.seq <> in_cons thm
+R7193:7199 mathcomp.boot.seq <> in_cons thm
+R7201:7207 mathcomp.boot.eqtype <> eq_refl thm
+R7201:7207 mathcomp.boot.eqtype <> eq_refl thm
+R7209:7212 Corelib.ssr.ssrbool <> orTb thm
+R7209:7212 Corelib.ssr.ssrbool <> orTb thm
+R7278:7285 mathcomp.boot.seq <> take_nth thm
+R7317:7324 mathcomp.boot.seq <> size_map thm
+R7278:7285 mathcomp.boot.seq <> take_nth thm
+R7278:7285 mathcomp.boot.seq <> take_nth thm
+R7317:7324 mathcomp.boot.seq <> size_map thm
+R7317:7324 mathcomp.boot.seq <> size_map thm
+R7348:7355 mathcomp.boot.seq <> take_nth thm
+R7357:7357 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7361:7361 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7363:7363 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7348:7355 mathcomp.boot.seq <> take_nth thm
+R7357:7357 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7361:7361 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7363:7363 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7348:7355 mathcomp.boot.seq <> take_nth thm
+R7357:7357 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7361:7361 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7363:7363 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7411:7413 mathcomp.boot.seq <> nth def
+R7415:7415 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7419:7420 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7422:7422 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7411:7413 mathcomp.boot.seq <> nth def
+R7415:7415 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7419:7420 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7422:7422 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7480:7502 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds_rcons thm
+R7480:7502 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds_rcons thm
+R7548:7551 mathcomp.boot.ssrnat <> ltnS thm
+R7553:7561 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R7548:7551 mathcomp.boot.ssrnat <> ltnS thm
+R7548:7551 mathcomp.boot.ssrnat <> ltnS thm
+R7553:7561 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R7553:7561 mathcomp.boot.ssrnat <> leq_eqVlt thm
+R7595:7597 Corelib.ssr.ssrbool <> orP thm
+R7601:7603 mathcomp.boot.eqtype <> eqP def
+R7649:7652 mathcomp.boot.ssrnat <> ltnW thm
+R7649:7652 mathcomp.boot.ssrnat <> ltnW thm
+prf 7875:7903 ResponseTimeIterationFP fp_claimed_bounds_le_deadline
+binder 7922:7924 <> ts':44
+binder 7926:7934 <> rt_bounds:45
+binder 7936:7938 <> tsk:46
+binder 7940:7940 <> R:47
+R7991:8004 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7974:7976 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7953:7969 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds def
+R7971:7973 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ts':44 var
+R7977:7980 Corelib.Init.Datatypes <> Some constr
+R7982:7990 prosa.classic.analysis.global.basic.bertogna_fp_comp <> rt_bounds:45 var
+R8027:8040 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8013:8017 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R8005:8005 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R8009:8010 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R8012:8012 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R8006:8008 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk:46 var
+R8011:8011 prosa.classic.analysis.global.basic.bertogna_fp_comp <> R:47 var
+R8018:8026 prosa.classic.analysis.global.basic.bertogna_fp_comp <> rt_bounds:45 var
+R8042:8045 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R8041:8041 prosa.classic.analysis.global.basic.bertogna_fp_comp <> R:47 var
+R8046:8058 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_deadline var
+R8060:8062 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk:46 var
+R8135:8142 mathcomp.boot.seq <> last_ind thm
+R8135:8142 mathcomp.boot.seq <> last_ind thm
+R8241:8246 mathcomp.boot.seq <> in_nil thm
+R8241:8246 mathcomp.boot.seq <> in_nil thm
+R8241:8246 mathcomp.boot.seq <> in_nil thm
+R8339:8343 mathcomp.boot.seq <> lastP thm
+R8420:8425 mathcomp.boot.seq <> in_nil thm
+R8339:8343 mathcomp.boot.seq <> lastP thm
+R8420:8425 mathcomp.boot.seq <> in_nil thm
+R8420:8425 mathcomp.boot.seq <> in_nil thm
+R8452:8460 mathcomp.boot.seq <> mem_rcons thm
+R8462:8468 mathcomp.boot.seq <> in_cons thm
+R8452:8460 mathcomp.boot.seq <> mem_rcons thm
+R8452:8460 mathcomp.boot.seq <> mem_rcons thm
+R8462:8468 mathcomp.boot.seq <> in_cons thm
+R8462:8468 mathcomp.boot.seq <> in_cons thm
+R8490:8492 Corelib.ssr.ssrbool <> orP thm
+R8578:8580 mathcomp.boot.eqtype <> eqP def
+R8609:8613 mathcomp.boot.seq <> cats1 thm
+R8609:8613 mathcomp.boot.seq <> cats1 thm
+R8609:8613 mathcomp.boot.seq <> cats1 thm
+R8643:8659 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds def
+R8687:8695 mathcomp.boot.seq <> foldl_cat thm
+R8687:8695 mathcomp.boot.seq <> foldl_cat thm
+R8687:8695 mathcomp.boot.seq <> foldl_cat thm
+R8728:8743 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_bound_of_task def
+R8816:8818 mathcomp.boot.eqtype <> eqP def
+R8844:8854 mathcomp.boot.seq <> eqseq_rcons thm
+R8844:8854 mathcomp.boot.seq <> eqseq_rcons thm
+R8844:8854 mathcomp.boot.seq <> eqseq_rcons thm
+R8888:8891 Corelib.ssr.ssrbool <> andP thm
+R8897:8899 mathcomp.boot.eqtype <> eqP def
+R9078:9100 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds_rcons thm
+R9078:9100 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds_rcons thm
+prf 9220:9244 ResponseTimeIterationFP fp_claimed_bounds_ge_cost
+binder 9263:9265 <> ts':48
+binder 9267:9275 <> rt_bounds:49
+binder 9277:9279 <> tsk:50
+binder 9281:9281 <> R:51
+R9332:9345 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9315:9317 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9294:9310 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds def
+R9312:9314 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ts':48 var
+R9318:9321 Corelib.Init.Datatypes <> Some constr
+R9323:9331 prosa.classic.analysis.global.basic.bertogna_fp_comp <> rt_bounds:49 var
+R9368:9381 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9354:9358 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R9346:9346 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R9350:9351 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R9353:9353 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R9347:9349 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk:50 var
+R9352:9352 prosa.classic.analysis.global.basic.bertogna_fp_comp <> R:51 var
+R9359:9367 prosa.classic.analysis.global.basic.bertogna_fp_comp <> rt_bounds:49 var
+R9383:9386 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R9387:9395 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_cost var
+R9397:9399 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk:50 var
+R9382:9382 prosa.classic.analysis.global.basic.bertogna_fp_comp <> R:51 var
+R9472:9479 mathcomp.boot.seq <> last_ind thm
+R9472:9479 mathcomp.boot.seq <> last_ind thm
+R9578:9583 mathcomp.boot.seq <> in_nil thm
+R9578:9583 mathcomp.boot.seq <> in_nil thm
+R9578:9583 mathcomp.boot.seq <> in_nil thm
+R9676:9680 mathcomp.boot.seq <> lastP thm
+R9757:9762 mathcomp.boot.seq <> in_nil thm
+R9676:9680 mathcomp.boot.seq <> lastP thm
+R9757:9762 mathcomp.boot.seq <> in_nil thm
+R9757:9762 mathcomp.boot.seq <> in_nil thm
+R9789:9797 mathcomp.boot.seq <> mem_rcons thm
+R9799:9805 mathcomp.boot.seq <> in_cons thm
+R9789:9797 mathcomp.boot.seq <> mem_rcons thm
+R9789:9797 mathcomp.boot.seq <> mem_rcons thm
+R9799:9805 mathcomp.boot.seq <> in_cons thm
+R9799:9805 mathcomp.boot.seq <> in_cons thm
+R9827:9829 Corelib.ssr.ssrbool <> orP thm
+R9915:9917 mathcomp.boot.eqtype <> eqP def
+R9946:9950 mathcomp.boot.seq <> cats1 thm
+R9946:9950 mathcomp.boot.seq <> cats1 thm
+R9946:9950 mathcomp.boot.seq <> cats1 thm
+R9980:9996 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds def
+R10024:10032 mathcomp.boot.seq <> foldl_cat thm
+R10024:10032 mathcomp.boot.seq <> foldl_cat thm
+R10024:10032 mathcomp.boot.seq <> foldl_cat thm
+R10065:10080 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_bound_of_task def
+R10153:10155 mathcomp.boot.eqtype <> eqP def
+R10181:10191 mathcomp.boot.seq <> eqseq_rcons thm
+R10181:10191 mathcomp.boot.seq <> eqseq_rcons thm
+R10181:10191 mathcomp.boot.seq <> eqseq_rcons thm
+R10225:10228 Corelib.ssr.ssrbool <> andP thm
+R10234:10236 mathcomp.boot.eqtype <> eqP def
+R10301:10309 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP max_steps def
+R10346:10350 mathcomp.boot.ssrnat <> leqnn thm
+R10363:10370 mathcomp.boot.ssrnat <> leq_addr thm
+R10301:10309 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP max_steps def
+R10346:10350 mathcomp.boot.ssrnat <> leqnn thm
+R10363:10370 mathcomp.boot.ssrnat <> leq_addr thm
+R10486:10508 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds_rcons thm
+R10486:10508 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds_rcons thm
+prf 10634:10650 ResponseTimeIterationFP per_task_rta_fold
+binder 10669:10671 <> tsk:52
+binder 10673:10681 <> rt_bounds:53
+R10871:10883 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10707:10720 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R10694:10702 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_cost var
+R10704:10706 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk:52 var
+R10721:10729 prosa.classic.util.div_mod <> div_floor def
+R10732:10758 prosa.classic.analysis.global.basic.interference_bound_fp InterferenceBoundFP total_interference_bound_fp def
+R10818:10829 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP per_task_rta def
+R10831:10833 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk:52 var
+R10835:10843 prosa.classic.analysis.global.basic.bertogna_fp_comp <> rt_bounds:53 var
+R10846:10854 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP max_steps def
+R10856:10858 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk:52 var
+R10786:10794 prosa.classic.analysis.global.basic.bertogna_fp_comp <> rt_bounds:53 var
+R10782:10784 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk:52 var
+R10770:10780 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_period var
+R10760:10768 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_cost var
+R10863:10870 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.num_cpus var
+R10884:10895 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP per_task_rta def
+R10897:10899 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk:52 var
+R10901:10909 prosa.classic.analysis.global.basic.bertogna_fp_comp <> rt_bounds:53 var
+R10911:10911 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R10925:10928 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R10912:10920 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP max_steps def
+R10922:10924 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk:52 var
+R10983:10994 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP.Analysis.SimpleLemmas <> sec
+sec 11152:11168 ResponseTimeIterationFP.Analysis HighPriorityTasks
+var 11264:11265 ResponseTimeIterationFP.Analysis.HighPriorityTasks ts
+R11268:11277 prosa.classic.model.arrival.basic.task SporadicTaskset taskset_of def
+R11279:11291 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.sporadic_task var
+var 11385:11404 ResponseTimeIterationFP.Analysis.HighPriorityTasks H_task_set_is_sorted
+R11407:11412 mathcomp.boot.path <> sorted def
+R11430:11431 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.HighPriorityTasks.ts var
+R11414:11428 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.higher_priority var
+var 11451:11482 ResponseTimeIterationFP.Analysis.HighPriorityTasks H_task_set_has_unique_priorities
+R11493:11525 prosa.classic.model.priority Priority FP_is_antisymmetric_over_task_set def
+R11543:11544 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.HighPriorityTasks.ts var
+R11527:11541 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.higher_priority var
+var 11617:11637 ResponseTimeIterationFP.Analysis.HighPriorityTasks H_priority_transitive
+R11640:11655 prosa.classic.model.priority Priority FP_is_transitive def
+R11657:11671 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.higher_priority var
+var 11758:11766 ResponseTimeIterationFP.Analysis.HighPriorityTasks hp_bounds
+R11769:11771 mathcomp.boot.seq <> seq abbrev
+R11773:11795 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_with_response_time var
+var 11813:11813 ResponseTimeIterationFP.Analysis.HighPriorityTasks R
+R11816:11819 prosa.classic.model.time Time time def
+var 11839:11857 ResponseTimeIterationFP.Analysis.HighPriorityTasks H_analysis_succeeds
+R11880:11882 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11860:11876 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds def
+R11878:11879 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.HighPriorityTasks.ts var
+R11883:11886 Corelib.Init.Datatypes <> Some constr
+R11888:11896 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.HighPriorityTasks.hp_bounds var
+var 11958:11961 ResponseTimeIterationFP.Analysis.HighPriorityTasks elem
+R11964:11976 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.sporadic_task var
+var 11989:11992 ResponseTimeIterationFP.Analysis.HighPriorityTasks TASK
+R11997:11999 mathcomp.boot.seq <> nth def
+R12006:12007 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.HighPriorityTasks.ts var
+R12001:12004 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.HighPriorityTasks.elem var
+prf 12091:12135 ResponseTimeIterationFP fp_claimed_bounds_hp_tasks_have_smaller_index
+binder 12154:12159 <> hp_idx:70
+binder 12161:12163 <> idx:71
+R12192:12205 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R12182:12184 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R12176:12181 prosa.classic.analysis.global.basic.bertogna_fp_comp <> hp_idx:70 var
+R12185:12188 mathcomp.boot.seq <> size def
+R12190:12191 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.HighPriorityTasks.ts var
+R12219:12232 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R12209:12211 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R12206:12208 prosa.classic.analysis.global.basic.bertogna_fp_comp <> idx:71 var
+R12212:12215 mathcomp.boot.seq <> size def
+R12217:12218 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.HighPriorityTasks.ts var
+R12246:12259 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R12239:12242 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R12233:12238 prosa.classic.analysis.global.basic.bertogna_fp_comp <> hp_idx:70 var
+R12243:12245 prosa.classic.analysis.global.basic.bertogna_fp_comp <> idx:71 var
+R12300:12313 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R12260:12274 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.higher_priority var
+R12277:12280 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.HighPriorityTasks.TASK var
+R12282:12287 prosa.classic.analysis.global.basic.bertogna_fp_comp <> hp_idx:70 var
+R12291:12294 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.HighPriorityTasks.TASK var
+R12296:12298 prosa.classic.analysis.global.basic.bertogna_fp_comp <> idx:71 var
+R12320:12322 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R12314:12319 prosa.classic.analysis.global.basic.bertogna_fp_comp <> hp_idx:70 var
+R12323:12325 prosa.classic.analysis.global.basic.bertogna_fp_comp <> idx:71 var
+R12356:12359 prosa.classic.analysis.global.basic.bertogna_fp_comp <> TASK vardef
+R12499:12508 mathcomp.boot.ssrnat <> ltn_neqAle thm
+R12517:12520 Corelib.ssr.ssrbool <> andP thm
+R12499:12508 mathcomp.boot.ssrnat <> ltn_neqAle thm
+R12499:12508 mathcomp.boot.ssrnat <> ltn_neqAle thm
+R12517:12520 Corelib.ssr.ssrbool <> andP thm
+R12601:12615 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.higher_priority var
+R12625:12626 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.HighPriorityTasks.ts var
+R12641:12644 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.HighPriorityTasks.elem var
+R12562:12586 prosa.classic.util.sorting <> sorted_rel_implies_le_idx thm
+R12601:12615 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.higher_priority var
+R12625:12626 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.HighPriorityTasks.ts var
+R12641:12644 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.HighPriorityTasks.elem var
+R12562:12586 prosa.classic.util.sorting <> sorted_rel_implies_le_idx thm
+R12668:12684 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP.Analysis.HighPriorityTasks <> sec
+sec 12777:12787 ResponseTimeIterationFP.Analysis Convergence
+var 12862:12866 ResponseTimeIterationFP.Analysis.Convergence ts_hp
+R12869:12872 Corelib.Init.Datatypes <> list ind
+R12874:12886 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.sporadic_task var
+var 12996:13004 ResponseTimeIterationFP.Analysis.Convergence rt_bounds
+R13007:13009 mathcomp.boot.seq <> seq abbrev
+R13011:13033 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_with_response_time var
+var 13053:13067 ResponseTimeIterationFP.Analysis.Convergence H_test_succeeds
+R13093:13095 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13070:13086 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds def
+R13088:13092 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.ts_hp var
+R13096:13099 Corelib.Init.Datatypes <> Some constr
+R13101:13109 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.rt_bounds var
+var 13182:13184 ResponseTimeIterationFP.Analysis.Convergence tsk
+R13187:13199 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.sporadic_task var
+var 13280:13302 ResponseTimeIterationFP.Analysis.Convergence H_valid_task_parameters
+R13313:13334 prosa.classic.model.arrival.basic.task SporadicTaskset valid_sporadic_taskset def
+R13373:13377 mathcomp.boot.seq <> rcons def
+R13385:13387 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.tsk var
+R13379:13383 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.ts_hp var
+R13358:13370 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_deadline var
+R13346:13356 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_period var
+R13336:13344 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_cost var
+var 13467:13467 ResponseTimeIterationFP.Analysis.Convergence f
+R13472:13483 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP per_task_rta def
+R13485:13487 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.tsk var
+R13489:13497 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.rt_bounds var
+var 13592:13616 ResponseTimeIterationFP.Analysis.Convergence H_no_larger_than_deadline
+R13636:13639 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R13619:13619 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.f var
+R13622:13630 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP max_steps def
+R13632:13634 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.tsk var
+R13640:13652 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_deadline var
+R13654:13656 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.tsk var
+prf 13735:13762 ResponseTimeIterationFP bertogna_fp_comp_f_monotonic
+binder 13781:13782 <> x1:84
+binder 13784:13785 <> x2:85
+R13796:13799 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R13790:13793 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R13788:13789 prosa.classic.analysis.global.basic.bertogna_fp_comp <> x1:84 var
+R13794:13795 prosa.classic.analysis.global.basic.bertogna_fp_comp <> x2:85 var
+R13804:13807 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R13800:13800 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.f var
+R13802:13803 prosa.classic.analysis.global.basic.bertogna_fp_comp <> x1:84 var
+R13808:13808 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.f var
+R13810:13811 prosa.classic.analysis.global.basic.bertogna_fp_comp <> x2:85 var
+R13842:13863 prosa.classic.model.arrival.basic.task SporadicTaskset valid_sporadic_taskset def
+R13866:13887 prosa.classic.model.arrival.basic.task SporadicTask is_valid_sporadic_task def
+R14021:14021 prosa.classic.analysis.global.basic.bertogna_fp_comp <> f vardef
+R14024:14035 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP per_task_rta def
+R14052:14067 prosa.classic.util.fixedpoint <> fun_mon_iter_mon thm
+R14094:14101 mathcomp.boot.ssrnat <> leq_addr thm
+R14052:14067 prosa.classic.util.fixedpoint <> fun_mon_iter_mon thm
+R14094:14101 mathcomp.boot.ssrnat <> leq_addr thm
+R14165:14173 prosa.classic.util.div_mod <> div_floor def
+R14176:14202 prosa.classic.analysis.global.basic.interference_bound_fp InterferenceBoundFP total_interference_bound_fp def
+R14221:14232 mathcomp.boot.bigop <> big_seq_cond thm
+R14221:14232 mathcomp.boot.bigop <> big_seq_cond thm
+R14221:14232 mathcomp.boot.bigop <> big_seq_cond thm
+R14252:14257 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R14259:14262 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R14264:14266 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R14271:14272 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+binder 14258:14258 <> pat:86
+R14267:14270 Corelib.Init.Datatypes <> true constr
+R14275:14286 mathcomp.boot.bigop <> big_seq_cond thm
+R14275:14286 mathcomp.boot.bigop <> big_seq_cond thm
+R14252:14257 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R14259:14262 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R14264:14266 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R14271:14272 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+binder 14258:14258 <> pat:87
+R14267:14270 Corelib.Init.Datatypes <> true constr
+R14252:14257 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R14259:14262 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R14264:14266 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R14271:14272 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+binder 14258:14258 <> pat:88
+R14267:14270 Corelib.Init.Datatypes <> true constr
+R14275:14286 mathcomp.boot.bigop <> big_seq_cond thm
+R14305:14313 mathcomp.boot.ssrnat <> leq_add2l thm
+R14315:14323 mathcomp.boot.div <> leq_div2r thm
+R14305:14313 mathcomp.boot.ssrnat <> leq_add2l thm
+R14305:14313 mathcomp.boot.ssrnat <> leq_add2l thm
+R14315:14323 mathcomp.boot.div <> leq_div2r thm
+R14315:14323 mathcomp.boot.div <> leq_div2r thm
+R14343:14349 mathcomp.boot.bigop <> leq_sum thm
+R14343:14349 mathcomp.boot.bigop <> leq_sum thm
+R14363:14366 Corelib.ssr.ssrbool <> andP thm
+R14429:14453 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds_ge_cost thm
+R14455:14459 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.ts_hp var
+R14461:14469 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.rt_bounds var
+R14506:14528 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds_unzip thm
+R14530:14534 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.ts_hp var
+R14536:14544 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.rt_bounds var
+R14574:14578 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R14579:14583 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.ts_hp var
+R14574:14578 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R14579:14583 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.ts_hp var
+R14632:14635 mathcomp.boot.seq <> mapP thm
+R14645:14645 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14647:14647 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14649:14649 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14632:14635 mathcomp.boot.seq <> mapP thm
+R14645:14645 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14647:14647 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14649:14649 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14677:14702 prosa.classic.analysis.global.basic.interference_bound InterferenceBoundGeneric interference_bound_generic def
+R14728:14734 mathcomp.boot.ssrnat <> leq_min thm
+R14743:14746 Corelib.ssr.ssrbool <> andP thm
+R14728:14734 mathcomp.boot.ssrnat <> leq_min thm
+R14728:14734 mathcomp.boot.ssrnat <> leq_min thm
+R14743:14746 Corelib.ssr.ssrbool <> andP thm
+R14803:14803 prosa.classic.analysis.global.basic.workload_bound WorkloadBound W def
+R14815:14825 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_period var
+R14805:14813 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_cost var
+R14782:14790 mathcomp.boot.ssrnat <> leq_trans thm
+R14851:14858 mathcomp.boot.ssrnat <> geq_minl thm
+R14803:14803 prosa.classic.analysis.global.basic.workload_bound WorkloadBound W def
+R14815:14825 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_period var
+R14805:14813 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_cost var
+R14782:14790 mathcomp.boot.ssrnat <> leq_trans thm
+R14851:14858 mathcomp.boot.ssrnat <> geq_minl thm
+R14902:14910 mathcomp.boot.seq <> mem_rcons thm
+R14912:14918 mathcomp.boot.seq <> in_cons thm
+R14924:14927 Corelib.ssr.ssrbool <> orbT thm
+R14902:14910 mathcomp.boot.seq <> mem_rcons thm
+R14902:14910 mathcomp.boot.seq <> mem_rcons thm
+R14912:14918 mathcomp.boot.seq <> in_cons thm
+R14912:14918 mathcomp.boot.seq <> in_cons thm
+R14924:14927 Corelib.ssr.ssrbool <> orbT thm
+R14924:14927 Corelib.ssr.ssrbool <> orbT thm
+R14961:14971 prosa.classic.analysis.global.basic.workload_bound WorkloadBound W_monotonic thm
+R14961:14971 prosa.classic.analysis.global.basic.workload_bound WorkloadBound W_monotonic thm
+R15079:15081 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R15063:15065 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R15066:15074 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_cost var
+R15076:15078 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.tsk var
+R15040:15048 mathcomp.boot.ssrnat <> leq_trans thm
+R15101:15108 mathcomp.boot.ssrnat <> geq_minr thm
+R15079:15081 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R15063:15065 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R15066:15074 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_cost var
+R15076:15078 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.tsk var
+R15040:15048 mathcomp.boot.ssrnat <> leq_trans thm
+R15101:15108 mathcomp.boot.ssrnat <> geq_minr thm
+R15132:15140 mathcomp.boot.ssrnat <> leq_add2r thm
+R15142:15150 mathcomp.boot.ssrnat <> leq_sub2r thm
+R15132:15140 mathcomp.boot.ssrnat <> leq_add2r thm
+R15132:15140 mathcomp.boot.ssrnat <> leq_add2r thm
+R15142:15150 mathcomp.boot.ssrnat <> leq_sub2r thm
+R15142:15150 mathcomp.boot.ssrnat <> leq_sub2r thm
+prf 15278:15311 ResponseTimeIterationFP bertogna_fp_comp_f_converges_early
+R15323:15323 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R15368:15380 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R15324:15330 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R15332:15333 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 15331:15331 <> k:89
+R15352:15355 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R15335:15338 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R15334:15334 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:89 var
+R15339:15347 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP max_steps def
+R15349:15351 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.tsk var
+R15359:15361 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15356:15356 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.f var
+R15358:15358 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:89 var
+R15362:15362 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.f var
+R15365:15367 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R15364:15364 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:89 var
+R15398:15400 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15381:15381 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.f var
+R15384:15392 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP max_steps def
+R15394:15396 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.tsk var
+R15401:15401 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.f var
+R15403:15403 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R15417:15420 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R15404:15412 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP max_steps def
+R15414:15416 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.tsk var
+R15469:15487 prosa.classic.util.fixedpoint <> iter_fix thm
+R15469:15487 prosa.classic.util.fixedpoint <> iter_fix thm
+sec 15575:15595 ResponseTimeIterationFP.Analysis.Convergence DerivingContradiction
+var 15688:15704 ResponseTimeIterationFP.Analysis.Convergence.DerivingContradiction H_keeps_diverging
+binder 15724:15724 <> k:90
+R15757:15760 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R15740:15743 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R15739:15739 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:90 var
+R15744:15752 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP max_steps def
+R15754:15756 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.tsk var
+R15764:15767 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R15761:15761 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.f var
+R15763:15763 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:90 var
+R15768:15768 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.f var
+R15771:15773 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R15770:15770 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:90 var
+prf 15866:15893 ResponseTimeIterationFP bertogna_fp_comp_f_increases
+binder 15914:15914 <> k:93
+R15947:15962 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R15930:15933 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R15929:15929 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:93 var
+R15934:15942 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP max_steps def
+R15944:15946 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.tsk var
+R15966:15968 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R15963:15963 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.f var
+R15965:15965 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:93 var
+R15969:15969 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.f var
+R15972:15974 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R15971:15971 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:93 var
+R16033:16042 mathcomp.boot.ssrnat <> ltn_neqAle thm
+R16051:16054 Corelib.ssr.ssrbool <> andP thm
+R16033:16042 mathcomp.boot.ssrnat <> ltn_neqAle thm
+R16033:16042 mathcomp.boot.ssrnat <> ltn_neqAle thm
+R16051:16054 Corelib.ssr.ssrbool <> andP thm
+R16086:16102 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.DerivingContradiction.H_keeps_diverging var
+R16086:16102 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.DerivingContradiction.H_keeps_diverging var
+R16127:16154 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP bertogna_fp_comp_f_monotonic thm
+R16157:16162 mathcomp.boot.ssrnat <> leqnSn thm
+R16127:16154 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP bertogna_fp_comp_f_monotonic thm
+R16157:16162 mathcomp.boot.ssrnat <> leqnSn thm
+prf 16284:16317 ResponseTimeIterationFP bertogna_fp_comp_rt_grows_too_much
+binder 16338:16338 <> k:94
+R16371:16386 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R16354:16357 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R16353:16353 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:94 var
+R16358:16366 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP max_steps def
+R16368:16370 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.tsk var
+R16390:16392 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R16410:16412 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R16394:16396 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R16393:16393 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:94 var
+R16397:16405 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_cost var
+R16407:16409 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.tsk var
+R16387:16387 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.f var
+R16389:16389 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:94 var
+R16453:16480 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP bertogna_fp_comp_f_increases thm
+R16559:16580 prosa.classic.model.arrival.basic.task SporadicTaskset valid_sporadic_taskset def
+R16583:16604 prosa.classic.model.arrival.basic.task SporadicTask is_valid_sporadic_task def
+R16648:16650 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.tsk var
+R16678:16686 mathcomp.boot.seq <> mem_rcons thm
+R16688:16694 mathcomp.boot.seq <> in_cons thm
+R16696:16702 mathcomp.boot.eqtype <> eq_refl thm
+R16704:16707 Corelib.ssr.ssrbool <> orTb thm
+R16648:16650 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.tsk var
+R16678:16686 mathcomp.boot.seq <> mem_rcons thm
+R16678:16686 mathcomp.boot.seq <> mem_rcons thm
+R16688:16694 mathcomp.boot.seq <> in_cons thm
+R16688:16694 mathcomp.boot.seq <> in_cons thm
+R16696:16702 mathcomp.boot.eqtype <> eq_refl thm
+R16696:16702 mathcomp.boot.eqtype <> eq_refl thm
+R16704:16707 Corelib.ssr.ssrbool <> orTb thm
+R16704:16707 Corelib.ssr.ssrbool <> orTb thm
+R16796:16800 mathcomp.boot.ssrnat <> add0n thm
+R16803:16807 mathcomp.boot.ssrnat <> addn1 thm
+R16809:16813 prosa.classic.util.nat <> subh1 thm
+R16848:16853 mathcomp.boot.ssrnat <> addnBA thm
+R16858:16862 mathcomp.boot.ssrnat <> subnn thm
+R16864:16868 mathcomp.boot.ssrnat <> addn0 thm
+R16873:16877 mathcomp.boot.ssrnat <> leqnn thm
+R16796:16800 mathcomp.boot.ssrnat <> add0n thm
+R16796:16800 mathcomp.boot.ssrnat <> add0n thm
+R16803:16807 mathcomp.boot.ssrnat <> addn1 thm
+R16803:16807 mathcomp.boot.ssrnat <> addn1 thm
+R16809:16813 prosa.classic.util.nat <> subh1 thm
+R16809:16813 prosa.classic.util.nat <> subh1 thm
+R16848:16853 mathcomp.boot.ssrnat <> addnBA thm
+R16848:16853 mathcomp.boot.ssrnat <> addnBA thm
+R16858:16862 mathcomp.boot.ssrnat <> subnn thm
+R16858:16862 mathcomp.boot.ssrnat <> subnn thm
+R16864:16868 mathcomp.boot.ssrnat <> addn0 thm
+R16864:16868 mathcomp.boot.ssrnat <> addn0 thm
+R16873:16877 mathcomp.boot.ssrnat <> leqnn thm
+R16873:16877 mathcomp.boot.ssrnat <> leqnn thm
+R16985:16988 mathcomp.boot.ssrnat <> ltnW thm
+R16985:16988 mathcomp.boot.ssrnat <> ltnW thm
+R17039:17039 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.f var
+R17014:17026 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R17064:17067 mathcomp.boot.ssrnat <> ltnW thm
+R17039:17039 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.f var
+R17014:17026 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R17064:17067 mathcomp.boot.ssrnat <> ltnW thm
+R17091:17095 mathcomp.boot.ssrnat <> addn1 thm
+R17098:17102 mathcomp.boot.ssrnat <> addnA thm
+R17106:17108 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R17111:17115 mathcomp.boot.ssrnat <> addnC thm
+R17117:17121 mathcomp.boot.ssrnat <> addnA thm
+R17124:17129 mathcomp.boot.ssrnat <> addnBA thm
+R17134:17138 mathcomp.boot.ssrnat <> subnn thm
+R17140:17144 mathcomp.boot.ssrnat <> addn0 thm
+R17091:17095 mathcomp.boot.ssrnat <> addn1 thm
+R17091:17095 mathcomp.boot.ssrnat <> addn1 thm
+R17098:17102 mathcomp.boot.ssrnat <> addnA thm
+R17098:17102 mathcomp.boot.ssrnat <> addnA thm
+R17111:17115 mathcomp.boot.ssrnat <> addnC thm
+R17106:17108 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R17106:17108 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R17111:17115 mathcomp.boot.ssrnat <> addnC thm
+R17117:17121 mathcomp.boot.ssrnat <> addnA thm
+R17117:17121 mathcomp.boot.ssrnat <> addnA thm
+R17124:17129 mathcomp.boot.ssrnat <> addnBA thm
+R17124:17129 mathcomp.boot.ssrnat <> addnBA thm
+R17134:17138 mathcomp.boot.ssrnat <> subnn thm
+R17134:17138 mathcomp.boot.ssrnat <> subnn thm
+R17140:17144 mathcomp.boot.ssrnat <> addn0 thm
+R17140:17144 mathcomp.boot.ssrnat <> addn0 thm
+R17169:17177 mathcomp.boot.ssrnat <> ltn_add2r thm
+R17169:17177 mathcomp.boot.ssrnat <> ltn_add2r thm
+R17169:17177 mathcomp.boot.ssrnat <> ltn_add2r thm
+R17210:17214 prosa.classic.util.nat <> subh1 thm
+R17273:17281 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_cost var
+R17283:17285 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.tsk var
+R17252:17260 mathcomp.boot.ssrnat <> leq_trans thm
+R17333:17340 mathcomp.boot.ssrnat <> leq_addl thm
+R17210:17214 prosa.classic.util.nat <> subh1 thm
+R17210:17214 prosa.classic.util.nat <> subh1 thm
+R17273:17281 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_cost var
+R17283:17285 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.tsk var
+R17252:17260 mathcomp.boot.ssrnat <> leq_trans thm
+R17333:17340 mathcomp.boot.ssrnat <> leq_addl thm
+R17368:17373 mathcomp.boot.ssrnat <> addnBA thm
+R17378:17382 mathcomp.boot.ssrnat <> subnn thm
+R17384:17388 mathcomp.boot.ssrnat <> addn0 thm
+R17390:17394 mathcomp.boot.ssrnat <> addn1 thm
+R17396:17399 mathcomp.boot.ssrnat <> ltnS thm
+R17368:17373 mathcomp.boot.ssrnat <> addnBA thm
+R17368:17373 mathcomp.boot.ssrnat <> addnBA thm
+R17378:17382 mathcomp.boot.ssrnat <> subnn thm
+R17378:17382 mathcomp.boot.ssrnat <> subnn thm
+R17384:17388 mathcomp.boot.ssrnat <> addn0 thm
+R17384:17388 mathcomp.boot.ssrnat <> addn0 thm
+R17390:17394 mathcomp.boot.ssrnat <> addn1 thm
+R17390:17394 mathcomp.boot.ssrnat <> addn1 thm
+R17396:17399 mathcomp.boot.ssrnat <> ltnS thm
+R17396:17399 mathcomp.boot.ssrnat <> ltnS thm
+R17447:17467 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP.Analysis.Convergence.DerivingContradiction <> sec
+prf 17584:17605 ResponseTimeIterationFP per_task_rta_converges
+R17633:17635 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17616:17616 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.f var
+R17619:17627 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP max_steps def
+R17629:17631 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.tsk var
+R17636:17636 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.f var
+R17638:17638 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R17652:17655 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R17639:17647 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP max_steps def
+R17649:17651 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.tsk var
+R17695:17728 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP bertogna_fp_comp_rt_grows_too_much thm
+R17751:17778 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP bertogna_fp_comp_f_increases thm
+R17903:17924 prosa.classic.model.arrival.basic.task SporadicTaskset valid_sporadic_taskset def
+R17927:17948 prosa.classic.model.arrival.basic.task SporadicTask is_valid_sporadic_task def
+R18044:18051 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_'in'_x_x_']' not
+R18053:18056 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_'in'_x_x_']' not
+R18093:18093 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_'in'_x_x_']' not
+binder 18052:18052 <> k:95
+binder 18052:18052 <> k:96
+binder 18052:18052 <> k:97
+R18057:18059 mathcomp.boot.fintype <> :::'''I_'_x not
+R18060:18060 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R18074:18077 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R18061:18069 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP max_steps def
+R18071:18073 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.tsk var
+R18078:18079 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R18083:18086 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R18080:18080 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.f var
+R18082:18082 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:95 var
+R18087:18087 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.f var
+R18090:18092 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R18089:18089 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:95 var
+binder 18052:18052 <> k:98
+binder 18052:18052 <> k:99
+R18044:18051 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_'in'_x_x_']' not
+R18053:18056 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_'in'_x_x_']' not
+R18093:18093 mathcomp.boot.fintype FiniteQuant.Exports ::bool_scope:'['_'exists'_x_'in'_x_x_']' not
+binder 18052:18052 <> k:100
+binder 18052:18052 <> k:101
+binder 18052:18052 <> k:102
+R18057:18059 mathcomp.boot.fintype <> :::'''I_'_x not
+R18060:18060 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R18074:18077 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R18061:18069 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP max_steps def
+R18071:18073 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.tsk var
+R18078:18079 mathcomp.boot.fintype FiniteQuant.Exports ::fin_quant_scope:','_x not
+R18083:18086 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R18080:18080 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.f var
+R18082:18082 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:100 var
+R18087:18087 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.f var
+R18090:18092 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R18089:18089 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:100 var
+binder 18052:18052 <> k:103
+binder 18052:18052 <> k:104
+R18137:18146 mathcomp.boot.fintype <> exists_inP thm
+R18196:18229 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP bertogna_fp_comp_f_converges_early thm
+R18196:18229 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP bertogna_fp_comp_f_converges_early thm
+R18275:18278 mathcomp.boot.ssrnat <> ltnS thm
+R18287:18293 mathcomp.boot.fintype <> ltn_ord thm
+R18306:18308 mathcomp.boot.eqtype <> eqP def
+R18275:18278 mathcomp.boot.ssrnat <> ltnS thm
+R18275:18278 mathcomp.boot.ssrnat <> ltnS thm
+R18287:18293 mathcomp.boot.fintype <> ltn_ord thm
+R18306:18308 mathcomp.boot.eqtype <> eqP def
+R18389:18393 Corelib.ssr.ssrbool <> negbT thm
+R18410:18423 mathcomp.boot.fintype <> negb_exists_in thm
+R18389:18393 Corelib.ssr.ssrbool <> negbT thm
+R18410:18423 mathcomp.boot.fintype <> negb_exists_in thm
+R18410:18423 mathcomp.boot.fintype <> negb_exists_in thm
+R18453:18462 mathcomp.boot.fintype <> forall_inP thm
+R18484:18489 mathcomp.boot.ssrnat <> leqNgt thm
+R18484:18489 mathcomp.boot.ssrnat <> leqNgt thm
+R18484:18489 mathcomp.boot.ssrnat <> leqNgt thm
+R18511:18514 Corelib.ssr.ssrbool <> negP thm
+R18581:18583 Corelib.Init.Datatypes <> nat ind
+binder 18577:18577 <> k:105
+R18604:18607 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R18587:18590 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R18586:18586 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:105 var
+R18591:18599 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP max_steps def
+R18601:18603 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.tsk var
+R18611:18614 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R18608:18608 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.f var
+R18610:18610 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:105 var
+R18615:18615 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.f var
+R18618:18620 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R18617:18617 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:105 var
+R18581:18583 Corelib.Init.Datatypes <> nat ind
+binder 18577:18577 <> k:106
+R18604:18607 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R18587:18590 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R18586:18586 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:106 var
+R18591:18599 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP max_steps def
+R18601:18603 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.tsk var
+R18611:18614 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R18608:18608 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.f var
+R18610:18610 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:106 var
+R18615:18615 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.f var
+R18618:18620 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R18617:18617 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:106 var
+R18667:18670 mathcomp.boot.ssrnat <> ltnS thm
+R18667:18670 mathcomp.boot.ssrnat <> ltnS thm
+R18667:18670 mathcomp.boot.ssrnat <> ltnS thm
+R18706:18712 mathcomp.boot.fintype <> Ordinal constr
+R18706:18712 mathcomp.boot.fintype <> Ordinal constr
+R18828:18835 mathcomp.boot.ssrnat <> leq_addr thm
+R18828:18835 mathcomp.boot.ssrnat <> leq_addr thm
+R18870:18872 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.tsk var
+R18898:18906 mathcomp.boot.seq <> mem_rcons thm
+R18908:18914 mathcomp.boot.seq <> in_cons thm
+R18916:18922 mathcomp.boot.eqtype <> eq_refl thm
+R18924:18927 Corelib.ssr.ssrbool <> orTb thm
+R18870:18872 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Convergence.tsk var
+R18898:18906 mathcomp.boot.seq <> mem_rcons thm
+R18898:18906 mathcomp.boot.seq <> mem_rcons thm
+R18908:18914 mathcomp.boot.seq <> in_cons thm
+R18908:18914 mathcomp.boot.seq <> in_cons thm
+R18916:18922 mathcomp.boot.eqtype <> eq_refl thm
+R18916:18922 mathcomp.boot.eqtype <> eq_refl thm
+R18924:18927 Corelib.ssr.ssrbool <> orTb thm
+R18924:18927 Corelib.ssr.ssrbool <> orTb thm
+R18967:18971 prosa.classic.util.nat <> subh1 thm
+R18967:18971 prosa.classic.util.nat <> subh1 thm
+R18967:18971 prosa.classic.util.nat <> subh1 thm
+R19014:19019 mathcomp.boot.ssrnat <> addnBA thm
+R19024:19028 mathcomp.boot.ssrnat <> subnn thm
+R19030:19034 mathcomp.boot.ssrnat <> addn0 thm
+R19036:19040 mathcomp.boot.ssrnat <> subn1 thm
+R19042:19047 mathcomp.boot.ssrnat <> prednK thm
+R19014:19019 mathcomp.boot.ssrnat <> addnBA thm
+R19014:19019 mathcomp.boot.ssrnat <> addnBA thm
+R19024:19028 mathcomp.boot.ssrnat <> subnn thm
+R19024:19028 mathcomp.boot.ssrnat <> subnn thm
+R19030:19034 mathcomp.boot.ssrnat <> addn0 thm
+R19030:19034 mathcomp.boot.ssrnat <> addn0 thm
+R19036:19040 mathcomp.boot.ssrnat <> subn1 thm
+R19036:19040 mathcomp.boot.ssrnat <> subn1 thm
+R19042:19047 mathcomp.boot.ssrnat <> prednK thm
+R19042:19047 mathcomp.boot.ssrnat <> prednK thm
+R19079:19091 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R19079:19091 mathcomp.boot.ssrnat <> leq_ltn_trans thm
+R19118:19126 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP max_steps def
+R19134:19136 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R19130:19132 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R19139:19143 mathcomp.boot.ssrnat <> addn1 thm
+R19157:19164 mathcomp.boot.ssrnat <> leq_addr thm
+R19118:19126 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP max_steps def
+R19118:19126 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP max_steps def
+R19139:19143 mathcomp.boot.ssrnat <> addn1 thm
+R19134:19136 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R19130:19132 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R19134:19136 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R19130:19132 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R19139:19143 mathcomp.boot.ssrnat <> addn1 thm
+R19157:19164 mathcomp.boot.ssrnat <> leq_addr thm
+R19193:19203 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP.Analysis.Convergence <> sec
+sec 19223:19231 ResponseTimeIterationFP.Analysis MainProof
+var 19286:19287 ResponseTimeIterationFP.Analysis.MainProof ts
+R19290:19299 prosa.classic.model.arrival.basic.task SporadicTaskset taskset_of def
+R19301:19313 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.sporadic_task var
+var 19401:19423 ResponseTimeIterationFP.Analysis.MainProof H_valid_task_parameters
+R19434:19455 prosa.classic.model.arrival.basic.task SporadicTaskset valid_sporadic_taskset def
+R19493:19494 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R19479:19491 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_deadline var
+R19467:19477 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_period var
+R19457:19465 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_cost var
+var 19552:19574 ResponseTimeIterationFP.Analysis.MainProof H_constrained_deadlines
+binder 19592:19594 <> tsk:111
+R19607:19610 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R19600:19604 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R19597:19599 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk:111 var
+R19605:19606 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R19628:19631 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R19611:19623 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_deadline var
+R19625:19627 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk:111 var
+R19632:19642 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_period var
+R19644:19646 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk:111 var
+var 19797:19816 ResponseTimeIterationFP.Analysis.MainProof H_task_set_is_sorted
+R19819:19824 mathcomp.boot.path <> sorted def
+R19842:19843 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R19826:19840 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.higher_priority var
+var 19863:19894 ResponseTimeIterationFP.Analysis.MainProof H_task_set_has_unique_priorities
+R19905:19937 prosa.classic.model.priority Priority FP_is_antisymmetric_over_task_set def
+R19955:19956 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R19939:19953 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.higher_priority var
+var 19976:19994 ResponseTimeIterationFP.Analysis.MainProof H_priority_is_total
+R20005:20029 prosa.classic.model.priority Priority FP_is_total_over_task_set def
+R20047:20048 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R20031:20045 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.higher_priority var
+var 20068:20088 ResponseTimeIterationFP.Analysis.MainProof H_priority_transitive
+R20091:20106 prosa.classic.model.priority Priority FP_is_transitive def
+R20108:20122 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.higher_priority var
+var  20201:20207 ResponseTimeIterationFP.Analysis.MainProof arr_seq
+R20210:20225 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R20227:20229 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Job var
+var 20300:20322 ResponseTimeIterationFP.Analysis.MainProof H_all_jobs_from_taskset
+binder 20340:20340 <> j:123
+R20363:20366 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R20343:20352 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R20362:20362 prosa.classic.analysis.global.basic.bertogna_fp_comp <> j:123 var
+R20354:20360 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.arr_seq var
+R20377:20381 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R20367:20374 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_task var
+R20376:20376 prosa.classic.analysis.global.basic.bertogna_fp_comp <> j:123 var
+R20382:20383 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+var 20455:20476 ResponseTimeIterationFP.Analysis.MainProof H_valid_job_parameters
+binder 20494:20494 <> j:126
+R20527:20540 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R20507:20516 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R20526:20526 prosa.classic.analysis.global.basic.bertogna_fp_comp <> j:126 var
+R20518:20524 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.arr_seq var
+R20541:20558 prosa.classic.model.arrival.basic.job Job valid_sporadic_job def
+R20615:20615 prosa.classic.analysis.global.basic.bertogna_fp_comp <> j:126 var
+R20606:20613 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_task var
+R20593:20604 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_deadline var
+R20584:20591 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_cost var
+R20570:20582 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_deadline var
+R20560:20568 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_cost var
+var 20694:20709 ResponseTimeIterationFP.Analysis.MainProof H_sporadic_tasks
+R20720:20738 prosa.classic.model.arrival.basic.task_arrival TaskArrival sporadic_task_model def
+R20773:20779 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.arr_seq var
+R20764:20771 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_task var
+R20752:20762 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_arrival var
+R20740:20750 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_period var
+var 20876:20880 ResponseTimeIterationFP.Analysis.MainProof sched
+R20883:20890 prosa.classic.model.schedule.global.basic.schedule Schedule schedule def
+R20896:20903 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.num_cpus var
+R20892:20894 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.Job var
+var 20923:20940 ResponseTimeIterationFP.Analysis.MainProof H_at_least_one_cpu
+R20951:20953 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R20943:20950 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.num_cpus var
+var 20974:21006 ResponseTimeIterationFP.Analysis.MainProof H_jobs_come_from_arrival_sequence
+R21017:21047 prosa.classic.model.schedule.global.basic.schedule Schedule jobs_come_from_arrival_sequence def
+R21055:21061 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.arr_seq var
+R21049:21053 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.sched var
+var 21191:21219 ResponseTimeIterationFP.Analysis.MainProof H_jobs_must_arrive_to_execute
+R21230:21256 prosa.classic.model.schedule.global.basic.schedule Schedule jobs_must_arrive_to_execute def
+R21270:21274 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.sched var
+R21258:21268 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_arrival var
+var 21294:21322 ResponseTimeIterationFP.Analysis.MainProof H_completed_jobs_dont_execute
+R21333:21359 prosa.classic.model.schedule.global.basic.schedule Schedule completed_jobs_dont_execute def
+R21370:21374 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.sched var
+R21361:21368 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_cost var
+var 21481:21497 ResponseTimeIterationFP.Analysis.MainProof H_sequential_jobs
+R21500:21514 prosa.classic.model.schedule.global.basic.schedule Schedule sequential_jobs def
+R21516:21520 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.sched var
+var 21626:21642 ResponseTimeIterationFP.Analysis.MainProof H_work_conserving
+R21645:21659 prosa.classic.model.schedule.global.basic.platform Platform work_conserving def
+R21690:21694 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.sched var
+R21682:21688 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.arr_seq var
+R21673:21680 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_cost var
+R21661:21671 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_arrival var
+var 21714:21733 ResponseTimeIterationFP.Analysis.MainProof H_respects_FP_policy
+R21744:21761 prosa.classic.model.schedule.global.basic.platform Platform respects_FP_policy def
+R21807:21821 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.higher_priority var
+R21801:21805 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.sched var
+R21793:21799 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.arr_seq var
+R21784:21791 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_task var
+R21775:21782 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_cost var
+R21763:21773 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_arrival var
+var 21835:21860 ResponseTimeIterationFP.Analysis.MainProof no_deadline_missed_by_task
+R21868:21880 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.sporadic_task var
+binder 21863:21865 <> tsk:147
+R21894:21916 prosa.classic.model.schedule.global.schedulability Schedulability task_misses_no_deadline def
+R21975:21977 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk:147 var
+R21969:21973 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.sched var
+R21961:21967 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.arr_seq var
+R21952:21959 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_task var
+R21939:21950 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_deadline var
+R21930:21937 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_cost var
+R21918:21928 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_arrival var
+var 21990:22014 ResponseTimeIterationFP.Analysis.MainProof no_deadline_missed_by_job
+R22027:22048 prosa.classic.model.schedule.global.schedulability Schedulability job_misses_no_deadline def
+R22084:22088 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.sched var
+R22071:22082 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_deadline var
+R22062:22069 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_cost var
+R22050:22060 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_arrival var
+var 22101:22124 ResponseTimeIterationFP.Analysis.MainProof response_time_bounded_by
+R22132:22144 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.sporadic_task var
+binder 22127:22129 <> tsk:148
+R22158:22187 prosa.classic.model.schedule.global.response_time ResponseTime is_response_time_bound_of_task def
+R22233:22235 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk:148 var
+R22227:22231 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.sched var
+R22219:22225 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.arr_seq var
+R22210:22217 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_task var
+R22201:22208 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_cost var
+R22189:22199 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_arrival var
+prf 22748:22786 ResponseTimeIterationFP fp_analysis_yields_response_time_bounds
+binder 22805:22807 <> tsk:149
+binder 22809:22809 <> R:150
+R22855:22868 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R22830:22834 prosa.classic.util.notation <> ::bool_scope:x_'\In'_x not
+R22835:22851 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds def
+R22853:22854 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R22822:22822 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R22826:22827 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R22829:22829 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R22823:22825 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk:149 var
+R22828:22828 prosa.classic.analysis.global.basic.bertogna_fp_comp <> R:150 var
+R22869:22892 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.response_time_bounded_by var
+R22894:22896 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk:149 var
+R22898:22898 prosa.classic.analysis.global.basic.bertogna_fp_comp <> R:150 var
+R23024:23045 prosa.classic.model.arrival.basic.task SporadicTaskset valid_sporadic_taskset def
+R23103:23109 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R23119:23120 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 23110:23118 <> hp_bounds:151
+R23158:23201 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23141:23143 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23121:23137 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds def
+R23139:23140 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R23144:23147 Corelib.Init.Datatypes <> Some constr
+R23149:23157 prosa.classic.analysis.global.basic.bertogna_fp_comp <> hp_bounds:151 var
+R23210:23214 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R23202:23202 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R23206:23207 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R23209:23209 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R23215:23223 prosa.classic.analysis.global.basic.bertogna_fp_comp <> hp_bounds:151 var
+R23103:23109 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R23119:23120 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 23110:23118 <> hp_bounds:152
+R23158:23201 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23141:23143 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23121:23137 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds def
+R23139:23140 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R23144:23147 Corelib.Init.Datatypes <> Some constr
+R23149:23157 prosa.classic.analysis.global.basic.bertogna_fp_comp <> hp_bounds:152 var
+R23210:23214 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R23202:23202 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R23206:23207 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R23209:23209 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R23215:23223 prosa.classic.analysis.global.basic.bertogna_fp_comp <> hp_bounds:152 var
+R23257:23273 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds def
+R23275:23276 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R23257:23273 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds def
+R23275:23276 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R23397:23419 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds_unzip thm
+R23421:23422 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R23469:23469 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R23473:23473 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R23475:23475 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R23469:23469 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R23473:23473 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R23475:23475 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R23469:23469 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R23473:23473 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R23475:23475 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R23500:23503 mathcomp.boot.seq <> nthP thm
+binder 23550:23550 <> k:153
+R23555:23557 mathcomp.boot.seq <> nth def
+R23574:23574 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:153 var
+binder 23550:23550 <> k:154
+R23555:23557 mathcomp.boot.seq <> nth def
+R23574:23574 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:154 var
+binder 23550:23550 <> k:155
+R23555:23557 mathcomp.boot.seq <> nth def
+R23574:23574 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:155 var
+binder 23601:23601 <> k:156
+R23606:23606 Corelib.ssr.ssrfun <> ::pair_scope:x_'.1' not
+R23612:23614 Corelib.ssr.ssrfun <> ::pair_scope:x_'.1' not
+R23611:23611 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:156 var
+binder 23601:23601 <> k:157
+R23606:23606 Corelib.ssr.ssrfun <> ::pair_scope:x_'.1' not
+R23612:23614 Corelib.ssr.ssrfun <> ::pair_scope:x_'.1' not
+R23611:23611 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:157 var
+binder 23601:23601 <> k:158
+R23606:23606 Corelib.ssr.ssrfun <> ::pair_scope:x_'.1' not
+R23612:23614 Corelib.ssr.ssrfun <> ::pair_scope:x_'.1' not
+R23611:23611 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:158 var
+binder 23641:23641 <> k:159
+R23646:23646 Corelib.ssr.ssrfun <> ::pair_scope:x_'.2' not
+R23652:23654 Corelib.ssr.ssrfun <> ::pair_scope:x_'.2' not
+R23651:23651 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:159 var
+binder 23641:23641 <> k:160
+R23646:23646 Corelib.ssr.ssrfun <> ::pair_scope:x_'.2' not
+R23652:23654 Corelib.ssr.ssrfun <> ::pair_scope:x_'.2' not
+R23651:23651 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:160 var
+binder 23641:23641 <> k:161
+R23646:23646 Corelib.ssr.ssrfun <> ::pair_scope:x_'.2' not
+R23652:23654 Corelib.ssr.ssrfun <> ::pair_scope:x_'.2' not
+R23651:23651 prosa.classic.analysis.global.basic.bertogna_fp_comp <> k:161 var
+R23670:23693 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.response_time_bounded_by var
+R23670:23693 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.response_time_bounded_by var
+binder 23822:23824 <> idx:162
+R23847:23849 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23827:23827 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R23836:23837 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R23846:23846 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R23833:23835 prosa.classic.analysis.global.basic.bertogna_fp_comp <> idx:162 var
+R23843:23845 prosa.classic.analysis.global.basic.bertogna_fp_comp <> idx:162 var
+R23854:23856 prosa.classic.analysis.global.basic.bertogna_fp_comp <> idx:162 var
+binder 23822:23824 <> idx:163
+R23847:23849 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23827:23827 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R23836:23837 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R23846:23846 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R23833:23835 prosa.classic.analysis.global.basic.bertogna_fp_comp <> idx:163 var
+R23843:23845 prosa.classic.analysis.global.basic.bertogna_fp_comp <> idx:163 var
+R23854:23856 prosa.classic.analysis.global.basic.bertogna_fp_comp <> idx:163 var
+binder 23953:23953 <> i:164
+R23974:23977 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R23957:23959 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R23956:23956 prosa.classic.analysis.global.basic.bertogna_fp_comp <> i:164 var
+R23960:23963 mathcomp.boot.seq <> size def
+R23984:23986 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23983:23983 prosa.classic.analysis.global.basic.bertogna_fp_comp <> i:164 var
+R23987:23989 mathcomp.boot.seq <> nth def
+R23998:23998 prosa.classic.analysis.global.basic.bertogna_fp_comp <> i:164 var
+R23995:23996 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+binder 23953:23953 <> i:165
+R23974:23977 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R23957:23959 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R23956:23956 prosa.classic.analysis.global.basic.bertogna_fp_comp <> i:165 var
+R23960:23963 mathcomp.boot.seq <> size def
+R23984:23986 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23983:23983 prosa.classic.analysis.global.basic.bertogna_fp_comp <> i:165 var
+R23987:23989 mathcomp.boot.seq <> nth def
+R23998:23998 prosa.classic.analysis.global.basic.bertogna_fp_comp <> i:165 var
+R23995:23996 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R24057:24063 mathcomp.boot.seq <> nth_map thm
+R24057:24063 mathcomp.boot.seq <> nth_map thm
+R24057:24063 mathcomp.boot.seq <> nth_map thm
+R24113:24115 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24099:24102 mathcomp.boot.seq <> size def
+R24116:24119 mathcomp.boot.seq <> size def
+R24121:24122 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R24113:24115 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24099:24102 mathcomp.boot.seq <> size def
+R24116:24119 mathcomp.boot.seq <> size def
+R24121:24122 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R24155:24162 mathcomp.boot.seq <> size_map thm
+R24155:24162 mathcomp.boot.seq <> size_map thm
+R24155:24162 mathcomp.boot.seq <> size_map thm
+R24208:24217 prosa.classic.util.induction <> strong_ind thm
+R24208:24217 prosa.classic.util.induction <> strong_ind thm
+binder 24248:24253 <> tsk_hp:166
+binder 24255:24258 <> R_hp:167
+R24298:24301 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R24275:24279 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R24261:24261 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R24268:24269 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R24274:24274 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R24262:24267 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk_hp:166 var
+R24270:24273 prosa.classic.analysis.global.basic.bertogna_fp_comp <> R_hp:167 var
+R24280:24283 mathcomp.boot.seq <> take def
+R24302:24325 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.response_time_bounded_by var
+R24327:24332 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk_hp:166 var
+R24334:24337 prosa.classic.analysis.global.basic.bertogna_fp_comp <> R_hp:167 var
+binder 24248:24253 <> tsk_hp:168
+binder 24255:24258 <> R_hp:169
+R24298:24301 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R24275:24279 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R24261:24261 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R24268:24269 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R24274:24274 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R24262:24267 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk_hp:168 var
+R24270:24273 prosa.classic.analysis.global.basic.bertogna_fp_comp <> R_hp:169 var
+R24280:24283 mathcomp.boot.seq <> take def
+R24302:24325 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.response_time_bounded_by var
+R24327:24332 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk_hp:168 var
+R24334:24337 prosa.classic.analysis.global.basic.bertogna_fp_comp <> R_hp:169 var
+R24412:24415 mathcomp.boot.seq <> nthP thm
+R24453:24461 mathcomp.boot.seq <> size_take thm
+R24453:24461 mathcomp.boot.seq <> size_take thm
+R24453:24461 mathcomp.boot.seq <> size_take thm
+R24495:24502 mathcomp.boot.seq <> nth_take thm
+R24495:24502 mathcomp.boot.seq <> nth_take thm
+R24495:24502 mathcomp.boot.seq <> nth_take thm
+R24540:24563 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.response_time_bounded_by var
+R24540:24563 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.response_time_bounded_by var
+R24688:24696 mathcomp.boot.ssrnat <> ltn_trans thm
+R24688:24696 mathcomp.boot.ssrnat <> ltn_trans thm
+R24741:24764 prosa.classic.analysis.global.basic.bertogna_fp_comp <> response_time_bounded_by vardef
+R24790:24812 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds_rcons thm
+R24815:24818 mathcomp.boot.seq <> take def
+R24824:24825 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R24829:24832 mathcomp.boot.seq <> take def
+R24790:24812 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds_rcons thm
+R24815:24818 mathcomp.boot.seq <> take def
+R24824:24825 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R24829:24832 mathcomp.boot.seq <> take def
+R24932:24939 mathcomp.boot.seq <> take_nth thm
+R24952:24973 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds_take thm
+R24932:24939 mathcomp.boot.seq <> take_nth thm
+R24932:24939 mathcomp.boot.seq <> take_nth thm
+R24932:24939 mathcomp.boot.seq <> take_nth thm
+R24932:24939 mathcomp.boot.seq <> take_nth thm
+R24952:24973 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds_take thm
+R24952:24973 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds_take thm
+R25119:25127 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_cost var
+R25146:25156 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_period var
+R25191:25203 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_deadline var
+R25223:25234 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_deadline var
+R25284:25291 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_task var
+R25301:25302 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R25319:25322 mathcomp.boot.seq <> take def
+R25376:25390 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.higher_priority var
+R25047:25085 prosa.classic.analysis.global.basic.bertogna_fp_theory ResponseTimeAnalysisFP bertogna_cirinei_response_time_bound_fp thm
+R25119:25127 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_cost var
+R25146:25156 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_period var
+R25191:25203 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.task_deadline var
+R25223:25234 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_deadline var
+R25284:25291 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_task var
+R25301:25302 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R25319:25322 mathcomp.boot.seq <> take def
+R25376:25390 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.higher_priority var
+R25047:25085 prosa.classic.analysis.global.basic.bertogna_fp_theory ResponseTimeAnalysisFP bertogna_cirinei_response_time_bound_fp thm
+R25455:25457 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25441:25445 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R25458:25461 Corelib.Init.Datatypes <> true constr
+R25487:25493 mathcomp.boot.seq <> mem_nth thm
+R25455:25457 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25441:25445 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R25458:25461 Corelib.Init.Datatypes <> true constr
+R25487:25493 mathcomp.boot.seq <> mem_nth thm
+R25518:25524 prosa.classic.util.seqset <> set_mem thm
+R25540:25543 mathcomp.boot.seq <> mapP thm
+R25553:25553 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R25562:25563 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R25572:25572 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R25518:25524 prosa.classic.util.seqset <> set_mem thm
+R25518:25524 prosa.classic.util.seqset <> set_mem thm
+R25540:25543 mathcomp.boot.seq <> mapP thm
+R25553:25553 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R25562:25563 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R25572:25572 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R25668:25672 mathcomp.boot.seq <> index def
+R25681:25682 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R25668:25672 mathcomp.boot.seq <> index def
+R25681:25682 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R25724:25732 mathcomp.boot.seq <> nth_index thm
+R25724:25732 mathcomp.boot.seq <> nth_index thm
+R25826:25834 mathcomp.boot.seq <> index_mem thm
+R25826:25834 mathcomp.boot.seq <> index_mem thm
+R25826:25834 mathcomp.boot.seq <> index_mem thm
+R25861:25864 mathcomp.boot.seq <> uniq def
+R25861:25864 mathcomp.boot.seq <> uniq def
+R25928:25930 Corelib.Init.Datatypes <> fst def
+R25908:25915 mathcomp.boot.seq <> map_uniq thm
+R25941:25946 mathcomp.boot.seq <> unzip1 def
+R25928:25930 Corelib.Init.Datatypes <> fst def
+R25908:25915 mathcomp.boot.seq <> map_uniq thm
+R25993:25994 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R26028:26045 prosa.classic.util.list <> filter_idx_lt_take thm
+R26028:26045 prosa.classic.util.list <> filter_idx_lt_take thm
+R26028:26045 prosa.classic.util.list <> filter_idx_lt_take thm
+R26088:26097 mathcomp.boot.seq <> mem_filter thm
+R26106:26109 Corelib.ssr.ssrbool <> andP thm
+R26147:26153 mathcomp.boot.seq <> mem_nth thm
+R26169:26177 mathcomp.boot.seq <> index_mem thm
+R26088:26097 mathcomp.boot.seq <> mem_filter thm
+R26088:26097 mathcomp.boot.seq <> mem_filter thm
+R26106:26109 Corelib.ssr.ssrbool <> andP thm
+R26147:26153 mathcomp.boot.seq <> mem_nth thm
+R26169:26177 mathcomp.boot.seq <> index_mem thm
+R26169:26177 mathcomp.boot.seq <> index_mem thm
+R26221:26230 mathcomp.boot.seq <> index_uniq thm
+R26252:26260 mathcomp.boot.seq <> index_mem thm
+R26221:26230 mathcomp.boot.seq <> index_uniq thm
+R26221:26230 mathcomp.boot.seq <> index_uniq thm
+R26252:26260 mathcomp.boot.seq <> index_mem thm
+R26252:26260 mathcomp.boot.seq <> index_mem thm
+R26324:26327 Corelib.ssr.ssrbool <> andP thm
+R26437:26438 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R26361:26405 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds_hp_tasks_have_smaller_index thm
+R26544:26552 mathcomp.boot.seq <> index_mem thm
+R26437:26438 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R26361:26405 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds_hp_tasks_have_smaller_index thm
+R26544:26552 mathcomp.boot.seq <> index_mem thm
+R26544:26552 mathcomp.boot.seq <> index_mem thm
+R26625:26627 mathcomp.boot.eqtype <> eqP def
+R26625:26627 mathcomp.boot.eqtype <> eqP def
+R26735:26741 mathcomp.boot.eqtype <> eq_refl thm
+R26735:26741 mathcomp.boot.eqtype <> eq_refl thm
+R26735:26741 mathcomp.boot.eqtype <> eq_refl thm
+R26783:26791 mathcomp.boot.seq <> index_mem thm
+R26783:26791 mathcomp.boot.seq <> index_mem thm
+R26783:26791 mathcomp.boot.seq <> index_mem thm
+R26901:26908 mathcomp.boot.seq <> mem_take thm
+R26901:26908 mathcomp.boot.seq <> mem_take thm
+R26975:26976 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R26936:26960 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds_ge_cost thm
+R26975:26976 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R26936:26960 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds_ge_cost thm
+R27064:27071 mathcomp.boot.seq <> mem_take thm
+R27064:27071 mathcomp.boot.seq <> mem_take thm
+R27142:27143 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R27099:27127 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds_le_deadline thm
+R27142:27143 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R27099:27127 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds_le_deadline thm
+R27214:27230 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP per_task_rta_fold thm
+R27214:27230 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP per_task_rta_fold thm
+R27214:27230 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP per_task_rta_fold thm
+R27287:27290 mathcomp.boot.seq <> take def
+R27296:27297 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R27249:27270 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP per_task_rta_converges thm
+R27323:27344 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds_take thm
+R27361:27364 mathcomp.boot.ssrnat <> ltnW thm
+R27287:27290 mathcomp.boot.seq <> take def
+R27296:27297 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R27249:27270 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP per_task_rta_converges thm
+R27323:27344 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds_take thm
+R27361:27364 mathcomp.boot.ssrnat <> ltnW thm
+R27361:27364 mathcomp.boot.ssrnat <> ltnW thm
+R27418:27425 mathcomp.boot.seq <> take_nth thm
+R27418:27425 mathcomp.boot.seq <> take_nth thm
+R27418:27425 mathcomp.boot.seq <> take_nth thm
+R27483:27490 mathcomp.boot.seq <> mem_take thm
+R27483:27490 mathcomp.boot.seq <> mem_take thm
+var 27604:27618 ResponseTimeIterationFP.Analysis.MainProof H_test_succeeds
+R27621:27634 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_schedulable def
+R27636:27637 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+prf 27706:27734 ResponseTimeIterationFP taskset_schedulable_by_fp_rta
+binder 27753:27755 <> tsk:172
+R27768:27771 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R27761:27765 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R27758:27760 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk:172 var
+R27766:27767 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R27772:27797 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.no_deadline_missed_by_task var
+R27799:27801 prosa.classic.analysis.global.basic.bertogna_fp_comp <> tsk:172 var
+R27840:27878 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_analysis_yields_response_time_bounds thm
+R27905:27927 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds_unzip thm
+R27929:27930 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R27954:27982 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds_le_deadline thm
+R27984:27985 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R28005:28030 prosa.classic.analysis.global.basic.bertogna_fp_comp <> no_deadline_missed_by_task vardef
+R28033:28055 prosa.classic.model.schedule.global.schedulability Schedulability task_misses_no_deadline def
+R28073:28094 prosa.classic.model.schedule.global.schedulability Schedulability job_misses_no_deadline def
+R28097:28105 prosa.classic.model.schedule.global.basic.schedule Schedule completed def
+R28123:28136 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_schedulable def
+R28139:28156 prosa.classic.model.arrival.basic.job Job valid_sporadic_job def
+R28277:28293 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds def
+R28295:28296 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R28277:28293 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP fp_claimed_bounds def
+R28295:28296 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.ts var
+R28397:28403 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R28405:28406 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 28404:28404 <> R:173
+R28415:28419 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R28407:28407 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28411:28412 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28414:28414 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28413:28413 prosa.classic.analysis.global.basic.bertogna_fp_comp <> R:173 var
+R28397:28403 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R28405:28406 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 28404:28404 <> R:174
+R28415:28419 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R28407:28407 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28411:28412 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28414:28414 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28413:28413 prosa.classic.analysis.global.basic.bertogna_fp_comp <> R:174 var
+R28460:28466 prosa.classic.util.seqset <> set_mem thm
+R28460:28466 prosa.classic.util.seqset <> set_mem thm
+R28460:28466 prosa.classic.util.seqset <> set_mem thm
+R28501:28504 mathcomp.boot.seq <> mapP thm
+R28799:28805 prosa.classic.model.schedule.global.basic.schedule Schedule service def
+R28829:28831 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R28816:28826 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_arrival var
+R28807:28811 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.sched var
+R28778:28786 mathcomp.boot.ssrnat <> leq_trans thm
+R28799:28805 prosa.classic.model.schedule.global.basic.schedule Schedule service def
+R28829:28831 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R28816:28826 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_arrival var
+R28807:28811 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.sched var
+R28778:28786 mathcomp.boot.ssrnat <> leq_trans thm
+R28867:28888 prosa.classic.model.arrival.basic.task SporadicTaskset valid_sporadic_taskset def
+R28891:28912 prosa.classic.model.arrival.basic.task SporadicTask is_valid_sporadic_task def
+R28934:28943 prosa.classic.util.sum <> extend_sum thm
+R28957:28965 mathcomp.boot.ssrnat <> leq_add2l thm
+R28934:28943 prosa.classic.util.sum <> extend_sum thm
+R28957:28965 mathcomp.boot.ssrnat <> leq_add2l thm
+R28957:28965 mathcomp.boot.ssrnat <> leq_add2l thm
+prf 29269:29294 ResponseTimeIterationFP jobs_schedulable_by_fp_rta
+binder 29313:29313 <> j:175
+R29336:29339 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R29316:29325 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R29335:29335 prosa.classic.analysis.global.basic.bertogna_fp_comp <> j:175 var
+R29327:29333 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.arr_seq var
+R29340:29364 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.no_deadline_missed_by_job var
+R29366:29366 prosa.classic.analysis.global.basic.bertogna_fp_comp <> j:175 var
+R29427:29455 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP taskset_schedulable_by_fp_rta thm
+R29473:29498 prosa.classic.analysis.global.basic.bertogna_fp_comp <> no_deadline_missed_by_task vardef
+R29501:29523 prosa.classic.model.schedule.global.schedulability Schedulability task_misses_no_deadline def
+R29564:29571 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_task var
+R29564:29571 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.job_task var
+R29609:29631 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.H_all_jobs_from_taskset var
+R29609:29631 prosa.classic.analysis.global.basic.bertogna_fp_comp <> ResponseTimeIterationFP.Analysis.MainProof.H_all_jobs_from_taskset var
+R29660:29668 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP.Analysis.MainProof <> sec
+R29678:29685 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP.Analysis <> sec
+R29693:29715 prosa.classic.analysis.global.basic.bertogna_fp_comp ResponseTimeIterationFP <> mod

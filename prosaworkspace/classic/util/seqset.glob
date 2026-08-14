@@ -1,0 +1,49 @@
+DIGEST 7fe05ba9dec18db8ba4414b7252ecf20
+Fprosa.classic.util.seqset
+R15:31 prosa.util.seqset <> <> lib
+R64:72 mathcomp.boot.ssreflect <> <> lib
+R74:80 mathcomp.boot.ssrbool <> <> lib
+R82:87 mathcomp.boot.ssrnat <> <> lib
+R89:94 mathcomp.boot.eqtype <> <> lib
+R96:98 mathcomp.boot.seq <> <> lib
+R100:106 mathcomp.boot.fintype <> <> lib
+sec 118:123 <> Lemmas
+var  138:138 Lemmas T
+R141:146 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 161:161 Lemmas s
+R164:168 prosa.util.seqset <> :::'{set'_x_'}' not
+R170:170 prosa.util.seqset <> :::'{set'_x_'}' not
+R169:169 prosa.classic.util.seqset <> Lemmas.T var
+prf 182:188 <> set_mem
+binder 199:199 <> x:4
+R202:202 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R210:214 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R231:231 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R204:208 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R203:203 prosa.classic.util.seqset <> x:4 var
+R209:209 prosa.classic.util.seqset <> Lemmas.s var
+R216:220 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R215:215 prosa.classic.util.seqset <> x:4 var
+R221:228 prosa.util.seqset <> _set_seq proj
+R230:230 prosa.classic.util.seqset <> Lemmas.s var
+R269:269 prosa.classic.util.seqset <> Lemmas.s var
+R286:291 prosa.classic.util.seqset Lemmas <> sec
+sec 303:315 <> LemmasFinType
+var  332:332 LemmasFinType T
+R335:341 mathcomp.boot.fintype Finite.Exports finType abbrev
+var 356:356 LemmasFinType s
+R359:363 prosa.util.seqset <> :::'{set'_x_'}' not
+R365:365 prosa.util.seqset <> :::'{set'_x_'}' not
+R364:364 prosa.classic.util.seqset <> LemmasFinType.T var
+prf 377:384 <> set_card
+R392:394 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R388:389 mathcomp.boot.fintype <> ::nat_scope:'#|'_x_'|' not
+R391:391 mathcomp.boot.fintype <> ::nat_scope:'#|'_x_'|' not
+R390:390 prosa.classic.util.seqset <> LemmasFinType.s var
+R395:398 mathcomp.boot.seq <> size def
+R400:400 prosa.classic.util.seqset <> LemmasFinType.s var
+R427:430 mathcomp.boot.seq <> uniq def
+R432:432 prosa.classic.util.seqset <> LemmasFinType.s var
+R446:446 prosa.classic.util.seqset <> LemmasFinType.s var
+R471:480 mathcomp.boot.fintype <> card_uniqP thm
+R500:512 prosa.classic.util.seqset LemmasFinType <> sec

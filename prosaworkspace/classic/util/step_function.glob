@@ -1,0 +1,9 @@
+DIGEST e590f96d84c5f89d5d207c9d97a86033
+Fprosa.classic.util.step_function
+R15:40 prosa.classic.util.tactics <> <> lib
+R42:68 prosa.classic.util.notation <> <> lib
+R70:97 prosa.classic.util.induction <> <> lib
+R129:137 mathcomp.boot.ssreflect <> <> lib
+R139:145 mathcomp.boot.ssrbool <> <> lib
+R147:152 mathcomp.boot.eqtype <> <> lib
+R154:159 mathcomp.boot.ssrnat <> <> lib

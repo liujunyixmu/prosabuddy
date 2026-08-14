@@ -1,0 +1,756 @@
+DIGEST e7e9f1d66f8ccb94e136ff2a0fd6668b
+Fprosa.classic.analysis.uni.jitter.fp_rta_comp
+R15:36 prosa.classic.util.all <> <> lib
+R54:81 prosa.classic.model.priority <> <> lib
+R99:136 prosa.classic.model.arrival.basic.task <> <> lib
+R154:191 prosa.classic.model.arrival.jitter.job <> <> lib
+R193:243 prosa.classic.model.arrival.jitter.arrival_sequence <> <> lib
+R260:306 prosa.classic.model.arrival.jitter.task_arrival <> <> lib
+R324:370 prosa.classic.model.schedule.uni.schedulability <> <> lib
+R387:432 prosa.classic.model.schedule.uni.response_time <> <> lib
+R450:497 prosa.classic.model.schedule.uni.jitter.schedule <> <> lib
+R499:546 prosa.classic.model.schedule.uni.jitter.platform <> <> lib
+R564:614 prosa.classic.analysis.uni.jitter.workload_bound_fp <> <> lib
+R616:662 prosa.classic.analysis.uni.jitter.fp_rta_theory <> <> lib
+R694:702 mathcomp.boot.ssreflect <> <> lib
+R704:710 mathcomp.boot.ssrbool <> <> lib
+R712:717 mathcomp.boot.eqtype <> <> lib
+R719:724 mathcomp.boot.ssrnat <> <> lib
+R726:728 mathcomp.boot.seq <> <> lib
+R730:736 mathcomp.boot.fintype <> <> lib
+R738:742 mathcomp.boot.bigop <> <> lib
+R744:747 mathcomp.boot.path <> <> lib
+R749:754 mathcomp.boot.ssrfun <> <> lib
+mod 765:787 <> ResponseTimeIterationFP
+R800:812 prosa.classic.model.arrival.jitter.job JobWithJitter <> mod
+R814:843 prosa.classic.model.schedule.uni.jitter.schedule UniprocessorScheduleWithJitter <> mod
+R845:865 prosa.classic.model.arrival.jitter.task_arrival TaskArrivalWithJitter <> mod
+R876:890 prosa.classic.model.arrival.basic.task SporadicTaskset <> mod
+R892:906 prosa.classic.analysis.uni.jitter.workload_bound_fp WorkloadBoundFP <> mod
+R908:915 prosa.classic.model.priority Priority <> mod
+R917:928 prosa.classic.model.schedule.uni.response_time ResponseTime <> mod
+R939:950 prosa.classic.model.schedule.uni.response_time ResponseTime <> mod
+R952:965 prosa.classic.model.schedule.uni.schedulability Schedulability <> mod
+R967:974 prosa.classic.model.schedule.uni.jitter.platform Platform <> mod
+R976:997 prosa.classic.analysis.uni.jitter.fp_rta_theory ResponseTimeAnalysisFP <> mod
+sec 1123:1130 ResponseTimeIterationFP Analysis
+var  1151:1162 ResponseTimeIterationFP.Analysis SporadicTask
+R1165:1170 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1187:1195 ResponseTimeIterationFP.Analysis task_cost
+R1210:1213 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1198:1209 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.SporadicTask var
+R1214:1217 prosa.classic.model.time Time time def
+var 1233:1243 ResponseTimeIterationFP.Analysis task_period
+R1258:1261 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1246:1257 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.SporadicTask var
+R1262:1265 prosa.classic.model.time Time time def
+var 1281:1293 ResponseTimeIterationFP.Analysis task_deadline
+R1308:1311 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1296:1307 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.SporadicTask var
+R1312:1315 prosa.classic.model.time Time time def
+var 1331:1341 ResponseTimeIterationFP.Analysis task_jitter
+R1356:1359 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1344:1355 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.SporadicTask var
+R1360:1363 prosa.classic.model.time Time time def
+var 1465:1487 ResponseTimeIterationFP.Analysis task_with_response_time
+R1505:1507 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R1493:1504 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.SporadicTask var
+R1508:1511 prosa.classic.model.time Time time def
+var 1580:1597 ResponseTimeIterationFP.Analysis higher_eq_priority
+R1600:1608 prosa.classic.model.priority Priority FP_policy def
+R1610:1621 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.SporadicTask var
+def 1981:1989 ResponseTimeIterationFP max_steps
+R1997:2008 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.SporadicTask var
+binder 1992:1994 <> tsk:12
+R2053:2055 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R2037:2039 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R2020:2032 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.task_deadline var
+R2034:2036 prosa.classic.analysis.uni.jitter.fp_rta_comp <> tsk:12 var
+R2040:2048 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.task_cost var
+R2050:2052 prosa.classic.analysis.uni.jitter.fp_rta_comp <> tsk:12 var
+var 2161:2174 ResponseTimeIterationFP.Analysis workload_bound
+R2185:2207 prosa.classic.analysis.uni.jitter.workload_bound_fp WorkloadBoundFP total_workload_bound_fp def
+R2243:2260 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.higher_eq_priority var
+R2231:2241 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.task_jitter var
+R2219:2229 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.task_period var
+R2209:2217 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.task_cost var
+def 2513:2524 ResponseTimeIterationFP per_task_rta
+binder 2526:2527 <> ts:13
+binder 2529:2531 <> tsk:14
+R2542:2554 prosa.classic.util.fixedpoint <> iter_fixpoint def
+R2581:2589 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP max_steps def
+R2591:2593 prosa.classic.analysis.uni.jitter.fp_rta_comp <> tsk:14 var
+R2597:2605 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.task_cost var
+R2607:2609 prosa.classic.analysis.uni.jitter.fp_rta_comp <> tsk:14 var
+R2557:2570 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.workload_bound var
+R2572:2573 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ts:13 var
+R2575:2577 prosa.classic.analysis.uni.jitter.fp_rta_comp <> tsk:14 var
+var 2959:2972 ResponseTimeIterationFP.Analysis is_valid_bound
+binder 2974:2978 <> tsk_R:15
+R2992:2996 prosa.classic.analysis.uni.jitter.fp_rta_comp <> tsk_R:15 var
+R3001:3001 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3005:3006 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3013:3013 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3007:3010 Corelib.Init.Datatypes <> Some constr
+R3030:3032 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R3073:3090 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R3104:3119 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R3052:3055 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R3048:3050 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R3033:3043 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.task_jitter var
+R3056:3068 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.task_deadline var
+R3091:3094 Corelib.Init.Datatypes <> Some constr
+R3096:3096 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3100:3101 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3103:3103 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3120:3123 Corelib.Init.Datatypes <> None constr
+R3136:3139 Corelib.Init.Datatypes <> None constr
+def 3457:3473 ResponseTimeIterationFP fp_claimed_bounds
+binder 3475:3476 <> ts:17
+R3479:3484 Corelib.Init.Datatypes <> option ind
+R3487:3489 mathcomp.boot.seq <> seq abbrev
+R3491:3513 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.task_with_response_time var
+R3548:3552 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'|'_x_'<-'_x_']' not
+R3579:3581 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'|'_x_'<-'_x_']' not
+R3585:3588 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'|'_x_'<-'_x_']' not
+R3591:3591 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'|'_x_'<-'_x_']' not
+binder 3582:3584 <> tsk:18
+binder 3582:3584 <> tsk:19
+R3553:3553 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3557:3558 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3578:3578 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3554:3556 prosa.classic.analysis.uni.jitter.fp_rta_comp <> tsk:18 var
+R3559:3570 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP per_task_rta def
+R3572:3573 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ts:17 var
+R3575:3577 prosa.classic.analysis.uni.jitter.fp_rta_comp <> tsk:18 var
+R3589:3590 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ts:17 var
+binder 3529:3543 <> possible_bounds:20
+R3604:3606 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R3641:3656 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R3699:3712 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R3607:3609 mathcomp.boot.seq <> all def
+R3626:3640 prosa.classic.analysis.uni.jitter.fp_rta_comp <> possible_bounds:20 var
+R3611:3624 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.is_valid_bound var
+R3657:3660 Corelib.Init.Datatypes <> Some constr
+R3663:3666 mathcomp.boot.seq <> pmap def
+R3683:3697 prosa.classic.analysis.uni.jitter.fp_rta_comp <> possible_bounds:20 var
+R3668:3681 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.is_valid_bound var
+R3713:3716 Corelib.Init.Datatypes <> None constr
+def 3876:3889 ResponseTimeIterationFP fp_schedulable
+R3896:3898 mathcomp.boot.seq <> seq abbrev
+R3900:3911 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.SporadicTask var
+binder 3892:3893 <> ts:21
+R3943:3946 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R3923:3939 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds def
+R3941:3942 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ts:21 var
+R3947:3950 Corelib.Init.Datatypes <> None constr
+sec 4074:4079 ResponseTimeIterationFP.Analysis Lemmas
+var 4148:4149 ResponseTimeIterationFP.Analysis.Lemmas ts
+R4152:4154 mathcomp.boot.seq <> seq abbrev
+R4156:4167 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.SporadicTask var
+var 4251:4259 ResponseTimeIterationFP.Analysis.Lemmas rt_bounds
+R4262:4264 mathcomp.boot.seq <> seq abbrev
+R4266:4288 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.task_with_response_time var
+var 4308:4326 ResponseTimeIterationFP.Analysis.Lemmas H_analysis_succeeds
+R4357:4359 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4337:4353 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds def
+R4355:4356 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.ts var
+R4360:4363 Corelib.Init.Datatypes <> Some constr
+R4365:4373 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.rt_bounds var
+sec 4468:4478 ResponseTimeIterationFP.Analysis.Lemmas BoundExists
+var 4548:4550 ResponseTimeIterationFP.Analysis.Lemmas.BoundExists tsk
+R4553:4564 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.SporadicTask var
+var 4586:4596 ResponseTimeIterationFP.Analysis.Lemmas.BoundExists H_tsk_in_ts
+R4602:4606 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R4599:4601 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.BoundExists.tsk var
+R4607:4608 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.ts var
+prf 4748:4779 ResponseTimeIterationFP fp_claimed_bounds_for_every_task
+R4792:4798 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R4800:4801 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 4799:4799 <> R:32
+R4810:4814 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R4802:4802 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R4806:4807 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R4809:4809 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R4803:4805 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.BoundExists.tsk var
+R4808:4808 prosa.classic.analysis.uni.jitter.fp_rta_comp <> R:32 var
+R4815:4823 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.rt_bounds var
+R4920:4936 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds def
+R4920:4936 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds def
+R4920:4936 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds def
+R4959:4961 mathcomp.boot.seq <> all def
+R4959:4961 mathcomp.boot.seq <> all def
+R4959:4961 mathcomp.boot.seq <> all def
+R5014:5017 mathcomp.boot.seq <> allP thm
+R5166:5169 mathcomp.boot.seq <> mapP thm
+R5179:5181 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.BoundExists.tsk var
+R5069:5092 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R5043:5043 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5047:5048 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5068:5068 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5044:5046 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.BoundExists.tsk var
+R5049:5060 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP per_task_rta def
+R5062:5063 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.ts var
+R5065:5067 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.BoundExists.tsk var
+R5093:5097 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'|'_x_'<-'_x_']' not
+R5124:5126 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'|'_x_'<-'_x_']' not
+R5130:5133 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'|'_x_'<-'_x_']' not
+R5136:5136 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'|'_x_'<-'_x_']' not
+binder 5127:5129 <> tsk:33
+binder 5127:5129 <> tsk:34
+R5098:5098 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5102:5103 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5123:5123 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5099:5101 prosa.classic.analysis.uni.jitter.fp_rta_comp <> tsk:33 var
+R5104:5115 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP per_task_rta def
+R5117:5118 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.ts var
+R5120:5122 prosa.classic.analysis.uni.jitter.fp_rta_comp <> tsk:33 var
+R5134:5135 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.ts var
+R5166:5169 mathcomp.boot.seq <> mapP thm
+R5179:5181 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.BoundExists.tsk var
+R5247:5260 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.is_valid_bound var
+R5273:5284 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP per_task_rta def
+R5247:5260 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.is_valid_bound var
+R5247:5260 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.is_valid_bound var
+R5273:5284 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP per_task_rta def
+R5273:5284 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP per_task_rta def
+R5319:5322 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R5319:5322 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R5319:5322 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R5405:5412 mathcomp.boot.seq <> mem_pmap thm
+R5421:5424 mathcomp.boot.seq <> mapP thm
+R5405:5412 mathcomp.boot.seq <> mem_pmap thm
+R5405:5412 mathcomp.boot.seq <> mem_pmap thm
+R5421:5424 mathcomp.boot.seq <> mapP thm
+R5444:5444 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5448:5449 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5456:5456 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5445:5447 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.BoundExists.tsk var
+R5450:5453 Corelib.Init.Datatypes <> Some constr
+R5444:5444 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5448:5449 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5456:5456 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5445:5447 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.BoundExists.tsk var
+R5450:5453 Corelib.Init.Datatypes <> Some constr
+R5504:5517 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.is_valid_bound var
+R5504:5517 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.is_valid_bound var
+R5504:5517 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.is_valid_bound var
+R5547:5557 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP.Analysis.Lemmas.BoundExists <> sec
+sec 5662:5678 ResponseTimeIterationFP.Analysis.Lemmas PropertiesOfBound
+var 5808:5810 ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound tsk
+R5813:5824 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.SporadicTask var
+var 5844:5844 ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound R
+R5847:5850 prosa.classic.model.time Time time def
+var 5872:5887 ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound H_tsk_R_computed
+R5898:5902 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R5890:5890 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5894:5895 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5897:5897 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5891:5893 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.tsk var
+R5896:5896 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.R var
+R5903:5911 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.rt_bounds var
+prf 5991:6020 ResponseTimeIterationFP fp_claimed_bounds_from_taskset
+R6036:6040 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R6033:6035 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.tsk var
+R6041:6042 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.ts var
+R6165:6181 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds def
+R6165:6181 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds def
+R6165:6181 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds def
+R6200:6202 mathcomp.boot.seq <> all def
+R6200:6202 mathcomp.boot.seq <> all def
+R6200:6202 mathcomp.boot.seq <> all def
+R6265:6272 mathcomp.boot.seq <> mem_pmap thm
+R6265:6272 mathcomp.boot.seq <> mem_pmap thm
+R6265:6272 mathcomp.boot.seq <> mem_pmap thm
+R6294:6297 mathcomp.boot.seq <> mapP thm
+R6334:6347 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.is_valid_bound var
+R6334:6347 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.is_valid_bound var
+R6334:6347 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.is_valid_bound var
+R6407:6410 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R6407:6410 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R6407:6410 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R6498:6501 mathcomp.boot.seq <> mapP thm
+prf 6681:6716 ResponseTimeIterationFP fp_claimed_bounds_computes_iteration
+R6748:6750 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6729:6740 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP per_task_rta def
+R6742:6743 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.ts var
+R6745:6747 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.tsk var
+R6751:6754 Corelib.Init.Datatypes <> Some constr
+R6756:6756 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.R var
+R6879:6895 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds def
+R6879:6895 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds def
+R6879:6895 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds def
+R6914:6916 mathcomp.boot.seq <> all def
+R6914:6916 mathcomp.boot.seq <> all def
+R6914:6916 mathcomp.boot.seq <> all def
+R6979:6986 mathcomp.boot.seq <> mem_pmap thm
+R6979:6986 mathcomp.boot.seq <> mem_pmap thm
+R6979:6986 mathcomp.boot.seq <> mem_pmap thm
+R7008:7011 mathcomp.boot.seq <> mapP thm
+R7048:7061 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.is_valid_bound var
+R7048:7061 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.is_valid_bound var
+R7048:7061 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.is_valid_bound var
+R7121:7124 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R7121:7124 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R7121:7124 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R7212:7215 mathcomp.boot.seq <> mapP thm
+R7291:7295 mathcomp.boot.ssrnat <> addKn thm
+prf 7443:7478 ResponseTimeIterationFP fp_claimed_bounds_yields_fixed_point
+R7493:7495 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7492:7492 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.R var
+R7496:7509 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.workload_bound var
+R7511:7512 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.ts var
+R7514:7516 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.tsk var
+R7518:7518 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.R var
+R7559:7594 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds_computes_iteration thm
+R7616:7627 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP per_task_rta def
+R7616:7627 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP per_task_rta def
+R7616:7627 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP per_task_rta def
+R7657:7670 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.workload_bound var
+R7657:7670 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.workload_bound var
+R7657:7670 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.workload_bound var
+R7704:7712 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP max_steps def
+R7704:7712 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP max_steps def
+R7704:7712 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP max_steps def
+R7747:7749 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.tsk var
+R7747:7749 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.tsk var
+R7747:7749 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.tsk var
+R7780:7798 prosa.classic.util.fixedpoint <> iter_fixpoint_cases thm
+R7780:7798 prosa.classic.util.fixedpoint <> iter_fixpoint_cases thm
+prf 8122:8150 ResponseTimeIterationFP fp_claimed_bounds_le_deadline
+R8182:8185 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R8178:8180 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8163:8173 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.task_jitter var
+R8175:8177 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.tsk var
+R8181:8181 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.R var
+R8186:8198 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.task_deadline var
+R8200:8202 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.tsk var
+R8325:8341 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds def
+R8325:8341 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds def
+R8325:8341 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds def
+R8360:8362 mathcomp.boot.seq <> all def
+R8360:8362 mathcomp.boot.seq <> all def
+R8360:8362 mathcomp.boot.seq <> all def
+R8425:8432 mathcomp.boot.seq <> mem_pmap thm
+R8425:8432 mathcomp.boot.seq <> mem_pmap thm
+R8425:8432 mathcomp.boot.seq <> mem_pmap thm
+R8454:8457 mathcomp.boot.seq <> mapP thm
+R8494:8507 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.is_valid_bound var
+R8494:8507 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.is_valid_bound var
+R8494:8507 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.is_valid_bound var
+R8570:8573 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R8570:8573 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R8570:8573 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+sec 8800:8809 ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound FixedPoint
+var 8898:8920 ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.FixedPoint H_priority_is_reflexive
+R8935:8949 prosa.classic.model.priority Priority FP_is_reflexive def
+R8951:8968 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.higher_eq_priority var
+var 9060:9074 ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.FixedPoint H_cost_positive
+R9090:9092 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R9077:9085 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.task_cost var
+R9087:9089 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.tsk var
+var 9117:9133 ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.FixedPoint H_period_positive
+binder 9155:9157 <> tsk:45
+R9170:9173 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9163:9167 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R9160:9162 prosa.classic.analysis.uni.jitter.fp_rta_comp <> tsk:45 var
+R9168:9169 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.ts var
+R9189:9191 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R9174:9184 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.task_period var
+R9186:9188 prosa.classic.analysis.uni.jitter.fp_rta_comp <> tsk:45 var
+prf 9338:9362 ResponseTimeIterationFP fp_claimed_bounds_ge_cost
+R9378:9381 mathcomp.boot.ssrnat <> ::nat_scope:x_'>='_x not
+R9382:9390 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.task_cost var
+R9392:9394 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.tsk var
+R9377:9377 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.R var
+R9439:9474 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds_computes_iteration thm
+R9498:9509 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP per_task_rta def
+R9498:9509 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP per_task_rta def
+R9498:9509 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP per_task_rta def
+R9541:9554 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.workload_bound var
+R9541:9554 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.workload_bound var
+R9541:9554 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.workload_bound var
+R9590:9598 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP max_steps def
+R9590:9598 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP max_steps def
+R9590:9598 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP max_steps def
+R9635:9637 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.tsk var
+R9635:9637 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.tsk var
+R9635:9637 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.tsk var
+R9697:9705 Corelib.ssr.ssrbool <> reflexive def
+R9714:9718 mathcomp.boot.ssrnat <> leqnn thm
+R9671:9679 Corelib.ssr.ssrbool <> reflexive def
+R9681:9683 mathcomp.boot.ssrnat <> leq def
+R9697:9705 Corelib.ssr.ssrbool <> reflexive def
+R9697:9705 Corelib.ssr.ssrbool <> reflexive def
+R9714:9718 mathcomp.boot.ssrnat <> leqnn thm
+R9772:9781 Corelib.ssr.ssrbool <> transitive def
+R9789:9797 mathcomp.boot.ssrnat <> leq_trans thm
+R9745:9754 Corelib.ssr.ssrbool <> transitive def
+R9756:9758 mathcomp.boot.ssrnat <> leq def
+R9772:9781 Corelib.ssr.ssrbool <> transitive def
+R9772:9781 Corelib.ssr.ssrbool <> transitive def
+R9789:9797 mathcomp.boot.ssrnat <> leq_trans thm
+binder 9829:9829 <> x:48
+binder 9831:9831 <> y:49
+R9840:9843 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9835:9838 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R9834:9834 prosa.classic.analysis.uni.jitter.fp_rta_comp <> x:48 var
+R9839:9839 prosa.classic.analysis.uni.jitter.fp_rta_comp <> y:49 var
+R9847:9850 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R9846:9846 prosa.classic.analysis.uni.jitter.fp_rta_comp <> x:48 var
+R9853:9853 prosa.classic.analysis.uni.jitter.fp_rta_comp <> y:49 var
+R9897:9934 prosa.classic.analysis.uni.jitter.workload_bound_fp WorkloadBoundFP total_workload_bound_fp_non_decreasing thm
+R9897:9934 prosa.classic.analysis.uni.jitter.workload_bound_fp WorkloadBoundFP total_workload_bound_fp_non_decreasing thm
+R9972:9975 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R9959:9967 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.task_cost var
+R9969:9971 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.tsk var
+R9979:9987 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.task_cost var
+R9989:9991 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.tsk var
+R10029:10059 prosa.classic.analysis.uni.jitter.workload_bound_fp WorkloadBoundFP total_workload_bound_fp_ge_cost thm
+R10029:10059 prosa.classic.analysis.uni.jitter.workload_bound_fp WorkloadBoundFP total_workload_bound_fp_ge_cost thm
+R10102:10131 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds_from_taskset thm
+R10102:10131 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds_from_taskset thm
+R10159:10175 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.FixedPoint.H_period_positive var
+R10178:10207 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds_from_taskset thm
+R10159:10175 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.FixedPoint.H_period_positive var
+R10178:10207 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds_from_taskset thm
+R10246:10268 prosa.classic.util.fixedpoint <> iter_fixpoint_ge_bottom thm
+R10272:10274 mathcomp.boot.ssrnat <> leq def
+R10246:10268 prosa.classic.util.fixedpoint <> iter_fixpoint_ge_bottom thm
+R10272:10274 mathcomp.boot.ssrnat <> leq def
+prf 10419:10443 ResponseTimeIterationFP fp_claimed_bounds_gt_zero
+R10447:10449 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R10446:10446 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.R var
+R10509:10517 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.task_cost var
+R10519:10521 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.tsk var
+R10488:10496 mathcomp.boot.ssrnat <> leq_trans thm
+R10509:10517 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.task_cost var
+R10519:10521 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.tsk var
+R10488:10496 mathcomp.boot.ssrnat <> leq_trans thm
+R10561:10585 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds_ge_cost thm
+R10561:10585 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds_ge_cost thm
+R10616:10625 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound.FixedPoint <> sec
+R10639:10655 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP.Analysis.Lemmas.PropertiesOfBound <> sec
+R10673:10678 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP.Analysis.Lemmas <> sec
+R10692:10699 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP.Analysis <> sec
+sec 10857:10874 ResponseTimeIterationFP ProvingCorrectness
+var  10891:10902 ResponseTimeIterationFP.ProvingCorrectness SporadicTask
+R10905:10910 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 10927:10935 ResponseTimeIterationFP.ProvingCorrectness task_cost
+R10950:10953 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R10938:10949 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.SporadicTask var
+R10954:10957 prosa.classic.model.time Time time def
+var 10973:10983 ResponseTimeIterationFP.ProvingCorrectness task_period
+R10998:11001 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R10986:10997 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.SporadicTask var
+R11002:11005 prosa.classic.model.time Time time def
+var 11021:11033 ResponseTimeIterationFP.ProvingCorrectness task_deadline
+R11048:11051 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R11036:11047 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.SporadicTask var
+R11052:11055 prosa.classic.model.time Time time def
+var 11071:11081 ResponseTimeIterationFP.ProvingCorrectness task_jitter
+R11096:11099 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R11084:11095 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.SporadicTask var
+R11100:11103 prosa.classic.model.time Time time def
+var  11120:11122 ResponseTimeIterationFP.ProvingCorrectness Job
+R11125:11130 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 11147:11157 ResponseTimeIterationFP.ProvingCorrectness job_arrival
+R11163:11166 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R11160:11162 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.Job var
+R11167:11170 prosa.classic.model.time Time time def
+var 11186:11193 ResponseTimeIterationFP.ProvingCorrectness job_cost
+R11199:11202 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R11196:11198 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.Job var
+R11203:11206 prosa.classic.model.time Time time def
+var 11222:11233 ResponseTimeIterationFP.ProvingCorrectness job_deadline
+R11239:11242 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R11236:11238 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.Job var
+R11243:11246 prosa.classic.model.time Time time def
+var 11262:11271 ResponseTimeIterationFP.ProvingCorrectness job_jitter
+R11277:11280 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R11274:11276 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.Job var
+R11281:11284 prosa.classic.model.time Time time def
+var 11300:11307 ResponseTimeIterationFP.ProvingCorrectness job_task
+R11313:11316 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R11310:11312 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.Job var
+R11317:11328 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.SporadicTask var
+var 11385:11386 ResponseTimeIterationFP.ProvingCorrectness ts
+R11389:11391 mathcomp.boot.seq <> seq abbrev
+R11393:11404 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.SporadicTask var
+var 11474:11489 ResponseTimeIterationFP.ProvingCorrectness H_positive_costs
+binder 11499:11501 <> tsk:72
+R11514:11517 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R11507:11511 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R11504:11506 prosa.classic.analysis.uni.jitter.fp_rta_comp <> tsk:72 var
+R11512:11513 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.ts var
+R11531:11533 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R11518:11526 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_cost var
+R11528:11530 prosa.classic.analysis.uni.jitter.fp_rta_comp <> tsk:72 var
+var 11552:11569 ResponseTimeIterationFP.ProvingCorrectness H_positive_periods
+binder 11579:11581 <> tsk:75
+R11594:11597 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R11587:11591 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R11584:11586 prosa.classic.analysis.uni.jitter.fp_rta_comp <> tsk:75 var
+R11592:11593 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.ts var
+R11613:11615 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R11598:11608 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_period var
+R11610:11612 prosa.classic.analysis.uni.jitter.fp_rta_comp <> tsk:75 var
+var 11729:11735 ResponseTimeIterationFP.ProvingCorrectness arr_seq
+R11738:11753 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R11755:11757 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.Job var
+var 11775:11804 ResponseTimeIterationFP.ProvingCorrectness H_arrival_times_are_consistent
+R11807:11834 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_times_are_consistent def
+R11848:11854 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.arr_seq var
+R11836:11846 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_arrival var
+var 11872:11889 ResponseTimeIterationFP.ProvingCorrectness H_arr_seq_is_a_set
+R11892:11916 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence_is_a_set def
+R11918:11924 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.arr_seq var
+var 11996:12018 ResponseTimeIterationFP.ProvingCorrectness H_all_jobs_from_taskset
+binder 12034:12034 <> j:84
+R12065:12076 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R12045:12054 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R12064:12064 prosa.classic.analysis.uni.jitter.fp_rta_comp <> j:84 var
+R12056:12062 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.arr_seq var
+R12087:12091 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R12077:12084 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_task var
+R12086:12086 prosa.classic.analysis.uni.jitter.fp_rta_comp <> j:84 var
+R12092:12093 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.ts var
+var 12163:12178 ResponseTimeIterationFP.ProvingCorrectness H_sporadic_tasks
+R12187:12205 prosa.classic.model.arrival.basic.task_arrival TaskArrival sporadic_task_model def
+R12240:12246 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.arr_seq var
+R12231:12238 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_task var
+R12219:12229 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_arrival var
+R12207:12217 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_period var
+var 12347:12369 ResponseTimeIterationFP.ProvingCorrectness H_job_cost_le_task_cost
+binder 12385:12385 <> j:89
+R12416:12427 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R12396:12405 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R12415:12415 prosa.classic.analysis.uni.jitter.fp_rta_comp <> j:89 var
+R12407:12413 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.arr_seq var
+R12438:12441 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R12428:12435 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_cost var
+R12437:12437 prosa.classic.analysis.uni.jitter.fp_rta_comp <> j:89 var
+R12442:12450 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_cost var
+R12453:12460 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_task var
+R12462:12462 prosa.classic.analysis.uni.jitter.fp_rta_comp <> j:89 var
+var 12559:12585 ResponseTimeIterationFP.ProvingCorrectness H_job_jitter_le_task_jitter
+binder 12601:12601 <> j:92
+R12632:12643 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R12612:12621 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R12631:12631 prosa.classic.analysis.uni.jitter.fp_rta_comp <> j:92 var
+R12623:12629 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.arr_seq var
+R12656:12659 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R12644:12653 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_jitter var
+R12655:12655 prosa.classic.analysis.uni.jitter.fp_rta_comp <> j:92 var
+R12660:12670 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_jitter var
+R12673:12680 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_task var
+R12682:12682 prosa.classic.analysis.uni.jitter.fp_rta_comp <> j:92 var
+var 12760:12790 ResponseTimeIterationFP.ProvingCorrectness H_job_deadline_eq_task_deadline
+binder 12806:12806 <> j:95
+R12837:12848 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R12817:12826 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R12836:12836 prosa.classic.analysis.uni.jitter.fp_rta_comp <> j:95 var
+R12828:12834 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.arr_seq var
+R12863:12865 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12849:12860 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_deadline var
+R12862:12862 prosa.classic.analysis.uni.jitter.fp_rta_comp <> j:95 var
+R12866:12878 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_deadline var
+R12881:12888 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_task var
+R12890:12890 prosa.classic.analysis.uni.jitter.fp_rta_comp <> j:95 var
+var 12958:12975 ResponseTimeIterationFP.ProvingCorrectness higher_eq_priority
+R12978:12986 prosa.classic.model.priority Priority FP_policy def
+R12988:12999 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.SporadicTask var
+var 13112:13131 ResponseTimeIterationFP.ProvingCorrectness H_priority_reflexive
+R13134:13148 prosa.classic.model.priority Priority FP_is_reflexive def
+R13150:13167 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.higher_eq_priority var
+var 13185:13205 ResponseTimeIterationFP.ProvingCorrectness H_priority_transitive
+R13208:13223 prosa.classic.model.priority Priority FP_is_transitive def
+R13225:13242 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.higher_eq_priority var
+var 13340:13344 ResponseTimeIterationFP.ProvingCorrectness sched
+R13347:13354 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R13356:13358 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.Job var
+var 13376:13408 ResponseTimeIterationFP.ProvingCorrectness H_jobs_come_from_arrival_sequence
+R13417:13447 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule jobs_come_from_arrival_sequence def
+R13455:13461 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.arr_seq var
+R13449:13453 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.sched var
+var 13570:13596 ResponseTimeIterationFP.ProvingCorrectness H_jobs_execute_after_jitter
+R13599:13623 prosa.classic.model.schedule.uni.jitter.schedule UniprocessorScheduleWithJitter jobs_execute_after_jitter def
+R13648:13652 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.sched var
+R13637:13646 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_jitter var
+R13625:13635 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_arrival var
+var 13670:13698 ResponseTimeIterationFP.ProvingCorrectness H_completed_jobs_dont_execute
+R13701:13727 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_jobs_dont_execute def
+R13738:13742 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.sched var
+R13729:13736 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_cost var
+var 13862:13878 ResponseTimeIterationFP.ProvingCorrectness H_work_conserving
+R13881:13895 prosa.classic.model.schedule.uni.jitter.platform Platform work_conserving def
+R13937:13941 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.sched var
+R13929:13935 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.arr_seq var
+R13918:13927 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_jitter var
+R13909:13916 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_cost var
+R13897:13907 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_arrival var
+var 13959:13978 ResponseTimeIterationFP.ProvingCorrectness H_respects_FP_policy
+R13987:14004 prosa.classic.model.schedule.uni.jitter.platform Platform respects_FP_policy def
+R14061:14078 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.higher_eq_priority var
+R14055:14059 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.sched var
+R14047:14053 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.arr_seq var
+R14038:14045 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_task var
+R14027:14036 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_jitter var
+R14018:14025 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_cost var
+R14006:14016 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_arrival var
+var 14147:14172 ResponseTimeIterationFP.ProvingCorrectness no_deadline_missed_by_task
+R14183:14205 prosa.classic.model.schedule.uni.schedulability Schedulability task_misses_no_deadline def
+R14258:14262 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.sched var
+R14250:14256 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.arr_seq var
+R14241:14248 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_task var
+R14228:14239 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_deadline var
+R14219:14226 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_cost var
+R14207:14217 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_arrival var
+var 14273:14297 ResponseTimeIterationFP.ProvingCorrectness no_deadline_missed_by_job
+R14308:14329 prosa.classic.model.schedule.uni.schedulability Schedulability job_misses_no_deadline def
+R14365:14369 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.sched var
+R14352:14363 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_deadline var
+R14343:14350 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_cost var
+R14331:14341 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_arrival var
+var 14380:14403 ResponseTimeIterationFP.ProvingCorrectness response_time_bounded_by
+R14413:14442 prosa.classic.model.schedule.uni.response_time ResponseTime is_response_time_bound_of_task def
+R14482:14486 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.sched var
+R14474:14480 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.arr_seq var
+R14465:14472 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_task var
+R14456:14463 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_cost var
+R14444:14454 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_arrival var
+var 14585:14602 ResponseTimeIterationFP.ProvingCorrectness RTA_claimed_bounds
+R14613:14629 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds def
+R14698:14699 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.ts var
+R14679:14696 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.higher_eq_priority var
+R14667:14677 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_jitter var
+R14653:14665 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_deadline var
+R14641:14651 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_period var
+R14631:14639 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_cost var
+var 14710:14734 ResponseTimeIterationFP.ProvingCorrectness claimed_to_be_schedulable
+R14745:14758 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_schedulable def
+R14827:14828 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.ts var
+R14808:14825 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.higher_eq_priority var
+R14796:14806 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_jitter var
+R14782:14794 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_deadline var
+R14770:14780 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_period var
+R14760:14768 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_cost var
+prf 14918:14956 ResponseTimeIterationFP fp_analysis_yields_response_time_bounds
+binder 14973:14975 <> tsk:116
+binder 14977:14977 <> R:117
+R15019:15030 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R14996:15000 prosa.classic.util.notation <> ::bool_scope:x_'\In'_x not
+R15001:15018 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.RTA_claimed_bounds var
+R14988:14988 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14992:14993 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14995:14995 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14989:14991 prosa.classic.analysis.uni.jitter.fp_rta_comp <> tsk:116 var
+R14994:14994 prosa.classic.analysis.uni.jitter.fp_rta_comp <> R:117 var
+R15031:15054 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.response_time_bounded_by var
+R15056:15058 prosa.classic.analysis.uni.jitter.fp_rta_comp <> tsk:116 var
+R15076:15078 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R15061:15071 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_jitter var
+R15073:15075 prosa.classic.analysis.uni.jitter.fp_rta_comp <> tsk:116 var
+R15079:15079 prosa.classic.analysis.uni.jitter.fp_rta_comp <> R:117 var
+R15107:15124 prosa.classic.model.arrival.basic.job Job valid_sporadic_job def
+R15127:15144 prosa.classic.model.arrival.basic.job Job valid_realtime_job def
+R15160:15181 prosa.classic.model.arrival.basic.task SporadicTaskset valid_sporadic_taskset def
+R15184:15205 prosa.classic.model.arrival.basic.task SporadicTask is_valid_sporadic_task def
+R15226:15243 prosa.classic.analysis.uni.jitter.fp_rta_comp <> RTA_claimed_bounds vardef
+R15277:15293 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds def
+R15277:15293 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds def
+R15277:15293 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds def
+R15408:15416 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_cost var
+R15435:15445 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_period var
+R15467:15468 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.ts var
+R15486:15495 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_jitter var
+R15533:15550 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.higher_eq_priority var
+R15341:15375 prosa.classic.analysis.uni.jitter.fp_rta_theory ResponseTimeAnalysisFP uniprocessor_response_time_bound_fp thm
+R15408:15416 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_cost var
+R15435:15445 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_period var
+R15467:15468 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.ts var
+R15486:15495 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_jitter var
+R15533:15550 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.higher_eq_priority var
+R15341:15375 prosa.classic.analysis.uni.jitter.fp_rta_theory ResponseTimeAnalysisFP uniprocessor_response_time_bound_fp thm
+R15636:15644 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_cost var
+R15673:15683 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_period var
+R15704:15716 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_deadline var
+R15752:15769 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.higher_eq_priority var
+R15779:15780 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.ts var
+R15799:15809 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_jitter var
+R15591:15615 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds_gt_zero thm
+R15636:15644 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_cost var
+R15673:15683 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_period var
+R15704:15716 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_deadline var
+R15752:15769 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.higher_eq_priority var
+R15779:15780 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.ts var
+R15799:15809 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_jitter var
+R15591:15615 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds_gt_zero thm
+R15890:15905 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.H_positive_costs var
+R15890:15905 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.H_positive_costs var
+R15926:15955 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds_from_taskset thm
+R15926:15955 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds_from_taskset thm
+R16058:16070 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_deadline var
+R15990:16025 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds_yields_fixed_point thm
+R16058:16070 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_deadline var
+R15990:16025 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds_yields_fixed_point thm
+sec 16200:16219 ResponseTimeIterationFP.ProvingCorrectness AnalysisIsSufficient
+var 16297:16311 ResponseTimeIterationFP.ProvingCorrectness.AnalysisIsSufficient H_test_succeeds
+R16314:16338 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.claimed_to_be_schedulable var
+prf 16405:16433 ResponseTimeIterationFP taskset_schedulable_by_fp_rta
+binder 16452:16454 <> tsk:120
+R16467:16470 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R16460:16464 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R16457:16459 prosa.classic.analysis.uni.jitter.fp_rta_comp <> tsk:120 var
+R16465:16466 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.ts var
+R16471:16496 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.no_deadline_missed_by_task var
+R16498:16500 prosa.classic.analysis.uni.jitter.fp_rta_comp <> tsk:120 var
+R16531:16555 prosa.classic.analysis.uni.jitter.fp_rta_comp <> claimed_to_be_schedulable vardef
+R16558:16571 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_schedulable def
+R16600:16631 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds_for_every_task thm
+R16754:16755 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.ts var
+R16735:16752 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.higher_eq_priority var
+R16723:16733 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_jitter var
+R16655:16667 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_deadline var
+R16643:16653 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_period var
+R16633:16641 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_cost var
+R16777:16805 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds_le_deadline thm
+R16923:16924 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.ts var
+R16904:16921 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.higher_eq_priority var
+R16892:16902 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_jitter var
+R16829:16841 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_deadline var
+R16817:16827 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_period var
+R16807:16815 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_cost var
+R16949:16987 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_analysis_yields_response_time_bounds thm
+R17062:17078 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds def
+R17062:17078 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds def
+R17062:17078 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP fp_claimed_bounds def
+R17334:17346 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_deadline var
+R17370:17372 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R17355:17365 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_jitter var
+R17264:17293 prosa.classic.model.schedule.uni.schedulability Schedulability task_completes_before_deadline thm
+R17334:17346 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_deadline var
+R17370:17372 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R17355:17365 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.task_jitter var
+R17264:17293 prosa.classic.model.schedule.uni.schedulability Schedulability task_completes_before_deadline thm
+R17425:17442 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.RTA_claimed_bounds var
+R17425:17442 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.RTA_claimed_bounds var
+R17425:17442 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.RTA_claimed_bounds var
+prf 17631:17656 ResponseTimeIterationFP jobs_schedulable_by_fp_rta
+binder 17675:17675 <> j:121
+R17708:17721 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R17688:17697 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R17707:17707 prosa.classic.analysis.uni.jitter.fp_rta_comp <> j:121 var
+R17699:17705 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.arr_seq var
+R17722:17746 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.no_deadline_missed_by_job var
+R17748:17748 prosa.classic.analysis.uni.jitter.fp_rta_comp <> j:121 var
+R17809:17837 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP taskset_schedulable_by_fp_rta thm
+R17855:17880 prosa.classic.analysis.uni.jitter.fp_rta_comp <> no_deadline_missed_by_task vardef
+R17883:17905 prosa.classic.model.schedule.uni.schedulability Schedulability task_misses_no_deadline def
+R17946:17953 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_task var
+R17946:17953 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.job_task var
+R17991:18013 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.H_all_jobs_from_taskset var
+R17991:18013 prosa.classic.analysis.uni.jitter.fp_rta_comp <> ResponseTimeIterationFP.ProvingCorrectness.H_all_jobs_from_taskset var
+R18036:18055 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP.ProvingCorrectness.AnalysisIsSufficient <> sec
+R18069:18086 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP.ProvingCorrectness <> sec
+R18096:18118 prosa.classic.analysis.uni.jitter.fp_rta_comp ResponseTimeIterationFP <> mod

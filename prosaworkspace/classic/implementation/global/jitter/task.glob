@@ -1,0 +1,119 @@
+DIGEST 4ab38df6349f4bf2608a1a2e125e55f3
+Fprosa.classic.implementation.global.jitter.task
+R15:36 prosa.classic.util.all <> <> lib
+R54:91 prosa.classic.model.arrival.basic.task <> <> lib
+R123:131 mathcomp.boot.ssreflect <> <> lib
+R133:139 mathcomp.boot.ssrbool <> <> lib
+R141:146 mathcomp.boot.ssrnat <> <> lib
+R148:153 mathcomp.boot.eqtype <> <> lib
+R155:157 mathcomp.boot.seq <> <> lib
+R183:192 HB.structures <> <> lib
+mod 202:213 <> ConcreteTask
+R226:240 prosa.classic.model.arrival.basic.task SporadicTaskset <> mod
+sec 256:259 ConcreteTask Defs
+rec 319:331 ConcreteTask concrete_task
+proj 348:354 ConcreteTask task_id
+proj 391:399 ConcreteTask task_cost
+proj 413:423 ConcreteTask task_period
+proj 437:449 ConcreteTask task_deadline
+proj 463:473 ConcreteTask task_jitter
+R357:359 Corelib.Init.Datatypes <> nat ind
+R402:404 Corelib.Init.Datatypes <> nat ind
+R426:428 Corelib.Init.Datatypes <> nat ind
+R452:454 Corelib.Init.Datatypes <> nat ind
+R476:478 Corelib.Init.Datatypes <> nat ind
+def 609:618 ConcreteTask task_eqdef
+R628:640 prosa.classic.implementation.global.jitter.task ConcreteTask concrete_task rec
+binder 621:622 <> t1:7
+binder 624:625 <> t2:8
+R810:820 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R853:853 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R762:772 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R809:809 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R718:728 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R761:761 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R652:652 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R677:688 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R717:717 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R663:666 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R653:659 prosa.classic.implementation.global.jitter.task ConcreteTask task_id proj
+R661:662 prosa.classic.implementation.global.jitter.task <> t1:7 var
+R667:673 prosa.classic.implementation.global.jitter.task ConcreteTask task_id proj
+R675:676 prosa.classic.implementation.global.jitter.task <> t2:8 var
+R701:704 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R689:697 prosa.classic.implementation.global.jitter.task ConcreteTask task_cost proj
+R699:700 prosa.classic.implementation.global.jitter.task <> t1:7 var
+R705:713 prosa.classic.implementation.global.jitter.task ConcreteTask task_cost proj
+R715:716 prosa.classic.implementation.global.jitter.task <> t2:8 var
+R743:746 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R729:739 prosa.classic.implementation.global.jitter.task ConcreteTask task_period proj
+R741:742 prosa.classic.implementation.global.jitter.task <> t1:7 var
+R747:757 prosa.classic.implementation.global.jitter.task ConcreteTask task_period proj
+R759:760 prosa.classic.implementation.global.jitter.task <> t2:8 var
+R789:792 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R773:785 prosa.classic.implementation.global.jitter.task ConcreteTask task_deadline proj
+R787:788 prosa.classic.implementation.global.jitter.task <> t1:7 var
+R793:805 prosa.classic.implementation.global.jitter.task ConcreteTask task_deadline proj
+R807:808 prosa.classic.implementation.global.jitter.task <> t2:8 var
+R835:838 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R821:831 prosa.classic.implementation.global.jitter.task ConcreteTask task_jitter proj
+R833:834 prosa.classic.implementation.global.jitter.task <> t1:7 var
+R839:849 prosa.classic.implementation.global.jitter.task ConcreteTask task_jitter proj
+R851:852 prosa.classic.implementation.global.jitter.task <> t2:8 var
+prf 935:942 ConcreteTask eqn_task
+R946:959 mathcomp.boot.eqtype MathCompCompatEquality.Equality axiom abbrev
+R961:970 prosa.classic.implementation.global.jitter.task ConcreteTask task_eqdef def
+R997:1010 mathcomp.boot.eqtype <> eq_axiom def
+R1041:1050 prosa.classic.implementation.global.jitter.task ConcreteTask task_eqdef def
+R1041:1050 prosa.classic.implementation.global.jitter.task ConcreteTask task_eqdef def
+R1087:1094 Corelib.Init.Datatypes <> ReflectT constr
+R1087:1094 Corelib.Init.Datatypes <> ReflectT constr
+R1112:1121 prosa.classic.implementation.global.jitter.task ConcreteTask task_eqdef def
+R1150:1153 Corelib.ssr.ssrbool <> andP thm
+R1157:1160 Corelib.ssr.ssrbool <> andP thm
+R1164:1167 Corelib.ssr.ssrbool <> andP thm
+R1171:1174 Corelib.ssr.ssrbool <> andP thm
+R1178:1180 mathcomp.boot.eqtype <> eqP def
+R1186:1188 mathcomp.boot.eqtype <> eqP def
+R1197:1199 mathcomp.boot.eqtype <> eqP def
+R1210:1212 mathcomp.boot.eqtype <> eqP def
+R1219:1221 mathcomp.boot.eqtype <> eqP def
+R1308:1315 Corelib.Init.Datatypes <> ReflectF constr
+R1308:1315 Corelib.Init.Datatypes <> ReflectF constr
+R1333:1342 prosa.classic.implementation.global.jitter.task ConcreteTask task_eqdef def
+R1345:1347 Corelib.Init.Logic <> not def
+R1380:1384 Corelib.ssr.ssrbool <> negbT thm
+R1401:1408 Corelib.ssr.ssrbool <> negb_and thm
+R1380:1384 Corelib.ssr.ssrbool <> negbT thm
+R1401:1408 Corelib.ssr.ssrbool <> negb_and thm
+R1401:1408 Corelib.ssr.ssrbool <> negb_and thm
+R1456:1463 Corelib.ssr.ssrbool <> negb_and thm
+R1456:1463 Corelib.ssr.ssrbool <> negb_and thm
+R1456:1463 Corelib.ssr.ssrbool <> negb_and thm
+R1493:1495 Corelib.ssr.ssrbool <> orP thm
+R1499:1501 Corelib.ssr.ssrbool <> orP thm
+R1510:1512 mathcomp.boot.eqtype <> eqP def
+R1521:1523 mathcomp.boot.eqtype <> eqP def
+R1588:1595 Corelib.ssr.ssrbool <> negb_and thm
+R1588:1595 Corelib.ssr.ssrbool <> negb_and thm
+R1588:1595 Corelib.ssr.ssrbool <> negb_and thm
+R1625:1627 Corelib.ssr.ssrbool <> orP thm
+R1636:1638 mathcomp.boot.eqtype <> eqP def
+R1694:1701 Corelib.ssr.ssrbool <> negb_and thm
+R1694:1701 Corelib.ssr.ssrbool <> negb_and thm
+R1694:1701 Corelib.ssr.ssrbool <> negb_and thm
+R1731:1733 Corelib.ssr.ssrbool <> orP thm
+R1737:1739 mathcomp.boot.eqtype <> eqP def
+R1747:1749 mathcomp.boot.eqtype <> eqP def
+R1988:2001 mathcomp.boot.eqtype hasDecEq Build abbrev
+R2003:2015 prosa.classic.implementation.global.jitter.task ConcreteTask concrete_task rec
+R2017:2024 prosa.classic.implementation.global.jitter.task ConcreteTask eqn_task thm
+def 1960:2025 ConcreteTask HB_unnamed_factory_1
+def 1960:2025 ConcreteTask ConcreteTask_concrete_task__canonical__eqtype_Equality
+R2034:2037 prosa.classic.implementation.global.jitter.task ConcreteTask.Defs <> sec
+sec 2051:2065 ConcreteTask ConcreteTaskset
+def 2084:2099 ConcreteTask concrete_taskset
+R2110:2119 prosa.classic.model.arrival.basic.task SporadicTaskset taskset_of def
+R2121:2133 prosa.classic.implementation.global.jitter.task ConcreteTask concrete_task rec
+R2143:2157 prosa.classic.implementation.global.jitter.task ConcreteTask.ConcreteTaskset <> sec
+R2167:2178 prosa.classic.implementation.global.jitter.task ConcreteTask <> mod

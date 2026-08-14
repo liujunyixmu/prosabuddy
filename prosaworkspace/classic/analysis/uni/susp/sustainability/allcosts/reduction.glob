@@ -1,0 +1,196 @@
+DIGEST 19bc8a9cfe34c67a09ab5b8a33dd2e42
+Fprosa.classic.analysis.uni.susp.sustainability.allcosts.reduction
+R15:36 prosa.classic.util.all <> <> lib
+R54:81 prosa.classic.model.priority <> <> lib
+R83:112 prosa.classic.model.suspension <> <> lib
+R130:175 prosa.classic.model.schedule.uni.susp.schedule <> <> lib
+R192:237 prosa.classic.model.schedule.uni.susp.platform <> <> lib
+R254:313 prosa.classic.model.schedule.uni.susp.build_suspension_table <> <> lib
+R331:390 prosa.classic.model.schedule.uni.transformation.construction <> <> lib
+R422:430 mathcomp.boot.ssreflect <> <> lib
+R432:438 mathcomp.boot.ssrbool <> <> lib
+R440:445 mathcomp.boot.eqtype <> <> lib
+R447:452 mathcomp.boot.ssrnat <> <> lib
+R454:456 mathcomp.boot.seq <> <> lib
+R458:462 mathcomp.boot.bigop <> <> lib
+R464:470 mathcomp.boot.fintype <> <> lib
+mod 625:646 <> SustainabilityAllCosts
+R659:681 prosa.classic.model.schedule.uni.susp.schedule ScheduleWithSuspensions <> mod
+R683:692 prosa.classic.model.suspension Suspension <> mod
+R694:701 prosa.classic.model.priority Priority <> mod
+R703:725 prosa.classic.model.schedule.uni.susp.platform PlatformWithSuspensions <> mod
+R736:755 prosa.classic.model.schedule.uni.transformation.construction ScheduleConstruction <> mod
+R757:783 prosa.classic.model.schedule.uni.susp.build_suspension_table SuspensionTableConstruction <> mod
+sec 797:805 SustainabilityAllCosts Reduction
+var  822:824 SustainabilityAllCosts.Reduction Job
+R827:832 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 849:859 SustainabilityAllCosts.Reduction job_arrival
+R865:868 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R862:864 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.Job var
+R869:872 prosa.classic.model.time Time time def
+var 888:895 SustainabilityAllCosts.Reduction job_cost
+R901:904 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R898:900 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.Job var
+R905:908 prosa.classic.model.time Time time def
+var 1010:1016 SustainabilityAllCosts.Reduction arr_seq
+R1019:1034 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R1036:1038 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.Job var
+var 1132:1149 SustainabilityAllCosts.Reduction higher_eq_priority
+R1152:1162 prosa.classic.model.priority Priority JLDP_policy def
+R1164:1166 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.Job var
+var 1269:1278 SustainabilityAllCosts.Reduction sched_susp
+R1281:1288 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R1290:1292 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.Job var
+var 1367:1389 SustainabilityAllCosts.Reduction job_suspension_duration
+R1392:1405 prosa.classic.model.suspension Suspension job_suspension def
+R1407:1409 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.Job var
+var 1655:1671 SustainabilityAllCosts.Reduction inflated_job_cost
+R1677:1680 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1674:1676 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.Job var
+R1681:1684 prosa.classic.model.time Time time def
+var 1917:1917 SustainabilityAllCosts.Reduction j
+R1920:1922 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.Job var
+var 1933:1937 SustainabilityAllCosts.Reduction arr_j
+R1942:1952 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.job_arrival var
+R1954:1954 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.j var
+var 2186:2186 SustainabilityAllCosts.Reduction R
+R2189:2192 prosa.classic.model.time Time time def
+sec 2589:2608 SustainabilityAllCosts.Reduction ScheduleConstruction
+sec 2698:2713 SustainabilityAllCosts.Reduction.ScheduleConstruction ConstructionStep
+var 2899:2910 SustainabilityAllCosts.Reduction.ScheduleConstruction.ConstructionStep sched_prefix
+R2913:2920 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R2922:2924 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.Job var
+var 2944:2944 SustainabilityAllCosts.Reduction.ScheduleConstruction.ConstructionStep t
+R2947:2950 prosa.classic.model.time Time time def
+var 3032:3039 SustainabilityAllCosts.Reduction.ScheduleConstruction.ConstructionStep arrivals
+R3044:3061 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_up_to def
+R3071:3071 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.ScheduleConstruction.ConstructionStep.t var
+R3063:3069 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.arr_seq var
+var 3154:3167 SustainabilityAllCosts.Reduction.ScheduleConstruction.ConstructionStep job_is_pending
+R3172:3178 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule pending def
+R3210:3221 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.ScheduleConstruction.ConstructionStep.sched_prefix var
+R3192:3208 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.inflated_job_cost var
+R3180:3190 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.job_arrival var
+def 3433:3443 SustainabilityAllCosts job_is_late
+binder 3445:3449 <> any_j:24
+binder 3451:3451 <> t:25
+R3494:3508 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R3466:3472 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R3493:3493 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> t:25 var
+R3487:3491 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> any_j:24 var
+R3474:3485 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.ScheduleConstruction.ConstructionStep.sched_prefix var
+R3535:3538 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R3579:3579 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R3509:3515 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule service def
+R3534:3534 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> t:25 var
+R3528:3532 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> any_j:24 var
+R3517:3526 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.sched_susp var
+R3562:3564 mathcomp.boot.ssrnat <> ::nat_scope:x_'-'_x not
+R3539:3555 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.inflated_job_cost var
+R3557:3561 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> any_j:24 var
+R3565:3572 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.job_cost var
+R3574:3578 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> any_j:24 var
+sec 3902:3907 SustainabilityAllCosts.Reduction.ScheduleConstruction.ConstructionStep Prefix
+def 4240:4284 SustainabilityAllCosts jobs_that_are_late_or_scheduled_in_sched_susp
+R4301:4305 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R4311:4314 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R4323:4325 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R4442:4442 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+binder 4306:4310 <> any_j:26
+R4348:4386 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R4441:4441 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R4326:4339 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.ScheduleConstruction.ConstructionStep.job_is_pending var
+R4341:4345 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> any_j:26 var
+R4347:4347 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.ScheduleConstruction.ConstructionStep.t var
+R4406:4409 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R4387:4397 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction SustainabilityAllCosts job_is_late def
+R4399:4403 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> any_j:26 var
+R4405:4405 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.ScheduleConstruction.ConstructionStep.t var
+R4410:4421 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R4440:4440 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.ScheduleConstruction.ConstructionStep.t var
+R4434:4438 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> any_j:26 var
+R4423:4432 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.sched_susp var
+R4315:4322 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.ScheduleConstruction.ConstructionStep.arrivals var
+def 4634:4658 SustainabilityAllCosts highest_priority_late_job
+R4675:4681 prosa.classic.util.minmax <> seq_min def
+R4706:4750 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction SustainabilityAllCosts jobs_that_are_late_or_scheduled_in_sched_susp def
+R4684:4701 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.higher_eq_priority var
+R4703:4703 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.ScheduleConstruction.ConstructionStep.t var
+R4767:4772 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction SustainabilityAllCosts.Reduction.ScheduleConstruction.ConstructionStep.Prefix <> sec
+sec 4940:4945 SustainabilityAllCosts.Reduction.ScheduleConstruction.ConstructionStep Suffix
+def 5041:5052 SustainabilityAllCosts pending_jobs
+R5069:5073 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R5079:5082 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R5091:5093 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+R5116:5117 mathcomp.boot.seq <> ::seq_scope:'['_'seq'_x_'<-'_x_'|'_x_']' not
+binder 5074:5078 <> any_j:27
+R5094:5107 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.ScheduleConstruction.ConstructionStep.job_is_pending var
+R5109:5113 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> any_j:27 var
+R5115:5115 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.ScheduleConstruction.ConstructionStep.t var
+R5083:5090 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.ScheduleConstruction.ConstructionStep.arrivals var
+def 5222:5241 SustainabilityAllCosts highest_priority_job
+R5258:5264 prosa.classic.util.minmax <> seq_min def
+R5289:5300 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction SustainabilityAllCosts pending_jobs def
+R5267:5284 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.higher_eq_priority var
+R5286:5286 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.ScheduleConstruction.ConstructionStep.t var
+R5326:5331 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction SustainabilityAllCosts.Reduction.ScheduleConstruction.ConstructionStep.Suffix <> sec
+def 5436:5449 SustainabilityAllCosts build_schedule
+R5464:5466 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R5480:5497 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R5523:5573 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R5468:5470 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R5467:5467 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.ScheduleConstruction.ConstructionStep.t var
+R5476:5478 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R5471:5475 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.arr_j var
+R5479:5479 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.R var
+R5498:5522 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction SustainabilityAllCosts highest_priority_late_job def
+R5574:5593 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction SustainabilityAllCosts highest_priority_job def
+R5638:5653 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction SustainabilityAllCosts.Reduction.ScheduleConstruction.ConstructionStep <> sec
+var 5729:5742 SustainabilityAllCosts.Reduction.ScheduleConstruction empty_schedule
+R5746:5753 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R5755:5757 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.Job var
+binder 5766:5766 <> t:28
+R5771:5774 Corelib.Init.Datatypes <> None constr
+def 5879:5887 SustainabilityAllCosts sched_new
+R5900:5927 prosa.classic.model.schedule.uni.transformation.construction ScheduleConstruction build_schedule_from_prefixes def
+R5944:5957 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.ScheduleConstruction.empty_schedule var
+R5929:5942 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction SustainabilityAllCosts build_schedule def
+R5969:5988 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction SustainabilityAllCosts.Reduction.ScheduleConstruction <> sec
+sec 6212:6229 SustainabilityAllCosts.Reduction DefiningSuspension
+var 6311:6340 SustainabilityAllCosts.Reduction.DefiningSuspension job_is_suspended_in_sched_susp
+R6353:6364 prosa.classic.model.schedule.uni.susp.suspension_intervals SuspensionIntervals suspended_at def
+R6411:6420 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.sched_susp var
+R6387:6409 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.job_suspension_duration var
+R6378:6385 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.job_cost var
+R6366:6376 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.job_arrival var
+def 6794:6815 SustainabilityAllCosts suspended_in_sched_new
+R6825:6827 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.Job var
+binder 6818:6822 <> any_j:29
+R6834:6837 prosa.classic.model.time Time time def
+binder 6831:6831 <> t:30
+R6908:6935 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6851:6851 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6865:6869 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6853:6855 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R6852:6852 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> t:30 var
+R6861:6863 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6856:6860 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.arr_j var
+R6864:6864 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.R var
+R6870:6899 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.DefiningSuspension.job_is_suspended_in_sched_susp var
+R6901:6905 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> any_j:29 var
+R6907:6907 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> t:30 var
+R6936:6938 Corelib.ssr.ssrbool <> ::bool_scope:'~~'_x not
+R6939:6949 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction SustainabilityAllCosts job_is_late def
+R6961:6965 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> any_j:29 var
+R6967:6967 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> t:30 var
+R6951:6959 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction SustainabilityAllCosts sched_new def
+def 7207:7233 SustainabilityAllCosts reduced_suspension_duration
+R7246:7270 prosa.classic.model.schedule.uni.susp.build_suspension_table SuspensionTableConstruction build_suspension_duration def
+R7294:7315 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction SustainabilityAllCosts suspended_in_sched_new def
+R7288:7290 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R7283:7287 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.arr_j var
+R7291:7291 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction <> SustainabilityAllCosts.Reduction.R var
+R7272:7280 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction SustainabilityAllCosts sched_new def
+R7339:7356 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction SustainabilityAllCosts.Reduction.DefiningSuspension <> sec
+R7370:7378 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction SustainabilityAllCosts.Reduction <> sec
+R7388:7409 prosa.classic.analysis.uni.susp.sustainability.allcosts.reduction SustainabilityAllCosts <> mod

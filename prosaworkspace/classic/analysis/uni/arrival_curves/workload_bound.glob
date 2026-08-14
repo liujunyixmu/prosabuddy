@@ -1,0 +1,1058 @@
+DIGEST f7ef040013799c7d31d30d1c21892813
+Fprosa.classic.analysis.uni.arrival_curves.workload_bound
+R15:36 prosa.classic.util.all <> <> lib
+R54:90 prosa.classic.model.arrival.basic.job <> <> lib
+R107:152 prosa.classic.model.arrival.basic.task_arrival <> <> lib
+R169:196 prosa.classic.model.priority <> <> lib
+R214:253 prosa.classic.model.schedule.uni.service <> <> lib
+R270:310 prosa.classic.model.schedule.uni.workload <> <> lib
+R327:367 prosa.classic.model.schedule.uni.schedule <> <> lib
+R385:425 prosa.classic.model.arrival.curves.bounds <> <> lib
+R458:466 mathcomp.boot.ssreflect <> <> lib
+R468:474 mathcomp.boot.ssrbool <> <> lib
+R476:481 mathcomp.boot.eqtype <> <> lib
+R483:488 mathcomp.boot.ssrnat <> <> lib
+R490:492 mathcomp.boot.seq <> <> lib
+R494:497 mathcomp.boot.path <> <> lib
+R499:505 mathcomp.boot.fintype <> <> lib
+R507:511 mathcomp.boot.bigop <> <> lib
+mod 522:545 <> MaxArrivalsWorkloadBound
+R558:560 prosa.classic.model.arrival.basic.job Job <> mod
+R562:574 prosa.classic.model.arrival.curves.bounds ArrivalCurves <> mod
+R576:586 prosa.classic.model.arrival.basic.task_arrival TaskArrival <> mod
+R588:595 prosa.classic.model.priority Priority <> mod
+R597:616 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule <> mod
+R618:625 prosa.classic.model.schedule.uni.workload Workload <> mod
+R627:633 prosa.classic.model.schedule.uni.service Service <> mod
+sec 657:662 MaxArrivalsWorkloadBound Lemmas
+var  683:686 MaxArrivalsWorkloadBound.Lemmas Task
+R689:694 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 711:719 MaxArrivalsWorkloadBound.Lemmas task_cost
+R726:729 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R722:725 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.Task var
+R730:733 prosa.classic.model.time Time time def
+var  754:756 MaxArrivalsWorkloadBound.Lemmas Job
+R759:764 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 781:791 MaxArrivalsWorkloadBound.Lemmas job_arrival
+R797:800 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R794:796 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.Job var
+R801:804 prosa.classic.model.time Time time def
+var 820:827 MaxArrivalsWorkloadBound.Lemmas job_cost
+R833:836 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R830:832 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.Job var
+R837:840 prosa.classic.model.time Time time def
+var 856:863 MaxArrivalsWorkloadBound.Lemmas job_task
+R869:872 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R866:868 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.Job var
+R873:876 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.Task var
+var 974:980 MaxArrivalsWorkloadBound.Lemmas arr_seq
+R983:998 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R1000:1002 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.Job var
+var 1020:1049 MaxArrivalsWorkloadBound.Lemmas H_arrival_times_are_consistent
+R1052:1079 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_times_are_consistent def
+R1093:1099 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arr_seq var
+R1081:1091 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_arrival var
+var 1117:1134 MaxArrivalsWorkloadBound.Lemmas H_arr_seq_is_a_set
+R1137:1161 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence_is_a_set def
+R1163:1169 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arr_seq var
+var 1267:1271 MaxArrivalsWorkloadBound.Lemmas sched
+R1274:1281 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R1283:1285 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.Job var
+var 1303:1335 MaxArrivalsWorkloadBound.Lemmas H_jobs_come_from_arrival_sequence
+R1338:1368 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule jobs_come_from_arrival_sequence def
+R1376:1382 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arr_seq var
+R1370:1374 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.sched var
+var 1483:1500 MaxArrivalsWorkloadBound.Lemmas higher_eq_priority
+R1503:1511 prosa.classic.model.priority Priority FP_policy def
+R1513:1516 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.Task var
+var 1527:1549 MaxArrivalsWorkloadBound.Lemmas jlfp_higher_eq_priority
+R1554:1563 prosa.classic.model.priority Priority FP_to_JLFP def
+R1574:1591 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.higher_eq_priority var
+R1565:1572 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+var 1664:1679 MaxArrivalsWorkloadBound.Lemmas arrivals_between
+R1684:1703 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R1705:1711 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arr_seq var
+sec 1790:1809 MaxArrivalsWorkloadBound.Lemmas RequestBoundFunction
+var 1997:2008 MaxArrivalsWorkloadBound.Lemmas.RequestBoundFunction max_arrivals
+R2015:2018 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2011:2014 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.Task var
+R2023:2026 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2019:2022 prosa.classic.model.time Time time def
+R2027:2029 Corelib.Init.Datatypes <> nat ind
+sec 2177:2186 MaxArrivalsWorkloadBound.Lemmas.RequestBoundFunction SingleTask
+var 2299:2301 MaxArrivalsWorkloadBound.Lemmas.RequestBoundFunction.SingleTask tsk
+R2304:2307 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.Task var
+var 2327:2331 MaxArrivalsWorkloadBound.Lemmas.RequestBoundFunction.SingleTask delta
+R2334:2337 prosa.classic.model.time Time time def
+def 2427:2453 MaxArrivalsWorkloadBound task_request_bound_function
+R2471:2473 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R2458:2466 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.task_cost var
+R2468:2470 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.RequestBoundFunction.SingleTask.tsk var
+R2474:2485 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.RequestBoundFunction.max_arrivals var
+R2487:2489 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.RequestBoundFunction.SingleTask.tsk var
+R2491:2495 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.RequestBoundFunction.SingleTask.delta var
+R2509:2518 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound.Lemmas.RequestBoundFunction.SingleTask <> sec
+sec 2619:2626 MaxArrivalsWorkloadBound.Lemmas.RequestBoundFunction AllTasks
+var 2687:2688 MaxArrivalsWorkloadBound.Lemmas.RequestBoundFunction.AllTasks ts
+R2691:2694 Corelib.Init.Datatypes <> list ind
+R2696:2699 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.Task var
+var 2774:2776 MaxArrivalsWorkloadBound.Lemmas.RequestBoundFunction.AllTasks tsk
+R2779:2782 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.Task var
+var 2878:2882 MaxArrivalsWorkloadBound.Lemmas.RequestBoundFunction.AllTasks delta
+R2885:2888 prosa.classic.model.time Time time def
+var 3043:3053 MaxArrivalsWorkloadBound.Lemmas.RequestBoundFunction.AllTasks is_hep_task
+binder 3055:3063 <> tsk_other:35
+R3068:3085 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.higher_eq_priority var
+R3087:3095 prosa.classic.analysis.uni.arrival_curves.workload_bound <> tsk_other:35 var
+R3097:3099 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.RequestBoundFunction.AllTasks.tsk var
+var 3114:3130 MaxArrivalsWorkloadBound.Lemmas.RequestBoundFunction.AllTasks is_other_hep_task
+binder 3132:3140 <> tsk_other:36
+R3177:3181 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R3198:3198 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R3145:3162 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.higher_eq_priority var
+R3164:3172 prosa.classic.analysis.uni.arrival_curves.workload_bound <> tsk_other:36 var
+R3174:3176 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.RequestBoundFunction.AllTasks.tsk var
+R3191:3194 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R3182:3190 prosa.classic.analysis.uni.arrival_curves.workload_bound <> tsk_other:36 var
+R3195:3197 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.RequestBoundFunction.AllTasks.tsk var
+def 3386:3413 MaxArrivalsWorkloadBound total_request_bound_function
+R3428:3433 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R3437:3440 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R3443:3444 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R3441:3442 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.RequestBoundFunction.AllTasks.ts var
+binder 3434:3436 <> tsk:37
+binder 3434:3436 <> tsk:38
+binder 3434:3436 <> tsk:39
+R3445:3471 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound task_request_bound_function def
+R3477:3481 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.RequestBoundFunction.AllTasks.delta var
+R3473:3475 prosa.classic.analysis.uni.arrival_curves.workload_bound <> tsk:37 var
+def 3694:3728 MaxArrivalsWorkloadBound total_hep_request_bound_function_FP
+R3743:3748 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R3758:3761 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R3764:3766 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R3788:3800 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R3762:3763 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.RequestBoundFunction.AllTasks.ts var
+binder 3749:3757 <> tsk_other:40
+binder 3749:3757 <> tsk_other:41
+binder 3749:3757 <> tsk_other:42
+R3767:3777 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.RequestBoundFunction.AllTasks.is_hep_task var
+R3779:3787 prosa.classic.analysis.uni.arrival_curves.workload_bound <> tsk_other:40 var
+R3801:3827 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound task_request_bound_function def
+R3839:3843 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.RequestBoundFunction.AllTasks.delta var
+R3829:3837 prosa.classic.analysis.uni.arrival_curves.workload_bound <> tsk_other:40 var
+def 4026:4061 MaxArrivalsWorkloadBound total_ohep_request_bound_function_FP
+R4076:4081 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R4091:4094 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R4097:4099 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R4127:4139 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R4095:4096 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.RequestBoundFunction.AllTasks.ts var
+binder 4082:4090 <> tsk_other:43
+binder 4082:4090 <> tsk_other:44
+binder 4082:4090 <> tsk_other:45
+R4100:4116 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.RequestBoundFunction.AllTasks.is_other_hep_task var
+R4118:4126 prosa.classic.analysis.uni.arrival_curves.workload_bound <> tsk_other:43 var
+R4140:4166 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound task_request_bound_function def
+R4178:4182 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.RequestBoundFunction.AllTasks.delta var
+R4168:4176 prosa.classic.analysis.uni.arrival_curves.workload_bound <> tsk_other:43 var
+R4204:4211 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound.Lemmas.RequestBoundFunction.AllTasks <> sec
+R4229:4248 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound.Lemmas.RequestBoundFunction <> sec
+sec 4342:4359 MaxArrivalsWorkloadBound.Lemmas ProofWorkloadBound
+var 4416:4417 MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound ts
+R4420:4423 Corelib.Init.Datatypes <> list ind
+R4425:4428 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.Task var
+var 4493:4495 MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound tsk
+R4498:4501 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.Task var
+var 4521:4531 MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound H_tsk_in_ts
+R4537:4541 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R4534:4536 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.tsk var
+R4542:4543 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.ts var
+var 4634:4656 MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound H_job_cost_le_task_cost
+binder 4674:4674 <> j:52
+R4707:4720 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4687:4696 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R4706:4706 prosa.classic.analysis.uni.arrival_curves.workload_bound <> j:52 var
+R4698:4704 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arr_seq var
+R4721:4741 prosa.classic.model.arrival.basic.job Job job_cost_le_task_cost def
+R4771:4771 prosa.classic.analysis.uni.arrival_curves.workload_bound <> j:52 var
+R4762:4769 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R4753:4760 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_cost var
+R4743:4751 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.task_cost var
+var 4858:4880 MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound H_all_jobs_from_taskset
+binder 4898:4898 <> j:55
+R4921:4924 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4901:4910 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R4920:4920 prosa.classic.analysis.uni.arrival_curves.workload_bound <> j:55 var
+R4912:4918 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arr_seq var
+R4935:4939 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R4925:4932 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R4934:4934 prosa.classic.analysis.uni.arrival_curves.workload_bound <> j:55 var
+R4940:4941 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.ts var
+var 5026:5037 MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound max_arrivals
+R5044:5047 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5040:5043 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.Task var
+R5052:5055 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5048:5051 prosa.classic.model.time Time time def
+R5056:5058 Corelib.Init.Datatypes <> nat ind
+var 5078:5095 MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound H_is_arrival_bound
+R5106:5133 prosa.classic.model.arrival.curves.bounds ArrivalCurves is_arrival_bound_for_taskset def
+R5165:5166 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.ts var
+R5152:5163 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.max_arrivals var
+R5144:5150 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arr_seq var
+R5135:5142 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+var 5242:5249 MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound task_rbf
+R5254:5280 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound task_request_bound_function def
+R5295:5297 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.tsk var
+R5282:5293 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.max_arrivals var
+var 5310:5318 MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound total_rbf
+R5323:5350 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound total_request_bound_function def
+R5365:5366 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.ts var
+R5352:5363 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.max_arrivals var
+var 5379:5391 MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound total_hep_rbf
+R5396:5430 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound total_hep_request_bound_function_FP def
+R5448:5450 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.tsk var
+R5445:5446 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.ts var
+R5432:5443 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.max_arrivals var
+var 5463:5476 MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound total_ohep_rbf
+R5481:5516 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound total_ohep_request_bound_function_FP def
+R5534:5536 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.tsk var
+R5531:5532 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.ts var
+R5518:5529 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.max_arrivals var
+var 5603:5603 MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound j
+R5606:5608 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.Job var
+var 5628:5638 MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound H_j_arrives
+R5641:5650 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R5660:5660 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.j var
+R5652:5658 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arr_seq var
+var 5680:5691 MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound H_job_of_tsk
+R5704:5706 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5694:5701 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R5703:5703 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.j var
+R5707:5709 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.tsk var
+var 5802:5810 MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound same_task
+binder 5812:5813 <> j1:68
+binder 5815:5816 <> j2:69
+R5832:5835 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R5821:5828 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R5830:5831 prosa.classic.analysis.uni.arrival_curves.workload_bound <> j1:68 var
+R5836:5843 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R5845:5846 prosa.classic.analysis.uni.arrival_curves.workload_bound <> j2:69 var
+var 6048:6071 MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound other_higher_eq_priority
+binder 6073:6074 <> j1:70
+binder 6076:6077 <> j2:71
+R6111:6115 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6134:6134 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6082:6104 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.jlfp_higher_eq_priority var
+R6106:6107 prosa.classic.analysis.uni.arrival_curves.workload_bound <> j1:70 var
+R6109:6110 prosa.classic.analysis.uni.arrival_curves.workload_bound <> j2:71 var
+R6116:6118 Corelib.ssr.ssrbool <> ::bool_scope:'~~'_x not
+R6119:6127 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.same_task var
+R6129:6130 prosa.classic.analysis.uni.arrival_curves.workload_bound <> j1:70 var
+R6132:6133 prosa.classic.analysis.uni.arrival_curves.workload_bound <> j2:71 var
+var 6217:6230 MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound total_workload
+binder 6232:6233 <> t1:72
+binder 6235:6236 <> t2:73
+R6249:6264 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+binder 6305:6305 <> j:74
+R6310:6313 Corelib.Init.Datatypes <> true constr
+R6276:6291 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arrivals_between var
+R6293:6294 prosa.classic.analysis.uni.arrival_curves.workload_bound <> t1:72 var
+R6296:6297 prosa.classic.analysis.uni.arrival_curves.workload_bound <> t2:73 var
+R6266:6273 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_cost var
+var 6405:6422 MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound total_hep_workload
+binder 6424:6425 <> t1:75
+binder 6427:6428 <> t2:76
+R6441:6456 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+binder 6522:6528 <> j_other:77
+R6533:6555 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.jlfp_higher_eq_priority var
+R6557:6563 prosa.classic.analysis.uni.arrival_curves.workload_bound <> j_other:77 var
+R6565:6565 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.j var
+R6468:6483 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arrivals_between var
+R6485:6486 prosa.classic.analysis.uni.arrival_curves.workload_bound <> t1:75 var
+R6488:6489 prosa.classic.analysis.uni.arrival_curves.workload_bound <> t2:76 var
+R6458:6465 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_cost var
+var 6653:6671 MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound total_ohep_workload
+binder 6673:6674 <> t1:78
+binder 6676:6677 <> t2:79
+R6690:6705 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+binder 6771:6777 <> j_other:80
+R6782:6805 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.other_higher_eq_priority var
+R6807:6813 prosa.classic.analysis.uni.arrival_curves.workload_bound <> j_other:80 var
+R6815:6815 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.j var
+R6717:6732 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arrivals_between var
+R6734:6735 prosa.classic.analysis.uni.arrival_curves.workload_bound <> t1:78 var
+R6737:6738 prosa.classic.analysis.uni.arrival_curves.workload_bound <> t2:79 var
+R6707:6714 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_cost var
+var 6898:6910 MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound task_workload
+R6917:6920 prosa.classic.model.time Time time def
+binder 6913:6914 <> t1:81
+R6928:6931 prosa.classic.model.time Time time def
+binder 6924:6925 <> t2:82
+R6945:6960 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+binder 7026:7032 <> j_other:83
+R7037:7045 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.same_task var
+R7047:7053 prosa.classic.analysis.uni.arrival_curves.workload_bound <> j_other:83 var
+R7055:7055 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.j var
+R6972:6987 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arrivals_between var
+R6989:6990 prosa.classic.analysis.uni.arrival_curves.workload_bound <> t1:81 var
+R6992:6993 prosa.classic.analysis.uni.arrival_curves.workload_bound <> t2:82 var
+R6962:6969 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_cost var
+sec 7204:7225 MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound WorkloadIsBoundedByRBF
+var 7314:7314 MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF t
+R7317:7320 prosa.classic.model.time Time time def
+var 7340:7344 MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF delta
+R7347:7350 prosa.classic.model.time Time time def
+prf 7479:7503 MaxArrivalsWorkloadBound task_workload_le_task_rbf
+R7543:7546 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R7516:7528 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.task_workload var
+R7530:7530 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R7534:7536 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R7533:7533 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R7537:7541 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R7547:7554 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.task_rbf var
+R7556:7560 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R7595:7607 prosa.classic.analysis.uni.arrival_curves.workload_bound <> task_workload vardef
+R7627:7634 prosa.classic.analysis.uni.arrival_curves.workload_bound <> task_rbf vardef
+R7637:7663 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound task_request_bound_function def
+R7683:7698 prosa.classic.model.arrival.curves.bounds ArrivalCurves is_arrival_bound def
+R7723:7738 prosa.classic.analysis.uni.arrival_curves.workload_bound <> arrivals_between vardef
+R7761:7780 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R7790:7790 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R7792:7796 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R7782:7788 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arr_seq var
+R7761:7780 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R7790:7790 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R7792:7796 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R7782:7788 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arr_seq var
+R7761:7780 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R7790:7790 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R7792:7796 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R7782:7788 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arr_seq var
+R7858:7860 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R7845:7853 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.task_cost var
+R7855:7857 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.tsk var
+R7861:7880 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R7903:7903 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R7907:7909 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R7906:7906 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R7910:7914 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R7899:7901 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.tsk var
+R7891:7897 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arr_seq var
+R7882:7889 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R7816:7824 mathcomp.boot.ssrnat <> leq_trans thm
+R7858:7860 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R7845:7853 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.task_cost var
+R7855:7857 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.tsk var
+R7861:7880 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R7903:7903 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R7907:7909 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R7906:7906 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R7910:7914 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R7899:7901 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.tsk var
+R7891:7897 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arr_seq var
+R7882:7889 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R7816:7824 mathcomp.boot.ssrnat <> leq_trans thm
+R7952:7971 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R7974:7982 mathcomp.boot.bigop <> sum1_size thm
+R7984:7993 mathcomp.boot.bigop <> big_distrr thm
+R7998:8007 mathcomp.boot.bigop <> big_filter thm
+R7952:7971 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R7952:7971 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R7974:7982 mathcomp.boot.bigop <> sum1_size thm
+R7974:7982 mathcomp.boot.bigop <> sum1_size thm
+R7984:7993 mathcomp.boot.bigop <> big_distrr thm
+R7984:7993 mathcomp.boot.bigop <> big_distrr thm
+R7998:8007 mathcomp.boot.bigop <> big_filter thm
+R7998:8007 mathcomp.boot.bigop <> big_filter thm
+R8035:8050 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R8035:8050 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R8035:8050 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R8074:8087 prosa.classic.model.arrival.basic.task_arrival TaskArrival is_job_of_task def
+R8090:8098 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.same_task var
+R8100:8111 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_job_of_tsk var
+R8113:8117 mathcomp.boot.ssrnat <> muln1 thm
+R8074:8087 prosa.classic.model.arrival.basic.task_arrival TaskArrival is_job_of_task def
+R8074:8087 prosa.classic.model.arrival.basic.task_arrival TaskArrival is_job_of_task def
+R8090:8098 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.same_task var
+R8090:8098 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.same_task var
+R8100:8111 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_job_of_tsk var
+R8100:8111 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_job_of_tsk var
+R8113:8117 mathcomp.boot.ssrnat <> muln1 thm
+R8113:8117 mathcomp.boot.ssrnat <> muln1 thm
+R8138:8148 prosa.util.sum <> leq_sum_seq thm
+R8138:8148 prosa.util.sum <> leq_sum_seq thm
+R8167:8169 mathcomp.boot.eqtype <> eqP def
+R8218:8240 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_job_cost_le_task_cost var
+R8218:8240 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_job_cost_le_task_cost var
+R8266:8292 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R8266:8292 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R8346:8354 mathcomp.boot.ssrnat <> leq_mul2l thm
+R8363:8365 Corelib.ssr.ssrbool <> orP thm
+R8346:8354 mathcomp.boot.ssrnat <> leq_mul2l thm
+R8346:8354 mathcomp.boot.ssrnat <> leq_mul2l thm
+R8363:8365 Corelib.ssr.ssrbool <> orP thm
+R8400:8404 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R8407:8411 mathcomp.boot.ssrnat <> addKn thm
+R8413:8413 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R8407:8411 mathcomp.boot.ssrnat <> addKn thm
+R8413:8413 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R8400:8404 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R8400:8404 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R8407:8411 mathcomp.boot.ssrnat <> addKn thm
+R8413:8413 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R8435:8452 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_is_arrival_bound var
+R8435:8452 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_is_arrival_bound var
+R8495:8502 mathcomp.boot.ssrnat <> leq_addr thm
+R8495:8502 mathcomp.boot.ssrnat <> leq_addr thm
+R8495:8502 mathcomp.boot.ssrnat <> leq_addr thm
+prf 8665:8691 MaxArrivalsWorkloadBound total_workload_le_total_rbf
+R8737:8740 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R8704:8722 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.total_ohep_workload var
+R8724:8724 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R8728:8730 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8727:8727 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R8731:8735 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R8741:8754 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.total_ohep_rbf var
+R8756:8760 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R8797:8810 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.total_ohep_rbf var
+R8813:8848 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound total_ohep_request_bound_function_FP def
+R8869:8895 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound task_request_bound_function def
+R8797:8810 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.total_ohep_rbf var
+R8797:8810 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.total_ohep_rbf var
+R8813:8848 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound total_ohep_request_bound_function_FP def
+R8813:8848 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound total_ohep_request_bound_function_FP def
+R8869:8895 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound task_request_bound_function def
+R8869:8895 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound task_request_bound_function def
+R8917:8935 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.total_ohep_workload var
+R8938:8953 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R8974:8997 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.other_higher_eq_priority var
+R8917:8935 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.total_ohep_workload var
+R8917:8935 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.total_ohep_workload var
+R8938:8953 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R8938:8953 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R8974:8997 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.other_higher_eq_priority var
+R8974:8997 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.other_higher_eq_priority var
+R9019:9041 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.jlfp_higher_eq_priority var
+R9062:9071 prosa.classic.model.priority Priority FP_to_JLFP def
+R9074:9082 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.same_task var
+R9084:9095 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_job_of_tsk var
+R9019:9041 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.jlfp_higher_eq_priority var
+R9019:9041 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.jlfp_higher_eq_priority var
+R9062:9071 prosa.classic.model.priority Priority FP_to_JLFP def
+R9062:9071 prosa.classic.model.priority Priority FP_to_JLFP def
+R9074:9082 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.same_task var
+R9074:9082 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.same_task var
+R9084:9095 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_job_of_tsk var
+R9084:9095 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_job_of_tsk var
+R9118:9133 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arrivals_between var
+R9118:9133 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arrivals_between var
+R9118:9133 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arrivals_between var
+R9166:9185 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R9195:9195 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R9199:9201 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R9198:9198 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R9202:9206 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R9187:9193 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arr_seq var
+R9166:9185 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R9195:9195 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R9199:9201 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R9198:9198 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R9202:9206 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R9187:9193 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arr_seq var
+R9166:9185 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R9195:9195 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R9199:9201 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R9198:9198 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R9202:9206 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R9187:9193 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arr_seq var
+R9231:9248 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.higher_eq_priority var
+R9231:9248 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.higher_eq_priority var
+R9231:9248 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.higher_eq_priority var
+R9304:9309 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R9314:9317 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R9320:9322 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R9352:9366 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R9415:9415 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R9318:9319 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.ts var
+binder 9310:9313 <> tsk':88
+binder 9310:9313 <> tsk':89
+binder 9310:9313 <> tsk':90
+R9335:9339 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R9351:9351 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R9327:9330 prosa.classic.analysis.uni.arrival_curves.workload_bound <> tsk':88 var
+R9332:9334 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.tsk var
+R9344:9347 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R9340:9343 prosa.classic.analysis.uni.arrival_curves.workload_bound <> tsk':88 var
+R9348:9350 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.tsk var
+R9367:9372 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R9375:9378 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R9380:9382 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R9402:9403 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+binder 9373:9374 <> j0:91
+binder 9373:9374 <> j0:92
+binder 9373:9374 <> j0:93
+R9394:9397 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R9383:9390 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R9392:9393 prosa.classic.analysis.uni.arrival_curves.workload_bound <> j0:91 var
+R9398:9401 prosa.classic.analysis.uni.arrival_curves.workload_bound <> tsk':88 var
+R9404:9411 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_cost var
+R9413:9414 prosa.classic.analysis.uni.arrival_curves.workload_bound <> j0:91 var
+R9278:9286 mathcomp.boot.ssrnat <> leq_trans thm
+R9304:9309 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R9314:9317 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R9320:9322 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R9352:9366 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R9415:9415 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R9318:9319 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.ts var
+binder 9310:9313 <> tsk':94
+binder 9310:9313 <> tsk':95
+binder 9310:9313 <> tsk':96
+R9335:9339 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R9351:9351 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R9327:9330 prosa.classic.analysis.uni.arrival_curves.workload_bound <> tsk':94 var
+R9332:9334 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.tsk var
+R9344:9347 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R9340:9343 prosa.classic.analysis.uni.arrival_curves.workload_bound <> tsk':94 var
+R9348:9350 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.tsk var
+R9367:9372 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R9375:9378 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R9380:9382 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R9402:9403 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+binder 9373:9374 <> j0:97
+binder 9373:9374 <> j0:98
+binder 9373:9374 <> j0:99
+R9394:9397 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R9383:9390 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R9392:9393 prosa.classic.analysis.uni.arrival_curves.workload_bound <> j0:97 var
+R9398:9401 prosa.classic.analysis.uni.arrival_curves.workload_bound <> tsk':94 var
+R9404:9411 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_cost var
+R9413:9414 prosa.classic.analysis.uni.arrival_curves.workload_bound <> j0:97 var
+R9278:9286 mathcomp.boot.ssrnat <> leq_trans thm
+R9494:9509 mathcomp.boot.bigop <> exchange_big_dep thm
+binder 9532:9532 <> x:100
+R9557:9561 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R9579:9579 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R9542:9549 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R9551:9551 prosa.classic.analysis.uni.arrival_curves.workload_bound <> x:100 var
+R9554:9556 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.tsk var
+R9572:9575 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R9562:9569 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R9571:9571 prosa.classic.analysis.uni.arrival_curves.workload_bound <> x:100 var
+R9576:9578 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.tsk var
+R9645:9647 mathcomp.boot.eqtype <> eqP def
+R9690:9705 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R9711:9722 mathcomp.boot.bigop <> big_seq_cond thm
+R9731:9734 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R9737:9748 mathcomp.boot.bigop <> big_seq_cond thm
+R9690:9705 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R9690:9705 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R9711:9722 mathcomp.boot.bigop <> big_seq_cond thm
+R9711:9722 mathcomp.boot.bigop <> big_seq_cond thm
+R9737:9748 mathcomp.boot.bigop <> big_seq_cond thm
+R9731:9734 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R9731:9734 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R9735:9735 prosa.classic.analysis.uni.arrival_curves.workload_bound <> X:101 var
+R9737:9748 mathcomp.boot.bigop <> big_seq_cond thm
+R9769:9775 mathcomp.boot.bigop <> leq_sum thm
+R9769:9775 mathcomp.boot.bigop <> leq_sum thm
+R9790:9793 Corelib.ssr.ssrbool <> andP thm
+R9827:9833 mathcomp.boot.bigop <> big_rem thm
+R9836:9843 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R9827:9833 mathcomp.boot.bigop <> big_rem thm
+R9836:9843 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R9827:9833 mathcomp.boot.bigop <> big_rem thm
+R9836:9843 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R9888:9910 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_all_jobs_from_taskset var
+R9888:9910 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_all_jobs_from_taskset var
+R9936:9962 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R9936:9962 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R10032:10036 Corelib.ssr.ssrbool <> andTb thm
+R10038:10044 mathcomp.boot.eqtype <> eq_refl thm
+R10053:10060 mathcomp.boot.ssrnat <> leq_addr thm
+R10032:10036 Corelib.ssr.ssrbool <> andTb thm
+R10032:10036 Corelib.ssr.ssrbool <> andTb thm
+R10038:10044 mathcomp.boot.eqtype <> eq_refl thm
+R10038:10044 mathcomp.boot.eqtype <> eq_refl thm
+R10053:10060 mathcomp.boot.ssrnat <> leq_addr thm
+R10091:10101 prosa.util.sum <> leq_sum_seq thm
+R10091:10101 prosa.util.sum <> leq_sum_seq thm
+R10187:10189 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R10173:10181 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.task_cost var
+R10190:10209 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R10233:10233 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R10237:10239 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R10236:10236 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R10240:10244 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R10220:10226 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arr_seq var
+R10211:10218 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R10144:10152 mathcomp.boot.ssrnat <> leq_trans thm
+R10187:10189 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R10173:10181 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.task_cost var
+R10190:10209 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R10233:10233 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R10237:10239 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R10236:10236 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R10240:10244 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R10220:10226 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arr_seq var
+R10211:10218 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R10144:10152 mathcomp.boot.ssrnat <> leq_trans thm
+R10282:10301 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R10304:10312 mathcomp.boot.bigop <> sum1_size thm
+R10314:10323 mathcomp.boot.bigop <> big_distrr thm
+R10328:10337 mathcomp.boot.bigop <> big_filter thm
+R10282:10301 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R10282:10301 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R10304:10312 mathcomp.boot.bigop <> sum1_size thm
+R10304:10312 mathcomp.boot.bigop <> sum1_size thm
+R10314:10323 mathcomp.boot.bigop <> big_distrr thm
+R10314:10323 mathcomp.boot.bigop <> big_distrr thm
+R10328:10337 mathcomp.boot.bigop <> big_filter thm
+R10328:10337 mathcomp.boot.bigop <> big_filter thm
+R10365:10380 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R10365:10380 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R10365:10380 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R10404:10417 prosa.classic.model.arrival.basic.task_arrival TaskArrival is_job_of_task def
+R10420:10424 mathcomp.boot.ssrnat <> muln1 thm
+R10404:10417 prosa.classic.model.arrival.basic.task_arrival TaskArrival is_job_of_task def
+R10404:10417 prosa.classic.model.arrival.basic.task_arrival TaskArrival is_job_of_task def
+R10420:10424 mathcomp.boot.ssrnat <> muln1 thm
+R10420:10424 mathcomp.boot.ssrnat <> muln1 thm
+R10445:10455 prosa.util.sum <> leq_sum_seq thm
+R10445:10455 prosa.util.sum <> leq_sum_seq thm
+R10474:10476 mathcomp.boot.eqtype <> eqP def
+R10525:10547 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_job_cost_le_task_cost var
+R10525:10547 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_job_cost_le_task_cost var
+R10573:10599 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R10573:10599 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R10653:10661 mathcomp.boot.ssrnat <> leq_mul2l thm
+R10670:10672 Corelib.ssr.ssrbool <> orP thm
+R10653:10661 mathcomp.boot.ssrnat <> leq_mul2l thm
+R10653:10661 mathcomp.boot.ssrnat <> leq_mul2l thm
+R10670:10672 Corelib.ssr.ssrbool <> orP thm
+R10707:10711 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R10714:10718 mathcomp.boot.ssrnat <> addKn thm
+R10720:10720 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R10714:10718 mathcomp.boot.ssrnat <> addKn thm
+R10720:10720 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R10707:10711 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R10707:10711 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R10714:10718 mathcomp.boot.ssrnat <> addKn thm
+R10720:10720 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R10742:10759 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_is_arrival_bound var
+R10742:10759 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_is_arrival_bound var
+R10802:10809 mathcomp.boot.ssrnat <> leq_addr thm
+R10802:10809 mathcomp.boot.ssrnat <> leq_addr thm
+R10802:10809 mathcomp.boot.ssrnat <> leq_addr thm
+prf 10852:10879 MaxArrivalsWorkloadBound total_workload_le_total_rbf'
+R10924:10927 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R10892:10909 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.total_hep_workload var
+R10911:10911 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R10915:10917 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R10914:10914 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R10918:10922 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R10928:10940 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.total_hep_rbf var
+R10942:10946 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R11001:11013 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.total_hep_rbf var
+R11016:11050 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound total_hep_request_bound_function_FP def
+R11071:11097 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound task_request_bound_function def
+R11001:11013 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.total_hep_rbf var
+R11001:11013 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.total_hep_rbf var
+R11016:11050 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound total_hep_request_bound_function_FP def
+R11016:11050 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound total_hep_request_bound_function_FP def
+R11071:11097 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound task_request_bound_function def
+R11071:11097 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound task_request_bound_function def
+R11119:11136 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.total_hep_workload var
+R11139:11154 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R11175:11197 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.jlfp_higher_eq_priority var
+R11200:11209 prosa.classic.model.priority Priority FP_to_JLFP def
+R11212:11220 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.same_task var
+R11222:11233 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_job_of_tsk var
+R11119:11136 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.total_hep_workload var
+R11119:11136 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.total_hep_workload var
+R11139:11154 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R11139:11154 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R11175:11197 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.jlfp_higher_eq_priority var
+R11175:11197 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.jlfp_higher_eq_priority var
+R11200:11209 prosa.classic.model.priority Priority FP_to_JLFP def
+R11200:11209 prosa.classic.model.priority Priority FP_to_JLFP def
+R11212:11220 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.same_task var
+R11212:11220 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.same_task var
+R11222:11233 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_job_of_tsk var
+R11222:11233 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_job_of_tsk var
+R11256:11271 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arrivals_between var
+R11256:11271 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arrivals_between var
+R11256:11271 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arrivals_between var
+R11304:11323 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R11333:11333 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R11337:11339 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R11336:11336 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R11340:11344 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R11325:11331 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arr_seq var
+R11304:11323 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R11333:11333 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R11337:11339 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R11336:11336 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R11340:11344 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R11325:11331 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arr_seq var
+R11304:11323 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R11333:11333 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R11337:11339 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R11336:11336 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R11340:11344 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R11325:11331 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arr_seq var
+R11369:11386 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.higher_eq_priority var
+R11369:11386 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.higher_eq_priority var
+R11369:11386 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.higher_eq_priority var
+R11447:11452 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R11457:11460 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R11463:11465 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R11478:11497 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R11546:11546 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R11461:11462 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.ts var
+binder 11453:11456 <> tsk':102
+binder 11453:11456 <> tsk':103
+binder 11453:11456 <> tsk':104
+R11470:11473 prosa.classic.analysis.uni.arrival_curves.workload_bound <> tsk':102 var
+R11475:11477 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.tsk var
+R11498:11503 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R11506:11509 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R11511:11513 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R11533:11534 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+binder 11504:11505 <> j0:105
+binder 11504:11505 <> j0:106
+binder 11504:11505 <> j0:107
+R11525:11528 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R11514:11521 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R11523:11524 prosa.classic.analysis.uni.arrival_curves.workload_bound <> j0:105 var
+R11529:11532 prosa.classic.analysis.uni.arrival_curves.workload_bound <> tsk':102 var
+R11535:11542 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_cost var
+R11544:11545 prosa.classic.analysis.uni.arrival_curves.workload_bound <> j0:105 var
+R11416:11424 mathcomp.boot.ssrnat <> leq_trans thm
+R11447:11452 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R11457:11460 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R11463:11465 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R11478:11497 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R11546:11546 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R11461:11462 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.ts var
+binder 11453:11456 <> tsk':108
+binder 11453:11456 <> tsk':109
+binder 11453:11456 <> tsk':110
+R11470:11473 prosa.classic.analysis.uni.arrival_curves.workload_bound <> tsk':108 var
+R11475:11477 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.tsk var
+R11498:11503 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R11506:11509 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R11511:11513 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R11533:11534 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+binder 11504:11505 <> j0:111
+binder 11504:11505 <> j0:112
+binder 11504:11505 <> j0:113
+R11525:11528 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R11514:11521 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R11523:11524 prosa.classic.analysis.uni.arrival_curves.workload_bound <> j0:111 var
+R11529:11532 prosa.classic.analysis.uni.arrival_curves.workload_bound <> tsk':108 var
+R11535:11542 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_cost var
+R11544:11545 prosa.classic.analysis.uni.arrival_curves.workload_bound <> j0:111 var
+R11416:11424 mathcomp.boot.ssrnat <> leq_trans thm
+R11611:11626 mathcomp.boot.bigop <> exchange_big_dep thm
+binder 11633:11633 <> x:114
+R11643:11650 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R11652:11652 prosa.classic.analysis.uni.arrival_curves.workload_bound <> x:114 var
+R11655:11657 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.tsk var
+R11723:11725 mathcomp.boot.eqtype <> eqP def
+R11768:11783 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R11789:11800 mathcomp.boot.bigop <> big_seq_cond thm
+R11809:11812 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R11815:11826 mathcomp.boot.bigop <> big_seq_cond thm
+R11768:11783 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R11768:11783 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R11789:11800 mathcomp.boot.bigop <> big_seq_cond thm
+R11789:11800 mathcomp.boot.bigop <> big_seq_cond thm
+R11815:11826 mathcomp.boot.bigop <> big_seq_cond thm
+R11809:11812 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R11809:11812 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R11813:11813 prosa.classic.analysis.uni.arrival_curves.workload_bound <> X:115 var
+R11815:11826 mathcomp.boot.bigop <> big_seq_cond thm
+R11847:11853 mathcomp.boot.bigop <> leq_sum thm
+R11847:11853 mathcomp.boot.bigop <> leq_sum thm
+R11868:11871 Corelib.ssr.ssrbool <> andP thm
+R11905:11911 mathcomp.boot.bigop <> big_rem thm
+R11914:11921 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R11905:11911 mathcomp.boot.bigop <> big_rem thm
+R11914:11921 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R11905:11911 mathcomp.boot.bigop <> big_rem thm
+R11914:11921 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R11966:11988 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_all_jobs_from_taskset var
+R11966:11988 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_all_jobs_from_taskset var
+R12014:12040 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R12014:12040 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R12110:12114 Corelib.ssr.ssrbool <> andTb thm
+R12116:12122 mathcomp.boot.eqtype <> eq_refl thm
+R12131:12138 mathcomp.boot.ssrnat <> leq_addr thm
+R12110:12114 Corelib.ssr.ssrbool <> andTb thm
+R12110:12114 Corelib.ssr.ssrbool <> andTb thm
+R12116:12122 mathcomp.boot.eqtype <> eq_refl thm
+R12116:12122 mathcomp.boot.eqtype <> eq_refl thm
+R12131:12138 mathcomp.boot.ssrnat <> leq_addr thm
+R12169:12179 prosa.util.sum <> leq_sum_seq thm
+R12169:12179 prosa.util.sum <> leq_sum_seq thm
+R12265:12267 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R12251:12259 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.task_cost var
+R12268:12287 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R12311:12311 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R12315:12317 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R12314:12314 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R12318:12322 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R12298:12304 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arr_seq var
+R12289:12296 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R12222:12230 mathcomp.boot.ssrnat <> leq_trans thm
+R12265:12267 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R12251:12259 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.task_cost var
+R12268:12287 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R12311:12311 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R12315:12317 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R12314:12314 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R12318:12322 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R12298:12304 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arr_seq var
+R12289:12296 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R12222:12230 mathcomp.boot.ssrnat <> leq_trans thm
+R12360:12379 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R12382:12390 mathcomp.boot.bigop <> sum1_size thm
+R12392:12401 mathcomp.boot.bigop <> big_distrr thm
+R12406:12415 mathcomp.boot.bigop <> big_filter thm
+R12360:12379 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R12360:12379 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R12382:12390 mathcomp.boot.bigop <> sum1_size thm
+R12382:12390 mathcomp.boot.bigop <> sum1_size thm
+R12392:12401 mathcomp.boot.bigop <> big_distrr thm
+R12392:12401 mathcomp.boot.bigop <> big_distrr thm
+R12406:12415 mathcomp.boot.bigop <> big_filter thm
+R12406:12415 mathcomp.boot.bigop <> big_filter thm
+R12443:12458 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R12443:12458 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R12443:12458 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R12482:12495 prosa.classic.model.arrival.basic.task_arrival TaskArrival is_job_of_task def
+R12498:12502 mathcomp.boot.ssrnat <> muln1 thm
+R12482:12495 prosa.classic.model.arrival.basic.task_arrival TaskArrival is_job_of_task def
+R12482:12495 prosa.classic.model.arrival.basic.task_arrival TaskArrival is_job_of_task def
+R12498:12502 mathcomp.boot.ssrnat <> muln1 thm
+R12498:12502 mathcomp.boot.ssrnat <> muln1 thm
+R12523:12533 prosa.util.sum <> leq_sum_seq thm
+R12523:12533 prosa.util.sum <> leq_sum_seq thm
+R12552:12554 mathcomp.boot.eqtype <> eqP def
+R12603:12625 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_job_cost_le_task_cost var
+R12603:12625 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_job_cost_le_task_cost var
+R12651:12677 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R12651:12677 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R12731:12739 mathcomp.boot.ssrnat <> leq_mul2l thm
+R12748:12750 Corelib.ssr.ssrbool <> orP thm
+R12731:12739 mathcomp.boot.ssrnat <> leq_mul2l thm
+R12731:12739 mathcomp.boot.ssrnat <> leq_mul2l thm
+R12748:12750 Corelib.ssr.ssrbool <> orP thm
+R12785:12789 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R12792:12796 mathcomp.boot.ssrnat <> addKn thm
+R12798:12798 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R12792:12796 mathcomp.boot.ssrnat <> addKn thm
+R12798:12798 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R12785:12789 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R12785:12789 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R12792:12796 mathcomp.boot.ssrnat <> addKn thm
+R12798:12798 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R12820:12837 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_is_arrival_bound var
+R12862:12869 mathcomp.boot.ssrnat <> leq_addr thm
+R12820:12837 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_is_arrival_bound var
+R12862:12869 mathcomp.boot.ssrnat <> leq_addr thm
+R12862:12869 mathcomp.boot.ssrnat <> leq_addr thm
+prf 12913:12941 MaxArrivalsWorkloadBound total_workload_le_total_rbf''
+R12982:12985 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R12954:12967 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.total_workload var
+R12969:12969 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R12973:12975 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R12972:12972 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R12976:12980 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R12986:12994 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.total_rbf var
+R12996:13000 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R13055:13063 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.total_rbf var
+R13085:13111 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound task_request_bound_function def
+R13055:13063 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.total_rbf var
+R13055:13063 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.total_rbf var
+R13085:13111 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound task_request_bound_function def
+R13085:13111 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound task_request_bound_function def
+R13133:13146 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.total_workload var
+R13149:13164 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R13133:13146 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.total_workload var
+R13133:13146 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.total_workload var
+R13149:13164 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R13149:13164 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R13186:13201 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arrivals_between var
+R13186:13201 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arrivals_between var
+R13186:13201 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arrivals_between var
+R13234:13253 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R13263:13263 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R13267:13269 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R13266:13266 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R13270:13274 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R13255:13261 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arr_seq var
+R13234:13253 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R13263:13263 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R13267:13269 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R13266:13266 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R13270:13274 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R13255:13261 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arr_seq var
+R13234:13253 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence jobs_arrived_between def
+R13263:13263 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R13267:13269 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R13266:13266 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R13270:13274 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R13255:13261 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arr_seq var
+R13296:13305 mathcomp.boot.bigop <> big_mkcond thm
+R13296:13305 mathcomp.boot.bigop <> big_mkcond thm
+R13296:13305 mathcomp.boot.bigop <> big_mkcond thm
+R13371:13376 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R13381:13384 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R13387:13406 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R13455:13455 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R13385:13386 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.ts var
+binder 13377:13380 <> tsk':116
+binder 13377:13380 <> tsk':117
+binder 13377:13380 <> tsk':118
+R13407:13412 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R13415:13418 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R13420:13422 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R13442:13443 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+binder 13413:13414 <> j0:119
+binder 13413:13414 <> j0:120
+binder 13413:13414 <> j0:121
+R13434:13437 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R13423:13430 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R13432:13433 prosa.classic.analysis.uni.arrival_curves.workload_bound <> j0:119 var
+R13438:13441 prosa.classic.analysis.uni.arrival_curves.workload_bound <> tsk':116 var
+R13444:13451 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_cost var
+R13453:13454 prosa.classic.analysis.uni.arrival_curves.workload_bound <> j0:119 var
+R13340:13348 mathcomp.boot.ssrnat <> leq_trans thm
+R13371:13376 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R13381:13384 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R13387:13406 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R13455:13455 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_')'_x not
+R13385:13386 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.ts var
+binder 13377:13380 <> tsk':122
+binder 13377:13380 <> tsk':123
+binder 13377:13380 <> tsk':124
+R13407:13412 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R13415:13418 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R13420:13422 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+R13442:13443 mathcomp.boot.bigop <> ::nat_scope:'\sum_'_'('_x_'<-'_x_'|'_x_')'_x not
+binder 13413:13414 <> j0:125
+binder 13413:13414 <> j0:126
+binder 13413:13414 <> j0:127
+R13434:13437 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R13423:13430 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R13432:13433 prosa.classic.analysis.uni.arrival_curves.workload_bound <> j0:125 var
+R13438:13441 prosa.classic.analysis.uni.arrival_curves.workload_bound <> tsk':122 var
+R13444:13451 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_cost var
+R13453:13454 prosa.classic.analysis.uni.arrival_curves.workload_bound <> j0:125 var
+R13340:13348 mathcomp.boot.ssrnat <> leq_trans thm
+R13520:13535 mathcomp.boot.bigop <> exchange_big_dep thm
+R13537:13541 Corelib.ssr.ssrbool <> predT def
+R13613:13628 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R13634:13645 mathcomp.boot.bigop <> big_seq_cond thm
+R13654:13657 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R13660:13671 mathcomp.boot.bigop <> big_seq_cond thm
+R13613:13628 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R13613:13628 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R13634:13645 mathcomp.boot.bigop <> big_seq_cond thm
+R13634:13645 mathcomp.boot.bigop <> big_seq_cond thm
+R13660:13671 mathcomp.boot.bigop <> big_seq_cond thm
+R13654:13657 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R13654:13657 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R13658:13658 prosa.classic.analysis.uni.arrival_curves.workload_bound <> X:128 var
+R13660:13671 mathcomp.boot.bigop <> big_seq_cond thm
+R13692:13698 mathcomp.boot.bigop <> leq_sum thm
+R13692:13698 mathcomp.boot.bigop <> leq_sum thm
+R13713:13716 Corelib.ssr.ssrbool <> andP thm
+R13750:13756 mathcomp.boot.bigop <> big_rem thm
+R13759:13766 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R13750:13756 mathcomp.boot.bigop <> big_rem thm
+R13759:13766 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R13750:13756 mathcomp.boot.bigop <> big_rem thm
+R13759:13766 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R13811:13833 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_all_jobs_from_taskset var
+R13811:13833 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_all_jobs_from_taskset var
+R13859:13885 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R13859:13885 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R13951:13957 mathcomp.boot.eqtype <> eq_refl thm
+R13966:13973 mathcomp.boot.ssrnat <> leq_addr thm
+R13951:13957 mathcomp.boot.eqtype <> eq_refl thm
+R13951:13957 mathcomp.boot.eqtype <> eq_refl thm
+R13966:13973 mathcomp.boot.ssrnat <> leq_addr thm
+R14004:14014 prosa.util.sum <> leq_sum_seq thm
+R14004:14014 prosa.util.sum <> leq_sum_seq thm
+R14100:14102 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R14086:14094 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.task_cost var
+R14103:14122 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R14146:14146 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R14150:14152 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R14149:14149 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R14153:14157 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R14133:14139 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arr_seq var
+R14124:14131 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R14057:14065 mathcomp.boot.ssrnat <> leq_trans thm
+R14100:14102 mathcomp.boot.ssrnat <> ::nat_scope:x_'*'_x not
+R14086:14094 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.task_cost var
+R14103:14122 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R14146:14146 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R14150:14152 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R14149:14149 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R14153:14157 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R14133:14139 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.arr_seq var
+R14124:14131 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.job_task var
+R14057:14065 mathcomp.boot.ssrnat <> leq_trans thm
+R14195:14214 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R14217:14225 mathcomp.boot.bigop <> sum1_size thm
+R14227:14236 mathcomp.boot.bigop <> big_distrr thm
+R14241:14250 mathcomp.boot.bigop <> big_filter thm
+R14195:14214 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R14195:14214 prosa.classic.model.arrival.basic.task_arrival TaskArrival num_arrivals_of_task def
+R14217:14225 mathcomp.boot.bigop <> sum1_size thm
+R14217:14225 mathcomp.boot.bigop <> sum1_size thm
+R14227:14236 mathcomp.boot.bigop <> big_distrr thm
+R14227:14236 mathcomp.boot.bigop <> big_distrr thm
+R14241:14250 mathcomp.boot.bigop <> big_filter thm
+R14241:14250 mathcomp.boot.bigop <> big_filter thm
+R14278:14293 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R14278:14293 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R14278:14293 prosa.classic.model.schedule.uni.workload Workload workload_of_jobs def
+R14317:14330 prosa.classic.model.arrival.basic.task_arrival TaskArrival is_job_of_task def
+R14333:14337 mathcomp.boot.ssrnat <> muln1 thm
+R14317:14330 prosa.classic.model.arrival.basic.task_arrival TaskArrival is_job_of_task def
+R14317:14330 prosa.classic.model.arrival.basic.task_arrival TaskArrival is_job_of_task def
+R14333:14337 mathcomp.boot.ssrnat <> muln1 thm
+R14333:14337 mathcomp.boot.ssrnat <> muln1 thm
+R14358:14368 prosa.util.sum <> leq_sum_seq thm
+R14358:14368 prosa.util.sum <> leq_sum_seq thm
+R14387:14389 mathcomp.boot.eqtype <> eqP def
+R14438:14460 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_job_cost_le_task_cost var
+R14438:14460 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_job_cost_le_task_cost var
+R14486:14512 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R14486:14512 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence in_arrivals_implies_arrived thm
+R14566:14574 mathcomp.boot.ssrnat <> leq_mul2l thm
+R14583:14585 Corelib.ssr.ssrbool <> orP thm
+R14566:14574 mathcomp.boot.ssrnat <> leq_mul2l thm
+R14566:14574 mathcomp.boot.ssrnat <> leq_mul2l thm
+R14583:14585 Corelib.ssr.ssrbool <> orP thm
+R14620:14624 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R14627:14631 mathcomp.boot.ssrnat <> addKn thm
+R14633:14633 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R14627:14631 mathcomp.boot.ssrnat <> addKn thm
+R14633:14633 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R14620:14624 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R14620:14624 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.delta var
+R14627:14631 mathcomp.boot.ssrnat <> addKn thm
+R14633:14633 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF.t var
+R14655:14672 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_is_arrival_bound var
+R14697:14704 mathcomp.boot.ssrnat <> leq_addr thm
+R14655:14672 prosa.classic.analysis.uni.arrival_curves.workload_bound <> MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.H_is_arrival_bound var
+R14697:14704 mathcomp.boot.ssrnat <> leq_addr thm
+R14697:14704 mathcomp.boot.ssrnat <> leq_addr thm
+R14746:14767 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound.WorkloadIsBoundedByRBF <> sec
+R14779:14796 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound.Lemmas.ProofWorkloadBound <> sec
+R14810:14815 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound.Lemmas <> sec
+R14825:14848 prosa.classic.analysis.uni.arrival_curves.workload_bound MaxArrivalsWorkloadBound <> mod

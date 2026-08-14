@@ -1,0 +1,528 @@
+DIGEST 91e6d046ceeee44eae175d755812641e
+Fprosa.classic.analysis.uni.basic.tdma_rta_theory
+R15:19 Stdlib.Arith.Arith <> <> lib
+R38:59 prosa.classic.util.all <> <> lib
+R77:113 prosa.classic.model.arrival.basic.job <> <> lib
+R131:176 prosa.classic.model.arrival.basic.task_arrival <> <> lib
+R194:240 prosa.classic.model.schedule.uni.schedulability <> <> lib
+R258:306 prosa.classic.model.schedule.uni.schedule_of_task <> <> lib
+R325:370 prosa.classic.model.schedule.uni.response_time <> <> lib
+R388:438 prosa.classic.analysis.uni.basic.tdma_wcrt_analysis <> <> lib
+R457:508 prosa.classic.model.schedule.uni.basic.platform_tdma <> <> lib
+R526:566 prosa.classic.model.schedule.uni.end_time <> <> lib
+R598:606 mathcomp.boot.ssreflect <> <> lib
+R608:614 mathcomp.boot.ssrbool <> <> lib
+R616:621 mathcomp.boot.eqtype <> <> lib
+R623:628 mathcomp.boot.ssrnat <> <> lib
+R630:632 mathcomp.boot.seq <> <> lib
+R634:640 mathcomp.boot.fintype <> <> lib
+R642:646 mathcomp.boot.bigop <> <> lib
+R648:650 mathcomp.boot.div <> <> lib
+mod 702:725 <> ResponseTimeAnalysisTDMA
+R740:742 prosa.classic.model.arrival.basic.job Job <> mod
+R745:755 prosa.classic.model.arrival.basic.task_arrival TaskArrival <> mod
+R757:770 prosa.classic.model.schedule.uni.schedule_of_task ScheduleOfTask <> mod
+R773:784 prosa.classic.model.schedule.uni.response_time ResponseTime <> mod
+R786:798 prosa.classic.model.schedule.uni.basic.platform_tdma Platform_TDMA <> mod
+R800:807 prosa.classic.model.schedule.uni.end_time end_time <> mod
+R809:822 prosa.classic.model.schedule.uni.schedulability Schedulability <> mod
+R832:846 prosa.classic.analysis.uni.basic.tdma_wcrt_analysis WCRT_OneJobTDMA <> mod
+sec 1137:1153 ResponseTimeAnalysisTDMA ResponseTimeBound
+var  1194:1206 ResponseTimeAnalysisTDMA.ResponseTimeBound sporadic_task
+R1209:1214 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1231:1239 ResponseTimeAnalysisTDMA.ResponseTimeBound task_cost
+R1255:1258 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1242:1254 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.sporadic_task var
+R1259:1262 prosa.classic.model.time Time time def
+var 1278:1288 ResponseTimeAnalysisTDMA.ResponseTimeBound task_period
+R1304:1307 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1291:1303 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.sporadic_task var
+R1308:1311 prosa.classic.model.time Time time def
+var 1327:1339 ResponseTimeAnalysisTDMA.ResponseTimeBound task_deadline
+R1355:1358 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1342:1354 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.sporadic_task var
+R1359:1362 prosa.classic.model.time Time time def
+var  1379:1381 ResponseTimeAnalysisTDMA.ResponseTimeBound Job
+R1384:1389 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1406:1416 ResponseTimeAnalysisTDMA.ResponseTimeBound job_arrival
+R1422:1425 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1419:1421 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.Job var
+R1426:1429 prosa.classic.model.time Time time def
+var 1445:1452 ResponseTimeAnalysisTDMA.ResponseTimeBound job_cost
+R1458:1461 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1455:1457 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.Job var
+R1462:1465 prosa.classic.model.time Time time def
+var 1481:1492 ResponseTimeAnalysisTDMA.ResponseTimeBound job_deadline
+R1498:1501 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1495:1497 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.Job var
+R1502:1505 prosa.classic.model.time Time time def
+var 1521:1528 ResponseTimeAnalysisTDMA.ResponseTimeBound job_task
+R1534:1537 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1531:1533 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.Job var
+R1538:1550 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.sporadic_task var
+var 1610:1616 ResponseTimeAnalysisTDMA.ResponseTimeBound arr_seq
+R1619:1634 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R1636:1638 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.Job var
+var 1656:1685 ResponseTimeAnalysisTDMA.ResponseTimeBound H_arrival_times_are_consistent
+R1694:1721 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_times_are_consistent def
+R1735:1741 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.arr_seq var
+R1723:1733 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+var 1759:1774 ResponseTimeAnalysisTDMA.ResponseTimeBound H_sporadic_tasks
+R1781:1799 prosa.classic.model.arrival.basic.task_arrival TaskArrival sporadic_task_model def
+R1834:1840 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.arr_seq var
+R1825:1832 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_task var
+R1813:1823 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R1801:1811 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_period var
+var 1894:1898 ResponseTimeAnalysisTDMA.ResponseTimeBound sched
+R1901:1908 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R1910:1912 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.Job var
+var 2019:2047 ResponseTimeAnalysisTDMA.ResponseTimeBound H_jobs_must_arrive_to_execute
+R2056:2082 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule jobs_must_arrive_to_execute def
+R2096:2100 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.sched var
+R2084:2094 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+var 2118:2146 ResponseTimeAnalysisTDMA.ResponseTimeBound H_completed_jobs_dont_execute
+R2155:2181 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_jobs_dont_execute def
+R2192:2196 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.sched var
+R2183:2190 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_cost var
+var 2260:2273 ResponseTimeAnalysisTDMA.ResponseTimeBound task_time_slot
+R2276:2284 prosa.classic.model.policy_tdma PolicyTDMA TDMA_slot def
+R2286:2298 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.sporadic_task var
+var 2348:2357 ResponseTimeAnalysisTDMA.ResponseTimeBound slot_order
+R2360:2374 prosa.classic.model.policy_tdma PolicyTDMA TDMA_slot_order def
+R2376:2388 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.sporadic_task var
+var 2441:2442 ResponseTimeAnalysisTDMA.ResponseTimeBound ts
+R2445:2449 prosa.util.seqset <> :::'{set'_x_'}' not
+R2463:2463 prosa.util.seqset <> :::'{set'_x_'}' not
+R2450:2462 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.sporadic_task var
+var 2481:2503 ResponseTimeAnalysisTDMA.ResponseTimeBound H_valid_task_parameters
+R2510:2531 prosa.classic.model.arrival.basic.task SporadicTaskset valid_sporadic_taskset def
+R2569:2570 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.ts var
+R2555:2567 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_deadline var
+R2543:2553 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_period var
+R2533:2541 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_cost var
+var 2628:2630 ResponseTimeAnalysisTDMA.ResponseTimeBound tsk
+R2632:2644 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.sporadic_task var
+var 2662:2679 ResponseTimeAnalysisTDMA.ResponseTimeBound H_task_in_task_set
+R2685:2689 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R2682:2684 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.tsk var
+R2690:2691 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.ts var
+var 2878:2892 ResponseTimeAnalysisTDMA.ResponseTimeBound is_scheduled_at
+binder 2894:2894 <> j:41
+binder 2896:2896 <> t:42
+R2907:2918 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule scheduled_at def
+R2928:2928 prosa.classic.analysis.uni.basic.tdma_rta_theory <> t:42 var
+R2926:2926 prosa.classic.analysis.uni.basic.tdma_rta_theory <> j:41 var
+R2920:2924 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.sched var
+var 3017:3031 ResponseTimeAnalysisTDMA.ResponseTimeBound in_time_slot_at
+binder 3033:3033 <> j:43
+binder 3035:3035 <> t:44
+R3048:3064 prosa.classic.model.policy_tdma PolicyTDMA Task_in_time_slot def
+R3108:3108 prosa.classic.analysis.uni.basic.tdma_rta_theory <> t:44 var
+R3093:3106 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_time_slot var
+R3081:3088 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_task var
+R3090:3090 prosa.classic.analysis.uni.basic.tdma_rta_theory <> j:43 var
+R3069:3078 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.slot_order var
+R3066:3067 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.ts var
+var 3175:3198 ResponseTimeAnalysisTDMA.ResponseTimeBound response_time_bounded_by
+R3209:3238 prosa.classic.model.schedule.uni.response_time ResponseTime is_response_time_bound_of_task def
+R3278:3282 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.sched var
+R3270:3276 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.arr_seq var
+R3261:3268 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_task var
+R3252:3259 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_cost var
+R3240:3250 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+var 3789:3802 ResponseTimeAnalysisTDMA.ResponseTimeBound WCRT_le_period
+R3847:3850 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R3811:3814 prosa.classic.analysis.uni.basic.tdma_wcrt_analysis WCRT_OneJobTDMA WCRT def
+R3844:3846 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.tsk var
+R3841:3842 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.ts var
+R3826:3839 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_time_slot var
+R3816:3824 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_cost var
+R3851:3861 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_period var
+R3863:3865 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.tsk var
+var 3876:3877 ResponseTimeAnalysisTDMA.ResponseTimeBound RT
+binder 3879:3879 <> j:47
+R3883:3934 prosa.classic.analysis.uni.basic.tdma_wcrt_analysis WCRT_OneJobTDMA job_response_time_tdma_in_at_most_one_job_is_pending def
+R3999:3999 prosa.classic.analysis.uni.basic.tdma_rta_theory <> j:47 var
+R3995:3997 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.tsk var
+R3992:3993 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.ts var
+R3981:3990 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.slot_order var
+R3966:3979 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_time_slot var
+R3948:3955 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_cost var
+R3936:3946 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+var 4085:4110 ResponseTimeAnalysisTDMA.ResponseTimeBound no_deadline_missed_by_task
+R4121:4143 prosa.classic.model.schedule.uni.schedulability Schedulability task_misses_no_deadline def
+R4196:4200 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.sched var
+R4188:4194 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.arr_seq var
+R4179:4186 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_task var
+R4166:4177 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_deadline var
+R4157:4164 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_cost var
+R4145:4155 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+var 4211:4235 ResponseTimeAnalysisTDMA.ResponseTimeBound no_deadline_missed_by_job
+R4246:4267 prosa.classic.model.schedule.uni.schedulability Schedulability job_misses_no_deadline def
+R4303:4307 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.sched var
+R4290:4301 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_deadline var
+R4281:4288 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_cost var
+R4269:4279 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+def 4451:4469 ResponseTimeAnalysisTDMA is_valid_tdma_bound
+binder 4471:4475 <> bound:48
+R4495:4498 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R4490:4494 prosa.classic.analysis.uni.basic.tdma_rta_theory <> bound:48 var
+R4499:4511 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_deadline var
+R4513:4515 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.tsk var
+var 4616:4626 ResponseTimeAnalysisTDMA.ResponseTimeBound TDMA_policy
+R4635:4654 prosa.classic.model.schedule.uni.basic.platform_tdma Platform_TDMA Respects_TDMA_policy def
+R4718:4727 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.slot_order var
+R4703:4716 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_time_slot var
+R4700:4701 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.ts var
+R4694:4698 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.sched var
+R4686:4692 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.arr_seq var
+R4677:4684 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_task var
+R4668:4675 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_cost var
+R4656:4666 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+var 4793:4809 ResponseTimeAnalysisTDMA.ResponseTimeBound H_valid_time_slot
+R4818:4835 prosa.classic.model.policy_tdma PolicyTDMA is_valid_time_slot def
+R4841:4854 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_time_slot var
+R4837:4839 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.tsk var
+var 4940:4961 ResponseTimeAnalysisTDMA.ResponseTimeBound H_valid_job_parameters
+binder 4977:4977 <> j:53
+R5000:5011 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4980:4989 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R4999:4999 prosa.classic.analysis.uni.basic.tdma_rta_theory <> j:53 var
+R4991:4997 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.arr_seq var
+R5012:5029 prosa.classic.model.arrival.basic.job Job valid_sporadic_job def
+R5086:5086 prosa.classic.analysis.uni.basic.tdma_rta_theory <> j:53 var
+R5077:5084 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_task var
+R5064:5075 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_deadline var
+R5055:5062 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_cost var
+R5041:5053 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_deadline var
+R5031:5039 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_cost var
+var 5176:5198 ResponseTimeAnalysisTDMA.ResponseTimeBound H_job_cost_le_task_cost
+binder 5215:5215 <> j:56
+R5238:5247 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5218:5227 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R5237:5237 prosa.classic.analysis.uni.basic.tdma_rta_theory <> j:56 var
+R5229:5235 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.arr_seq var
+R5248:5268 prosa.classic.model.arrival.basic.job Job job_cost_le_task_cost def
+R5298:5298 prosa.classic.analysis.uni.basic.tdma_rta_theory <> j:56 var
+R5289:5296 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_task var
+R5280:5287 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_cost var
+R5270:5278 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_cost var
+var 5359:5363 ResponseTimeAnalysisTDMA.ResponseTimeBound BOUND
+R5368:5371 prosa.classic.analysis.uni.basic.tdma_wcrt_analysis WCRT_OneJobTDMA WCRT def
+R5401:5403 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.tsk var
+R5398:5399 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.ts var
+R5383:5396 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_time_slot var
+R5373:5381 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_cost var
+prf 5597:5627 ResponseTimeAnalysisTDMA any_job_completed_before_period
+binder 5643:5643 <> j:59
+R5674:5685 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5654:5663 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R5673:5673 prosa.classic.analysis.uni.basic.tdma_rta_theory <> j:59 var
+R5665:5671 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.arr_seq var
+R5702:5713 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5696:5698 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5686:5693 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_task var
+R5695:5695 prosa.classic.analysis.uni.basic.tdma_rta_theory <> j:59 var
+R5699:5701 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.tsk var
+R5714:5725 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R5758:5760 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R5745:5755 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R5757:5757 prosa.classic.analysis.uni.basic.tdma_rta_theory <> j:59 var
+R5761:5771 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_period var
+R5775:5782 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_task var
+R5784:5784 prosa.classic.analysis.uni.basic.tdma_rta_theory <> j:59 var
+R5742:5742 prosa.classic.analysis.uni.basic.tdma_rta_theory <> j:59 var
+R5736:5740 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.sched var
+R5727:5734 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_cost var
+R5887:5908 Corelib.Init.Wf <> well_founded_induction thm
+R5910:5914 Stdlib.Arith.Wf_nat <> lt_wf thm
+R5887:5908 Corelib.Init.Wf <> well_founded_induction thm
+R5910:5914 Stdlib.Arith.Wf_nat <> lt_wf thm
+R5965:5974 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R5976:5982 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.arr_seq var
+R6057:6059 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6044:6054 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R6060:6063 prosa.classic.analysis.uni.basic.tdma_wcrt_analysis WCRT_OneJobTDMA WCRT def
+R6093:6095 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.tsk var
+R6090:6091 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.ts var
+R6075:6088 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_time_slot var
+R6065:6073 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_cost var
+R6014:6033 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completion_monotonic thm
+R6131:6139 mathcomp.boot.ssrnat <> leq_add2l thm
+R6202:6214 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_deadline var
+R6244:6250 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.arr_seq var
+R6267:6278 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_deadline var
+R6309:6316 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_task var
+R6331:6340 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.slot_order var
+R6151:6171 prosa.classic.analysis.uni.basic.tdma_wcrt_analysis WCRT_OneJobTDMA job_completed_by_WCRT thm
+R6057:6059 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6044:6054 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R6060:6063 prosa.classic.analysis.uni.basic.tdma_wcrt_analysis WCRT_OneJobTDMA WCRT def
+R6093:6095 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.tsk var
+R6090:6091 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.ts var
+R6075:6088 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_time_slot var
+R6065:6073 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_cost var
+R6014:6033 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completion_monotonic thm
+R6131:6139 mathcomp.boot.ssrnat <> leq_add2l thm
+R6131:6139 mathcomp.boot.ssrnat <> leq_add2l thm
+R6131:6139 mathcomp.boot.ssrnat <> leq_add2l thm
+R6131:6139 mathcomp.boot.ssrnat <> leq_add2l thm
+R6202:6214 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_deadline var
+R6244:6250 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.arr_seq var
+R6267:6278 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_deadline var
+R6309:6316 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_task var
+R6331:6340 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.slot_order var
+R6151:6171 prosa.classic.analysis.uni.basic.tdma_wcrt_analysis WCRT_OneJobTDMA job_completed_by_WCRT thm
+R6374:6403 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.H_arrival_times_are_consistent var
+R6374:6403 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.H_arrival_times_are_consistent var
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R6473:6475 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R6441:6450 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R6452:6458 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.arr_seq var
+R6473:6475 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R6546:6548 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6533:6543 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R6549:6552 prosa.classic.analysis.uni.basic.tdma_wcrt_analysis WCRT_OneJobTDMA WCRT def
+R6582:6584 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.tsk var
+R6579:6580 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.ts var
+R6564:6577 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_time_slot var
+R6554:6562 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_cost var
+R6492:6511 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completion_monotonic thm
+R6546:6548 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6533:6543 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R6549:6552 prosa.classic.analysis.uni.basic.tdma_wcrt_analysis WCRT_OneJobTDMA WCRT def
+R6582:6584 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.tsk var
+R6579:6580 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.ts var
+R6564:6577 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_time_slot var
+R6554:6562 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_cost var
+R6492:6511 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completion_monotonic thm
+R6613:6621 mathcomp.boot.ssrnat <> leq_add2l thm
+R6613:6621 mathcomp.boot.ssrnat <> leq_add2l thm
+R6613:6621 mathcomp.boot.ssrnat <> leq_add2l thm
+R6684:6696 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_deadline var
+R6726:6732 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.arr_seq var
+R6749:6760 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_deadline var
+R6791:6798 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_task var
+R6813:6822 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.slot_order var
+R6633:6653 prosa.classic.analysis.uni.basic.tdma_wcrt_analysis WCRT_OneJobTDMA job_completed_by_WCRT thm
+R6684:6696 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_deadline var
+R6726:6732 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.arr_seq var
+R6749:6760 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_deadline var
+R6791:6798 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_task var
+R6813:6822 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.slot_order var
+R6633:6653 prosa.classic.analysis.uni.basic.tdma_wcrt_analysis WCRT_OneJobTDMA job_completed_by_WCRT thm
+R6921:6923 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R6888:6890 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R6869:6879 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R6891:6901 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_period var
+R6904:6911 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_task var
+R6924:6934 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R6954:6969 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.H_sporadic_tasks var
+R6954:6969 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.H_sporadic_tasks var
+R6984:6985 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R6984:6985 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R7007:7009 mathcomp.boot.eqtype <> eqP def
+R7007:7009 mathcomp.boot.eqtype <> eqP def
+R7063:7065 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7044:7054 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R7066:7076 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R7167:7180 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R7148:7158 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R7181:7191 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_period var
+R7194:7201 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_task var
+R7117:7136 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completion_monotonic thm
+R7167:7180 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R7148:7158 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R7181:7191 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_period var
+R7194:7201 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_task var
+R7117:7136 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completion_monotonic thm
+R7252:7254 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7239:7249 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R7256:7258 mathcomp.boot.ssrnat <> ::nat_scope:x_'.+1' not
+R7289:7299 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R7289:7299 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R7398:7399 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7379:7389 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+prf 7650:7689 ResponseTimeAnalysisTDMA all_previous_jobs_of_same_task_completed
+binder 7706:7706 <> j:60
+binder 7708:7714 <> j_other:61
+R7745:7756 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7725:7734 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R7744:7744 prosa.classic.analysis.uni.basic.tdma_rta_theory <> j:60 var
+R7736:7742 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.arr_seq var
+R7773:7784 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7767:7769 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7757:7764 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_task var
+R7766:7766 prosa.classic.analysis.uni.basic.tdma_rta_theory <> j:60 var
+R7770:7772 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.tsk var
+R7811:7822 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7785:7794 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R7804:7810 prosa.classic.analysis.uni.basic.tdma_rta_theory <> j_other:61 var
+R7796:7802 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.arr_seq var
+R7852:7863 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7833:7835 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7823:7830 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_task var
+R7832:7832 prosa.classic.analysis.uni.basic.tdma_rta_theory <> j:60 var
+R7836:7843 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_task var
+R7845:7851 prosa.classic.analysis.uni.basic.tdma_rta_theory <> j_other:61 var
+R7899:7910 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7883:7885 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R7864:7874 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R7876:7882 prosa.classic.analysis.uni.basic.tdma_rta_theory <> j_other:61 var
+R7886:7896 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R7898:7898 prosa.classic.analysis.uni.basic.tdma_rta_theory <> j:60 var
+R7911:7922 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R7948:7958 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R7960:7960 prosa.classic.analysis.uni.basic.tdma_rta_theory <> j:60 var
+R7939:7945 prosa.classic.analysis.uni.basic.tdma_rta_theory <> j_other:61 var
+R7933:7937 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.sched var
+R7924:7931 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_cost var
+R8060:8062 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R8027:8029 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8008:8018 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R8030:8040 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_period var
+R8043:8050 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_task var
+R8063:8073 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R8091:8106 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.H_sporadic_tasks var
+R8091:8106 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.H_sporadic_tasks var
+R8121:8122 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R8121:8122 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R8144:8146 mathcomp.boot.eqtype <> eqP def
+R8144:8146 mathcomp.boot.eqtype <> eqP def
+R8199:8201 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8180:8190 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R8202:8212 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R421:423 mathcomp.boot.ssrnat <> leP thm
+R8300:8302 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8281:8291 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R8303:8313 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_period var
+R8316:8323 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_task var
+R8251:8270 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completion_monotonic thm
+R8300:8302 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8281:8291 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R8303:8313 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_period var
+R8316:8323 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_task var
+R8251:8270 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completion_monotonic thm
+R8353:8383 prosa.classic.analysis.uni.basic.tdma_rta_theory ResponseTimeAnalysisTDMA any_job_completed_before_period thm
+R8353:8383 prosa.classic.analysis.uni.basic.tdma_rta_theory ResponseTimeAnalysisTDMA any_job_completed_before_period thm
+prf 8822:8858 ResponseTimeAnalysisTDMA uniprocessor_response_time_bound_TDMA
+R8861:8884 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.response_time_bounded_by var
+R8886:8888 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.tsk var
+R8890:8894 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.BOUND var
+R8996:8998 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8983:8993 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R8999:9000 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.RT var
+R8953:8972 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completion_monotonic thm
+R8996:8998 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8983:8993 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R8999:9000 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.RT var
+R8953:8972 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completion_monotonic thm
+R9033:9041 mathcomp.boot.ssrnat <> leq_add2l thm
+R9044:9048 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.BOUND var
+R9033:9041 mathcomp.boot.ssrnat <> leq_add2l thm
+R9033:9041 mathcomp.boot.ssrnat <> leq_add2l thm
+R9044:9048 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.BOUND var
+R9044:9048 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.BOUND var
+R9116:9124 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_cost var
+R9143:9155 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_deadline var
+R9165:9169 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.sched var
+R9199:9209 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R9222:9229 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_cost var
+R9246:9257 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_deadline var
+R9284:9291 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_task var
+R9298:9299 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.ts var
+R9311:9317 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.arr_seq var
+R9346:9355 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.slot_order var
+R9363:9365 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.Job var
+R9373:9375 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.tsk var
+R9067:9087 prosa.classic.analysis.uni.basic.tdma_wcrt_analysis WCRT_OneJobTDMA response_time_le_WCRT thm
+R9424:9463 prosa.classic.analysis.uni.basic.tdma_rta_theory ResponseTimeAnalysisTDMA all_previous_jobs_of_same_task_completed thm
+R9116:9124 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_cost var
+R9143:9155 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_deadline var
+R9165:9169 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.sched var
+R9199:9209 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R9222:9229 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_cost var
+R9246:9257 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_deadline var
+R9284:9291 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_task var
+R9298:9299 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.ts var
+R9311:9317 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.arr_seq var
+R9346:9355 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.slot_order var
+R9363:9365 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.Job var
+R9373:9375 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.tsk var
+R9067:9087 prosa.classic.analysis.uni.basic.tdma_wcrt_analysis WCRT_OneJobTDMA response_time_le_WCRT thm
+R9424:9463 prosa.classic.analysis.uni.basic.tdma_rta_theory ResponseTimeAnalysisTDMA all_previous_jobs_of_same_task_completed thm
+R9525:9529 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.sched var
+R9545:9555 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R9582:9589 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_cost var
+R9481:9501 prosa.classic.model.schedule.uni.end_time end_time completed_by_end_time thm
+R9525:9529 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.sched var
+R9545:9555 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R9582:9589 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_cost var
+R9481:9501 prosa.classic.model.schedule.uni.end_time end_time completed_by_end_time thm
+R9683:9693 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R9707:9715 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_cost var
+R9727:9733 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.arr_seq var
+R9760:9767 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_task var
+R9784:9795 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_deadline var
+R9813:9825 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_deadline var
+R9849:9853 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.sched var
+R9860:9861 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.ts var
+R9876:9885 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.slot_order var
+R9907:9909 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.tsk var
+R9620:9640 prosa.classic.analysis.uni.basic.tdma_wcrt_analysis WCRT_OneJobTDMA completes_at_end_time thm
+R9960:9999 prosa.classic.analysis.uni.basic.tdma_rta_theory ResponseTimeAnalysisTDMA all_previous_jobs_of_same_task_completed thm
+R9683:9693 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_arrival var
+R9707:9715 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_cost var
+R9727:9733 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.arr_seq var
+R9760:9767 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_task var
+R9784:9795 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_deadline var
+R9813:9825 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_deadline var
+R9849:9853 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.sched var
+R9860:9861 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.ts var
+R9876:9885 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.slot_order var
+R9907:9909 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.tsk var
+R9620:9640 prosa.classic.analysis.uni.basic.tdma_wcrt_analysis WCRT_OneJobTDMA completes_at_end_time thm
+R9960:9999 prosa.classic.analysis.uni.basic.tdma_rta_theory ResponseTimeAnalysisTDMA all_previous_jobs_of_same_task_completed thm
+sec 10138:10157 ResponseTimeAnalysisTDMA.ResponseTimeBound AnalysisIsSufficient
+var 10230:10245 ResponseTimeAnalysisTDMA.ResponseTimeBound.AnalysisIsSufficient H_is_valid_bound
+R10256:10274 prosa.classic.analysis.uni.basic.tdma_rta_theory ResponseTimeAnalysisTDMA is_valid_tdma_bound def
+R10276:10280 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.BOUND var
+prf 10374:10400 ResponseTimeAnalysisTDMA taskset_schedulable_by_tdma
+R10404:10429 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.no_deadline_missed_by_task var
+R10431:10433 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.tsk var
+R10515:10527 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_deadline var
+R10534:10538 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.BOUND var
+R10463:10492 prosa.classic.model.schedule.uni.schedulability Schedulability task_completes_before_deadline thm
+R10515:10527 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.task_deadline var
+R10534:10538 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.BOUND var
+R10463:10492 prosa.classic.model.schedule.uni.schedulability Schedulability task_completes_before_deadline thm
+R10608:10629 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.H_valid_job_parameters var
+R10608:10629 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.H_valid_job_parameters var
+R10648:10684 prosa.classic.analysis.uni.basic.tdma_rta_theory ResponseTimeAnalysisTDMA uniprocessor_response_time_bound_TDMA thm
+R10648:10684 prosa.classic.analysis.uni.basic.tdma_rta_theory ResponseTimeAnalysisTDMA uniprocessor_response_time_bound_TDMA thm
+prf 10861:10888 ResponseTimeAnalysisTDMA jobs_schedulable_by_tdma_rta
+binder 10907:10907 <> j:64
+R10959:10973 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R10940:10943 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R10920:10929 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R10939:10939 prosa.classic.analysis.uni.basic.tdma_rta_theory <> j:64 var
+R10931:10937 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.arr_seq var
+R10954:10955 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10944:10951 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.job_task var
+R10953:10953 prosa.classic.analysis.uni.basic.tdma_rta_theory <> j:64 var
+R10956:10958 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.tsk var
+R10974:10998 prosa.classic.analysis.uni.basic.tdma_rta_theory <> ResponseTimeAnalysisTDMA.ResponseTimeBound.no_deadline_missed_by_job var
+R11000:11000 prosa.classic.analysis.uni.basic.tdma_rta_theory <> j:64 var
+R11067:11093 prosa.classic.analysis.uni.basic.tdma_rta_theory ResponseTimeAnalysisTDMA taskset_schedulable_by_tdma thm
+R11067:11093 prosa.classic.analysis.uni.basic.tdma_rta_theory ResponseTimeAnalysisTDMA taskset_schedulable_by_tdma thm
+R11116:11135 prosa.classic.analysis.uni.basic.tdma_rta_theory ResponseTimeAnalysisTDMA.ResponseTimeBound.AnalysisIsSufficient <> sec
+R11145:11161 prosa.classic.analysis.uni.basic.tdma_rta_theory ResponseTimeAnalysisTDMA.ResponseTimeBound <> sec
+R11169:11192 prosa.classic.analysis.uni.basic.tdma_rta_theory ResponseTimeAnalysisTDMA <> mod

@@ -1,0 +1,468 @@
+DIGEST cd1acf558ec6091b705c8ff14c609598
+Fprosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta
+R15:36 prosa.classic.util.all <> <> lib
+R54:81 prosa.classic.model.priority <> <> lib
+R83:112 prosa.classic.model.suspension <> <> lib
+R130:167 prosa.classic.model.arrival.basic.task <> <> lib
+R169:205 prosa.classic.model.arrival.basic.job <> <> lib
+R222:267 prosa.classic.model.arrival.basic.task_arrival <> <> lib
+R269:318 prosa.classic.model.arrival.basic.arrival_sequence <> <> lib
+R336:373 prosa.classic.model.arrival.jitter.job <> <> lib
+R391:436 prosa.classic.model.schedule.uni.response_time <> <> lib
+R454:499 prosa.classic.model.schedule.uni.susp.schedule <> <> lib
+R501:546 prosa.classic.model.schedule.uni.susp.platform <> <> lib
+R563:614 prosa.classic.model.schedule.uni.susp.valid_schedule <> <> lib
+R632:685 prosa.classic.model.schedule.uni.jitter.valid_schedule <> <> lib
+R703:765 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction <> <> lib
+R782:853 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation <> <> lib
+R870:934 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership <> <> lib
+R966:974 mathcomp.boot.ssreflect <> <> lib
+R976:982 mathcomp.boot.ssrbool <> <> lib
+R984:989 mathcomp.boot.eqtype <> <> lib
+R991:996 mathcomp.boot.ssrnat <> <> lib
+R998:1000 mathcomp.boot.seq <> <> lib
+R1002:1008 mathcomp.boot.fintype <> <> lib
+R1010:1014 mathcomp.boot.bigop <> <> lib
+mod 1132:1141 <> TaskSetRTA
+R1154:1168 prosa.classic.model.arrival.basic.task SporadicTaskset <> mod
+R1170:1179 prosa.classic.model.suspension Suspension <> mod
+R1181:1188 prosa.classic.model.priority Priority <> mod
+R1190:1217 prosa.classic.model.schedule.uni.susp.valid_schedule ValidSuspensionAwareSchedule <> mod
+R1228:1250 prosa.classic.model.schedule.uni.susp.schedule ScheduleWithSuspensions <> mod
+R1252:1263 prosa.classic.model.schedule.uni.response_time ResponseTime <> mod
+R1265:1287 prosa.classic.model.schedule.uni.susp.platform PlatformWithSuspensions <> mod
+R1298:1308 prosa.classic.model.arrival.basic.task_arrival TaskArrival <> mod
+R1310:1333 prosa.classic.model.schedule.uni.jitter.valid_schedule ValidJitterAwareSchedule <> mod
+R1335:1348 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction RTAByReduction <> mod
+R1350:1366 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership <> mod
+R1389:1411 prosa.classic.analysis.uni.susp.dynamic.jitter.jitter_taskset_generation JitterTaskSetGeneration <> mod
+mod 1379:1384 <> TaskSetRTA.ts_gen
+R1435:1437 prosa.classic.model.arrival.basic.job Job <> mod
+mod 1423:1430 <> TaskSetRTA.job_susp
+R1463:1475 prosa.classic.model.arrival.jitter.job JobWithJitter <> mod
+mod 1449:1458 <> TaskSetRTA.job_jitter
+sec 1690:1704 TaskSetRTA PerTaskAnalysis
+var  1721:1724 TaskSetRTA.PerTaskAnalysis Task
+R1727:1732 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1749:1757 TaskSetRTA.PerTaskAnalysis task_cost
+R1764:1767 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1760:1763 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.Task var
+R1768:1771 prosa.classic.model.time Time time def
+var 1787:1797 TaskSetRTA.PerTaskAnalysis task_period
+R1804:1807 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1800:1803 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.Task var
+R1808:1811 prosa.classic.model.time Time time def
+var 1827:1839 TaskSetRTA.PerTaskAnalysis task_deadline
+R1846:1849 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1842:1845 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.Task var
+R1850:1853 prosa.classic.model.time Time time def
+var  1869:1871 TaskSetRTA.PerTaskAnalysis Job
+R1874:1879 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 1896:1906 TaskSetRTA.PerTaskAnalysis job_arrival
+R1912:1915 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1909:1911 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.Job var
+R1916:1919 prosa.classic.model.time Time time def
+var 1935:1946 TaskSetRTA.PerTaskAnalysis job_deadline
+R1952:1955 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1949:1951 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.Job var
+R1956:1959 prosa.classic.model.time Time time def
+var 1975:1982 TaskSetRTA.PerTaskAnalysis job_task
+R1988:1991 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1985:1987 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.Job var
+R1992:1995 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.Task var
+var 2110:2111 TaskSetRTA.PerTaskAnalysis ts
+R2114:2116 mathcomp.boot.seq <> seq abbrev
+R2118:2121 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.Task var
+var 2139:2161 TaskSetRTA.PerTaskAnalysis H_constrained_deadlines
+R2170:2195 prosa.classic.model.arrival.basic.task SporadicTaskset constrained_deadline_model def
+R2223:2224 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.ts var
+R2209:2221 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.task_deadline var
+R2197:2207 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.task_period var
+var 2319:2325 TaskSetRTA.PerTaskAnalysis arr_seq
+R2328:2343 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence def
+R2345:2347 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.Job var
+var 2365:2394 TaskSetRTA.PerTaskAnalysis H_arrival_times_are_consistent
+R2403:2430 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_times_are_consistent def
+R2444:2450 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.arr_seq var
+R2432:2442 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_arrival var
+var 2468:2494 TaskSetRTA.PerTaskAnalysis H_arrival_sequence_is_a_set
+R2497:2521 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrival_sequence_is_a_set def
+R2523:2529 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.arr_seq var
+var 2587:2605 TaskSetRTA.PerTaskAnalysis H_sporadic_arrivals
+R2614:2632 prosa.classic.model.arrival.basic.task_arrival TaskArrival sporadic_task_model def
+R2667:2673 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.arr_seq var
+R2658:2665 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_task var
+R2646:2656 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_arrival var
+R2634:2644 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.task_period var
+var 2751:2774 TaskSetRTA.PerTaskAnalysis H_jobs_come_from_taskset
+binder 2790:2790 <> j:27
+R2813:2816 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2793:2802 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R2812:2812 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> j:27 var
+R2804:2810 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.arr_seq var
+R2827:2831 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R2817:2824 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_task var
+R2826:2826 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> j:27 var
+R2832:2833 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.ts var
+var 2910:2940 TaskSetRTA.PerTaskAnalysis H_job_deadline_eq_task_deadline
+binder 2956:2956 <> j:30
+R2979:2982 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2959:2968 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R2978:2978 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> j:30 var
+R2970:2976 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.arr_seq var
+R2997:2999 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2983:2994 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_deadline var
+R2996:2996 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> j:30 var
+R3000:3012 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.task_deadline var
+R3015:3022 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_task var
+R3024:3024 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> j:30 var
+var 3113:3135 TaskSetRTA.PerTaskAnalysis job_suspension_duration
+R3138:3151 prosa.classic.model.suspension Suspension job_suspension def
+R3153:3155 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.Job var
+var 3171:3191 TaskSetRTA.PerTaskAnalysis task_suspension_bound
+R3198:3201 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3194:3197 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.Task var
+R3202:3205 prosa.classic.model.time Time time def
+var 3294:3311 TaskSetRTA.PerTaskAnalysis higher_eq_priority
+R3314:3322 prosa.classic.model.priority Priority FP_policy def
+R3324:3327 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.Task var
+var 3345:3367 TaskSetRTA.PerTaskAnalysis H_priority_is_reflexive
+R3370:3384 prosa.classic.model.priority Priority FP_is_reflexive def
+R3386:3403 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.higher_eq_priority var
+var 3421:3444 TaskSetRTA.PerTaskAnalysis H_priority_is_transitive
+R3447:3462 prosa.classic.model.priority Priority FP_is_transitive def
+R3464:3481 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.higher_eq_priority var
+var 3499:3517 TaskSetRTA.PerTaskAnalysis H_priority_is_total
+R3520:3544 prosa.classic.model.priority Priority FP_is_total_over_task_set def
+R3565:3566 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.ts var
+R3546:3563 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.higher_eq_priority var
+var 3577:3598 TaskSetRTA.PerTaskAnalysis job_higher_eq_priority
+R3603:3612 prosa.classic.model.priority Priority FP_to_JLDP def
+R3623:3640 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.higher_eq_priority var
+R3614:3621 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_task var
+var 3740:3773 TaskSetRTA.PerTaskAnalysis is_valid_suspension_aware_schedule
+R3784:3814 prosa.classic.model.schedule.uni.susp.valid_schedule ValidSuspensionAwareSchedule valid_suspension_aware_schedule def
+R3897:3919 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_suspension_duration var
+R3836:3857 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_higher_eq_priority var
+R3828:3834 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.arr_seq var
+R3816:3826 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_arrival var
+var 3930:3959 TaskSetRTA.PerTaskAnalysis is_valid_jitter_aware_schedule
+R3970:3996 prosa.classic.model.schedule.uni.jitter.valid_schedule ValidJitterAwareSchedule valid_jitter_aware_schedule def
+R4018:4039 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_higher_eq_priority var
+R4010:4016 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.arr_seq var
+R3998:4008 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_arrival var
+var 4149:4180 TaskSetRTA.PerTaskAnalysis is_task_response_time_bound_with
+binder 4182:4189 <> job_cost:45
+binder 4191:4195 <> sched:46
+R4206:4235 prosa.classic.model.schedule.uni.response_time ResponseTime is_response_time_bound_of_task def
+R4275:4279 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> sched:46 var
+R4267:4273 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.arr_seq var
+R4258:4265 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_task var
+R4249:4256 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> job_cost:45 var
+R4237:4247 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_arrival var
+var 4375:4379 TaskSetRTA.PerTaskAnalysis tsk_i
+R4382:4385 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.Task var
+var 4403:4413 TaskSetRTA.PerTaskAnalysis H_tsk_in_ts
+R4421:4425 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R4416:4420 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.tsk_i var
+R4426:4427 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.ts var
+var 4525:4538 TaskSetRTA.PerTaskAnalysis other_hep_task
+binder 4540:4548 <> tsk_other:51
+R4587:4591 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R4610:4610 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R4553:4570 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.higher_eq_priority var
+R4572:4580 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> tsk_other:51 var
+R4582:4586 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.tsk_i var
+R4601:4604 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R4592:4600 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> tsk_other:51 var
+R4605:4609 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.tsk_i var
+var 4822:4822 TaskSetRTA.PerTaskAnalysis R
+R4829:4832 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4825:4828 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.Task var
+R4833:4836 prosa.classic.model.time Time time def
+var 4857:4912 TaskSetRTA.PerTaskAnalysis H_valid_response_time_bound_of_hp_tasks_in_all_schedules
+binder 4928:4935 <> job_cost:54
+binder 4937:4941 <> sched:55
+R5001:5012 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4952:4985 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.is_valid_suspension_aware_schedule var
+R4987:4994 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> job_cost:54 var
+R4996:5000 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> sched:55 var
+binder 5020:5025 <> tsk_hp:56
+R5051:5064 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5044:5048 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R5038:5043 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> tsk_hp:56 var
+R5049:5050 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.ts var
+R5086:5099 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5065:5078 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.other_hep_task var
+R5080:5085 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> tsk_hp:56 var
+R5100:5131 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.is_task_response_time_bound_with var
+R5133:5140 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> job_cost:54 var
+R5142:5146 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> sched:55 var
+R5148:5153 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> tsk_hp:56 var
+R5156:5156 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.R var
+R5158:5163 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> tsk_hp:56 var
+var 5318:5332 TaskSetRTA.PerTaskAnalysis H_R_le_deadline
+R5342:5345 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R5335:5335 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.R var
+R5337:5341 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.tsk_i var
+R5346:5358 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.task_deadline var
+R5360:5364 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.tsk_i var
+var 5525:5541 TaskSetRTA.PerTaskAnalysis job_cost_positive
+binder 5543:5550 <> job_cost:61
+binder 5568:5568 <> j:62
+R5591:5594 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5571:5580 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R5590:5590 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> j:62 var
+R5582:5588 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.arr_seq var
+R5605:5607 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R5595:5602 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> job_cost:61 var
+R5604:5604 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> j:62 var
+var 5685:5705 TaskSetRTA.PerTaskAnalysis job_cost_le_task_cost
+binder 5707:5714 <> job_cost:63
+binder 5716:5724 <> task_cost:64
+binder 5742:5742 <> j:65
+R5773:5784 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5753:5762 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R5772:5772 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> j:65 var
+R5764:5770 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.arr_seq var
+R5795:5798 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R5785:5792 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> job_cost:63 var
+R5794:5794 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> j:65 var
+R5799:5807 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> task_cost:64 var
+R5810:5817 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_task var
+R5819:5819 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> j:65 var
+var 5892:5916 TaskSetRTA.PerTaskAnalysis job_jitter_le_task_jitter
+binder 5918:5927 <> job_jitter:66
+binder 5929:5939 <> task_jitter:67
+binder 5957:5957 <> j:68
+R5988:5999 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5968:5977 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R5987:5987 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> j:68 var
+R5979:5985 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.arr_seq var
+R6012:6015 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R6000:6009 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> job_jitter:66 var
+R6011:6011 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> j:68 var
+R6016:6026 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> task_jitter:67 var
+R6029:6036 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_task var
+R6038:6038 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> j:68 var
+def 6115:6136 TaskSetRTA valid_jobs_with_jitter
+binder 6138:6145 <> job_cost:69
+binder 6147:6156 <> job_jitter:70
+binder 6158:6166 <> task_cost:71
+binder 6168:6178 <> task_jitter:72
+R6215:6224 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R6189:6205 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_cost_positive var
+R6207:6214 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> job_cost:69 var
+R6265:6274 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R6225:6245 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_cost_le_task_cost var
+R6247:6254 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> job_cost:69 var
+R6256:6264 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> task_cost:71 var
+R6275:6299 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_jitter_le_task_jitter var
+R6301:6310 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> job_jitter:70 var
+R6312:6322 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> task_jitter:72 var
+var 6465:6482 TaskSetRTA.PerTaskAnalysis inflated_task_cost
+R6487:6511 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta TaskSetRTA inflated_task_cost def
+R6545:6549 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.tsk_i var
+R6523:6543 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.task_suspension_bound var
+R6513:6521 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.task_cost var
+var 6560:6570 TaskSetRTA.PerTaskAnalysis task_jitter
+R6575:6592 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta TaskSetRTA task_jitter def
+R6629:6629 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.R var
+R6623:6627 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.tsk_i var
+R6604:6621 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.higher_eq_priority var
+R6594:6602 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.task_cost var
+var 6843:6878 TaskSetRTA.PerTaskAnalysis H_valid_response_time_bound_of_tsk_i
+binder 6894:6901 <> job_cost:73
+binder 6903:6912 <> job_jitter:74
+binder 6914:6918 <> sched:75
+R7002:7013 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6929:6950 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta TaskSetRTA valid_jobs_with_jitter def
+R6952:6959 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> job_cost:73 var
+R6961:6970 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> job_jitter:74 var
+R6972:6989 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.inflated_task_cost var
+R6991:7001 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.task_jitter var
+R7070:7081 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7014:7043 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.is_valid_jitter_aware_schedule var
+R7045:7052 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> job_cost:73 var
+R7054:7063 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> job_jitter:74 var
+R7065:7069 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> sched:75 var
+R7082:7113 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.is_task_response_time_bound_with var
+R7115:7122 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> job_cost:73 var
+R7124:7128 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> sched:75 var
+R7130:7134 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.tsk_i var
+R7137:7137 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.R var
+R7139:7143 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.tsk_i var
+var 7215:7222 TaskSetRTA.PerTaskAnalysis job_cost
+R7228:7231 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7225:7227 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.Job var
+R7232:7235 prosa.classic.model.time Time time def
+var 7345:7354 TaskSetRTA.PerTaskAnalysis sched_susp
+R7357:7364 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule schedule def
+R7366:7368 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.Job var
+var 7386:7401 TaskSetRTA.PerTaskAnalysis H_valid_schedule
+R7404:7437 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.is_valid_suspension_aware_schedule var
+R7439:7446 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_cost var
+R7448:7457 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.sched_susp var
+var 7528:7546 TaskSetRTA.PerTaskAnalysis H_job_cost_positive
+binder 7562:7562 <> j:84
+R7585:7588 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7565:7574 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R7584:7584 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> j:84 var
+R7576:7582 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.arr_seq var
+R7599:7601 mathcomp.boot.ssrnat <> ::nat_scope:x_'>'_x not
+R7589:7596 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_cost var
+R7598:7598 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> j:84 var
+var 7669:7691 TaskSetRTA.PerTaskAnalysis H_job_cost_le_task_cost
+binder 7707:7707 <> j:87
+R7738:7749 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7718:7727 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R7737:7737 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> j:87 var
+R7729:7735 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.arr_seq var
+R7760:7763 mathcomp.boot.ssrnat <> ::nat_scope:x_'<='_x not
+R7750:7757 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_cost var
+R7759:7759 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> j:87 var
+R7764:7772 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.task_cost var
+R7775:7782 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_task var
+R7784:7784 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> j:87 var
+var 7895:7915 TaskSetRTA.PerTaskAnalysis H_dynamic_suspensions
+R7924:7947 prosa.classic.model.suspension Suspension dynamic_suspension_model def
+R7991:8011 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.task_suspension_bound var
+R7967:7989 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_suspension_duration var
+R7958:7965 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_task var
+R7949:7956 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_cost var
+prf 8203:8236 TaskSetRTA valid_response_time_bound_of_tsk_i
+R8245:8276 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.is_task_response_time_bound_with var
+R8278:8285 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_cost var
+R8287:8296 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.sched_susp var
+R8298:8302 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.tsk_i var
+R8305:8305 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.R var
+R8307:8311 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.tsk_i var
+R8339:8370 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> is_task_response_time_bound_with vardef
+R8386:8415 prosa.classic.model.schedule.uni.response_time ResponseTime is_response_time_bound_of_task def
+R8418:8446 prosa.classic.model.schedule.uni.response_time ResponseTime is_response_time_bound_of_job def
+R8613:8628 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.H_valid_schedule var
+R8613:8628 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.H_valid_schedule var
+R8613:8628 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.H_valid_schedule var
+R8815:8817 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8802:8812 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_arrival var
+R8818:8818 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.R var
+R8820:8824 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.tsk_i var
+R8815:8817 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R8802:8812 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_arrival var
+R8818:8818 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.R var
+R8820:8824 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.tsk_i var
+R8996:9005 prosa.classic.util.induction <> strong_ind thm
+R8996:9005 prosa.classic.util.induction <> strong_ind thm
+R9396:9404 mathcomp.boot.ssrnat <> ltn_add2r thm
+binder 9152:9153 <> j0:92
+R9188:9202 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9167:9176 prosa.classic.model.arrival.basic.arrival_sequence ArrivalSequence arrives_in def
+R9186:9187 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> j0:92 var
+R9178:9184 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.arr_seq var
+R9222:9236 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9214:9216 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9203:9210 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_task var
+R9212:9213 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> j0:92 var
+R9217:9221 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.tsk_i var
+R9267:9281 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9251:9253 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R9237:9247 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_arrival var
+R9249:9250 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> j0:92 var
+R9254:9264 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_arrival var
+R9282:9293 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completed_by def
+R9333:9335 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R9319:9329 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_arrival var
+R9331:9332 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> j0:92 var
+R9336:9336 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.R var
+R9338:9342 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.tsk_i var
+R9315:9316 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> j0:92 var
+R9304:9313 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.sched_susp var
+R9295:9302 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_cost var
+R9396:9404 mathcomp.boot.ssrnat <> ltn_add2r thm
+R9396:9404 mathcomp.boot.ssrnat <> ltn_add2r thm
+R9461:9480 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership actual_response_time def
+R9523:9523 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.R var
+R9512:9521 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.sched_susp var
+R9503:9510 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_cost var
+R9494:9501 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_task var
+R9482:9492 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_arrival var
+R9461:9480 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership actual_response_time def
+R9523:9523 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.R var
+R9512:9521 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.sched_susp var
+R9503:9510 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_cost var
+R9494:9501 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_task var
+R9482:9492 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_arrival var
+R9461:9480 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership actual_response_time def
+R9523:9523 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.R var
+R9512:9521 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.sched_susp var
+R9503:9510 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_cost var
+R9494:9501 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_task var
+R9482:9492 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_arrival var
+R9567:9593 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership.reduction inflated_job_cost def
+R9604:9626 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_suspension_duration var
+R9595:9602 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_cost var
+R9567:9593 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership.reduction inflated_job_cost def
+R9604:9626 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_suspension_duration var
+R9595:9602 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_cost var
+R9567:9593 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership.reduction inflated_job_cost def
+R9604:9626 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_suspension_duration var
+R9595:9602 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_cost var
+R9654:9673 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership.reduction job_jitter def
+R9739:9746 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_cost var
+R9720:9737 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.higher_eq_priority var
+R9687:9694 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_task var
+R9675:9685 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_arrival var
+R9654:9673 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership.reduction job_jitter def
+R9739:9746 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_cost var
+R9720:9737 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.higher_eq_priority var
+R9687:9694 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_task var
+R9675:9685 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_arrival var
+R9654:9673 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership.reduction job_jitter def
+R9739:9746 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_cost var
+R9720:9737 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.higher_eq_priority var
+R9687:9694 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_task var
+R9675:9685 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_arrival var
+R9853:9863 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.task_period var
+R9884:9896 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.task_deadline var
+R9924:9935 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_deadline var
+R9951:9958 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_task var
+R9968:9969 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.ts var
+R9992:9998 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.arr_seq var
+R10024:10041 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.higher_eq_priority var
+R10078:10100 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_suspension_duration var
+R9784:9822 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction RTAByReduction valid_response_time_bound_in_sched_susp thm
+R9853:9863 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.task_period var
+R9884:9896 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.task_deadline var
+R9924:9935 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_deadline var
+R9951:9958 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_task var
+R9968:9969 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.ts var
+R9992:9998 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.arr_seq var
+R10024:10041 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.higher_eq_priority var
+R10078:10100 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_suspension_duration var
+R9784:9822 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction RTAByReduction valid_response_time_bound_in_sched_susp thm
+R10274:10276 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R10260:10270 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_arrival var
+R10277:10277 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.R var
+R10279:10283 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.tsk_i var
+R10228:10247 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completion_monotonic thm
+R10274:10276 mathcomp.boot.ssrnat <> ::nat_scope:x_'+'_x not
+R10260:10270 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.job_arrival var
+R10277:10277 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.R var
+R10279:10283 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.tsk_i var
+R10228:10247 prosa.classic.model.schedule.uni.schedule UniprocessorSchedule completion_monotonic thm
+R10360:10368 mathcomp.boot.ssrnat <> leq_add2l thm
+R10370:10400 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.H_job_deadline_eq_task_deadline var
+R10360:10368 mathcomp.boot.ssrnat <> leq_add2l thm
+R10360:10368 mathcomp.boot.ssrnat <> leq_add2l thm
+R10370:10400 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.H_job_deadline_eq_task_deadline var
+R10370:10400 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta <> TaskSetRTA.PerTaskAnalysis.H_job_deadline_eq_task_deadline var
+R10528:10563 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction RTAByReduction.reduction_prop sched_jitter_is_valid thm
+R10528:10563 prosa.classic.analysis.uni.susp.dynamic.jitter.rta_by_reduction RTAByReduction.reduction_prop sched_jitter_is_valid thm
+R10639:10678 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership ts_membership_inflated_job_cost_positive thm
+R10639:10678 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership ts_membership_inflated_job_cost_positive thm
+R10712:10764 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership ts_membership_inflated_job_cost_le_inflated_task_cost thm
+R10712:10764 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership ts_membership_inflated_job_cost_le_inflated_task_cost thm
+R10808:10846 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership ts_membership_job_jitter_le_task_jitter thm
+R10808:10846 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_membership TaskSetMembership ts_membership_job_jitter_le_task_jitter thm
+R10885:10899 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta TaskSetRTA.PerTaskAnalysis <> sec
+R10907:10916 prosa.classic.analysis.uni.susp.dynamic.jitter.taskset_rta TaskSetRTA <> mod

@@ -1,0 +1,225 @@
+DIGEST 52acecbf8f65c63aa63aeed648d9c5f9
+Fprosa.classic.util.find_seq
+R29:37 mathcomp.boot.ssreflect <> <> lib
+R39:45 mathcomp.boot.ssrbool <> <> lib
+R47:52 mathcomp.boot.ssrnat <> <> lib
+R54:59 mathcomp.boot.eqtype <> <> lib
+R61:63 mathcomp.boot.seq <> <> lib
+R65:69 mathcomp.boot.bigop <> <> lib
+R71:73 mathcomp.boot.div <> <> lib
+R91:112 prosa.classic.util.all <> <> lib
+sec 125:132 <> find_seq
+var  146:146 find_seq T
+R148:153 mathcomp.boot.eqtype Equality.Exports eqType abbrev
+var 168:168 find_seq P
+R172:174 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R171:171 prosa.classic.util.find_seq <> find_seq.T var
+R175:178 Corelib.Init.Datatypes <> bool ind
+def 192:196 <> findP
+binder 198:198 <> l:4
+R213:213 prosa.classic.util.find_seq <> l:4 var
+R227:229 Corelib.Init.Datatypes <> nil constr
+R234:237 Corelib.Init.Datatypes <> None constr
+R246:247 mathcomp.boot.seq <> ::seq_scope:x_'::'_x not
+R253:255 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R259:264 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R271:276 Corelib.ssr.ssreflect <> ::boolean_if_scope:'if'_x_'then'_x_'else'_x not
+R256:256 prosa.classic.util.find_seq <> find_seq.P var
+R265:268 Corelib.Init.Datatypes <> Some constr
+R277:281 prosa.classic.util.find_seq <> findP:5 def
+prf 303:312 <> findP_FIFO
+R329:331 mathcomp.boot.seq <> seq abbrev
+R333:333 prosa.classic.util.find_seq <> find_seq.T var
+binder 327:327 <> l:7
+binder 336:336 <> x:8
+binder 338:338 <> y:9
+R355:358 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R348:350 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R345:345 prosa.classic.util.find_seq <> find_seq.P var
+R347:347 prosa.classic.util.find_seq <> y:9 var
+R351:354 Corelib.Init.Datatypes <> true constr
+R366:369 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R360:364 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R359:359 prosa.classic.util.find_seq <> y:9 var
+R365:365 prosa.classic.util.find_seq <> l:7 var
+R376:383 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R371:374 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R370:370 prosa.classic.util.find_seq <> x:8 var
+R375:375 prosa.classic.util.find_seq <> y:9 var
+R400:407 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R391:393 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R384:388 prosa.classic.util.find_seq <> findP def
+R390:390 prosa.classic.util.find_seq <> l:7 var
+R394:397 Corelib.Init.Datatypes <> Some constr
+R399:399 prosa.classic.util.find_seq <> x:8 var
+R430:432 mathcomp.boot.ssrnat <> ::nat_scope:x_'<'_x not
+R408:411 mathcomp.boot.seq <> find def
+R429:429 prosa.classic.util.find_seq <> l:7 var
+binder 418:418 <> j:10
+R424:425 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R423:423 prosa.classic.util.find_seq <> j:10 var
+R426:426 prosa.classic.util.find_seq <> x:8 var
+R433:436 mathcomp.boot.seq <> find def
+R454:454 prosa.classic.util.find_seq <> l:7 var
+binder 443:443 <> j:11
+R449:450 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R448:448 prosa.classic.util.find_seq <> j:11 var
+R451:451 prosa.classic.util.find_seq <> y:9 var
+R537:538 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R555:556 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R537:538 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R555:556 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R555:556 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R606:608 mathcomp.boot.eqtype <> eqP def
+R621:623 mathcomp.boot.eqtype <> eqP def
+R681:683 mathcomp.boot.eqtype <> eqP def
+R766:772 mathcomp.boot.seq <> in_cons thm
+R766:772 mathcomp.boot.seq <> in_cons thm
+R766:772 mathcomp.boot.seq <> in_cons thm
+R794:796 Corelib.ssr.ssrbool <> orP thm
+R800:802 mathcomp.boot.eqtype <> eqP def
+R830:832 mathcomp.boot.eqtype <> eqP def
+R877:877 prosa.classic.util.find_seq <> find_seq.P var
+R877:877 prosa.classic.util.find_seq <> find_seq.P var
+R916:918 mathcomp.boot.eqtype <> eqP def
+prf 977:986 <> find_uniql
+R1003:1003 prosa.classic.util.find_seq <> find_seq.T var
+binder 1001:1001 <> x:12
+binder 1006:1007 <> l1:13
+binder 1009:1010 <> l2:14
+R1031:1038 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1017:1020 mathcomp.boot.seq <> uniq def
+R1024:1027 mathcomp.boot.seq <> ::seq_scope:x_'++'_x not
+R1022:1023 prosa.classic.util.find_seq <> l1:13 var
+R1028:1029 prosa.classic.util.find_seq <> l2:14 var
+R1047:1054 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1040:1044 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R1039:1039 prosa.classic.util.find_seq <> x:12 var
+R1045:1046 prosa.classic.util.find_seq <> l2:14 var
+R1055:1056 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R1058:1062 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R1057:1057 prosa.classic.util.find_seq <> x:12 var
+R1063:1064 prosa.classic.util.find_seq <> l1:13 var
+R1155:1156 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R1155:1156 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R1171:1173 mathcomp.boot.eqtype <> eqP def
+R1171:1173 mathcomp.boot.eqtype <> eqP def
+R1208:1211 Corelib.ssr.ssrbool <> andP thm
+R1208:1211 Corelib.ssr.ssrbool <> andP thm
+R1226:1229 Corelib.ssr.ssrbool <> negP thm
+R1226:1229 Corelib.ssr.ssrbool <> negP thm
+R1302:1308 mathcomp.boot.seq <> mem_cat thm
+R1317:1319 Corelib.ssr.ssrbool <> orP thm
+R1302:1308 mathcomp.boot.seq <> mem_cat thm
+R1302:1308 mathcomp.boot.seq <> mem_cat thm
+R1317:1319 Corelib.ssr.ssrbool <> orP thm
+R1374:1380 mathcomp.boot.seq <> in_cons thm
+R1374:1380 mathcomp.boot.seq <> in_cons thm
+R1374:1380 mathcomp.boot.seq <> in_cons thm
+R1409:1411 Corelib.ssr.ssrbool <> orP thm
+R1415:1417 mathcomp.boot.eqtype <> eqP def
+prf 1481:1489 <> find_uniq
+R1506:1506 prosa.classic.util.find_seq <> find_seq.T var
+binder 1504:1504 <> x:15
+binder 1509:1510 <> l1:16
+binder 1512:1513 <> l2:17
+R1534:1541 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1520:1523 mathcomp.boot.seq <> uniq def
+R1527:1530 mathcomp.boot.seq <> ::seq_scope:x_'++'_x not
+R1525:1526 prosa.classic.util.find_seq <> l1:16 var
+R1531:1532 prosa.classic.util.find_seq <> l2:17 var
+R1550:1557 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1543:1547 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R1542:1542 prosa.classic.util.find_seq <> x:15 var
+R1548:1549 prosa.classic.util.find_seq <> l2:17 var
+R1584:1586 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1558:1560 mathcomp.boot.seq <> has def
+R1582:1583 prosa.classic.util.find_seq <> l1:16 var
+R1571:1571 prosa.classic.util.find_seq <> find_seq.T var
+binder 1567:1568 <> x':18
+R1577:1578 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R1575:1576 prosa.classic.util.find_seq <> x':18 var
+R1579:1579 prosa.classic.util.find_seq <> x:15 var
+R1587:1591 Corelib.Init.Datatypes <> false constr
+R1626:1629 Corelib.ssr.ssrbool <> negP thm
+R1632:1635 Corelib.ssr.ssrbool <> negP thm
+R1638:1642 mathcomp.boot.seq <> hasPn thm
+R1626:1629 Corelib.ssr.ssrbool <> negP thm
+R1632:1635 Corelib.ssr.ssrbool <> negP thm
+R1638:1642 mathcomp.boot.seq <> hasPn thm
+R1656:1663 Corelib.ssr.ssrbool <> prop_in1 def
+R1684:1693 prosa.classic.util.find_seq <> find_uniql thm
+R1684:1693 prosa.classic.util.find_seq <> find_uniql thm
+R1745:1746 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R1745:1746 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R1781:1783 mathcomp.boot.eqtype <> eqP def
+prf 1848:1859 <> findP_in_seq
+R1876:1878 mathcomp.boot.seq <> seq abbrev
+R1880:1880 prosa.classic.util.find_seq <> find_seq.T var
+binder 1874:1874 <> l:19
+binder 1883:1883 <> x:20
+R1906:1913 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1897:1899 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1890:1894 prosa.classic.util.find_seq <> findP def
+R1896:1896 prosa.classic.util.find_seq <> l:19 var
+R1900:1903 Corelib.Init.Datatypes <> Some constr
+R1905:1905 prosa.classic.util.find_seq <> x:20 var
+R1917:1920 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R1914:1914 prosa.classic.util.find_seq <> find_seq.P var
+R1916:1916 prosa.classic.util.find_seq <> x:20 var
+R1922:1926 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R1921:1921 prosa.classic.util.find_seq <> x:20 var
+R1927:1927 prosa.classic.util.find_seq <> l:19 var
+R2055:2055 prosa.classic.util.find_seq <> find_seq.P var
+R2055:2055 prosa.classic.util.find_seq <> find_seq.P var
+R2246:2246 prosa.classic.util.find_seq <> find_seq.P var
+R2246:2246 prosa.classic.util.find_seq <> find_seq.P var
+R2330:2336 mathcomp.boot.seq <> in_cons thm
+R2330:2336 mathcomp.boot.seq <> in_cons thm
+R2330:2336 mathcomp.boot.seq <> in_cons thm
+R2355:2357 Corelib.ssr.ssrbool <> orP thm
+R2355:2357 Corelib.ssr.ssrbool <> orP thm
+R2408:2414 mathcomp.boot.seq <> in_cons thm
+R2408:2414 mathcomp.boot.seq <> in_cons thm
+R2408:2414 mathcomp.boot.seq <> in_cons thm
+R2423:2425 Corelib.ssr.ssrbool <> orP thm
+R2423:2425 Corelib.ssr.ssrbool <> orP thm
+prf 2457:2476 <> findP_notSome_in_seq
+R2493:2495 mathcomp.boot.seq <> seq abbrev
+R2497:2497 prosa.classic.util.find_seq <> find_seq.T var
+binder 2491:2491 <> l:21
+binder 2500:2500 <> x:22
+R2524:2531 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2514:2517 mathcomp.boot.eqtype <> ::bool_scope:x_'!='_x not
+R2507:2511 prosa.classic.util.find_seq <> findP def
+R2513:2513 prosa.classic.util.find_seq <> l:21 var
+R2518:2521 Corelib.Init.Datatypes <> Some constr
+R2523:2523 prosa.classic.util.find_seq <> x:22 var
+R2539:2545 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2533:2537 Corelib.ssr.ssrbool <> ::bool_scope:x_'\in'_x not
+R2532:2532 prosa.classic.util.find_seq <> x:22 var
+R2538:2538 prosa.classic.util.find_seq <> l:21 var
+R2551:2554 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R2546:2547 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R2548:2548 prosa.classic.util.find_seq <> find_seq.P var
+R2550:2550 prosa.classic.util.find_seq <> x:22 var
+R2555:2561 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R2563:2564 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 2562:2562 <> y:23
+R2572:2574 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2565:2569 prosa.classic.util.find_seq <> findP def
+R2571:2571 prosa.classic.util.find_seq <> l:21 var
+R2575:2578 Corelib.Init.Datatypes <> Some constr
+R2580:2580 prosa.classic.util.find_seq <> y:23 var
+R2705:2705 prosa.classic.util.find_seq <> find_seq.P var
+R2705:2705 prosa.classic.util.find_seq <> find_seq.P var
+R2781:2782 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R2781:2782 mathcomp.boot.eqtype <> ::bool_scope:x_'=='_x not
+R2815:2817 mathcomp.boot.eqtype <> eqP def
+R2865:2871 mathcomp.boot.seq <> in_cons thm
+R2865:2871 mathcomp.boot.seq <> in_cons thm
+R2865:2871 mathcomp.boot.seq <> in_cons thm
+R2885:2887 Corelib.ssr.ssrbool <> orP thm
+R2952:2954 mathcomp.boot.eqtype <> eqP def
+R2968:2970 mathcomp.boot.eqtype <> eqP def
+R3122:3129 prosa.classic.util.find_seq find_seq <> sec
