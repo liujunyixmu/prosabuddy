@@ -11,6 +11,65 @@ import { tmpdir } from "../fixture/fixture"
 
 Log.init({ print: false })
 
+const ROLLOVER = 1_786_706_395_136
+
+function promptMessage(
+  role: "user" | "assistant",
+  id: string,
+  created: number,
+  text: string,
+): MessageV2.WithParts {
+  const info = role === "user"
+    ? {
+        id,
+        sessionID: "ses_rollover",
+        role,
+        time: { created },
+        agent: "prover",
+        model: { providerID: "test", modelID: "test" },
+      }
+    : {
+        id,
+        sessionID: "ses_rollover",
+        role,
+        time: { created, completed: created + 1 },
+        parentID: "msg_parent",
+        modelID: "test",
+        providerID: "test",
+        mode: "",
+        agent: "prover",
+        path: { cwd: "/tmp", root: "/tmp" },
+        cost: 0,
+        tokens: { input: 0, output: 0, reasoning: 0, cache: { read: 0, write: 0 } },
+        finish: "stop",
+      }
+  return {
+    info: info as MessageV2.Info,
+    parts: [{
+      id: `prt_${id}`,
+      sessionID: "ses_rollover",
+      messageID: id,
+      type: "text",
+      text,
+    }],
+  }
+}
+
+describe("session.prompt queued user messages", () => {
+  test("does not rewrite historical prompts when legacy IDs roll over", () => {
+    const historical = promptMessage("user", "msg_ffffff973001AAAAAAAAAAAAAA", ROLLOVER - 2_000, "original prompt")
+    const finished = promptMessage("assistant", "msg_000002652001BBBBBBBBBBBBBB", ROLLOVER + 1_000, "answer")
+    const queued = promptMessage("user", "msg_000003652001CCCCCCCCCCCCCC", ROLLOVER + 2_000, "new request")
+    const messages = [historical, finished, queued]
+
+    SessionPrompt.wrapQueuedUserMessages(messages, finished.info as MessageV2.Assistant)
+
+    expect((historical.parts[0] as MessageV2.TextPart).text).toBe("original prompt")
+    expect((queued.parts[0] as MessageV2.TextPart).text).toContain("<system-reminder>")
+    expect((queued.parts[0] as MessageV2.TextPart).text).toContain("new request")
+  })
+})
+
 describe("session.prompt accepted-plan materialization tool gate", () => {
   test("keeps lookup tools available during the soft reminder grace window", () => {
     const tools: Record<string, unknown> = {

@@ -465,6 +465,18 @@ export namespace MessageV2 {
   })
   export type Info = z.infer<typeof Info>
 
+  /** Compare messages by their persisted creation time, using the ID only to
+   * provide a deterministic order for messages created in the same millisecond. */
+  export function compareChronologically(a: Pick<Info, "id" | "time">, b: Pick<Info, "id" | "time">) {
+    if (a.time.created !== b.time.created) return a.time.created < b.time.created ? -1 : 1
+    if (a.id === b.id) return 0
+    return a.id < b.id ? -1 : 1
+  }
+
+  export function isAfter(a: Pick<Info, "id" | "time">, b: Pick<Info, "id" | "time">) {
+    return compareChronologically(a, b) > 0
+  }
+
   export const Event = {
     Updated: BusEvent.define(
       "message.updated",
@@ -912,7 +924,7 @@ export namespace MessageV2 {
           .select()
           .from(MessageTable)
           .where(eq(MessageTable.session_id, sessionID))
-          .orderBy(desc(MessageTable.time_created))
+          .orderBy(desc(MessageTable.time_created), desc(MessageTable.id))
           .limit(size)
           .offset(offset)
           .all(),
@@ -927,7 +939,7 @@ export namespace MessageV2 {
             .select()
             .from(PartTable)
             .where(inArray(PartTable.message_id, ids))
-            .orderBy(PartTable.message_id, PartTable.id)
+            .orderBy(PartTable.message_id, PartTable.time_created, PartTable.id)
             .all(),
         )
         for (const row of partRows) {
@@ -958,7 +970,12 @@ export namespace MessageV2 {
 
   export const parts = fn(Identifier.schema("message"), async (message_id) => {
     const rows = Database.use((db) =>
-      db.select().from(PartTable).where(eq(PartTable.message_id, message_id)).orderBy(PartTable.id).all(),
+      db
+        .select()
+        .from(PartTable)
+        .where(eq(PartTable.message_id, message_id))
+        .orderBy(PartTable.time_created, PartTable.id)
+        .all(),
     )
     return rows.map(
       (row) => ({ ...row.data, id: row.id, sessionID: row.session_id, messageID: row.message_id }) as MessageV2.Part,

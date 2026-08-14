@@ -10,6 +10,61 @@ import { Identifier } from "../../src/id/id"
 const projectRoot = path.join(__dirname, "../..")
 Log.init({ print: false })
 
+describe("session chronology across legacy ID rollover", () => {
+  test("orders messages and parts by persisted creation time", async () => {
+    await Instance.provide({
+      directory: projectRoot,
+      fn: async () => {
+        const session = await Session.create({})
+        const earlierID = "msg_ffffff973001AAAAAAAAAAAAAA"
+        const laterID = "msg_000002652001BBBBBBBBBBBBBB"
+
+        await Session.updateMessage({
+          id: earlierID,
+          sessionID: session.id,
+          role: "user",
+          time: { created: 1_786_706_394_000 },
+          agent: "user",
+          model: { providerID: "test", modelID: "test" },
+        })
+        await Session.updateMessage({
+          id: laterID,
+          sessionID: session.id,
+          role: "user",
+          time: { created: 1_786_706_396_000 },
+          agent: "user",
+          model: { providerID: "test", modelID: "test" },
+        })
+
+        await Session.updatePart({
+          id: "prt_ffffff973001AAAAAAAAAAAAAA",
+          sessionID: session.id,
+          messageID: earlierID,
+          type: "text",
+          text: "first",
+        })
+        await Bun.sleep(2)
+        await Session.updatePart({
+          id: "prt_000002652001BBBBBBBBBBBBBB",
+          sessionID: session.id,
+          messageID: earlierID,
+          type: "text",
+          text: "second",
+        })
+
+        const messages = await Session.messages({ sessionID: session.id })
+        expect(messages.map((message) => message.info.id)).toEqual([earlierID, laterID])
+        expect((await MessageV2.parts(earlierID)).map((part) => part.id)).toEqual([
+          "prt_ffffff973001AAAAAAAAAAAAAA",
+          "prt_000002652001BBBBBBBBBBBBBB",
+        ])
+
+        await Session.remove(session.id)
+      },
+    })
+  })
+})
+
 describe("session.started event", () => {
   test("should emit session.started event when session is created", async () => {
     await Instance.provide({

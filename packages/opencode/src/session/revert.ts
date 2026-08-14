@@ -59,7 +59,8 @@ export namespace SessionRevert {
       revert.snapshot = session.revert?.snapshot ?? (await Snapshot.track())
       await Snapshot.revert(patches)
       if (revert.snapshot) revert.diff = await Snapshot.diff(revert.snapshot)
-      const rangeMessages = all.filter((msg) => msg.info.id >= revert!.messageID)
+      const revertIndex = all.findIndex((msg) => msg.info.id === revert!.messageID)
+      const rangeMessages = revertIndex >= 0 ? all.slice(revertIndex) : []
       const diffs = await SessionSummary.computeDiff({ messages: rangeMessages })
       await Storage.write(["session_diff", input.sessionID], diffs)
       Bus.publish(Session.Event.Diff, {
@@ -96,12 +97,18 @@ export namespace SessionRevert {
     const preserve = [] as MessageV2.WithParts[]
     const remove = [] as MessageV2.WithParts[]
     let target: MessageV2.WithParts | undefined
-    for (const msg of msgs) {
-      if (msg.info.id < messageID) {
+    const targetIndex = msgs.findIndex((msg) => msg.info.id === messageID)
+    if (targetIndex < 0) {
+      log.warn("revert target message no longer exists", { sessionID, messageID })
+      await Session.clearRevert(sessionID)
+      return
+    }
+    for (const [index, msg] of msgs.entries()) {
+      if (index < targetIndex) {
         preserve.push(msg)
         continue
       }
-      if (msg.info.id > messageID) {
+      if (index > targetIndex) {
         remove.push(msg)
         continue
       }

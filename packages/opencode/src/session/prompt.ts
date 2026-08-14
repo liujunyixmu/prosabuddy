@@ -92,6 +92,30 @@ export namespace SessionPrompt {
     "pdf-read",
   ] as const
 
+  /** Ephemerally mark user messages that actually arrived after the last
+   * completed assistant turn. Persisted creation time is authoritative because
+   * legacy message IDs roll over and are not globally chronological. */
+  export function wrapQueuedUserMessages(
+    messages: MessageV2.WithParts[],
+    lastFinished: MessageV2.Assistant,
+  ) {
+    for (const msg of messages) {
+      if (msg.info.role !== "user" || !MessageV2.isAfter(msg.info, lastFinished)) continue
+      for (const part of msg.parts) {
+        if (part.type !== "text" || part.ignored || part.synthetic) continue
+        if (!part.text.trim()) continue
+        part.text = [
+          "<system-reminder>",
+          "The user sent the following message:",
+          part.text,
+          "",
+          "Please address this message and continue with your tasks.",
+          "</system-reminder>",
+        ].join("\n")
+      }
+    }
+  }
+
   /** @internal Exported for testing. */
   export function applyAcceptedPlanMaterializationToolGate(
     tools: Record<string, unknown>,
@@ -812,7 +836,7 @@ export namespace SessionPrompt {
         lastAssistant?.finish &&
         !["tool-calls", "unknown"].includes(lastAssistant.finish) &&
         tasks.length === 0 &&
-        lastUser.id < lastAssistant.id
+        MessageV2.isAfter(lastAssistant, lastUser)
       ) {
         const scheduledLemma =
           lastUser.agent === "prover"
@@ -1299,21 +1323,7 @@ export namespace SessionPrompt {
 
       // Ephemerally wrap queued user messages with a reminder to stay on track
       if (!isFirstLoop && lastFinished) {
-        for (const msg of msgs) {
-          if (msg.info.role !== "user" || msg.info.id <= lastFinished.id) continue
-          for (const part of msg.parts) {
-            if (part.type !== "text" || part.ignored || part.synthetic) continue
-            if (!part.text.trim()) continue
-            part.text = [
-              "<system-reminder>",
-              "The user sent the following message:",
-              part.text,
-              "",
-              "Please address this message and continue with your tasks.",
-              "</system-reminder>",
-            ].join("\n")
-          }
-        }
+        wrapQueuedUserMessages(msgs, lastFinished)
       }
 
       await Plugin.trigger("experimental.chat.messages.transform", {}, { messages: msgs })
@@ -1794,11 +1804,12 @@ export namespace SessionPrompt {
         system.push(STRUCTURED_OUTPUT_SYSTEM_PROMPT)
       }
       const historyCacheOptions = cacheProjectionOptions(agent)
+      const restoredAnchorIndex = restored ? msgs.findIndex((msg) => msg.info.id === restored.anchor) : -1
       const history = restored
         ? [
             ...restored.messages,
             ...MessageV2.toModelMessages(
-              msgs.filter((msg) => msg.info.id > restored.anchor),
+              restoredAnchorIndex >= 0 ? msgs.slice(restoredAnchorIndex + 1) : msgs,
               model,
               { cache: historyCacheOptions },
             ),
