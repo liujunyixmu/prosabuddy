@@ -717,8 +717,17 @@ export namespace ProviderTransform {
       }
     }
 
-    if (input.model.providerID === "openai" || input.providerOptions?.setCacheKey) {
+    if (input.model.providerID === "openai") {
       result["promptCacheKey"] = input.sessionID
+    } else if (input.providerOptions?.setCacheKey) {
+      // The official OpenAI SDK accepts camelCase provider options and maps
+      // them to the wire format. The generic OpenAI-compatible SDK forwards
+      // unknown provider options verbatim, so it needs the API field name.
+      if (input.model.api.npm === "@ai-sdk/openai-compatible") {
+        result["prompt_cache_key"] = input.sessionID
+      } else {
+        result["promptCacheKey"] = input.sessionID
+      }
     }
 
     if (input.model.api.npm === "@ai-sdk/google" || input.model.api.npm === "@ai-sdk/google-vertex") {

@@ -71,6 +71,42 @@ describe("session.prompt queued user messages", () => {
 })
 
 describe("session.prompt accepted-plan materialization tool gate", () => {
+  test("stops only after five stagnant materialization observations and resets on hard progress", () => {
+    let state: SessionPrompt.MaterializationLivelockState | undefined
+    for (let index = 0; index < 4; index++) {
+      const observation = SessionPrompt.observeMaterializationLivelock(state, {
+        key: "plan-a",
+        missing_count: 5,
+        certificate_count: 0,
+      })
+      state = observation.state
+      expect(observation.tripped).toBe(false)
+    }
+
+    const fifth = SessionPrompt.observeMaterializationLivelock(state, {
+      key: "plan-a",
+      missing_count: 5,
+      certificate_count: 0,
+    })
+    expect(fifth.tripped).toBe(true)
+
+    const progressed = SessionPrompt.observeMaterializationLivelock(fifth.state, {
+      key: "plan-a",
+      missing_count: 4,
+      certificate_count: 0,
+    })
+    expect(progressed.tripped).toBe(false)
+    expect(progressed.state.stagnant_observations).toBe(1)
+
+    const certified = SessionPrompt.observeMaterializationLivelock(progressed.state, {
+      key: "plan-a",
+      missing_count: 4,
+      certificate_count: 1,
+    })
+    expect(certified.tripped).toBe(false)
+    expect(certified.state.stagnant_observations).toBe(1)
+  })
+
   test("keeps lookup tools available during the soft reminder grace window", () => {
     const tools: Record<string, unknown> = {
       read: {},

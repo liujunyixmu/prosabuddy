@@ -47,6 +47,28 @@ describe("ProviderTransform.options - setCacheKey", () => {
     expect(result.promptCacheKey).toBe(sessionID)
   })
 
+  for (const modelID of ["gpt-5.4", "gpt-5.6-luna"]) {
+    test(`should use the wire-format prompt_cache_key for OpenAI-compatible ${modelID}`, () => {
+      const model = {
+        ...mockModel,
+        id: `codexproxy/${modelID}`,
+        providerID: "codexproxy",
+        api: {
+          id: modelID,
+          url: "http://codexproxy.test/v1",
+          npm: "@ai-sdk/openai-compatible",
+        },
+      }
+      const result = ProviderTransform.options({
+        model,
+        sessionID,
+        providerOptions: { setCacheKey: true },
+      })
+      expect(result.prompt_cache_key).toBe(sessionID)
+      expect(result.promptCacheKey).toBeUndefined()
+    })
+  }
+
   test("should not set promptCacheKey when providerOptions.setCacheKey is false", () => {
     const result = ProviderTransform.options({
       model: mockModel,

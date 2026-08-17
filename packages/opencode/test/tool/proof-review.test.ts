@@ -1,7 +1,12 @@
 import { describe, expect, test } from "bun:test"
 import { createHash } from "crypto"
 import type { Tool } from "../../src/tool/tool"
-import { ProofPlanTool, reviewProofPlan, semanticPlanFingerprint } from "../../src/tool/proof-plan"
+import {
+  ProofPlanTool,
+  normalizeProofPlanIdentifiers,
+  reviewProofPlan,
+  semanticPlanFingerprint,
+} from "../../src/tool/proof-plan"
 import { ProofPlan, type ProofPlanStep as ProofPlanStepValue } from "../../src/tool/proof-schema"
 import { Instance } from "../../src/project/instance"
 import { Session } from "../../src/session"
@@ -52,6 +57,86 @@ function node(overrides: Partial<ProofPlanStepValue> = {}): ProofPlanStepValue {
 }
 
 describe("tool.proof_plan bounded semantic review", () => {
+  test("canonicalizes human proof labels into machine-safe node IDs and rewrites DAG references", () => {
+    const first = node({
+      node_id: undefined,
+      paper_step_id: "If. feasible",
+      depends_on: [],
+      consumers: ["If. condition 2 (epsilon)"],
+    })
+    const second = node({
+      node_id: undefined,
+      paper_step_id: "If. condition 2 (epsilon)",
+      depends_on: ["If. feasible"],
+      consumers: ["parent_composition"],
+      dependency_uses: [{ producer_node: "If. feasible", output_anchor: "Hfeasible" }],
+    })
+
+    const normalized = normalizeProofPlanIdentifiers(
+      [first, second],
+      [{ from: "If. feasible", to: "If. condition 2 (epsilon)" }],
+    )
+
+    expect(normalized.nodes.map((entry) => entry.node_id)).toEqual([
+      "if_feasible",
+      "if_condition_2_epsilon",
+    ])
+    expect(normalized.nodes[0]?.consumers).toEqual(["if_condition_2_epsilon"])
+    expect(normalized.nodes[1]?.depends_on).toEqual(["if_feasible"])
+    expect(normalized.nodes[1]?.dependency_uses[0]?.producer_node).toBe("if_feasible")
+    expect(normalized.edges).toEqual([{ from: "if_feasible", to: "if_condition_2_epsilon" }])
+  })
+
+  test("keeps existing machine IDs stable and resolves slug collisions deterministically", () => {
+    const normalized = normalizeProofPlanIdentifiers([
+      node({ node_id: "N1", paper_step_id: "First" }),
+      node({ node_id: undefined, paper_step_id: "Only if. case" }),
+      node({ node_id: undefined, paper_step_id: "Only if case" }),
+    ])
+
+    expect(normalized.nodes.map((entry) => entry.node_id)).toEqual([
+      "N1",
+      "only_if_case",
+      "only_if_case_2",
+    ])
+  })
+
+  test("normalizes legacy candidate and DAG arrays that are absent from recovered plans", () => {
+    const legacy = {
+      ...node(),
+      depends_on: undefined,
+      consumers: undefined,
+      dependency_uses: undefined,
+      prosa_candidate_lemmas: [
+        {
+          name: "legacy_fact",
+          library: "prosa",
+          reason: "persisted before premise_sources was introduced",
+        },
+      ],
+      mathcomp_candidate_lemmas: undefined,
+    } as unknown as ProofPlanStepValue
+
+    const normalized = normalizeProofPlanIdentifiers([legacy]).nodes[0]!
+    expect(normalized.depends_on).toEqual([])
+    expect(normalized.consumers).toEqual([])
+    expect(normalized.dependency_uses).toEqual([])
+    expect(normalized.prosa_candidate_lemmas[0]?.premise_sources).toEqual([])
+    expect(normalized.mathcomp_candidate_lemmas).toEqual([])
+    expect(() =>
+      reviewProofPlan({
+        theorem: "demo",
+        root_goal: "A /\\ B",
+        nodes: [legacy],
+        edges: [],
+        ready_nodes: [],
+        addresses_failure_ids: [],
+        route_overrides: [],
+        planner_contract: { marker_fields_required_for_lemma_delegation: [], note: "legacy fixture" },
+      } as any),
+    ).not.toThrow()
+  })
+
   test("rejects a theorem-equivalent delegated leaf", () => {
     const plan = ProofPlan.parse({
       theorem: "demo",
@@ -1107,7 +1192,63 @@ describe("tool.proof_plan bounded semantic review", () => {
     })
   })
 
-  test("does not close materialization when only another theorem changes", async () => {
+  test("recognizes an already matching skeleton on the first accepted plan revision", async () => {
+    await using tmp = await tmpdir({ git: true })
+    await Instance.provide({
+      directory: tmp.path,
+      fn: async () => {
+        const file = `${tmp.path}/accepted-existing-skeleton.v`
+        const source = [
+          "Lemma demo (A B : Prop) : A /\\ B.",
+          "Proof.",
+          "(* proof_region begin owner: lemma admit_id: gap-a theorem: demo kind: semantic_bridge target: Ha plan_node: leaf-1 depends_on: none source: context-derived input: A output: Ha layer: semantic expected: local_fact normal_form: \"A\" evidence: mathcomp:I *)",
+          "have Ha : A.",
+          "{ admit. }",
+          "(* proof_region end admit_id: gap-a *)",
+          "admit.",
+          "Admitted.",
+          "",
+        ].join("\n")
+        await Bun.write(file, source)
+        const session = await Session.create({})
+        SessionProof.set(session.id, file, { line: 0, character: 0 }, "manual")
+        const tool = await ProofPlanTool.init()
+
+        const accepted = await tool.execute(
+          {
+            theorem: "demo",
+            root_goal: "A /\\ B",
+            nodes: [
+              node({
+                depends_on: [],
+                required_hypotheses: [],
+                target_normal_form: "A",
+              }),
+            ],
+            edges: [],
+          },
+          context(session.id),
+        )
+
+        expect(accepted.metadata.recommended_action).toBe("materialize_once")
+        const state = SessionProofWorkflow.getDecompositionPlanState(session.id, file)
+        expect(state?.repair_revision_number ?? 0).toBe(0)
+        expect(state?.materialization_review?.status).toBe("matched")
+        expect(
+          SessionProofWorkflow.previewDecompositionMaterialization(session.id, file, source)?.ready,
+        ).toBe(true)
+        expect((await SessionProofWorkflow.suggestNextSubtask(session.id, []))?.task.lemma_assignment?.admit_id).toBe(
+          "gap-a",
+        )
+
+        SessionProofWorkflow.clear(session.id)
+        SessionProof.clear(session.id)
+        await Session.remove(session.id)
+      },
+    })
+  })
+
+  test("keeps an already matched materialization stable when only another theorem changes", async () => {
     await using tmp = await tmpdir({ git: true })
     await Instance.provide({
       directory: tmp.path,
@@ -1139,10 +1280,10 @@ describe("tool.proof_plan bounded semantic review", () => {
         const helperOnlyChange = `${target}\nLemma helper : True.\nProof. idtac; exact I. Qed.\n`
         await Bun.write(file, helperOnlyChange)
         const refreshed = SessionProofWorkflow.refresh(session.id, file, helperOnlyChange).state.decomposition_plan
-        expect(refreshed?.materialization_review).toBeUndefined()
+        expect(refreshed?.materialization_review?.status).toBe("matched")
         expect(
-          SessionProofWorkflow.previewDecompositionMaterialization(session.id, file, helperOnlyChange)?.review,
-        ).toBeUndefined()
+          SessionProofWorkflow.previewDecompositionMaterialization(session.id, file, helperOnlyChange)?.review?.status,
+        ).toBe("matched")
 
         await Session.remove(session.id)
       },
@@ -1402,8 +1543,8 @@ describe("tool.proof_plan bounded semantic review", () => {
         )
         expect(accepted.metadata.planning_status).toBe("accepted")
         expect(
-          SessionProofWorkflow.previewDecompositionMaterialization(session.id, file, preacceptedSource)?.review,
-        ).toBeUndefined()
+          SessionProofWorkflow.previewDecompositionMaterialization(session.id, file, preacceptedSource)?.review?.status,
+        ).toBe("matched")
         await Session.remove(session.id)
       },
     })

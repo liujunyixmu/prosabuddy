@@ -138,7 +138,9 @@ export type ProofPlanCompositionCertificate = z.infer<typeof ProofPlanCompositio
 /** Structured proof plan step extracted from proof.txt / paper-proof.txt */
 export const ProofPlanStep = z.object({
   paper_step_id: z.string(),
-  node_id: z.string().optional(),
+  node_id: z.string().optional().describe(
+    "Machine identifier used by DAG edges and proof_region plan_node markers. The proof_plan tool canonicalizes missing or unsafe values to ^[A-Za-z][A-Za-z0-9_-]*$; keep the human-readable title in paper_step_id.",
+  ),
   kind: ObligationKind.optional(),
   layer: ProofPlanLayer.optional(),
   paper_claim: z.string(),
@@ -281,6 +283,7 @@ export const CoqSessionState = z.object({
   source_hash: z.string().optional(),
   certified_prefix_fingerprint: z.string().optional(),
   region_admit_id: z.string().optional(),
+  region_binding: z.enum(["assigned", "explicit"]).optional(),
   proof_position: z.object({ line: z.number().int().nonnegative(), character: z.number().int().nonnegative() }).optional(),
   goal_fingerprint: z.string().optional(),
   semantic_goal_fingerprint: z.string().optional(),

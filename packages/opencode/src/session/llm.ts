@@ -223,7 +223,7 @@ export namespace LLM {
       maxOutputTokens,
       providerOptions,
       cache: {
-        promptCacheKey: providerOptionsInput?.promptCacheKey,
+        promptCacheKey: providerOptionsInput?.promptCacheKey ?? providerOptionsInput?.prompt_cache_key,
         providerOptionKeys: Object.keys(providerOptionsInput ?? {}),
       },
     })

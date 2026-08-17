@@ -12,12 +12,12 @@ import {
 import type { Tool } from "../../src/tool/tool"
 import { tmpdir } from "../fixture/fixture"
 
-function context(sessionID: string): Tool.Context {
+function context(sessionID: string, agent: Tool.Context["agent"] = "lemma"): Tool.Context {
   return {
     sessionID,
     messageID: `msg_${sessionID}`,
     callID: `call_${sessionID}`,
-    agent: "lemma",
+    agent,
     abort: AbortSignal.any([]),
     messages: [],
     metadata: () => {},
@@ -282,6 +282,69 @@ describe("tool.coq_session context inspection", () => {
         expect(opened.output).toContain("1 goal")
         expect(preambles[0]?.trimEnd().endsWith("{")).toBe(true)
         expect(preambles[0]).not.toContain("admit. (* admit_id: gap_1 *)")
+
+        await tool.execute({ op: "close" }, ctx)
+        SessionProofWorkflow.clear(session.id)
+        SessionProof.clear(session.id)
+        await Session.remove(session.id)
+      },
+    })
+  })
+
+  test("parent explicit proof-region open can step without a lemma assignment", async () => {
+    await using tmp = await tmpdir({ git: true })
+
+    await Instance.provide({
+      directory: tmp.path,
+      fn: async () => {
+        const file = `${tmp.path}/explicit-region.v`
+        const source = assignedRegionSource()
+        const session = await Session.create({})
+        await Bun.write(file, source)
+        SessionProof.set(session.id, file, { line: 1, character: 0 }, "manual")
+
+        contextSpy = spyOn(CoqProject, "context").mockImplementation(async (_file, theorem, preamble) => ({
+          root: tmp.path,
+          file,
+          theorem,
+          project_path: null,
+          flags: [],
+          cwd: tmp.path,
+          preamble,
+        }))
+        runSpy = spyOn(CoqProject, "run").mockImplementation(async (code) =>
+          code.includes("exact I.")
+            ? { exit: 0, stdout: "No more goals.", stderr: "" }
+            : { exit: 0, stdout: "1 goal\n\n============================\nTrue", stderr: "" },
+        )
+
+        const tool = await CoqSessionTool.init()
+        const ctx = context(session.id, "prover")
+        const opened = await tool.execute(
+          {
+            op: "open",
+            file,
+            theorem: "demo",
+            scope: "assigned_region",
+            admit_id: "gap_1",
+            proof_position: { line: 5, character: 2 },
+            expected_goal: "True",
+          },
+          ctx,
+        )
+        expect(opened.metadata).toMatchObject({
+          scope: "assigned_region",
+          region_binding: "explicit",
+          admit_id: "gap_1",
+        })
+
+        const stepped = await tool.execute({ op: "step", tactic: "exact I." }, ctx)
+        expect(stepped.metadata).toMatchObject({
+          kind: "proof_progress",
+          admit_id: "gap_1",
+        })
+        expect(stepped.output).toContain("[proof_progress]")
+        expect(stepped.output).not.toContain("active assignment")
 
         await tool.execute({ op: "close" }, ctx)
         SessionProofWorkflow.clear(session.id)

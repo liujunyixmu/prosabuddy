@@ -119,6 +119,75 @@ describe("session.proof-workflow lemma scheduling", () => {
     })
   })
 
+  test("rebases an active repair onto a changed staged region with the same identity", async () => {
+    await using tmp = await tmpdir({ git: true })
+    await Instance.provide({
+      directory: tmp.path,
+      fn: async () => {
+        const file = `${tmp.path}/repair-revision.v`
+        const source = [
+          "Lemma demo : True.",
+          "Proof.",
+          regionBegin("gap_1", "Hone"),
+          "have Hone : True.",
+          "{ admit. }",
+          "(* proof_region end admit_id: gap_1 *)",
+          "exact Hone.",
+          "Admitted.",
+          "",
+        ].join("\n")
+        const staged = source.replace("{ admit. }", "{ first [exact I | admit]. }")
+        await Bun.write(file, source)
+
+        const session = await Session.create({})
+        SessionProof.set(session.id, file, { line: 1, character: 0 }, "manual")
+        const initial = SessionProofWorkflow.refresh(session.id, file, source).state
+        SessionProofWorkflow.set(session.id, {
+          ...initial,
+          queue: initial.queue.map((item) => ({
+            ...item,
+            status: "escalated" as const,
+            escalation_type: "needs_subgoal_remodel" as const,
+            escalation_reason: "repair the current local proof",
+          })),
+          updated: Date.now(),
+        })
+        const scheduled = await SessionProofWorkflow.planNextSubtask(session.id, [], source)
+        const assignment = scheduled?.proof_repair_assignment
+        expect(assignment?.admit_id).toBe("gap_1")
+
+        await ProofEditTransaction.begin({
+          sessionID: session.id,
+          parentSessionID: session.id,
+          agent: "prover",
+          file,
+          source,
+          scope: { kind: "theorem_body", theorem: "demo" },
+        })
+        ProofEditTransaction.stage({ sessionID: session.id, file, before: source, after: staged })
+
+        const rebased = await SessionProofWorkflow.assertRepairAssignmentCurrent(
+          session.id,
+          file,
+          assignment!,
+          staged,
+        )
+        expect(rebased.region_fingerprint).not.toBe(assignment?.region_fingerprint)
+        expect(rebased.source_fingerprint).not.toBe(assignment?.source_fingerprint)
+        expect(rebased.continuation_count).toBe(assignment?.continuation_count)
+        expect(SessionProofWorkflow.get(session.id)?.queue[0]?.status).toBe("escalated")
+        expect(SessionProofWorkflow.get(session.id)?.active_repair?.region_fingerprint).toBe(
+          rebased.region_fingerprint,
+        )
+
+        ProofEditTransaction.abort(session.id)
+        SessionProofWorkflow.clear(session.id)
+        SessionProof.clear(session.id)
+        await Session.remove(session.id)
+      },
+    })
+  })
+
   test("does not dispatch an unvalidated active transaction revision", async () => {
     await using tmp = await tmpdir({ git: true })
     await Instance.provide({
@@ -219,6 +288,84 @@ describe("session.proof-workflow lemma scheduling", () => {
           target_normal_form: "True",
           shape_evidence: ["mathcomp:I"],
         })
+
+        SessionProofWorkflow.clear(session.id)
+        SessionProof.clear(session.id)
+        await Session.remove(session.id)
+      },
+    })
+  })
+
+  test("dispatches a low-risk arithmetic leaf using the actual target when its plan normal form is stale", async () => {
+    await using tmp = await tmpdir({ git: true })
+    await Instance.provide({
+      directory: tmp.path,
+      fn: async () => {
+        const file = `${tmp.path}/stale-arithmetic-shape.v`
+        const source = [
+          "Lemma demo : True.",
+          "Proof.",
+          "(* proof_region begin owner: lemma admit_id: gap_1 theorem: demo kind: final_arithmetic target: Harith plan_node: node_Harith depends_on: theorem_context source: local-arithmetic input: theorem_context output: Harith layer: local_arithmetic expected: local_fact normal_form: \"False\" evidence: mathcomp:I *)",
+          "have Harith : True.",
+          "{ admit. }",
+          "(* proof_region end admit_id: gap_1 *)",
+          "exact Harith.",
+          "Admitted.",
+          "",
+        ].join("\n")
+        await Bun.write(file, source)
+
+        const session = await Session.create({})
+        SessionProof.set(session.id, file, { line: 1, character: 0 }, "manual")
+        const assignment = await SessionProofWorkflow.assertFreshLemmaAssignmentLocality(
+          session.id,
+          file,
+          { admit_id: "gap_1" },
+          source,
+        )
+
+        expect(assignment.goal).toBe("True")
+        expect(assignment.obligation?.target_normal_form).toBe("True")
+        expect(assignment.obligation?.locality_check?.expected_lemma_shape).toBe("True")
+        expect(assignment.replace).toContain("target_shape_review warning")
+        expect(assignment.replace).toContain("actual exported Coq target as authoritative")
+
+        SessionProofWorkflow.clear(session.id)
+        SessionProof.clear(session.id)
+        await Session.remove(session.id)
+      },
+    })
+  })
+
+  test("keeps a stale semantic-bridge target shape fail-closed", async () => {
+    await using tmp = await tmpdir({ git: true })
+    await Instance.provide({
+      directory: tmp.path,
+      fn: async () => {
+        const file = `${tmp.path}/stale-semantic-shape.v`
+        const source = [
+          "Lemma demo : True.",
+          "Proof.",
+          "(* proof_region begin owner: lemma admit_id: gap_1 theorem: demo kind: semantic_bridge target: Hsemantic plan_node: node_Hsemantic depends_on: theorem_context source: paper-step input: theorem_context output: Hsemantic layer: semantic expected: local_fact normal_form: \"False\" evidence: prosa:checked_fact *)",
+          "have Hsemantic : True.",
+          "{ admit. }",
+          "(* proof_region end admit_id: gap_1 *)",
+          "exact Hsemantic.",
+          "Admitted.",
+          "",
+        ].join("\n")
+        await Bun.write(file, source)
+
+        const session = await Session.create({})
+        SessionProof.set(session.id, file, { line: 1, character: 0 }, "manual")
+        await expect(
+          SessionProofWorkflow.assertFreshLemmaAssignmentLocality(
+            session.id,
+            file,
+            { admit_id: "gap_1" },
+            source,
+          ),
+        ).rejects.toThrow("target_shape_review")
 
         SessionProofWorkflow.clear(session.id)
         SessionProof.clear(session.id)
@@ -686,6 +833,88 @@ describe("session.proof-workflow lemma scheduling", () => {
     }
   })
 
+  test("keeps rejected plan materialization fail-closed when the runner mode is missing", async () => {
+    await using tmp = await tmpdir({ git: true })
+    const previousMode = process.env.OPENCODE_PROOF_WORKFLOW_MODE
+    delete process.env.OPENCODE_PROOF_WORKFLOW_MODE
+
+    try {
+      await Instance.provide({
+        directory: tmp.path,
+        fn: async () => {
+          const file = `${tmp.path}/fail-closed.v`
+          const session = await Session.create({})
+          const source = boundedTheorem()
+          await Bun.write(file, source)
+          SessionProof.set(session.id, file, { line: 3, character: 0 }, "manual")
+          const plan = ProofPlan.parse({
+            theorem: "demo",
+            root_goal: "True",
+            nodes: [
+              {
+                paper_step_id: "bad-root",
+                node_id: "bad-root",
+                paper_claim: "delegate the complete theorem",
+                formal_goal: "True",
+                candidate_lemmas: [],
+                prosa_candidate_lemmas: [],
+                mathcomp_candidate_lemmas: [],
+                required_hypotheses: [],
+                fallback_plan: [],
+                done_when: "the theorem is delegated",
+                depends_on: [],
+                consumers: ["parent_composition"],
+                transformations: [],
+                delegation_candidate: true,
+              },
+            ],
+            edges: [],
+            ready_nodes: ["bad-root"],
+            planner_contract: { marker_fields_required_for_lemma_delegation: [], note: "fixture" },
+          })
+          const rejected = ProofPlanReview.parse({
+            status: "reject",
+            semantic_fingerprint: "runner-mode-missing-rejection",
+            hard_errors: [
+              {
+                severity: "hard_error",
+                code: "parent_equivalent_leaf",
+                message: "the theorem root cannot be delegated",
+                node_id: "bad-root",
+              },
+            ],
+            warnings: [],
+            materialization_allowed: false,
+            max_semantic_revisions: 4,
+          })
+          SessionProofWorkflow.recordDecompositionPlanAttempt({
+            sessionID: session.id,
+            file,
+            source,
+            plan,
+            review: rejected,
+          })
+
+          expect(() =>
+            SessionProofWorkflow.assertBoundProofBodyMutationAllowed({
+              sessionID: session.id,
+              file,
+              before: source,
+              after: boundedTheorem("  exact I.\nQed."),
+            }),
+          ).toThrow("decomposition_plan_materialization_rejection")
+
+          SessionProofWorkflow.clear(session.id)
+          SessionProof.clear(session.id)
+          await Session.remove(session.id)
+        },
+      })
+    } finally {
+      if (previousMode === undefined) delete process.env.OPENCODE_PROOF_WORKFLOW_MODE
+      else process.env.OPENCODE_PROOF_WORKFLOW_MODE = previousMode
+    }
+  })
+
   test("makes the second exhausted planning generation final", async () => {
     await using tmp = await tmpdir({ git: true })
     await Instance.provide({
@@ -861,6 +1090,40 @@ describe("session.proof-workflow lemma scheduling", () => {
         SessionProofWorkflow.clear(parent.id)
         SessionProof.clear(parent.id)
         await Session.remove(parent.id)
+      },
+    })
+  })
+
+  test("rebases a bound proof snapshot after a sibling revision that preserves the theorem declaration", async () => {
+    await using tmp = await tmpdir({ git: true })
+
+    await Instance.provide({
+      directory: tmp.path,
+      fn: async () => {
+        const file = `${tmp.path}/theorem.v`
+        const session = await Session.create({})
+        const source = boundedTheorem()
+        const siblingRevision = source.replace(
+          "Lemma demo : True.",
+          "Lemma helper_before_demo : True.\nProof. exact I. Qed.\n\nLemma demo : True.",
+        )
+        const proposed = siblingRevision.replace("  admit.\nAdmitted.", "  exact I.\nQed.")
+        await Bun.write(file, source)
+        SessionProof.set(session.id, file, { line: 3, character: 0 }, "manual")
+
+        expect(() =>
+          SessionProofWorkflow.assertBoundProofBodyMutationAllowed({
+            sessionID: session.id,
+            file,
+            before: siblingRevision,
+            after: proposed,
+          }),
+        ).not.toThrow()
+        expect(SessionProof.get(session.id)?.canonicalSource).toBe(siblingRevision)
+
+        SessionProofWorkflow.clear(session.id)
+        SessionProof.clear(session.id)
+        await Session.remove(session.id)
       },
     })
   })
@@ -1460,6 +1723,86 @@ describe("session.proof-workflow lemma scheduling", () => {
     })
   })
 
+  test("hands structural sibling-syntax repair back to the parent after the first non-materializing child", async () => {
+    await using tmp = await tmpdir({ git: true })
+
+    await Instance.provide({
+      directory: tmp.path,
+      fn: async () => {
+        const file = `${tmp.path}/theorem.v`
+        const session = await Session.create({})
+        await Bun.write(
+          file,
+          [
+            "Lemma demo : True.",
+            "Proof.",
+            regionBegin("gap_1", "Hgap"),
+            "have Hgap : True.",
+            "{ admit. }",
+            "(* proof_region end admit_id: gap_1 *)",
+            "exact Hgap.",
+            "Admitted.",
+            "",
+          ].join("\n"),
+        )
+
+        SessionProof.set(session.id, file, { line: 1, character: 0 }, "manual")
+        const scheduled = await SessionProofWorkflow.planNextSubtask(session.id, [])
+        if (!scheduled?.lemma_assignment) throw new Error("missing lemma assignment")
+        const structural = {
+          file,
+          theorem: "demo",
+          admit_id: "gap_1",
+          escalation_type: "blocked_by_sibling_syntax" as const,
+          reason: "checkpoint-coqc scaffold gate failed: preceding have leaves two focused goals",
+          region_start_line: scheduled.lemma_assignment.editable_region?.start_line,
+          region_end_line: scheduled.lemma_assignment.editable_region?.end_line,
+          region_fingerprint: scheduled.lemma_assignment.editable_region?.region_fingerprint,
+          original_unresolved: true,
+          accepted_progress_baseline_at: Date.now(),
+          continuation_count: 0,
+        }
+        const state = SessionProofWorkflow.get(session.id)!
+        state.active_repair = structural
+        state.queue[0]!.status = "escalated"
+        state.queue[0]!.escalation_type = structural.escalation_type
+        state.queue[0]!.escalation_reason = structural.reason
+        SessionProofWorkflow.set(session.id, state)
+        await SessionProofWorkflow.assessFallbackGuard(session.id, [])
+
+        const messages = [{
+          info: { id: "msg_structural_yield", role: "assistant" },
+          parts: [{
+            type: "tool",
+            tool: "task",
+            state: {
+              status: "completed",
+              input: { subagent_type: "prover", proof_repair_assignment: structural },
+              output: [
+                "repair_child_no_materialization: returning the structural blocker",
+                "repeated_compiler_signature=compiler-focus; signature_streak=3",
+              ].join("\n"),
+              title: "Repair gap_1",
+              metadata: { proof_scope: "theorem_repair", proof_repair_assignment: structural },
+              time: { start: 1, end: 2 },
+            },
+          }],
+        }] as any
+
+        const assessed = await SessionProofWorkflow.assessFallbackGuard(session.id, messages)
+        expect(assessed?.tripped).toBe(true)
+        expect((assessed as any)?.parentRepairTakeoverRequired).toBe(true)
+        expect(assessed?.message).toContain("identical_repair_failures=1/1")
+        expect(assessed?.message).toContain("non-local structural blocker")
+        expect(SessionProofWorkflow.get(session.id)?.fallback_guard?.dispatch_lock_scope).toBe("repair_child_yield")
+
+        SessionProofWorkflow.clear(session.id)
+        SessionProof.clear(session.id)
+        await Session.remove(session.id)
+      },
+    })
+  })
+
   test("carries identical repair-child incidents into a fresh root session", async () => {
     await using tmp = await tmpdir({ git: true })
 
@@ -1737,6 +2080,98 @@ describe("session.proof-workflow lemma scheduling", () => {
         SessionProofWorkflow.clear(parentID)
         SessionProof.clear(parentID)
         await Session.remove(parentID)
+      },
+    })
+  })
+
+  test("yields an ordinary lemma child after prolonged no-certificate work and immediately schedules a fresh child", async () => {
+    await using tmp = await tmpdir({ git: true })
+
+    await Instance.provide({
+      directory: tmp.path,
+      fn: async () => {
+        const file = `${tmp.path}/theorem.v`
+        const parent = await Session.create({})
+        const child = await Session.create({ parentID: parent.id })
+        const source = [
+          "Lemma demo : True.",
+          "Proof.",
+          regionBegin("gap_1", "Hgap"),
+          "have Hgap : True.",
+          "{ admit. }",
+          "(* proof_region end admit_id: gap_1 *)",
+          "exact Hgap.",
+          "Admitted.",
+          "",
+        ].join("\n")
+        await Bun.write(file, source)
+
+        SessionProof.set(parent.id, file, { line: 1, character: 0 }, "manual")
+        const scheduled = await SessionProofWorkflow.planNextSubtask(parent.id, [], source)
+        if (!scheduled?.lemma_assignment) throw new Error("missing lemma assignment")
+        SessionProof.inherit(parent.id, child.id)
+        SessionProofWorkflow.bindActiveLemmaAssignment(
+          child.id,
+          scheduled.lemma_assignment,
+          source,
+          "fresh",
+          parent.id,
+        )
+
+        const lemmaActions = (count: number) => [{
+          info: { id: `msg_lemma_${count}`, role: "assistant" },
+          parts: Array.from({ length: count }, (_, index) => ({
+            type: "tool",
+            tool: index % 2 === 0 ? "coq_session" : "read",
+            state: {
+              status: "completed",
+              input: index % 2 === 0 ? { op: "step" } : { filePath: file },
+              output: "local investigation",
+              title: "local investigation",
+              metadata: {},
+              time: { start: index + 1, end: index + 2 },
+            },
+          })),
+        }] as any
+
+        const warning = await SessionProofWorkflow.assessFallbackGuard(child.id, lemmaActions(32))
+        expect(warning?.tripped).toBe(false)
+        expect((warning as any)?.lemmaChildWarning).toBe(true)
+
+        const stopped = await SessionProofWorkflow.assessFallbackGuard(child.id, lemmaActions(60))
+        expect(stopped?.tripped).toBe(true)
+        expect((stopped as any)?.lemmaChildNoMaterialization).toBe(true)
+        expect(stopped?.message).toContain("lemma child reached the semantic liveness cutoff")
+
+        const parentMessages = [{
+          info: { id: "msg_lemma_yield", role: "assistant" },
+          parts: [{
+            type: "tool",
+            tool: "task",
+            state: {
+              status: "completed",
+              input: { subagent_type: "lemma", lemma_assignment: scheduled.lemma_assignment },
+              output: "lemma_child_no_materialization: yielded staged transaction to parent",
+              title: "Prove gap_1",
+              metadata: {
+                sessionId: child.id,
+                proof_scope: "lemma",
+                lemma_assignment: scheduled.lemma_assignment,
+              },
+              time: { start: 1, end: 2 },
+            },
+          }],
+        }] as any
+        const fresh = await SessionProofWorkflow.planNextSubtask(parent.id, parentMessages, source)
+        expect(fresh?.agent).toBe("lemma")
+        expect(fresh?.lemma_assignment?.admit_id).toBe("gap_1")
+        expect(fresh?.task_id).toBeUndefined()
+
+        for (const session of [parent, child]) {
+          SessionProofWorkflow.clear(session.id)
+          SessionProof.clear(session.id)
+          await Session.remove(session.id)
+        }
       },
     })
   })
@@ -2745,6 +3180,89 @@ describe("session.proof-workflow lemma scheduling", () => {
         SessionProof.clear(child.id)
         await Session.remove(parent.id)
         await Session.remove(child.id)
+      },
+    })
+  })
+
+  test("attributes a newly certified region to its active lemma child and inherits the parent progress baseline", async () => {
+    await using tmp = await tmpdir({ git: true })
+
+    await Instance.provide({
+      directory: tmp.path,
+      fn: async () => {
+        const file = `${tmp.path}/theorem.v`
+        const parent = await Session.create({})
+        const child = await Session.create({ parentID: parent.id })
+        const pending = [
+          "Lemma demo : True.",
+          "Proof.",
+          regionBegin("gap_1", "Hone"),
+          "have Hone : True.",
+          "{ admit. }",
+          "(* proof_region end admit_id: gap_1 *)",
+          regionBegin("gap_2", "Htwo"),
+          "have Htwo : True.",
+          "{ admit. }",
+          "(* proof_region end admit_id: gap_2 *)",
+          "exact Hone.",
+          "Admitted.",
+          "",
+        ].join("\n")
+        const solvedFirst = pending.replace("have Hone : True.\n{ admit. }", "have Hone : True.\n{ exact I. }")
+        await Bun.write(file, pending)
+
+        SessionProof.set(parent.id, file, { line: 1, character: 0 }, "manual")
+        const scheduled = await SessionProofWorkflow.planNextSubtask(parent.id, [], pending)
+        if (!scheduled?.lemma_assignment) throw new Error("missing lemma assignment")
+        const parentBaseline = SessionProofWorkflow.classifyCoqcSuccess(parent.id, file, pending, {
+          action: "unchanged",
+          compiler_signature: "compiler-baseline",
+          next_action: "retain baseline",
+          affected_sessions: 0,
+        })
+        expect(parentBaseline.proof_progress.status).toBe("baseline")
+
+        SessionProof.inherit(parent.id, child.id)
+        SessionProofWorkflow.bindActiveLemmaAssignment(
+          child.id,
+          scheduled.lemma_assignment,
+          pending,
+          "fresh",
+          parent.id,
+        )
+        const inherited = SessionProofWorkflow.classifyCoqcSuccess(child.id, file, pending, {
+          action: "unchanged",
+          compiler_signature: "compiler-baseline",
+          next_action: "retain baseline",
+          affected_sessions: 0,
+        })
+        expect(inherited.proof_progress.status).toBe("stalled")
+        expect(inherited.proof_progress.previous?.unfinished_count).toBe(
+          parentBaseline.proof_progress.current.unfinished_count,
+        )
+
+        const lifecycle = await SessionProofWorkflow.recordCompilerResult({
+          sessionID: child.id,
+          file,
+          source: solvedFirst,
+          validator: "checkpoint-coqc",
+          ok: true,
+          validated_source_current: true,
+        })
+        expect(lifecycle).toMatchObject({ action: "certified", admit_id: "gap_1" })
+        const progress = SessionProofWorkflow.classifyCoqcSuccess(child.id, file, solvedFirst, lifecycle)
+        expect(progress.proof_progress).toMatchObject({
+          status: "advanced",
+          accepted: true,
+          level: "hard",
+          workspace_committable: true,
+        })
+
+        for (const session of [parent, child]) {
+          SessionProofWorkflow.clear(session.id)
+          SessionProof.clear(session.id)
+          await Session.remove(session.id)
+        }
       },
     })
   })

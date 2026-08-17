@@ -247,8 +247,8 @@ export async function auditPlanLibraryCandidates(input: {
   // unbounded coqc burst and create resource-driven false timeouts.
   return mapLimit(input.nodes, 1, async (node) => {
     const candidates = [
-      ...node.prosa_candidate_lemmas.map((candidate) => ({ kind: "prosa" as const, candidate })),
-      ...node.mathcomp_candidate_lemmas.map((candidate) => ({ kind: "mathcomp" as const, candidate })),
+      ...(node.prosa_candidate_lemmas ?? []).map((candidate) => ({ kind: "prosa" as const, candidate })),
+      ...(node.mathcomp_candidate_lemmas ?? []).map((candidate) => ({ kind: "mathcomp" as const, candidate })),
     ]
     const audited = await mapLimit(candidates, 2, async ({ kind, candidate }) => ({
       kind,

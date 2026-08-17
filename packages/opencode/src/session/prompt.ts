@@ -160,6 +160,46 @@ export namespace SessionPrompt {
     }
   }
 
+  export type MaterializationLivelockState = {
+    key: string
+    best_missing_count: number
+    best_certificate_count: number
+    stagnant_observations: number
+  }
+
+  /** @internal Exported for testing. */
+  export function observeMaterializationLivelock(
+    previous: MaterializationLivelockState | undefined,
+    input: {
+      key: string
+      missing_count: number
+      certificate_count: number
+      limit?: number
+    },
+  ) {
+    const limit = input.limit ?? 5
+    if (!previous || previous.key !== input.key) {
+      const state: MaterializationLivelockState = {
+        key: input.key,
+        best_missing_count: input.missing_count,
+        best_certificate_count: input.certificate_count,
+        stagnant_observations: 1,
+      }
+      return { state, tripped: state.stagnant_observations >= limit }
+    }
+
+    const hardProgress =
+      input.missing_count < previous.best_missing_count ||
+      input.certificate_count > previous.best_certificate_count
+    const state: MaterializationLivelockState = {
+      key: input.key,
+      best_missing_count: Math.min(previous.best_missing_count, input.missing_count),
+      best_certificate_count: Math.max(previous.best_certificate_count, input.certificate_count),
+      stagnant_observations: hardProgress ? 1 : previous.stagnant_observations + 1,
+    }
+    return { state, tripped: state.stagnant_observations >= limit }
+  }
+
   // Agents that receive live proof context refreshes before tool execution
   const proofAgents = new Set(["prover", "fixer", "lemma", "whole-lemma", "explorer"])
   const proofEditTools = new Set(["edit", "multiedit", "write"])
@@ -800,6 +840,7 @@ export namespace SessionPrompt {
     // Note: On session resumption, state is reset but outputFormat is preserved
     // on the user message and will be retrieved from lastUser below
     let structuredOutput: unknown | undefined
+    let materializationLivelockState: MaterializationLivelockState | undefined
 
     let firstLoop = true
     const session = await Session.get(sessionID)
@@ -1103,7 +1144,10 @@ export namespace SessionPrompt {
       if (fallbackGuard?.tripped && !parentRepairTakeoverRequired) {
         const repairChildNoMaterialization =
           "repairChildNoMaterialization" in fallbackGuard && fallbackGuard.repairChildNoMaterialization === true
-        const stalledRepairYield = repairChildNoMaterialization
+        const lemmaChildNoMaterialization =
+          "lemmaChildNoMaterialization" in fallbackGuard && fallbackGuard.lemmaChildNoMaterialization === true
+        const childNoMaterialization = repairChildNoMaterialization || lemmaChildNoMaterialization
+        const stalledRepairYield = childNoMaterialization
           ? ProofEditTransaction.yieldStalledRepair({
               sessionID,
               handoffToSessionID: session.parentID,
@@ -1149,13 +1193,17 @@ export namespace SessionPrompt {
           text: [
             repairChildNoMaterialization
               ? "repair_child_no_materialization: runtime is returning this scoped repair to the parent prover after a generous no-materialization window."
+              : lemmaChildNoMaterialization
+                ? "lemma_child_no_materialization: runtime is returning this scoped lemma transaction to the parent after the semantic liveness cutoff."
               : "stalled_wide_fallback: runtime stopped this proof turn before another broad fallback batch.",
             fallbackGuard.message ? `reason: ${fallbackGuard.message}` : undefined,
             `admit_id: ${fallbackGuard.assignment.admit_id}`,
-            `required_scope: theorem_repair`,
+            `required_scope: ${lemmaChildNoMaterialization ? "fresh_lemma_retry_or_parent_repair" : "theorem_repair"}`,
             stalledRepairYield ? `proof_transaction_yield: ${JSON.stringify(stalledRepairYield)}` : undefined,
             repairChildNoMaterialization
               ? "next_action: parent prover must continue from the yielded certified/base transaction snapshot and materialize the diagnosed theorem-level remodel directly; the failed draft remains journaled, and the unchanged repair child must not be redispatched."
+              : lemmaChildNoMaterialization
+                ? "next_action: the parent scheduler must release the completed lemma lease and start one fresh lemma turn from the yielded transaction; do not resume the oversized stale conversation."
               : "next_action: make a theorem-level edit that changes the stale blocker contract, adds the missing bridge, or remodels the region before restarting fallback search.",
           ].filter((line): line is string => Boolean(line)).join("\n"),
           synthetic: true,
@@ -1215,6 +1263,26 @@ export namespace SessionPrompt {
               "You still have room to investigate. Avoid repeating an already established diagnosis.",
               "Before the hard liveness limit, materialize the repair through a substantive theorem edit, one proof_plan revision, or an accepted checkpoint.",
               "</repair-child-materialization-reminder>",
+            ]
+              .filter((line): line is string => Boolean(line))
+              .join("\n"),
+          ),
+        )
+      }
+      if (
+        fallbackGuard &&
+        "lemmaChildWarning" in fallbackGuard &&
+        fallbackGuard.lemmaChildWarning === true
+      ) {
+        runtimeContext.push(
+          runtimeContextMessage(
+            [
+              "<lemma-child-materialization-reminder>",
+              fallbackGuard.message,
+              "You still have room for local proof exploration, but the current region has not earned a new compiler certificate.",
+              "Before the hard liveness limit, target a new prefix certificate, discharge concrete semantic debt, or switch to a materially different local route.",
+              "Do not spend the remaining window repeating the same compiler state or cosmetic tactic variation.",
+              "</lemma-child-materialization-reminder>",
             ]
               .filter((line): line is string => Boolean(line))
               .join("\n"),
@@ -1382,6 +1450,78 @@ export namespace SessionPrompt {
         decompositionMaterialization?.review?.status === "drifted" &&
           (decompositionPlanState?.administrative_reconciliation_count ?? 0) < 1,
       )
+      const incompleteMaterialization = Boolean(
+        agent.name === "prover" &&
+          currentProofFile &&
+          currentProofSource &&
+          hasAcceptedProofPlan &&
+          hasProofFileEdit &&
+          decompositionMaterialization &&
+          !decompositionMaterialization.review &&
+          !acceptedPlanRepair?.available,
+      )
+      let materializationLivelock:
+        | {
+            expected_plan_nodes: string[]
+            observed_plan_nodes: string[]
+            missing_plan_nodes: string[]
+            stagnant_observations: number
+          }
+        | undefined
+      if (
+        incompleteMaterialization &&
+        currentProofFile &&
+        currentProofSource &&
+        decompositionMaterialization
+      ) {
+        const observation = observeMaterializationLivelock(materializationLivelockState, {
+          key: [
+            currentProofFile,
+            decompositionPlanState?.accepted_semantic_fingerprint ?? "accepted-plan",
+            decompositionMaterialization.expected_plan_nodes.join("\u0000"),
+          ].join("\n"),
+          missing_count: decompositionMaterialization.missing_plan_nodes.length,
+          certificate_count: SessionProofWorkflow.currentValidationCertificates(
+            currentProofFile,
+            currentProofSource,
+          ).length,
+        })
+        materializationLivelockState = observation.state
+        if (observation.tripped) {
+          materializationLivelock = {
+            expected_plan_nodes: decompositionMaterialization.expected_plan_nodes,
+            observed_plan_nodes: decompositionMaterialization.observed_plan_nodes,
+            missing_plan_nodes: decompositionMaterialization.missing_plan_nodes,
+            stagnant_observations: observation.state.stagnant_observations,
+          }
+        }
+      } else {
+        materializationLivelockState = undefined
+      }
+      if (materializationLivelock) {
+        const now = Date.now()
+        processor.message.finish = "stop"
+        processor.message.time.completed = now
+        await Session.updateMessage(processor.message)
+        await Session.updatePart({
+          id: Identifier.ascending("part"),
+          messageID: processor.message.id,
+          sessionID,
+          type: "text",
+          text: [
+            `materialization_livelock: ${JSON.stringify({
+              status: "materialization_livelock",
+              recoverable: true,
+              reason: "plan_node_identifier_mismatch_or_stagnation",
+              ...materializationLivelock,
+            })}`,
+            "The accepted materialization made no hard progress for five consecutive controller observations.",
+            "The staged transaction is preserved. End this invocation and resume in a fresh compact proof session from the current source instead of repeating marker edits.",
+          ].join("\n"),
+          synthetic: true,
+        } satisfies MessageV2.TextPart)
+        break
+      }
       const boundTheorem =
         decompositionPlanState?.theorem && decompositionPlanState.theorem !== "unspecified-theorem"
           ? decompositionPlanState.theorem
@@ -1671,7 +1811,8 @@ export namespace SessionPrompt {
             decompositionMaterialization.unexpected_regions.length > 0
               ? `Regions currently mapped outside the accepted delegated leaf set: ${decompositionMaterialization.unexpected_regions.join(", ")}.`
               : undefined,
-            "Change the plan_node value inside the actual `proof_region begin` marker. Editing only a nearby `plan_node:` contract comment does not change dispatch mapping.",
+            "Use the exact machine-safe plan_node IDs listed above inside the actual `proof_region begin` markers. These IDs contain no spaces and must not be replaced by paper_step_id labels.",
+            "Editing only a nearby `plan_node:` contract comment does not change dispatch mapping.",
             "Finish the same coherent skeleton, then validate it. This is completion of one materialization, not a new decomposition round.",
             "</decomposition-materialization-incomplete>",
           ].filter((line): line is string => Boolean(line)).join("\n"),

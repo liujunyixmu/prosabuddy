@@ -459,20 +459,20 @@ export namespace ProofRouteLedger {
         instantiation_fingerprint?: string
         residual_premise_fingerprints?: string[]
       }
-    }[] = plan.nodes.flatMap((node) => [
-      ...node.candidate_lemmas.map((name) => ({
+    }[] = (plan.nodes ?? []).flatMap((node) => [
+      ...(node.candidate_lemmas ?? []).map((name) => ({
         name,
         node_id: node.node_id,
         formal_goal: node.formal_goal,
         structured: false,
       })),
-      ...node.prosa_candidate_lemmas.map((entry) => ({
+      ...(node.prosa_candidate_lemmas ?? []).map((entry) => ({
         ...entry,
         node_id: node.node_id,
         formal_goal: node.formal_goal,
         structured: true,
       })),
-      ...node.mathcomp_candidate_lemmas.map((entry) => ({
+      ...(node.mathcomp_candidate_lemmas ?? []).map((entry) => ({
         ...entry,
         node_id: node.node_id,
         formal_goal: node.formal_goal,

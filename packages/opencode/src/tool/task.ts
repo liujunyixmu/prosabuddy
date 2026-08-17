@@ -927,7 +927,7 @@ export const TaskTool = Tool.define("task", async (ctx) => {
         SessionProofWorkflow.bindProofTaskWorker(session.id, agent.name)
       }
       if (params.proof_repair_assignment) {
-        SessionProofWorkflow.bindActiveRepair(session.id, params.proof_repair_assignment)
+        SessionProofWorkflow.bindActiveRepair(session.id, params.proof_repair_assignment, ctx.sessionID)
       }
       if (agent.name === "lemma" && params.lemma_assignment) {
         const assignmentFile = path.isAbsolute(params.lemma_assignment.file)
@@ -941,6 +941,7 @@ export const TaskTool = Tool.define("task", async (ctx) => {
           params.lemma_assignment,
           validatedSource,
           params.task_id ? "resume" : "fresh",
+          ctx.sessionID,
         )
       }
 

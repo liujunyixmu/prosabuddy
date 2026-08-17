@@ -317,8 +317,32 @@ function hypothesesFromGoal(goal: string) {
 }
 
 async function refreshAssignedRegionBase(sessionID: string, session: CoqSessionState) {
-  if (!session.region_admit_id || !session.source_file || !session.project) return false
+  if (!session.source_file || !session.project) return false
   const content = await ProofEditTransaction.readSource(sessionID, session.source_file)
+  if (session.region_binding === "explicit") {
+    if (!session.proof_position) {
+      throw new Error("session_state_desync: explicit proof_region session has no proof_position")
+    }
+    const offset = offsetAt(content, session.proof_position)
+    if (offset === undefined) {
+      throw new Error(
+        `session_state_desync: explicit proof_region ${session.region_admit_id ?? "unnamed"} proof_position is unavailable`,
+      )
+    }
+    const prefix = content.slice(0, offset)
+    const prefixFingerprint = fingerprint(prefix)
+    let changed = false
+    if (prefixFingerprint !== session.certified_prefix_fingerprint) {
+      const loaded = session.open_context ? `${session.open_context}\n${prefix}` : prefix
+      session.loaded_file = loaded
+      session.project = await CoqProject.context(session.source_file, session.project.theorem, loaded)
+      session.certified_prefix_fingerprint = prefixFingerprint
+      changed = true
+    }
+    session.source_hash = fingerprint(content)
+    return changed
+  }
+  if (!session.region_admit_id) return false
   const region = SessionProofWorkflow.assignedRegionSessionContext(
     sessionID,
     session.source_file,
@@ -462,6 +486,8 @@ export const CoqSessionTool = Tool.define("coq_session", {
         const expectedGoalFingerprint = params.expected_goal_fingerprint ?? assignedRegion?.expected_goal_fingerprint ??
           (expectedGoal ? fingerprint(normalizedGoalText(expectedGoal)) : undefined)
         const regionAdmitID = assignedRegion?.assignment.admit_id ?? params.admit_id
+        const regionScoped = Boolean(assignedRegion || explicitOffset !== undefined || params.scope === "assigned_region")
+        const regionBinding = assignedRegion ? "assigned" : regionScoped ? "explicit" : undefined
         const ctxEnd = proofPosition ? proofPosition.line + 1 : theoremContext.ctxEnd
         const lines = theoremContext.lines
 
@@ -527,8 +553,9 @@ export const CoqSessionTool = Tool.define("coq_session", {
           source_file: filepath,
           open_context: params.context,
           source_hash: assignedRegion?.source_hash ?? fingerprint(content),
-          certified_prefix_fingerprint: assignedRegion?.certified_prefix_fingerprint ?? fingerprint(extra),
+          certified_prefix_fingerprint: assignedRegion?.certified_prefix_fingerprint ?? fingerprint(loaded),
           region_admit_id: regionAdmitID,
+          region_binding: regionBinding,
           proof_position: proofPosition,
           goal_fingerprint: identity.strict_fingerprint,
           semantic_goal_fingerprint: identity.semantic_fingerprint,
@@ -553,13 +580,14 @@ export const CoqSessionTool = Tool.define("coq_session", {
             ? `Session opened for ${params.theorem}${regionAdmitID ? `:${regionAdmitID}` : ""}`
             : `session_state_desync: ${params.theorem}${regionAdmitID ? `:${regionAdmitID}` : ""}`,
           output: entryMatches
-            ? `Session ${sid}\nScope: ${regionAdmitID ? `proof_region ${regionAdmitID}` : "theorem start"}\nGoal fingerprint: ${identity.semantic_fingerprint}\nGoal:\n${goal}\nHypotheses: ${hyps.length > 0 ? hyps.join(", ") : "(none detected)"}${hint}`
+            ? `Session ${sid}\nScope: ${regionScoped ? `proof_region ${regionAdmitID ?? "explicit"}` : "theorem start"}\nGoal fingerprint: ${identity.semantic_fingerprint}\nGoal:\n${goal}\nHypotheses: ${hyps.length > 0 ? hyps.join(", ") : "(none detected)"}${hint}`
             : `session_state_desync\nexpected_goal_fingerprint: ${expectedGoalFingerprint ?? "unknown"}\nactual_goal_fingerprint: ${identity.conclusion_fingerprint}\nactual_remaining_goals: ${identity.remaining_goals ?? "unknown"}\nThe session was opened but tactics are blocked until automatic resynchronization succeeds.`,
           metadata: {
             op: "open",
             session_id: sid,
             section_vars: vars,
-            scope: regionAdmitID ? "assigned_region" : "theorem",
+            scope: regionScoped ? "assigned_region" : "theorem",
+            region_binding: regionBinding,
             admit_id: regionAdmitID,
             goal_fingerprint: identity.semantic_fingerprint,
             expected_goal_fingerprint: expectedGoalFingerprint,

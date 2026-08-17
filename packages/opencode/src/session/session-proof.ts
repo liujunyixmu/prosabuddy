@@ -198,6 +198,38 @@ export namespace SessionProof {
     }
   }
 
+  /**
+   * Advance only the canonical source snapshot for an existing proof binding.
+   *
+   * A proof session may legitimately observe a newer workspace revision after
+   * another member of the same proof lineage commits an edit.  Rebinding with
+   * set() would also move the proof cursor and change its ownership metadata;
+   * this narrower operation keeps those fields stable while making the newly
+   * audited source the baseline for subsequent scoped edits.
+   */
+  export function updateCanonicalSource(sessionID: string, canonicalSource: string): Binding | undefined {
+    const previous = get(sessionID)
+    if (!previous) return undefined
+
+    const now = Date.now()
+    Database.use((db) =>
+      db
+        .update(SessionProofTable)
+        .set({ canonical_source: canonicalSource, time_updated: now })
+        .where(eq(SessionProofTable.session_id, sessionID))
+        .run(),
+    )
+
+    const binding: Binding = {
+      ...previous,
+      canonicalSource,
+      updated: now,
+    }
+    cache.set(sessionID, binding)
+    Bus.publish(Event.Updated, { sessionID, binding })
+    return binding
+  }
+
   export function inherit(parentID: string, childID: string): Binding | undefined {
     const parent = get(parentID)
     if (!parent) return undefined

@@ -16,6 +16,9 @@ import { ProofEditTransaction } from "@/session/proof-edit-transaction"
 import { Filesystem } from "@/util/filesystem"
 import { Instance } from "@/project/instance"
 import { auditPlanLibraryCandidates } from "./proof-premise-audit"
+import { normalizeProofPlanIdentifiers } from "./proof-plan-identifiers"
+
+export { normalizeProofPlanIdentifiers } from "./proof-plan-identifiers"
 
 const Edge = z.object({ from: z.string().min(1), to: z.string().min(1) })
 
@@ -168,26 +171,26 @@ function canonicalPlan(plan: ProofPlanValue) {
       normalizeGoal(node.formal_goal),
       normalizeGoal(node.target_normal_form ?? node.target?.normal_form),
     ].join("\n")
-  const nodeKeys = new Map(plan.nodes.map((node) => [nodeID(node), nodeKey(node)]))
+  const nodeKeys = new Map((plan.nodes ?? []).map((node) => [nodeID(node), nodeKey(node)]))
   const dependencyKey = (value: string) => nodeKeys.get(value) ?? normalizeGoal(value)
   return {
     theorem: plan.theorem,
     root_goal: normalizeGoal(plan.root_goal),
-    nodes: plan.nodes
+    nodes: (plan.nodes ?? [])
       .map((node) => ({
         kind: node.kind ?? "unknown",
         layer: node.layer ?? "unknown",
         formal_goal: normalizeGoal(node.formal_goal),
         target_normal_form: normalizeGoal(node.target_normal_form ?? node.target?.normal_form),
-        depends_on: node.depends_on.map(dependencyKey).sort(),
-        consumers: node.consumers.map(dependencyKey).sort(),
+        depends_on: (node.depends_on ?? []).map(dependencyKey).sort(),
+        consumers: (node.consumers ?? []).map(dependencyKey).sort(),
         claim_delta: normalizeGoal(node.claim_delta),
-        transformations: [...node.transformations].sort(),
+        transformations: [...(node.transformations ?? [])].sort(),
         delegation_candidate: node.delegation_candidate,
         risk: node.risk ?? "unknown",
       }))
       .sort((left, right) => JSON.stringify(left).localeCompare(JSON.stringify(right))),
-    edges: [...plan.edges]
+    edges: [...(plan.edges ?? [])]
       .map((edge) => ({ from: dependencyKey(edge.from), to: dependencyKey(edge.to) }))
       .sort((left, right) => `${left.from}\n${left.to}`.localeCompare(`${right.from}\n${right.to}`)),
   }
@@ -257,19 +260,19 @@ function requiresCompositionDataflowAudit(
       node.layer === "theorem_spine" ||
       node.kind === "semantic_bridge" ||
       node.kind === "pointwise_semantic_bridge" ||
-      node.transformations.some((entry) =>
+      (node.transformations ?? []).some((entry) =>
         ["semantic_bound", "case_split", "count_cardinality", "parent_composition"].includes(entry),
       ),
   )
   if (!semantic) return false
   if (node.risk === "medium" || node.risk === "high") return true
   const consumesBranchPremise =
-    node.required_hypotheses.length > 0 &&
-    node.transformations.some((entry) => entry === "case_split" || entry === "parent_composition")
+    (node.required_hypotheses ?? []).length > 0 &&
+    (node.transformations ?? []).some((entry) => entry === "case_split" || entry === "parent_composition")
   const combinesSemanticDependency =
-    node.required_hypotheses.length > 0 &&
-    node.depends_on.some((dependency) => nodesByID.has(dependency)) &&
-    node.transformations.includes("semantic_bound")
+    (node.required_hypotheses ?? []).length > 0 &&
+    (node.depends_on ?? []).some((dependency) => nodesByID.has(dependency)) &&
+    (node.transformations ?? []).includes("semantic_bound")
   return consumesBranchPremise || combinesSemanticDependency
 }
 
@@ -280,11 +283,11 @@ function requiresHardCompositionDataflowAudit(
   const target = normalizeGoal(node.target_normal_form ?? node.target?.normal_form ?? node.formal_goal)
   const closesRoot = Boolean(target && target === rootGoal)
   const mergesBranches =
-    node.transformations.includes("parent_composition") ||
-    (node.transformations.includes("case_split") && node.depends_on.length > 1)
+    (node.transformations ?? []).includes("parent_composition") ||
+    ((node.transformations ?? []).includes("case_split") && (node.depends_on ?? []).length > 1)
   const joinsSemanticDependencies =
-    node.depends_on.length > 1 &&
-    (node.layer === "theorem_spine" || node.transformations.includes("semantic_bound"))
+    (node.depends_on ?? []).length > 1 &&
+    (node.layer === "theorem_spine" || (node.transformations ?? []).includes("semantic_bound"))
   return closesRoot || mergesBranches || joinsSemanticDependencies
 }
 
@@ -331,17 +334,17 @@ function reviewCompositionDataflow(
   )
   for (const ref of rawInputRefs) {
     const producer = nodesByNormalizedID.get(ref.trim().toLowerCase())
-    if (!producer || !node.depends_on.includes(nodeID(producer))) continue
+    if (!producer || !(node.depends_on ?? []).includes(nodeID(producer))) continue
     for (const key of exportedReferenceKeys(producer)) inputKeys.add(key)
   }
-  for (const hypothesis of node.required_hypotheses) {
+  for (const hypothesis of node.required_hypotheses ?? []) {
     if (!referencesOverlap(referenceKeys(hypothesis), inputKeys)) {
       add("required_hypothesis_unmapped", `Required hypothesis ${hypothesis} is not consumed by any composition step.`)
     }
   }
 
-  const dependencyNodes = node.depends_on.filter((dependency) => nodesByID.has(dependency))
-  const usesByProducer = new Map(node.dependency_uses.map((entry) => [entry.producer_node, entry]))
+  const dependencyNodes = (node.depends_on ?? []).filter((dependency) => nodesByID.has(dependency))
+  const usesByProducer = new Map((node.dependency_uses ?? []).map((entry) => [entry.producer_node, entry]))
   for (const dependency of dependencyNodes) {
     const producer = nodesByID.get(dependency)!
     const use = usesByProducer.get(dependency)
@@ -365,8 +368,8 @@ function reviewCompositionDataflow(
     }
   }
 
-  for (const use of node.dependency_uses) {
-    if (!nodesByID.has(use.producer_node) || !node.depends_on.includes(use.producer_node)) {
+  for (const use of node.dependency_uses ?? []) {
+    if (!nodesByID.has(use.producer_node) || !(node.depends_on ?? []).includes(use.producer_node)) {
       issues.push(
         issue(
           "hard_error",
@@ -416,18 +419,19 @@ export function hasOnlyMechanicalPlanHardErrors(review: z.infer<typeof ProofPlan
 export function reviewProofPlan(plan: ProofPlanValue) {
   const hardErrors: ProofPlanReviewIssue[] = []
   const warnings: ProofPlanReviewIssue[] = []
-  const ids = plan.nodes.map(nodeID)
+  const planNodes = plan.nodes ?? []
+  const ids = planNodes.map(nodeID)
   const idSet = new Set(ids)
-  const nodesByID = new Map(plan.nodes.map((node) => [nodeID(node), node]))
+  const nodesByID = new Map(planNodes.map((node) => [nodeID(node), node]))
   const root = normalizeGoal(plan.root_goal)
 
-  if (plan.nodes.length === 0) {
+  if (planNodes.length === 0) {
     hardErrors.push(issue("hard_error", "empty_plan", "The proof plan has no nodes."))
   }
   if (idSet.size !== ids.length) {
     hardErrors.push(issue("hard_error", "duplicate_node_id", "Every proof-plan node must have a unique node_id."))
   }
-  for (const edge of plan.edges) {
+  for (const edge of plan.edges ?? []) {
     if (!idSet.has(edge.from) || !idSet.has(edge.to)) {
       hardErrors.push(
         issue("hard_error", "unknown_edge_endpoint", `Edge ${edge.from} -> ${edge.to} references an unknown node.`),
@@ -436,17 +440,17 @@ export function reviewProofPlan(plan: ProofPlanValue) {
       hardErrors.push(issue("hard_error", "self_cycle", `Node ${edge.from} cannot depend on itself.`, edge.from))
     }
   }
-  if (graphHasCycle(ids, plan.edges.filter((edge) => idSet.has(edge.from) && idSet.has(edge.to)))) {
+  if (graphHasCycle(ids, (plan.edges ?? []).filter((edge) => idSet.has(edge.from) && idSet.has(edge.to)))) {
     hardErrors.push(issue("hard_error", "dependency_cycle", "The structured proof DAG contains a cycle."))
   }
 
   const outgoing = new Map<string, number>()
-  for (const edge of plan.edges) outgoing.set(edge.from, (outgoing.get(edge.from) ?? 0) + 1)
+  for (const edge of plan.edges ?? []) outgoing.set(edge.from, (outgoing.get(edge.from) ?? 0) + 1)
   let delegationCandidates = 0
   let explicitParentConsumer = false
-  for (const node of plan.nodes) {
+  for (const node of planNodes) {
     const id = nodeID(node)
-    if (node.consumers.some((consumer) => /^(?:parent|parent_composition|theorem)$/i.test(consumer))) {
+    if ((node.consumers ?? []).some((consumer) => /^(?:parent|parent_composition|theorem)$/i.test(consumer))) {
       explicitParentConsumer = true
     }
     if (node.delegation_candidate) {
@@ -462,7 +466,7 @@ export function reviewProofPlan(plan: ProofPlanValue) {
           ),
         )
       }
-      if ((outgoing.get(id) ?? 0) === 0 && node.consumers.length === 0) {
+      if ((outgoing.get(id) ?? 0) === 0 && (node.consumers ?? []).length === 0) {
         hardErrors.push(
           issue(
             "hard_error",
@@ -482,7 +486,7 @@ export function reviewProofPlan(plan: ProofPlanValue) {
           ),
         )
       }
-      const highRiskTransformations = node.transformations.filter((entry) =>
+      const highRiskTransformations = (node.transformations ?? []).filter((entry) =>
         ["representation_bridge", "witness_transport", "case_split", "semantic_bound", "count_cardinality", "sum_exchange", "parent_composition"].includes(entry),
       )
       if (highRiskTransformations.length > 2) {
@@ -494,21 +498,21 @@ export function reviewProofPlan(plan: ProofPlanValue) {
             id,
           ),
         )
-      } else if (node.transformations.length > 1) {
+      } else if ((node.transformations ?? []).length > 1) {
         warnings.push(
           issue(
             "warning",
             "compound_leaf",
-            `A delegated region lists ${node.transformations.length} transformations. Keep them together if they jointly establish one exported fact under one dependency boundary; otherwise split at a useful proof-state boundary.`,
+            `A delegated region lists ${(node.transformations ?? []).length} transformations. Keep them together if they jointly establish one exported fact under one dependency boundary; otherwise split at a useful proof-state boundary.`,
             id,
           ),
         )
       }
     }
     const evidence = [
-      ...node.candidate_lemmas,
-      ...node.prosa_candidate_lemmas.map((entry) => entry.name),
-      ...node.mathcomp_candidate_lemmas.map((entry) => entry.name),
+      ...(node.candidate_lemmas ?? []),
+      ...(node.prosa_candidate_lemmas ?? []).map((entry) => entry.name),
+      ...(node.mathcomp_candidate_lemmas ?? []).map((entry) => entry.name),
       ...(node.target?.evidence ?? []),
     ]
     if (node.evidence_status !== "negative_search" && evidence.length === 0) {
@@ -521,7 +525,7 @@ export function reviewProofPlan(plan: ProofPlanValue) {
         ),
       )
     }
-    for (const candidate of [...node.prosa_candidate_lemmas, ...node.mathcomp_candidate_lemmas]) {
+    for (const candidate of [...(node.prosa_candidate_lemmas ?? []), ...(node.mathcomp_candidate_lemmas ?? [])]) {
       const audit = candidate.audit
       if (!candidate.role) {
         warnings.push(
@@ -557,8 +561,8 @@ export function reviewProofPlan(plan: ProofPlanValue) {
         continue
       }
       if (role !== "direct_apply" || audit.verdict !== "bridge_required") continue
-      for (const premiseFingerprint of audit.residual_premise_fingerprints) {
-        const source = candidate.premise_sources.find(
+      for (const premiseFingerprint of audit.residual_premise_fingerprints ?? []) {
+        const source = (candidate.premise_sources ?? []).find(
           (entry) => entry.premise_fingerprint === premiseFingerprint,
         )
         if (!source || source.status === "unknown" || source.status === "unavailable") {
@@ -584,7 +588,9 @@ export function reviewProofPlan(plan: ProofPlanValue) {
         }
         if (
           source.status === "dependency_node" &&
-          (!source.dependency_node || !idSet.has(source.dependency_node) || !node.depends_on.includes(source.dependency_node))
+          (!source.dependency_node ||
+            !idSet.has(source.dependency_node) ||
+            !(node.depends_on ?? []).includes(source.dependency_node))
         ) {
           hardErrors.push(
             issue(
@@ -596,7 +602,7 @@ export function reviewProofPlan(plan: ProofPlanValue) {
           )
         }
         if (source.status === "dependency_node" && source.dependency_node) {
-          const dependency = plan.nodes.find((entry) => nodeID(entry) === source.dependency_node)
+          const dependency = planNodes.find((entry) => nodeID(entry) === source.dependency_node)
           const dependencyTargets = dependency
             ? [dependency.formal_goal, dependency.target_normal_form, dependency.target?.normal_form]
                 .filter((target): target is string => Boolean(target))
@@ -644,7 +650,7 @@ export function reviewProofPlan(plan: ProofPlanValue) {
       ),
     )
   }
-  if (!explicitParentConsumer && !plan.nodes.some((node) => normalizeGoal(node.formal_goal) === root && !node.delegation_candidate)) {
+  if (!explicitParentConsumer && !planNodes.some((node) => normalizeGoal(node.formal_goal) === root && !node.delegation_candidate)) {
     warnings.push(
       issue(
         "warning",
@@ -721,18 +727,25 @@ export const ProofPlanTool = Tool.define("proof_plan", {
       : undefined
     const submittedTheorem = params.theorem?.trim() || undefined
     const submittedRootGoal = params.root_goal?.trim() || undefined
-    let nodes = params.nodes ?? extractNodes(params.text ?? "")
+    const normalizedIdentifiers = normalizeProofPlanIdentifiers(
+      params.nodes ?? extractNodes(params.text ?? ""),
+      params.edges,
+    )
+    let nodes = normalizedIdentifiers.nodes
     if (boundProofFile && boundTarget && binding && boundSource && params.nodes?.length) {
-      nodes = await auditPlanLibraryCandidates({
-        file: binding.file,
-        source: boundSource,
-        theorem: boundTarget.theorem,
-        nodes,
-        signal: ctx.abort,
-      })
+      nodes = normalizeProofPlanIdentifiers(
+        await auditPlanLibraryCandidates({
+          file: binding.file,
+          source: boundSource,
+          theorem: boundTarget.theorem,
+          nodes,
+          signal: ctx.abort,
+        }),
+        normalizedIdentifiers.edges,
+      ).nodes
     }
     const edges =
-      params.edges ??
+      normalizedIdentifiers.edges ??
       nodes.slice(1).map((node, index) => ({ from: nodeID(nodes[index]), to: nodeID(node) }))
     const ids = nodes.map(nodeID)
     const incoming = new Set(edges.map((edge) => edge.to))
@@ -814,9 +827,12 @@ export const ProofPlanTool = Tool.define("proof_plan", {
       )
       for (const node of plan.nodes) {
         const id = nodeID(node)
-        for (const candidate of [...node.prosa_candidate_lemmas, ...node.mathcomp_candidate_lemmas]) {
+        for (const candidate of [
+          ...(node.prosa_candidate_lemmas ?? []),
+          ...(node.mathcomp_candidate_lemmas ?? []),
+        ]) {
           const residual = new Set(candidate.audit?.residual_premise_fingerprints ?? [])
-          for (const source of candidate.premise_sources) {
+          for (const source of candidate.premise_sources ?? []) {
             if (source.status !== "compiler_certified" || !residual.has(source.premise_fingerprint)) continue
             const certificate = source.certificate_id ? certificates.get(source.certificate_id) : undefined
             if (
@@ -848,13 +864,16 @@ export const ProofPlanTool = Tool.define("proof_plan", {
         : []
     const verifiedOverrideIDs = new Set<string>()
     const workflowState = SessionProofWorkflow.get(ctx.sessionID)
-    for (const override of plan.route_overrides) {
+    for (const override of plan.route_overrides ?? []) {
       const failure = activeRouteFailures.find((entry) => entry.id === override.failure_id)
       if (!failure) continue
       const evidence = override.evidence
       if (evidence.kind === "different_instantiation") {
-        const candidate = plan.nodes
-          .flatMap((node) => [...node.prosa_candidate_lemmas, ...node.mathcomp_candidate_lemmas])
+        const candidate = (plan.nodes ?? [])
+          .flatMap((node) => [
+            ...(node.prosa_candidate_lemmas ?? []),
+            ...(node.mathcomp_candidate_lemmas ?? []),
+          ])
           .find(
             (entry) =>
               entry.name === failure.failed_lemma &&
@@ -908,7 +927,7 @@ export const ProofPlanTool = Tool.define("proof_plan", {
       ...routeFailureAssessment,
     }
     const activeRouteFailureIDs = new Set(routeFailureReview.active_failure_ids)
-    for (const override of plan.route_overrides) {
+    for (const override of plan.route_overrides ?? []) {
       if (activeRouteFailureIDs.has(override.failure_id) && verifiedOverrideIDs.has(override.failure_id)) {
         ProofRouteLedger.recordRouteOverride(override)
       }

@@ -41,8 +41,10 @@ prosaworkspace/.lia.cache
 !packages/opencode/src/session/prompt/plan.txt
 !packages/opencode/src/tool/plan.ts
 !packages/opencode/src/tool/proof-plan.ts
+!packages/opencode/src/tool/proof-plan-identifiers.ts
 !packages/opencode/src/cli/cmd/tui/context/theme/opencode.json
 
 # Local failure-trace dumps
+.checker_axiom_probe.aux
 packages/opencode/src/failure_trace/final_*.v
 packages/opencode/src/failure_trace/opencode_events*.jsonl
