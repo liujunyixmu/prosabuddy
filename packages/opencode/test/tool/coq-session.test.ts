@@ -354,6 +354,86 @@ describe("tool.coq_session context inspection", () => {
     })
   })
 
+  test("open defaults to the persisted compiler error and backtracks after source-line drift", async () => {
+    await using tmp = await tmpdir({ git: true })
+
+    await Instance.provide({
+      directory: tmp.path,
+      fn: async () => {
+        const file = `${tmp.path}/compiler-error-resync.v`
+        const failing = await Session.create({})
+        const resumed = await Session.create({})
+        const theoremRestart = await Session.create({})
+        const original = [
+          "Lemma demo : True.",
+          "Proof.",
+          "pose proof I as Hone.",
+          'fail 1 "broken".',
+          "exact I.",
+          "Qed.",
+          "",
+        ].join("\n")
+        const shifted = original.replace("pose proof I as Hone.\n", "")
+        await Bun.write(file, shifted)
+        SessionProofWorkflow.classifyCoqcFailure(failing.id, file, original, {
+          first_error_line: 4,
+          first_error_message: "Error: broken local tactic",
+        })
+
+        const preambles: string[] = []
+        contextSpy = spyOn(CoqProject, "context").mockImplementation(async (_file, theorem, preamble) => {
+          preambles.push(preamble)
+          return {
+            root: tmp.path,
+            file,
+            theorem,
+            project_path: null,
+            flags: [],
+            cwd: tmp.path,
+            preamble,
+          }
+        })
+        runSpy = spyOn(CoqProject, "run").mockImplementation(async (code) =>
+          code.includes('fail 1 "broken".')
+            ? { exit: 1, stdout: "", stderr: "Error: broken local tactic" }
+            : { exit: 0, stdout: "1 goal\n\n============================\nTrue", stderr: "" },
+        )
+
+        const tool = await CoqSessionTool.init()
+        const opened = await tool.execute(
+          { op: "open", file, theorem: "demo" },
+          context(resumed.id, "prover"),
+        )
+        expect(opened.metadata).toMatchObject({
+          scope: "compiler_error",
+          region_binding: "compiler_error",
+          compiler_error_line: 4,
+          compiler_error_source_exact_match: false,
+          resynchronized_line: 3,
+          kind: "proof_progress",
+        })
+        expect(opened.output).toContain("Compiler error: Error: broken local tactic")
+        expect(preambles[0]).not.toContain('fail 1 "broken".')
+
+        const restarted = await tool.execute(
+          { op: "open", file, theorem: "demo", scope: "theorem" },
+          context(theoremRestart.id, "prover"),
+        )
+        expect(restarted.metadata).toMatchObject({ scope: "theorem", kind: "proof_progress" })
+        expect(preambles.at(-1)?.trimEnd().endsWith("Proof.")).toBe(true)
+
+        await tool.execute({ op: "close" }, context(resumed.id, "prover"))
+        await tool.execute({ op: "close" }, context(theoremRestart.id, "prover"))
+        SessionProofWorkflow.clear(failing.id)
+        SessionProofWorkflow.clear(resumed.id)
+        SessionProofWorkflow.clear(theoremRestart.id)
+        await Session.remove(failing.id)
+        await Session.remove(resumed.id)
+        await Session.remove(theoremRestart.id)
+      },
+    })
+  })
+
   test("step rebuilds a drifted certified prefix before replaying tactics", async () => {
     await using tmp = await tmpdir({ git: true })
 

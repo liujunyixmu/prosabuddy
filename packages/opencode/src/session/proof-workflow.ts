@@ -26,6 +26,7 @@ import { Instance } from "@/project/instance"
 import { parseCoqCompilerOutput } from "@/tool/coq-diagnostics"
 import { Log } from "@/util/log"
 import {
+  MAX_IDENTICAL_PLAN_METADATA_REPAIRS,
   MAX_SEMANTIC_PLAN_REVISIONS,
   ProofPlan,
   ProofPlanReview,
@@ -108,6 +109,15 @@ export namespace SessionProofWorkflow {
     normalized_error: z.string(),
   })
   export type ProofErrorAnchor = z.infer<typeof ProofErrorAnchor>
+
+  export const LatestCompilerError = z.object({
+    normalized_file: z.string().min(1),
+    source_hash: z.string().min(1),
+    anchor: ProofErrorAnchor,
+    message: z.string().min(1),
+    recorded_at: z.number().int().positive(),
+  })
+  export type LatestCompilerError = z.infer<typeof LatestCompilerError>
 
   export const ProofProgressReceipt = z.object({
     id: z.string().min(1),
@@ -242,6 +252,26 @@ export namespace SessionProofWorkflow {
   })
   export type RepairIncidentResolution = z.infer<typeof RepairIncidentResolution>
 
+  export const LemmaNoMaterializationIncident = z.object({
+    signature: z.string().min(1),
+    theorem: z.string().min(1),
+    admit_id: z.string().min(1),
+    contract_fingerprint: z.string().min(1),
+    theorem_context_fingerprint: z.string().min(1),
+    goal_fingerprint: z.string().min(1),
+    proof_plan_node: z.string().optional(),
+    plan_fingerprint: z.string().optional(),
+    compiler_signatures: z.array(z.string().min(1)).default([]),
+    repeat_count: z.number().int().positive(),
+    first_seen_at: z.number().int().positive(),
+    updated_at: z.number().int().positive(),
+    last_task_at: z.number().int().positive().optional(),
+    last_transaction_id: z.string().min(1).optional(),
+    last_yielded_revision: z.number().int().nonnegative().optional(),
+    last_resume_revision: z.number().int().nonnegative().optional(),
+  })
+  export type LemmaNoMaterializationIncident = z.infer<typeof LemmaNoMaterializationIncident>
+
   export const DecompositionMaterializationReview = z.object({
     status: z.enum(["matched", "partial", "drifted"]),
     plan_semantic_fingerprint: z.string().min(1),
@@ -302,6 +332,8 @@ export namespace SessionProofWorkflow {
     semantic_revision_number: z.number().int().nonnegative(),
     planning_generation: z.number().int().nonnegative().optional(),
     generation_failure_fingerprints: z.array(z.string().min(1)).optional(),
+    metadata_repair_fingerprint: z.string().min(1).optional(),
+    metadata_repair_repeat_count: z.number().int().nonnegative().optional(),
     status: DecompositionPlanStatus,
     last_candidate_plan: ProofPlan,
     last_review: ProofPlanReview,
@@ -332,7 +364,9 @@ export namespace SessionProofWorkflow {
     fallback_guard: FallbackGuard.optional(),
     repair_incidents: z.array(RepairIncident).optional(),
     repair_incident_resolutions: z.array(RepairIncidentResolution).optional(),
+    lemma_no_materialization_incidents: z.array(LemmaNoMaterializationIncident).optional(),
     decomposition_plan: DecompositionPlanState.optional(),
+    latest_compiler_error: LatestCompilerError.optional(),
     last_progress_receipt: ProofProgressReceipt.optional(),
     last_structural_progress_receipt: ProofProgressReceipt.optional(),
     last_debug_progress_receipt: ProofProgressReceipt.optional(),
@@ -429,6 +463,9 @@ export namespace SessionProofWorkflow {
     validationErrors?: string[]
     error?: string
     noMaterialization?: boolean
+    output?: string
+    time?: number
+    assignment?: LemmaAssignment
     escalationType?: EscalationType
     remodelRequest?: RemodelRequest
     attemptReport?: BlockedProofReport
@@ -505,6 +542,7 @@ export namespace SessionProofWorkflow {
   // an unchanged semantic blocker and compiler state from spawning an
   // unbounded sequence of fresh children.
   const IDENTICAL_REPAIR_CHILD_NO_MATERIALIZATION_LIMIT = 5
+  const IDENTICAL_LEMMA_CHILD_NO_MATERIALIZATION_LIMIT = 5
   const DIRECT_PARENT_TAKEOVER_ESCALATIONS = new Set<EscalationType>([
     "blocked_by_sibling_syntax",
     "needs_preceding_bridge",
@@ -2202,9 +2240,15 @@ export namespace SessionProofWorkflow {
       let status: BlockStatus = "pending"
 
       if (validationCertificate && !block.pending) status = "solved"
+      // The parsed source is authoritative for semantic completeness. An
+      // in-flight child may remove the last hole before returning its task
+      // result; retaining the old running/split lease in that case makes the
+      // later lease release incorrectly turn the region back into pending.
+      // Keep the carried task_id below so the outcome can still be attributed,
+      // but require compiler validation before calling the region solved.
+      else if (!block.pending) status = "unvalidated"
       else if (runtimeCarried) status = runtimeCarried.status
       else if (contentCarried?.status === "escalated") status = "escalated"
-      else if (!block.pending) status = "unvalidated"
 
       return {
         order: block.order,
@@ -2371,6 +2415,38 @@ export namespace SessionProofWorkflow {
     }
   }
 
+  function sharedLemmaNoMaterializationHistory(file: string, current?: State) {
+    const states = [...statesForFile(file).map((entry) => entry.state), ...(current ? [current] : [])]
+    const resolutions = new Map<string, RepairIncidentResolution>()
+    for (const state of states) {
+      for (const resolution of state.repair_incident_resolutions ?? []) {
+        const previous = resolutions.get(resolution.signature)
+        if (!previous || resolution.resolved_at > previous.resolved_at) {
+          resolutions.set(resolution.signature, resolution)
+        }
+      }
+    }
+
+    const incidents = new Map<string, LemmaNoMaterializationIncident>()
+    for (const state of states) {
+      for (const incident of state.lemma_no_materialization_incidents ?? []) {
+        const resolution = resolutions.get(incident.signature)
+        if (resolution && resolution.resolved_at >= incident.updated_at) continue
+        const previous = incidents.get(incident.signature)
+        if (
+          !previous ||
+          incident.repeat_count > previous.repeat_count ||
+          (incident.repeat_count === previous.repeat_count && incident.updated_at > previous.updated_at)
+        ) {
+          incidents.set(incident.signature, incident)
+        }
+      }
+    }
+    return [...incidents.values()]
+      .sort((left, right) => left.updated_at - right.updated_at)
+      .slice(-MAX_REPAIR_INCIDENTS)
+  }
+
   export function set(sessionID: string, state: State) {
     const previous = get(sessionID)
     const sameFile = previous && normalizedWorkflowFile(previous.file) === normalizedWorkflowFile(state.file)
@@ -2379,12 +2455,30 @@ export namespace SessionProofWorkflow {
       : sameFile
         ? previous?.decomposition_plan
         : undefined
+    const inheritedReceipt = <K extends "last_progress_receipt" | "last_structural_progress_receipt" | "last_debug_progress_receipt">(
+      key: K,
+    ) => Object.prototype.hasOwnProperty.call(state, key)
+      ? state[key]
+      : sameFile
+        ? previous?.[key]
+        : undefined
     const next = State.parse({
       ...state,
-      repair_incidents: state.repair_incidents ?? previous?.repair_incidents,
+      repair_incidents: state.repair_incidents ?? (sameFile ? previous?.repair_incidents : undefined),
       repair_incident_resolutions:
-        state.repair_incident_resolutions ?? previous?.repair_incident_resolutions,
+        state.repair_incident_resolutions ?? (sameFile ? previous?.repair_incident_resolutions : undefined),
+      lemma_no_materialization_incidents:
+        state.lemma_no_materialization_incidents ??
+        (sameFile ? previous?.lemma_no_materialization_incidents : undefined),
       decomposition_plan: decompositionPlan,
+      latest_compiler_error: Object.prototype.hasOwnProperty.call(state, "latest_compiler_error")
+        ? state.latest_compiler_error
+        : sameFile
+          ? previous?.latest_compiler_error
+          : undefined,
+      last_progress_receipt: inheritedReceipt("last_progress_receipt"),
+      last_structural_progress_receipt: inheritedReceipt("last_structural_progress_receipt"),
+      last_debug_progress_receipt: inheritedReceipt("last_debug_progress_receipt"),
     })
     const now = Date.now()
     Database.use((db) =>
@@ -2409,6 +2503,18 @@ export namespace SessionProofWorkflow {
     )
     cache.set(sessionID, next)
     return next
+  }
+
+  export function latestCompilerError(sessionID: string, file: string, theorem?: string) {
+    const normalizedFile = normalizedWorkflowFile(file)
+    const current = get(sessionID)?.latest_compiler_error
+    const candidates = [
+      ...(current && current.normalized_file === normalizedFile ? [current] : []),
+      ...statesForFile(normalizedFile)
+        .map(({ state }) => state.latest_compiler_error)
+        .filter((entry): entry is LatestCompilerError => Boolean(entry && entry.normalized_file === normalizedFile)),
+    ].filter((entry) => !theorem || entry.anchor.theorem === theorem)
+    return candidates.sort((left, right) => right.recorded_at - left.recorded_at)[0]
   }
 
   export function getDecompositionPlanState(sessionID: string, file?: string, theorem?: string) {
@@ -2504,6 +2610,8 @@ export namespace SessionProofWorkflow {
     "duplicate_composition_step",
     "dependency_use_unknown_producer",
     "dependency_output_anchor_mismatch",
+    "root_target_metadata_mismatch",
+    "composition_target_mismatch",
   ])
 
   function hasOnlyRouteRepairHardErrors(review: ProofPlanReviewValue) {
@@ -2545,6 +2653,10 @@ export namespace SessionProofWorkflow {
         code: entry.code,
         node_id: entry.node_id ?? "",
         message: entry.message.replace(/\s+/g, " ").trim(),
+        repair_hint: entry.repair_hint?.replace(/\s+/g, " ").trim() ?? "",
+        details: Object.fromEntries(
+          Object.entries(entry.details ?? {}).sort(([left], [right]) => left.localeCompare(right)),
+        ),
       }))
       .sort((left, right) => JSON.stringify(left).localeCompare(JSON.stringify(right)))
     return hashText(JSON.stringify({
@@ -2609,6 +2721,7 @@ export namespace SessionProofWorkflow {
     // scope and bypass an accepted or exhausted decomposition state.
     let scoped = sameWorkflowTarget ? existingWorkflow?.decomposition_plan : undefined
     const reviewedPlan = ProofPlan.parse({ ...input.plan, review: input.review })
+    let acceptedCorrectionAfterExhaustion = false
 
     if (scoped?.status === "accepted" && scoped.accepted_plan) {
       const sameSemanticPlan = scoped.accepted_semantic_fingerprint === input.review.semantic_fingerprint
@@ -2712,15 +2825,51 @@ export namespace SessionProofWorkflow {
     }
     if (scoped?.status === "exhausted") {
       const generation = scoped.planning_generation ?? 0
+      const previousMechanicalFailure = hasOnlyMechanicalPlanHardErrors(scoped.last_review)
+      const currentMechanicalFailure = hasOnlyMechanicalPlanHardErrors(input.review)
+      const previousFailureFingerprint =
+        scoped.terminal_verdict?.failure_fingerprint ?? decompositionFailureFingerprint(scoped.last_review)
+      const currentFailureFingerprint = decompositionFailureFingerprint(input.review)
+      const changedMechanicalRepair =
+        previousMechanicalFailure &&
+        currentMechanicalFailure &&
+        previousFailureFingerprint !== currentFailureFingerprint
+
       if (scoped.terminal_verdict?.recoverable === true && generation < MAX_PLAN_RECOVERY_GENERATIONS) {
         // Start one bounded recovery generation in the same proof session. The
         // prior best rejected plan remains diagnostic input, never an accepted
-        // or materializable plan.
+        // or materializable plan. A corrected candidate submitted with this
+        // transition is reviewed normally in the new generation below.
         scoped = DecompositionPlanState.parse({
           ...scoped,
           attempted_semantic_fingerprints: [],
           semantic_revision_number: 0,
           planning_generation: generation + 1,
+          status: "planning",
+          exhausted_at: undefined,
+          terminal_verdict: undefined,
+          updated: Date.now(),
+        })
+      } else if (input.review.materialization_allowed) {
+        // A bounded search budget limits failed semantic exploration; it must
+        // never hide a later candidate that now passes the deterministic
+        // review. Preserve the spent budget for diagnostics, invalidate the
+        // stale terminal verdict, and accept this correction below.
+        acceptedCorrectionAfterExhaustion = true
+        scoped = DecompositionPlanState.parse({
+          ...scoped,
+          status: "planning",
+          exhausted_at: undefined,
+          terminal_verdict: undefined,
+          updated: Date.now(),
+        })
+      } else if (changedMechanicalRepair) {
+        // Legacy sessions may already have charged deterministic metadata
+        // repairs as semantic revisions. A materially changed repair receipt
+        // must be reviewed in the same generation instead of receiving the
+        // cached terminal error again.
+        scoped = DecompositionPlanState.parse({
+          ...scoped,
           status: "planning",
           exhausted_at: undefined,
           terminal_verdict: undefined,
@@ -2740,10 +2889,16 @@ export namespace SessionProofWorkflow {
     const sameSemanticPlan = previousAttempts.includes(input.review.semantic_fingerprint)
     const previousMechanicalRepair = Boolean(scoped && hasOnlyMechanicalPlanHardErrors(scoped.last_review))
     const currentMechanicalRepair = hasOnlyMechanicalPlanHardErrors(input.review)
-    const mechanicalRepair = previousMechanicalRepair || currentMechanicalRepair
+    const resolvedMechanicalRepair = previousMechanicalRepair && input.review.materialization_allowed
+    const metadataRepairTransition = currentMechanicalRepair || resolvedMechanicalRepair
     const maxDistinctPlans = MAX_SEMANTIC_PLAN_REVISIONS + 1
-    const newPlanBeyondBudget = !sameSemanticPlan && !mechanicalRepair && previousAttempts.length >= maxDistinctPlans
-    const attempted = sameSemanticPlan || newPlanBeyondBudget || mechanicalRepair
+    const newPlanBeyondBudget =
+      !acceptedCorrectionAfterExhaustion &&
+      !sameSemanticPlan &&
+      !metadataRepairTransition &&
+      previousAttempts.length >= maxDistinctPlans
+    const attempted =
+      acceptedCorrectionAfterExhaustion || sameSemanticPlan || newPlanBeyondBudget || metadataRepairTransition
       ? [...previousAttempts]
       : [...previousAttempts, input.review.semantic_fingerprint]
     const semanticRevisionNumber = Math.max(0, attempted.length - 1)
@@ -2760,12 +2915,15 @@ export namespace SessionProofWorkflow {
     )
     const pendingRouteRepair = !newPlanBeyondBudget && hasOnlyRouteRepairHardErrors(input.review)
     const accepted =
-      !newPlanBeyondBudget && input.review.materialization_allowed && (!sameSemanticPlan || resolvedRouteRepair)
+      acceptedCorrectionAfterExhaustion ||
+      (!newPlanBeyondBudget &&
+        input.review.materialization_allowed &&
+        (!sameSemanticPlan || resolvedRouteRepair || resolvedMechanicalRepair))
     const exhausted =
       newPlanBeyondBudget ||
       (!accepted &&
         !pendingRouteRepair &&
-        !mechanicalRepair &&
+        !currentMechanicalRepair &&
         (sameSemanticPlan || semanticRevisionNumber >= MAX_SEMANTIC_PLAN_REVISIONS))
     const status: DecompositionPlanStatus = accepted ? "accepted" : exhausted ? "exhausted" : "planning"
     const planningGeneration = scoped?.planning_generation ?? 0
@@ -2784,6 +2942,16 @@ export namespace SessionProofWorkflow {
     const generationFailureFingerprints = failureFingerprint
       ? [...new Set([...(scoped?.generation_failure_fingerprints ?? []), failureFingerprint])]
       : scoped?.generation_failure_fingerprints
+    const metadataRepairFingerprint = currentMechanicalRepair
+      ? decompositionFailureFingerprint(input.review)
+      : undefined
+    const metadataRepairRepeatCount = currentMechanicalRepair
+      ? scoped?.metadata_repair_fingerprint === metadataRepairFingerprint
+        ? (scoped?.metadata_repair_repeat_count ?? 0) + 1
+        : 1
+      : 0
+    const metadataRepairStalled =
+      currentMechanicalRepair && metadataRepairRepeatCount >= MAX_IDENTICAL_PLAN_METADATA_REPAIRS
     const recoverable = exhausted && planningGeneration < MAX_PLAN_RECOVERY_GENERATIONS
     const terminalVerdict = exhausted
       ? DecompositionTerminalVerdict.parse({
@@ -2817,6 +2985,8 @@ export namespace SessionProofWorkflow {
       semantic_revision_number: semanticRevisionNumber,
       planning_generation: planningGeneration,
       generation_failure_fingerprints: generationFailureFingerprints,
+      metadata_repair_fingerprint: metadataRepairFingerprint,
+      metadata_repair_repeat_count: metadataRepairRepeatCount || undefined,
       status,
       last_candidate_plan: reviewedPlan,
       last_review: input.review,
@@ -2861,8 +3031,10 @@ export namespace SessionProofWorkflow {
 
     const recommendedAction: DecompositionPlanAction = accepted
       ? "materialize_once"
-      : mechanicalRepair
-        ? "repair_plan_metadata"
+      : currentMechanicalRepair
+        ? metadataRepairStalled
+          ? "do_not_retry_metadata_only_plan"
+          : "repair_plan_metadata"
       : pendingRouteRepair
         ? "repair_plan_route"
       : exhausted
@@ -3140,9 +3312,13 @@ export namespace SessionProofWorkflow {
         ? previous.fallback_guard
         : undefined
     const sharedRepair = sharedRepairHistory(file, previous)
+    const sharedLemmaNoMaterialization = sharedLemmaNoMaterializationHistory(file, previous)
     const state = set(sessionID, {
       file,
-      phase: computePhase(merged.queue),
+      // queue may have been rewritten above to restore an escalated repair
+      // owner for an unvalidated staged revision. Compute the phase from that
+      // authoritative queue, not the pre-reconciliation merge result.
+      phase: computePhase(queue),
       queue,
       active_admit_id: merged.active_admit_id,
       active_task_id: merged.active_task_id,
@@ -3159,6 +3335,7 @@ export namespace SessionProofWorkflow {
       fallback_guard: fallbackGuard,
       repair_incidents: sharedRepair.incidents,
       repair_incident_resolutions: sharedRepair.resolutions,
+      lemma_no_materialization_incidents: sharedLemmaNoMaterialization,
       decomposition_plan: decompositionPlan,
       last_progress_receipt: previous?.last_progress_receipt,
       last_structural_progress_receipt: previous?.last_structural_progress_receipt,
@@ -4025,6 +4202,21 @@ export namespace SessionProofWorkflow {
     const metrics = proofProgressMetrics(sessionID, file, source, theorem)
     const progress = proofProgressFor(sessionID, file, source, theorem, metrics, final.ok, lifecycle)
     proofFailureSnapshots.get(sessionID)?.delete(path.normalize(file))
+    const normalizedFile = normalizedWorkflowFile(file)
+    const statesWithCurrent = new Map(
+      [
+        ...statesForFile(normalizedFile),
+        ...(get(sessionID) ? [{ sessionID, state: get(sessionID)! }] : []),
+      ].map((entry) => [entry.sessionID, entry]),
+    )
+    for (const { sessionID: affectedSessionID, state: latestState } of statesWithCurrent.values()) {
+      if (latestState.latest_compiler_error?.normalized_file !== normalizedFile) continue
+      set(affectedSessionID, {
+        ...latestState,
+        latest_compiler_error: undefined,
+        updated: Date.now(),
+      })
+    }
     const maskedTheoremText = maskCoqCommentsAndStrings(theoremText ?? source)
     const hasUnfinishedProof =
       metrics.unfinished_count > 0 ||
@@ -4120,6 +4312,27 @@ export namespace SessionProofWorkflow {
     const current = theorem
       ? compilerErrorAnchor(source, theorem, input.first_error_line, input.first_error_message)
       : undefined
+    if (current) {
+      const latestState = get(sessionID)
+      const normalizedFile = normalizedWorkflowFile(file)
+      if (!latestState || normalizedWorkflowFile(latestState.file) === normalizedFile) {
+        set(sessionID, {
+          ...(latestState ?? {
+            file: normalizedFile,
+            phase: "architect" as const,
+            queue: [],
+          }),
+          latest_compiler_error: {
+            normalized_file: normalizedFile,
+            source_hash: sourceHash(source),
+            anchor: current,
+            message: input.first_error_message?.trim() || current.normalized_error || "Rocq compiler error",
+            recorded_at: Date.now(),
+          },
+          updated: Date.now(),
+        })
+      }
+    }
     const advanced = Boolean(previous && current && errorAnchorAdvanced(previous, current))
     const receipt = advanced && theorem && previous && current
       ? progressReceipt({
@@ -4368,6 +4581,125 @@ export namespace SessionProofWorkflow {
     return /(?:repeated_)?compiler_signature=([A-Za-z0-9_-]+)/.exec(output)?.[1]
   }
 
+  function proofTransactionYieldMetadata(output?: string) {
+    if (!output) return undefined
+    const encoded = /proof_transaction_yield:\s*(\{[^\n]+\})/.exec(output)?.[1]
+    if (!encoded) return undefined
+    try {
+      const parsed = JSON.parse(encoded) as Record<string, unknown>
+      return {
+        transactionID:
+          typeof parsed.transaction_id === "string" ? parsed.transaction_id : undefined,
+        yieldedRevision:
+          typeof parsed.yielded_from_revision === "number" ? parsed.yielded_from_revision : undefined,
+        resumeRevision:
+          typeof parsed.resume_revision === "number" ? parsed.resume_revision : undefined,
+      }
+    } catch {
+      return undefined
+    }
+  }
+
+  function lemmaNoMaterializationContractFingerprint(
+    state: State,
+    item: QueueItem,
+    assignment?: LemmaAssignment,
+  ) {
+    const goalFingerprint =
+      assignment?.goal_fingerprint ??
+      (assignment?.goal
+        ? semanticGoalFingerprint(assignment.goal)
+        : hashText(
+            JSON.stringify({
+              theorem: item.theorem,
+              proof_plan_node: item.proof_plan_node,
+              target_name: item.target_name,
+              kind: item.kind,
+              dependencies: [...item.depends_on].sort(),
+            }),
+          ))
+    const obligation = assignment?.obligation
+    const contractFingerprint = hashText(
+      JSON.stringify({
+        theorem: assignment?.theorem ?? item.theorem,
+        goal_fingerprint: goalFingerprint,
+        proof_plan_node: obligation?.proof_plan_node ?? item.proof_plan_node,
+        kind: obligation?.kind ?? item.kind,
+        target_name: obligation?.target_name ?? item.target_name,
+        target_statement: obligation?.target_statement,
+        dependencies: [...(obligation?.dependencies ?? item.depends_on)].sort(),
+        source: obligation?.source,
+        input: [...(obligation?.input ?? [])].sort(),
+        output: obligation?.output,
+        layer: obligation?.layer,
+        expected: obligation?.expected,
+        target_normal_form: obligation?.target_normal_form,
+        plan_fingerprint: state.decomposition_plan?.accepted_semantic_fingerprint,
+      }),
+    )
+    return { goalFingerprint, contractFingerprint }
+  }
+
+  function registerLemmaNoMaterializationIncident(
+    sessionID: string,
+    state: State,
+    item: QueueItem,
+    attempt: LatestLemmaTask,
+    source: string,
+  ) {
+    const assignment = attempt.assignment
+    const { goalFingerprint, contractFingerprint } = lemmaNoMaterializationContractFingerprint(
+      state,
+      item,
+      assignment,
+    )
+    const theorem = assignment?.theorem ?? item.theorem
+    const theoremContextFingerprint = ProofRouteLedger.theoremContextFingerprint(source, theorem)
+    const signature = hashText(
+      [normalizedWorkflowFile(state.file), theorem, theoremContextFingerprint, contractFingerprint].join("\n"),
+    )
+    const previous = state.lemma_no_materialization_incidents ?? []
+    const existing = previous.find((incident) => incident.signature === signature)
+    const compilerSignature = repairChildOutcomeCompilerSignature(attempt.output)
+    const transaction = proofTransactionYieldMetadata(attempt.output)
+    const now = Date.now()
+    const incident = LemmaNoMaterializationIncident.parse({
+      signature,
+      theorem,
+      admit_id: assignment?.admit_id ?? item.admit_id,
+      contract_fingerprint: contractFingerprint,
+      theorem_context_fingerprint: theoremContextFingerprint,
+      goal_fingerprint: goalFingerprint,
+      proof_plan_node: assignment?.obligation?.proof_plan_node ?? item.proof_plan_node,
+      plan_fingerprint: state.decomposition_plan?.accepted_semantic_fingerprint,
+      compiler_signatures: [
+        ...new Set([
+          ...(existing?.compiler_signatures ?? []),
+          ...(compilerSignature ? [compilerSignature] : []),
+        ]),
+      ].slice(-5),
+      repeat_count: (existing?.repeat_count ?? 0) + 1,
+      first_seen_at: existing?.first_seen_at ?? now,
+      updated_at: now,
+      last_task_at: attempt.time,
+      last_transaction_id: transaction?.transactionID ?? existing?.last_transaction_id,
+      last_yielded_revision: transaction?.yieldedRevision ?? existing?.last_yielded_revision,
+      last_resume_revision: transaction?.resumeRevision ?? existing?.last_resume_revision,
+    })
+    const incidents = [
+      ...previous.filter((entry) => entry.signature !== signature),
+      incident,
+    ].slice(-MAX_REPAIR_INCIDENTS)
+    return {
+      incident,
+      state: set(sessionID, {
+        ...state,
+        lemma_no_materialization_incidents: incidents,
+        updated: now,
+      }),
+    }
+  }
+
   function repairChildNoMaterializationIncidentReason(
     assignment: ProofRepairAssignment,
     compilerSignature?: string,
@@ -4379,8 +4711,11 @@ export namespace SessionProofWorkflow {
     ].join("; ")
   }
 
-  function clearResolvedRepairIncidents(sessionID: string, state: State, theorem: string) {
-    const resolved = state.repair_incidents?.filter((incident) => incident.theorem === theorem) ?? []
+  function clearResolvedProofIncidents(sessionID: string, state: State, theorem: string) {
+    const resolvedRepairs = state.repair_incidents?.filter((incident) => incident.theorem === theorem) ?? []
+    const resolvedLemmaChildren =
+      state.lemma_no_materialization_incidents?.filter((incident) => incident.theorem === theorem) ?? []
+    const resolved = [...resolvedRepairs, ...resolvedLemmaChildren]
     if (resolved.length === 0) return state
     const now = Date.now()
     const resolutions = [
@@ -4392,6 +4727,8 @@ export namespace SessionProofWorkflow {
     return set(sessionID, {
       ...state,
       repair_incidents: state.repair_incidents?.filter((incident) => incident.theorem !== theorem),
+      lemma_no_materialization_incidents:
+        state.lemma_no_materialization_incidents?.filter((incident) => incident.theorem !== theorem),
       repair_incident_resolutions: resolutions,
       fallback_guard: undefined,
       updated: now,
@@ -4633,7 +4970,7 @@ export namespace SessionProofWorkflow {
           ? queue.find((item) => item.admit_id === sessionNewlyCertified?.admitID)?.theorem
           : undefined
         const incidentState = certifiedTheorem
-          ? clearResolvedRepairIncidents(sessionID, state, certifiedTheorem)
+          ? clearResolvedProofIncidents(sessionID, state, certifiedTheorem)
           : state
         set(sessionID, {
           ...incidentState,
@@ -4752,7 +5089,7 @@ export namespace SessionProofWorkflow {
           ? queue.find((item) => item.admit_id === sessionChanged?.admitID)?.theorem
           : undefined
         const incidentState = certifiedTheorem
-          ? clearResolvedRepairIncidents(sessionID, state, certifiedTheorem)
+          ? clearResolvedProofIncidents(sessionID, state, certifiedTheorem)
           : state
         set(sessionID, {
           ...incidentState,
@@ -5060,15 +5397,26 @@ export namespace SessionProofWorkflow {
 
   function releaseRunning(sessionID: string, state: State, item: QueueItem, reason: string) {
     const queue = state.queue.map((entry) =>
-      entry.admit_id === item.admit_id
-        ? {
-            ...entry,
-            status: "pending" as const,
-            task_id: undefined,
-            running_started_at: undefined,
-            running_lease_expires_at: undefined,
-            running_release_reason: reason,
-          }
+      entry.theorem === item.theorem && entry.admit_id === item.admit_id
+        ? (() => {
+            // refresh() may already have observed a child-staged, hole-free
+            // region and promoted it to unvalidated, or a structural repair
+            // may have escalated it. Releasing the stale running lease must
+            // not downgrade that newer semantic state back to pending and
+            // redispatch a lemma against unvalidated source.
+            const status =
+              entry.status === "running" || entry.status === "split"
+                ? "pending" as const
+                : entry.status
+            return {
+              ...entry,
+              status,
+              task_id: undefined,
+              running_started_at: undefined,
+              running_lease_expires_at: undefined,
+              running_release_reason: reason,
+            }
+          })()
         : entry,
     )
 
@@ -5088,6 +5436,59 @@ export namespace SessionProofWorkflow {
   function releaseExpiredRunningIfNeeded(sessionID: string, state: State, item: QueueItem, reason: string) {
     if (!isRunningLeaseExpired(item)) return state
     return releaseRunning(sessionID, state, item, reason)
+  }
+
+  function forceParentRemodelAfterLemmaNoMaterialization(input: {
+    sessionID: string
+    state: State
+    item: QueueItem
+    source: string
+    incident: LemmaNoMaterializationIncident
+  }) {
+    const signatures = input.incident.compiler_signatures.length > 0
+      ? input.incident.compiler_signatures.join(",")
+      : "unavailable"
+    const reason =
+      `lemma_outcome=child_no_materialization; identical_lemma_failures=${input.incident.repeat_count}/${IDENTICAL_LEMMA_CHILD_NO_MATERIALIZATION_LIMIT}; ` +
+      `contract_fingerprint=${input.incident.contract_fingerprint}; compiler_signatures=${signatures}; ` +
+      "the same proof-region contract exhausted five fresh lemma children without a new compiler certificate. " +
+      "Do not redispatch this unchanged region. The parent prover must inspect the preserved staged transaction, then remodel the local contract, add or reorder a preceding bridge, revise the accepted proof plan, or materialize a genuinely different theorem-level route before validation."
+    const escalatedState = markEscalated(
+      input.sessionID,
+      input.state,
+      input.item,
+      "needs_subgoal_remodel",
+      reason,
+    )
+    const escalated = escalatedState.queue.find(
+      (entry) => entry.theorem === input.item.theorem && entry.admit_id === input.item.admit_id,
+    )
+    if (!escalated) return escalatedState
+    const assignment = repairAssignment(escalatedState.file, escalated, input.source, input.sessionID)
+    if (!assignment) return escalatedState
+    const now = Date.now()
+    const parentAssignment = ProofRepairAssignment.parse({
+      ...assignment,
+      continuation_count: input.incident.repeat_count,
+      last_assessed_task_at: input.incident.last_task_at,
+      last_outcome: "structured_escalation",
+    })
+    return set(input.sessionID, {
+      ...escalatedState,
+      phase: "prover",
+      active_repair: parentAssignment,
+      fallback_guard: {
+        blocker_admit_id: parentAssignment.admit_id,
+        theorem_fingerprint: theoremFingerprint(input.source, parentAssignment.theorem),
+        source_fingerprint: parentAssignment.source_fingerprint,
+        region_fingerprint: parentAssignment.region_fingerprint,
+        dispatch_lock_scope: "repair_child_yield",
+        passive_lookup_streak: 0,
+        tripped_at: now,
+        reason,
+      },
+      updated: now,
+    })
   }
 
   function assignmentFromTaskPart(part: MessageV2.ToolPart) {
@@ -5244,9 +5645,11 @@ export namespace SessionProofWorkflow {
 
         const metadata = "metadata" in part.state ? part.state.metadata : undefined
         const metadataRecord = metadata && typeof metadata === "object" ? (metadata as Record<string, unknown>) : {}
-        const assignment = assignmentFromTaskPart(part)
-        if (!assignment || typeof assignment !== "object") continue
-        if (!("admit_id" in assignment) || typeof assignment.admit_id !== "string") continue
+        const rawAssignment = assignmentFromTaskPart(part)
+        if (!rawAssignment || typeof rawAssignment !== "object") continue
+        if (!("admit_id" in rawAssignment) || typeof rawAssignment.admit_id !== "string") continue
+        const parsedAssignment = LemmaAssignmentSchema.safeParse(rawAssignment)
+        const assignment = parsedAssignment.success ? parsedAssignment.data : undefined
 
         const validation = proofResultValidation(metadataRecord)
         const hasStructuredOutcome = "proof_result" in metadataRecord || "proof_result_summary" in metadataRecord
@@ -5282,7 +5685,7 @@ export namespace SessionProofWorkflow {
           : undefined
 
         return {
-          admitID: assignment.admit_id,
+          admitID: rawAssignment.admit_id,
           status,
           taskID,
           model: modelFromMetadata(metadataRecord),
@@ -5292,6 +5695,12 @@ export namespace SessionProofWorkflow {
           error: part.state.status === "error" ? part.state.error : undefined,
           noMaterialization:
             typeof completedOutput === "string" && completedOutput.includes("lemma_child_no_materialization:"),
+          output: typeof completedOutput === "string" ? completedOutput : undefined,
+          time:
+            part.state.status === "completed" || part.state.status === "error"
+              ? part.state.time?.end
+              : undefined,
+          assignment,
           escalationType,
           remodelRequest,
           attemptReport,
@@ -7165,6 +7574,20 @@ export namespace SessionProofWorkflow {
       : undefined
     if (state.active_repair) {
       const repairItem = state.queue.find((item) => item.admit_id === state.active_repair?.admit_id)
+      const currentSourceFingerprint = repairSourceFingerprint(source, state.active_repair.theorem)
+      const repairRevisionChanged = Boolean(
+        state.active_repair.source_fingerprint &&
+          state.active_repair.source_fingerprint !== currentSourceFingerprint,
+      )
+      if (!repairItem || repairRevisionChanged) {
+        set(sessionID, {
+          ...state,
+          active_repair: undefined,
+          fallback_guard: undefined,
+          updated: Date.now(),
+        })
+        return planNextSubtask(sessionID, messages, source)
+      }
       const receipt = state.last_progress_receipt
       const receiptAfterBaseline = Boolean(
         receipt &&
@@ -7182,11 +7605,6 @@ export namespace SessionProofWorkflow {
         return planNextSubtask(sessionID, messages, source)
       }
       if (state.fallback_guard?.dispatch_lock_scope) {
-        const currentSourceFingerprint = repairSourceFingerprint(source, state.active_repair.theorem)
-        const sourceChanged = Boolean(
-          state.active_repair.source_fingerprint &&
-            state.active_repair.source_fingerprint !== currentSourceFingerprint,
-        )
         const regionChangedWithoutSourceBaseline = Boolean(
           !state.active_repair.source_fingerprint &&
             repairItem &&
@@ -7196,9 +7614,9 @@ export namespace SessionProofWorkflow {
         const blockerReasonChanged = Boolean(
           repairItem?.escalation_reason &&
             normalizedRepairReason(repairItem.escalation_reason) !==
-              normalizedRepairReason(state.active_repair.reason),
+            normalizedRepairReason(state.active_repair.reason),
         )
-        if (sourceChanged || regionChangedWithoutSourceBaseline || blockerReasonChanged) {
+        if (regionChangedWithoutSourceBaseline || blockerReasonChanged) {
           set(sessionID, {
             ...state,
             active_repair: undefined,
@@ -7240,34 +7658,68 @@ export namespace SessionProofWorkflow {
       const latestAttempt = findLatestLemmaTaskForAdmit(messages, runningActive.admit_id)
       if (!outcome) {
         if (latestAttempt?.status === "completed" && latestAttempt.noMaterialization) {
-          releaseRunning(
+          const currentItem = state.queue.find(
+            (entry) =>
+              entry.theorem === runningActive.theorem && entry.admit_id === runningActive.admit_id,
+          ) ?? runningActive
+          const tracked = registerLemmaNoMaterializationIncident(
             sessionID,
             state,
-            runningActive,
-            "lemma child yielded after the semantic liveness cutoff without a new compiler certificate",
+            currentItem,
+            latestAttempt,
+            source,
           )
-          return planNextSubtask(sessionID, messages, source)
+          if (
+            tracked.incident &&
+            tracked.incident.repeat_count >= IDENTICAL_LEMMA_CHILD_NO_MATERIALIZATION_LIMIT &&
+            // A hole-free staged region is a concrete candidate awaiting its
+            // compiler verdict. Do not replace it with a remodel merely
+            // because the child itself failed to obtain the certificate.
+            // Parent validation must run first; a real compiler failure will
+            // then produce the exact repair assignment.
+            currentItem.status !== "unvalidated" &&
+            currentItem.status !== "solved"
+          ) {
+            forceParentRemodelAfterLemmaNoMaterialization({
+              sessionID,
+              state: tracked.state,
+              item: currentItem,
+              source,
+              incident: tracked.incident,
+            })
+            return undefined
+          }
+          const count = tracked.incident?.repeat_count ?? 1
+          releaseRunning(
+            sessionID,
+            tracked.state,
+            currentItem,
+            `lemma child yielded after the semantic liveness cutoff without a new compiler certificate; identical_lemma_failures=${count}/${IDENTICAL_LEMMA_CHILD_NO_MATERIALIZATION_LIMIT}. Parent review is required before another fresh child is considered.`,
+          )
+          // Yield one real parent turn. Recursing here immediately dispatched
+          // the same queue item and hid both the failed transaction and its
+          // diagnosis from the prover, which caused multi-hour child loops.
+          return undefined
         }
-        if (!isRunningLeaseExpired(runningActive)) return undefined
-
         if (latestAttempt?.status === "completed" && !latestAttempt.hasStructuredOutcome) {
           releaseRunning(
             sessionID,
             state,
             runningActive,
-            "lemma task completed without a structured proof_result before the running lease expired",
+            "lemma task completed without a structured proof_result; parent review is required before redispatch",
           )
-          return planNextSubtask(sessionID, messages, source)
+          return undefined
         }
         if (latestAttempt?.status === "error") {
           releaseRunning(
             sessionID,
             state,
             runningActive,
-            `lemma task failed before the running lease expired: ${latestAttempt.error ?? "unknown error"}`,
+            `lemma task failed: ${latestAttempt.error ?? "unknown error"}; parent review is required before redispatch`,
           )
-          return planNextSubtask(sessionID, messages, source)
+          return undefined
         }
+        if (!isRunningLeaseExpired(runningActive)) return undefined
         const block = parsed.get(runningActive.admit_id)
         if (!block) {
           return escalateToRepair(
@@ -7315,9 +7767,9 @@ export namespace SessionProofWorkflow {
           sessionID,
           state,
           runningActive,
-          "running lease expired without a resumable task_id or structured proof_result",
+          "running lease expired without a resumable task_id or structured proof_result; parent review is required before redispatch",
         )
-        return planNextSubtask(sessionID, messages, source)
+        return undefined
       }
 
       const routedOutcome = routeContextEscalation(runningActive, outcome)
@@ -7458,6 +7910,11 @@ export namespace SessionProofWorkflow {
           first_error_file: scaffold.first_error_file,
           first_error_line: scaffold.first_error_line,
           first_error_message: scaffold.message,
+          // Validation.scaffold compiled this exact staged source. The
+          // transaction intentionally has not written it to disk yet, so a
+          // disk/source mismatch here is expected rather than evidence that
+          // the compiled input changed in flight.
+          validated_source_current: true,
         })
         if (lifecycle.action === "certified") {
           return planNextSubtask(sessionID, messages, source)
@@ -7506,7 +7963,7 @@ export namespace SessionProofWorkflow {
       next.status === "running"
         ? releaseExpiredRunningIfNeeded(sessionID, state, next, "running lease expired before fresh lemma delegation")
         : state
-    if (leaseReleasedState !== state) return planNextSubtask(sessionID, messages, source)
+    if (leaseReleasedState !== state) return undefined
 
     if (next.status !== "pending") return undefined
     const block = parsed.get(next.admit_id)
@@ -7568,6 +8025,7 @@ export namespace SessionProofWorkflow {
     const binding = SessionProof.get(sessionID)
     if (!binding || !binding.file.endsWith(".v")) return undefined
     if (!(await Filesystem.exists(binding.file))) return undefined
+    if (ProofEditTransaction.requiresStagedRead(sessionID, binding.file)) return undefined
     if (ProofEditTransaction.requiresValidation(sessionID, binding.file)) return undefined
 
     const source = sourceOverride ?? await ProofEditTransaction.readSource(sessionID, binding.file)

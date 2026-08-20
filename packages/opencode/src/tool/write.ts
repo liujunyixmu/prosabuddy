@@ -14,6 +14,7 @@ import { trimDiff } from "./edit"
 import { assertExternalDirectory } from "./external-directory"
 import { assertNoRewriteBangInCoqFile, assertNoIntuitionInCoqFile } from "./coq-style-guard"
 import { SessionProofWorkflow } from "@/session/proof-workflow"
+import { ProofEditTransaction } from "@/session/proof-edit-transaction"
 
 const MAX_DIAGNOSTICS_PER_FILE = 20
 const MAX_PROJECT_DIAGNOSTICS_FILES = 5
@@ -29,9 +30,11 @@ export const WriteTool = Tool.define("write", {
   async execute(params, ctx) {
     const filepath = path.isAbsolute(params.filePath) ? params.filePath : path.join(Instance.directory, params.filePath)
     await assertExternalDirectory(ctx, filepath)
+    ProofEditTransaction.assertStagedReadSynchronized(ctx.sessionID, filepath, "rewriting the proof")
 
     const exists = await Filesystem.exists(filepath)
-    const contentOld = exists ? await Filesystem.readText(filepath) : ""
+    const contentOld = ProofEditTransaction.source(ctx.sessionID, filepath) ??
+      (exists ? await Filesystem.readText(filepath) : "")
     if (exists) await FileTime.assert(ctx.sessionID, filepath)
     assertNoRewriteBangInCoqFile(filepath, params.content)
     assertNoIntuitionInCoqFile(filepath, params.content)
@@ -69,29 +72,49 @@ export const WriteTool = Tool.define("write", {
       },
     })
 
-    await Filesystem.write(filepath, params.content, 0o644)
-    await Bus.publish(File.Event.Edited, {
+    const proofTransaction = ProofEditTransaction.stage({
+      sessionID: ctx.sessionID,
       file: filepath,
+      before: contentOld,
+      after: params.content,
     })
-    await Bus.publish(FileWatcher.Event.Updated, {
-      file: filepath,
-      event: exists ? "change" : "add",
-    })
-    if (params.takeover_running_region && params.takeover_reason?.trim()) {
-      proofWorkflowTakeover = SessionProofWorkflow.recordWideAgentRunningRegionTakeover({
-        agent: ctx.agent,
+    if (proofTransaction) {
+      if (params.takeover_running_region && params.takeover_reason?.trim()) {
+        proofWorkflowTakeover = SessionProofWorkflow.recordWideAgentRunningRegionTakeover({
+          agent: ctx.agent,
+          file: filepath,
+          before: contentOld,
+          after: params.content,
+          takeoverReason: params.takeover_reason,
+        })
+      }
+    } else {
+      await Filesystem.write(filepath, params.content, 0o644)
+      await Bus.publish(File.Event.Edited, {
         file: filepath,
-        before: contentOld,
-        after: params.content,
-        takeoverReason: params.takeover_reason,
       })
+      await Bus.publish(FileWatcher.Event.Updated, {
+        file: filepath,
+        event: exists ? "change" : "add",
+      })
+      if (params.takeover_running_region && params.takeover_reason?.trim()) {
+        proofWorkflowTakeover = SessionProofWorkflow.recordWideAgentRunningRegionTakeover({
+          agent: ctx.agent,
+          file: filepath,
+          before: contentOld,
+          after: params.content,
+          takeoverReason: params.takeover_reason,
+        })
+      }
+      SessionProofWorkflow.recordSourceMutation(filepath, params.content)
     }
-    SessionProofWorkflow.recordSourceMutation(filepath, params.content)
     FileTime.read(ctx.sessionID, filepath)
 
-    let output = "Wrote file successfully."
-    await LSP.touchFile(filepath, true)
-    const diagnostics = await LSP.diagnostics()
+    let output = proofTransaction
+      ? `Write staged in proof transaction ${proofTransaction.transaction_id}; the workspace file is unchanged until an accepted checkpoint is committed.`
+      : "Wrote file successfully."
+    if (!proofTransaction) await LSP.touchFile(filepath, true)
+    const diagnostics = proofTransaction ? {} : await LSP.diagnostics()
     const normalizedFilepath = Filesystem.normalizePath(filepath)
     let projectDiagnosticsCount = 0
     for (const [file, issues] of Object.entries(diagnostics)) {
@@ -115,6 +138,7 @@ export const WriteTool = Tool.define("write", {
         diagnostics,
         filepath,
         exists: exists,
+        ...(proofTransaction ? { proof_edit_transaction: proofTransaction } : {}),
         ...(proofWorkflowTakeover.length > 0 ? { proof_workflow_takeover: proofWorkflowTakeover } : {}),
       },
       output,

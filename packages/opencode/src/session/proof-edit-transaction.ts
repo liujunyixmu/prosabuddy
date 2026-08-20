@@ -118,6 +118,11 @@ export namespace ProofEditTransaction {
     yielded_from_hash: string
     resume_revision: number
     resume_hash: string
+    draft_policy: "preserve_current" | "prefer_certified"
+    draft_preserved: boolean
+    diagnostic_revision?: number
+    diagnostic_progress_level?: "hard" | "structural" | "debug"
+    diagnostic_receipt?: unknown
   }
 
   const state = Instance.state(() => new Map<string, Transaction>())
@@ -271,6 +276,33 @@ export namespace ProofEditTransaction {
         .where(eq(ProofEditTransactionRevisionTable.id, revisionID(transaction.id, revision)))
         .get(),
     )?.progress_level
+  }
+
+  function revisionDiagnostic(transaction: Transaction, revision = transaction.revision) {
+    const row = Database.use((db) =>
+      db
+        .select({
+          progress_level: ProofEditTransactionRevisionTable.progress_level,
+          receipt: ProofEditTransactionRevisionTable.receipt,
+        })
+        .from(ProofEditTransactionRevisionTable)
+        .where(eq(ProofEditTransactionRevisionTable.id, revisionID(transaction.id, revision)))
+        .get(),
+    )
+    if (!row?.progress_level) return undefined
+    let receipt: unknown
+    if (row.receipt) {
+      try {
+        receipt = JSON.parse(row.receipt)
+      } catch {
+        receipt = row.receipt
+      }
+    }
+    return {
+      revision,
+      progressLevel: row.progress_level,
+      receipt,
+    }
   }
 
   function currentRevisionCertified(transaction: Transaction) {
@@ -1123,7 +1155,16 @@ export namespace ProofEditTransaction {
     const transaction = state().get(sessionID)
     if (!transaction) return false
     if (file && transaction.file !== normalize(file)) return false
-    return transaction.recovered && transaction.synchronizedRevision !== transaction.revision
+    return (
+      (transaction.recovered || transaction.handedOff) &&
+      // A revision-0/unchanged handoff has no staged bytes that differ from
+      // the transaction baseline. Requiring a read in that case turns a
+      // sequence of diagnostic-only lemma children into a false desync and
+      // blocks the next valid dispatch. Any real unpublished edit still
+      // requires an explicit read before the owner may act on it.
+      transaction.stagedSource !== transaction.baseSource &&
+      transaction.synchronizedRevision !== transaction.revision
+    )
   }
 
   export function requiresValidation(sessionID: string, file?: string) {
@@ -1312,13 +1353,23 @@ export namespace ProofEditTransaction {
     sessionID: string
     handoffToSessionID?: string
     handoffScope?: AuthorizedScope
+    draftPolicy?: "preserve_current" | "prefer_certified"
   }): StalledRepairYield | undefined {
     const transaction = state().get(input.sessionID)
     if (!transaction) return undefined
 
     const yieldedFromRevision = transaction.revision
     const yieldedFromHash = hash(transaction.stagedSource)
-    if (transaction.bestRecoverySource !== undefined) {
+    const diagnostic = revisionDiagnostic(transaction, yieldedFromRevision)
+    const draftPolicy = input.draftPolicy ?? "prefer_certified"
+    const preserveCurrentDraft = draftPolicy === "preserve_current"
+    if (preserveCurrentDraft && transaction.stagedSource !== transaction.baseSource) {
+      transaction.preservedDraftRevision = transaction.revision
+      transaction.preservedDraftHash = yieldedFromHash
+      transaction.recoveryBase = "current_draft"
+      transaction.updatedAt = Date.now()
+      updateJournal(transaction, "active")
+    } else if (transaction.bestRecoverySource !== undefined) {
       forkFromBestCertified(transaction)
     } else if (transaction.stagedSource !== transaction.baseSource) {
       const previous = {
@@ -1365,6 +1416,7 @@ export namespace ProofEditTransaction {
       state().delete(input.sessionID)
       transaction.sessionID = handoffSessionID
       transaction.handedOff = true
+      transaction.synchronizedRevision = undefined
       transaction.updatedAt = Date.now()
       state().set(handoffSessionID, transaction)
       updateJournal(transaction, "active")
@@ -1384,6 +1436,16 @@ export namespace ProofEditTransaction {
       yielded_from_hash: yieldedFromHash,
       resume_revision: transaction.revision,
       resume_hash: hash(transaction.stagedSource),
+      draft_policy: draftPolicy,
+      draft_preserved: preserveCurrentDraft && yieldedFromHash === hash(transaction.stagedSource),
+      diagnostic_revision: diagnostic?.revision,
+      diagnostic_progress_level:
+        diagnostic?.progressLevel === "hard" ||
+        diagnostic?.progressLevel === "structural" ||
+        diagnostic?.progressLevel === "debug"
+          ? diagnostic.progressLevel
+          : undefined,
+      diagnostic_receipt: diagnostic?.receipt,
     }
   }
 
@@ -1403,6 +1465,11 @@ export namespace ProofEditTransaction {
           state().delete(sessionID)
           transaction.sessionID = handoffSessionID
           transaction.handedOff = true
+          // Synchronization is session-owner specific. The child has read its
+          // own staged revision, but the receiving parent has not. Force the
+          // parent through the authoritative read tool before it can edit or
+          // validate the handed-off draft instead of stale workspace bytes.
+          transaction.synchronizedRevision = undefined
           transaction.updatedAt = Date.now()
           state().set(handoffSessionID, transaction)
           updateJournal(transaction, "active")

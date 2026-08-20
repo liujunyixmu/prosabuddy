@@ -6,6 +6,8 @@ import { Instance } from "../../src/project/instance"
 import { tmpdir } from "../fixture/fixture"
 import { FileTime } from "../../src/file/time"
 import { SessionProof } from "../../src/session/session-proof"
+import { ProofEditTransaction } from "../../src/session/proof-edit-transaction"
+import { SessionProofWorkflow } from "../../src/session/proof-workflow"
 import { Session } from "../../src/session"
 import { ReadTool } from "../../src/tool/read"
 
@@ -105,6 +107,92 @@ describe("tool.edit", () => {
   })
 
   describe("editing existing files", () => {
+    test("transactional takeover releases the stale running lemma owner", async () => {
+      await using tmp = await tmpdir({ git: true })
+      const filepath = path.join(tmp.path, "theorem.v")
+      const source = [
+        "Lemma demo : True.",
+        "Proof.",
+        '(* proof_region begin owner: lemma admit_id: gap_1 theorem: demo kind: pointwise_semantic_bridge target: Hgap plan_node: node_Hgap depends_on: theorem_context source: paper_step_001 input: theorem_context output: Hgap layer: coq_shape expected: local_fact normal_form: "True" evidence: mathcomp:I informal proof: prove the local fact from I. *)',
+        "have Hgap : True.",
+        "{ (* admit_id: gap_1 *)",
+        "  admit.",
+        "}",
+        "(* proof_region end admit_id: gap_1 *)",
+        "exact Hgap.",
+        "Admitted.",
+        "",
+      ].join("\n")
+      await fs.writeFile(filepath, source, "utf-8")
+
+      await Instance.provide({
+        directory: tmp.path,
+        fn: async () => {
+          const session = await Session.create({})
+          SessionProof.set(session.id, filepath, { line: 1, character: 0 }, "manual")
+          const initial = SessionProofWorkflow.refresh(session.id, filepath, source).state
+          expect(initial.queue[0]?.admit_id).toBe("gap_1")
+          SessionProofWorkflow.set(session.id, {
+            ...initial,
+            phase: "delegating",
+            queue: initial.queue.map((item) => ({
+              ...item,
+              status: "running" as const,
+              task_id: "child-gap-1",
+              running_started_at: Date.now(),
+              running_lease_expires_at: Date.now() + 60_000,
+            })),
+            active_admit_id: "gap_1",
+            active_task_id: "child-gap-1",
+            updated: Date.now(),
+          })
+          expect(SessionProofWorkflow.get(session.id)?.queue[0]?.status).toBe("running")
+
+          await ProofEditTransaction.begin({
+            sessionID: session.id,
+            parentSessionID: "",
+            agent: "prover",
+            file: filepath,
+            source,
+            scope: { kind: "theorem_body", theorem: "demo" },
+          })
+          FileTime.read(session.id, filepath)
+
+          const edit = await EditTool.init()
+          const result = await edit.execute(
+            {
+              filePath: filepath,
+              oldString: "  admit.",
+              newString: "  exact I.",
+              takeover_running_region: true,
+              takeover_reason: "parent is validating the child-staged replacement",
+            },
+            { ...ctx, sessionID: session.id, agent: "prover" },
+          )
+
+          expect(result.metadata.proof_workflow_takeover).toEqual([
+            { sessionID: session.id, admit_id: "gap_1" },
+          ])
+          expect(SessionProofWorkflow.get(session.id)?.queue[0]?.status).toBe("pending")
+          expect(SessionProofWorkflow.get(session.id)?.queue[0]?.task_id).toBeUndefined()
+          expect(ProofEditTransaction.source(session.id, filepath)).toContain("  exact I.")
+          expect(await fs.readFile(filepath, "utf-8")).toBe(source)
+
+          const refreshed = SessionProofWorkflow.refresh(
+            session.id,
+            filepath,
+            ProofEditTransaction.source(session.id, filepath)!,
+          ).state
+          expect(refreshed.queue[0]?.status).toBe("unvalidated")
+
+          ProofEditTransaction.abort(session.id)
+          SessionProofWorkflow.clear(session.id)
+          SessionProof.clear(session.id)
+          await Session.remove(session.id)
+        },
+      })
+    })
+
     test("rejects bound theorem declaration edits before permission or write", async () => {
       await using tmp = await tmpdir()
       const filepath = path.join(tmp.path, "theorem.v")

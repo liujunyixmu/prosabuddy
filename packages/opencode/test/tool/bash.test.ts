@@ -7,6 +7,8 @@ import { Filesystem } from "../../src/util/filesystem"
 import { tmpdir } from "../fixture/fixture"
 import type { PermissionNext } from "../../src/permission/next"
 import { Truncate } from "../../src/tool/truncation"
+import { ProofEditTransaction } from "../../src/session/proof-edit-transaction"
+import { Session } from "../../src/session"
 
 const ctx = {
   sessionID: "test",
@@ -120,6 +122,122 @@ describe("tool.bash", () => {
             ctx,
           ),
         ).rejects.toThrow("Use the dedicated coqc")
+      },
+    })
+  })
+
+  test("rejects shell writes to a Coq file with an active proof transaction", async () => {
+    await using tmp = await tmpdir({ git: true })
+    const filepath = path.join(tmp.path, "theorem.v")
+    const source = "Lemma demo : True.\nProof.\n  admit.\nAdmitted.\n"
+    await Bun.write(filepath, source)
+
+    await Instance.provide({
+      directory: tmp.path,
+      fn: async () => {
+        const session = await Session.create({})
+        try {
+          await ProofEditTransaction.begin({
+            sessionID: session.id,
+            parentSessionID: "",
+            agent: "prover",
+            file: filepath,
+            source,
+            scope: { kind: "theorem_body", theorem: "demo" },
+          })
+          const bash = await BashTool.init()
+          await expect(
+            bash.execute(
+              {
+                command: "sed -i 's/admit/exact I/' theorem.v",
+                description: "Rewrite theorem proof",
+              },
+              { ...ctx, sessionID: session.id },
+            ),
+          ).rejects.toThrow("proof_transaction_shell_write_rejected")
+          expect(await Bun.file(filepath).text()).toBe(source)
+        } finally {
+          ProofEditTransaction.abort(session.id)
+          await Session.remove(session.id)
+        }
+      },
+    })
+  })
+
+  test("rejects alternate in-place writes to an active transaction file", async () => {
+    await using tmp = await tmpdir({ git: true })
+    const filepath = path.join(tmp.path, "theorem.v")
+    const source = "Lemma demo : True.\nProof.\n  admit.\nAdmitted.\n"
+    await Bun.write(filepath, source)
+
+    await Instance.provide({
+      directory: tmp.path,
+      fn: async () => {
+        const session = await Session.create({})
+        try {
+          await ProofEditTransaction.begin({
+            sessionID: session.id,
+            parentSessionID: "",
+            agent: "prover",
+            file: filepath,
+            source,
+            scope: { kind: "theorem_body", theorem: "demo" },
+          })
+          const bash = await BashTool.init()
+          for (const command of [
+            "sed -i.bak 's/admit/exact I/' theorem.v",
+            "perl -pi -e 's/admit/exact I/' theorem.v",
+            "python3 -c 'open(\"theorem.v\", \"w\").write(\"\")'",
+          ]) {
+            await expect(
+              bash.execute(
+                { command, description: "Rewrite theorem proof" },
+                { ...ctx, sessionID: session.id },
+              ),
+            ).rejects.toThrow("proof_transaction_shell_write_rejected")
+          }
+          expect(await Bun.file(filepath).text()).toBe(source)
+        } finally {
+          ProofEditTransaction.abort(session.id)
+          await Session.remove(session.id)
+        }
+      },
+    })
+  })
+
+  test("allows read-only shell commands that mention the active transaction file", async () => {
+    await using tmp = await tmpdir({ git: true })
+    const filepath = path.join(tmp.path, "theorem.v")
+    const source = "Lemma demo : True.\nProof.\n  admit.\nAdmitted.\n"
+    await Bun.write(filepath, source)
+
+    await Instance.provide({
+      directory: tmp.path,
+      fn: async () => {
+        const session = await Session.create({})
+        try {
+          await ProofEditTransaction.begin({
+            sessionID: session.id,
+            parentSessionID: "",
+            agent: "prover",
+            file: filepath,
+            source,
+            scope: { kind: "theorem_body", theorem: "demo" },
+          })
+          const bash = await BashTool.init()
+          const result = await bash.execute(
+            {
+              command: "rg 'Lemma demo' theorem.v 2>/dev/null",
+              description: "Search theorem source",
+            },
+            { ...ctx, sessionID: session.id },
+          )
+          expect(result.metadata.exit).toBe(0)
+          expect(result.metadata.output).toContain("Lemma demo")
+        } finally {
+          ProofEditTransaction.abort(session.id)
+          await Session.remove(session.id)
+        }
       },
     })
   })

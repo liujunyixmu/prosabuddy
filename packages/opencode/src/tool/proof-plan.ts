@@ -2,6 +2,7 @@ import z from "zod"
 import { createHash } from "crypto"
 import { Tool } from "./tool"
 import {
+  MAX_IDENTICAL_PLAN_METADATA_REPAIRS,
   MAX_SEMANTIC_PLAN_REVISIONS,
   ProofPlan,
   ProofPlanReview,
@@ -67,6 +68,8 @@ type ProofPlanMetadata = ProofPlanValue & {
   submitted_semantic_fingerprint: string
   recommended_action: RecommendedAction
   route_failure_review: RouteFailureReview
+  metadata_repair_repeat_count?: number
+  metadata_repair_retry_limit?: number
   terminal_verdict?: {
     status: "semantic_incomplete"
     source_hash: string
@@ -101,6 +104,8 @@ type ProofPlanConvergence = Pick<
   | "submitted_semantic_fingerprint"
   | "recommended_action"
   | "route_failure_review"
+  | "metadata_repair_repeat_count"
+  | "metadata_repair_retry_limit"
   | "terminal_verdict"
 >
 
@@ -115,7 +120,15 @@ function formatProofPlanOutput(plan: ProofPlanValue, convergence: ProofPlanConve
   const visibleHardErrors = distinctHardErrors.slice(0, 12).map((entry) => {
     const node = entry.node_id ? ` (${entry.node_id})` : ""
     const message = entry.message.replace(/\s+/g, " ").slice(0, 320)
-    return `- ${entry.code}${node}: ${message}`
+    const details = Object.entries(entry.details ?? {}).slice(0, 8).map(([key, value]) => {
+      const compact = value.replace(/\s+/g, " ").slice(0, 900)
+      return `  ${key}: ${compact}`
+    })
+    return [
+      `- ${entry.code}${node}: ${message}`,
+      entry.repair_hint ? `  repair_hint: ${entry.repair_hint.replace(/\s+/g, " ").slice(0, 900)}` : undefined,
+      ...details,
+    ].filter((line): line is string => line !== undefined).join("\n")
   })
   if (distinctHardErrors.length > visibleHardErrors.length) {
     visibleHardErrors.push(`- ... ${distinctHardErrors.length - visibleHardErrors.length} additional distinct hard errors`)
@@ -132,6 +145,9 @@ function formatProofPlanOutput(plan: ProofPlanValue, convergence: ProofPlanConve
     `revision_budget_exhausted: ${convergence.revision_budget_exhausted}`,
     `accepted_plan_locked: ${convergence.accepted_plan_locked}`,
     `recommended_action: ${convergence.recommended_action}`,
+    convergence.metadata_repair_repeat_count
+      ? `metadata_repair_repeat_count: ${convergence.metadata_repair_repeat_count}/${convergence.metadata_repair_retry_limit ?? MAX_IDENTICAL_PLAN_METADATA_REPAIRS}`
+      : undefined,
     `submission_kind: ${convergence.submission_kind}`,
     convergence.terminal_verdict ? `terminal_status: ${convergence.terminal_verdict.status}` : undefined,
     convergence.terminal_verdict ? `terminal_recoverable: ${convergence.terminal_verdict.recoverable === true}` : undefined,
@@ -157,6 +173,10 @@ function normalizeGoal(text: string | undefined) {
     .replace(/\s+/g, " ")
     .trim()
     .toLowerCase()
+}
+
+function normalizedGoalHash(text: string) {
+  return createHash("sha256").update(text).digest("hex")
 }
 
 function nodeID(node: z.infer<typeof ProofPlanStep>) {
@@ -300,8 +320,11 @@ function reviewCompositionDataflow(
   const issues: ProofPlanReviewIssue[] = []
   if (!requiresCompositionDataflowAudit(node, nodesByID)) return issues
   const critical = requiresHardCompositionDataflowAudit(node, rootGoal)
-  const add = (code: string, message: string) =>
-    issues.push(issue(critical ? "hard_error" : "warning", code, message, id))
+  const add = (
+    code: string,
+    message: string,
+    guidance?: { repair_hint?: string; details?: Record<string, string> },
+  ) => issues.push(issue(critical ? "hard_error" : "warning", code, message, id, guidance))
 
   const certificate = node.composition_certificate
   if (!certificate) {
@@ -381,14 +404,55 @@ function reviewCompositionDataflow(
     }
   }
 
-  const finalOutput = normalizeGoal(certificate.steps.at(-1)?.output_proposition)
-  const target = normalizeGoal(node.target_normal_form ?? node.target?.normal_form ?? node.formal_goal)
+  const rawFinalOutput = certificate.steps.at(-1)?.output_proposition
+  const finalOutput = normalizeGoal(rawFinalOutput)
+  const targetField = node.target_normal_form !== undefined
+    ? "node.target_normal_form"
+    : node.target?.normal_form !== undefined
+      ? "node.target.normal_form"
+      : "node.formal_goal"
+  const declaredTarget = normalizeGoal(node.target_normal_form ?? node.target?.normal_form ?? node.formal_goal)
+  const closesTheoremRoot =
+    (node.transformations ?? []).includes("parent_composition") &&
+    (node.consumers ?? []).length === 0
+  const comparedTargetField = closesTheoremRoot ? "plan.root_goal" : targetField
+  const target = closesTheoremRoot ? rootGoal : declaredTarget
+
+  if (closesTheoremRoot && declaredTarget !== rootGoal) {
+    add(
+      "root_target_metadata_mismatch",
+      "This theorem-closing node declares a target different from the authoritative plan.root_goal.",
+      {
+        repair_hint:
+          `Copy plan.root_goal exactly into ${targetField}. Keep the semantic DAG unchanged; this is a metadata repair, not a new proof route.`,
+        details: {
+          compared_target_field: targetField,
+          normalized_declared_target: declaredTarget || "<empty>",
+          normalized_root_goal: rootGoal || "<empty>",
+          declared_target_hash: normalizedGoalHash(declaredTarget),
+          root_goal_hash: normalizedGoalHash(rootGoal),
+        },
+      },
+    )
+  }
+
   if (!finalOutput || finalOutput !== target) {
     add(
       "composition_target_mismatch",
       critical
         ? "The final composition step must produce the root or semantic-join target. Harmless textual normalization is advisory; final acceptance is determined by Coq."
         : "The final composition description differs from the node target; validate the actual connection while materializing the region.",
+      {
+        repair_hint:
+          `Replace only the final composition output_proposition so that it equals ${comparedTargetField} after normalization. Do not add labels such as "theorem root goal:" and do not change the proof route unless the propositions are genuinely different.`,
+        details: {
+          compared_target_field: comparedTargetField,
+          normalized_final_output: finalOutput || "<empty>",
+          normalized_target: target || "<empty>",
+          final_output_hash: normalizedGoalHash(finalOutput),
+          target_hash: normalizedGoalHash(target),
+        },
+      },
     )
   }
   return issues
@@ -399,8 +463,16 @@ function issue(
   code: string,
   message: string,
   node_id?: string,
+  guidance?: { repair_hint?: string; details?: Record<string, string> },
 ): ProofPlanReviewIssue {
-  return { severity, code, message, ...(node_id ? { node_id } : {}) }
+  return {
+    severity,
+    code,
+    message,
+    ...(node_id ? { node_id } : {}),
+    ...(guidance?.repair_hint ? { repair_hint: guidance.repair_hint } : {}),
+    ...(guidance?.details ? { details: guidance.details } : {}),
+  }
 }
 
 const MECHANICAL_PLAN_HARD_ERRORS = new Set([
@@ -410,6 +482,8 @@ const MECHANICAL_PLAN_HARD_ERRORS = new Set([
   "duplicate_composition_step",
   "dependency_use_unknown_producer",
   "dependency_output_anchor_mismatch",
+  "root_target_metadata_mismatch",
+  "composition_target_mismatch",
 ])
 
 export function hasOnlyMechanicalPlanHardErrors(review: z.infer<typeof ProofPlanReview>) {
@@ -995,6 +1069,7 @@ export const ProofPlanTool = Tool.define("proof_plan", {
     let planningGeneration = 0
     let revisionBudgetExhausted = false
     let acceptedPlanLocked = false
+    let metadataRepairRepeatCount = 0
     let terminalVerdict: ProofPlanMetadata["terminal_verdict"]
     let planningStatus: "planning" | "accepted" | "exhausted" | "unbound" = "unbound"
     let action:
@@ -1031,6 +1106,7 @@ export const ProofPlanTool = Tool.define("proof_plan", {
       planningGeneration = recorded.state.planning_generation ?? 0
       revisionBudgetExhausted = recorded.state.status === "exhausted"
       acceptedPlanLocked = recorded.accepted_plan_locked
+      metadataRepairRepeatCount = recorded.state.metadata_repair_repeat_count ?? 0
       terminalVerdict = recorded.state.terminal_verdict
       planningStatus = recorded.state.status
       action = recorded.recommended_action
@@ -1078,6 +1154,8 @@ export const ProofPlanTool = Tool.define("proof_plan", {
         submitted_semantic_fingerprint: review.semantic_fingerprint,
         recommended_action: action,
         route_failure_review: routeFailureReview,
+        metadata_repair_repeat_count: metadataRepairRepeatCount || undefined,
+        metadata_repair_retry_limit: MAX_IDENTICAL_PLAN_METADATA_REPAIRS,
         terminal_verdict: terminalVerdict,
       },
       output: formatProofPlanOutput(effectivePlan, {
@@ -1091,6 +1169,8 @@ export const ProofPlanTool = Tool.define("proof_plan", {
         submitted_semantic_fingerprint: review.semantic_fingerprint,
         recommended_action: action,
         route_failure_review: routeFailureReview,
+        metadata_repair_repeat_count: metadataRepairRepeatCount || undefined,
+        metadata_repair_retry_limit: MAX_IDENTICAL_PLAN_METADATA_REPAIRS,
         terminal_verdict: terminalVerdict,
       }),
     }

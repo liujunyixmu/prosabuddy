@@ -177,10 +177,13 @@ export const ProofPlanReviewIssue = z.object({
   code: z.string().min(1),
   message: z.string().min(1),
   node_id: z.string().optional(),
+  repair_hint: z.string().min(1).optional(),
+  details: z.record(z.string(), z.string()).optional(),
 })
 export type ProofPlanReviewIssue = z.infer<typeof ProofPlanReviewIssue>
 
 export const MAX_SEMANTIC_PLAN_REVISIONS = 4 as const
+export const MAX_IDENTICAL_PLAN_METADATA_REPAIRS = 5 as const
 
 export const ProofPlanReview = z.object({
   status: z.enum(["ready", "revise", "reject"]),
@@ -283,8 +286,12 @@ export const CoqSessionState = z.object({
   source_hash: z.string().optional(),
   certified_prefix_fingerprint: z.string().optional(),
   region_admit_id: z.string().optional(),
-  region_binding: z.enum(["assigned", "explicit"]).optional(),
+  region_binding: z.enum(["assigned", "explicit", "compiler_error"]).optional(),
   proof_position: z.object({ line: z.number().int().nonnegative(), character: z.number().int().nonnegative() }).optional(),
+  compiler_error_line: z.number().int().positive().optional(),
+  compiler_error_message: z.string().optional(),
+  compiler_error_source_hash: z.string().optional(),
+  resynchronized_line: z.number().int().positive().optional(),
   goal_fingerprint: z.string().optional(),
   semantic_goal_fingerprint: z.string().optional(),
   expected_goal: z.string().optional(),

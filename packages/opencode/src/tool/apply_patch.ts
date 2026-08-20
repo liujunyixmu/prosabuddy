@@ -272,6 +272,16 @@ export const ApplyPatchTool = Tool.define("apply_patch", {
         before: change.oldContent,
         after: change.newContent,
       })
+      if (proofTransaction && params.takeover_running_region && params.takeover_reason?.trim()) {
+        const target = change.movePath ?? change.filePath
+        proofWorkflowTakeover = SessionProofWorkflow.recordWideAgentRunningRegionTakeover({
+          agent: ctx.agent,
+          file: target,
+          before: change.oldContent,
+          after: change.newContent,
+          takeoverReason: params.takeover_reason,
+        })
+      }
     } else {
       for (const change of fileChanges) {
         const edited = change.type === "delete" ? undefined : (change.movePath ?? change.filePath)

@@ -16,9 +16,10 @@ Use the full runtime guard payload as the source of truth. Preserve staged and c
 | `candidate_unresolved_premise` | A residual premise already survived the live assumption/conversion probe. Produce it through an explicit dependency node or reference a current compiler certificate from the handoff; otherwise remove the candidate. |
 | `candidate_premise_*_invalid` | Use the exact residual-premise fingerprint returned by the guard. Correct the dependency target or reference a current matching certificate; do not invent certificate IDs or relabel a residual premise as local evidence. |
 | `recommended_action: repair_plan_route` | Preserve the current semantic DAG: keep node targets, edges, dependencies, and the leaf set fixed. Change only the candidate lemma, its mechanically distinct instantiation, or the audited source of a residual premise. |
-| `recommended_action: repair_plan_metadata` | Correct deterministic node IDs, edge endpoints, dependency anchors, or duplicate schema entries without changing the semantic targets or dependency structure. This does not consume a semantic DAG revision. |
+| `recommended_action: repair_plan_metadata` | Correct only the fields named by `repair_hint` and `details`—for example node IDs, edge endpoints, dependency anchors, declared root targets, or the final composition output. Copy the reported normalized target instead of paraphrasing it. This does not consume a semantic DAG revision. |
+| `recommended_action: do_not_retry_metadata_only_plan` | The submitted payload has not changed the review-relevant state. If `metadata_repair_repeat_count` is `5/5`, the identical metadata failure has reached its limit. Do not resubmit the same payload or make another wording-only change; re-read `compared_target_field`, normalized values, and hashes, then rebuild the exact rejected fields from authoritative root/producer data. |
 | `recommended_action: revise_semantic_dag` | Submit a materially different dependency/target structure only when the current plan has a structural hard error. The initial plan plus at most four materially distinct revisions is the bounded semantic search space. |
-| `recommended_action: stop_and_report_best_plan` | Do not submit another semantic DAG or disguise one through metadata changes. Report the best rejected plan and its exact hard errors. |
+| `recommended_action: stop_and_report_best_plan` | Do not explore another speculative or still-failing semantic DAG. Report the best rejected plan and its exact hard errors. A stale exhausted verdict may be invalidated only by a candidate that now passes the deterministic review; do not keep submitting rejected candidates to test this exception. |
 | `proof_transaction_stale_view` | Re-read the staged region and build a new patch against the current revision. |
 | `proof_transaction_scope_rejection` | Shrink the patch to the authorized theorem body or proof region and preserve its markers and surrounding source. |
 | `session_state_desync` | Stop submitting tactics, reopen the assigned region-scoped session, and verify the goal fingerprint before continuing. |
@@ -47,7 +48,7 @@ Set each structured library candidate to `direct_apply`, `rewrite`, `transport`,
 
 ## Workflow
 
-1. Read the complete guard payload, including fingerprints, missing premises, transaction revision, and recommended action.
+1. Read the complete guard payload, including fingerprints, missing premises, transaction revision, recommended action, `repair_hint`, and structured `details`.
 2. Preserve the active transaction baseline, every compiler-certified fragment, and any newer unaccepted draft recorded by revision/hash.
 3. Change only the route, premise mapping, proof state, or edit scope identified by the guard.
 4. Re-read after stale-view or desynchronization errors instead of replaying an old edit or tactic.

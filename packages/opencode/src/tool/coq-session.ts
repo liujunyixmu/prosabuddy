@@ -296,6 +296,57 @@ function theoremStartContext(content: string, theorem: string) {
   return { lines, ctxEnd, loaded: lines.slice(0, ctxEnd).join("\n") }
 }
 
+const MAX_COMPILER_ERROR_BACKTRACK_LINES = 128
+
+async function compilerErrorReplay(input: {
+  content: string
+  file: string
+  theorem: string
+  compilerError: SessionProofWorkflow.LatestCompilerError
+  context?: string
+  signal?: AbortSignal
+}) {
+  const theoremContext = theoremStartContext(input.content, input.theorem)
+  const anchorLine = input.compilerError.anchor.line
+  if (!anchorLine) {
+    throw new Error("session_state_desync: stored compiler error has no source line")
+  }
+  const lines = theoremContext.lines
+  const theoremEntryLine = theoremContext.ctxEnd
+  const anchoredLine = Math.min(lines.length - 1, Math.max(theoremEntryLine, anchorLine - 1))
+  const earliestLine = Math.max(theoremEntryLine, anchoredLine - MAX_COMPILER_ERROR_BACKTRACK_LINES)
+  let lastDiagnostic = ""
+
+  for (let line = anchoredLine; line >= earliestLine; line--) {
+    const prefix = lines.slice(0, line).join("\n")
+    const loaded = input.context ? `${input.context}\n${prefix}` : prefix
+    const result = await CoqProject.run(`${loaded}\nShow.`, input.file, undefined, { signal: input.signal })
+    if (result.exit === 0) {
+      const goal = CoqProject.cleanOutput(result.stdout)
+      if (goal && !/no more goals/i.test(goal)) {
+        return {
+          prefix,
+          loaded,
+          proof_position: { line, character: 0 },
+          resynchronized_line: line + 1,
+          result,
+          goal,
+        }
+      }
+    }
+    lastDiagnostic = compactText([result.stdout, result.stderr].filter(Boolean).join("\n"), 1000)
+  }
+
+  throw new Error(
+    [
+      `session_state_desync: could not replay a valid proof prefix before compiler error line ${anchorLine}`,
+      `searched_lines=${earliestLine + 1}-${anchoredLine + 1}`,
+      lastDiagnostic ? `last_diagnostic=${lastDiagnostic}` : undefined,
+      "Re-open with scope=theorem only if theorem-start proof search is intentional.",
+    ].filter((line): line is string => Boolean(line)).join(" "),
+  )
+}
+
 function offsetAt(content: string, position: { line: number; character: number }) {
   const lines = content.split("\n")
   if (position.line < 0 || position.line >= lines.length) return undefined
@@ -319,6 +370,57 @@ function hypothesesFromGoal(goal: string) {
 async function refreshAssignedRegionBase(sessionID: string, session: CoqSessionState) {
   if (!session.source_file || !session.project) return false
   const content = await ProofEditTransaction.readSource(sessionID, session.source_file)
+  if (session.region_binding === "compiler_error") {
+    const currentSourceHash = fingerprint(content)
+    if (currentSourceHash === session.source_hash) return false
+    const persisted = SessionProofWorkflow.latestCompilerError(
+      sessionID,
+      session.source_file,
+      session.project.theorem,
+    )
+    const compilerError = persisted ?? (
+      session.compiler_error_line
+        ? {
+            normalized_file: path.normalize(session.source_file),
+            source_hash: session.compiler_error_source_hash ?? session.source_hash ?? currentSourceHash,
+            anchor: {
+              theorem: session.project.theorem,
+              scope: `theorem:${session.project.theorem}:spine`,
+              region_order: 0,
+              sentence_index: 0,
+              line: session.compiler_error_line,
+              normalized_error: session.compiler_error_message ?? "Rocq compiler error",
+            },
+            message: session.compiler_error_message ?? "Rocq compiler error",
+            recorded_at: Date.now(),
+          }
+        : undefined
+    )
+    if (!compilerError) {
+      throw new Error("session_state_desync: compiler-error session lost its persisted error anchor")
+    }
+    const replay = await compilerErrorReplay({
+      content,
+      file: session.source_file,
+      theorem: session.project.theorem,
+      compilerError,
+      context: session.open_context,
+    })
+    session.loaded_file = replay.loaded
+    session.project = await CoqProject.context(session.source_file, session.project.theorem, replay.loaded)
+    session.certified_prefix_fingerprint = fingerprint(replay.prefix)
+    session.proof_position = replay.proof_position
+    session.source_hash = currentSourceHash
+    session.compiler_error_line = compilerError.anchor.line
+    session.compiler_error_message = compilerError.message
+    session.compiler_error_source_hash = compilerError.source_hash
+    session.resynchronized_line = replay.resynchronized_line
+    session.expected_goal = undefined
+    session.expected_goal_fingerprint = undefined
+    session.tactic_history = []
+    session.snapshots = {}
+    return true
+  }
   if (session.region_binding === "explicit") {
     if (!session.proof_position) {
       throw new Error("session_state_desync: explicit proof_region session has no proof_position")
@@ -385,7 +487,11 @@ async function synchronizeSession(sessionID: string, session: CoqSessionState, s
     }
     const goal = CoqProject.cleanOutput(result.stdout)
     const identity = goalIdentity(goal)
-    const currentMatches = expectedCurrent ? identity.semantic_fingerprint === expectedCurrent : true
+    const currentMatches = session.region_binding === "compiler_error" && prefixChanged
+      ? true
+      : expectedCurrent
+        ? identity.semantic_fingerprint === expectedCurrent
+        : true
     const entryMatches =
       session.tactic_history.filter((record) => record.result === "success").length > 0 ||
       !session.expected_goal ||
@@ -397,6 +503,20 @@ async function synchronizeSession(sessionID: string, session: CoqSessionState, s
       session.semantic_goal_fingerprint = identity.semantic_fingerprint
       session.desync_count = 0
       session.last_error = null
+      if (session.region_binding === "compiler_error" && prefixChanged) {
+        session.snapshots = {
+          initial: {
+            id: "initial",
+            goal,
+            hyps: [...session.local_hyps],
+            tactic_index: 0,
+            context: session.loaded_file,
+            goal_fingerprint: identity.strict_fingerprint,
+            semantic_goal_fingerprint: identity.semantic_fingerprint,
+            summary: session.summary,
+          },
+        }
+      }
       return { ok: true as const, resynced: prefixChanged || attempt > 1, identity }
     }
     session.last_error = [
@@ -423,7 +543,10 @@ export const CoqSessionTool = Tool.define("coq_session", {
     tactic: z.string().optional().describe("Single tactic to apply (for step)"),
     snapshot_id: z.string().optional().describe("Snapshot ID to rollback to (for undo)"),
     context: z.string().optional().describe("Additional Coq context to load before the theorem (for open)"),
-    scope: z.enum(["theorem", "assigned_region"]).optional().describe("Open at theorem start or at the active assigned proof_region"),
+    scope: z
+      .enum(["theorem", "assigned_region", "compiler_error"])
+      .optional()
+      .describe("Open at theorem start, the active assigned proof_region, or the latest persisted compiler error"),
     admit_id: z.string().optional().describe("Assigned proof_region identifier for a region-scoped open"),
     proof_position: z
       .object({ line: z.number().int().nonnegative(), character: z.number().int().nonnegative() })
@@ -465,7 +588,7 @@ export const CoqSessionTool = Tool.define("coq_session", {
             `session_state_desync: lemma worker ${ctx.sessionID} is assigned to proof_region ${liveLemmaAssignment.admit_id}; theorem-scope open is not permitted`,
           )
         }
-        const assignedRegion = params.scope === "theorem"
+        const assignedRegion = params.scope === "theorem" || params.scope === "compiler_error"
           ? undefined
           : SessionProofWorkflow.assignedRegionSessionContext(
               ctx.sessionID,
@@ -478,16 +601,40 @@ export const CoqSessionTool = Tool.define("coq_session", {
         if (params.scope === "assigned_region" && !assignedRegion && explicitOffset === undefined) {
           throw new Error("assigned_region open requires a live lemma assignment or an explicit proof_position")
         }
-        const proofPosition = assignedRegion?.proof_position ?? params.proof_position
+        const persistedCompilerError =
+          !assignedRegion && explicitOffset === undefined && params.scope !== "theorem"
+            ? SessionProofWorkflow.latestCompilerError(ctx.sessionID, filepath, params.theorem)
+            : undefined
+        if (params.scope === "compiler_error" && !persistedCompilerError) {
+          throw new Error(`compiler_error open requires a persisted Rocq error for ${params.theorem}`)
+        }
+        const compilerReplay = persistedCompilerError
+          ? await compilerErrorReplay({
+              content,
+              file: filepath,
+              theorem: params.theorem,
+              compilerError: persistedCompilerError,
+              context: params.context,
+              signal: ctx.abort,
+            })
+          : undefined
+        const proofPosition = assignedRegion?.proof_position ?? params.proof_position ?? compilerReplay?.proof_position
         const loaded = assignedRegion?.prefix ??
-          (explicitOffset !== undefined ? content.slice(0, explicitOffset) : theoremContext.loaded)
-        const extra = params.context ? params.context + "\n" + loaded : loaded
+          (explicitOffset !== undefined ? content.slice(0, explicitOffset) : compilerReplay?.prefix ?? theoremContext.loaded)
+        const extra = compilerReplay?.loaded ?? (params.context ? params.context + "\n" + loaded : loaded)
         const expectedGoal = params.expected_goal ?? assignedRegion?.expected_goal
         const expectedGoalFingerprint = params.expected_goal_fingerprint ?? assignedRegion?.expected_goal_fingerprint ??
           (expectedGoal ? fingerprint(normalizedGoalText(expectedGoal)) : undefined)
-        const regionAdmitID = assignedRegion?.assignment.admit_id ?? params.admit_id
+        const regionAdmitID = compilerReplay ? undefined : assignedRegion?.assignment.admit_id ?? params.admit_id
         const regionScoped = Boolean(assignedRegion || explicitOffset !== undefined || params.scope === "assigned_region")
-        const regionBinding = assignedRegion ? "assigned" : regionScoped ? "explicit" : undefined
+        const compilerScoped = Boolean(compilerReplay)
+        const regionBinding = assignedRegion
+          ? "assigned" as const
+          : compilerScoped
+            ? "compiler_error" as const
+            : regionScoped
+              ? "explicit" as const
+              : undefined
         const ctxEnd = proofPosition ? proofPosition.line + 1 : theoremContext.ctxEnd
         const lines = theoremContext.lines
 
@@ -512,8 +659,8 @@ export const CoqSessionTool = Tool.define("coq_session", {
         const proj = await CoqProject.context(filepath, params.theorem, extra)
 
         // Run initial query to get the goal
-        const result = await CoqProject.run(extra + "\nShow.", filepath, undefined, { signal: ctx.abort })
-        const goal = CoqProject.cleanOutput(result.stdout)
+        const result = compilerReplay?.result ?? await CoqProject.run(extra + "\nShow.", filepath, undefined, { signal: ctx.abort })
+        const goal = compilerReplay?.goal ?? CoqProject.cleanOutput(result.stdout)
         const hyps = hypothesesFromGoal(goal)
         const identity = goalIdentity(goal)
         const entryMatches =
@@ -557,6 +704,10 @@ export const CoqSessionTool = Tool.define("coq_session", {
           region_admit_id: regionAdmitID,
           region_binding: regionBinding,
           proof_position: proofPosition,
+          compiler_error_line: persistedCompilerError?.anchor.line,
+          compiler_error_message: persistedCompilerError?.message,
+          compiler_error_source_hash: persistedCompilerError?.source_hash,
+          resynchronized_line: compilerReplay?.resynchronized_line,
           goal_fingerprint: identity.strict_fingerprint,
           semantic_goal_fingerprint: identity.semantic_fingerprint,
           expected_goal: expectedGoal,
@@ -580,15 +731,33 @@ export const CoqSessionTool = Tool.define("coq_session", {
             ? `Session opened for ${params.theorem}${regionAdmitID ? `:${regionAdmitID}` : ""}`
             : `session_state_desync: ${params.theorem}${regionAdmitID ? `:${regionAdmitID}` : ""}`,
           output: entryMatches
-            ? `Session ${sid}\nScope: ${regionScoped ? `proof_region ${regionAdmitID ?? "explicit"}` : "theorem start"}\nGoal fingerprint: ${identity.semantic_fingerprint}\nGoal:\n${goal}\nHypotheses: ${hyps.length > 0 ? hyps.join(", ") : "(none detected)"}${hint}`
+            ? [
+                `Session ${sid}`,
+                compilerScoped
+                  ? `Scope: compiler error near line ${persistedCompilerError?.anchor.line} (resynchronized before line ${compilerReplay?.resynchronized_line})`
+                  : `Scope: ${regionScoped ? `proof_region ${regionAdmitID ?? "explicit"}` : "theorem start"}`,
+                compilerScoped ? `Compiler error: ${persistedCompilerError?.message}` : undefined,
+                compilerScoped && persistedCompilerError
+                  ? `Compiler source exact match: ${persistedCompilerError.source_hash === fingerprint(content)}`
+                  : undefined,
+                `Goal fingerprint: ${identity.semantic_fingerprint}`,
+                `Goal:\n${goal}`,
+                `Hypotheses: ${hyps.length > 0 ? hyps.join(", ") : "(none detected)"}${hint}`,
+              ].filter((line): line is string => Boolean(line)).join("\n")
             : `session_state_desync\nexpected_goal_fingerprint: ${expectedGoalFingerprint ?? "unknown"}\nactual_goal_fingerprint: ${identity.conclusion_fingerprint}\nactual_remaining_goals: ${identity.remaining_goals ?? "unknown"}\nThe session was opened but tactics are blocked until automatic resynchronization succeeds.`,
           metadata: {
             op: "open",
             session_id: sid,
             section_vars: vars,
-            scope: regionScoped ? "assigned_region" : "theorem",
+            scope: compilerScoped ? "compiler_error" : regionScoped ? "assigned_region" : "theorem",
             region_binding: regionBinding,
             admit_id: regionAdmitID,
+            compiler_error_line: persistedCompilerError?.anchor.line,
+            compiler_error_message: persistedCompilerError?.message,
+            compiler_error_source_exact_match: persistedCompilerError
+              ? persistedCompilerError.source_hash === fingerprint(content)
+              : undefined,
+            resynchronized_line: compilerReplay?.resynchronized_line,
             goal_fingerprint: identity.semantic_fingerprint,
             expected_goal_fingerprint: expectedGoalFingerprint,
             kind: entryMatches ? "proof_progress" : "session_state_desync",
@@ -617,7 +786,9 @@ export const CoqSessionTool = Tool.define("coq_session", {
               `expected_goal_fingerprint: ${session.semantic_goal_fingerprint ?? session.expected_goal_fingerprint ?? "unknown"}`,
               `desync_count: ${session.desync_count}`,
               session.last_error ? `reason: ${session.last_error}` : undefined,
-              "The tactic was not submitted. Reopen the assigned region after checking the certified prefix and assignment goal.",
+              session.region_binding === "compiler_error"
+                ? "The tactic was not submitted. Reopen the compiler-error scope; use theorem scope only for an intentional route restart."
+                : "The tactic was not submitted. Reopen the assigned region after checking the certified prefix and assignment goal.",
             ].filter((line): line is string => Boolean(line)).join("\n"),
             metadata: {
               op: "step",
@@ -846,7 +1017,16 @@ export const CoqSessionTool = Tool.define("coq_session", {
 
         const lines = [
           `Session: ${session.session_id}`,
-          `Scope: ${session.region_admit_id ? `proof_region ${session.region_admit_id}` : "theorem"}`,
+          `Scope: ${
+            session.region_binding === "compiler_error"
+              ? `compiler error near line ${session.compiler_error_line ?? "unknown"}`
+              : session.region_admit_id
+                ? `proof_region ${session.region_admit_id}`
+                : "theorem"
+          }`,
+          session.region_binding === "compiler_error" && session.resynchronized_line
+            ? `Resynchronized before line: ${session.resynchronized_line}`
+            : "",
           `Goal fingerprint: ${session.semantic_goal_fingerprint ?? "unknown"}`,
           `Desync count: ${session.desync_count}`,
           `Goal: ${session.focused_goal.slice(0, 300)}`,

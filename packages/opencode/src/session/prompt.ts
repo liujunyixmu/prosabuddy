@@ -1151,6 +1151,7 @@ export namespace SessionPrompt {
           ? ProofEditTransaction.yieldStalledRepair({
               sessionID,
               handoffToSessionID: session.parentID,
+              draftPolicy: lemmaChildNoMaterialization ? "preserve_current" : "prefer_certified",
               handoffScope: {
                 kind: "theorem_body",
                 theorem: fallbackGuard.assignment.theorem,
@@ -1198,12 +1199,12 @@ export namespace SessionPrompt {
               : "stalled_wide_fallback: runtime stopped this proof turn before another broad fallback batch.",
             fallbackGuard.message ? `reason: ${fallbackGuard.message}` : undefined,
             `admit_id: ${fallbackGuard.assignment.admit_id}`,
-            `required_scope: ${lemmaChildNoMaterialization ? "fresh_lemma_retry_or_parent_repair" : "theorem_repair"}`,
+            `required_scope: ${lemmaChildNoMaterialization ? "parent_review_then_bounded_fresh_retry_or_remodel" : "theorem_repair"}`,
             stalledRepairYield ? `proof_transaction_yield: ${JSON.stringify(stalledRepairYield)}` : undefined,
             repairChildNoMaterialization
               ? "next_action: parent prover must continue from the yielded certified/base transaction snapshot and materialize the diagnosed theorem-level remodel directly; the failed draft remains journaled, and the unchanged repair child must not be redispatched."
               : lemmaChildNoMaterialization
-                ? "next_action: the parent scheduler must release the completed lemma lease and start one fresh lemma turn from the yielded transaction; do not resume the oversized stale conversation."
+                ? "next_action: the parent prover must first read and inspect the preserved staged region, use its compiler diagnostic, and either validate/repair that draft or change the route. A fresh child is only a bounded fallback; five identical no-certificate children force parent-side remodeling and block unchanged redispatch."
               : "next_action: make a theorem-level edit that changes the stale blocker contract, adds the missing bridge, or remodels the region before restarting fallback search.",
           ].filter((line): line is string => Boolean(line)).join("\n"),
           synthetic: true,
@@ -1227,7 +1228,10 @@ export namespace SessionPrompt {
         agent,
         session,
       })
-      if (recoveredProofEditTransaction?.recovered && recoveredProofEditTransaction.staged) {
+      if (
+        (recoveredProofEditTransaction?.recovered || recoveredProofEditTransaction?.handed_off) &&
+        recoveredProofEditTransaction.staged
+      ) {
         runtimeContext.push(
           runtimeContextMessage(
             [
@@ -1239,7 +1243,7 @@ export namespace SessionPrompt {
               `validation_pending: ${recoveredProofEditTransaction.validation_pending}`,
               "The recovered staged source exposed by read/edit/multiedit/write/apply_patch/checkpoint/coqc is the authoritative proof state for this turn.",
               "The ordinary workspace file on disk may intentionally be older until a compiler-accepted transaction snapshot is committed.",
-              "Before lemma dispatch, proof planning, Coq-session use, or proof edits, read the target .v file through the read tool. The controller will reject those actions until this staged-revision resynchronization read occurs.",
+              "Before lemma dispatch, proof planning, Coq-session use, or proof edits, read the target .v file through the read tool. The controller will reject those state-dependent actions until this staged-revision resynchronization read occurs. checkpoint/coqc are safe before that read because they compile the authoritative staged source directly.",
               "Do not use bash, cat, or a direct disk read to reconstruct proof state, and do not rewrite compiler-certified regions merely because the disk file is stale.",
               "Read the target through the read tool and continue with the smallest edit against that staged revision. If finalization reports only the theorem terminator remains, edit only that terminator and run the final checkpoint/coqc.",
               recoveredProofEditTransaction.validation_pending
@@ -1615,11 +1619,11 @@ export namespace SessionPrompt {
             planGenerationRecoveryAvailable
               ? "The current planning generation exhausted its bounded revisions, but one recovery generation is available. Call `proof_plan` with a materially corrected DAG based on the persisted best rejected plan and its blockers; do not merely rename nodes or rewrite metadata."
               : planRevisionExhausted
-              ? "The semantic revision budget is exhausted. Do not call `proof_plan` again and do not invent another split; stop and report the best rejected plan with its hard errors."
+              ? "The semantic revision budget is exhausted. Do not explore another speculative split. You may resubmit only a candidate that directly fixes the exact reported hard errors and is expected to pass the deterministic review; otherwise stop and report the best rejected plan."
               : hasProofPlan
                 ? "A bounded proof plan is accepted and locked for normal materialization. Materialize it now; call `proof_plan` again only if the workflow later exposes its evidence-backed accepted-plan repair revision."
                 : "Your next non-validation action must call `proof_plan` on the proof.tex content. Mark strict delegation candidates, their claim deltas, transformations, dependencies, and parent consumers before editing Coq.",
-            "Resolve semantic hard errors with at most four materially distinct DAG revisions after the initial plan. Deterministic identifier, edge, and anchor corrections do not consume this budget. Warnings are advisory and must not cause an open-ended planning loop.",
+            "Resolve semantic hard errors with at most four materially distinct DAG revisions after the initial plan. Deterministic identifier, edge, anchor, declared-target, and composition-output corrections do not consume this budget. Follow the returned repair_hint and exact normalized fields instead of guessing. Warnings are advisory and must not cause an open-ended planning loop.",
             "Do not continue broad search, and do not call `lemma` until the file contains the first-level gap boundaries implied by proof.tex.",
             "</proof-tex-skeleton-required>",
           ].join("\n"),
@@ -1737,7 +1741,11 @@ export namespace SessionPrompt {
         }) ?? []
         const blockers = (bestRejectedReview?.hard_errors ?? [])
           .slice(0, 8)
-          .map((entry) => `- ${entry.code}${entry.node_id ? ` (${entry.node_id})` : ""}: ${entry.message}`)
+          .map((entry) => [
+            `- ${entry.code}${entry.node_id ? ` (${entry.node_id})` : ""}: ${entry.message}`,
+            entry.repair_hint ? `  repair_hint: ${entry.repair_hint}` : undefined,
+            ...Object.entries(entry.details ?? {}).map(([key, value]) => `  ${key}: ${value}`),
+          ].filter((line): line is string => Boolean(line)).join("\n"))
         runtimeContext.push(runtimeContextMessage(
           [
             "<decomposition-plan-generation-recovery>",
@@ -1747,7 +1755,7 @@ export namespace SessionPrompt {
             ...bestPlanNodes,
             blockers.length > 0 ? "Blocking review findings:" : undefined,
             ...blockers,
-            "Call `proof_plan` again with a materially corrected structured DAG. Preserve useful nodes whose contracts remain sound, change the failing semantic boundary, and address the listed blockers.",
+            "Call `proof_plan` again with a corrected structured plan. Apply exact metadata repair hints without changing the DAG; change a semantic boundary only when the listed blocker is genuinely semantic. Preserve useful nodes whose contracts remain sound.",
             "The rejected plan remains diagnostic only: it cannot be materialized, and metadata-only changes do not count as a new route.",
             "If this recovery generation also exhausts its bounded revisions, the resulting verdict is final for this experiment attempt.",
             "</decomposition-plan-generation-recovery>",
@@ -1760,14 +1768,24 @@ export namespace SessionPrompt {
         planRevisionExhausted &&
         !hasProofFileEdit
       ) {
+        const blockers = (decompositionPlanState?.best_rejected_review?.hard_errors ?? [])
+          .slice(0, 8)
+          .map((entry) => [
+            `- ${entry.code}${entry.node_id ? ` (${entry.node_id})` : ""}: ${entry.message}`,
+            entry.repair_hint ? `  repair_hint: ${entry.repair_hint}` : undefined,
+            ...Object.entries(entry.details ?? {}).map(([key, value]) => `  ${key}: ${value}`),
+          ].filter((line): line is string => Boolean(line)).join("\n"))
         runtimeContext.push(runtimeContextMessage(
           [
             "<decomposition-plan-exhausted>",
             "The persisted decomposition state has exhausted its four materially distinct semantic DAG revisions without an accepted plan.",
-            "Do not call `proof_plan` again or disguise the same architecture through metadata changes; report the best rejected plan and its blockers.",
-            "Stop with the best rejected plan and its deterministic hard errors so the caller can decide whether to change the architecture manually.",
+            blockers.length > 0 ? "Exact blocking review findings:" : undefined,
+            ...blockers,
+            "Do not explore another speculative semantic DAG or disguise the same failure through metadata changes.",
+            "If you can directly correct every listed field or blocker so the next candidate should pass deterministic review, a corrected submission is allowed; an accepted review invalidates the stale terminal verdict.",
+            "If the corrected candidate is still rejected, stop and report it. Do not blindly probe the guard with repeated variants.",
             "</decomposition-plan-exhausted>",
-          ].join("\n"),
+          ].filter((line): line is string => Boolean(line)).join("\n"),
         ))
       }
       if (

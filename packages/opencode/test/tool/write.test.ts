@@ -5,6 +5,8 @@ import { WriteTool } from "../../src/tool/write"
 import { Instance } from "../../src/project/instance"
 import { tmpdir } from "../fixture/fixture"
 import { SessionProof } from "../../src/session/session-proof"
+import { ProofEditTransaction } from "../../src/session/proof-edit-transaction"
+import { FileTime } from "../../src/file/time"
 import { Session } from "../../src/session"
 
 const ctx = {
@@ -90,6 +92,47 @@ describe("tool.write", () => {
   })
 
   describe("existing file overwrite", () => {
+    test("stages bound proof rewrites in the active transaction without touching disk", async () => {
+      await using tmp = await tmpdir({ git: true })
+      const filepath = path.join(tmp.path, "theorem.v")
+      const source = "Lemma demo : True.\nProof.\n  admit.\nAdmitted.\n"
+      const replacement = "Lemma demo : True.\nProof.\n  exact I.\nQed.\n"
+      await fs.writeFile(filepath, source, "utf-8")
+
+      await Instance.provide({
+        directory: tmp.path,
+        fn: async () => {
+          const session = await Session.create({})
+          SessionProof.set(session.id, filepath, { line: 1, character: 0 }, "manual")
+          await ProofEditTransaction.begin({
+            sessionID: session.id,
+            parentSessionID: "",
+            agent: "prover",
+            file: filepath,
+            source,
+            scope: { kind: "theorem_body", theorem: "demo" },
+          })
+          FileTime.read(session.id, filepath)
+
+          const write = await WriteTool.init()
+          const result = await write.execute(
+            { filePath: filepath, content: replacement },
+            { ...ctx, sessionID: session.id, agent: "prover" },
+          )
+
+          expect(result.output).toContain("Write staged in proof transaction")
+          expect(result.metadata.proof_edit_transaction).toMatchObject({ revision: 1 })
+          expect(result.metadata.diagnostics).toEqual({})
+          expect(ProofEditTransaction.source(session.id, filepath)).toBe(replacement)
+          expect(await fs.readFile(filepath, "utf-8")).toBe(source)
+
+          ProofEditTransaction.abort(session.id)
+          SessionProof.clear(session.id)
+          await Session.remove(session.id)
+        },
+      })
+    })
+
     test("rejects destructive bound theorem overwrite before permission or write", async () => {
       await using tmp = await tmpdir()
       const filepath = path.join(tmp.path, "theorem.v")

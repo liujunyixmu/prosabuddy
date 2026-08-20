@@ -16,6 +16,7 @@ import { Shell } from "@/shell/shell"
 
 import { BashArity } from "@/permission/arity"
 import { Truncate } from "./truncation"
+import { ProofEditTransaction } from "@/session/proof-edit-transaction"
 
 const MAX_METADATA_LENGTH = 30_000
 const DEFAULT_TIMEOUT = Flag.OPENCODE_EXPERIMENTAL_BASH_DEFAULT_TIMEOUT_MS || 2 * 60 * 1000
@@ -99,6 +100,53 @@ function assertNoDirectCoqCompiler(command: string[], commandText: string) {
   }
 }
 
+function escapeRegExp(value: string) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+}
+
+function assertNoProofTransactionShellMutation(input: {
+  sessionID: string
+  cwd: string
+  commandText: string
+}) {
+  const transaction = ProofEditTransaction.active(input.sessionID)
+  if (!transaction) return
+
+  const unquoted = input.commandText.replace(/["']/g, "")
+  const candidates = [
+    transaction.file,
+    path.relative(input.cwd, transaction.file),
+    path.relative(Instance.directory, transaction.file),
+    ...(path.resolve(input.cwd) === path.dirname(transaction.file) ? [path.basename(transaction.file)] : []),
+  ].filter((candidate, index, all) => candidate && candidate !== "." && all.indexOf(candidate) === index)
+  const mentionsTarget = candidates.some((candidate) =>
+    new RegExp(`(?:^|[\\s=:/,(]|\\[)${escapeRegExp(candidate)}(?=$|[\\s:;,)\\]])`).test(unquoted),
+  ) || (/[*?][^\s]*\.v\b/.test(unquoted) && transaction.file.endsWith(".v"))
+  if (!mentionsTarget) return
+
+  const targetAlternation = candidates.map(escapeRegExp).join("|")
+  const redirectsToTarget = new RegExp(`>{1,2}\\s*(?:${targetAlternation})(?=$|[\\s;,&])`).test(unquoted)
+  const copiesToTarget =
+    /(?:^|[;&|]\s*)(?:cp|install|rsync)\b/.test(unquoted) &&
+    new RegExp(`(?:${targetAlternation})\\s*$`).test(unquoted)
+  const mutation =
+    /(?:^|[;&|]\s*)(?:sed|perl)\b[^\n;&|]*(?:\s-[^\s]*i[^\s]*|\s--in-place(?:=[^\s]+)?)/.test(unquoted) ||
+    /(?:^|[;&|]\s*)(?:tee|truncate|patch|apply_patch|sponge|ed|ex|mv|rm)\b/.test(unquoted) ||
+    /(?:^|[;&|]\s*)git\s+(?:checkout|restore|apply|clean|reset)\b/.test(unquoted) ||
+    /(?:^|[;&|]\s*)dd\b[^\n;&|]*\bof=/.test(unquoted) ||
+    redirectsToTarget ||
+    copiesToTarget ||
+    /\b(?:writeFile(?:Sync)?|write_text|write_bytes|Bun\.write)\b/.test(unquoted) ||
+    /\bopen\s*\([^)]*(?:,\s*|mode\s*=\s*)[wax+]/.test(unquoted)
+  if (!mutation) return
+
+  throw new Error(
+    `proof_transaction_shell_write_rejected: ${transaction.file} has active staged transaction ${transaction.transaction_id}. ` +
+      "A shell write would bypass the transaction journal, authorized proof scope, rollback, and compiler-certificate merge. " +
+      "Read the staged file, then use edit, multiedit, write, or apply_patch; validate it with checkpoint/coqc before commit.",
+  )
+}
+
 // TODO: we may wanna rename this tool so it works better on other shells
 export const BashTool = Tool.define("bash", async () => {
   const shell = Shell.acceptable()
@@ -161,6 +209,11 @@ export const BashTool = Tool.define("bash", async () => {
         }
 
         assertNoDirectCoqCompiler(command, commandText)
+        assertNoProofTransactionShellMutation({
+          sessionID: ctx.sessionID,
+          cwd,
+          commandText,
+        })
 
         // not an exhaustive list, but covers most common cases
         if (["cd", "rm", "cp", "mv", "mkdir", "touch", "chmod", "chown", "cat"].includes(command[0])) {

@@ -208,9 +208,21 @@ describe("proof edit transaction", () => {
         expect(handedOff?.handed_off).toBe(true)
         expect(await fs.readFile(file, "utf-8")).toBe(source)
         expect(ProofEditTransaction.source(parentSessionID, file)).toBe(childDraft)
+        expect(ProofEditTransaction.requiresStagedRead(parentSessionID, file)).toBe(true)
 
         FileTime.read(parentSessionID, file)
         const edit = await EditTool.init()
+        await expect(
+          edit.execute(
+            {
+              filePath: file,
+              oldString: "  constructor.",
+              newString: "  pose proof I as H.\n  exact H.",
+            },
+            context(parentSessionID),
+          ),
+        ).rejects.toThrow("proof_transaction_resync_required")
+        ProofEditTransaction.acknowledgeStagedRead(parentSessionID, file)
         const parentResult = await edit.execute(
           {
             filePath: file,
@@ -1118,6 +1130,71 @@ describe("proof edit transaction", () => {
         expect(ProofEditTransaction.source("repair-no-cert-parent", file)).toBe(source)
         expect(await fs.readFile(file, "utf-8")).toBe(source)
         ProofEditTransaction.abort("repair-no-cert-parent")
+      },
+    })
+  })
+
+  test("stalled lemma handoff preserves the exact unaccepted draft for parent review", async () => {
+    await using fixture = await tmpdir({ git: true })
+    const file = path.join(fixture.path, "lemma3.v")
+    await fs.writeFile(file, source, "utf-8")
+
+    await Instance.provide({
+      directory: fixture.path,
+      fn: async () => {
+        const failed = source.replace("  exact I.", "  pose proof I as Hroute.\n  fail.")
+        await ProofEditTransaction.begin({
+          sessionID: "lemma-stalled-child",
+          parentSessionID: "lemma-stalled-parent",
+          agent: "lemma",
+          file,
+          source,
+          scope: { kind: "theorem_body", theorem: "Lemma3_05" },
+        })
+        ProofEditTransaction.stage({
+          sessionID: "lemma-stalled-child",
+          file,
+          before: source,
+          after: failed,
+        })
+        ProofEditTransaction.markDebug({
+          sessionID: "lemma-stalled-child",
+          file,
+          source: failed,
+          receipt: {
+            kind: "first_error_advanced",
+            level: "debug",
+            first_error_after: { line: 3, normalized_error: "The command has indeed failed" },
+          },
+        })
+
+        const yielded = ProofEditTransaction.yieldStalledRepair({
+          sessionID: "lemma-stalled-child",
+          handoffToSessionID: "lemma-stalled-parent",
+          handoffScope: { kind: "theorem_body", theorem: "Lemma3_05" },
+          draftPolicy: "preserve_current",
+        })
+        expect(yielded).toMatchObject({
+          status: "handed_off",
+          handoff_session_id: "lemma-stalled-parent",
+          draft_policy: "preserve_current",
+          draft_preserved: true,
+          recovery_base: "current_draft",
+          validation_pending: true,
+          yielded_from_revision: 1,
+          resume_revision: 1,
+          diagnostic_revision: 1,
+          diagnostic_progress_level: "debug",
+          preserved_draft_revision: 1,
+        })
+        expect(yielded?.resume_hash).toBe(yielded?.yielded_from_hash)
+        expect(yielded?.diagnostic_receipt).toMatchObject({ kind: "first_error_advanced" })
+        expect(ProofEditTransaction.source("lemma-stalled-parent", file)).toBe(failed)
+        expect(ProofEditTransaction.requiresStagedRead("lemma-stalled-parent", file)).toBe(true)
+        ProofEditTransaction.acknowledgeStagedRead("lemma-stalled-parent", file)
+        expect(ProofEditTransaction.requiresStagedRead("lemma-stalled-parent", file)).toBe(false)
+        expect(await fs.readFile(file, "utf-8")).toBe(source)
+        ProofEditTransaction.abort("lemma-stalled-parent")
       },
     })
   })

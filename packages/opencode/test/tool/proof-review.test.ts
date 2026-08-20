@@ -223,6 +223,92 @@ describe("tool.proof_plan bounded semantic review", () => {
     expect(review.hard_errors.map((entry) => entry.code)).toContain("required_hypothesis_unmapped")
   })
 
+  test("reports exact theorem-target metadata repairs instead of making the model guess", async () => {
+    const rootGoal = "A \\/ B"
+    const parent = node({
+      paper_step_id: "parent composition",
+      node_id: "parent_composition",
+      formal_goal: "theorem root goal",
+      target: { normal_form: "theorem root goal", shape: "disjunction", evidence: [] },
+      required_hypotheses: [],
+      depends_on: [],
+      dependency_uses: [],
+      consumers: [],
+      transformations: ["parent_composition"],
+      delegation_candidate: false,
+      risk: "medium",
+      composition_certificate: {
+        steps: [{ step_id: "close", input_refs: ["root_context"], output_proposition: rootGoal }],
+      },
+    })
+    const staleTargetPlan = ProofPlan.parse({
+      theorem: "demo",
+      root_goal: rootGoal,
+      nodes: [parent],
+      edges: [],
+      ready_nodes: [],
+      planner_contract: { marker_fields_required_for_lemma_delegation: [], note: "fixture" },
+    })
+
+    const staleTargetReview = reviewProofPlan(staleTargetPlan)
+    const metadataIssue = staleTargetReview.hard_errors.find(
+      (entry) => entry.code === "root_target_metadata_mismatch",
+    )
+    expect(metadataIssue?.repair_hint).toContain("Copy plan.root_goal exactly")
+    expect(metadataIssue?.details?.compared_target_field).toBe("node.target.normal_form")
+    expect(metadataIssue?.details?.normalized_declared_target).toBe("theorem root goal")
+    expect(metadataIssue?.details?.normalized_root_goal).toBe("a \\/ b")
+    expect(staleTargetReview.hard_errors.map((entry) => entry.code)).not.toContain(
+      "composition_target_mismatch",
+    )
+
+    const correctedPlan = ProofPlan.parse({
+      ...staleTargetPlan,
+      nodes: [{
+        ...parent,
+        formal_goal: rootGoal,
+        target: { ...parent.target!, normal_form: rootGoal },
+      }],
+    })
+    expect(reviewProofPlan(correctedPlan).materialization_allowed).toBe(true)
+
+    const prefixedOutputPlan = ProofPlan.parse({
+      ...correctedPlan,
+      nodes: [{
+        ...correctedPlan.nodes[0]!,
+        composition_certificate: {
+          steps: [{
+            step_id: "close",
+            input_refs: ["root_context"],
+            output_proposition: `theorem root goal: ${rootGoal}`,
+          }],
+        },
+      }],
+    })
+    const prefixedReview = reviewProofPlan(prefixedOutputPlan)
+    const compositionIssue = prefixedReview.hard_errors.find(
+      (entry) => entry.code === "composition_target_mismatch",
+    )
+    expect(compositionIssue?.repair_hint).toContain("Do not add labels")
+    expect(compositionIssue?.details?.compared_target_field).toBe("plan.root_goal")
+    expect(compositionIssue?.details?.normalized_final_output).toBe("theorem root goal:a \\/ b")
+    expect(compositionIssue?.details?.normalized_target).toBe("a \\/ b")
+
+    const tool = await ProofPlanTool.init()
+    const result = await tool.execute(
+      {
+        theorem: prefixedOutputPlan.theorem,
+        root_goal: prefixedOutputPlan.root_goal,
+        nodes: prefixedOutputPlan.nodes,
+        edges: prefixedOutputPlan.edges,
+      },
+      context("actionable-composition-diagnostic"),
+    )
+    expect(result.output).toContain("repair_hint: Replace only the final composition output_proposition")
+    expect(result.output).toContain("normalized_final_output: theorem root goal:a \\/ b")
+    expect(result.output).toContain("normalized_target: a \\/ b")
+  })
+
   test("rejects a declared dependency whose exported fact is not consumed", () => {
     const producer = node({
       paper_step_id: "producer-step",

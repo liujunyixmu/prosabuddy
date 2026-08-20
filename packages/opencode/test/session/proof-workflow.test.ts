@@ -176,6 +176,7 @@ describe("session.proof-workflow lemma scheduling", () => {
         expect(rebased.source_fingerprint).not.toBe(assignment?.source_fingerprint)
         expect(rebased.continuation_count).toBe(assignment?.continuation_count)
         expect(SessionProofWorkflow.get(session.id)?.queue[0]?.status).toBe("escalated")
+        expect(SessionProofWorkflow.get(session.id)?.phase).toBe("prover")
         expect(SessionProofWorkflow.get(session.id)?.active_repair?.region_fingerprint).toBe(
           rebased.region_fingerprint,
         )
@@ -541,6 +542,97 @@ describe("session.proof-workflow lemma scheduling", () => {
         expect(repairedAttempt.state.semantic_revision_number).toBe(0)
         expect(repairedAttempt.same_semantic_plan).toBe(true)
         expect(repairedAttempt.recommended_action).toBe("materialize_once")
+
+        SessionProofWorkflow.clear(session.id)
+        await Session.remove(session.id)
+      },
+    })
+  })
+
+  test("bounds identical metadata retries without charging semantic revisions", async () => {
+    await using tmp = await tmpdir({ git: true })
+
+    await Instance.provide({
+      directory: tmp.path,
+      fn: async () => {
+        const file = `${tmp.path}/metadata-repair.v`
+        const source = "Lemma demo : True.\nProof.\nAdmitted.\n"
+        await Bun.write(file, source)
+        const session = await Session.create({})
+        const plan = ProofPlan.parse({
+          theorem: "demo",
+          root_goal: "True",
+          nodes: [{
+            paper_step_id: "parent",
+            node_id: "parent",
+            paper_claim: "close the theorem",
+            formal_goal: "True",
+            candidate_lemmas: [],
+            prosa_candidate_lemmas: [],
+            mathcomp_candidate_lemmas: [],
+            required_hypotheses: [],
+            fallback_plan: [],
+            done_when: "the theorem closes",
+            depends_on: [],
+            consumers: [],
+            transformations: ["parent_composition"],
+            delegation_candidate: false,
+          }],
+          edges: [],
+          ready_nodes: [],
+          planner_contract: { marker_fields_required_for_lemma_delegation: [], note: "fixture" },
+        })
+        const blocked = ProofPlanReview.parse({
+          status: "reject",
+          semantic_fingerprint: "same-semantic-dag",
+          hard_errors: [{
+            severity: "hard_error",
+            code: "composition_target_mismatch",
+            message: "final output differs from the target",
+            node_id: "parent",
+            repair_hint: "copy the exact target",
+            details: {
+              normalized_final_output: "theorem root goal:true",
+              normalized_target: "true",
+            },
+          }],
+          warnings: [],
+          materialization_allowed: false,
+          max_semantic_revisions: 4,
+        })
+
+        const attempts = Array.from({ length: 5 }, () =>
+          SessionProofWorkflow.recordDecompositionPlanAttempt({
+            sessionID: session.id,
+            file,
+            source,
+            plan,
+            review: blocked,
+          }))
+
+        expect(attempts.every((attempt) => attempt.state.status === "planning")).toBe(true)
+        expect(attempts.every((attempt) => attempt.state.semantic_revision_number === 0)).toBe(true)
+        expect(attempts[3]?.recommended_action).toBe("repair_plan_metadata")
+        expect(attempts[4]?.recommended_action).toBe("do_not_retry_metadata_only_plan")
+        expect(attempts[4]?.state.metadata_repair_repeat_count).toBe(5)
+
+        const repaired = ProofPlanReview.parse({
+          ...blocked,
+          status: "ready",
+          semantic_fingerprint: "corrected-metadata",
+          hard_errors: [],
+          materialization_allowed: true,
+        })
+        const accepted = SessionProofWorkflow.recordDecompositionPlanAttempt({
+          sessionID: session.id,
+          file,
+          source,
+          plan,
+          review: repaired,
+        })
+        expect(accepted.state.status).toBe("accepted")
+        expect(accepted.state.semantic_revision_number).toBe(0)
+        expect(accepted.state.metadata_repair_repeat_count).toBeUndefined()
 
         SessionProofWorkflow.clear(session.id)
         await Session.remove(session.id)
@@ -980,6 +1072,25 @@ describe("session.proof-workflow lemma scheduling", () => {
         expect(finalExhaustion.state.status).toBe("exhausted")
         expect(finalExhaustion.state.terminal_verdict?.recoverable).toBe(false)
         expect(finalExhaustion.recommended_action).toBe("stop_and_report_best_plan")
+
+        const correctedReview = ProofPlanReview.parse({
+          ...rejected,
+          status: "ready",
+          semantic_fingerprint: "corrected-after-final-exhaustion",
+          hard_errors: [],
+          materialization_allowed: true,
+        })
+        const corrected = SessionProofWorkflow.recordDecompositionPlanAttempt({
+          sessionID: session.id,
+          file,
+          source,
+          plan,
+          review: correctedReview,
+        })
+        expect(corrected.state.status).toBe("accepted")
+        expect(corrected.state.planning_generation).toBe(1)
+        expect(corrected.state.terminal_verdict).toBeUndefined()
+        expect(corrected.recommended_action).toBe("materialize_once")
 
         SessionProofWorkflow.clear(session.id)
         SessionProof.clear(session.id)
@@ -2084,7 +2195,7 @@ describe("session.proof-workflow lemma scheduling", () => {
     })
   })
 
-  test("yields an ordinary lemma child after prolonged no-certificate work and immediately schedules a fresh child", async () => {
+  test("yields one parent review turn and forces remodeling after five identical non-materializing lemma children", async () => {
     await using tmp = await tmpdir({ git: true })
 
     await Instance.provide({
@@ -2143,35 +2254,151 @@ describe("session.proof-workflow lemma scheduling", () => {
         expect((stopped as any)?.lemmaChildNoMaterialization).toBe(true)
         expect(stopped?.message).toContain("lemma child reached the semantic liveness cutoff")
 
-        const parentMessages = [{
-          info: { id: "msg_lemma_yield", role: "assistant" },
-          parts: [{
-            type: "tool",
-            tool: "task",
-            state: {
-              status: "completed",
-              input: { subagent_type: "lemma", lemma_assignment: scheduled.lemma_assignment },
-              output: "lemma_child_no_materialization: yielded staged transaction to parent",
-              title: "Prove gap_1",
-              metadata: {
-                sessionId: child.id,
-                proof_scope: "lemma",
-                lemma_assignment: scheduled.lemma_assignment,
+        const parentMessages: any[] = []
+        let assignment = scheduled.lemma_assignment
+        for (let attempt = 1; attempt <= 5; attempt++) {
+          parentMessages.push({
+            info: { id: `msg_lemma_yield_${attempt}`, role: "assistant" },
+            parts: [{
+              type: "tool",
+              tool: "task",
+              state: {
+                status: "completed",
+                input: { subagent_type: "lemma", lemma_assignment: assignment },
+                output: [
+                  "lemma_child_no_materialization: yielded staged transaction to parent",
+                  "repeated_compiler_signature=compiler-same; signature_streak=1",
+                  `proof_transaction_yield: ${JSON.stringify({
+                    transaction_id: "proof_tx_same",
+                    yielded_from_revision: attempt,
+                    resume_revision: attempt,
+                  })}`,
+                ].join("\n"),
+                title: "Prove gap_1",
+                metadata: {
+                  sessionId: `lemma_child_${attempt}`,
+                  proof_scope: "lemma",
+                  lemma_assignment: assignment,
+                },
+                time: { start: attempt * 2 - 1, end: attempt * 2 },
               },
-              time: { start: 1, end: 2 },
-            },
-          }],
-        }] as any
-        const fresh = await SessionProofWorkflow.planNextSubtask(parent.id, parentMessages, source)
-        expect(fresh?.agent).toBe("lemma")
-        expect(fresh?.lemma_assignment?.admit_id).toBe("gap_1")
-        expect(fresh?.task_id).toBeUndefined()
+            }],
+          })
+
+          const parentReview = await SessionProofWorkflow.planNextSubtask(parent.id, parentMessages, source)
+          expect(parentReview).toBeUndefined()
+          const afterYield = SessionProofWorkflow.get(parent.id)!
+          expect(afterYield.lemma_no_materialization_incidents?.[0]?.repeat_count).toBe(attempt)
+
+          if (attempt < 5) {
+            expect(afterYield.active_repair).toBeUndefined()
+            expect(afterYield.queue[0]?.status).toBe("pending")
+            expect(afterYield.queue[0]?.running_release_reason).toContain(
+              `identical_lemma_failures=${attempt}/5`,
+            )
+            const fresh = await SessionProofWorkflow.planNextSubtask(parent.id, parentMessages, source)
+            expect(fresh?.agent).toBe("lemma")
+            expect(fresh?.lemma_assignment?.admit_id).toBe("gap_1")
+            expect(fresh?.task_id).toBeUndefined()
+            assignment = fresh!.lemma_assignment!
+          }
+        }
+
+        const locked = SessionProofWorkflow.get(parent.id)!
+        expect(locked.active_repair?.admit_id).toBe("gap_1")
+        expect(locked.active_repair?.escalation_type).toBe("needs_subgoal_remodel")
+        expect(locked.fallback_guard?.dispatch_lock_scope).toBe("repair_child_yield")
+        expect(locked.fallback_guard?.reason).toContain("identical_lemma_failures=5/5")
+        expect(await SessionProofWorkflow.planNextSubtask(parent.id, parentMessages, source)).toBeUndefined()
 
         for (const session of [parent, child]) {
           SessionProofWorkflow.clear(session.id)
           SessionProof.clear(session.id)
           await Session.remove(session.id)
         }
+      },
+    })
+  })
+
+  test("does not downgrade a child-staged unvalidated region to pending on no-materialization yield", async () => {
+    await using tmp = await tmpdir({ git: true })
+
+    await Instance.provide({
+      directory: tmp.path,
+      fn: async () => {
+        const file = `${tmp.path}/theorem.v`
+        const session = await Session.create({})
+        const source = [
+          "Lemma demo : True.",
+          "Proof.",
+          regionBegin("gap_1", "Hgap"),
+          "have Hgap : True.",
+          "{ admit. }",
+          "(* proof_region end admit_id: gap_1 *)",
+          "exact Hgap.",
+          "Admitted.",
+          "",
+        ].join("\n")
+        const staged = source.replace("{ admit. }", "{ exact I. }")
+        await Bun.write(file, source)
+
+        SessionProof.set(session.id, file, { line: 1, character: 0 }, "manual")
+        const scheduled = await SessionProofWorkflow.planNextSubtask(session.id, [], source)
+        if (!scheduled?.lemma_assignment) throw new Error("missing lemma assignment")
+        const messages: any[] = []
+        let assignment = scheduled.lemma_assignment
+        const appendYield = (attempt: number, output: string) => messages.push({
+          info: { id: `msg_unvalidated_yield_${attempt}`, role: "assistant" },
+          parts: [{
+            type: "tool",
+            tool: "task",
+            state: {
+              status: "completed",
+              input: { subagent_type: "lemma", lemma_assignment: assignment },
+              output,
+              title: "Prove gap_1",
+              metadata: {
+                sessionId: `lemma_unvalidated_child_${attempt}`,
+                proof_scope: "lemma",
+                lemma_assignment: assignment,
+              },
+              time: { start: attempt * 2 - 1, end: attempt * 2 },
+            },
+          }],
+        })
+
+        for (let attempt = 1; attempt < 5; attempt++) {
+          appendYield(attempt, "lemma_child_no_materialization: yielded unchanged pending region")
+          expect(await SessionProofWorkflow.planNextSubtask(session.id, messages, source)).toBeUndefined()
+          expect(SessionProofWorkflow.get(session.id)?.queue[0]?.status).toBe("pending")
+          const fresh = await SessionProofWorkflow.planNextSubtask(session.id, messages, source)
+          if (!fresh?.lemma_assignment) throw new Error("missing fresh lemma assignment")
+          assignment = fresh.lemma_assignment
+        }
+
+        appendYield(5, "lemma_child_no_materialization: yielded an unvalidated staged region")
+
+        expect(await SessionProofWorkflow.planNextSubtask(session.id, messages, staged)).toBeUndefined()
+        const state = SessionProofWorkflow.get(session.id)!
+        expect(state.queue[0]?.status).toBe("unvalidated")
+        expect(state.queue[0]?.running_release_reason).toContain("Parent review is required")
+        expect(state.lemma_no_materialization_incidents?.[0]?.repeat_count).toBe(5)
+        expect(state.active_repair).toBeUndefined()
+
+        const certified = await SessionProofWorkflow.recordCompilerResult({
+          sessionID: session.id,
+          file,
+          source: staged,
+          validator: "checkpoint",
+          ok: true,
+          validated_source_current: true,
+        })
+        expect(certified.action).toBe("certified")
+        expect(SessionProofWorkflow.get(session.id)?.lemma_no_materialization_incidents).toEqual([])
+
+        SessionProofWorkflow.clear(session.id)
+        SessionProof.clear(session.id)
+        await Session.remove(session.id)
       },
     })
   })
@@ -5212,7 +5439,7 @@ describe("session.proof-workflow lemma scheduling", () => {
     })
   })
 
-  test("releases expired running regions whose task completed without structured outcome", async () => {
+  test("releases completed lemma tasks without structured outcome immediately and yields a parent turn", async () => {
     await using tmp = await tmpdir({ git: true })
 
     await Instance.provide({
@@ -5244,7 +5471,6 @@ describe("session.proof-workflow lemma scheduling", () => {
 
         const state = SessionProofWorkflow.get(sessionID)
         expect(state?.queue[0]?.status).toBe("running")
-        state!.queue[0]!.running_lease_expires_at = Date.now() - 1
 
         const messages = [
           {
@@ -5265,13 +5491,17 @@ describe("session.proof-workflow lemma scheduling", () => {
           },
         ] as any
 
+        const parentReview = await SessionProofWorkflow.planNextSubtask(sessionID, messages)
+        expect(parentReview).toBeUndefined()
+
+        const updated = SessionProofWorkflow.get(sessionID)
+        expect(updated?.queue[0]?.status).toBe("pending")
+        expect(updated?.queue[0]?.running_release_reason).toContain("completed without a structured proof_result")
+        expect(updated?.queue[0]?.running_release_reason).toContain("parent review is required")
+
         const next = await SessionProofWorkflow.planNextSubtask(sessionID, messages)
         expect(next?.description).toBe("Prove gap_1")
         expect(next?.lemma_assignment?.admit_id).toBe("gap_1")
-
-        const updated = SessionProofWorkflow.get(sessionID)
-        expect(updated?.queue[0]?.status).toBe("running")
-        expect(updated?.queue[0]?.running_release_reason).toContain("completed without a structured proof_result")
 
         SessionProofWorkflow.clear(sessionID)
         SessionProof.clear(sessionID)
@@ -5804,6 +6034,56 @@ describe("session.proof-workflow lemma scheduling", () => {
       },
     })
   })
+
+  test(
+    "persists the latest compiler error across sessions and clears it after compiler success",
+    async () => {
+      await using tmp = await tmpdir({ git: true })
+
+      await Instance.provide({
+        directory: tmp.path,
+        fn: async () => {
+        const file = `${tmp.path}/persistent-compiler-error.v`
+        const first = await Session.create({})
+        const second = await Session.create({})
+        const source = [
+          "Lemma demo : True.",
+          "Proof.",
+          "exact I.",
+          "Qed.",
+          "",
+        ].join("\n")
+        await Bun.write(file, source)
+        SessionProofWorkflow.refresh(second.id, file, source)
+
+        SessionProofWorkflow.classifyCoqcFailure(first.id, file, source, {
+          first_error_line: 3,
+          first_error_message: "Error: persisted failing tactic",
+        })
+
+        expect(SessionProofWorkflow.get(first.id)?.latest_compiler_error).toMatchObject({
+          normalized_file: file,
+          message: "Error: persisted failing tactic",
+          anchor: { theorem: "demo", line: 3 },
+        })
+        expect(SessionProofWorkflow.latestCompilerError(second.id, file, "demo")).toMatchObject({
+          message: "Error: persisted failing tactic",
+          anchor: { line: 3 },
+        })
+
+        SessionProofWorkflow.classifyCoqcSuccess(second.id, file, source)
+        expect(SessionProofWorkflow.get(first.id)?.latest_compiler_error).toBeUndefined()
+        expect(SessionProofWorkflow.latestCompilerError(second.id, file, "demo")).toBeUndefined()
+
+        SessionProofWorkflow.clear(first.id)
+        SessionProofWorkflow.clear(second.id)
+        await Session.remove(first.id)
+        await Session.remove(second.id)
+        },
+      })
+    },
+    { timeout: 30000 },
+  )
 
   test("blocks wide agents from editing running regions without explicit takeover", async () => {
     await using tmp = await tmpdir({ git: true })
@@ -6371,6 +6651,129 @@ describe("session.proof-workflow lemma scheduling", () => {
         SessionProofWorkflow.clear(sessionID)
         SessionProof.clear(sessionID)
         await Session.remove(sessionID)
+      },
+    })
+  })
+
+  test("automatic scheduling clears an active repair whose region disappeared from the current revision", async () => {
+    await using tmp = await tmpdir({ git: true })
+
+    await Instance.provide({
+      directory: tmp.path,
+      fn: async () => {
+        const file = `${tmp.path}/stale-automatic-repair.v`
+        const session = await Session.create({})
+        const source = [
+          "Lemma demo : True.",
+          "Proof.",
+          "(* proof_region begin owner: lemma admit_id: gap_1 theorem: demo kind: pointwise_semantic_bridge target: Hgap *)",
+          "have Hgap : True.",
+          "{ admit. }",
+          "(* proof_region end admit_id: gap_1 *)",
+          "exact Hgap.",
+          "Admitted.",
+          "",
+        ].join("\n")
+        await Bun.write(file, source)
+
+        SessionProof.set(session.id, file, { line: 1, character: 0 }, "manual")
+        const repair = await SessionProofWorkflow.planNextSubtask(session.id, [])
+        expect(repair?.proof_repair_assignment?.admit_id).toBe("gap_1")
+        expect(SessionProofWorkflow.get(session.id)?.active_repair?.admit_id).toBe("gap_1")
+
+        const completed = "Lemma demo : True.\nProof.\n  exact I.\nQed.\n"
+        await Bun.write(file, completed)
+        expect(await SessionProofWorkflow.planNextSubtask(session.id, [])).toBeUndefined()
+        expect(SessionProofWorkflow.get(session.id)?.active_repair).toBeUndefined()
+        expect(SessionProofWorkflow.get(session.id)?.fallback_guard).toBeUndefined()
+
+        SessionProofWorkflow.clear(session.id)
+        SessionProof.clear(session.id)
+        await Session.remove(session.id)
+      },
+    })
+  })
+
+  test("queue-only state transitions preserve compiler progress receipts for the same proof file", async () => {
+    await using tmp = await tmpdir({ git: true })
+
+    await Instance.provide({
+      directory: tmp.path,
+      fn: async () => {
+        const file = `${tmp.path}/receipt.v`
+        const session = await Session.create({})
+        const receipt = {
+          id: "receipt-1",
+          kind: "region_certified" as const,
+          level: "hard" as const,
+          theorem: "demo",
+          theorem_context_fingerprint: "theorem-context",
+          source_fingerprint: "source-fingerprint",
+          compiler_signature: "compiler-signature",
+          before_unresolved_semantic_debt: 1,
+          after_unresolved_semantic_debt: 0,
+          certified_semantic_debt_count: 1,
+          recorded_at: Date.now(),
+        }
+        SessionProofWorkflow.set(session.id, {
+          file,
+          phase: "prover",
+          queue: [],
+          last_progress_receipt: receipt,
+          updated: Date.now(),
+        })
+        SessionProofWorkflow.set(session.id, {
+          file,
+          phase: "delegating",
+          queue: [],
+          updated: Date.now(),
+        })
+
+        expect(SessionProofWorkflow.get(session.id)?.last_progress_receipt).toEqual(receipt)
+
+        SessionProofWorkflow.clear(session.id)
+        await Session.remove(session.id)
+      },
+    })
+  })
+
+  test("proof repair incidents do not leak when a session is rebound to another file", async () => {
+    await using tmp = await tmpdir({ git: true })
+
+    await Instance.provide({
+      directory: tmp.path,
+      fn: async () => {
+        const session = await Session.create({})
+        const firstFile = `${tmp.path}/first.v`
+        const secondFile = `${tmp.path}/second.v`
+        SessionProofWorkflow.set(session.id, {
+          file: firstFile,
+          phase: "prover",
+          queue: [],
+          repair_incidents: [{
+            signature: "first-file-signature",
+            theorem: "demo",
+            escalation_type: "needs_subgoal_remodel",
+            reason: "first file blocker",
+            first_admit_id: "gap_1",
+            last_admit_id: "gap_1",
+            repeat_count: 1,
+            first_seen_at: Date.now(),
+            updated_at: Date.now(),
+          }],
+          updated: Date.now(),
+        })
+        SessionProofWorkflow.set(session.id, {
+          file: secondFile,
+          phase: "architect",
+          queue: [],
+          updated: Date.now(),
+        })
+
+        expect(SessionProofWorkflow.get(session.id)?.repair_incidents).toBeUndefined()
+
+        SessionProofWorkflow.clear(session.id)
+        await Session.remove(session.id)
       },
     })
   })

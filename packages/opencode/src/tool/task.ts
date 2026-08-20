@@ -342,12 +342,14 @@ function withProofEditTransactionRecovery(
   prompt: string,
   transaction: ProofEditTransaction.Summary | undefined,
 ) {
-  if (!transaction?.recovered) return prompt
+  if (!transaction || (!transaction.recovered && !transaction.handed_off)) return prompt
   return [
     prompt,
     "",
     "<proof-edit-transaction-recovery>",
-    "A recoverable proof transaction was restored for this child. The staged source exposed by read/edit/checkpoint tools is authoritative and may be newer than the workspace file on disk.",
+    transaction.recovered
+      ? "A recoverable proof transaction was restored for this child. The staged source exposed by read/edit/checkpoint tools is authoritative and may be newer than the workspace file on disk."
+      : "A proof transaction was handed off to this child. The staged source exposed by read/edit/checkpoint tools is authoritative and may be newer than the workspace file on disk.",
     `transaction_id: ${transaction.transaction_id}`,
     `file: ${transaction.file}`,
     `scope: ${transaction.scope}`,

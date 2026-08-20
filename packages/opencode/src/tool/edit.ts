@@ -112,7 +112,15 @@ export const EditTool = Tool.define("edit", {
           before: contentOld,
           after: contentNew,
         })
-        if (!proofTransaction) {
+        if (proofTransaction && params.takeover_running_region && params.takeover_reason?.trim()) {
+          proofWorkflowTakeover = SessionProofWorkflow.recordWideAgentRunningRegionTakeover({
+            agent: ctx.agent,
+            file: filePath,
+            before: contentOld,
+            after: contentNew,
+            takeoverReason: params.takeover_reason,
+          })
+        } else if (!proofTransaction) {
           await Filesystem.write(filePath, params.newString)
           await Bus.publish(File.Event.Edited, {
             file: filePath,
@@ -208,7 +216,15 @@ export const EditTool = Tool.define("edit", {
         before: contentOld,
         after: contentNew,
       })
-      if (!proofTransaction) {
+      if (proofTransaction && params.takeover_running_region && params.takeover_reason?.trim()) {
+        proofWorkflowTakeover = SessionProofWorkflow.recordWideAgentRunningRegionTakeover({
+          agent: ctx.agent,
+          file: filePath,
+          before: contentOld,
+          after: contentNew,
+          takeoverReason: params.takeover_reason,
+        })
+      } else if (!proofTransaction) {
         await Filesystem.write(filePath, contentNew)
         await Bus.publish(File.Event.Edited, {
           file: filePath,
